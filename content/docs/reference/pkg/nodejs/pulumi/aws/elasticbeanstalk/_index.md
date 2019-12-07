@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Application</code></pre>
 
 
 Returns true if the given object is an instance of Application.  This is designed to work even
@@ -132,7 +132,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L62">property <b>appversionLifecycle</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationAppversionLifecycle'>outputs.elasticbeanstalk.ApplicationAppversionLifecycle</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationAppversionLifecycle'>ApplicationAppversionLifecycle</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Application-arn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L66">property <b>arn</b></a>
 </h4>
@@ -270,7 +270,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationVersion</code></pre>
 
 
 Returns true if the given object is an instance of ApplicationVersion.  This is designed to work even
@@ -434,7 +434,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConfigurationTemplate</code></pre>
 
 
 Returns true if the given object is an instance of ConfigurationTemplate.  This is designed to work even
@@ -485,7 +485,7 @@ A unique name for this Template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L88">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationTemplateSetting'>outputs.elasticbeanstalk.ConfigurationTemplateSetting</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationTemplateSetting'>ConfigurationTemplateSetting</a>[]&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -617,7 +617,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Environment</code></pre>
 
 
 Returns true if the given object is an instance of Environment.  This is designed to work even
@@ -627,7 +627,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/environment.ts#L108">property <b>allSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>allSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentAllSetting'>outputs.elasticbeanstalk.EnvironmentAllSetting</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>allSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentAllSetting'>EnvironmentAllSetting</a>[]&gt;;</code></pre>
 
 List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -762,7 +762,7 @@ SQS queues in use by this Environment.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/environment.ts#L174">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentSetting'>outputs.elasticbeanstalk.EnvironmentSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentSetting'>EnvironmentSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -935,7 +935,7 @@ The set of arguments for constructing a Application resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L143">property <b>appversionLifecycle</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>inputs.elasticbeanstalk.ApplicationAppversionLifecycle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>ApplicationAppversionLifecycle</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L147">property <b>description</b></a>
 </h4>
@@ -974,7 +974,7 @@ Input properties used for looking up and filtering Application resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L120">property <b>appversionLifecycle</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>inputs.elasticbeanstalk.ApplicationAppversionLifecycle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>ApplicationAppversionLifecycle</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationState-arn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/application.ts#L124">property <b>arn</b></a>
 </h4>
@@ -1195,7 +1195,7 @@ A unique name for this Template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L194">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>inputs.elasticbeanstalk.ConfigurationTemplateSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>ConfigurationTemplateSetting</a>&gt;[]&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1256,7 +1256,7 @@ A unique name for this Template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L161">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>inputs.elasticbeanstalk.ConfigurationTemplateSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>ConfigurationTemplateSetting</a>&gt;[]&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1340,7 +1340,7 @@ use the default behavior, which is an exponential backoff
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/environment.ts#L439">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>inputs.elasticbeanstalk.EnvironmentSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>EnvironmentSetting</a>&gt;[]&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1415,7 +1415,7 @@ Input properties used for looking up and filtering Environment resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/environment.ts#L295">property <b>allSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentAllSetting'>inputs.elasticbeanstalk.EnvironmentAllSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentAllSetting'>EnvironmentAllSetting</a>&gt;[]&gt;;</code></pre>
 
 List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1541,7 +1541,7 @@ SQS queues in use by this Environment.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/environment.ts#L361">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>inputs.elasticbeanstalk.EnvironmentSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>EnvironmentSetting</a>&gt;[]&gt;;</code></pre>
 
 Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1642,7 +1642,7 @@ A collection of values returned by getApplication.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/getApplication.ts#L57">property <b>appversionLifecycle</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetApplicationAppversionLifecycle'>outputs.elasticbeanstalk.GetApplicationAppversionLifecycle</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetApplicationAppversionLifecycle'>GetApplicationAppversionLifecycle</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApplicationResult-arn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticbeanstalk/getApplication.ts#L61">property <b>arn</b></a>
 </h4>

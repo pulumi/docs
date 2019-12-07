@@ -90,7 +90,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Attestor</code></pre>
 
 
 Returns true if the given object is an instance of Attestor.  This is designed to work even
@@ -100,7 +100,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestor.ts#L42">property <b>attestationAuthorityNote</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNote'>outputs.binaryauthorization.AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
 
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 
@@ -190,7 +190,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AttestorIamBinding</code></pre>
 
 
 Returns true if the given object is an instance of AttestorIamBinding.  This is designed to work even
@@ -208,7 +208,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L43">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamBindingCondition'>outputs.binaryauthorization.AttestorIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L47">property <b>etag</b></a>
 </h4>
@@ -306,7 +306,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AttestorIamMember</code></pre>
 
 
 Returns true if the given object is an instance of AttestorIamMember.  This is designed to work even
@@ -324,7 +324,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L43">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamMemberCondition'>outputs.binaryauthorization.AttestorIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L47">property <b>etag</b></a>
 </h4>
@@ -422,7 +422,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AttestorIamPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AttestorIamPolicy.  This is designed to work even
@@ -527,7 +527,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -537,7 +537,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L43">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>admissionWhitelistPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAdmissionWhitelistPattern'>outputs.binaryauthorization.PolicyAdmissionWhitelistPattern</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>admissionWhitelistPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -546,7 +546,7 @@ image's admission requests will always be permitted regardless of your admission
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L51">property <b>clusterAdmissionRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clusterAdmissionRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyClusterAdmissionRule'>outputs.binaryauthorization.PolicyClusterAdmissionRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clusterAdmissionRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation
 request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod
@@ -558,7 +558,7 @@ creations will be denied. There can be at most one admission rule per cluster sp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L55">property <b>defaultAdmissionRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyDefaultAdmissionRule'>outputs.binaryauthorization.PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
 
 Default admission rule for a cluster without a per-cluster admission rule.
 
@@ -619,7 +619,7 @@ The set of arguments for constructing a Attestor resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestor.ts#L116">property <b>attestationAuthorityNote</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>inputs.binaryauthorization.AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
 
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 
@@ -666,7 +666,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L143">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>inputs.binaryauthorization.AttestorIamBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L144">property <b>members</b></a>
 </h4>
@@ -713,7 +713,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L116">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>inputs.binaryauthorization.AttestorIamBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L120">property <b>etag</b></a>
 </h4>
@@ -768,7 +768,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L143">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>inputs.binaryauthorization.AttestorIamMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L144">property <b>member</b></a>
 </h4>
@@ -815,7 +815,7 @@ Used to find the parent resource to bind the IAM policy to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L116">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>inputs.binaryauthorization.AttestorIamMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L120">property <b>etag</b></a>
 </h4>
@@ -942,7 +942,7 @@ Input properties used for looking up and filtering Attestor resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/attestor.ts#L97">property <b>attestationAuthorityNote</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>inputs.binaryauthorization.AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
 
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 
@@ -981,7 +981,7 @@ The set of arguments for constructing a Policy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L149">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>inputs.binaryauthorization.PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
 
 A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -990,7 +990,7 @@ image's admission requests will always be permitted regardless of your admission
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L157">property <b>clusterAdmissionRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>inputs.binaryauthorization.PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
 
 Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation
 request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod
@@ -1002,7 +1002,7 @@ creations will be denied. There can be at most one admission rule per cluster sp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L161">property <b>defaultAdmissionRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>inputs.binaryauthorization.PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
 
 Default admission rule for a cluster without a per-cluster admission rule.
 
@@ -1042,7 +1042,7 @@ Input properties used for looking up and filtering Policy resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L116">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>inputs.binaryauthorization.PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
 
 A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -1051,7 +1051,7 @@ image's admission requests will always be permitted regardless of your admission
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L124">property <b>clusterAdmissionRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>inputs.binaryauthorization.PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
 
 Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation
 request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod
@@ -1063,7 +1063,7 @@ creations will be denied. There can be at most one admission rule per cluster sp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/binaryauthorization/policy.ts#L128">property <b>defaultAdmissionRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>inputs.binaryauthorization.PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
 
 Default admission rule for a cluster without a per-cluster admission rule.
 

@@ -45,7 +45,7 @@ meta_desc: "Explore members of the s3 module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>allRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>allRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of HTTP requests made to an Amazon S3 bucket, regardless of type. If you're
@@ -63,7 +63,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>bucketSizeBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>bucketSizeBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of data in bytes stored in a bucket in the STANDARD storage class,
@@ -84,7 +84,7 @@ Valid statistics: Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>bytesDownloaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>bytesDownloaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number bytes downloaded for requests made to an Amazon S3 bucket, where the response
@@ -101,7 +101,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>bytesUploaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>bytesUploaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number bytes uploaded that contain a request body, made to an Amazon S3 bucket.
@@ -117,7 +117,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>deleteRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>deleteRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP DELETE requests made for objects in an Amazon S3 bucket. This also
@@ -135,7 +135,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>errors4xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>errors4xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 he number of HTTP 4xx client error status code requests made to an Amazon S3 bucket with a
@@ -154,7 +154,7 @@ Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>errors5xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>errors5xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 5xx server error status code requests made to an Amazon S3 bucket with a
@@ -173,7 +173,7 @@ Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>firstByteLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>firstByteLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The per-request time from the complete request being received by an Amazon S3 bucket to when
@@ -190,7 +190,7 @@ Valid statistics: Average, Sum, Min, Max, Sample Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>getRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP GET requests made for objects in an Amazon S3 bucket. This doesn't include
@@ -210,7 +210,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>headRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>headRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP HEAD requests made to an Amazon S3 bucket.
@@ -226,7 +226,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>listRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>listRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP requests that list the contents of a bucket.
@@ -242,7 +242,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#S3MetricName'>S3MetricName</a>, change: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#S3MetricName'>S3MetricName</a>, change: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/S3 metric with the requested [metricName]. See
@@ -313,7 +313,7 @@ The following dimensions are used to filter Amazon S3 metrics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfObjects(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfObjects(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of objects stored in a bucket for all storage classes except for the GLACIER
@@ -332,7 +332,7 @@ Valid statistics: Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>postRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>postRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP POST requests made to an Amazon S3 bucket.
@@ -351,7 +351,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>putRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>putRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP PUT requests made for objects in an Amazon S3 bucket.
@@ -366,7 +366,7 @@ Valid statistics: Sum
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>S3MetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>S3MetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="S3MetricChange-bucket">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/s3/metrics.ts#L33">property <b>bucket</b></a>
 </h4>
@@ -442,7 +442,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -484,7 +484,7 @@ of storage:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -525,7 +525,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>selectRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of Amazon S3 SELECT Object Content requests made for objects in an Amazon S3
@@ -542,7 +542,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>selectReturnedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectReturnedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes of data returned with Amazon S3 SELECT Object Content requests in an
@@ -559,7 +559,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>selectScannedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectScannedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes of data scanned with Amazon S3 SELECT Object Content requests in an
@@ -576,7 +576,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>totalRequestLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>totalRequestLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The elapsed per-request time from the first byte received to the last byte sent to an Amazon

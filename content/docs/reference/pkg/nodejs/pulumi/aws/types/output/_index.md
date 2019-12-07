@@ -1219,7 +1219,7 @@ Name of the algorithm your private CA uses to sign certificate requests. Valid v
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L86">property <b>subject</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subject: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityCertificateAuthorityConfigurationSubject'>outputs.acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubject</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subject: <a href='#CertificateAuthorityCertificateAuthorityConfigurationSubject'>CertificateAuthorityCertificateAuthorityConfigurationSubject</a>;</code></pre>
 
 Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 
@@ -1345,7 +1345,7 @@ A title such as Mr. or Ms. which is pre-pended to the name to refer formally to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L148">property <b>crlConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>crlConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityRevocationConfigurationCrlConfiguration'>outputs.acmpca.CertificateAuthorityRevocationConfigurationCrlConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>crlConfiguration?: outputs.acmpca.CertificateAuthorityRevocationConfigurationCrlConfiguration;</code></pre>
 
 Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 
@@ -1399,7 +1399,7 @@ Name of the S3 bucket that contains the CRL. If you do not provide a value for t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L171">property <b>crlConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>crlConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfigurationCrlConfiguration'>outputs.acmpca.GetCertificateAuthorityRevocationConfigurationCrlConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>crlConfigurations: <a href='#GetCertificateAuthorityRevocationConfigurationCrlConfiguration'>GetCertificateAuthorityRevocationConfigurationCrlConfiguration</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetCertificateAuthorityRevocationConfigurationCrlConfiguration" data-link-title="GetCertificateAuthorityRevocationConfigurationCrlConfiguration">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L174">
         interface <strong>GetCertificateAuthorityRevocationConfigurationCrlConfiguration</strong>
@@ -1439,17 +1439,17 @@ Name of the S3 bucket that contains the CRL. If you do not provide a value for t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L184">property <b>authenticateCognitos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito'>outputs.alb.GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='#GetListenerDefaultActionAuthenticateCognito'>GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-authenticateOidcs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L185">property <b>authenticateOidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc'>outputs.alb.GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='#GetListenerDefaultActionAuthenticateOidc'>GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-fixedResponses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L186">property <b>fixedResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse'>outputs.alb.GetListenerDefaultActionFixedResponse</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='#GetListenerDefaultActionFixedResponse'>GetListenerDefaultActionFixedResponse</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-order">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L187">property <b>order</b></a>
 </h4>
@@ -1459,7 +1459,7 @@ Name of the S3 bucket that contains the CRL. If you do not provide a value for t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L188">property <b>redirects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirects: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect'>outputs.alb.GetListenerDefaultActionRedirect</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirects: <a href='#GetListenerDefaultActionRedirect'>GetListenerDefaultActionRedirect</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-targetGroupArn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L189">property <b>targetGroupArn</b></a>
 </h4>
@@ -1765,17 +1765,17 @@ The port of the listener. Required if `arn` is not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L266">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateCognito'>outputs.alb.ListenerDefaultActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.alb.ListenerDefaultActionAuthenticateCognito;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-authenticateOidc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L267">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateOidc'>outputs.alb.ListenerDefaultActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.alb.ListenerDefaultActionAuthenticateOidc;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-fixedResponse">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L271">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionFixedResponse'>outputs.alb.ListenerDefaultActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.alb.ListenerDefaultActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -1788,7 +1788,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L276">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionRedirect'>outputs.alb.ListenerDefaultActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.alb.ListenerDefaultActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -2071,7 +2071,7 @@ The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L415">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateCognito'>outputs.alb.ListenerRuleActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.alb.ListenerRuleActionAuthenticateCognito;</code></pre>
 
 Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 
@@ -2079,7 +2079,7 @@ Information for creating an authenticate action using Cognito. Required if `type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L419">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateOidc'>outputs.alb.ListenerRuleActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.alb.ListenerRuleActionAuthenticateOidc;</code></pre>
 
 Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 
@@ -2087,7 +2087,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L423">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionFixedResponse'>outputs.alb.ListenerRuleActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.alb.ListenerRuleActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -2100,7 +2100,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L428">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionRedirect'>outputs.alb.ListenerRuleActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.alb.ListenerRuleActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -2878,7 +2878,7 @@ The API request steady-state rate limit.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L801">property <b>stepAdjustments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfigurationStepAdjustment'>outputs.appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustment</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='#PolicyStepScalingPolicyConfigurationStepAdjustment'>PolicyStepScalingPolicyConfigurationStepAdjustment</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="PolicyStepScalingPolicyConfigurationStepAdjustment" data-link-title="PolicyStepScalingPolicyConfigurationStepAdjustment">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L804">
         interface <strong>PolicyStepScalingPolicyConfigurationStepAdjustment</strong>
@@ -2912,7 +2912,7 @@ The API request steady-state rate limit.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L811">property <b>customizedMetricSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customizedMetricSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification'>outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customizedMetricSpecification?: outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTargetTrackingScalingPolicyConfiguration-disableScaleIn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L812">property <b>disableScaleIn</b></a>
 </h4>
@@ -2922,7 +2922,7 @@ The API request steady-state rate limit.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L813">property <b>predefinedMetricSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>predefinedMetricSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification'>outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>predefinedMetricSpecification?: outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTargetTrackingScalingPolicyConfiguration-scaleInCooldown">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L814">property <b>scaleInCooldown</b></a>
 </h4>
@@ -2949,7 +2949,7 @@ The API request steady-state rate limit.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L820">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension'>outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension'>PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification-metricName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L821">property <b>metricName</b></a>
 </h4>
@@ -3042,17 +3042,17 @@ The minimum capacity.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L854">property <b>authenticateCognitos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito'>outputs.applicationloadbalancing.GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='#GetListenerDefaultActionAuthenticateCognito'>GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-authenticateOidcs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L855">property <b>authenticateOidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc'>outputs.applicationloadbalancing.GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='#GetListenerDefaultActionAuthenticateOidc'>GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-fixedResponses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L856">property <b>fixedResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse'>outputs.applicationloadbalancing.GetListenerDefaultActionFixedResponse</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='#GetListenerDefaultActionFixedResponse'>GetListenerDefaultActionFixedResponse</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-order">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L857">property <b>order</b></a>
 </h4>
@@ -3062,7 +3062,7 @@ The minimum capacity.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L858">property <b>redirects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirects: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect'>outputs.applicationloadbalancing.GetListenerDefaultActionRedirect</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirects: <a href='#GetListenerDefaultActionRedirect'>GetListenerDefaultActionRedirect</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-targetGroupArn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L859">property <b>targetGroupArn</b></a>
 </h4>
@@ -3368,17 +3368,17 @@ The port of the listener. Required if `arn` is not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L936">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateCognito'>outputs.applicationloadbalancing.ListenerDefaultActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.applicationloadbalancing.ListenerDefaultActionAuthenticateCognito;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-authenticateOidc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L937">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateOidc'>outputs.applicationloadbalancing.ListenerDefaultActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.applicationloadbalancing.ListenerDefaultActionAuthenticateOidc;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-fixedResponse">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L941">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionFixedResponse'>outputs.applicationloadbalancing.ListenerDefaultActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.applicationloadbalancing.ListenerDefaultActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -3391,7 +3391,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L946">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionRedirect'>outputs.applicationloadbalancing.ListenerDefaultActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.applicationloadbalancing.ListenerDefaultActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -3674,7 +3674,7 @@ The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1085">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateCognito'>outputs.applicationloadbalancing.ListenerRuleActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.applicationloadbalancing.ListenerRuleActionAuthenticateCognito;</code></pre>
 
 Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 
@@ -3682,7 +3682,7 @@ Information for creating an authenticate action using Cognito. Required if `type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1089">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateOidc'>outputs.applicationloadbalancing.ListenerRuleActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.applicationloadbalancing.ListenerRuleActionAuthenticateOidc;</code></pre>
 
 Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 
@@ -3690,7 +3690,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1093">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionFixedResponse'>outputs.applicationloadbalancing.ListenerRuleActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.applicationloadbalancing.ListenerRuleActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -3703,7 +3703,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1098">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionRedirect'>outputs.applicationloadbalancing.ListenerRuleActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.applicationloadbalancing.ListenerRuleActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -4172,7 +4172,7 @@ The type of sticky sessions. The only current possible value is `lbCookie`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1325">property <b>egressFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egressFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MeshSpecEgressFilter'>outputs.appmesh.MeshSpecEgressFilter</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egressFilter?: outputs.appmesh.MeshSpecEgressFilter;</code></pre>
 <h3 class="pdoc-module-header" id="MeshSpecEgressFilter" data-link-title="MeshSpecEgressFilter">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1328">
         interface <strong>MeshSpecEgressFilter</strong>
@@ -4200,7 +4200,7 @@ Valid values are `ALLOW_ALL` and `DROP_ALL`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1340">property <b>httpRoute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRoute'>outputs.appmesh.RouteSpecHttpRoute</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpRoute?: outputs.appmesh.RouteSpecHttpRoute;</code></pre>
 
 The HTTP routing information for the route.
 
@@ -4208,7 +4208,7 @@ The HTTP routing information for the route.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1344">property <b>tcpRoute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRoute'>outputs.appmesh.RouteSpecTcpRoute</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpRoute?: outputs.appmesh.RouteSpecTcpRoute;</code></pre>
 
 The TCP routing information for the route.
 
@@ -4223,7 +4223,7 @@ The TCP routing information for the route.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1351">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteAction'>outputs.appmesh.RouteSpecHttpRouteAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#RouteSpecHttpRouteAction'>RouteSpecHttpRouteAction</a>;</code></pre>
 
 The action to take if a match is determined.
 
@@ -4231,7 +4231,7 @@ The action to take if a match is determined.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1355">property <b>match</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>match: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteMatch'>outputs.appmesh.RouteSpecHttpRouteMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>match: <a href='#RouteSpecHttpRouteMatch'>RouteSpecHttpRouteMatch</a>;</code></pre>
 
 The criteria for determining an HTTP request match.
 
@@ -4246,7 +4246,7 @@ The criteria for determining an HTTP request match.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1363">property <b>weightedTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteActionWeightedTarget'>outputs.appmesh.RouteSpecHttpRouteActionWeightedTarget</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>weightedTargets: <a href='#RouteSpecHttpRouteActionWeightedTarget'>RouteSpecHttpRouteActionWeightedTarget</a>[];</code></pre>
 
 The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -4301,7 +4301,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1389">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteAction'>outputs.appmesh.RouteSpecTcpRouteAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#RouteSpecTcpRouteAction'>RouteSpecTcpRouteAction</a>;</code></pre>
 
 The action to take if a match is determined.
 
@@ -4316,7 +4316,7 @@ The action to take if a match is determined.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1397">property <b>weightedTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteActionWeightedTarget'>outputs.appmesh.RouteSpecTcpRouteActionWeightedTarget</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>weightedTargets: <a href='#RouteSpecTcpRouteActionWeightedTarget'>RouteSpecTcpRouteActionWeightedTarget</a>[];</code></pre>
 
 The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -4355,7 +4355,7 @@ The relative weight of the weighted target. An integer between 0 and 100.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1415">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackend'>outputs.appmesh.VirtualNodeSpecBackend</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends?: <a href='#VirtualNodeSpecBackend'>VirtualNodeSpecBackend</a>[];</code></pre>
 
 The backends to which the virtual node is expected to send outbound traffic.
 
@@ -4363,7 +4363,7 @@ The backends to which the virtual node is expected to send outbound traffic.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1419">property <b>listener</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>listener?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListener'>outputs.appmesh.VirtualNodeSpecListener</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listener?: outputs.appmesh.VirtualNodeSpecListener;</code></pre>
 
 The listeners from which the virtual node is expected to receive inbound traffic.
 
@@ -4371,7 +4371,7 @@ The listeners from which the virtual node is expected to receive inbound traffic
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1423">property <b>logging</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLogging'>outputs.appmesh.VirtualNodeSpecLogging</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logging?: outputs.appmesh.VirtualNodeSpecLogging;</code></pre>
 
 The inbound and outbound access logging information for the virtual node.
 
@@ -4379,7 +4379,7 @@ The inbound and outbound access logging information for the virtual node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1427">property <b>serviceDiscovery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceDiscovery?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscovery'>outputs.appmesh.VirtualNodeSpecServiceDiscovery</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceDiscovery?: outputs.appmesh.VirtualNodeSpecServiceDiscovery;</code></pre>
 
 The service discovery information for the virtual node.
 
@@ -4394,7 +4394,7 @@ The service discovery information for the virtual node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1434">property <b>virtualService</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualService?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualService'>outputs.appmesh.VirtualNodeSpecBackendVirtualService</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualService?: outputs.appmesh.VirtualNodeSpecBackendVirtualService;</code></pre>
 
 Specifies a virtual service to use as a backend for a virtual node.
 
@@ -4424,7 +4424,7 @@ The name of the virtual service that is acting as a virtual node backend.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1448">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerHealthCheck'>outputs.appmesh.VirtualNodeSpecListenerHealthCheck</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: outputs.appmesh.VirtualNodeSpecListenerHealthCheck;</code></pre>
 
 The health check information for the listener.
 
@@ -4432,7 +4432,7 @@ The health check information for the listener.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1452">property <b>portMapping</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerPortMapping'>outputs.appmesh.VirtualNodeSpecListenerPortMapping</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portMapping: <a href='#VirtualNodeSpecListenerPortMapping'>VirtualNodeSpecListenerPortMapping</a>;</code></pre>
 
 The port mapping information for the listener.
 
@@ -4531,7 +4531,7 @@ The protocol for the health check request. Valid values are `http` and `tcp`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1499">property <b>accessLog</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLog?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLog'>outputs.appmesh.VirtualNodeSpecLoggingAccessLog</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLog?: outputs.appmesh.VirtualNodeSpecLoggingAccessLog;</code></pre>
 
 The access log configuration for a virtual node.
 
@@ -4546,7 +4546,7 @@ The access log configuration for a virtual node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1506">property <b>file</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>file?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLogFile'>outputs.appmesh.VirtualNodeSpecLoggingAccessLogFile</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>file?: outputs.appmesh.VirtualNodeSpecLoggingAccessLogFile;</code></pre>
 
 The file object to send virtual node access logs to.
 
@@ -4576,7 +4576,7 @@ The destination path for the health check request. This is only required if the 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1520">property <b>awsCloudMap</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>awsCloudMap?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryAwsCloudMap'>outputs.appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMap</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>awsCloudMap?: outputs.appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMap;</code></pre>
 
 Specifies any AWS Cloud Map information for the virtual node.
 
@@ -4584,7 +4584,7 @@ Specifies any AWS Cloud Map information for the virtual node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1524">property <b>dns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dns?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryDns'>outputs.appmesh.VirtualNodeSpecServiceDiscoveryDns</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dns?: outputs.appmesh.VirtualNodeSpecServiceDiscoveryDns;</code></pre>
 
 Specifies the DNS service name for the virtual node.
 
@@ -4646,7 +4646,7 @@ The DNS host name for your virtual node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1555">property <b>listener</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpecListener'>outputs.appmesh.VirtualRouterSpecListener</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listener: <a href='#VirtualRouterSpecListener'>VirtualRouterSpecListener</a>;</code></pre>
 
 The listeners that the virtual router is expected to receive inbound traffic from.
 Currently only one listener is supported per virtual router.
@@ -4662,7 +4662,7 @@ Currently only one listener is supported per virtual router.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1562">property <b>portMapping</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpecListenerPortMapping'>outputs.appmesh.VirtualRouterSpecListenerPortMapping</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portMapping: <a href='#VirtualRouterSpecListenerPortMapping'>VirtualRouterSpecListenerPortMapping</a>;</code></pre>
 
 The port mapping information for the listener.
 
@@ -4700,7 +4700,7 @@ The protocol used for the port mapping. Valid values are `http` and `tcp`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1577">property <b>provider</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>provider?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProvider'>outputs.appmesh.VirtualServiceSpecProvider</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>provider?: outputs.appmesh.VirtualServiceSpecProvider;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualServiceSpecProvider" data-link-title="VirtualServiceSpecProvider">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1580">
         interface <strong>VirtualServiceSpecProvider</strong>
@@ -4712,7 +4712,7 @@ The protocol used for the port mapping. Valid values are `http` and `tcp`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1584">property <b>virtualNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNode?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProviderVirtualNode'>outputs.appmesh.VirtualServiceSpecProviderVirtualNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNode?: outputs.appmesh.VirtualServiceSpecProviderVirtualNode;</code></pre>
 
 The virtual node associated with a virtual service.
 
@@ -4720,7 +4720,7 @@ The virtual node associated with a virtual service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1588">property <b>virtualRouter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualRouter?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProviderVirtualRouter'>outputs.appmesh.VirtualServiceSpecProviderVirtualRouter</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualRouter?: outputs.appmesh.VirtualServiceSpecProviderVirtualRouter;</code></pre>
 
 The virtual router associated with a virtual service.
 
@@ -4858,7 +4858,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1655">property <b>openidConnectConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig'>outputs.appsync.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: outputs.appsync.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig;</code></pre>
 
 Nested argument containing OpenID Connect configuration. Defined below.
 
@@ -4866,7 +4866,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1659">property <b>userPoolConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProviderUserPoolConfig'>outputs.appsync.GraphQLApiAdditionalAuthenticationProviderUserPoolConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: outputs.appsync.GraphQLApiAdditionalAuthenticationProviderUserPoolConfig;</code></pre>
 
 The Amazon Cognito User Pool configuration. Defined below.
 
@@ -5106,7 +5106,7 @@ Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Default
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1772">property <b>resultConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resultConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WorkgroupConfigurationResultConfiguration'>outputs.athena.WorkgroupConfigurationResultConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resultConfiguration?: outputs.athena.WorkgroupConfigurationResultConfiguration;</code></pre>
 
 Configuration block with result settings. Documented below.
 
@@ -5121,7 +5121,7 @@ Configuration block with result settings. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1779">property <b>encryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WorkgroupConfigurationResultConfigurationEncryptionConfiguration'>outputs.athena.WorkgroupConfigurationResultConfigurationEncryptionConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: outputs.athena.WorkgroupConfigurationResultConfigurationEncryptionConfiguration;</code></pre>
 
 Configuration block with encryption settings. Documented below.
 
@@ -5244,7 +5244,7 @@ Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$D
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1831">property <b>instancesDistribution</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instancesDistribution?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicyInstancesDistribution'>outputs.autoscaling.GroupMixedInstancesPolicyInstancesDistribution</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instancesDistribution?: outputs.autoscaling.GroupMixedInstancesPolicyInstancesDistribution;</code></pre>
 
 Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 
@@ -5252,7 +5252,7 @@ Nested argument containing settings on how to mix on-demand and Spot instances i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1835">property <b>launchTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicyLaunchTemplate'>outputs.autoscaling.GroupMixedInstancesPolicyLaunchTemplate</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplate: <a href='#GroupMixedInstancesPolicyLaunchTemplate'>GroupMixedInstancesPolicyLaunchTemplate</a>;</code></pre>
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 
@@ -5322,7 +5322,7 @@ Maximum price per unit hour that the user is willing to pay for the Spot instanc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1869">property <b>launchTemplateSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplateSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification'>outputs.autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplateSpecification: <a href='#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification'>GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification</a>;</code></pre>
 
 Nested argument defines the Launch Template. Defined below.
 
@@ -5330,7 +5330,7 @@ Nested argument defines the Launch Template. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1873">property <b>overrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicyLaunchTemplateOverride'>outputs.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverride</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='#GroupMixedInstancesPolicyLaunchTemplateOverride'>GroupMixedInstancesPolicyLaunchTemplateOverride</a>[];</code></pre>
 
 List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 
@@ -5469,7 +5469,7 @@ up. A negative value scales down.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1944">property <b>customizedMetricSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customizedMetricSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfigurationCustomizedMetricSpecification'>outputs.autoscaling.PolicyTargetTrackingConfigurationCustomizedMetricSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customizedMetricSpecification?: outputs.autoscaling.PolicyTargetTrackingConfigurationCustomizedMetricSpecification;</code></pre>
 
 A customized metric. Conflicts with `predefinedMetricSpecification`.
 
@@ -5485,7 +5485,7 @@ Indicates whether scale in by the target tracking policy is disabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1952">property <b>predefinedMetricSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>predefinedMetricSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfigurationPredefinedMetricSpecification'>outputs.autoscaling.PolicyTargetTrackingConfigurationPredefinedMetricSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>predefinedMetricSpecification?: outputs.autoscaling.PolicyTargetTrackingConfigurationPredefinedMetricSpecification;</code></pre>
 
 A predefined metric. Conflicts with `customizedMetricSpecification`.
 
@@ -5508,7 +5508,7 @@ The target value for the metric.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L1963">property <b>metricDimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricDimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension'>outputs.autoscaling.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricDimensions?: <a href='#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension'>PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension</a>[];</code></pre>
 
 The dimensions of the metric.
 
@@ -5610,7 +5610,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2014">property <b>lifecycle</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PlanRuleLifecycle'>outputs.backup.PlanRuleLifecycle</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifecycle?: outputs.backup.PlanRuleLifecycle;</code></pre>
 
 The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
 
@@ -5768,7 +5768,7 @@ A list of instance types that may be launched.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2093">property <b>launchTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ComputeEnvironmentComputeResourcesLaunchTemplate'>outputs.batch.ComputeEnvironmentComputeResourcesLaunchTemplate</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplate?: outputs.batch.ComputeEnvironmentComputeResourcesLaunchTemplate;</code></pre>
 
 The launch template to use for your compute resources. See details below.
 
@@ -6229,7 +6229,7 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule. Vali
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2320">property <b>sourceDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleSourceSourceDetail'>outputs.cfg.RuleSourceSourceDetail</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceDetails?: <a href='#RuleSourceSourceDetail'>RuleSourceSourceDetail</a>[];</code></pre>
 
 Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 
@@ -6377,7 +6377,7 @@ Field level encryption configuration ID
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2402">property <b>forwardedValues</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardedValues: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValues'>outputs.cloudfront.DistributionDefaultCacheBehaviorForwardedValues</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardedValues: <a href='#DistributionDefaultCacheBehaviorForwardedValues'>DistributionDefaultCacheBehaviorForwardedValues</a>;</code></pre>
 
 The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -6386,7 +6386,7 @@ handles query strings, cookies and headers (maximum one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2407">property <b>lambdaFunctionAssociations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaFunctionAssociations?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorLambdaFunctionAssociation'>outputs.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaFunctionAssociations?: <a href='#DistributionDefaultCacheBehaviorLambdaFunctionAssociation'>DistributionDefaultCacheBehaviorLambdaFunctionAssociation</a>[];</code></pre>
 
 A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -6464,7 +6464,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2453">property <b>cookies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cookies: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValuesCookies'>outputs.cloudfront.DistributionDefaultCacheBehaviorForwardedValuesCookies</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cookies: <a href='#DistributionDefaultCacheBehaviorForwardedValuesCookies'>DistributionDefaultCacheBehaviorForwardedValuesCookies</a>;</code></pre>
 
 The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6652,7 +6652,7 @@ Field level encryption configuration ID
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2557">property <b>forwardedValues</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardedValues: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValues'>outputs.cloudfront.DistributionOrderedCacheBehaviorForwardedValues</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardedValues: <a href='#DistributionOrderedCacheBehaviorForwardedValues'>DistributionOrderedCacheBehaviorForwardedValues</a>;</code></pre>
 
 The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -6661,7 +6661,7 @@ handles query strings, cookies and headers (maximum one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2562">property <b>lambdaFunctionAssociations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaFunctionAssociations?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorLambdaFunctionAssociation'>outputs.cloudfront.DistributionOrderedCacheBehaviorLambdaFunctionAssociation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaFunctionAssociations?: <a href='#DistributionOrderedCacheBehaviorLambdaFunctionAssociation'>DistributionOrderedCacheBehaviorLambdaFunctionAssociation</a>[];</code></pre>
 
 A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -6748,7 +6748,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2613">property <b>cookies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cookies: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValuesCookies'>outputs.cloudfront.DistributionOrderedCacheBehaviorForwardedValuesCookies</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cookies: <a href='#DistributionOrderedCacheBehaviorForwardedValuesCookies'>DistributionOrderedCacheBehaviorForwardedValuesCookies</a>;</code></pre>
 
 The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6855,7 +6855,7 @@ ARN of the Lambda function.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2673">property <b>customHeaders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomHeader'>outputs.cloudfront.DistributionOriginCustomHeader</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='#DistributionOriginCustomHeader'>DistributionOriginCustomHeader</a>[];</code></pre>
 
 One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6865,7 +6865,7 @@ One or more sub-resources with `name` and
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2679">property <b>customOriginConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customOriginConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomOriginConfig'>outputs.cloudfront.DistributionOriginCustomOriginConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customOriginConfig?: outputs.cloudfront.DistributionOriginCustomOriginConfig;</code></pre>
 
 The CloudFront custom
 origin configuration information. If an S3
@@ -6902,7 +6902,7 @@ custom origin.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2700">property <b>s3OriginConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3OriginConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginS3OriginConfig'>outputs.cloudfront.DistributionOriginS3OriginConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3OriginConfig?: outputs.cloudfront.DistributionOriginS3OriginConfig;</code></pre>
 
 The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6994,7 +6994,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2742">property <b>failoverCriteria</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failoverCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupFailoverCriteria'>outputs.cloudfront.DistributionOriginGroupFailoverCriteria</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failoverCriteria: <a href='#DistributionOriginGroupFailoverCriteria'>DistributionOriginGroupFailoverCriteria</a>;</code></pre>
 
 The failover criteria for when to failover to the secondary origin
 
@@ -7002,7 +7002,7 @@ The failover criteria for when to failover to the secondary origin
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2746">property <b>members</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupMember'>outputs.cloudfront.DistributionOriginGroupMember</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>members: <a href='#DistributionOriginGroupMember'>DistributionOriginGroupMember</a>[];</code></pre>
 
 Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.
 
@@ -7071,7 +7071,7 @@ identity][5] to associate with the origin.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2776">property <b>geoRestriction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>geoRestriction: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictionsGeoRestriction'>outputs.cloudfront.DistributionRestrictionsGeoRestriction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>geoRestriction: <a href='#DistributionRestrictionsGeoRestriction'>DistributionRestrictionsGeoRestriction</a>;</code></pre>
 <h3 class="pdoc-module-header" id="DistributionRestrictionsGeoRestriction" data-link-title="DistributionRestrictionsGeoRestriction">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2779">
         interface <strong>DistributionRestrictionsGeoRestriction</strong>
@@ -7235,7 +7235,7 @@ must be specified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2853">property <b>dataResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dataResources?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailEventSelectorDataResource'>outputs.cloudtrail.TrailEventSelectorDataResource</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataResources?: <a href='#TrailEventSelectorDataResource'>TrailEventSelectorDataResource</a>[];</code></pre>
 
 Specifies logging data events. Fields documented below.
 
@@ -7376,7 +7376,7 @@ Specifies the launch type on which your task is running. The launch type that yo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L2923">property <b>networkConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTargetNetworkConfiguration'>outputs.cloudwatch.EventTargetEcsTargetNetworkConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: outputs.cloudwatch.EventTargetEcsTargetNetworkConfiguration;</code></pre>
 
 Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launchType is FARGATE because the awsvpc mode is required for Fargate tasks.
 
@@ -7576,7 +7576,7 @@ A human-readable label for this metric or expression. This is especially useful 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3015">property <b>metric</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metric?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MetricAlarmMetricQueryMetric'>outputs.cloudwatch.MetricAlarmMetricQueryMetric</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric?: outputs.cloudwatch.MetricAlarmMetricQueryMetric;</code></pre>
 
 The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 
@@ -7784,7 +7784,7 @@ Information about the compute resources the build project will use. Available va
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3120">property <b>environmentVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>environmentVariables: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironmentEnvironmentVariable'>outputs.codebuild.ProjectEnvironmentEnvironmentVariable</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>environmentVariables: <a href='#ProjectEnvironmentEnvironmentVariable'>ProjectEnvironmentEnvironmentVariable</a>[];</code></pre>
 
 A set of environment variables to make available to builds for this build project.
 
@@ -7816,7 +7816,7 @@ If set to true, enables running the Docker daemon inside a Docker container. Def
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3136">property <b>registryCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>registryCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironmentRegistryCredential'>outputs.codebuild.ProjectEnvironmentRegistryCredential</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>registryCredential?: outputs.codebuild.ProjectEnvironmentRegistryCredential;</code></pre>
 
 Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
 
@@ -7893,7 +7893,7 @@ The service that created the credentials to access a private Docker registry. Th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3173">property <b>cloudwatchLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfigCloudwatchLogs'>outputs.codebuild.ProjectLogsConfigCloudwatchLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLogs?: outputs.codebuild.ProjectLogsConfigCloudwatchLogs;</code></pre>
 
 Configuration for the builds to store logs to CloudWatch
 
@@ -7901,7 +7901,7 @@ Configuration for the builds to store logs to CloudWatch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3177">property <b>s3Logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Logs?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfigS3Logs'>outputs.codebuild.ProjectLogsConfigS3Logs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Logs?: outputs.codebuild.ProjectLogsConfigS3Logs;</code></pre>
 
 Configuration for the builds to store logs to S3.
 
@@ -8057,7 +8057,7 @@ The type of repository that contains the source code to be built. Valid values f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3253">property <b>auths</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>auths?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySourceAuth'>outputs.codebuild.ProjectSecondarySourceAuth</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>auths?: <a href='#ProjectSecondarySourceAuth'>ProjectSecondarySourceAuth</a>[];</code></pre>
 
 Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
 
@@ -8151,7 +8151,7 @@ The type of repository that contains the source code to be built. Valid values f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3299">property <b>auths</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>auths?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSourceAuth'>outputs.codebuild.ProjectSourceAuth</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>auths?: <a href='#ProjectSourceAuth'>ProjectSourceAuth</a>[];</code></pre>
 
 Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
 
@@ -8268,7 +8268,7 @@ The ID of the VPC within which to run builds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3356">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilterGroupFilter'>outputs.codebuild.WebhookFilterGroupFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='#WebhookFilterGroupFilter'>WebhookFilterGroupFilter</a>[];</code></pre>
 
 A webhook filter for the group. Filter blocks are documented below.
 
@@ -8380,12 +8380,12 @@ The name of the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3407">property <b>timeBasedCanary</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeBasedCanary?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedCanary'>outputs.codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedCanary</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeBasedCanary?: outputs.codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedCanary;</code></pre>
 <h4 class="pdoc-member-header" id="DeploymentConfigTrafficRoutingConfig-timeBasedLinear">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3408">property <b>timeBasedLinear</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeBasedLinear?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedLinear'>outputs.codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinear</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeBasedLinear?: outputs.codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinear;</code></pre>
 <h4 class="pdoc-member-header" id="DeploymentConfigTrafficRoutingConfig-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3409">property <b>type</b></a>
 </h4>
@@ -8492,7 +8492,7 @@ The event type or types that trigger a rollback. Supported types are `DEPLOYMENT
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3454">property <b>deploymentReadyOption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deploymentReadyOption?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption'>outputs.codedeploy.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deploymentReadyOption?: outputs.codedeploy.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption;</code></pre>
 
 Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 
@@ -8500,7 +8500,7 @@ Information about the action to take when newly provisioned instances are ready 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3458">property <b>greenFleetProvisioningOption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>greenFleetProvisioningOption: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption'>outputs.codedeploy.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>greenFleetProvisioningOption: <a href='#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption'>DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption</a>;</code></pre>
 
 Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 
@@ -8508,7 +8508,7 @@ Information about how instances are provisioned for a replacement environment in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3462">property <b>terminateBlueInstancesOnDeploymentSuccess</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>terminateBlueInstancesOnDeploymentSuccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess'>outputs.codedeploy.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>terminateBlueInstancesOnDeploymentSuccess?: outputs.codedeploy.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess;</code></pre>
 
 Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 
@@ -8644,7 +8644,7 @@ The value of the tag filter.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3530">property <b>ec2TagFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ec2TagFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupEc2TagSetEc2TagFilter'>outputs.codedeploy.DeploymentGroupEc2TagSetEc2TagFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ec2TagFilters?: <a href='#DeploymentGroupEc2TagSetEc2TagFilter'>DeploymentGroupEc2TagSetEc2TagFilter</a>[];</code></pre>
 
 Tag filters associated with the deployment group. See the AWS docs for details.
 
@@ -8713,7 +8713,7 @@ The name of the ECS service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3563">property <b>elbInfos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elbInfos?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoElbInfo'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoElbInfo</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elbInfos?: <a href='#DeploymentGroupLoadBalancerInfoElbInfo'>DeploymentGroupLoadBalancerInfoElbInfo</a>[];</code></pre>
 
 The Classic Elastic Load Balancer to use in a deployment. Conflicts with `targetGroupInfo` and `targetGroupPairInfo`.
 
@@ -8721,7 +8721,7 @@ The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3567">property <b>targetGroupInfos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroupInfos?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupInfo'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupInfo</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroupInfos?: <a href='#DeploymentGroupLoadBalancerInfoTargetGroupInfo'>DeploymentGroupLoadBalancerInfoTargetGroupInfo</a>[];</code></pre>
 
 The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elbInfo` and `targetGroupPairInfo`.
 
@@ -8729,7 +8729,7 @@ The (Application/Network Load Balancer) target group to use in a deployment. Con
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3571">property <b>targetGroupPairInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroupPairInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfo'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroupPairInfo?: outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo;</code></pre>
 
 The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elbInfo` and `targetGroupInfo`.
 
@@ -8774,7 +8774,7 @@ Name of the target group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3592">property <b>prodTrafficRoute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>prodTrafficRoute: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>prodTrafficRoute: <a href='#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute'>DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute</a>;</code></pre>
 
 Configuration block for the production traffic route (documented below).
 
@@ -8782,7 +8782,7 @@ Configuration block for the production traffic route (documented below).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3596">property <b>targetGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroups: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroups: <a href='#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup'>DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup</a>[];</code></pre>
 
 Configuration blocks for a target group within a target group pair (documented below).
 
@@ -8790,7 +8790,7 @@ Configuration blocks for a target group within a target group pair (documented b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3600">property <b>testTrafficRoute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>testTrafficRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute'>outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>testTrafficRoute?: outputs.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute;</code></pre>
 
 Configuration block for the test traffic route (documented below).
 
@@ -8913,7 +8913,7 @@ The ARN of the SNS topic through which notifications are sent.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3657">property <b>encryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStoreEncryptionKey'>outputs.codepipeline.PipelineArtifactStoreEncryptionKey</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionKey?: outputs.codepipeline.PipelineArtifactStoreEncryptionKey;</code></pre>
 <h4 class="pdoc-member-header" id="PipelineArtifactStore-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3658">property <b>location</b></a>
 </h4>
@@ -8955,7 +8955,7 @@ The codepipeline ID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3671">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStageAction'>outputs.codepipeline.PipelineStageAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: <a href='#PipelineStageAction'>PipelineStageAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PipelineStage-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3675">property <b>name</b></a>
 </h4>
@@ -9120,7 +9120,7 @@ A string identifying the identity provider, for example, "graph.facebook.com" or
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3736">property <b>mappingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mappingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoleMappingMappingRule'>outputs.cognito.IdentityPoolRoleAttachmentRoleMappingMappingRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mappingRules?: <a href='#IdentityPoolRoleAttachmentRoleMappingMappingRule'>IdentityPoolRoleAttachmentRoleMappingMappingRule</a>[];</code></pre>
 
 The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 
@@ -9230,7 +9230,7 @@ Set to True if only the administrator is allowed to create user profiles. Set to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3786">property <b>inviteMessageTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inviteMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfigInviteMessageTemplate'>outputs.cognito.UserPoolAdminCreateUserConfigInviteMessageTemplate</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inviteMessageTemplate?: outputs.cognito.UserPoolAdminCreateUserConfigInviteMessageTemplate;</code></pre>
 
 The invite message template structure.
 
@@ -9504,7 +9504,7 @@ The name of the attribute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3920">property <b>numberAttributeConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>numberAttributeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchemaNumberAttributeConstraints'>outputs.cognito.UserPoolSchemaNumberAttributeConstraints</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberAttributeConstraints?: outputs.cognito.UserPoolSchemaNumberAttributeConstraints;</code></pre>
 
 Specifies the constraints for an attribute of the number type.
 
@@ -9520,7 +9520,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L3928">property <b>stringAttributeConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stringAttributeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchemaStringAttributeConstraints'>outputs.cognito.UserPoolSchemaStringAttributeConstraints</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stringAttributeConstraints?: outputs.cognito.UserPoolSchemaStringAttributeConstraints;</code></pre>
 
 -Specifies the constraints for an attribute of the string type.
 
@@ -9945,7 +9945,7 @@ A list of resource types that should be targeted by the lifecycle policy. `VOLUM
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4133">property <b>schedules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedules: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetailsSchedule'>outputs.dlm.LifecyclePolicyPolicyDetailsSchedule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedules: <a href='#LifecyclePolicyPolicyDetailsSchedule'>LifecyclePolicyPolicyDetailsSchedule</a>[];</code></pre>
 
 See the `schedule` configuration block.
 
@@ -9976,7 +9976,7 @@ Copy all user-defined tags on a source volume to snapshots of the volume created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4148">property <b>createRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>createRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetailsScheduleCreateRule'>outputs.dlm.LifecyclePolicyPolicyDetailsScheduleCreateRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>createRule: <a href='#LifecyclePolicyPolicyDetailsScheduleCreateRule'>LifecyclePolicyPolicyDetailsScheduleCreateRule</a>;</code></pre>
 
 See the `createRule` block. Max of 1 per schedule.
 
@@ -9992,7 +9992,7 @@ A name for the schedule.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4156">property <b>retainRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retainRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetailsScheduleRetainRule'>outputs.dlm.LifecyclePolicyPolicyDetailsScheduleRetainRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retainRule: <a href='#LifecyclePolicyPolicyDetailsScheduleRetainRule'>LifecyclePolicyPolicyDetailsScheduleRetainRule</a>;</code></pre>
 
 See the `retainRule` block. Max of 1 per schedule.
 
@@ -11100,7 +11100,7 @@ The description of the security group
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4597">property <b>launchTemplateSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplateSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetLaunchTemplateConfigLaunchTemplateSpecification'>outputs.ec2.FleetLaunchTemplateConfigLaunchTemplateSpecification</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplateSpecification: <a href='#FleetLaunchTemplateConfigLaunchTemplateSpecification'>FleetLaunchTemplateConfigLaunchTemplateSpecification</a>;</code></pre>
 
 Nested argument containing EC2 Launch Template to use. Defined below.
 
@@ -11108,7 +11108,7 @@ Nested argument containing EC2 Launch Template to use. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4601">property <b>overrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetLaunchTemplateConfigOverride'>outputs.ec2.FleetLaunchTemplateConfigOverride</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='#FleetLaunchTemplateConfigOverride'>FleetLaunchTemplateConfigOverride</a>[];</code></pre>
 
 Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 
@@ -11704,7 +11704,7 @@ The Type of the volume.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4870">property <b>ebs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMappingEb'>outputs.ec2.GetLaunchTemplateBlockDeviceMappingEb</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebs: <a href='#GetLaunchTemplateBlockDeviceMappingEb'>GetLaunchTemplateBlockDeviceMappingEb</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLaunchTemplateBlockDeviceMapping-noDevice">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4871">property <b>noDevice</b></a>
 </h4>
@@ -11820,7 +11820,7 @@ The name of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4906">property <b>spotOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>spotOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOptionSpotOption'>outputs.ec2.GetLaunchTemplateInstanceMarketOptionSpotOption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>spotOptions: <a href='#GetLaunchTemplateInstanceMarketOptionSpotOption'>GetLaunchTemplateInstanceMarketOptionSpotOption</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetLaunchTemplateInstanceMarketOptionSpotOption" data-link-title="GetLaunchTemplateInstanceMarketOptionSpotOption">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L4909">
         interface <strong>GetLaunchTemplateInstanceMarketOptionSpotOption</strong>
@@ -12964,7 +12964,7 @@ The name of the device to mount.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5405">property <b>ebs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebs?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateBlockDeviceMappingEbs'>outputs.ec2.LaunchTemplateBlockDeviceMappingEbs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebs?: outputs.ec2.LaunchTemplateBlockDeviceMappingEbs;</code></pre>
 
 Configure EBS volume properties.
 
@@ -13044,7 +13044,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5430">property <b>capacityReservationTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capacityReservationTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget'>outputs.ec2.LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capacityReservationTarget?: outputs.ec2.LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget;</code></pre>
 <h3 class="pdoc-module-header" id="LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget" data-link-title="LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5433">
         interface <strong>LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget</strong>
@@ -13138,7 +13138,7 @@ The name of the launch template. If you leave this blank, this provider will aut
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5468">property <b>spotOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>spotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateInstanceMarketOptionsSpotOptions'>outputs.ec2.LaunchTemplateInstanceMarketOptionsSpotOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>spotOptions?: outputs.ec2.LaunchTemplateInstanceMarketOptionsSpotOptions;</code></pre>
 <h3 class="pdoc-module-header" id="LaunchTemplateInstanceMarketOptionsSpotOptions" data-link-title="LaunchTemplateInstanceMarketOptionsSpotOptions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5471">
         interface <strong>LaunchTemplateInstanceMarketOptionsSpotOptions</strong>
@@ -13799,7 +13799,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5729">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationEbsBlockDevice'>outputs.ec2.SpotFleetRequestLaunchSpecificationEbsBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='#SpotFleetRequestLaunchSpecificationEbsBlockDevice'>SpotFleetRequestLaunchSpecificationEbsBlockDevice</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotFleetRequestLaunchSpecification-ebsOptimized">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5730">property <b>ebsOptimized</b></a>
 </h4>
@@ -13809,7 +13809,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5731">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationEphemeralBlockDevice'>outputs.ec2.SpotFleetRequestLaunchSpecificationEphemeralBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='#SpotFleetRequestLaunchSpecificationEphemeralBlockDevice'>SpotFleetRequestLaunchSpecificationEphemeralBlockDevice</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotFleetRequestLaunchSpecification-iamInstanceProfile">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5732">property <b>iamInstanceProfile</b></a>
 </h4>
@@ -13849,7 +13849,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5739">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationRootBlockDevice'>outputs.ec2.SpotFleetRequestLaunchSpecificationRootBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='#SpotFleetRequestLaunchSpecificationRootBlockDevice'>SpotFleetRequestLaunchSpecificationRootBlockDevice</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotFleetRequestLaunchSpecification-spotPrice">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L5743">property <b>spotPrice</b></a>
 </h4>
@@ -14804,7 +14804,7 @@ The proxy type. The default value is `APPMESH`. The only supported value is `APP
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6149">property <b>dockerVolumeConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dockerVolumeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionVolumeDockerVolumeConfiguration'>outputs.ecs.TaskDefinitionVolumeDockerVolumeConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dockerVolumeConfiguration?: outputs.ecs.TaskDefinitionVolumeDockerVolumeConfiguration;</code></pre>
 
 Used to configure a docker volume
 
@@ -14915,7 +14915,7 @@ The base64 encoded certificate data required to communicate with your cluster. A
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6206">property <b>oidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterIdentityOidc'>outputs.eks.ClusterIdentityOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oidcs: <a href='#ClusterIdentityOidc'>ClusterIdentityOidc</a>[];</code></pre>
 
 Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
 
@@ -15038,7 +15038,7 @@ The base64 encoded certificate data required to communicate with your cluster. A
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6265">property <b>oidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentityOidc'>outputs.eks.GetClusterIdentityOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oidcs: <a href='#GetClusterIdentityOidc'>GetClusterIdentityOidc</a>[];</code></pre>
 
 Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
 
@@ -15146,7 +15146,7 @@ Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6317">property <b>autoscalingGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalingGroups: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResourceAutoscalingGroup'>outputs.eks.NodeGroupResourceAutoscalingGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalingGroups: <a href='#NodeGroupResourceAutoscalingGroup'>NodeGroupResourceAutoscalingGroup</a>[];</code></pre>
 
 List of objects containing information about AutoScaling Groups.
 
@@ -15772,17 +15772,17 @@ The value of the attribute
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6584">property <b>authenticateCognitos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito'>outputs.elasticloadbalancingv2.GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='#GetListenerDefaultActionAuthenticateCognito'>GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-authenticateOidcs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6585">property <b>authenticateOidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc'>outputs.elasticloadbalancingv2.GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='#GetListenerDefaultActionAuthenticateOidc'>GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-fixedResponses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6586">property <b>fixedResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse'>outputs.elasticloadbalancingv2.GetListenerDefaultActionFixedResponse</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='#GetListenerDefaultActionFixedResponse'>GetListenerDefaultActionFixedResponse</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-order">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6587">property <b>order</b></a>
 </h4>
@@ -15792,7 +15792,7 @@ The value of the attribute
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6588">property <b>redirects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirects: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect'>outputs.elasticloadbalancingv2.GetListenerDefaultActionRedirect</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirects: <a href='#GetListenerDefaultActionRedirect'>GetListenerDefaultActionRedirect</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-targetGroupArn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6589">property <b>targetGroupArn</b></a>
 </h4>
@@ -16098,17 +16098,17 @@ The port of the listener. Required if `arn` is not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6666">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateCognito'>outputs.elasticloadbalancingv2.ListenerDefaultActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.elasticloadbalancingv2.ListenerDefaultActionAuthenticateCognito;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-authenticateOidc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6667">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateOidc'>outputs.elasticloadbalancingv2.ListenerDefaultActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.elasticloadbalancingv2.ListenerDefaultActionAuthenticateOidc;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-fixedResponse">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6671">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionFixedResponse'>outputs.elasticloadbalancingv2.ListenerDefaultActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.elasticloadbalancingv2.ListenerDefaultActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -16121,7 +16121,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6676">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionRedirect'>outputs.elasticloadbalancingv2.ListenerDefaultActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.elasticloadbalancingv2.ListenerDefaultActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -16404,7 +16404,7 @@ The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6815">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateCognito'>outputs.elasticloadbalancingv2.ListenerRuleActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.elasticloadbalancingv2.ListenerRuleActionAuthenticateCognito;</code></pre>
 
 Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 
@@ -16412,7 +16412,7 @@ Information for creating an authenticate action using Cognito. Required if `type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6819">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateOidc'>outputs.elasticloadbalancingv2.ListenerRuleActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.elasticloadbalancingv2.ListenerRuleActionAuthenticateOidc;</code></pre>
 
 Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 
@@ -16420,7 +16420,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6823">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionFixedResponse'>outputs.elasticloadbalancingv2.ListenerRuleActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.elasticloadbalancingv2.ListenerRuleActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -16433,7 +16433,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L6828">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionRedirect'>outputs.elasticloadbalancingv2.ListenerRuleActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.elasticloadbalancingv2.ListenerRuleActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -16942,7 +16942,7 @@ Instance type of data nodes in the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7078">property <b>zoneAwarenessConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zoneAwarenessConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainClusterConfigZoneAwarenessConfig'>outputs.elasticsearch.DomainClusterConfigZoneAwarenessConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zoneAwarenessConfig?: outputs.elasticsearch.DomainClusterConfigZoneAwarenessConfig;</code></pre>
 
 Configuration block containing zone awareness settings. Documented below.
 
@@ -17218,7 +17218,7 @@ Instance type of data nodes in the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7210">property <b>zoneAwarenessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zoneAwarenessConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainClusterConfigZoneAwarenessConfig'>outputs.elasticsearch.GetDomainClusterConfigZoneAwarenessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zoneAwarenessConfigs: <a href='#GetDomainClusterConfigZoneAwarenessConfig'>GetDomainClusterConfigZoneAwarenessConfig</a>[];</code></pre>
 
 Configuration block containing zone awareness settings.
 
@@ -18269,7 +18269,7 @@ The name of the job flow
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7697">property <b>ebsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceGroupEbsConfig'>outputs.emr.ClusterCoreInstanceGroupEbsConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='#ClusterCoreInstanceGroupEbsConfig'>ClusterCoreInstanceGroupEbsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterCoreInstanceGroup-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7701">property <b>id</b></a>
 </h4>
@@ -18391,7 +18391,7 @@ The name of the job flow
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7731">property <b>ebsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterInstanceGroupEbsConfig'>outputs.emr.ClusterInstanceGroupEbsConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='#ClusterInstanceGroupEbsConfig'>ClusterInstanceGroupEbsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterInstanceGroup-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7735">property <b>id</b></a>
 </h4>
@@ -18498,7 +18498,7 @@ The name of the job flow
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7762">property <b>ebsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceGroupEbsConfig'>outputs.emr.ClusterMasterInstanceGroupEbsConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsConfigs: <a href='#ClusterMasterInstanceGroupEbsConfig'>ClusterMasterInstanceGroupEbsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterMasterInstanceGroup-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7766">property <b>id</b></a>
 </h4>
@@ -18568,7 +18568,7 @@ The name of the job flow
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7784">property <b>hadoopJarStep</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hadoopJarStep: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterStepHadoopJarStep'>outputs.emr.ClusterStepHadoopJarStep</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hadoopJarStep: <a href='#ClusterStepHadoopJarStep'>ClusterStepHadoopJarStep</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterStep-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7788">property <b>name</b></a>
 </h4>
@@ -18851,7 +18851,7 @@ Maximum number of game sessions with status `ACTIVATING` to allow on an instance
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L7920">property <b>serverProcesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverProcesses?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetRuntimeConfigurationServerProcess'>outputs.gamelift.FleetRuntimeConfigurationServerProcess</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverProcesses?: <a href='#FleetRuntimeConfigurationServerProcess'>FleetRuntimeConfigurationServerProcess</a>[];</code></pre>
 
 Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 
@@ -19085,7 +19085,7 @@ A list of reducer grouping columns, clustering columns, and bucketing columns in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8037">property <b>columns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>columns?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorColumn'>outputs.glue.CatalogTableStorageDescriptorColumn</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>columns?: <a href='#CatalogTableStorageDescriptorColumn'>CatalogTableStorageDescriptorColumn</a>[];</code></pre>
 
 A list of the Columns in the table.
 
@@ -19141,7 +19141,7 @@ A map of initialization parameters for the SerDe, in key-value form.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8065">property <b>serDeInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serDeInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSerDeInfo'>outputs.glue.CatalogTableStorageDescriptorSerDeInfo</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serDeInfo?: outputs.glue.CatalogTableStorageDescriptorSerDeInfo;</code></pre>
 
 Serialization/deserialization (SerDe) information.
 
@@ -19149,7 +19149,7 @@ Serialization/deserialization (SerDe) information.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8069">property <b>skewedInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>skewedInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSkewedInfo'>outputs.glue.CatalogTableStorageDescriptorSkewedInfo</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>skewedInfo?: outputs.glue.CatalogTableStorageDescriptorSkewedInfo;</code></pre>
 
 Information about values that appear very frequently in a column (skewed values).
 
@@ -19157,7 +19157,7 @@ Information about values that appear very frequently in a column (skewed values)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8073">property <b>sortColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sortColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSortColumn'>outputs.glue.CatalogTableStorageDescriptorSortColumn</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sortColumns?: <a href='#CatalogTableStorageDescriptorSortColumn'>CatalogTableStorageDescriptorSortColumn</a>[];</code></pre>
 
 A list of Order objects specifying the sort order of each bucket in the table.
 
@@ -19597,7 +19597,7 @@ The target of the edge.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8285">property <b>args</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>args: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagNodeArg'>outputs.glue.GetScriptDagNodeArg</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>args: <a href='#GetScriptDagNodeArg'>GetScriptDagNodeArg</a>[];</code></pre>
 
 Nested configuration an argument or property of a node. Defined below.
 
@@ -19713,17 +19713,17 @@ The maximum number of concurrent runs allowed for a job. The default is 1.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8338">property <b>cloudwatchEncryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityConfigurationEncryptionConfigurationCloudwatchEncryption'>outputs.glue.SecurityConfigurationEncryptionConfigurationCloudwatchEncryption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchEncryption: <a href='#SecurityConfigurationEncryptionConfigurationCloudwatchEncryption'>SecurityConfigurationEncryptionConfigurationCloudwatchEncryption</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityConfigurationEncryptionConfiguration-jobBookmarksEncryption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8339">property <b>jobBookmarksEncryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>jobBookmarksEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption'>outputs.glue.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>jobBookmarksEncryption: <a href='#SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption'>SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityConfigurationEncryptionConfiguration-s3Encryption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8343">property <b>s3Encryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Encryption: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityConfigurationEncryptionConfigurationS3Encryption'>outputs.glue.SecurityConfigurationEncryptionConfigurationS3Encryption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Encryption: <a href='#SecurityConfigurationEncryptionConfigurationS3Encryption'>SecurityConfigurationEncryptionConfigurationS3Encryption</a>;</code></pre>
 
 A `s3Encryption ` block as described below, which contains encryption configuration for S3 data.
 
@@ -19846,7 +19846,7 @@ The job run timeout in minutes. It overrides the timeout value of the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8402">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerPredicateCondition'>outputs.glue.TriggerPredicateCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='#TriggerPredicateCondition'>TriggerPredicateCondition</a>[];</code></pre>
 
 A list of the conditions that determine when the trigger will fire. Defined below.
 
@@ -19965,7 +19965,7 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8464">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementCondition'>outputs.iam.GetPolicyDocumentStatementCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='#GetPolicyDocumentStatementCondition'>GetPolicyDocumentStatementCondition</a>[];</code></pre>
 
 A nested configuration block (described below)
 that defines a further, possibly-service-specific condition that constrains
@@ -19994,7 +19994,7 @@ listed.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8480">property <b>notPrincipals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notPrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementNotPrincipal'>outputs.iam.GetPolicyDocumentStatementNotPrincipal</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notPrincipals?: <a href='#GetPolicyDocumentStatementNotPrincipal'>GetPolicyDocumentStatementNotPrincipal</a>[];</code></pre>
 
 Like `principals` except gives resources that
 the statement does *not* apply to.
@@ -20013,7 +20013,7 @@ does *not* apply to. Used to apply a policy statement to all resources
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8491">property <b>principals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>principals?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementPrincipal'>outputs.iam.GetPolicyDocumentStatementPrincipal</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>principals?: <a href='#GetPolicyDocumentStatementPrincipal'>GetPolicyDocumentStatementPrincipal</a>[];</code></pre>
 
 A nested configuration block (described below)
 specifying a resource (or resource pattern) to which this statement applies.
@@ -20604,12 +20604,12 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8780">property <b>kinesisFirehose</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisFirehose?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisFirehose'>outputs.kinesis.AnalyticsApplicationInputsKinesisFirehose</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisFirehose?: outputs.kinesis.AnalyticsApplicationInputsKinesisFirehose;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-kinesisStream">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8781">property <b>kinesisStream</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisStream?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisStream'>outputs.kinesis.AnalyticsApplicationInputsKinesisStream</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisStream?: outputs.kinesis.AnalyticsApplicationInputsKinesisStream;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-namePrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8782">property <b>namePrefix</b></a>
 </h4>
@@ -20619,22 +20619,22 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8783">property <b>parallelism</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsParallelism'>outputs.kinesis.AnalyticsApplicationInputsParallelism</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parallelism?: outputs.kinesis.AnalyticsApplicationInputsParallelism;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-processingConfiguration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8784">property <b>processingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfiguration'>outputs.kinesis.AnalyticsApplicationInputsProcessingConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: outputs.kinesis.AnalyticsApplicationInputsProcessingConfiguration;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-schema">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8785">property <b>schema</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchema'>outputs.kinesis.AnalyticsApplicationInputsSchema</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schema: <a href='#AnalyticsApplicationInputsSchema'>AnalyticsApplicationInputsSchema</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-startingPositionConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8786">property <b>startingPositionConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>startingPositionConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsStartingPositionConfiguration'>outputs.kinesis.AnalyticsApplicationInputsStartingPositionConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>startingPositionConfigurations: <a href='#AnalyticsApplicationInputsStartingPositionConfiguration'>AnalyticsApplicationInputsStartingPositionConfiguration</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputs-streamNames">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8787">property <b>streamNames</b></a>
 </h4>
@@ -20697,7 +20697,7 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8805">property <b>lambda</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambda: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfigurationLambda'>outputs.kinesis.AnalyticsApplicationInputsProcessingConfigurationLambda</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambda: <a href='#AnalyticsApplicationInputsProcessingConfigurationLambda'>AnalyticsApplicationInputsProcessingConfigurationLambda</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationInputsProcessingConfigurationLambda" data-link-title="AnalyticsApplicationInputsProcessingConfigurationLambda">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8808">
         interface <strong>AnalyticsApplicationInputsProcessingConfigurationLambda</strong>
@@ -20726,7 +20726,7 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8814">property <b>recordColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordColumns: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordColumn'>outputs.kinesis.AnalyticsApplicationInputsSchemaRecordColumn</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordColumns: <a href='#AnalyticsApplicationInputsSchemaRecordColumn'>AnalyticsApplicationInputsSchemaRecordColumn</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputsSchema-recordEncoding">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8815">property <b>recordEncoding</b></a>
 </h4>
@@ -20736,7 +20736,7 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8816">property <b>recordFormat</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordFormat: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormat'>outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormat</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordFormat: <a href='#AnalyticsApplicationInputsSchemaRecordFormat'>AnalyticsApplicationInputsSchemaRecordFormat</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationInputsSchemaRecordColumn" data-link-title="AnalyticsApplicationInputsSchemaRecordColumn">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8819">
         interface <strong>AnalyticsApplicationInputsSchemaRecordColumn</strong>
@@ -20773,7 +20773,7 @@ Name of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8829">property <b>mappingParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mappingParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParameters'>outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mappingParameters?: outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParameters;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputsSchemaRecordFormat-recordFormatType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8830">property <b>recordFormatType</b></a>
 </h4>
@@ -20790,12 +20790,12 @@ Name of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8834">property <b>csv</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>csv?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv'>outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>csv?: outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationInputsSchemaRecordFormatMappingParameters-json">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8835">property <b>json</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>json?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson'>outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>json?: outputs.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv" data-link-title="AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8838">
         interface <strong>AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv</strong>
@@ -20856,17 +20856,17 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8856">property <b>kinesisFirehose</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisFirehose?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisFirehose'>outputs.kinesis.AnalyticsApplicationOutputKinesisFirehose</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisFirehose?: outputs.kinesis.AnalyticsApplicationOutputKinesisFirehose;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationOutput-kinesisStream">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8857">property <b>kinesisStream</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisStream?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisStream'>outputs.kinesis.AnalyticsApplicationOutputKinesisStream</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisStream?: outputs.kinesis.AnalyticsApplicationOutputKinesisStream;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationOutput-lambda">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8858">property <b>lambda</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambda?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputLambda'>outputs.kinesis.AnalyticsApplicationOutputLambda</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambda?: outputs.kinesis.AnalyticsApplicationOutputLambda;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationOutput-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8862">property <b>name</b></a>
 </h4>
@@ -20879,7 +20879,7 @@ Name of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8863">property <b>schema</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputSchema'>outputs.kinesis.AnalyticsApplicationOutputSchema</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schema: <a href='#AnalyticsApplicationOutputSchema'>AnalyticsApplicationOutputSchema</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationOutputKinesisFirehose" data-link-title="AnalyticsApplicationOutputKinesisFirehose">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8866">
         interface <strong>AnalyticsApplicationOutputKinesisFirehose</strong>
@@ -20962,12 +20962,12 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8890">property <b>s3</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesS3'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesS3</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3: <a href='#AnalyticsApplicationReferenceDataSourcesS3'>AnalyticsApplicationReferenceDataSourcesS3</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationReferenceDataSources-schema">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8891">property <b>schema</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchema'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchema</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schema: <a href='#AnalyticsApplicationReferenceDataSourcesSchema'>AnalyticsApplicationReferenceDataSourcesSchema</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationReferenceDataSources-tableName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8892">property <b>tableName</b></a>
 </h4>
@@ -21006,7 +21006,7 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8902">property <b>recordColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordColumns: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordColumns: <a href='#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn'>AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationReferenceDataSourcesSchema-recordEncoding">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8903">property <b>recordEncoding</b></a>
 </h4>
@@ -21016,7 +21016,7 @@ The ARN of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8904">property <b>recordFormat</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordFormat: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordFormat: <a href='#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat'>AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn" data-link-title="AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8907">
         interface <strong>AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn</strong>
@@ -21053,7 +21053,7 @@ Name of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8917">property <b>mappingParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mappingParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mappingParameters?: outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat-recordFormatType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8918">property <b>recordFormatType</b></a>
 </h4>
@@ -21070,12 +21070,12 @@ Name of the Kinesis Analytics Application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8922">property <b>csv</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>csv?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>csv?: outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters-json">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8923">property <b>json</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>json?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson'>outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>json?: outputs.kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson;</code></pre>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv" data-link-title="AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8926">
         interface <strong>AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv</strong>
@@ -21132,7 +21132,7 @@ Buffer incoming data to the specified size, in MBs between 1 to 100, before deli
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8947">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -21164,7 +21164,7 @@ The Elasticsearch index rotation period.  Index rotation appends a timestamp to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L8963">property <b>processingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration'>outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration;</code></pre>
 
 The data processing configuration.  More details are given below.
 
@@ -21250,7 +21250,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9005">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor'>outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor'>FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
 
 Array of data processors. More details are given below
 
@@ -21265,7 +21265,7 @@ Array of data processors. More details are given below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9012">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter'>outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter'>FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
 
 Array of processor parameters. More details are given below
 
@@ -21336,7 +21336,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9047">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -21352,7 +21352,7 @@ The compression format. If no value is specified, the default is UNCOMPRESSED. O
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9055">property <b>dataFormatConversionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dataFormatConversionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataFormatConversionConfiguration?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration;</code></pre>
 
 Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 
@@ -21385,7 +21385,7 @@ The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 fi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9072">property <b>processingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration;</code></pre>
 
 The data processing configuration.  More details are given below.
 
@@ -21401,7 +21401,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9080">property <b>s3BackupConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3BackupConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3BackupConfiguration?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration;</code></pre>
 
 The configuration for backup in Amazon S3. Required if `s3BackupMode` is `Enabled`. Supports the same fields as `s3Configuration` object.
 
@@ -21463,7 +21463,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9110">property <b>inputFormatConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputFormatConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputFormatConfiguration: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration'>FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration</a>;</code></pre>
 
 Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 
@@ -21471,7 +21471,7 @@ Nested argument that specifies the deserializer that you want Kinesis Data Fireh
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9114">property <b>outputFormatConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputFormatConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputFormatConfiguration: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration'>FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration</a>;</code></pre>
 
 Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 
@@ -21479,7 +21479,7 @@ Nested argument that specifies the serializer that you want Kinesis Data Firehos
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9118">property <b>schemaConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaConfiguration: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration'>FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration</a>;</code></pre>
 
 Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 
@@ -21494,7 +21494,7 @@ Nested argument that specifies the AWS Glue Data Catalog table that contains the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9125">property <b>deserializer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deserializer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deserializer: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer'>FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer</a>;</code></pre>
 
 Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 
@@ -21509,7 +21509,7 @@ Nested argument that specifies which deserializer to use. You can choose either 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9132">property <b>hiveJsonSerDe</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hiveJsonSerDe?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hiveJsonSerDe?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe;</code></pre>
 
 Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 
@@ -21517,7 +21517,7 @@ Nested argument that specifies the native Hive / HCatalog JsonSerDe. More detail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9136">property <b>openXJsonSerDe</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>openXJsonSerDe?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>openXJsonSerDe?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe;</code></pre>
 
 Nested argument that specifies the OpenX SerDe. More details below.
 
@@ -21578,7 +21578,7 @@ When set to `true`, specifies that the names of the keys include dots and that y
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9165">property <b>serializer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serializer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serializer: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer'>FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer</a>;</code></pre>
 
 Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 
@@ -21593,7 +21593,7 @@ Nested argument that specifies which serializer to use. You can choose either th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9172">property <b>orcSerDe</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>orcSerDe?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>orcSerDe?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe;</code></pre>
 
 Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 
@@ -21601,7 +21601,7 @@ Nested argument that specifies converting data to the ORC format before storing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9176">property <b>parquetSerDe</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parquetSerDe?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parquetSerDe?: outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe;</code></pre>
 
 Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 
@@ -21821,7 +21821,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9284">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor'>FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
 
 Array of data processors. More details are given below
 
@@ -21836,7 +21836,7 @@ Array of data processors. More details are given below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9291">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter'>FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
 
 Array of processor parameters. More details are given below
 
@@ -21907,7 +21907,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9326">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -22009,7 +22009,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9376">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -22057,7 +22057,7 @@ The password for the username above.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9400">property <b>processingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration;</code></pre>
 
 The data processing configuration.  More details are given below.
 
@@ -22081,7 +22081,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9412">property <b>s3BackupConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3BackupConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3BackupConfiguration?: outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration;</code></pre>
 
 The configuration for backup in Amazon S3. Required if `s3BackupMode` is `Enabled`. Supports the same fields as `s3Configuration` object.
 
@@ -22151,7 +22151,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9446">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor'>FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
 
 Array of data processors. More details are given below
 
@@ -22166,7 +22166,7 @@ Array of data processors. More details are given below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9453">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter'>FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
 
 Array of processor parameters. More details are given below
 
@@ -22237,7 +22237,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9488">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -22341,7 +22341,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9540">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -22435,7 +22435,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9586">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions'>outputs.kinesis.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions: <a href='#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions'>FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions</a>;</code></pre>
 
 The CloudWatch Logging Options for the delivery stream. More details are given below.
 
@@ -22475,7 +22475,7 @@ The GUID that you obtain from your Splunk cluster when you create a new HEC endp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9606">property <b>processingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration'>outputs.kinesis.FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processingConfiguration?: outputs.kinesis.FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration;</code></pre>
 
 The data processing configuration.  More details are given below.
 
@@ -22545,7 +22545,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9640">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor'>outputs.kinesis.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor'>FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor</a>[];</code></pre>
 
 Array of data processors. More details are given below
 
@@ -22560,7 +22560,7 @@ Array of data processors. More details are given below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9647">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter'>outputs.kinesis.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter'>FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter</a>[];</code></pre>
 
 Array of processor parameters. More details are given below
 
@@ -22845,17 +22845,17 @@ A list of subnet IDs associated with the Lambda function.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9768">property <b>authenticateCognitos</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito'>outputs.lb.GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognitos: <a href='#GetListenerDefaultActionAuthenticateCognito'>GetListenerDefaultActionAuthenticateCognito</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-authenticateOidcs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9769">property <b>authenticateOidcs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc'>outputs.lb.GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidcs: <a href='#GetListenerDefaultActionAuthenticateOidc'>GetListenerDefaultActionAuthenticateOidc</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-fixedResponses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9770">property <b>fixedResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse'>outputs.lb.GetListenerDefaultActionFixedResponse</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponses: <a href='#GetListenerDefaultActionFixedResponse'>GetListenerDefaultActionFixedResponse</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-order">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9771">property <b>order</b></a>
 </h4>
@@ -22865,7 +22865,7 @@ A list of subnet IDs associated with the Lambda function.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9772">property <b>redirects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirects: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect'>outputs.lb.GetListenerDefaultActionRedirect</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirects: <a href='#GetListenerDefaultActionRedirect'>GetListenerDefaultActionRedirect</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerDefaultAction-targetGroupArn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9773">property <b>targetGroupArn</b></a>
 </h4>
@@ -23171,17 +23171,17 @@ The port of the listener. Required if `arn` is not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9850">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateCognito'>outputs.lb.ListenerDefaultActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.lb.ListenerDefaultActionAuthenticateCognito;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-authenticateOidc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9851">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateOidc'>outputs.lb.ListenerDefaultActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.lb.ListenerDefaultActionAuthenticateOidc;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerDefaultAction-fixedResponse">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9855">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionFixedResponse'>outputs.lb.ListenerDefaultActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.lb.ListenerDefaultActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -23194,7 +23194,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9860">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionRedirect'>outputs.lb.ListenerDefaultActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.lb.ListenerDefaultActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -23477,7 +23477,7 @@ The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L9999">property <b>authenticateCognito</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateCognito'>outputs.lb.ListenerRuleActionAuthenticateCognito</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateCognito?: outputs.lb.ListenerRuleActionAuthenticateCognito;</code></pre>
 
 Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 
@@ -23485,7 +23485,7 @@ Information for creating an authenticate action using Cognito. Required if `type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10003">property <b>authenticateOidc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateOidc'>outputs.lb.ListenerRuleActionAuthenticateOidc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticateOidc?: outputs.lb.ListenerRuleActionAuthenticateOidc;</code></pre>
 
 Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 
@@ -23493,7 +23493,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10007">property <b>fixedResponse</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionFixedResponse'>outputs.lb.ListenerRuleActionFixedResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedResponse?: outputs.lb.ListenerRuleActionFixedResponse;</code></pre>
 
 Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 
@@ -23506,7 +23506,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10012">property <b>redirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionRedirect'>outputs.lb.ListenerRuleActionRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirect?: outputs.lb.ListenerRuleActionRedirect;</code></pre>
 
 Information for creating a redirect action. Required if `type` is `redirect`.
 
@@ -24001,7 +24001,7 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10257">property <b>ingestEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingestEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ChannelHlsIngestIngestEndpoint'>outputs.mediapackage.ChannelHlsIngestIngestEndpoint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingestEndpoints: <a href='#ChannelHlsIngestIngestEndpoint'>ChannelHlsIngestIngestEndpoint</a>[];</code></pre>
 
 A list of the ingest endpoints
 
@@ -24374,7 +24374,7 @@ A list of the security groups to associate with the elastic network interfaces t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10412">property <b>tls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClientAuthenticationTls'>outputs.msk.ClusterClientAuthenticationTls</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tls?: outputs.msk.ClusterClientAuthenticationTls;</code></pre>
 
 Configuration block for specifying TLS client authentication. See below.
 
@@ -24435,7 +24435,7 @@ You may specify a KMS key short ID or ARN (it will always output an ARN) to use 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10441">property <b>encryptionInTransit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionInTransit?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEncryptionInfoEncryptionInTransit'>outputs.msk.ClusterEncryptionInfoEncryptionInTransit</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionInTransit?: outputs.msk.ClusterEncryptionInfoEncryptionInTransit;</code></pre>
 
 Configuration block to specify encryption in transit. See below.
 
@@ -25227,7 +25227,7 @@ The name of the policy type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10704">property <b>policyTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRootPolicyType'>outputs.organizations.GetOrganizationRootPolicyType</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyTypes: <a href='#GetOrganizationRootPolicyType'>GetOrganizationRootPolicyType</a>[];</code></pre>
 
 List of policy types enabled for this root. All elements have these attributes:
 
@@ -25403,7 +25403,7 @@ The name of the policy type
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10769">property <b>policyTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationRootPolicyType'>outputs.organizations.OrganizationRootPolicyType</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyTypes: <a href='#OrganizationRootPolicyType'>OrganizationRootPolicyType</a>[];</code></pre>
 
 List of policy types enabled for this root. All elements have these attributes:
 
@@ -25771,7 +25771,7 @@ The Name of the Option (e.g. MEMCACHED).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L10972">property <b>optionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>optionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OptionGroupOptionOptionSetting'>outputs.rds.OptionGroupOptionOptionSetting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>optionSettings?: <a href='#OptionGroupOptionOptionSetting'>OptionGroupOptionOptionSetting</a>[];</code></pre>
 
 A list of option settings to apply.
 
@@ -26289,7 +26289,7 @@ Boolean which indicates if this criteria is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11226">property <b>expiration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleExpiration'>outputs.s3.BucketLifecycleRuleExpiration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>expiration?: outputs.s3.BucketLifecycleRuleExpiration;</code></pre>
 
 Specifies a period in the object's expire (documented below).
 
@@ -26305,7 +26305,7 @@ Unique identifier for the rule.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11234">property <b>noncurrentVersionExpiration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>noncurrentVersionExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleNoncurrentVersionExpiration'>outputs.s3.BucketLifecycleRuleNoncurrentVersionExpiration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>noncurrentVersionExpiration?: outputs.s3.BucketLifecycleRuleNoncurrentVersionExpiration;</code></pre>
 
 Specifies when noncurrent object versions expire (documented below).
 
@@ -26313,7 +26313,7 @@ Specifies when noncurrent object versions expire (documented below).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11238">property <b>noncurrentVersionTransitions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>noncurrentVersionTransitions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleNoncurrentVersionTransition'>outputs.s3.BucketLifecycleRuleNoncurrentVersionTransition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>noncurrentVersionTransitions?: <a href='#BucketLifecycleRuleNoncurrentVersionTransition'>BucketLifecycleRuleNoncurrentVersionTransition</a>[];</code></pre>
 
 Specifies when noncurrent object versions transitions (documented below).
 
@@ -26338,7 +26338,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11251">property <b>transitions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>transitions?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleTransition'>outputs.s3.BucketLifecycleRuleTransition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>transitions?: <a href='#BucketLifecycleRuleTransition'>BucketLifecycleRuleTransition</a>[];</code></pre>
 
 Specifies a period in the object's transitions (documented below).
 
@@ -26648,7 +26648,7 @@ Indicates whether this bucket has an Object Lock configuration enabled. Valid va
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11401">property <b>rule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rule?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfigurationRule'>outputs.s3.BucketObjectLockConfigurationRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rule?: outputs.s3.BucketObjectLockConfigurationRule;</code></pre>
 
 The Object Lock rule in place for this bucket.
 
@@ -26663,7 +26663,7 @@ The Object Lock rule in place for this bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11408">property <b>defaultRetention</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultRetention: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfigurationRuleDefaultRetention'>outputs.s3.BucketObjectLockConfigurationRuleDefaultRetention</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultRetention: <a href='#BucketObjectLockConfigurationRuleDefaultRetention'>BucketObjectLockConfigurationRuleDefaultRetention</a>;</code></pre>
 
 The default retention period that you want to apply to new objects placed in this bucket.
 
@@ -26717,7 +26717,7 @@ The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11434">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRule'>outputs.s3.BucketReplicationConfigurationRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='#BucketReplicationConfigurationRule'>BucketReplicationConfigurationRule</a>[];</code></pre>
 
 Specifies the rules managing the replication (documented below).
 
@@ -26732,7 +26732,7 @@ Specifies the rules managing the replication (documented below).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11441">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleDestination'>outputs.s3.BucketReplicationConfigurationRuleDestination</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination: <a href='#BucketReplicationConfigurationRuleDestination'>BucketReplicationConfigurationRuleDestination</a>;</code></pre>
 
 Specifies the destination for the rule (documented below).
 
@@ -26740,7 +26740,7 @@ Specifies the destination for the rule (documented below).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11445">property <b>filter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleFilter'>outputs.s3.BucketReplicationConfigurationRuleFilter</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filter?: outputs.s3.BucketReplicationConfigurationRuleFilter;</code></pre>
 
 Filter that identifies subset of objects to which the replication rule applies (documented below).
 
@@ -26772,7 +26772,7 @@ The priority associated with the rule.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11461">property <b>sourceSelectionCriteria</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceSelectionCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleSourceSelectionCriteria'>outputs.s3.BucketReplicationConfigurationRuleSourceSelectionCriteria</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceSelectionCriteria?: outputs.s3.BucketReplicationConfigurationRuleSourceSelectionCriteria;</code></pre>
 
 Specifies special object selection criteria (documented below).
 
@@ -26795,7 +26795,7 @@ The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11472">property <b>accessControlTranslation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessControlTranslation?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleDestinationAccessControlTranslation'>outputs.s3.BucketReplicationConfigurationRuleDestinationAccessControlTranslation</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessControlTranslation?: outputs.s3.BucketReplicationConfigurationRuleDestinationAccessControlTranslation;</code></pre>
 
 Specifies the overrides to use for object owners on replication. Must be used in conjunction with `accountId` owner override configuration.
 
@@ -26882,7 +26882,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11516">property <b>sseKmsEncryptedObjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sseKmsEncryptedObjects?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects'>outputs.s3.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sseKmsEncryptedObjects?: outputs.s3.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects;</code></pre>
 
 Match SSE-KMS encrypted objects (documented below). If specified, `replicaKmsKeyId`
 in `destination` must be specified as well.
@@ -26913,7 +26913,7 @@ Boolean which indicates if this criteria is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11530">property <b>rule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfigurationRule'>outputs.s3.BucketServerSideEncryptionConfigurationRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rule: <a href='#BucketServerSideEncryptionConfigurationRule'>BucketServerSideEncryptionConfigurationRule</a>;</code></pre>
 
 The Object Lock rule in place for this bucket.
 
@@ -26928,7 +26928,7 @@ The Object Lock rule in place for this bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11537">property <b>applyServerSideEncryptionByDefault</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applyServerSideEncryptionByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault'>outputs.s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applyServerSideEncryptionByDefault: <a href='#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault'>BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault</a>;</code></pre>
 
 A single object for setting server-side encryption by default. (documented below)
 
@@ -27029,7 +27029,7 @@ describing redirect behavior and when redirects are applied.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11586">property <b>bucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucket'>outputs.s3.InventoryDestinationBucket</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bucket: <a href='#InventoryDestinationBucket'>InventoryDestinationBucket</a>;</code></pre>
 
 The S3 bucket configuration where inventory results are published (documented below).
 
@@ -27060,7 +27060,7 @@ The Amazon S3 bucket ARN of the destination.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11601">property <b>encryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucketEncryption'>outputs.s3.InventoryDestinationBucketEncryption</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryption?: outputs.s3.InventoryDestinationBucketEncryption;</code></pre>
 
 Contains the type of server-side encryption to use to encrypt the inventory (documented below).
 
@@ -27091,7 +27091,7 @@ The prefix that is prepended to all inventory results.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11616">property <b>sseKms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sseKms?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucketEncryptionSseKms'>outputs.s3.InventoryDestinationBucketEncryptionSseKms</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sseKms?: outputs.s3.InventoryDestinationBucketEncryptionSseKms;</code></pre>
 
 Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the inventory file (documented below).
 
@@ -27099,7 +27099,7 @@ Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11620">property <b>sseS3</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sseS3?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucketEncryptionSseS3'>outputs.s3.InventoryDestinationBucketEncryptionSseS3</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sseS3?: outputs.s3.InventoryDestinationBucketEncryptionSseS3;</code></pre>
 
 Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to encrypt the inventory file.
 
@@ -27304,7 +27304,7 @@ Specifies the number of days between automatic scheduled rotations of the secret
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11697">property <b>dnsRecords</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsRecords: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfigDnsRecord'>outputs.servicediscovery.ServiceDnsConfigDnsRecord</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsRecords: <a href='#ServiceDnsConfigDnsRecord'>ServiceDnsConfigDnsRecord</a>[];</code></pre>
 
 An array that contains one DnsRecord object for each resource record set.
 
@@ -27887,7 +27887,7 @@ The array of strings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11966">property <b>automationParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>automationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersAutomationParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>automationParameters?: outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParameters;</code></pre>
 
 The parameters for an AUTOMATION task type. Documented below.
 
@@ -27895,7 +27895,7 @@ The parameters for an AUTOMATION task type. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11970">property <b>lambdaParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersLambdaParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaParameters?: outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters;</code></pre>
 
 The parameters for a LAMBDA task type. Documented below.
 
@@ -27903,7 +27903,7 @@ The parameters for a LAMBDA task type. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11974">property <b>runCommandParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>runCommandParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runCommandParameters?: outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters;</code></pre>
 
 The parameters for a RUN_COMMAND task type. Documented below.
 
@@ -27911,7 +27911,7 @@ The parameters for a RUN_COMMAND task type. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11978">property <b>stepFunctionsParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepFunctionsParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepFunctionsParameters?: outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters;</code></pre>
 
 The parameters for a STEP_FUNCTIONS task type. Documented below.
 
@@ -27934,7 +27934,7 @@ The version of an Automation document to use during task execution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L11989">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter'>MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter</a>[];</code></pre>
 
 The parameters for the RUN_COMMAND task execution. Documented below.
 
@@ -28027,7 +28027,7 @@ SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12034">property <b>notificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notificationConfig?: outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig;</code></pre>
 
 Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 
@@ -28051,7 +28051,7 @@ The Amazon S3 bucket subfolder.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12046">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter'>MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter</a>[];</code></pre>
 
 The parameters for the RUN_COMMAND task execution. Documented below.
 
@@ -28197,7 +28197,7 @@ The array of strings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12109">property <b>patchFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>patchFilters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineApprovalRulePatchFilter'>outputs.ssm.PatchBaselineApprovalRulePatchFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>patchFilters: <a href='#PatchBaselineApprovalRulePatchFilter'>PatchBaselineApprovalRulePatchFilter</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="PatchBaselineApprovalRulePatchFilter" data-link-title="PatchBaselineApprovalRulePatchFilter">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12112">
         interface <strong>PatchBaselineApprovalRulePatchFilter</strong>
@@ -28363,7 +28363,7 @@ The ID of the VPC endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12181">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ByteMatchSetByteMatchTupleFieldToMatch'>outputs.waf.ByteMatchSetByteMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#ByteMatchSetByteMatchTupleFieldToMatch'>ByteMatchSetByteMatchTupleFieldToMatch</a>;</code></pre>
 
 The part of a web request that you want to search, such as a specified header or a query string.
 
@@ -28522,7 +28522,7 @@ The type of predicate in a rule. Valid values: `ByteMatch`, `GeoMatch`, `IPMatch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12268">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RegexMatchSetRegexMatchTupleFieldToMatch'>outputs.waf.RegexMatchSetRegexMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#RegexMatchSetRegexMatchTupleFieldToMatch'>RegexMatchSetRegexMatchTupleFieldToMatch</a>;</code></pre>
 
 The part of a web request that you want to search, such as a specified header or a query string.
 
@@ -28583,7 +28583,7 @@ for all supported values.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12301">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupActivatedRuleAction'>outputs.waf.RuleGroupActivatedRuleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#RuleGroupActivatedRuleAction'>RuleGroupActivatedRuleAction</a>;</code></pre>
 
 Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
 
@@ -28681,7 +28681,7 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12351">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SizeConstraintSetSizeConstraintFieldToMatch'>outputs.waf.SizeConstraintSetSizeConstraintFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#SizeConstraintSetSizeConstraintFieldToMatch'>SizeConstraintSetSizeConstraintFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for the size constraint.
 
@@ -28745,7 +28745,7 @@ for all supported values.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12387">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch'>outputs.waf.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch'>SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for snippets of malicious SQL code.
 
@@ -28822,7 +28822,7 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12428">property <b>redactedFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redactedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclLoggingConfigurationRedactedFields'>outputs.waf.WebAclLoggingConfigurationRedactedFields</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redactedFields?: outputs.waf.WebAclLoggingConfigurationRedactedFields;</code></pre>
 
 Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 
@@ -28837,7 +28837,7 @@ Configuration block containing parts of the request that you want redacted from 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12435">property <b>fieldToMatches</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatches: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclLoggingConfigurationRedactedFieldsFieldToMatch'>outputs.waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatch</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatches: <a href='#WebAclLoggingConfigurationRedactedFieldsFieldToMatch'>WebAclLoggingConfigurationRedactedFieldsFieldToMatch</a>[];</code></pre>
 
 Set of configuration blocks for fields to redact. Detailed below.
 
@@ -28875,7 +28875,7 @@ The rule type, either `REGULAR`, as defined by [Rule](http://docs.aws.amazon.com
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12453">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclRuleAction'>outputs.waf.WebAclRuleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action?: outputs.waf.WebAclRuleAction;</code></pre>
 
 The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if `type` is `GROUP`.
 
@@ -28883,7 +28883,7 @@ The action that CloudFront or AWS WAF takes when a web request matches the condi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12457">property <b>overrideAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>overrideAction?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclRuleOverrideAction'>outputs.waf.WebAclRuleOverrideAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>overrideAction?: outputs.waf.WebAclRuleOverrideAction;</code></pre>
 
 Override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Only used if `type` is `GROUP`.
 
@@ -28953,7 +28953,7 @@ The rule type, either `REGULAR`, as defined by [Rule](http://docs.aws.amazon.com
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12491">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#XssMatchSetXssMatchTupleFieldToMatch'>outputs.waf.XssMatchSetXssMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#XssMatchSetXssMatchTupleFieldToMatch'>XssMatchSetXssMatchTupleFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for cross-site scripting attacks.
 
@@ -29008,7 +29008,7 @@ for all supported values.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12523">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ByteMatchSetByteMatchTupleFieldToMatch'>outputs.wafregional.ByteMatchSetByteMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#ByteMatchSetByteMatchTupleFieldToMatch'>ByteMatchSetByteMatchTupleFieldToMatch</a>;</code></pre>
 
 Settings for the ByteMatchTuple. FieldToMatch documented below.
 
@@ -29152,7 +29152,7 @@ The type of predicate in a rule. Valid values: `ByteMatch`, `GeoMatch`, `IPMatch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12595">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RegexMatchSetRegexMatchTupleFieldToMatch'>outputs.wafregional.RegexMatchSetRegexMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#RegexMatchSetRegexMatchTupleFieldToMatch'>RegexMatchSetRegexMatchTupleFieldToMatch</a>;</code></pre>
 
 The part of a web request that you want to search, such as a specified header or a query string.
 
@@ -29213,7 +29213,7 @@ for all supported values.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12628">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupActivatedRuleAction'>outputs.wafregional.RuleGroupActivatedRuleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#RuleGroupActivatedRuleAction'>RuleGroupActivatedRuleAction</a>;</code></pre>
 
 Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
 
@@ -29299,7 +29299,7 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12666">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SizeConstraintSetSizeConstraintFieldToMatch'>outputs.wafregional.SizeConstraintSetSizeConstraintFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#SizeConstraintSetSizeConstraintFieldToMatch'>SizeConstraintSetSizeConstraintFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for the size constraint.
 
@@ -29363,7 +29363,7 @@ for all supported values.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12702">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch'>outputs.wafregional.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch'>SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for snippets of malicious SQL code.
 
@@ -29440,7 +29440,7 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12743">property <b>redactedFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redactedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclLoggingConfigurationRedactedFields'>outputs.wafregional.WebAclLoggingConfigurationRedactedFields</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redactedFields?: outputs.wafregional.WebAclLoggingConfigurationRedactedFields;</code></pre>
 
 Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 
@@ -29455,7 +29455,7 @@ Configuration block containing parts of the request that you want redacted from 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12750">property <b>fieldToMatches</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatches: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclLoggingConfigurationRedactedFieldsFieldToMatch'>outputs.wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatch</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatches: <a href='#WebAclLoggingConfigurationRedactedFieldsFieldToMatch'>WebAclLoggingConfigurationRedactedFieldsFieldToMatch</a>[];</code></pre>
 
 Set of configuration blocks for fields to redact. Detailed below.
 
@@ -29493,7 +29493,7 @@ Specifies how you want AWS WAF Regional to respond to requests that match the se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12768">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclRuleAction'>outputs.wafregional.WebAclRuleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action?: outputs.wafregional.WebAclRuleAction;</code></pre>
 
 Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
 
@@ -29501,7 +29501,7 @@ Configuration block of the action that CloudFront or AWS WAF takes when a web re
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12772">property <b>overrideAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>overrideAction?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebAclRuleOverrideAction'>outputs.wafregional.WebAclRuleOverrideAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>overrideAction?: outputs.wafregional.WebAclRuleOverrideAction;</code></pre>
 
 Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
 
@@ -29571,7 +29571,7 @@ Specifies how you want AWS WAF Regional to respond to requests that match the se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/types/output.ts#L12806">property <b>fieldToMatch</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#XssMatchSetXssMatchTupleFieldToMatch'>outputs.wafregional.XssMatchSetXssMatchTupleFieldToMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fieldToMatch: <a href='#XssMatchSetXssMatchTupleFieldToMatch'>XssMatchSetXssMatchTupleFieldToMatch</a>;</code></pre>
 
 Specifies where in a web request to look for cross-site scripting attacks.
 

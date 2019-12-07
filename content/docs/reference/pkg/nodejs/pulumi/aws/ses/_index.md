@@ -133,7 +133,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ActiveReceiptRuleSet</code></pre>
 
 
 Returns true if the given object is an instance of ActiveReceiptRuleSet.  This is designed to work even
@@ -209,7 +209,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConfgurationSet</code></pre>
 
 
 Returns true if the given object is an instance of ConfgurationSet.  This is designed to work even
@@ -296,7 +296,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConfigurationSet</code></pre>
 
 
 Returns true if the given object is an instance of ConfigurationSet.  This is designed to work even
@@ -402,7 +402,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainDkim</code></pre>
 
 
 Returns true if the given object is an instance of DomainDkim.  This is designed to work even
@@ -513,7 +513,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainIdentity</code></pre>
 
 
 Returns true if the given object is an instance of DomainIdentity.  This is designed to work even
@@ -642,7 +642,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainIdentityVerification</code></pre>
 
 
 Returns true if the given object is an instance of DomainIdentityVerification.  This is designed to work even
@@ -742,7 +742,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EmailIdentity</code></pre>
 
 
 Returns true if the given object is an instance of EmailIdentity.  This is designed to work even
@@ -893,7 +893,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventDestination</code></pre>
 
 
 Returns true if the given object is an instance of EventDestination.  This is designed to work even
@@ -903,7 +903,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L106">property <b>cloudwatchDestinations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cloudwatchDestinations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationCloudwatchDestination'>outputs.ses.EventDestinationCloudwatchDestination</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cloudwatchDestinations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 CloudWatch destination for the events
 
@@ -936,7 +936,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L118">property <b>kinesisDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>kinesisDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationKinesisDestination'>outputs.ses.EventDestinationKinesisDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>kinesisDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Send the events to a kinesis firehose destination
 
@@ -960,7 +960,7 @@ The name of the event destination
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L130">property <b>snsDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snsDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationSnsDestination'>outputs.ses.EventDestinationSnsDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snsDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Send the events to an SNS Topic destination
 
@@ -1036,7 +1036,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IdentityNotificationTopic</code></pre>
 
 
 Returns true if the given object is an instance of IdentityNotificationTopic.  This is designed to work even
@@ -1169,7 +1169,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IdentityPolicy</code></pre>
 
 
 Returns true if the given object is an instance of IdentityPolicy.  This is designed to work even
@@ -1295,7 +1295,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MailFrom</code></pre>
 
 
 Returns true if the given object is an instance of MailFrom.  This is designed to work even
@@ -1404,7 +1404,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReceiptFilter</code></pre>
 
 
 Returns true if the given object is an instance of ReceiptFilter.  This is designed to work even
@@ -1525,7 +1525,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReceiptRule</code></pre>
 
 
 Returns true if the given object is an instance of ReceiptRule.  This is designed to work even
@@ -1535,7 +1535,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L68">property <b>addHeaderActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>addHeaderActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleAddHeaderAction'>outputs.ses.ReceiptRuleAddHeaderAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addHeaderActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of Add Header Action blocks. Documented below.
 
@@ -1551,7 +1551,7 @@ The name of the rule to place this rule after
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L76">property <b>bounceActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bounceActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleBounceAction'>outputs.ses.ReceiptRuleBounceAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bounceActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of Bounce Action blocks. Documented below.
 
@@ -1576,7 +1576,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L84">property <b>lambdaActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lambdaActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleLambdaAction'>outputs.ses.ReceiptRuleLambdaAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lambdaActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of Lambda Action blocks. Documented below.
 
@@ -1608,7 +1608,7 @@ The name of the rule set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L100">property <b>s3Actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>s3Actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleS3Action'>outputs.ses.ReceiptRuleS3Action</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>s3Actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of S3 Action blocks. Documented below.
 
@@ -1624,7 +1624,7 @@ If true, incoming emails will be scanned for spam and viruses
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L108">property <b>snsActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snsActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleSnsAction'>outputs.ses.ReceiptRuleSnsAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snsActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of SNS Action blocks. Documented below.
 
@@ -1632,7 +1632,7 @@ A list of SNS Action blocks. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L112">property <b>stopActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stopActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleStopAction'>outputs.ses.ReceiptRuleStopAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stopActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of Stop Action blocks. Documented below.
 
@@ -1657,7 +1657,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L120">property <b>workmailActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>workmailActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleWorkmailAction'>outputs.ses.ReceiptRuleWorkmailAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>workmailActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of WorkMail Action blocks. Documented below.
 
@@ -1721,7 +1721,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReceiptRuleSet</code></pre>
 
 
 Returns true if the given object is an instance of ReceiptRuleSet.  This is designed to work even
@@ -1816,7 +1816,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Template</code></pre>
 
 
 Returns true if the given object is an instance of Template.  This is designed to work even
@@ -2186,7 +2186,7 @@ The set of arguments for constructing a EventDestination resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L219">property <b>cloudwatchDestinations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>inputs.ses.EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
 
 CloudWatch destination for the events
 
@@ -2210,7 +2210,7 @@ If true, the event destination will be enabled
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L231">property <b>kinesisDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>inputs.ses.EventDestinationKinesisDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a>&gt;;</code></pre>
 
 Send the events to a kinesis firehose destination
 
@@ -2234,7 +2234,7 @@ The name of the event destination
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L243">property <b>snsDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>inputs.ses.EventDestinationSnsDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a>&gt;;</code></pre>
 
 Send the events to an SNS Topic destination
 
@@ -2252,7 +2252,7 @@ Input properties used for looking up and filtering EventDestination resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L185">property <b>cloudwatchDestinations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>inputs.ses.EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
 
 CloudWatch destination for the events
 
@@ -2276,7 +2276,7 @@ If true, the event destination will be enabled
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L197">property <b>kinesisDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>inputs.ses.EventDestinationKinesisDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a>&gt;;</code></pre>
 
 Send the events to a kinesis firehose destination
 
@@ -2300,7 +2300,7 @@ The name of the event destination
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/eventDestination.ts#L209">property <b>snsDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>inputs.ses.EventDestinationSnsDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a>&gt;;</code></pre>
 
 Send the events to an SNS Topic destination
 
@@ -2600,7 +2600,7 @@ The set of arguments for constructing a ReceiptRule resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L248">property <b>addHeaderActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>inputs.ses.ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Add Header Action blocks. Documented below.
 
@@ -2616,7 +2616,7 @@ The name of the rule to place this rule after
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L256">property <b>bounceActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>inputs.ses.ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Bounce Action blocks. Documented below.
 
@@ -2632,7 +2632,7 @@ If true, the rule will be enabled
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L264">property <b>lambdaActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>inputs.ses.ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Lambda Action blocks. Documented below.
 
@@ -2664,7 +2664,7 @@ The name of the rule set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L280">property <b>s3Actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>inputs.ses.ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
 
 A list of S3 Action blocks. Documented below.
 
@@ -2680,7 +2680,7 @@ If true, incoming emails will be scanned for spam and viruses
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L288">property <b>snsActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>inputs.ses.ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
 
 A list of SNS Action blocks. Documented below.
 
@@ -2688,7 +2688,7 @@ A list of SNS Action blocks. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L292">property <b>stopActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>inputs.ses.ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Stop Action blocks. Documented below.
 
@@ -2704,7 +2704,7 @@ Require or Optional
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L300">property <b>workmailActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>inputs.ses.ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
 
 A list of WorkMail Action blocks. Documented below.
 
@@ -2758,7 +2758,7 @@ Input properties used for looking up and filtering ReceiptRule resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L186">property <b>addHeaderActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>inputs.ses.ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Add Header Action blocks. Documented below.
 
@@ -2774,7 +2774,7 @@ The name of the rule to place this rule after
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L194">property <b>bounceActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>inputs.ses.ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Bounce Action blocks. Documented below.
 
@@ -2790,7 +2790,7 @@ If true, the rule will be enabled
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L202">property <b>lambdaActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>inputs.ses.ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Lambda Action blocks. Documented below.
 
@@ -2822,7 +2822,7 @@ The name of the rule set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L218">property <b>s3Actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>inputs.ses.ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
 
 A list of S3 Action blocks. Documented below.
 
@@ -2838,7 +2838,7 @@ If true, incoming emails will be scanned for spam and viruses
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L226">property <b>snsActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>inputs.ses.ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
 
 A list of SNS Action blocks. Documented below.
 
@@ -2846,7 +2846,7 @@ A list of SNS Action blocks. Documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L230">property <b>stopActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>inputs.ses.ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
 
 A list of Stop Action blocks. Documented below.
 
@@ -2862,7 +2862,7 @@ Require or Optional
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ses/receiptRule.ts#L238">property <b>workmailActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>inputs.ses.ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
 
 A list of WorkMail Action blocks. Documented below.
 

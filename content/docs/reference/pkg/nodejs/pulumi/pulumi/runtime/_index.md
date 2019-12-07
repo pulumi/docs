@@ -234,7 +234,7 @@ Get the project being run by the current update.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>getRootResource(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#URN'>URN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>getRootResource(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 
 getRootResource returns a root resource URN that will automatically become the default parent of all resources.  This
@@ -259,7 +259,7 @@ Get the stack being targeted by the current update.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>getStackResource(): <a href='#Stack'>Stack</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getStackResource(): Stack | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="hasMonitor" data-link-title="hasMonitor">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/settings.ts#L160">
@@ -280,7 +280,7 @@ hasMonitor returns true if we are currently connected to a resource monitoring s
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>invoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>invoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</code></pre>
 
 
 `invoke` dynamically invokes the function, `tok`, which is offered by a provider plugin. `invoke`
@@ -323,7 +323,7 @@ synchronously.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>invokeFallbackToAsync&lt;T&gt;(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): T</code></pre>
+<pre class="highlight"><code><span class='kd'></span>invokeFallbackToAsync&lt;T&gt;(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): T</code></pre>
 
 <h3 class="pdoc-module-header" id="isDryRun" data-link-title="isDryRun">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/settings.ts#L68">
@@ -382,7 +382,7 @@ Returns true if test mode is enabled (PULUMI_TEST_MODE).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>listResourceOutputs&lt;U&gt;(typeFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, stackName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): query.AsyncQueryable&lt;ResolvedResource&lt;U&gt;&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listResourceOutputs&lt;U&gt;(typeFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, stackName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): AsyncQueryable&lt;ResolvedResource&lt;U&gt;&gt;</code></pre>
 
 
 listResourceOutputs returns the resource outputs (if any) for a stack, or an error if the stack
@@ -513,7 +513,7 @@ Directory containing the send/receive files for making synchronous invokes to th
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>readResource(res: <a href='#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>readResource(res: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 Reads an existing custom resource's state from the resource monitor.  Note that resources read in this way
@@ -526,7 +526,7 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>registerResource(res: <a href='#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, custom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>registerResource(res: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, custom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 registerResource registers a new resource object with a given type t and name.  It returns the auto-generated
@@ -540,7 +540,7 @@ objects that the registration operation will resolve at the right time (or remai
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>registerResourceOutputs(res: <a href='#Resource'>Resource</a>, outputs: <a href='#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Inputs'>Inputs</a>&gt; | <a href='#Output'>Output</a>&lt;<a href='#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>registerResourceOutputs(res: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 registerResourceOutputs completes the resource registration, attaching an optional set of computed outputs.
@@ -552,7 +552,7 @@ registerResourceOutputs completes the resource registration, attaching an option
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>registerStackTransformation(t: <a href='#ResourceTransformation'>ResourceTransformation</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>registerStackTransformation(t: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceTransformation'>ResourceTransformation</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 Add a transformation to all future resources constructed in this Pulumi stack.
@@ -564,7 +564,7 @@ Add a transformation to all future resources constructed in this Pulumi stack.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>resolveProperties(res: <a href='#Resource'>Resource</a>, resolvers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (v: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isKnown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, allProps: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>resolveProperties(res: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, resolvers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (v: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isKnown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, allProps: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 resolveProperties takes as input a gRPC serialized proto.google.protobuf.Struct and resolves all
@@ -606,7 +606,7 @@ a function that, when invoked, signals that the RPC has completed.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>runInPulumiStack(init: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Inputs'>Inputs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runInPulumiStack(init: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 
 runInPulumiStack creates a new Pulumi stack resource and executes the callback inside of it.  Any outputs
@@ -631,7 +631,7 @@ serialize returns true if resource operations should be serialized.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>serializeProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{ ... }&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serializeProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{ ... }&gt;</code></pre>
 
 
 serializeProperties walks the props object passed in, awaiting all interior promises, creating a reasonable
@@ -644,7 +644,7 @@ POJO object that can be remoted over to registerResource.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>serializeProperty(ctx: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, prop: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, dependentResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serializeProperty(ctx: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, prop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, dependentResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</code></pre>
 
 
 serializeProperty serializes properties deeply.  This understands how to wait on any unresolved promises, as
@@ -657,7 +657,7 @@ appropriate, in addition to translating certain "special" values so that they ar
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;[, { ... }, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;&gt;]&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;[, { ... }, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>&gt;&gt;]&gt;</code></pre>
 
 
 serializeResourceProperties walks the props object passed in, awaiting all interior promises besides those for `id`
@@ -682,7 +682,7 @@ setConfig sets a configuration variable.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>setRootResource(res: <a href='#ComponentResource'>ComponentResource</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>setRootResource(res: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</code></pre>
 
 
 setRootResource registers a resource that will become the default parent for all resources without explicit parents.
@@ -734,7 +734,7 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>streamInvoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#StreamInvokeResponse'>StreamInvokeResponse</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>streamInvoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#StreamInvokeResponse'>StreamInvokeResponse</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="StreamInvokeResponse" data-link-title="StreamInvokeResponse">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/invoke.ts#L258">
@@ -771,7 +771,7 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>transferProperties(onto: <a href='#Resource'>Resource</a>, label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='#OutputResolvers'>OutputResolvers</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>transferProperties(onto: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>): <a href='#OutputResolvers'>OutputResolvers</a></code></pre>
 
 
 transferProperties mutates the 'onto' resource so that it has Promise-valued properties for all

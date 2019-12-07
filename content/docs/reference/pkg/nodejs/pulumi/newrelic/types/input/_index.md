@@ -101,7 +101,7 @@ A list of event types to enable filtering for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L28">property <b>compareWiths</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compareWiths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidgetCompareWith'>inputs.DashboardWidgetCompareWith</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compareWiths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetCompareWith'>DashboardWidgetCompareWith</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-drilldownDashboardId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L29">property <b>drilldownDashboardId</b></a>
 </h4>
@@ -141,7 +141,7 @@ A list of event types to enable filtering for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L36">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidgetMetric'>inputs.DashboardWidgetMetric</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetMetric'>DashboardWidgetMetric</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-notes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L37">property <b>notes</b></a>
 </h4>
@@ -221,7 +221,7 @@ The title of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L56">property <b>presentation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>presentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidgetCompareWithPresentation'>inputs.DashboardWidgetCompareWithPresentation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>presentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetCompareWithPresentation'>DashboardWidgetCompareWithPresentation</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetCompareWithPresentation" data-link-title="DashboardWidgetCompareWithPresentation">
     <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/types/input.ts#L59">
         interface <strong>DashboardWidgetCompareWithPresentation</strong>

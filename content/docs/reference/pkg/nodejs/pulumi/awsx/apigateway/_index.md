@@ -570,7 +570,7 @@ let endpoint = new awsx.apigateway.API("example", {
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ApigatewayMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ApigatewayMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="ApigatewayMetricChange-api">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/metrics.ts#L37">property <b>api</b></a>
 </h4>
@@ -688,7 +688,7 @@ Filters API Gateway metrics for an API stage of the specified API and stage.  Ei
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -698,7 +698,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -739,7 +739,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cacheHitCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cacheHitCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of requests served from the API cache in a given period.
@@ -756,7 +756,7 @@ corresponds to the Count metric (below).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cacheMissCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cacheMissCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of requests served from the back end in a given period, when API caching is enabled.
@@ -775,7 +775,7 @@ Unit: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>count(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>count(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number API requests in a given period.
@@ -791,7 +791,7 @@ Unit: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>error4XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>error4XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of client-side errors captured in a specified period.
@@ -810,7 +810,7 @@ Unit: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>error5XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>error5XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of server-side errors captured in a given period.
@@ -829,7 +829,7 @@ Unit: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>integrationLatency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>integrationLatency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The time between when API Gateway relays a request to the back end and when it receives a
@@ -844,7 +844,7 @@ Unit: Milliseconds
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>latency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>latency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The time between when API Gateway receives a request from a client and when it returns a response
@@ -859,7 +859,7 @@ Unit: Milliseconds
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#ApigatewayMetricName'>ApigatewayMetricName</a>, change: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#ApigatewayMetricName'>ApigatewayMetricName</a>, change: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/ApiGateway metric with the requested [metricName]. See
@@ -898,14 +898,14 @@ You can use the dimensions in the following table to filter API Gateway metrics.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> API(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#APIArgs'>APIArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> API(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#APIArgs'>APIArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="API-getFunction">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L605">method <b>getFunction</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function'>aws.lambda.Function</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function'>Function</a></code></pre>
 
 
 Returns the [aws.lambda.Function] an [EventHandlerRoute] points to.  This will either be for
@@ -933,7 +933,7 @@ This method will throw if the provided [route] and [method] do not resolve to a 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -950,17 +950,17 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L497">property <b>deployment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Deployment'>aws.apigateway.Deployment</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Deployment'>Deployment</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-restAPI">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L496">property <b>restAPI</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>restAPI: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#RestApi'>aws.apigateway.RestApi</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>restAPI: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#RestApi'>RestApi</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-stage">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L498">property <b>stage</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stage: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Stage'>aws.apigateway.Stage</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stage: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Stage'>Stage</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-staticRoutesBucket">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L504">property <b>staticRoutesBucket</b></a>
 </h4>
@@ -1129,7 +1129,7 @@ The stage name for your API. This will get added as a base path to your API url.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L372">property <b>staticRoutesBucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>staticRoutesBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>aws.s3.Bucket</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketArgs'>aws.s3.BucketArgs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>staticRoutesBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>Bucket</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketArgs'>BucketArgs</a>;</code></pre>
 
 Bucket to use for placing resources for static resources.  If not provided a default one will
 be created on your behalf if any [StaticRoute]s are provided.
@@ -1166,7 +1166,7 @@ the API level and by default, the source will be the HEADER.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L123">property <b>authorizers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authorizers?: <a href='#Authorizer'>Authorizer</a>[] | <a href='#Authorizer'>Authorizer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authorizers?: Authorizer[] | Authorizer;</code></pre>
 
 Authorizers allows you to define Lambda authorizers be applied for authorization when the
 the route is called.
@@ -1184,7 +1184,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L105">property <b>requiredParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredParameters?: Parameter[];</code></pre>
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
 gateway will validate these before sending traffic to the event handler.
@@ -1232,7 +1232,7 @@ The description of the stage
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L320">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Endpoint-port">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L319">property <b>port</b></a>
 </h4>
@@ -1258,7 +1258,7 @@ the API level and by default, the source will be the HEADER.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L123">property <b>authorizers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authorizers?: <a href='#Authorizer'>Authorizer</a>[] | <a href='#Authorizer'>Authorizer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authorizers?: Authorizer[] | Authorizer;</code></pre>
 
 Authorizers allows you to define Lambda authorizers be applied for authorization when the
 the route is called.
@@ -1295,7 +1295,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L105">property <b>requiredParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredParameters?: Parameter[];</code></pre>
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
 gateway will validate these before sending traffic to the event handler.
@@ -1324,7 +1324,7 @@ the API level and by default, the source will be the HEADER.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L123">property <b>authorizers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authorizers?: <a href='#Authorizer'>Authorizer</a>[] | <a href='#Authorizer'>Authorizer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authorizers?: Authorizer[] | Authorizer;</code></pre>
 
 Authorizers allows you to define Lambda authorizers be applied for authorization when the
 the route is called.
@@ -1351,7 +1351,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L105">property <b>requiredParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredParameters?: Parameter[];</code></pre>
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
 gateway will validate these before sending traffic to the event handler.
@@ -1373,7 +1373,7 @@ gateway will validate these before sending traffic to the event handler.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IntegrationTarget'>IntegrationTarget</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IntegrationTarget'>IntegrationTarget</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="IntegrationTarget" data-link-title="IntegrationTarget">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L191">
@@ -1518,21 +1518,21 @@ string here.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Request = awslambda.APIGatewayProxyEvent;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Request = APIGatewayProxyEvent;</code></pre>
 <h3 class="pdoc-module-header" id="RequestContext" data-link-title="RequestContext">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L48">
         type <strong>RequestContext</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> RequestContext = awslambda.APIGatewayEventRequestContext;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> RequestContext = APIGatewayEventRequestContext;</code></pre>
 <h3 class="pdoc-module-header" id="Response" data-link-title="Response">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L50">
         type <strong>Response</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Response = awslambda.APIGatewayProxyResult;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Response = APIGatewayProxyResult;</code></pre>
 <h3 class="pdoc-module-header" id="RestApiArgs" data-link-title="RestApiArgs">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L403">
         interface <strong>RestApiArgs</strong>
@@ -1572,7 +1572,7 @@ The description of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L425">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/apigateway/#RestApiEndpointConfiguration'>aws.types.input.apigateway.RestApiEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/apigateway/#RestApiEndpointConfiguration'>RestApiEndpointConfiguration</a>&gt;;</code></pre>
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
 
@@ -1628,7 +1628,7 @@ awsx.apigateway.API.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L444">property <b>accessLogSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/apigateway/#StageAccessLogSettings'>aws.types.input.apigateway.StageAccessLogSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/apigateway/#StageAccessLogSettings'>StageAccessLogSettings</a>&gt;;</code></pre>
 
 Enables access logs for the API stage. Detailed below.
 
@@ -1721,7 +1721,7 @@ the API level and by default, the source will be the HEADER.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L123">property <b>authorizers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authorizers?: <a href='#Authorizer'>Authorizer</a>[] | <a href='#Authorizer'>Authorizer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authorizers?: Authorizer[] | Authorizer;</code></pre>
 
 Authorizers allows you to define Lambda authorizers be applied for authorization when the
 the route is called.
@@ -1775,7 +1775,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/apigateway/api.ts#L105">property <b>requiredParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredParameters?: Parameter[];</code></pre>
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
 gateway will validate these before sending traffic to the event handler.

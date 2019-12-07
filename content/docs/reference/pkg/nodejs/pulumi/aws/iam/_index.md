@@ -774,1813 +774,1813 @@ meta_desc: "Explore members of the iam module in the @pulumi/aws package."
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AdministratorAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AdministratorAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayAdministrator" data-link-title="AmazonAPIGatewayAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L123">
         const <strong>AmazonAPIGatewayAdministrator</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayInvokeFullAccess" data-link-title="AmazonAPIGatewayInvokeFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L124">
         const <strong>AmazonAPIGatewayInvokeFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayPushToCloudWatchLogs" data-link-title="AmazonAPIGatewayPushToCloudWatchLogs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L125">
         const <strong>AmazonAPIGatewayPushToCloudWatchLogs</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamFullAccess" data-link-title="AmazonAppStreamFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L126">
         const <strong>AmazonAppStreamFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamReadOnlyAccess" data-link-title="AmazonAppStreamReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L127">
         const <strong>AmazonAppStreamReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamServiceAccess" data-link-title="AmazonAppStreamServiceAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L128">
         const <strong>AmazonAppStreamServiceAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAthenaFullAccess" data-link-title="AmazonAthenaFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L129">
         const <strong>AmazonAthenaFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCloudDirectoryFullAccess" data-link-title="AmazonCloudDirectoryFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L130">
         const <strong>AmazonCloudDirectoryFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCloudDirectoryReadOnlyAccess" data-link-title="AmazonCloudDirectoryReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L131">
         const <strong>AmazonCloudDirectoryReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoDeveloperAuthenticatedIdentities" data-link-title="AmazonCognitoDeveloperAuthenticatedIdentities">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L132">
         const <strong>AmazonCognitoDeveloperAuthenticatedIdentities</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoPowerUser" data-link-title="AmazonCognitoPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L133">
         const <strong>AmazonCognitoPowerUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoReadOnly" data-link-title="AmazonCognitoReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L134">
         const <strong>AmazonCognitoReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSCloudWatchLogsRole" data-link-title="AmazonDMSCloudWatchLogsRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L135">
         const <strong>AmazonDMSCloudWatchLogsRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSRedshiftS3Role" data-link-title="AmazonDMSRedshiftS3Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L136">
         const <strong>AmazonDMSRedshiftS3Role</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSVPCManagementRole" data-link-title="AmazonDMSVPCManagementRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L137">
         const <strong>AmazonDMSVPCManagementRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDRSVPCManagement" data-link-title="AmazonDRSVPCManagement">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L138">
         const <strong>AmazonDRSVPCManagement</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBFullAccess" data-link-title="AmazonDynamoDBFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L139">
         const <strong>AmazonDynamoDBFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBFullAccesswithDataPipeline" data-link-title="AmazonDynamoDBFullAccesswithDataPipeline">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L140">
         const <strong>AmazonDynamoDBFullAccesswithDataPipeline</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBReadOnlyAccess" data-link-title="AmazonDynamoDBReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L141">
         const <strong>AmazonDynamoDBReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryFullAccess" data-link-title="AmazonEC2ContainerRegistryFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L142">
         const <strong>AmazonEC2ContainerRegistryFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryPowerUser" data-link-title="AmazonEC2ContainerRegistryPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L143">
         const <strong>AmazonEC2ContainerRegistryPowerUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryReadOnly" data-link-title="AmazonEC2ContainerRegistryReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L144">
         const <strong>AmazonEC2ContainerRegistryReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceAutoscaleRole" data-link-title="AmazonEC2ContainerServiceAutoscaleRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L145">
         const <strong>AmazonEC2ContainerServiceAutoscaleRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceforEC2Role" data-link-title="AmazonEC2ContainerServiceforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L148">
         const <strong>AmazonEC2ContainerServiceforEC2Role</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceFullAccess" data-link-title="AmazonEC2ContainerServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L146">
         const <strong>AmazonEC2ContainerServiceFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceRole" data-link-title="AmazonEC2ContainerServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L147">
         const <strong>AmazonEC2ContainerServiceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2FullAccess" data-link-title="AmazonEC2FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L149">
         const <strong>AmazonEC2FullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ReadOnlyAccess" data-link-title="AmazonEC2ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L150">
         const <strong>AmazonEC2ReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ReportsAccess" data-link-title="AmazonEC2ReportsAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L151">
         const <strong>AmazonEC2ReportsAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforAWSCodeDeploy" data-link-title="AmazonEC2RoleforAWSCodeDeploy">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L152">
         const <strong>AmazonEC2RoleforAWSCodeDeploy</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforDataPipelineRole" data-link-title="AmazonEC2RoleforDataPipelineRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L153">
         const <strong>AmazonEC2RoleforDataPipelineRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforSSM" data-link-title="AmazonEC2RoleforSSM">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L154">
         const <strong>AmazonEC2RoleforSSM</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2SpotFleetAutoscaleRole" data-link-title="AmazonEC2SpotFleetAutoscaleRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L155">
         const <strong>AmazonEC2SpotFleetAutoscaleRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2SpotFleetRole" data-link-title="AmazonEC2SpotFleetRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L156">
         const <strong>AmazonEC2SpotFleetRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElastiCacheFullAccess" data-link-title="AmazonElastiCacheFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L159">
         const <strong>AmazonElastiCacheFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElastiCacheReadOnlyAccess" data-link-title="AmazonElastiCacheReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L160">
         const <strong>AmazonElastiCacheReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticFileSystemFullAccess" data-link-title="AmazonElasticFileSystemFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L161">
         const <strong>AmazonElasticFileSystemFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticFileSystemReadOnlyAccess" data-link-title="AmazonElasticFileSystemReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L162">
         const <strong>AmazonElasticFileSystemReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceforAutoScalingRole" data-link-title="AmazonElasticMapReduceforAutoScalingRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L166">
         const <strong>AmazonElasticMapReduceforAutoScalingRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceforEC2Role" data-link-title="AmazonElasticMapReduceforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L167">
         const <strong>AmazonElasticMapReduceforEC2Role</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceFullAccess" data-link-title="AmazonElasticMapReduceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L163">
         const <strong>AmazonElasticMapReduceFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceReadOnlyAccess" data-link-title="AmazonElasticMapReduceReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L164">
         const <strong>AmazonElasticMapReduceReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceRole" data-link-title="AmazonElasticMapReduceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L165">
         const <strong>AmazonElasticMapReduceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderFullAccess" data-link-title="AmazonElasticTranscoderFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L168">
         const <strong>AmazonElasticTranscoderFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderJobsSubmitter" data-link-title="AmazonElasticTranscoderJobsSubmitter">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L169">
         const <strong>AmazonElasticTranscoderJobsSubmitter</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderReadOnlyAccess" data-link-title="AmazonElasticTranscoderReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L170">
         const <strong>AmazonElasticTranscoderReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderRole" data-link-title="AmazonElasticTranscoderRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L171">
         const <strong>AmazonElasticTranscoderRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonESFullAccess" data-link-title="AmazonESFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L157">
         const <strong>AmazonESFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonESFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonESReadOnlyAccess" data-link-title="AmazonESReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L158">
         const <strong>AmazonESReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonGlacierFullAccess" data-link-title="AmazonGlacierFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L172">
         const <strong>AmazonGlacierFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonGlacierReadOnlyAccess" data-link-title="AmazonGlacierReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L173">
         const <strong>AmazonGlacierReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonInspectorFullAccess" data-link-title="AmazonInspectorFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L174">
         const <strong>AmazonInspectorFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonInspectorReadOnlyAccess" data-link-title="AmazonInspectorReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L175">
         const <strong>AmazonInspectorReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisAnalyticsFullAccess" data-link-title="AmazonKinesisAnalyticsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L176">
         const <strong>AmazonKinesisAnalyticsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisAnalyticsReadOnly" data-link-title="AmazonKinesisAnalyticsReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L177">
         const <strong>AmazonKinesisAnalyticsReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFirehoseFullAccess" data-link-title="AmazonKinesisFirehoseFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L178">
         const <strong>AmazonKinesisFirehoseFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFirehoseReadOnlyAccess" data-link-title="AmazonKinesisFirehoseReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L179">
         const <strong>AmazonKinesisFirehoseReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFullAccess" data-link-title="AmazonKinesisFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L180">
         const <strong>AmazonKinesisFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisReadOnlyAccess" data-link-title="AmazonKinesisReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L181">
         const <strong>AmazonKinesisReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexFullAccess" data-link-title="AmazonLexFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L182">
         const <strong>AmazonLexFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexReadOnly" data-link-title="AmazonLexReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L183">
         const <strong>AmazonLexReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexRunBotsOnly" data-link-title="AmazonLexRunBotsOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L184">
         const <strong>AmazonLexRunBotsOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningBatchPredictionsAccess" data-link-title="AmazonMachineLearningBatchPredictionsAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L185">
         const <strong>AmazonMachineLearningBatchPredictionsAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningCreateOnlyAccess" data-link-title="AmazonMachineLearningCreateOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L186">
         const <strong>AmazonMachineLearningCreateOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningFullAccess" data-link-title="AmazonMachineLearningFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L187">
         const <strong>AmazonMachineLearningFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningManageRealTimeEndpointOnlyAccess" data-link-title="AmazonMachineLearningManageRealTimeEndpointOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L188">
         const <strong>AmazonMachineLearningManageRealTimeEndpointOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningReadOnlyAccess" data-link-title="AmazonMachineLearningReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L189">
         const <strong>AmazonMachineLearningReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningRealTimePredictionOnlyAccess" data-link-title="AmazonMachineLearningRealTimePredictionOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L190">
         const <strong>AmazonMachineLearningRealTimePredictionOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningRoleforRedshiftDataSource" data-link-title="AmazonMachineLearningRoleforRedshiftDataSource">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L191">
         const <strong>AmazonMachineLearningRoleforRedshiftDataSource</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMechanicalTurkFullAccess" data-link-title="AmazonMechanicalTurkFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L192">
         const <strong>AmazonMechanicalTurkFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMechanicalTurkReadOnly" data-link-title="AmazonMechanicalTurkReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L193">
         const <strong>AmazonMechanicalTurkReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsFinancialReportAccess" data-link-title="AmazonMobileAnalyticsFinancialReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L194">
         const <strong>AmazonMobileAnalyticsFinancialReportAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsFullAccess" data-link-title="AmazonMobileAnalyticsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L195">
         const <strong>AmazonMobileAnalyticsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsNonfinancialReportAccess" data-link-title="AmazonMobileAnalyticsNonfinancialReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L196">
         const <strong>AmazonMobileAnalyticsNonfinancialReportAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsWriteOnlyAccess" data-link-title="AmazonMobileAnalyticsWriteOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L197">
         const <strong>AmazonMobileAnalyticsWriteOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonPollyFullAccess" data-link-title="AmazonPollyFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L198">
         const <strong>AmazonPollyFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonPollyReadOnlyAccess" data-link-title="AmazonPollyReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L199">
         const <strong>AmazonPollyReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSDirectoryServiceAccess" data-link-title="AmazonRDSDirectoryServiceAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L200">
         const <strong>AmazonRDSDirectoryServiceAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSEnhancedMonitoringRole" data-link-title="AmazonRDSEnhancedMonitoringRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L201">
         const <strong>AmazonRDSEnhancedMonitoringRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSFullAccess" data-link-title="AmazonRDSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L202">
         const <strong>AmazonRDSFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSReadOnlyAccess" data-link-title="AmazonRDSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L203">
         const <strong>AmazonRDSReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRedshiftFullAccess" data-link-title="AmazonRedshiftFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L204">
         const <strong>AmazonRedshiftFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRedshiftReadOnlyAccess" data-link-title="AmazonRedshiftReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L205">
         const <strong>AmazonRedshiftReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRekognitionFullAccess" data-link-title="AmazonRekognitionFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L206">
         const <strong>AmazonRekognitionFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRekognitionReadOnlyAccess" data-link-title="AmazonRekognitionReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L207">
         const <strong>AmazonRekognitionReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53DomainsFullAccess" data-link-title="AmazonRoute53DomainsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L208">
         const <strong>AmazonRoute53DomainsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53DomainsReadOnlyAccess" data-link-title="AmazonRoute53DomainsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L209">
         const <strong>AmazonRoute53DomainsReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53FullAccess" data-link-title="AmazonRoute53FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L210">
         const <strong>AmazonRoute53FullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53ReadOnlyAccess" data-link-title="AmazonRoute53ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L211">
         const <strong>AmazonRoute53ReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonS3FullAccess" data-link-title="AmazonS3FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L212">
         const <strong>AmazonS3FullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonS3FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonS3FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonS3ReadOnlyAccess" data-link-title="AmazonS3ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L213">
         const <strong>AmazonS3ReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSESFullAccess" data-link-title="AmazonSESFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L214">
         const <strong>AmazonSESFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSESFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSESReadOnlyAccess" data-link-title="AmazonSESReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L215">
         const <strong>AmazonSESReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSFullAccess" data-link-title="AmazonSNSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L216">
         const <strong>AmazonSNSFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSReadOnlyAccess" data-link-title="AmazonSNSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L217">
         const <strong>AmazonSNSReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSRole" data-link-title="AmazonSNSRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L218">
         const <strong>AmazonSNSRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSQSFullAccess" data-link-title="AmazonSQSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L219">
         const <strong>AmazonSQSFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSQSReadOnlyAccess" data-link-title="AmazonSQSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L220">
         const <strong>AmazonSQSReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMAutomationRole" data-link-title="AmazonSSMAutomationRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L221">
         const <strong>AmazonSSMAutomationRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMFullAccess" data-link-title="AmazonSSMFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L222">
         const <strong>AmazonSSMFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMMaintenanceWindowRole" data-link-title="AmazonSSMMaintenanceWindowRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L223">
         const <strong>AmazonSSMMaintenanceWindowRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMReadOnlyAccess" data-link-title="AmazonSSMReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L224">
         const <strong>AmazonSSMReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonVPCFullAccess" data-link-title="AmazonVPCFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L225">
         const <strong>AmazonVPCFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonVPCReadOnlyAccess" data-link-title="AmazonVPCReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L226">
         const <strong>AmazonVPCReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkMailFullAccess" data-link-title="AmazonWorkMailFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L227">
         const <strong>AmazonWorkMailFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkMailReadOnlyAccess" data-link-title="AmazonWorkMailReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L228">
         const <strong>AmazonWorkMailReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkSpacesAdmin" data-link-title="AmazonWorkSpacesAdmin">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L229">
         const <strong>AmazonWorkSpacesAdmin</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkSpacesApplicationManagerAdminAccess" data-link-title="AmazonWorkSpacesApplicationManagerAdminAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L230">
         const <strong>AmazonWorkSpacesApplicationManagerAdminAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonZocaloFullAccess" data-link-title="AmazonZocaloFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L231">
         const <strong>AmazonZocaloFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonZocaloReadOnlyAccess" data-link-title="AmazonZocaloReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L232">
         const <strong>AmazonZocaloReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ApplicationAutoScalingForAmazonAppStreamAccess" data-link-title="ApplicationAutoScalingForAmazonAppStreamAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L233">
         const <strong>ApplicationAutoScalingForAmazonAppStreamAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingConsoleFullAccess" data-link-title="AutoScalingConsoleFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L234">
         const <strong>AutoScalingConsoleFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingConsoleReadOnlyAccess" data-link-title="AutoScalingConsoleReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L235">
         const <strong>AutoScalingConsoleReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingFullAccess" data-link-title="AutoScalingFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L236">
         const <strong>AutoScalingFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingNotificationAccessRole" data-link-title="AutoScalingNotificationAccessRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L237">
         const <strong>AutoScalingNotificationAccessRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingReadOnlyAccess" data-link-title="AutoScalingReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L238">
         const <strong>AutoScalingReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAccountActivityAccess" data-link-title="AWSAccountActivityAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L19">
         const <strong>AWSAccountActivityAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSAccountActivityAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAccountActivityAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAccountUsageReportAccess" data-link-title="AWSAccountUsageReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L20">
         const <strong>AWSAccountUsageReportAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAgentlessDiscoveryService" data-link-title="AWSAgentlessDiscoveryService">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L21">
         const <strong>AWSAgentlessDiscoveryService</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSApplicationDiscoveryAgentAccess" data-link-title="AWSApplicationDiscoveryAgentAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L22">
         const <strong>AWSApplicationDiscoveryAgentAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSApplicationDiscoveryServiceFullAccess" data-link-title="AWSApplicationDiscoveryServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L23">
         const <strong>AWSApplicationDiscoveryServiceFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSBatchFullAccess" data-link-title="AWSBatchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L24">
         const <strong>AWSBatchFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSBatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSBatchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSBatchServiceRole" data-link-title="AWSBatchServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L25">
         const <strong>AWSBatchServiceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSBatchServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSBatchServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCertificateManagerFullAccess" data-link-title="AWSCertificateManagerFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L26">
         const <strong>AWSCertificateManagerFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCertificateManagerReadOnly" data-link-title="AWSCertificateManagerReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L27">
         const <strong>AWSCertificateManagerReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudFormationReadOnlyAccess" data-link-title="AWSCloudFormationReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L28">
         const <strong>AWSCloudFormationReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMFullAccess" data-link-title="AWSCloudHSMFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L29">
         const <strong>AWSCloudHSMFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMReadOnlyAccess" data-link-title="AWSCloudHSMReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L30">
         const <strong>AWSCloudHSMReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMRole" data-link-title="AWSCloudHSMRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L31">
         const <strong>AWSCloudHSMRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudTrailFullAccess" data-link-title="AWSCloudTrailFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L32">
         const <strong>AWSCloudTrailFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudTrailReadOnlyAccess" data-link-title="AWSCloudTrailReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L33">
         const <strong>AWSCloudTrailReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildAdminAccess" data-link-title="AWSCodeBuildAdminAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L34">
         const <strong>AWSCodeBuildAdminAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildDeveloperAccess" data-link-title="AWSCodeBuildDeveloperAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L35">
         const <strong>AWSCodeBuildDeveloperAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildReadOnlyAccess" data-link-title="AWSCodeBuildReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L36">
         const <strong>AWSCodeBuildReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitFullAccess" data-link-title="AWSCodeCommitFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L37">
         const <strong>AWSCodeCommitFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitPowerUser" data-link-title="AWSCodeCommitPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L38">
         const <strong>AWSCodeCommitPowerUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitReadOnly" data-link-title="AWSCodeCommitReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L39">
         const <strong>AWSCodeCommitReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployDeployerAccess" data-link-title="AWSCodeDeployDeployerAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L40">
         const <strong>AWSCodeDeployDeployerAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployFullAccess" data-link-title="AWSCodeDeployFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L41">
         const <strong>AWSCodeDeployFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployReadOnlyAccess" data-link-title="AWSCodeDeployReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L42">
         const <strong>AWSCodeDeployReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployRole" data-link-title="AWSCodeDeployRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L43">
         const <strong>AWSCodeDeployRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineApproverAccess" data-link-title="AWSCodePipelineApproverAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L44">
         const <strong>AWSCodePipelineApproverAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineCustomActionAccess" data-link-title="AWSCodePipelineCustomActionAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L45">
         const <strong>AWSCodePipelineCustomActionAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineFullAccess" data-link-title="AWSCodePipelineFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L46">
         const <strong>AWSCodePipelineFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineReadOnlyAccess" data-link-title="AWSCodePipelineReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L47">
         const <strong>AWSCodePipelineReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeStarFullAccess" data-link-title="AWSCodeStarFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L48">
         const <strong>AWSCodeStarFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeStarServiceRole" data-link-title="AWSCodeStarServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L49">
         const <strong>AWSCodeStarServiceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigRole" data-link-title="AWSConfigRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L50">
         const <strong>AWSConfigRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigRulesExecutionRole" data-link-title="AWSConfigRulesExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L51">
         const <strong>AWSConfigRulesExecutionRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigUserAccess" data-link-title="AWSConfigUserAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L52">
         const <strong>AWSConfigUserAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConnector" data-link-title="AWSConnector">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L53">
         const <strong>AWSConnector</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipeline_FullAccess" data-link-title="AWSDataPipeline_FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L55">
         const <strong>AWSDataPipeline_FullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipeline_PowerUser" data-link-title="AWSDataPipeline_PowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L56">
         const <strong>AWSDataPipeline_PowerUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipelineRole" data-link-title="AWSDataPipelineRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L54">
         const <strong>AWSDataPipelineRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipelineRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDeviceFarmFullAccess" data-link-title="AWSDeviceFarmFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L57">
         const <strong>AWSDeviceFarmFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectConnectFullAccess" data-link-title="AWSDirectConnectFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L58">
         const <strong>AWSDirectConnectFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectConnectReadOnlyAccess" data-link-title="AWSDirectConnectReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L59">
         const <strong>AWSDirectConnectReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectoryServiceFullAccess" data-link-title="AWSDirectoryServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L60">
         const <strong>AWSDirectoryServiceFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectoryServiceReadOnlyAccess" data-link-title="AWSDirectoryServiceReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L61">
         const <strong>AWSDirectoryServiceReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkCustomPlatformforEC2Role" data-link-title="AWSElasticBeanstalkCustomPlatformforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L62">
         const <strong>AWSElasticBeanstalkCustomPlatformforEC2Role</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkEnhancedHealth" data-link-title="AWSElasticBeanstalkEnhancedHealth">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L63">
         const <strong>AWSElasticBeanstalkEnhancedHealth</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkFullAccess" data-link-title="AWSElasticBeanstalkFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L64">
         const <strong>AWSElasticBeanstalkFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkMulticontainerDocker" data-link-title="AWSElasticBeanstalkMulticontainerDocker">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L65">
         const <strong>AWSElasticBeanstalkMulticontainerDocker</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkReadOnlyAccess" data-link-title="AWSElasticBeanstalkReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L66">
         const <strong>AWSElasticBeanstalkReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkService" data-link-title="AWSElasticBeanstalkService">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L67">
         const <strong>AWSElasticBeanstalkService</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkWebTier" data-link-title="AWSElasticBeanstalkWebTier">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L68">
         const <strong>AWSElasticBeanstalkWebTier</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkWorkerTier" data-link-title="AWSElasticBeanstalkWorkerTier">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L69">
         const <strong>AWSElasticBeanstalkWorkerTier</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSGreengrassFullAccess" data-link-title="AWSGreengrassFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L70">
         const <strong>AWSGreengrassFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSGreengrassResourceAccessRolePolicy" data-link-title="AWSGreengrassResourceAccessRolePolicy">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L71">
         const <strong>AWSGreengrassResourceAccessRolePolicy</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSHealthFullAccess" data-link-title="AWSHealthFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L72">
         const <strong>AWSHealthFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSHealthFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSHealthFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSImportExportFullAccess" data-link-title="AWSImportExportFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L73">
         const <strong>AWSImportExportFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSImportExportReadOnlyAccess" data-link-title="AWSImportExportReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L74">
         const <strong>AWSImportExportReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTConfigAccess" data-link-title="AWSIoTConfigAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L75">
         const <strong>AWSIoTConfigAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTConfigReadOnlyAccess" data-link-title="AWSIoTConfigReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L76">
         const <strong>AWSIoTConfigReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTDataAccess" data-link-title="AWSIoTDataAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L77">
         const <strong>AWSIoTDataAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTDataAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTDataAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTFullAccess" data-link-title="AWSIoTFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L78">
         const <strong>AWSIoTFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTLogging" data-link-title="AWSIoTLogging">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L79">
         const <strong>AWSIoTLogging</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTLogging: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTLogging: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTRuleActions" data-link-title="AWSIoTRuleActions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L80">
         const <strong>AWSIoTRuleActions</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTRuleActions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTRuleActions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSKeyManagementServicePowerUser" data-link-title="AWSKeyManagementServicePowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L81">
         const <strong>AWSKeyManagementServicePowerUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaBasicExecutionRole" data-link-title="AWSLambdaBasicExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L82">
         const <strong>AWSLambdaBasicExecutionRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaDynamoDBExecutionRole" data-link-title="AWSLambdaDynamoDBExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L83">
         const <strong>AWSLambdaDynamoDBExecutionRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaENIManagementAccess" data-link-title="AWSLambdaENIManagementAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L84">
         const <strong>AWSLambdaENIManagementAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaExecute" data-link-title="AWSLambdaExecute">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L85">
         const <strong>AWSLambdaExecute</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaExecute: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaExecute: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaFullAccess" data-link-title="AWSLambdaFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L86">
         const <strong>AWSLambdaFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaInvocationDynamoDB" data-link-title="AWSLambdaInvocationDynamoDB">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L87">
         const <strong>AWSLambdaInvocationDynamoDB</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaKinesisExecutionRole" data-link-title="AWSLambdaKinesisExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L88">
         const <strong>AWSLambdaKinesisExecutionRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaReadOnlyAccess" data-link-title="AWSLambdaReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L89">
         const <strong>AWSLambdaReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaRole" data-link-title="AWSLambdaRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L90">
         const <strong>AWSLambdaRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaVPCAccessExecutionRole" data-link-title="AWSLambdaVPCAccessExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L91">
         const <strong>AWSLambdaVPCAccessExecutionRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceFullAccess" data-link-title="AWSMarketplaceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L92">
         const <strong>AWSMarketplaceFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceGetEntitlements" data-link-title="AWSMarketplaceGetEntitlements">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L93">
         const <strong>AWSMarketplaceGetEntitlements</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceManageSubscriptions" data-link-title="AWSMarketplaceManageSubscriptions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L94">
         const <strong>AWSMarketplaceManageSubscriptions</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceMeteringFullAccess" data-link-title="AWSMarketplaceMeteringFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L95">
         const <strong>AWSMarketplaceMeteringFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceReadonly" data-link-title="AWSMarketplaceReadonly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L96">
         const <strong>AWSMarketplaceReadonly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_FullAccess" data-link-title="AWSMobileHub_FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L97">
         const <strong>AWSMobileHub_FullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_ReadOnly" data-link-title="AWSMobileHub_ReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L98">
         const <strong>AWSMobileHub_ReadOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_ServiceUseOnly" data-link-title="AWSMobileHub_ServiceUseOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L99">
         const <strong>AWSMobileHub_ServiceUseOnly</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCloudWatchLogs" data-link-title="AWSOpsWorksCloudWatchLogs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L102">
         const <strong>AWSOpsWorksCloudWatchLogs</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCMInstanceProfileRole" data-link-title="AWSOpsWorksCMInstanceProfileRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L100">
         const <strong>AWSOpsWorksCMInstanceProfileRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCMServiceRole" data-link-title="AWSOpsWorksCMServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L101">
         const <strong>AWSOpsWorksCMServiceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksFullAccess" data-link-title="AWSOpsWorksFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L103">
         const <strong>AWSOpsWorksFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksInstanceRegistration" data-link-title="AWSOpsWorksInstanceRegistration">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L104">
         const <strong>AWSOpsWorksInstanceRegistration</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksRegisterCLI" data-link-title="AWSOpsWorksRegisterCLI">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L105">
         const <strong>AWSOpsWorksRegisterCLI</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksRole" data-link-title="AWSOpsWorksRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L106">
         const <strong>AWSOpsWorksRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuicksightAthenaAccess" data-link-title="AWSQuicksightAthenaAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L110">
         const <strong>AWSQuicksightAthenaAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightDescribeRDS" data-link-title="AWSQuickSightDescribeRDS">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L107">
         const <strong>AWSQuickSightDescribeRDS</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightDescribeRedshift" data-link-title="AWSQuickSightDescribeRedshift">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L108">
         const <strong>AWSQuickSightDescribeRedshift</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightListIAM" data-link-title="AWSQuickSightListIAM">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L109">
         const <strong>AWSQuickSightListIAM</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightListIAM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightListIAM: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsConsoleFullAccess" data-link-title="AWSStepFunctionsConsoleFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L111">
         const <strong>AWSStepFunctionsConsoleFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsFullAccess" data-link-title="AWSStepFunctionsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L112">
         const <strong>AWSStepFunctionsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsReadOnlyAccess" data-link-title="AWSStepFunctionsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L113">
         const <strong>AWSStepFunctionsReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStorageGatewayFullAccess" data-link-title="AWSStorageGatewayFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L114">
         const <strong>AWSStorageGatewayFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStorageGatewayReadOnlyAccess" data-link-title="AWSStorageGatewayReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L115">
         const <strong>AWSStorageGatewayReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSSupportAccess" data-link-title="AWSSupportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L116">
         const <strong>AWSSupportAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSSupportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSSupportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSWAFFullAccess" data-link-title="AWSWAFFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L117">
         const <strong>AWSWAFFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSWAFFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSWAFFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSWAFReadOnlyAccess" data-link-title="AWSWAFReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L118">
         const <strong>AWSWAFReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayFullAccess" data-link-title="AWSXrayFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L119">
         const <strong>AWSXrayFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayReadOnlyAccess" data-link-title="AWSXrayReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L120">
         const <strong>AWSXrayReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayWriteOnlyAccess" data-link-title="AWSXrayWriteOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L121">
         const <strong>AWSXrayWriteOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Billing" data-link-title="Billing">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L239">
         const <strong>Billing</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> Billing: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> Billing: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudFrontFullAccess" data-link-title="CloudFrontFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L240">
         const <strong>CloudFrontFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudFrontFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudFrontFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudFrontReadOnlyAccess" data-link-title="CloudFrontReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L241">
         const <strong>CloudFrontReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudSearchFullAccess" data-link-title="CloudSearchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L242">
         const <strong>CloudSearchFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudSearchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudSearchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudSearchReadOnlyAccess" data-link-title="CloudSearchReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L243">
         const <strong>CloudSearchReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchActionsEC2Access" data-link-title="CloudWatchActionsEC2Access">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L244">
         const <strong>CloudWatchActionsEC2Access</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsBuiltInTargetExecutionAccess" data-link-title="CloudWatchEventsBuiltInTargetExecutionAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L245">
         const <strong>CloudWatchEventsBuiltInTargetExecutionAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsFullAccess" data-link-title="CloudWatchEventsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L246">
         const <strong>CloudWatchEventsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsInvocationAccess" data-link-title="CloudWatchEventsInvocationAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L247">
         const <strong>CloudWatchEventsInvocationAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsReadOnlyAccess" data-link-title="CloudWatchEventsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L248">
         const <strong>CloudWatchEventsReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchFullAccess" data-link-title="CloudWatchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L249">
         const <strong>CloudWatchFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchLogsFullAccess" data-link-title="CloudWatchLogsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L250">
         const <strong>CloudWatchLogsFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchLogsReadOnlyAccess" data-link-title="CloudWatchLogsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L251">
         const <strong>CloudWatchLogsReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchReadOnlyAccess" data-link-title="CloudWatchReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L252">
         const <strong>CloudWatchReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DatabaseAdministrator" data-link-title="DatabaseAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L254">
         const <strong>DatabaseAdministrator</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> DatabaseAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> DatabaseAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DataScientist" data-link-title="DataScientist">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L253">
         const <strong>DataScientist</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> DataScientist: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> DataScientist: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMFullAccess" data-link-title="IAMFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L255">
         const <strong>IAMFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> IAMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMReadOnlyAccess" data-link-title="IAMReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L256">
         const <strong>IAMReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> IAMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMSelfManageServiceSpecificCredentials" data-link-title="IAMSelfManageServiceSpecificCredentials">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L257">
         const <strong>IAMSelfManageServiceSpecificCredentials</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMUserChangePassword" data-link-title="IAMUserChangePassword">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L258">
         const <strong>IAMUserChangePassword</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> IAMUserChangePassword: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMUserChangePassword: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMUserSSHKeys" data-link-title="IAMUserSSHKeys">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L259">
         const <strong>IAMUserSSHKeys</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> IAMUserSSHKeys: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMUserSSHKeys: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NetworkAdministrator" data-link-title="NetworkAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L260">
         const <strong>NetworkAdministrator</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> NetworkAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> NetworkAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="PowerUserAccess" data-link-title="PowerUserAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L261">
         const <strong>PowerUserAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> PowerUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> PowerUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RDSCloudHsmAuthorizationRole" data-link-title="RDSCloudHsmAuthorizationRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L262">
         const <strong>RDSCloudHsmAuthorizationRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ReadOnlyAccess" data-link-title="ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L263">
         const <strong>ReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceGroupsandTagEditorFullAccess" data-link-title="ResourceGroupsandTagEditorFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L264">
         const <strong>ResourceGroupsandTagEditorFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceGroupsandTagEditorReadOnlyAccess" data-link-title="ResourceGroupsandTagEditorReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L265">
         const <strong>ResourceGroupsandTagEditorReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecurityAudit" data-link-title="SecurityAudit">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L266">
         const <strong>SecurityAudit</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> SecurityAudit: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SecurityAudit: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServerMigrationConnector" data-link-title="ServerMigrationConnector">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L267">
         const <strong>ServerMigrationConnector</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServerMigrationServiceRole" data-link-title="ServerMigrationServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L268">
         const <strong>ServerMigrationServiceRole</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogAdminFullAccess" data-link-title="ServiceCatalogAdminFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L269">
         const <strong>ServiceCatalogAdminFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogAdminReadOnlyAccess" data-link-title="ServiceCatalogAdminReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L270">
         const <strong>ServiceCatalogAdminReadOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogEndUserAccess" data-link-title="ServiceCatalogEndUserAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L271">
         const <strong>ServiceCatalogEndUserAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogEndUserFullAccess" data-link-title="ServiceCatalogEndUserFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L272">
         const <strong>ServiceCatalogEndUserFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SimpleWorkflowFullAccess" data-link-title="SimpleWorkflowFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L273">
         const <strong>SimpleWorkflowFullAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SupportUser" data-link-title="SupportUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L274">
         const <strong>SupportUser</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> SupportUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SupportUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SystemAdministrator" data-link-title="SystemAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L275">
         const <strong>SystemAdministrator</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> SystemAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SystemAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ViewOnlyAccess" data-link-title="ViewOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L277">
         const <strong>ViewOnlyAccess</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> ViewOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ViewOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="VMImportExportRoleForAWSConnector" data-link-title="VMImportExportRoleForAWSConnector">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L276">
         const <strong>VMImportExportRoleForAWSConnector</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</code></pre>
 <h2 id="Principals" data-link-title="Principals">namespace <strong>Principals</strong></h2>
 <h3 class="pdoc-module-header" id="AcmServicePrincipal" data-link-title="AcmServicePrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L21">
@@ -3464,7 +3464,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccessKey</code></pre>
 
 
 Returns true if the given object is an instance of AccessKey.  This is designed to work even
@@ -3618,7 +3618,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccountAlias</code></pre>
 
 
 Returns true if the given object is an instance of AccountAlias.  This is designed to work even
@@ -3719,7 +3719,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccountPasswordPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AccountPasswordPolicy.  This is designed to work even
@@ -3886,7 +3886,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -4016,7 +4016,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GroupMembership</code></pre>
 
 
 Returns true if the given object is an instance of GroupMembership.  This is designed to work even
@@ -4140,7 +4140,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GroupPolicy</code></pre>
 
 
 Returns true if the given object is an instance of GroupPolicy.  This is designed to work even
@@ -4263,7 +4263,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GroupPolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of GroupPolicyAttachment.  This is designed to work even
@@ -4290,7 +4290,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/groupPolicyAttachment.ts#L68">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -4380,7 +4380,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceProfile</code></pre>
 
 
 Returns true if the given object is an instance of InstanceProfile.  This is designed to work even
@@ -4530,7 +4530,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OpenIdConnectProvider</code></pre>
 
 
 Returns true if the given object is an instance of OpenIdConnectProvider.  This is designed to work even
@@ -4660,7 +4660,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -4831,7 +4831,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of PolicyAttachment.  This is designed to work even
@@ -4866,7 +4866,7 @@ The name of the attachment. This cannot be an empty string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/policyAttachment.ts#L107">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -4994,7 +4994,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Role</code></pre>
 
 
 Returns true if the given object is an instance of Role.  This is designed to work even
@@ -5204,7 +5204,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RolePolicy</code></pre>
 
 
 Returns true if the given object is an instance of RolePolicy.  This is designed to work even
@@ -5354,7 +5354,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RolePolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of RolePolicyAttachment.  This is designed to work even
@@ -5373,7 +5373,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/rolePolicyAttachment.ts#L91">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -5455,7 +5455,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SamlProvider</code></pre>
 
 
 Returns true if the given object is an instance of SamlProvider.  This is designed to work even
@@ -5637,7 +5637,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServerCertificate</code></pre>
 
 
 Returns true if the given object is an instance of ServerCertificate.  This is designed to work even
@@ -5785,7 +5785,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServiceLinkedRole</code></pre>
 
 
 Returns true if the given object is an instance of ServiceLinkedRole.  This is designed to work even
@@ -5938,7 +5938,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SshKey</code></pre>
 
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
@@ -6094,7 +6094,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -6253,7 +6253,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserGroupMembership</code></pre>
 
 
 Returns true if the given object is an instance of UserGroupMembership.  This is designed to work even
@@ -6362,7 +6362,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserLoginProfile</code></pre>
 
 
 Returns true if the given object is an instance of UserLoginProfile.  This is designed to work even
@@ -6513,7 +6513,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserPolicy</code></pre>
 
 
 Returns true if the given object is an instance of UserPolicy.  This is designed to work even
@@ -6634,7 +6634,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserPolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of UserPolicyAttachment.  This is designed to work even
@@ -6653,7 +6653,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/userPolicyAttachment.ts#L64">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -7242,7 +7242,7 @@ Service Principal for Amazon Certificate Manager
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AdministratorAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AdministratorAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayAdministrator" data-link-title="AmazonAPIGatewayAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L384">
         const <strong>AmazonAPIGatewayAdministrator</strong>
@@ -7253,7 +7253,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayInvokeFullAccess" data-link-title="AmazonAPIGatewayInvokeFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L385">
         const <strong>AmazonAPIGatewayInvokeFullAccess</strong>
@@ -7264,7 +7264,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAPIGatewayPushToCloudWatchLogs" data-link-title="AmazonAPIGatewayPushToCloudWatchLogs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L386">
         const <strong>AmazonAPIGatewayPushToCloudWatchLogs</strong>
@@ -7275,7 +7275,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamFullAccess" data-link-title="AmazonAppStreamFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L387">
         const <strong>AmazonAppStreamFullAccess</strong>
@@ -7286,7 +7286,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamReadOnlyAccess" data-link-title="AmazonAppStreamReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L388">
         const <strong>AmazonAppStreamReadOnlyAccess</strong>
@@ -7297,7 +7297,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAppStreamServiceAccess" data-link-title="AmazonAppStreamServiceAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L389">
         const <strong>AmazonAppStreamServiceAccess</strong>
@@ -7308,7 +7308,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonAthenaFullAccess" data-link-title="AmazonAthenaFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L390">
         const <strong>AmazonAthenaFullAccess</strong>
@@ -7319,7 +7319,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCloudDirectoryFullAccess" data-link-title="AmazonCloudDirectoryFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L391">
         const <strong>AmazonCloudDirectoryFullAccess</strong>
@@ -7330,7 +7330,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCloudDirectoryReadOnlyAccess" data-link-title="AmazonCloudDirectoryReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L392">
         const <strong>AmazonCloudDirectoryReadOnlyAccess</strong>
@@ -7341,7 +7341,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoDeveloperAuthenticatedIdentities" data-link-title="AmazonCognitoDeveloperAuthenticatedIdentities">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L393">
         const <strong>AmazonCognitoDeveloperAuthenticatedIdentities</strong>
@@ -7352,7 +7352,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoPowerUser" data-link-title="AmazonCognitoPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L394">
         const <strong>AmazonCognitoPowerUser</strong>
@@ -7363,7 +7363,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonCognitoReadOnly" data-link-title="AmazonCognitoReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L395">
         const <strong>AmazonCognitoReadOnly</strong>
@@ -7374,7 +7374,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSCloudWatchLogsRole" data-link-title="AmazonDMSCloudWatchLogsRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L396">
         const <strong>AmazonDMSCloudWatchLogsRole</strong>
@@ -7385,7 +7385,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSRedshiftS3Role" data-link-title="AmazonDMSRedshiftS3Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L397">
         const <strong>AmazonDMSRedshiftS3Role</strong>
@@ -7396,7 +7396,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDMSVPCManagementRole" data-link-title="AmazonDMSVPCManagementRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L398">
         const <strong>AmazonDMSVPCManagementRole</strong>
@@ -7407,7 +7407,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDRSVPCManagement" data-link-title="AmazonDRSVPCManagement">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L399">
         const <strong>AmazonDRSVPCManagement</strong>
@@ -7418,7 +7418,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBFullAccess" data-link-title="AmazonDynamoDBFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L400">
         const <strong>AmazonDynamoDBFullAccess</strong>
@@ -7429,7 +7429,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBFullAccesswithDataPipeline" data-link-title="AmazonDynamoDBFullAccesswithDataPipeline">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L401">
         const <strong>AmazonDynamoDBFullAccesswithDataPipeline</strong>
@@ -7440,7 +7440,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonDynamoDBReadOnlyAccess" data-link-title="AmazonDynamoDBReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L402">
         const <strong>AmazonDynamoDBReadOnlyAccess</strong>
@@ -7451,7 +7451,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryFullAccess" data-link-title="AmazonEC2ContainerRegistryFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L403">
         const <strong>AmazonEC2ContainerRegistryFullAccess</strong>
@@ -7462,7 +7462,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryPowerUser" data-link-title="AmazonEC2ContainerRegistryPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L404">
         const <strong>AmazonEC2ContainerRegistryPowerUser</strong>
@@ -7473,7 +7473,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerRegistryReadOnly" data-link-title="AmazonEC2ContainerRegistryReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L405">
         const <strong>AmazonEC2ContainerRegistryReadOnly</strong>
@@ -7484,7 +7484,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceAutoscaleRole" data-link-title="AmazonEC2ContainerServiceAutoscaleRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L406">
         const <strong>AmazonEC2ContainerServiceAutoscaleRole</strong>
@@ -7495,7 +7495,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceforEC2Role" data-link-title="AmazonEC2ContainerServiceforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L409">
         const <strong>AmazonEC2ContainerServiceforEC2Role</strong>
@@ -7506,7 +7506,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceFullAccess" data-link-title="AmazonEC2ContainerServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L407">
         const <strong>AmazonEC2ContainerServiceFullAccess</strong>
@@ -7517,7 +7517,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ContainerServiceRole" data-link-title="AmazonEC2ContainerServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L408">
         const <strong>AmazonEC2ContainerServiceRole</strong>
@@ -7528,7 +7528,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2FullAccess" data-link-title="AmazonEC2FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L410">
         const <strong>AmazonEC2FullAccess</strong>
@@ -7539,7 +7539,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ReadOnlyAccess" data-link-title="AmazonEC2ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L411">
         const <strong>AmazonEC2ReadOnlyAccess</strong>
@@ -7550,7 +7550,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2ReportsAccess" data-link-title="AmazonEC2ReportsAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L412">
         const <strong>AmazonEC2ReportsAccess</strong>
@@ -7561,7 +7561,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforAWSCodeDeploy" data-link-title="AmazonEC2RoleforAWSCodeDeploy">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L413">
         const <strong>AmazonEC2RoleforAWSCodeDeploy</strong>
@@ -7572,7 +7572,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforDataPipelineRole" data-link-title="AmazonEC2RoleforDataPipelineRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L414">
         const <strong>AmazonEC2RoleforDataPipelineRole</strong>
@@ -7583,7 +7583,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2RoleforSSM" data-link-title="AmazonEC2RoleforSSM">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L415">
         const <strong>AmazonEC2RoleforSSM</strong>
@@ -7594,7 +7594,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2SpotFleetAutoscaleRole" data-link-title="AmazonEC2SpotFleetAutoscaleRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L416">
         const <strong>AmazonEC2SpotFleetAutoscaleRole</strong>
@@ -7605,7 +7605,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonEC2SpotFleetRole" data-link-title="AmazonEC2SpotFleetRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L417">
         const <strong>AmazonEC2SpotFleetRole</strong>
@@ -7616,7 +7616,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElastiCacheFullAccess" data-link-title="AmazonElastiCacheFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L420">
         const <strong>AmazonElastiCacheFullAccess</strong>
@@ -7627,7 +7627,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElastiCacheReadOnlyAccess" data-link-title="AmazonElastiCacheReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L421">
         const <strong>AmazonElastiCacheReadOnlyAccess</strong>
@@ -7638,7 +7638,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticFileSystemFullAccess" data-link-title="AmazonElasticFileSystemFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L422">
         const <strong>AmazonElasticFileSystemFullAccess</strong>
@@ -7649,7 +7649,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticFileSystemReadOnlyAccess" data-link-title="AmazonElasticFileSystemReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L423">
         const <strong>AmazonElasticFileSystemReadOnlyAccess</strong>
@@ -7660,7 +7660,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceforAutoScalingRole" data-link-title="AmazonElasticMapReduceforAutoScalingRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L427">
         const <strong>AmazonElasticMapReduceforAutoScalingRole</strong>
@@ -7671,7 +7671,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceforEC2Role" data-link-title="AmazonElasticMapReduceforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L428">
         const <strong>AmazonElasticMapReduceforEC2Role</strong>
@@ -7682,7 +7682,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceFullAccess" data-link-title="AmazonElasticMapReduceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L424">
         const <strong>AmazonElasticMapReduceFullAccess</strong>
@@ -7693,7 +7693,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceReadOnlyAccess" data-link-title="AmazonElasticMapReduceReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L425">
         const <strong>AmazonElasticMapReduceReadOnlyAccess</strong>
@@ -7704,7 +7704,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticMapReduceRole" data-link-title="AmazonElasticMapReduceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L426">
         const <strong>AmazonElasticMapReduceRole</strong>
@@ -7715,7 +7715,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderFullAccess" data-link-title="AmazonElasticTranscoderFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L429">
         const <strong>AmazonElasticTranscoderFullAccess</strong>
@@ -7726,7 +7726,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderJobsSubmitter" data-link-title="AmazonElasticTranscoderJobsSubmitter">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L430">
         const <strong>AmazonElasticTranscoderJobsSubmitter</strong>
@@ -7737,7 +7737,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderReadOnlyAccess" data-link-title="AmazonElasticTranscoderReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L431">
         const <strong>AmazonElasticTranscoderReadOnlyAccess</strong>
@@ -7748,7 +7748,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonElasticTranscoderRole" data-link-title="AmazonElasticTranscoderRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L432">
         const <strong>AmazonElasticTranscoderRole</strong>
@@ -7759,7 +7759,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonESFullAccess" data-link-title="AmazonESFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L418">
         const <strong>AmazonESFullAccess</strong>
@@ -7770,7 +7770,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonESFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonESReadOnlyAccess" data-link-title="AmazonESReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L419">
         const <strong>AmazonESReadOnlyAccess</strong>
@@ -7781,7 +7781,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonGlacierFullAccess" data-link-title="AmazonGlacierFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L433">
         const <strong>AmazonGlacierFullAccess</strong>
@@ -7792,7 +7792,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonGlacierReadOnlyAccess" data-link-title="AmazonGlacierReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L434">
         const <strong>AmazonGlacierReadOnlyAccess</strong>
@@ -7803,7 +7803,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonInspectorFullAccess" data-link-title="AmazonInspectorFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L435">
         const <strong>AmazonInspectorFullAccess</strong>
@@ -7814,7 +7814,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonInspectorReadOnlyAccess" data-link-title="AmazonInspectorReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L436">
         const <strong>AmazonInspectorReadOnlyAccess</strong>
@@ -7825,7 +7825,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisAnalyticsFullAccess" data-link-title="AmazonKinesisAnalyticsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L437">
         const <strong>AmazonKinesisAnalyticsFullAccess</strong>
@@ -7836,7 +7836,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisAnalyticsReadOnly" data-link-title="AmazonKinesisAnalyticsReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L438">
         const <strong>AmazonKinesisAnalyticsReadOnly</strong>
@@ -7847,7 +7847,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFirehoseFullAccess" data-link-title="AmazonKinesisFirehoseFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L439">
         const <strong>AmazonKinesisFirehoseFullAccess</strong>
@@ -7858,7 +7858,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFirehoseReadOnlyAccess" data-link-title="AmazonKinesisFirehoseReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L440">
         const <strong>AmazonKinesisFirehoseReadOnlyAccess</strong>
@@ -7869,7 +7869,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisFullAccess" data-link-title="AmazonKinesisFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L441">
         const <strong>AmazonKinesisFullAccess</strong>
@@ -7880,7 +7880,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonKinesisReadOnlyAccess" data-link-title="AmazonKinesisReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L442">
         const <strong>AmazonKinesisReadOnlyAccess</strong>
@@ -7891,7 +7891,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexFullAccess" data-link-title="AmazonLexFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L443">
         const <strong>AmazonLexFullAccess</strong>
@@ -7902,7 +7902,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexReadOnly" data-link-title="AmazonLexReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L444">
         const <strong>AmazonLexReadOnly</strong>
@@ -7913,7 +7913,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonLexRunBotsOnly" data-link-title="AmazonLexRunBotsOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L445">
         const <strong>AmazonLexRunBotsOnly</strong>
@@ -7924,7 +7924,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningBatchPredictionsAccess" data-link-title="AmazonMachineLearningBatchPredictionsAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L446">
         const <strong>AmazonMachineLearningBatchPredictionsAccess</strong>
@@ -7935,7 +7935,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningCreateOnlyAccess" data-link-title="AmazonMachineLearningCreateOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L447">
         const <strong>AmazonMachineLearningCreateOnlyAccess</strong>
@@ -7946,7 +7946,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningFullAccess" data-link-title="AmazonMachineLearningFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L448">
         const <strong>AmazonMachineLearningFullAccess</strong>
@@ -7957,7 +7957,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningManageRealTimeEndpointOnlyAccess" data-link-title="AmazonMachineLearningManageRealTimeEndpointOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L449">
         const <strong>AmazonMachineLearningManageRealTimeEndpointOnlyAccess</strong>
@@ -7968,7 +7968,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningReadOnlyAccess" data-link-title="AmazonMachineLearningReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L450">
         const <strong>AmazonMachineLearningReadOnlyAccess</strong>
@@ -7979,7 +7979,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningRealTimePredictionOnlyAccess" data-link-title="AmazonMachineLearningRealTimePredictionOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L451">
         const <strong>AmazonMachineLearningRealTimePredictionOnlyAccess</strong>
@@ -7990,7 +7990,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMachineLearningRoleforRedshiftDataSource" data-link-title="AmazonMachineLearningRoleforRedshiftDataSource">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L452">
         const <strong>AmazonMachineLearningRoleforRedshiftDataSource</strong>
@@ -8001,7 +8001,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMechanicalTurkFullAccess" data-link-title="AmazonMechanicalTurkFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L453">
         const <strong>AmazonMechanicalTurkFullAccess</strong>
@@ -8012,7 +8012,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMechanicalTurkReadOnly" data-link-title="AmazonMechanicalTurkReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L454">
         const <strong>AmazonMechanicalTurkReadOnly</strong>
@@ -8023,7 +8023,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsFinancialReportAccess" data-link-title="AmazonMobileAnalyticsFinancialReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L455">
         const <strong>AmazonMobileAnalyticsFinancialReportAccess</strong>
@@ -8034,7 +8034,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsFullAccess" data-link-title="AmazonMobileAnalyticsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L456">
         const <strong>AmazonMobileAnalyticsFullAccess</strong>
@@ -8045,7 +8045,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsNonfinancialReportAccess" data-link-title="AmazonMobileAnalyticsNonfinancialReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L457">
         const <strong>AmazonMobileAnalyticsNonfinancialReportAccess</strong>
@@ -8056,7 +8056,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonMobileAnalyticsWriteOnlyAccess" data-link-title="AmazonMobileAnalyticsWriteOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L458">
         const <strong>AmazonMobileAnalyticsWriteOnlyAccess</strong>
@@ -8067,7 +8067,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonPollyFullAccess" data-link-title="AmazonPollyFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L459">
         const <strong>AmazonPollyFullAccess</strong>
@@ -8078,7 +8078,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonPollyReadOnlyAccess" data-link-title="AmazonPollyReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L460">
         const <strong>AmazonPollyReadOnlyAccess</strong>
@@ -8089,7 +8089,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSDirectoryServiceAccess" data-link-title="AmazonRDSDirectoryServiceAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L461">
         const <strong>AmazonRDSDirectoryServiceAccess</strong>
@@ -8100,7 +8100,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSEnhancedMonitoringRole" data-link-title="AmazonRDSEnhancedMonitoringRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L462">
         const <strong>AmazonRDSEnhancedMonitoringRole</strong>
@@ -8111,7 +8111,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSFullAccess" data-link-title="AmazonRDSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L463">
         const <strong>AmazonRDSFullAccess</strong>
@@ -8122,7 +8122,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRDSReadOnlyAccess" data-link-title="AmazonRDSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L464">
         const <strong>AmazonRDSReadOnlyAccess</strong>
@@ -8133,7 +8133,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRedshiftFullAccess" data-link-title="AmazonRedshiftFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L465">
         const <strong>AmazonRedshiftFullAccess</strong>
@@ -8144,7 +8144,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRedshiftReadOnlyAccess" data-link-title="AmazonRedshiftReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L466">
         const <strong>AmazonRedshiftReadOnlyAccess</strong>
@@ -8155,7 +8155,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRekognitionFullAccess" data-link-title="AmazonRekognitionFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L467">
         const <strong>AmazonRekognitionFullAccess</strong>
@@ -8166,7 +8166,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRekognitionReadOnlyAccess" data-link-title="AmazonRekognitionReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L468">
         const <strong>AmazonRekognitionReadOnlyAccess</strong>
@@ -8177,7 +8177,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53DomainsFullAccess" data-link-title="AmazonRoute53DomainsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L469">
         const <strong>AmazonRoute53DomainsFullAccess</strong>
@@ -8188,7 +8188,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53DomainsReadOnlyAccess" data-link-title="AmazonRoute53DomainsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L470">
         const <strong>AmazonRoute53DomainsReadOnlyAccess</strong>
@@ -8199,7 +8199,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53FullAccess" data-link-title="AmazonRoute53FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L471">
         const <strong>AmazonRoute53FullAccess</strong>
@@ -8210,7 +8210,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonRoute53ReadOnlyAccess" data-link-title="AmazonRoute53ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L472">
         const <strong>AmazonRoute53ReadOnlyAccess</strong>
@@ -8221,7 +8221,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonS3FullAccess" data-link-title="AmazonS3FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L473">
         const <strong>AmazonS3FullAccess</strong>
@@ -8232,7 +8232,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonS3FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonS3FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonS3ReadOnlyAccess" data-link-title="AmazonS3ReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L474">
         const <strong>AmazonS3ReadOnlyAccess</strong>
@@ -8243,7 +8243,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSESFullAccess" data-link-title="AmazonSESFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L475">
         const <strong>AmazonSESFullAccess</strong>
@@ -8254,7 +8254,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSESFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSESReadOnlyAccess" data-link-title="AmazonSESReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L476">
         const <strong>AmazonSESReadOnlyAccess</strong>
@@ -8265,7 +8265,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSFullAccess" data-link-title="AmazonSNSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L477">
         const <strong>AmazonSNSFullAccess</strong>
@@ -8276,7 +8276,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSReadOnlyAccess" data-link-title="AmazonSNSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L478">
         const <strong>AmazonSNSReadOnlyAccess</strong>
@@ -8287,7 +8287,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSNSRole" data-link-title="AmazonSNSRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L479">
         const <strong>AmazonSNSRole</strong>
@@ -8298,7 +8298,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSNSRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSQSFullAccess" data-link-title="AmazonSQSFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L480">
         const <strong>AmazonSQSFullAccess</strong>
@@ -8309,7 +8309,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSQSReadOnlyAccess" data-link-title="AmazonSQSReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L481">
         const <strong>AmazonSQSReadOnlyAccess</strong>
@@ -8320,7 +8320,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMAutomationRole" data-link-title="AmazonSSMAutomationRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L482">
         const <strong>AmazonSSMAutomationRole</strong>
@@ -8331,7 +8331,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMFullAccess" data-link-title="AmazonSSMFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L483">
         const <strong>AmazonSSMFullAccess</strong>
@@ -8342,7 +8342,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMMaintenanceWindowRole" data-link-title="AmazonSSMMaintenanceWindowRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L484">
         const <strong>AmazonSSMMaintenanceWindowRole</strong>
@@ -8353,7 +8353,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonSSMReadOnlyAccess" data-link-title="AmazonSSMReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L485">
         const <strong>AmazonSSMReadOnlyAccess</strong>
@@ -8364,7 +8364,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonVPCFullAccess" data-link-title="AmazonVPCFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L486">
         const <strong>AmazonVPCFullAccess</strong>
@@ -8375,7 +8375,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonVPCReadOnlyAccess" data-link-title="AmazonVPCReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L487">
         const <strong>AmazonVPCReadOnlyAccess</strong>
@@ -8386,7 +8386,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkMailFullAccess" data-link-title="AmazonWorkMailFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L488">
         const <strong>AmazonWorkMailFullAccess</strong>
@@ -8397,7 +8397,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkMailReadOnlyAccess" data-link-title="AmazonWorkMailReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L489">
         const <strong>AmazonWorkMailReadOnlyAccess</strong>
@@ -8408,7 +8408,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkSpacesAdmin" data-link-title="AmazonWorkSpacesAdmin">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L490">
         const <strong>AmazonWorkSpacesAdmin</strong>
@@ -8419,7 +8419,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonWorkSpacesApplicationManagerAdminAccess" data-link-title="AmazonWorkSpacesApplicationManagerAdminAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L491">
         const <strong>AmazonWorkSpacesApplicationManagerAdminAccess</strong>
@@ -8430,7 +8430,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonZocaloFullAccess" data-link-title="AmazonZocaloFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L492">
         const <strong>AmazonZocaloFullAccess</strong>
@@ -8441,7 +8441,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AmazonZocaloReadOnlyAccess" data-link-title="AmazonZocaloReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L493">
         const <strong>AmazonZocaloReadOnlyAccess</strong>
@@ -8452,7 +8452,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ApiGatewayPrincipal" data-link-title="ApiGatewayPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L314">
         const <strong>ApiGatewayPrincipal</strong>
@@ -8478,7 +8478,7 @@ Service Principal for API Gateway
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="assumeRolePolicyForPrincipal" data-link-title="assumeRolePolicyForPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/documents.ts#L185">
         function <strong>assumeRolePolicyForPrincipal</strong>
@@ -8518,7 +8518,7 @@ Service Principal for Athena
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingConsoleReadOnlyAccess" data-link-title="AutoScalingConsoleReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L496">
         const <strong>AutoScalingConsoleReadOnlyAccess</strong>
@@ -8529,7 +8529,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingFullAccess" data-link-title="AutoScalingFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L497">
         const <strong>AutoScalingFullAccess</strong>
@@ -8540,7 +8540,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoScalingNotificationAccessRole" data-link-title="AutoScalingNotificationAccessRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L498">
         const <strong>AutoScalingNotificationAccessRole</strong>
@@ -8551,7 +8551,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoscalingPrincipal" data-link-title="AutoscalingPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L326">
         const <strong>AutoscalingPrincipal</strong>
@@ -8577,7 +8577,7 @@ Service Principal for Autoscaling
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAccountActivityAccess" data-link-title="AWSAccountActivityAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L280">
         const <strong>AWSAccountActivityAccess</strong>
@@ -8588,7 +8588,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSAccountActivityAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAccountActivityAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAccountUsageReportAccess" data-link-title="AWSAccountUsageReportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L281">
         const <strong>AWSAccountUsageReportAccess</strong>
@@ -8599,7 +8599,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSAgentlessDiscoveryService" data-link-title="AWSAgentlessDiscoveryService">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L282">
         const <strong>AWSAgentlessDiscoveryService</strong>
@@ -8610,7 +8610,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSApplicationDiscoveryAgentAccess" data-link-title="AWSApplicationDiscoveryAgentAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L283">
         const <strong>AWSApplicationDiscoveryAgentAccess</strong>
@@ -8621,7 +8621,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSApplicationDiscoveryServiceFullAccess" data-link-title="AWSApplicationDiscoveryServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L284">
         const <strong>AWSApplicationDiscoveryServiceFullAccess</strong>
@@ -8632,7 +8632,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSBatchFullAccess" data-link-title="AWSBatchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L285">
         const <strong>AWSBatchFullAccess</strong>
@@ -8643,7 +8643,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSBatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSBatchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSBatchServiceRole" data-link-title="AWSBatchServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L286">
         const <strong>AWSBatchServiceRole</strong>
@@ -8654,7 +8654,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSBatchServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSBatchServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCertificateManagerFullAccess" data-link-title="AWSCertificateManagerFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L287">
         const <strong>AWSCertificateManagerFullAccess</strong>
@@ -8665,7 +8665,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCertificateManagerReadOnly" data-link-title="AWSCertificateManagerReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L288">
         const <strong>AWSCertificateManagerReadOnly</strong>
@@ -8676,7 +8676,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudFormationReadOnlyAccess" data-link-title="AWSCloudFormationReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L289">
         const <strong>AWSCloudFormationReadOnlyAccess</strong>
@@ -8687,7 +8687,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMFullAccess" data-link-title="AWSCloudHSMFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L290">
         const <strong>AWSCloudHSMFullAccess</strong>
@@ -8698,7 +8698,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMReadOnlyAccess" data-link-title="AWSCloudHSMReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L291">
         const <strong>AWSCloudHSMReadOnlyAccess</strong>
@@ -8709,7 +8709,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudHSMRole" data-link-title="AWSCloudHSMRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L292">
         const <strong>AWSCloudHSMRole</strong>
@@ -8720,7 +8720,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudHSMRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudTrailFullAccess" data-link-title="AWSCloudTrailFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L293">
         const <strong>AWSCloudTrailFullAccess</strong>
@@ -8731,7 +8731,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCloudTrailReadOnlyAccess" data-link-title="AWSCloudTrailReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L294">
         const <strong>AWSCloudTrailReadOnlyAccess</strong>
@@ -8742,7 +8742,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildAdminAccess" data-link-title="AWSCodeBuildAdminAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L295">
         const <strong>AWSCodeBuildAdminAccess</strong>
@@ -8753,7 +8753,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildDeveloperAccess" data-link-title="AWSCodeBuildDeveloperAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L296">
         const <strong>AWSCodeBuildDeveloperAccess</strong>
@@ -8764,7 +8764,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeBuildReadOnlyAccess" data-link-title="AWSCodeBuildReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L297">
         const <strong>AWSCodeBuildReadOnlyAccess</strong>
@@ -8775,7 +8775,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitFullAccess" data-link-title="AWSCodeCommitFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L298">
         const <strong>AWSCodeCommitFullAccess</strong>
@@ -8786,7 +8786,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitPowerUser" data-link-title="AWSCodeCommitPowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L299">
         const <strong>AWSCodeCommitPowerUser</strong>
@@ -8797,7 +8797,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeCommitReadOnly" data-link-title="AWSCodeCommitReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L300">
         const <strong>AWSCodeCommitReadOnly</strong>
@@ -8808,7 +8808,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployDeployerAccess" data-link-title="AWSCodeDeployDeployerAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L301">
         const <strong>AWSCodeDeployDeployerAccess</strong>
@@ -8819,7 +8819,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployFullAccess" data-link-title="AWSCodeDeployFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L302">
         const <strong>AWSCodeDeployFullAccess</strong>
@@ -8830,7 +8830,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployReadOnlyAccess" data-link-title="AWSCodeDeployReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L303">
         const <strong>AWSCodeDeployReadOnlyAccess</strong>
@@ -8841,7 +8841,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeDeployRole" data-link-title="AWSCodeDeployRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L304">
         const <strong>AWSCodeDeployRole</strong>
@@ -8852,7 +8852,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeDeployRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineApproverAccess" data-link-title="AWSCodePipelineApproverAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L305">
         const <strong>AWSCodePipelineApproverAccess</strong>
@@ -8863,7 +8863,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineCustomActionAccess" data-link-title="AWSCodePipelineCustomActionAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L306">
         const <strong>AWSCodePipelineCustomActionAccess</strong>
@@ -8874,7 +8874,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineFullAccess" data-link-title="AWSCodePipelineFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L307">
         const <strong>AWSCodePipelineFullAccess</strong>
@@ -8885,7 +8885,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodePipelineReadOnlyAccess" data-link-title="AWSCodePipelineReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L308">
         const <strong>AWSCodePipelineReadOnlyAccess</strong>
@@ -8896,7 +8896,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeStarFullAccess" data-link-title="AWSCodeStarFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L309">
         const <strong>AWSCodeStarFullAccess</strong>
@@ -8907,7 +8907,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSCodeStarServiceRole" data-link-title="AWSCodeStarServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L310">
         const <strong>AWSCodeStarServiceRole</strong>
@@ -8918,7 +8918,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigRole" data-link-title="AWSConfigRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L311">
         const <strong>AWSConfigRole</strong>
@@ -8929,7 +8929,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigRulesExecutionRole" data-link-title="AWSConfigRulesExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L312">
         const <strong>AWSConfigRulesExecutionRole</strong>
@@ -8940,7 +8940,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConfigUserAccess" data-link-title="AWSConfigUserAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L313">
         const <strong>AWSConfigUserAccess</strong>
@@ -8951,7 +8951,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSConfigUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConfigUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSConnector" data-link-title="AWSConnector">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L314">
         const <strong>AWSConnector</strong>
@@ -8962,7 +8962,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipeline_FullAccess" data-link-title="AWSDataPipeline_FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L316">
         const <strong>AWSDataPipeline_FullAccess</strong>
@@ -8973,7 +8973,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipeline_PowerUser" data-link-title="AWSDataPipeline_PowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L317">
         const <strong>AWSDataPipeline_PowerUser</strong>
@@ -8984,7 +8984,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDataPipelineRole" data-link-title="AWSDataPipelineRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L315">
         const <strong>AWSDataPipelineRole</strong>
@@ -8995,7 +8995,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDataPipelineRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDeviceFarmFullAccess" data-link-title="AWSDeviceFarmFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L318">
         const <strong>AWSDeviceFarmFullAccess</strong>
@@ -9006,7 +9006,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectConnectFullAccess" data-link-title="AWSDirectConnectFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L319">
         const <strong>AWSDirectConnectFullAccess</strong>
@@ -9017,7 +9017,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectConnectReadOnlyAccess" data-link-title="AWSDirectConnectReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L320">
         const <strong>AWSDirectConnectReadOnlyAccess</strong>
@@ -9028,7 +9028,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectoryServiceFullAccess" data-link-title="AWSDirectoryServiceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L321">
         const <strong>AWSDirectoryServiceFullAccess</strong>
@@ -9039,7 +9039,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSDirectoryServiceReadOnlyAccess" data-link-title="AWSDirectoryServiceReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L322">
         const <strong>AWSDirectoryServiceReadOnlyAccess</strong>
@@ -9050,7 +9050,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkCustomPlatformforEC2Role" data-link-title="AWSElasticBeanstalkCustomPlatformforEC2Role">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L323">
         const <strong>AWSElasticBeanstalkCustomPlatformforEC2Role</strong>
@@ -9061,7 +9061,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkEnhancedHealth" data-link-title="AWSElasticBeanstalkEnhancedHealth">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L324">
         const <strong>AWSElasticBeanstalkEnhancedHealth</strong>
@@ -9072,7 +9072,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkFullAccess" data-link-title="AWSElasticBeanstalkFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L325">
         const <strong>AWSElasticBeanstalkFullAccess</strong>
@@ -9083,7 +9083,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkMulticontainerDocker" data-link-title="AWSElasticBeanstalkMulticontainerDocker">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L326">
         const <strong>AWSElasticBeanstalkMulticontainerDocker</strong>
@@ -9094,7 +9094,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkReadOnlyAccess" data-link-title="AWSElasticBeanstalkReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L327">
         const <strong>AWSElasticBeanstalkReadOnlyAccess</strong>
@@ -9105,7 +9105,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkService" data-link-title="AWSElasticBeanstalkService">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L328">
         const <strong>AWSElasticBeanstalkService</strong>
@@ -9116,7 +9116,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkWebTier" data-link-title="AWSElasticBeanstalkWebTier">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L329">
         const <strong>AWSElasticBeanstalkWebTier</strong>
@@ -9127,7 +9127,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSElasticBeanstalkWorkerTier" data-link-title="AWSElasticBeanstalkWorkerTier">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L330">
         const <strong>AWSElasticBeanstalkWorkerTier</strong>
@@ -9138,7 +9138,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSGreengrassFullAccess" data-link-title="AWSGreengrassFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L331">
         const <strong>AWSGreengrassFullAccess</strong>
@@ -9149,7 +9149,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSGreengrassResourceAccessRolePolicy" data-link-title="AWSGreengrassResourceAccessRolePolicy">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L332">
         const <strong>AWSGreengrassResourceAccessRolePolicy</strong>
@@ -9160,7 +9160,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSHealthFullAccess" data-link-title="AWSHealthFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L333">
         const <strong>AWSHealthFullAccess</strong>
@@ -9171,7 +9171,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSHealthFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSHealthFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSImportExportFullAccess" data-link-title="AWSImportExportFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L334">
         const <strong>AWSImportExportFullAccess</strong>
@@ -9182,7 +9182,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSImportExportReadOnlyAccess" data-link-title="AWSImportExportReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L335">
         const <strong>AWSImportExportReadOnlyAccess</strong>
@@ -9193,7 +9193,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTConfigAccess" data-link-title="AWSIoTConfigAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L336">
         const <strong>AWSIoTConfigAccess</strong>
@@ -9204,7 +9204,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTConfigReadOnlyAccess" data-link-title="AWSIoTConfigReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L337">
         const <strong>AWSIoTConfigReadOnlyAccess</strong>
@@ -9215,7 +9215,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTDataAccess" data-link-title="AWSIoTDataAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L338">
         const <strong>AWSIoTDataAccess</strong>
@@ -9226,7 +9226,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTDataAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTDataAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTFullAccess" data-link-title="AWSIoTFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L339">
         const <strong>AWSIoTFullAccess</strong>
@@ -9237,7 +9237,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTLogging" data-link-title="AWSIoTLogging">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L340">
         const <strong>AWSIoTLogging</strong>
@@ -9248,7 +9248,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTLogging: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTLogging: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSIoTRuleActions" data-link-title="AWSIoTRuleActions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L341">
         const <strong>AWSIoTRuleActions</strong>
@@ -9259,7 +9259,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSIoTRuleActions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSIoTRuleActions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSKeyManagementServicePowerUser" data-link-title="AWSKeyManagementServicePowerUser">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L342">
         const <strong>AWSKeyManagementServicePowerUser</strong>
@@ -9270,7 +9270,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaBasicExecutionRole" data-link-title="AWSLambdaBasicExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L343">
         const <strong>AWSLambdaBasicExecutionRole</strong>
@@ -9281,7 +9281,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaDynamoDBExecutionRole" data-link-title="AWSLambdaDynamoDBExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L344">
         const <strong>AWSLambdaDynamoDBExecutionRole</strong>
@@ -9292,7 +9292,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaENIManagementAccess" data-link-title="AWSLambdaENIManagementAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L345">
         const <strong>AWSLambdaENIManagementAccess</strong>
@@ -9303,7 +9303,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaExecute" data-link-title="AWSLambdaExecute">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L346">
         const <strong>AWSLambdaExecute</strong>
@@ -9314,7 +9314,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaExecute: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaExecute: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaFullAccess" data-link-title="AWSLambdaFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L347">
         const <strong>AWSLambdaFullAccess</strong>
@@ -9325,7 +9325,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaInvocationDynamoDB" data-link-title="AWSLambdaInvocationDynamoDB">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L348">
         const <strong>AWSLambdaInvocationDynamoDB</strong>
@@ -9336,7 +9336,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaKinesisExecutionRole" data-link-title="AWSLambdaKinesisExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L349">
         const <strong>AWSLambdaKinesisExecutionRole</strong>
@@ -9347,7 +9347,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaReadOnlyAccess" data-link-title="AWSLambdaReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L350">
         const <strong>AWSLambdaReadOnlyAccess</strong>
@@ -9358,7 +9358,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaRole" data-link-title="AWSLambdaRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L351">
         const <strong>AWSLambdaRole</strong>
@@ -9369,7 +9369,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSLambdaVPCAccessExecutionRole" data-link-title="AWSLambdaVPCAccessExecutionRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L352">
         const <strong>AWSLambdaVPCAccessExecutionRole</strong>
@@ -9380,7 +9380,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceFullAccess" data-link-title="AWSMarketplaceFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L353">
         const <strong>AWSMarketplaceFullAccess</strong>
@@ -9391,7 +9391,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceGetEntitlements" data-link-title="AWSMarketplaceGetEntitlements">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L354">
         const <strong>AWSMarketplaceGetEntitlements</strong>
@@ -9402,7 +9402,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceManageSubscriptions" data-link-title="AWSMarketplaceManageSubscriptions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L355">
         const <strong>AWSMarketplaceManageSubscriptions</strong>
@@ -9413,7 +9413,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceMeteringFullAccess" data-link-title="AWSMarketplaceMeteringFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L356">
         const <strong>AWSMarketplaceMeteringFullAccess</strong>
@@ -9424,7 +9424,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMarketplaceReadonly" data-link-title="AWSMarketplaceReadonly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L357">
         const <strong>AWSMarketplaceReadonly</strong>
@@ -9435,7 +9435,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_FullAccess" data-link-title="AWSMobileHub_FullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L358">
         const <strong>AWSMobileHub_FullAccess</strong>
@@ -9446,7 +9446,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_ReadOnly" data-link-title="AWSMobileHub_ReadOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L359">
         const <strong>AWSMobileHub_ReadOnly</strong>
@@ -9457,7 +9457,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSMobileHub_ServiceUseOnly" data-link-title="AWSMobileHub_ServiceUseOnly">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L360">
         const <strong>AWSMobileHub_ServiceUseOnly</strong>
@@ -9468,7 +9468,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCloudWatchLogs" data-link-title="AWSOpsWorksCloudWatchLogs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L363">
         const <strong>AWSOpsWorksCloudWatchLogs</strong>
@@ -9479,7 +9479,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCMInstanceProfileRole" data-link-title="AWSOpsWorksCMInstanceProfileRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L361">
         const <strong>AWSOpsWorksCMInstanceProfileRole</strong>
@@ -9490,7 +9490,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksCMServiceRole" data-link-title="AWSOpsWorksCMServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L362">
         const <strong>AWSOpsWorksCMServiceRole</strong>
@@ -9501,7 +9501,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksFullAccess" data-link-title="AWSOpsWorksFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L364">
         const <strong>AWSOpsWorksFullAccess</strong>
@@ -9512,7 +9512,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksInstanceRegistration" data-link-title="AWSOpsWorksInstanceRegistration">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L365">
         const <strong>AWSOpsWorksInstanceRegistration</strong>
@@ -9523,7 +9523,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksRegisterCLI" data-link-title="AWSOpsWorksRegisterCLI">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L366">
         const <strong>AWSOpsWorksRegisterCLI</strong>
@@ -9534,7 +9534,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSOpsWorksRole" data-link-title="AWSOpsWorksRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L367">
         const <strong>AWSOpsWorksRole</strong>
@@ -9545,7 +9545,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSOpsWorksRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSPrincipal" data-link-title="AWSPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/documents.ts#L156">
         interface <strong>AWSPrincipal</strong>
@@ -9574,7 +9574,7 @@ consists of the AWS: prefix followed by the account ID.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightDescribeRDS" data-link-title="AWSQuickSightDescribeRDS">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L368">
         const <strong>AWSQuickSightDescribeRDS</strong>
@@ -9585,7 +9585,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightDescribeRedshift" data-link-title="AWSQuickSightDescribeRedshift">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L369">
         const <strong>AWSQuickSightDescribeRedshift</strong>
@@ -9596,7 +9596,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSQuickSightListIAM" data-link-title="AWSQuickSightListIAM">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L370">
         const <strong>AWSQuickSightListIAM</strong>
@@ -9607,7 +9607,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightListIAM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSQuickSightListIAM: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsConsoleFullAccess" data-link-title="AWSStepFunctionsConsoleFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L372">
         const <strong>AWSStepFunctionsConsoleFullAccess</strong>
@@ -9618,7 +9618,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsFullAccess" data-link-title="AWSStepFunctionsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L373">
         const <strong>AWSStepFunctionsFullAccess</strong>
@@ -9629,7 +9629,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStepFunctionsReadOnlyAccess" data-link-title="AWSStepFunctionsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L374">
         const <strong>AWSStepFunctionsReadOnlyAccess</strong>
@@ -9640,7 +9640,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStorageGatewayFullAccess" data-link-title="AWSStorageGatewayFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L375">
         const <strong>AWSStorageGatewayFullAccess</strong>
@@ -9651,7 +9651,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSStorageGatewayReadOnlyAccess" data-link-title="AWSStorageGatewayReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L376">
         const <strong>AWSStorageGatewayReadOnlyAccess</strong>
@@ -9662,7 +9662,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSSupportAccess" data-link-title="AWSSupportAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L377">
         const <strong>AWSSupportAccess</strong>
@@ -9673,7 +9673,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSSupportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSSupportAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSWAFFullAccess" data-link-title="AWSWAFFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L378">
         const <strong>AWSWAFFullAccess</strong>
@@ -9684,7 +9684,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSWAFFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSWAFFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSWAFReadOnlyAccess" data-link-title="AWSWAFReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L379">
         const <strong>AWSWAFReadOnlyAccess</strong>
@@ -9695,7 +9695,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayFullAccess" data-link-title="AWSXrayFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L380">
         const <strong>AWSXrayFullAccess</strong>
@@ -9706,7 +9706,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayReadOnlyAccess" data-link-title="AWSXrayReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L381">
         const <strong>AWSXrayReadOnlyAccess</strong>
@@ -9717,7 +9717,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AWSXrayWriteOnlyAccess" data-link-title="AWSXrayWriteOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L382">
         const <strong>AWSXrayWriteOnlyAccess</strong>
@@ -9728,7 +9728,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Billing" data-link-title="Billing">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L500">
         const <strong>Billing</strong>
@@ -9739,7 +9739,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> Billing: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> Billing: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudDirectoryPrincipal" data-link-title="CloudDirectoryPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L332">
         const <strong>CloudDirectoryPrincipal</strong>
@@ -9780,7 +9780,7 @@ Service Principal for Cloudformation
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudFrontFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudFrontFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudfrontPrincipal" data-link-title="CloudfrontPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L344">
         const <strong>CloudfrontPrincipal</strong>
@@ -9807,7 +9807,7 @@ Service Principal for Cloudfront
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudSearchFullAccess" data-link-title="CloudSearchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L503">
         const <strong>CloudSearchFullAccess</strong>
@@ -9818,7 +9818,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudSearchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudSearchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudSearchPrincipal" data-link-title="CloudSearchPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L350">
         const <strong>CloudSearchPrincipal</strong>
@@ -9845,7 +9845,7 @@ Service Principal for Cloud Search
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudtrailPrincipal" data-link-title="CloudtrailPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L356">
         const <strong>CloudtrailPrincipal</strong>
@@ -9872,7 +9872,7 @@ Service Principal for Cloudtrail
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsBuiltInTargetExecutionAccess" data-link-title="CloudWatchEventsBuiltInTargetExecutionAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L506">
         const <strong>CloudWatchEventsBuiltInTargetExecutionAccess</strong>
@@ -9883,7 +9883,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsFullAccess" data-link-title="CloudWatchEventsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L507">
         const <strong>CloudWatchEventsFullAccess</strong>
@@ -9894,7 +9894,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsInvocationAccess" data-link-title="CloudWatchEventsInvocationAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L508">
         const <strong>CloudWatchEventsInvocationAccess</strong>
@@ -9905,7 +9905,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchEventsReadOnlyAccess" data-link-title="CloudWatchEventsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L509">
         const <strong>CloudWatchEventsReadOnlyAccess</strong>
@@ -9916,7 +9916,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchFullAccess" data-link-title="CloudWatchFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L510">
         const <strong>CloudWatchFullAccess</strong>
@@ -9927,7 +9927,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchLogsFullAccess" data-link-title="CloudWatchLogsFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L511">
         const <strong>CloudWatchLogsFullAccess</strong>
@@ -9938,7 +9938,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchLogsReadOnlyAccess" data-link-title="CloudWatchLogsReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L512">
         const <strong>CloudWatchLogsReadOnlyAccess</strong>
@@ -9949,7 +9949,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchReadOnlyAccess" data-link-title="CloudWatchReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L513">
         const <strong>CloudWatchReadOnlyAccess</strong>
@@ -9960,7 +9960,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CodeCommitPrincipal" data-link-title="CodeCommitPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L362">
         const <strong>CodeCommitPrincipal</strong>
@@ -10057,7 +10057,7 @@ Service Principal for EC2 Config Service
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> DatabaseAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> DatabaseAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DataPipelinePrincipal" data-link-title="DataPipelinePrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L386">
         const <strong>DataPipelinePrincipal</strong>
@@ -10084,7 +10084,7 @@ Service Principal for Data Pipeline
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> DataScientist: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> DataScientist: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DirectConnectPrincipal" data-link-title="DirectConnectPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L392">
         const <strong>DirectConnectPrincipal</strong>
@@ -10400,7 +10400,7 @@ The path to the iam user.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/getGroup.ts#L71">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetGroupUser'>outputs.iam.GetGroupUser</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetGroupUser'>GetGroupUser</a>[];</code></pre>
 
 List of objects containing group member information. See supported fields below.
 
@@ -10556,7 +10556,7 @@ json.  Statements without an `sid` cannot be overwritten.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/getPolicyDocument.ts#L58">property <b>statements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statements?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatement'>inputs.iam.GetPolicyDocumentStatement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statements?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatement'>GetPolicyDocumentStatement</a>[];</code></pre>
 
 A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
@@ -10614,7 +10614,7 @@ The above arguments serialized as a standard JSON policy document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/getPolicyDocument.ts#L76">property <b>statements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statements?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatement'>outputs.iam.GetPolicyDocumentStatement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statements?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatement'>GetPolicyDocumentStatement</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyDocumentResult-version">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/getPolicyDocument.ts#L77">property <b>version</b></a>
 </h4>
@@ -11126,7 +11126,7 @@ The group the policy should be applied to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/groupPolicyAttachment.ts#L131">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -11152,7 +11152,7 @@ The group the policy should be applied to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/groupPolicyAttachment.ts#L117">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -11265,7 +11265,7 @@ Service Principal for Health
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> IAMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IamPrincipal" data-link-title="IamPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L476">
         const <strong>IamPrincipal</strong>
@@ -11292,7 +11292,7 @@ Service Principal for IAM
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> IAMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMSelfManageServiceSpecificCredentials" data-link-title="IAMSelfManageServiceSpecificCredentials">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L518">
         const <strong>IAMSelfManageServiceSpecificCredentials</strong>
@@ -11303,7 +11303,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMUserChangePassword" data-link-title="IAMUserChangePassword">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L519">
         const <strong>IAMUserChangePassword</strong>
@@ -11314,7 +11314,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> IAMUserChangePassword: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMUserChangePassword: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="IAMUserSSHKeys" data-link-title="IAMUserSSHKeys">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L520">
         const <strong>IAMUserSSHKeys</strong>
@@ -11325,7 +11325,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> IAMUserSSHKeys: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> IAMUserSSHKeys: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="InspectorPrincipal" data-link-title="InspectorPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L482">
         const <strong>InspectorPrincipal</strong>
@@ -11572,7 +11572,7 @@ Service Principal for Cloudwatch Monitoring
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> NetworkAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> NetworkAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="OpenIdConnectProviderArgs" data-link-title="OpenIdConnectProviderArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/openIdConnectProvider.ts#L137">
         interface <strong>OpenIdConnectProviderArgs</strong>
@@ -11759,7 +11759,7 @@ The name of the attachment. This cannot be an empty string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/policyAttachment.ts#L197">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -11809,7 +11809,7 @@ The name of the attachment. This cannot be an empty string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/policyAttachment.ts#L171">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -12003,7 +12003,7 @@ The Statement element is the main element for a policy. This element is required
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> PowerUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> PowerUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Principal" data-link-title="Principal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/documents.ts#L148">
         type <strong>Principal</strong>
@@ -12046,7 +12046,7 @@ is attached to an IAM group, the principal is the IAM user in that group who is 
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RdsPrincipal" data-link-title="RdsPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L536">
         const <strong>RdsPrincipal</strong>
@@ -12073,7 +12073,7 @@ Service Principal for Relational Database Service
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RedshiftPrincipal" data-link-title="RedshiftPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L542">
         const <strong>RedshiftPrincipal</strong>
@@ -12100,7 +12100,7 @@ Service Principal for Redshift
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceGroupsandTagEditorReadOnlyAccess" data-link-title="ResourceGroupsandTagEditorReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L526">
         const <strong>ResourceGroupsandTagEditorReadOnlyAccess</strong>
@@ -12111,7 +12111,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RoleArgs" data-link-title="RoleArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/role.ts#L252">
         interface <strong>RoleArgs</strong>
@@ -12250,7 +12250,7 @@ The set of arguments for constructing a RolePolicyAttachment resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/rolePolicyAttachment.ts#L154">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -12276,7 +12276,7 @@ Input properties used for looking up and filtering RolePolicyAttachment resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/rolePolicyAttachment.ts#L140">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -12546,7 +12546,7 @@ The expiration date and time for the SAML provider in RFC1123 format, e.g. `Mon,
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> SecurityAudit: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SecurityAudit: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServerCertificateArgs" data-link-title="ServerCertificateArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/serverCertificate.ts#L244">
         interface <strong>ServerCertificateArgs</strong>
@@ -12705,7 +12705,7 @@ The contents of the private key in PEM-encoded format.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServerMigrationServiceRole" data-link-title="ServerMigrationServiceRole">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L529">
         const <strong>ServerMigrationServiceRole</strong>
@@ -12716,7 +12716,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServerMigrationServiceRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogAdminFullAccess" data-link-title="ServiceCatalogAdminFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L530">
         const <strong>ServiceCatalogAdminFullAccess</strong>
@@ -12727,7 +12727,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogAdminReadOnlyAccess" data-link-title="ServiceCatalogAdminReadOnlyAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L531">
         const <strong>ServiceCatalogAdminReadOnlyAccess</strong>
@@ -12738,7 +12738,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogEndUserAccess" data-link-title="ServiceCatalogEndUserAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L532">
         const <strong>ServiceCatalogEndUserAccess</strong>
@@ -12749,7 +12749,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogEndUserFullAccess" data-link-title="ServiceCatalogEndUserFullAccess">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L533">
         const <strong>ServiceCatalogEndUserFullAccess</strong>
@@ -12760,7 +12760,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCatalogPrincipal" data-link-title="ServiceCatalogPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L560">
         const <strong>ServiceCatalogPrincipal</strong>
@@ -12948,7 +12948,7 @@ Service Principal for Signin Service
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SnsPrincipal" data-link-title="SnsPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L578">
         const <strong>SnsPrincipal</strong>
@@ -13155,7 +13155,7 @@ Service Principal for AWS Support
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> SupportUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SupportUser: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SystemAdministrator" data-link-title="SystemAdministrator">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/managedPolicies.ts#L536">
         const <strong>SystemAdministrator</strong>
@@ -13166,7 +13166,7 @@ Use the equivalent constant in module `ManagedPolicies` instead
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> SystemAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> SystemAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/user.ts#L184">
         interface <strong>UserArgs</strong>
@@ -13424,7 +13424,7 @@ The set of arguments for constructing a UserPolicyAttachment resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/userPolicyAttachment.ts#L127">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -13450,7 +13450,7 @@ Input properties used for looking up and filtering UserPolicyAttachment resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/userPolicyAttachment.ts#L113">property <b>policyArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the policy you want to apply
 
@@ -13579,7 +13579,7 @@ The [unique ID][1] assigned by AWS.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> ViewOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> ViewOnlyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="VmiePrincipal" data-link-title="VmiePrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L614">
         const <strong>VmiePrincipal</strong>
@@ -13606,7 +13606,7 @@ Service Principal for VM Import/Export
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the equivalent constant in module `ManagedPolicies` instead
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="VpcFlowLogsPrincipal" data-link-title="VpcFlowLogsPrincipal">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/iam/principals.ts#L620">
         const <strong>VpcFlowLogsPrincipal</strong>

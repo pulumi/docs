@@ -262,7 +262,7 @@ ISO. Conflicts with `clientDevice`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L98">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeNetworkInterface'>outputs.VirtualMachineCloneCustomizeNetworkInterface</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='#VirtualMachineCloneCustomizeNetworkInterface'>VirtualMachineCloneCustomizeNetworkInterface</a>[];</code></pre>
 
 A specification for a virtual NIC on this
 virtual machine. See network interface options

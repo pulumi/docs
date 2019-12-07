@@ -168,7 +168,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CryptoKey</code></pre>
 
 
 Returns true if the given object is an instance of CryptoKey.  This is designed to work even
@@ -245,7 +245,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKey.ts#L119">property <b>versionTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>versionTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyVersionTemplate'>outputs.kms.CryptoKeyVersionTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>versionTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
 
 A template describing settings for new crypto key versions.
 
@@ -316,7 +316,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CryptoKeyIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of CryptoKeyIAMBinding.  This is designed to work even
@@ -326,7 +326,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L59">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMBindingCondition'>outputs.kms.CryptoKeyIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L66">property <b>cryptoKeyId</b></a>
 </h4>
@@ -450,7 +450,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CryptoKeyIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of CryptoKeyIAMMember.  This is designed to work even
@@ -460,7 +460,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L60">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMMemberCondition'>outputs.kms.CryptoKeyIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L67">property <b>cryptoKeyId</b></a>
 </h4>
@@ -562,7 +562,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyRing</code></pre>
 
 
 Returns true if the given object is an instance of KeyRing.  This is designed to work even
@@ -717,7 +717,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyRingIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of KeyRingIAMBinding.  This is designed to work even
@@ -727,7 +727,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L93">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMBindingCondition'>outputs.kms.KeyRingIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L97">property <b>etag</b></a>
 </h4>
@@ -881,7 +881,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyRingIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of KeyRingIAMMember.  This is designed to work even
@@ -891,7 +891,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L93">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMMemberCondition'>outputs.kms.KeyRingIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L97">property <b>etag</b></a>
 </h4>
@@ -1045,7 +1045,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyRingIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of KeyRingIAMPolicy.  This is designed to work even
@@ -1179,7 +1179,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Registry</code></pre>
 
 
 Returns true if the given object is an instance of Registry.  This is designed to work even
@@ -1189,7 +1189,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L78">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryCredential'>outputs.kms.RegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryCredential'>RegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of public key certificates to authenticate devices. Structure is documented below.
 
@@ -1197,7 +1197,7 @@ List of public key certificates to authenticate devices. Structure is documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L82">property <b>eventNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventNotificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryEventNotificationConfig'>outputs.kms.RegistryEventNotificationConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventNotificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryEventNotificationConfig'>RegistryEventNotificationConfig</a>&gt;;</code></pre>
 
 Use `eventNotificationConfigs` instead.
 
@@ -1205,7 +1205,7 @@ Use `eventNotificationConfigs` instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L87">property <b>eventNotificationConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventNotificationConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryEventNotificationConfigItem'>outputs.kms.RegistryEventNotificationConfigItem</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventNotificationConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>[]&gt;;</code></pre>
 
 List of configurations for event notification, such as
 PubSub topics to publish device events to. Structure is documented below.
@@ -1214,7 +1214,7 @@ PubSub topics to publish device events to. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L91">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryHttpConfig'>outputs.kms.RegistryHttpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryHttpConfig'>RegistryHttpConfig</a>&gt;;</code></pre>
 
 Activate or deactivate HTTP. Structure is documented below.
 
@@ -1236,7 +1236,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L96">property <b>mqttConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>mqttConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryMqttConfig'>outputs.kms.RegistryMqttConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>mqttConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryMqttConfig'>RegistryMqttConfig</a>&gt;;</code></pre>
 
 Activate or deactivate MQTT. Structure is documented below.
 
@@ -1269,7 +1269,7 @@ The Region in which the created address should reside. If it is not provided, th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L113">property <b>stateNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stateNotificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryStateNotificationConfig'>outputs.kms.RegistryStateNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stateNotificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryStateNotificationConfig'>RegistryStateNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A PubSub topic to publish device state updates. Structure is documented below.
 
@@ -1496,7 +1496,7 @@ fractional digits, followed by the letter 's' (seconds). It must be greater than
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKey.ts#L230">property <b>versionTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>inputs.kms.CryptoKeyVersionTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
 
 A template describing settings for new crypto key versions.
 
@@ -1514,7 +1514,7 @@ The set of arguments for constructing a CryptoKeyIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L159">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>inputs.kms.CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingArgs-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L166">property <b>cryptoKeyId</b></a>
 </h4>
@@ -1558,7 +1558,7 @@ Input properties used for looking up and filtering CryptoKeyIAMBinding resources
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L131">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>inputs.kms.CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L138">property <b>cryptoKeyId</b></a>
 </h4>
@@ -1610,7 +1610,7 @@ The set of arguments for constructing a CryptoKeyIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L158">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>inputs.kms.CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberArgs-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L165">property <b>cryptoKeyId</b></a>
 </h4>
@@ -1653,7 +1653,7 @@ Input properties used for looking up and filtering CryptoKeyIAMMember resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L131">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>inputs.kms.CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-cryptoKeyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L138">property <b>cryptoKeyId</b></a>
 </h4>
@@ -1753,7 +1753,7 @@ fractional digits, followed by the letter 's' (seconds). It must be greater than
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/cryptoKey.ts#L196">property <b>versionTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>inputs.kms.CryptoKeyVersionTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
 
 A template describing settings for new crypto key versions.
 
@@ -1847,7 +1847,7 @@ The self link of the created CryptoKey. Its format is `projects/{projectId}/loca
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/getKMSCryptoKey.ts#L88">property <b>versionTemplates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versionTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionTemplate'>outputs.kms.GetKMSCryptoKeyVersionTemplate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versionTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionTemplate'>GetKMSCryptoKeyVersionTemplate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetKMSCryptoKeyVersionArgs" data-link-title="GetKMSCryptoKeyVersionArgs">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L58">
         interface <strong>GetKMSCryptoKeyVersionArgs</strong>
@@ -2194,7 +2194,7 @@ The set of arguments for constructing a KeyRingIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L187">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>inputs.kms.KeyRingIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingArgs-keyRingId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L194">property <b>keyRingId</b></a>
 </h4>
@@ -2235,7 +2235,7 @@ Input properties used for looking up and filtering KeyRingIAMBinding resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L162">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>inputs.kms.KeyRingIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMBinding.ts#L166">property <b>etag</b></a>
 </h4>
@@ -2284,7 +2284,7 @@ The set of arguments for constructing a KeyRingIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L187">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>inputs.kms.KeyRingIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberArgs-keyRingId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L194">property <b>keyRingId</b></a>
 </h4>
@@ -2325,7 +2325,7 @@ Input properties used for looking up and filtering KeyRingIAMMember resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L162">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>inputs.kms.KeyRingIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/keyRingIAMMember.ts#L166">property <b>etag</b></a>
 </h4>
@@ -2482,7 +2482,7 @@ The set of arguments for constructing a Registry resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L213">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>inputs.kms.RegistryCredential</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>RegistryCredential</a>&gt;[]&gt;;</code></pre>
 
 List of public key certificates to authenticate devices. Structure is documented below.
 
@@ -2490,7 +2490,7 @@ List of public key certificates to authenticate devices. Structure is documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L217">property <b>eventNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfig'>inputs.kms.RegistryEventNotificationConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfig'>RegistryEventNotificationConfig</a>&gt;;</code></pre>
 
 Use `eventNotificationConfigs` instead.
 
@@ -2498,7 +2498,7 @@ Use `eventNotificationConfigs` instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L222">property <b>eventNotificationConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>inputs.kms.RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
 
 List of configurations for event notification, such as
 PubSub topics to publish device events to. Structure is documented below.
@@ -2507,7 +2507,7 @@ PubSub topics to publish device events to. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L226">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryHttpConfig'>inputs.kms.RegistryHttpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryHttpConfig'>RegistryHttpConfig</a>&gt;;</code></pre>
 
 Activate or deactivate HTTP. Structure is documented below.
 
@@ -2520,7 +2520,7 @@ Activate or deactivate HTTP. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L231">property <b>mqttConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryMqttConfig'>inputs.kms.RegistryMqttConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryMqttConfig'>RegistryMqttConfig</a>&gt;;</code></pre>
 
 Activate or deactivate MQTT. Structure is documented below.
 
@@ -2553,7 +2553,7 @@ The Region in which the created address should reside. If it is not provided, th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L248">property <b>stateNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryStateNotificationConfig'>inputs.kms.RegistryStateNotificationConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryStateNotificationConfig'>RegistryStateNotificationConfig</a>&gt;;</code></pre>
 
 A PubSub topic to publish device state updates. Structure is documented below.
 
@@ -2571,7 +2571,7 @@ Input properties used for looking up and filtering Registry resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L168">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>inputs.kms.RegistryCredential</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>RegistryCredential</a>&gt;[]&gt;;</code></pre>
 
 List of public key certificates to authenticate devices. Structure is documented below.
 
@@ -2579,7 +2579,7 @@ List of public key certificates to authenticate devices. Structure is documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L172">property <b>eventNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfig'>inputs.kms.RegistryEventNotificationConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfig'>RegistryEventNotificationConfig</a>&gt;;</code></pre>
 
 Use `eventNotificationConfigs` instead.
 
@@ -2587,7 +2587,7 @@ Use `eventNotificationConfigs` instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L177">property <b>eventNotificationConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>inputs.kms.RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
 
 List of configurations for event notification, such as
 PubSub topics to publish device events to. Structure is documented below.
@@ -2596,7 +2596,7 @@ PubSub topics to publish device events to. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L181">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryHttpConfig'>inputs.kms.RegistryHttpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryHttpConfig'>RegistryHttpConfig</a>&gt;;</code></pre>
 
 Activate or deactivate HTTP. Structure is documented below.
 
@@ -2609,7 +2609,7 @@ Activate or deactivate HTTP. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L186">property <b>mqttConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryMqttConfig'>inputs.kms.RegistryMqttConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryMqttConfig'>RegistryMqttConfig</a>&gt;;</code></pre>
 
 Activate or deactivate MQTT. Structure is documented below.
 
@@ -2642,7 +2642,7 @@ The Region in which the created address should reside. If it is not provided, th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/kms/registry.ts#L203">property <b>stateNotificationConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryStateNotificationConfig'>inputs.kms.RegistryStateNotificationConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryStateNotificationConfig'>RegistryStateNotificationConfig</a>&gt;;</code></pre>
 
 A PubSub topic to publish device state updates. Structure is documented below.
 

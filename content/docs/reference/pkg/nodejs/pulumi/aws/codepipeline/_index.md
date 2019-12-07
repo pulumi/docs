@@ -206,7 +206,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Pipeline</code></pre>
 
 
 Returns true if the given object is an instance of Pipeline.  This is designed to work even
@@ -224,7 +224,7 @@ The codepipeline ARN.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L172">property <b>artifactStore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStore'>outputs.codepipeline.PipelineArtifactStore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
 
 An artifactStore block. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
@@ -258,7 +258,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L181">property <b>stages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStage'>outputs.codepipeline.PipelineStage</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStage'>PipelineStage</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Pipeline-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L185">property <b>tags</b></a>
 </h4>
@@ -325,7 +325,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Webhook</code></pre>
 
 
 Returns true if the given object is an instance of Webhook.  This is designed to work even
@@ -343,7 +343,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L48">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookAuthenticationConfiguration'>outputs.codepipeline.WebhookAuthenticationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
@@ -351,7 +351,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L52">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilter'>outputs.codepipeline.WebhookFilter</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilter'>WebhookFilter</a>[]&gt;;</code></pre>
 
 One or more `filter` blocks. Filter blocks are documented below.
 
@@ -430,7 +430,7 @@ The set of arguments for constructing a Pipeline resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L270">property <b>artifactStore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>inputs.codepipeline.PipelineArtifactStore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
 
 An artifactStore block. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
@@ -455,7 +455,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L279">property <b>stages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>inputs.codepipeline.PipelineStage</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>PipelineStage</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PipelineArgs-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L283">property <b>tags</b></a>
 </h4>
@@ -486,7 +486,7 @@ The codepipeline ARN.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L246">property <b>artifactStore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>artifactStore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>inputs.codepipeline.PipelineArtifactStore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>artifactStore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
 
 An artifactStore block. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
@@ -511,7 +511,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L255">property <b>stages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>inputs.codepipeline.PipelineStage</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>PipelineStage</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PipelineState-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/pipeline.ts#L259">property <b>tags</b></a>
 </h4>
@@ -542,7 +542,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L177">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>inputs.codepipeline.WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
 
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
@@ -550,7 +550,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L181">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>inputs.codepipeline.WebhookFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>WebhookFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks. Filter blocks are documented below.
 
@@ -608,7 +608,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L139">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>inputs.codepipeline.WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
 
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
@@ -616,7 +616,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codepipeline/webhook.ts#L143">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>inputs.codepipeline.WebhookFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>WebhookFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks. Filter blocks are documented below.
 

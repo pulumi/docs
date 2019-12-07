@@ -147,7 +147,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ContainerV1</code></pre>
 
 
 Returns true if the given object is an instance of ContainerV1.  This is designed to work even
@@ -157,7 +157,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/containerV1.ts#L99">property <b>consumers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1Consumer'>outputs.keymanager.ContainerV1Consumer</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1Consumer'>ContainerV1Consumer</a>[]&gt;;</code></pre>
 
 The list of the container consumers. The structure is described below.
 
@@ -218,7 +218,7 @@ V1 container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/containerV1.ts#L128">property <b>secretRefs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1SecretRef'>outputs.keymanager.ContainerV1SecretRef</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1SecretRef'>ContainerV1SecretRef</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -303,7 +303,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecretV1</code></pre>
 
 
 Returns true if the given object is an instance of SecretV1.  This is designed to work even
@@ -551,7 +551,7 @@ V1 container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/containerV1.ts#L262">property <b>secretRefs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>inputs.keymanager.ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
 
 A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -578,7 +578,7 @@ Input properties used for looking up and filtering ContainerV1 resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/containerV1.ts#L198">property <b>consumers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consumers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1Consumer'>inputs.keymanager.ContainerV1Consumer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1Consumer'>ContainerV1Consumer</a>&gt;[]&gt;;</code></pre>
 
 The list of the container consumers. The structure is described below.
 
@@ -630,7 +630,7 @@ V1 container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/containerV1.ts#L227">property <b>secretRefs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>inputs.keymanager.ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
 
 A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -701,7 +701,7 @@ A collection of values returned by getContainer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/getContainer.ts#L66">property <b>consumers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerConsumer'>outputs.keymanager.GetContainerConsumer</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerConsumer'>GetContainerConsumer</a>[];</code></pre>
 
 The list of the container consumers. The structure is described
 below.
@@ -758,7 +758,7 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/keymanager/getContainer.ts#L91">property <b>secretRefs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerSecretRef'>outputs.keymanager.GetContainerSecretRef</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerSecretRef'>GetContainerSecretRef</a>[];</code></pre>
 
 A set of dictionaries containing references to secrets. The
 structure is described below.

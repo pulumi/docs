@@ -120,7 +120,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccessLevel</code></pre>
 
 
 Returns true if the given object is an instance of AccessLevel.  This is designed to work even
@@ -130,7 +130,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/accessLevel.ts#L79">property <b>basic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>basic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelBasic'>outputs.accesscontextmanager.AccessLevelBasic</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>basic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelBasic'>AccessLevelBasic</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of predefined conditions for the access level and a combining function.
 
@@ -257,7 +257,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccessPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AccessPolicy.  This is designed to work even
@@ -418,7 +418,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServicePerimeter</code></pre>
 
 
 Returns true if the given object is an instance of ServicePerimeter.  This is designed to work even
@@ -485,7 +485,7 @@ should not be able to share data among themselves.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L122">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterStatus'>outputs.accesscontextmanager.ServicePerimeterStatus</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterStatus'>ServicePerimeterStatus</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
 perimeter content and boundaries.
@@ -532,7 +532,7 @@ The set of arguments for constructing a AccessLevel resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/accessLevel.ts#L174">property <b>basic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>inputs.accesscontextmanager.AccessLevelBasic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>AccessLevelBasic</a>&gt;;</code></pre>
 
 A set of predefined conditions for the access level and a combining function.
 
@@ -583,7 +583,7 @@ Input properties used for looking up and filtering AccessLevel resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/accessLevel.ts#L147">property <b>basic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>inputs.accesscontextmanager.AccessLevelBasic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>AccessLevelBasic</a>&gt;;</code></pre>
 
 A set of predefined conditions for the access level and a combining function.
 
@@ -750,7 +750,7 @@ should not be able to share data among themselves.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L259">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>inputs.accesscontextmanager.ServicePerimeterStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>ServicePerimeterStatus</a>&gt;;</code></pre>
 
 ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
 perimeter content and boundaries.
@@ -825,7 +825,7 @@ should not be able to share data among themselves.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L216">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>inputs.accesscontextmanager.ServicePerimeterStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>ServicePerimeterStatus</a>&gt;;</code></pre>
 
 ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
 perimeter content and boundaries.

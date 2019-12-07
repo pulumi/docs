@@ -134,7 +134,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudhsmv2/cluster.ts#L94">property <b>clusterCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClusterCertificates'>outputs.cloudhsmv2.ClusterClusterCertificates</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClusterCertificates'>ClusterClusterCertificates</a>&gt;;</code></pre>
 
 The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
@@ -301,7 +301,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Hsm</code></pre>
 
 
 Returns true if the given object is an instance of Hsm.  This is designed to work even
@@ -466,7 +466,7 @@ Input properties used for looking up and filtering Cluster resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudhsmv2/cluster.ts#L190">property <b>clusterCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClusterCertificates'>inputs.cloudhsmv2.ClusterClusterCertificates</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClusterCertificates'>ClusterClusterCertificates</a>&gt;;</code></pre>
 
 The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
@@ -579,7 +579,7 @@ A collection of values returned by getCluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudhsmv2/getCluster.ts#L68">property <b>clusterCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterClusterCertificates'>outputs.cloudhsmv2.GetClusterClusterCertificates</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterClusterCertificates'>GetClusterClusterCertificates</a>;</code></pre>
 
 The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.

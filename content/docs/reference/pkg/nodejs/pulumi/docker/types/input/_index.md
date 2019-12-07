@@ -192,7 +192,7 @@ IP address this hostname should resolve to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L60">property <b>bindOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bindOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountBindOptions'>inputs.ContainerMountBindOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bindOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ContainerMountBindOptions'>ContainerMountBindOptions</a>&gt;;</code></pre>
 
 Optional configuration for the `bind` type.
 
@@ -225,7 +225,7 @@ The container path.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L77">property <b>tmpfsOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tmpfsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountTmpfsOptions'>inputs.ContainerMountTmpfsOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tmpfsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ContainerMountTmpfsOptions'>ContainerMountTmpfsOptions</a>&gt;;</code></pre>
 
 Optional configuration for the `tmpf` type.
 
@@ -241,7 +241,7 @@ The mount type: valid values are `bind|volume|tmpfs`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L85">property <b>volumeOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumeOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountVolumeOptions'>inputs.ContainerMountVolumeOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumeOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ContainerMountVolumeOptions'>ContainerMountVolumeOptions</a>&gt;;</code></pre>
 
 Optional configuration for the `volume` type.
 
@@ -696,7 +696,7 @@ The mode of resolution to use for internal load balancing between tasks. `(vip|d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L280">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceEndpointSpecPort'>inputs.ServiceEndpointSpecPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceEndpointSpecPort'>ServiceEndpointSpecPort</a>&gt;[]&gt;;</code></pre>
 
 See Ports below for details.
 
@@ -763,7 +763,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L308">property <b>replicated</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>replicated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceModeReplicated'>inputs.ServiceModeReplicated</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceModeReplicated'>ServiceModeReplicated</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceModeReplicated" data-link-title="ServiceModeReplicated">
     <a href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L311">
         interface <strong>ServiceModeReplicated</strong>
@@ -824,7 +824,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L325">property <b>containerSpec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containerSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpec'>inputs.ServiceTaskSpecContainerSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containerSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpec'>ServiceTaskSpecContainerSpec</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpec-forceUpdate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L326">property <b>forceUpdate</b></a>
 </h4>
@@ -834,7 +834,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L327">property <b>logDriver</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecLogDriver'>inputs.ServiceTaskSpecLogDriver</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecLogDriver'>ServiceTaskSpecLogDriver</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpec-networks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L328">property <b>networks</b></a>
 </h4>
@@ -844,17 +844,17 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L329">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecPlacement'>inputs.ServiceTaskSpecPlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecPlacement'>ServiceTaskSpecPlacement</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpec-resources">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L330">property <b>resources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecResources'>inputs.ServiceTaskSpecResources</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecResources'>ServiceTaskSpecResources</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpec-restartPolicy">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L331">property <b>restartPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>restartPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecRestartPolicy'>inputs.ServiceTaskSpecRestartPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>restartPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecRestartPolicy'>ServiceTaskSpecRestartPolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpec-runtime">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L332">property <b>runtime</b></a>
 </h4>
@@ -881,7 +881,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L338">property <b>configs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecConfig'>inputs.ServiceTaskSpecContainerSpecConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecConfig'>ServiceTaskSpecContainerSpecConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-dir">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L339">property <b>dir</b></a>
 </h4>
@@ -891,7 +891,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L340">property <b>dnsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecDnsConfig'>inputs.ServiceTaskSpecContainerSpecDnsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecDnsConfig'>ServiceTaskSpecContainerSpecDnsConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-env">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L341">property <b>env</b></a>
 </h4>
@@ -906,7 +906,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L343">property <b>healthcheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecHealthcheck'>inputs.ServiceTaskSpecContainerSpecHealthcheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecHealthcheck'>ServiceTaskSpecContainerSpecHealthcheck</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-hostname">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L344">property <b>hostname</b></a>
 </h4>
@@ -916,7 +916,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L345">property <b>hosts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecHost'>inputs.ServiceTaskSpecContainerSpecHost</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecHost'>ServiceTaskSpecContainerSpecHost</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-image">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L346">property <b>image</b></a>
 </h4>
@@ -936,12 +936,12 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L349">property <b>mounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecMount'>inputs.ServiceTaskSpecContainerSpecMount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecMount'>ServiceTaskSpecContainerSpecMount</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-privileges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L350">property <b>privileges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecPrivileges'>inputs.ServiceTaskSpecContainerSpecPrivileges</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecPrivileges'>ServiceTaskSpecContainerSpecPrivileges</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-readOnly">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L351">property <b>readOnly</b></a>
 </h4>
@@ -951,7 +951,7 @@ Port inside the container.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L352">property <b>secrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecSecret'>inputs.ServiceTaskSpecContainerSpecSecret</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecSecret'>ServiceTaskSpecContainerSpecSecret</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpec-stopGracePeriod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L353">property <b>stopGracePeriod</b></a>
 </h4>
@@ -1083,7 +1083,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L396">property <b>bindOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bindOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecMountBindOptions'>inputs.ServiceTaskSpecContainerSpecMountBindOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bindOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecMountBindOptions'>ServiceTaskSpecContainerSpecMountBindOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpecMount-readOnly">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L397">property <b>readOnly</b></a>
 </h4>
@@ -1103,7 +1103,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L400">property <b>tmpfsOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tmpfsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecMountTmpfsOptions'>inputs.ServiceTaskSpecContainerSpecMountTmpfsOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tmpfsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecMountTmpfsOptions'>ServiceTaskSpecContainerSpecMountTmpfsOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpecMount-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L401">property <b>type</b></a>
 </h4>
@@ -1113,7 +1113,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L402">property <b>volumeOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumeOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecMountVolumeOptions'>inputs.ServiceTaskSpecContainerSpecMountVolumeOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumeOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecMountVolumeOptions'>ServiceTaskSpecContainerSpecMountVolumeOptions</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceTaskSpecContainerSpecMountBindOptions" data-link-title="ServiceTaskSpecContainerSpecMountBindOptions">
     <a href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L405">
         interface <strong>ServiceTaskSpecContainerSpecMountBindOptions</strong>
@@ -1184,12 +1184,12 @@ The mode of resolution to use for internal load balancing between tasks. `(vip|d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L425">property <b>credentialSpec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>credentialSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecPrivilegesCredentialSpec'>inputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>credentialSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecPrivilegesCredentialSpec'>ServiceTaskSpecContainerSpecPrivilegesCredentialSpec</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecContainerSpecPrivileges-seLinuxContext">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L426">property <b>seLinuxContext</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>seLinuxContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext'>inputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>seLinuxContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext'>ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceTaskSpecContainerSpecPrivilegesCredentialSpec" data-link-title="ServiceTaskSpecContainerSpecPrivilegesCredentialSpec">
     <a href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L429">
         interface <strong>ServiceTaskSpecContainerSpecPrivilegesCredentialSpec</strong>
@@ -1303,7 +1303,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L464">property <b>platforms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>platforms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecPlacementPlatform'>inputs.ServiceTaskSpecPlacementPlatform</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>platforms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecPlacementPlatform'>ServiceTaskSpecPlacementPlatform</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecPlacement-prefs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L465">property <b>prefs</b></a>
 </h4>
@@ -1337,12 +1337,12 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L474">property <b>limits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecResourcesLimits'>inputs.ServiceTaskSpecResourcesLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecResourcesLimits'>ServiceTaskSpecResourcesLimits</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecResources-reservation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L475">property <b>reservation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>reservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecResourcesReservation'>inputs.ServiceTaskSpecResourcesReservation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>reservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecResourcesReservation'>ServiceTaskSpecResourcesReservation</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceTaskSpecResourcesLimits" data-link-title="ServiceTaskSpecResourcesLimits">
     <a href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L478">
         interface <strong>ServiceTaskSpecResourcesLimits</strong>
@@ -1354,7 +1354,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L479">property <b>genericResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>genericResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecResourcesLimitsGenericResources'>inputs.ServiceTaskSpecResourcesLimitsGenericResources</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>genericResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecResourcesLimitsGenericResources'>ServiceTaskSpecResourcesLimitsGenericResources</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecResourcesLimits-memoryBytes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L480">property <b>memoryBytes</b></a>
 </h4>
@@ -1393,7 +1393,7 @@ The options for the logging driver, e.g.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L490">property <b>genericResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>genericResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ServiceTaskSpecResourcesReservationGenericResources'>inputs.ServiceTaskSpecResourcesReservationGenericResources</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>genericResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceTaskSpecResourcesReservationGenericResources'>ServiceTaskSpecResourcesReservationGenericResources</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceTaskSpecResourcesReservation-memoryBytes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/fdc083f15255b8c47ddb1b1e472fa754fb39fa9d/sdk/nodejs/types/input.ts#L491">property <b>memoryBytes</b></a>
 </h4>

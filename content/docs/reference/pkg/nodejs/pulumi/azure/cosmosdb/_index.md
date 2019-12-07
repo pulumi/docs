@@ -163,7 +163,7 @@ Function.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Account</code></pre>
 
 
 Returns true if the given object is an instance of Account.  This is designed to work even
@@ -186,7 +186,7 @@ want to compose multiple Functions into the same App manually.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L83">property <b>capabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCapability'>outputs.cosmosdb.AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCapability'>AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
 
@@ -202,7 +202,7 @@ A list of connection strings available for this CosmosDB account. If the kind is
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L91">property <b>consistencyPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountConsistencyPolicy'>outputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</code></pre>
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
 
@@ -234,12 +234,12 @@ The endpoint used to connect to the CosmosDB account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L104">property <b>failoverPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountFailoverPolicy'>outputs.cosmosdb.AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountFailoverPolicy'>AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Account-geoLocations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L108">property <b>geoLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountGeoLocation'>outputs.cosmosdb.AccountGeoLocation</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountGeoLocation'>AccountGeoLocation</a>[]&gt;;</code></pre>
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
 
@@ -369,7 +369,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L164">property <b>virtualNetworkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountVirtualNetworkRule'>outputs.cosmosdb.AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
 
@@ -430,7 +430,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CassandraKeyspace</code></pre>
 
 
 Returns true if the given object is an instance of CassandraKeyspace.  This is designed to work even
@@ -561,7 +561,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MongoCollection</code></pre>
 
 
 Returns true if the given object is an instance of MongoCollection.  This is designed to work even
@@ -601,7 +601,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/mongoCollection.ts#L87">property <b>indexes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionIndex'>outputs.cosmosdb.MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionIndex'>MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `indexes` blocks as defined below.
 
@@ -711,7 +711,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MongoDatabase</code></pre>
 
 
 Returns true if the given object is an instance of MongoDatabase.  This is designed to work even
@@ -828,7 +828,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SqlContainer</code></pre>
 
 
 Returns true if the given object is an instance of SqlContainer.  This is designed to work even
@@ -887,7 +887,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/sqlContainer.ts#L84">property <b>uniqueKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>uniqueKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerUniqueKey'>outputs.cosmosdb.SqlContainerUniqueKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>uniqueKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -965,7 +965,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SqlDatabase</code></pre>
 
 
 Returns true if the given object is an instance of SqlDatabase.  This is designed to work even
@@ -1078,7 +1078,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Table</code></pre>
 
 
 Returns true if the given object is an instance of Table.  This is designed to work even
@@ -1172,7 +1172,7 @@ The set of arguments for constructing a Account resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L353">property <b>capabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</code></pre>
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
 
@@ -1180,7 +1180,7 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L357">property <b>consistencyPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</code></pre>
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
 
@@ -1204,12 +1204,12 @@ Enable multi-master support for this Cosmos DB account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L366">property <b>failoverPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountArgs-geoLocations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L370">property <b>geoLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</code></pre>
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
 
@@ -1281,7 +1281,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L406">property <b>virtualNetworkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</code></pre>
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
 
@@ -1299,7 +1299,7 @@ Input properties used for looking up and filtering Account resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L258">property <b>capabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</code></pre>
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
 
@@ -1315,7 +1315,7 @@ A list of connection strings available for this CosmosDB account. If the kind is
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L266">property <b>consistencyPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</code></pre>
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
 
@@ -1347,12 +1347,12 @@ The endpoint used to connect to the CosmosDB account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L279">property <b>failoverPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountState-geoLocations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L283">property <b>geoLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</code></pre>
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
 
@@ -1464,7 +1464,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/account.ts#L339">property <b>virtualNetworkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</code></pre>
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
 
@@ -1560,7 +1560,7 @@ Signature of the callback that can receive Cosmos Change Feed notifications.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CosmosChangeFeedContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CosmosChangeFeedContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Data that will be passed along in the context object to the CosmosCallback.
 
@@ -1569,7 +1569,7 @@ Data that will be passed along in the context object to the CosmosCallback.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: R): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 A callback function that signals to the runtime that your code has completed. If your
@@ -1629,7 +1629,7 @@ at the default trace level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/zMixins.ts#L79">property <b>req</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
 
 HTTP request object. Provided to your function when using HTTP Bindings.
 
@@ -1647,13 +1647,13 @@ HTTP response object. Provided to your function when using HTTP Bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CosmosChangeFeedSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CosmosChangeFeedSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="CosmosChangeFeedSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/zMixins.ts#L170"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="CosmosChangeFeedSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/zMixins.ts#L169">method <b>getProvider</b></a>
@@ -1667,7 +1667,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1689,7 +1689,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CosmosChangeFeedSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/zMixins.ts#L169">property <b>urn</b></a>
 </h4>
@@ -1705,7 +1705,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CosmosChangeFeedSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetCosmosDBFunctionArgs'>GetCosmosDBFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CosmosChangeFeedSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetCosmosDBFunctionArgs'>GetCosmosDBFunctionArgs</a>, <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-account">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h4>
@@ -1728,7 +1728,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -1737,7 +1737,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -1821,7 +1821,7 @@ Is the Function App enabled?
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
 
 Host configuration options.
 
@@ -1849,7 +1849,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -1890,7 +1890,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -1969,7 +1969,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CosmosDBFunction</span> <span class='kr'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CosmosDBFunction</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Function'>Function</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Azure Function triggered by a Cosmos DB Change Feed.
 
@@ -2000,7 +2000,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 Function callback.
 
@@ -2031,7 +2031,7 @@ CosmosDB Account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -2040,7 +2040,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -2071,7 +2071,7 @@ The name of the database we are subscribing to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -2087,7 +2087,7 @@ When set, it customizes the maximum amount of items received per Function call.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -2141,7 +2141,7 @@ A collection of values returned by getAccount.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L65">property <b>capabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability'>outputs.cosmosdb.GetAccountCapability</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability'>GetAccountCapability</a>[];</code></pre>
 
 Capabilities enabled on this Cosmos DB account.
 
@@ -2149,7 +2149,7 @@ Capabilities enabled on this Cosmos DB account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L66">property <b>consistencyPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy'>outputs.cosmosdb.GetAccountConsistencyPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy'>GetAccountConsistencyPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-enableAutomaticFailover">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L70">property <b>enableAutomaticFailover</b></a>
 </h4>
@@ -2178,7 +2178,7 @@ The endpoint used to connect to the CosmosDB account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L79">property <b>geoLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation'>outputs.cosmosdb.GetAccountGeoLocation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation'>GetAccountGeoLocation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L137">property <b>id</b></a>
 </h4>
@@ -2289,7 +2289,7 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/getAccount.ts#L129">property <b>virtualNetworkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule'>outputs.cosmosdb.GetAccountVirtualNetworkRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule'>GetAccountVirtualNetworkRule</a>[];</code></pre>
 
 Subnets that are allowed to access this CosmosDB account.
 
@@ -2307,12 +2307,12 @@ A list of write endpoints available for this CosmosDB account.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCosmosDBFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCosmosDBFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -2321,7 +2321,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -2352,7 +2352,7 @@ The name of the database we are subscribing to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -2368,7 +2368,7 @@ When set, it customizes the maximum amount of items received per Function call.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -2417,7 +2417,7 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/mongoCollection.ts#L207">property <b>indexes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</code></pre>
 
 One or more `indexes` blocks as defined below.
 
@@ -2488,7 +2488,7 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/mongoCollection.ts#L172">property <b>indexes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</code></pre>
 
 One or more `indexes` blocks as defined below.
 
@@ -2646,7 +2646,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/sqlContainer.ts#L190">property <b>uniqueKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>&gt;[]&gt;;</code></pre>
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -2704,7 +2704,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/cosmosdb/sqlContainer.ts#L160">property <b>uniqueKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>&gt;[]&gt;;</code></pre>
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
 

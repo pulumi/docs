@@ -150,7 +150,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Account</code></pre>
 
 
 Returns true if the given object is an instance of Account.  This is designed to work even
@@ -217,7 +217,7 @@ The name of the resource group in which the Automation Account is created. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/account.ts#L87">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountSku'>outputs.automation.AccountSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountSku'>AccountSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -318,7 +318,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BoolVariable</code></pre>
 
 
 Returns true if the given object is an instance of BoolVariable.  This is designed to work even
@@ -464,7 +464,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Credential</code></pre>
 
 
 Returns true if the given object is an instance of Credential.  This is designed to work even
@@ -613,7 +613,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DateTimeVariable</code></pre>
 
 
 Returns true if the given object is an instance of DateTimeVariable.  This is designed to work even
@@ -758,7 +758,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DscConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of DscConfiguration.  This is designed to work even
@@ -942,7 +942,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DscNodeConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of DscNodeConfiguration.  This is designed to work even
@@ -1075,7 +1075,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IntVariable</code></pre>
 
 
 Returns true if the given object is an instance of IntVariable.  This is designed to work even
@@ -1194,7 +1194,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobSchedule</code></pre>
 
 
 Returns true if the given object is an instance of JobSchedule.  This is designed to work even
@@ -1345,7 +1345,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Module</code></pre>
 
 
 Returns true if the given object is an instance of Module.  This is designed to work even
@@ -1372,7 +1372,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/module.ts#L73">property <b>moduleLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ModuleModuleLink'>outputs.automation.ModuleModuleLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
 
 The published Module link.
 
@@ -1480,7 +1480,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RunBook</code></pre>
 
 
 Returns true if the given object is an instance of RunBook.  This is designed to work even
@@ -1555,7 +1555,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/runBook.ts#L102">property <b>publishContentLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RunBookPublishContentLink'>outputs.automation.RunBookPublishContentLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</code></pre>
 
 The published runbook content link.
 
@@ -1669,7 +1669,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Schedule</code></pre>
 
 
 Returns true if the given object is an instance of Schedule.  This is designed to work even
@@ -1741,7 +1741,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/schedule.ts#L97">property <b>monthlyOccurrences</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>monthlyOccurrences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleMonthlyOccurrence'>outputs.automation.ScheduleMonthlyOccurrence</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>monthlyOccurrences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 
@@ -1866,7 +1866,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StringVariable</code></pre>
 
 
 Returns true if the given object is an instance of StringVariable.  This is designed to work even
@@ -2124,7 +2124,7 @@ The name of the resource group in which the Automation Account is created. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/account.ts#L205">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>inputs.automation.AccountSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>AccountSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -2206,7 +2206,7 @@ The name of the resource group in which the Automation Account is created. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/account.ts#L175">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>inputs.automation.AccountSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>AccountSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -3516,7 +3516,7 @@ The name of the automation account in which the Module is created. Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/module.ts#L159">property <b>moduleLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>inputs.automation.ModuleModuleLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
 
 The published Module link.
 
@@ -3558,7 +3558,7 @@ The name of the automation account in which the Module is created. Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/module.ts#L137">property <b>moduleLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>moduleLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>inputs.automation.ModuleModuleLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>moduleLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
 
 The published Module link.
 
@@ -3648,7 +3648,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/runBook.ts#L267">property <b>publishContentLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>inputs.automation.RunBookPublishContentLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</code></pre>
 
 The published runbook content link.
 
@@ -3746,7 +3746,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/runBook.ts#L217">property <b>publishContentLink</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>inputs.automation.RunBookPublishContentLink</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</code></pre>
 
 The published runbook content link.
 
@@ -3841,7 +3841,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/schedule.ts#L264">property <b>monthlyOccurrences</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>inputs.automation.ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
 
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 
@@ -3952,7 +3952,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/automation/schedule.ts#L209">property <b>monthlyOccurrences</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>inputs.automation.ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
 
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 

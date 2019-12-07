@@ -41,7 +41,7 @@ meta_desc: "Explore members of the codebuild module in the @pulumi/awsx package.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>buildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>buildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's BUILD phase.
@@ -56,7 +56,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>builds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>builds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of builds triggered.
@@ -70,7 +70,7 @@ Valid CloudWatch statistics: Sum
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CodebuildMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CodebuildMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="CodebuildMetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -135,7 +135,7 @@ Optional Project this metric should be filtered down to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -145,7 +145,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -186,7 +186,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>downloadSourceDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>downloadSourceDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's DOWNLOAD_SOURCE phase.
@@ -201,7 +201,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>duration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>duration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of all builds over time.
@@ -216,7 +216,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>failedBuilds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>failedBuilds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of builds that failed because of client error or because of a timeout.
@@ -231,7 +231,7 @@ Valid CloudWatch statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>finalizingDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>finalizingDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's FINALIZING phase.
@@ -246,7 +246,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>installDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>installDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's INSTALL phase.
@@ -261,7 +261,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#CodebuildMetricName'>CodebuildMetricName</a>, change: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#CodebuildMetricName'>CodebuildMetricName</a>, change: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/CodeBuild metric with the requested [metricName]. See
@@ -300,7 +300,7 @@ are for that project. If it is not specified, then the metrics are for the curre
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>postBuildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>postBuildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's POST_BUILD phase.
@@ -315,7 +315,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>preBuildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>preBuildDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's PRE_BUILD phase.
@@ -330,7 +330,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>provisioningDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>provisioningDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's PROVISIONING phase.
@@ -345,7 +345,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>queuedDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>queuedDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's QUEUED phase.
@@ -360,7 +360,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>submittedDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>submittedDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's SUBMITTED phase.
@@ -375,7 +375,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>succeededBuilds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>succeededBuilds(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of successful builds.
@@ -390,7 +390,7 @@ Valid CloudWatch statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>uploadArtifactsDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>uploadArtifactsDuration(change?: <a href='#CodebuildMetricChange'>CodebuildMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the duration of the build's UPLOAD_ARTIFACTS phase.

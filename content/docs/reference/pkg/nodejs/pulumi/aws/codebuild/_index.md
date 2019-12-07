@@ -264,7 +264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Project</code></pre>
 
 
 Returns true if the given object is an instance of Project.  This is designed to work even
@@ -282,7 +282,7 @@ The ARN of the CodeBuild project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L226">property <b>artifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>artifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectArtifacts'>outputs.codebuild.ProjectArtifacts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>artifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectArtifacts'>ProjectArtifacts</a>&gt;;</code></pre>
 
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
@@ -314,7 +314,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L242">property <b>cache</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cache: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectCache'>outputs.codebuild.ProjectCache</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cache: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectCache'>ProjectCache</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Information about the cache storage for the project. Cache blocks are documented below.
 
@@ -338,7 +338,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L254">property <b>environment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironment'>outputs.codebuild.ProjectEnvironment</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironment'>ProjectEnvironment</a>&gt;;</code></pre>
 
 Information about the project's build environment. Environment blocks are documented below.
 
@@ -355,7 +355,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L258">property <b>logsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfig'>outputs.codebuild.ProjectLogsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfig'>ProjectLogsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration for the builds to store log data to CloudWatch or S3.
 
@@ -371,7 +371,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L266">property <b>secondaryArtifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>secondaryArtifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondaryArtifact'>outputs.codebuild.ProjectSecondaryArtifact</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>secondaryArtifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondaryArtifact'>ProjectSecondaryArtifact</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
 
@@ -379,7 +379,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L270">property <b>secondarySources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>secondarySources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySource'>outputs.codebuild.ProjectSecondarySource</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>secondarySources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySource'>ProjectSecondarySource</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
 
@@ -395,7 +395,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L278">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSource'>outputs.codebuild.ProjectSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSource'>ProjectSource</a>&gt;;</code></pre>
 
 Information about the project's input source code. Source blocks are documented below.
 
@@ -420,7 +420,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L286">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectVpcConfig'>outputs.codebuild.ProjectVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectVpcConfig'>ProjectVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 
@@ -500,7 +500,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SourceCredential</code></pre>
 
 
 Returns true if the given object is an instance of SourceCredential.  This is designed to work even
@@ -644,7 +644,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Webhook</code></pre>
 
 
 Returns true if the given object is an instance of Webhook.  This is designed to work even
@@ -662,7 +662,7 @@ A regular expression used to determine which branches get built. Default is all 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/webhook.ts#L79">property <b>filterGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filterGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilterGroup'>outputs.codebuild.WebhookFilterGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filterGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilterGroup'>WebhookFilterGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Information about the webhook's trigger. Filter group blocks are documented below.
 
@@ -733,7 +733,7 @@ The set of arguments for constructing a Project resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L441">property <b>artifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>artifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectArtifacts'>inputs.codebuild.ProjectArtifacts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>artifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectArtifacts'>ProjectArtifacts</a>&gt;;</code></pre>
 
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
@@ -757,7 +757,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L453">property <b>cache</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectCache'>inputs.codebuild.ProjectCache</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectCache'>ProjectCache</a>&gt;;</code></pre>
 
 Information about the cache storage for the project. Cache blocks are documented below.
 
@@ -781,7 +781,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L465">property <b>environment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironment'>inputs.codebuild.ProjectEnvironment</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironment'>ProjectEnvironment</a>&gt;;</code></pre>
 
 Information about the project's build environment. Environment blocks are documented below.
 
@@ -789,7 +789,7 @@ Information about the project's build environment. Environment blocks are docume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L469">property <b>logsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfig'>inputs.codebuild.ProjectLogsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfig'>ProjectLogsConfig</a>&gt;;</code></pre>
 
 Configuration for the builds to store log data to CloudWatch or S3.
 
@@ -805,7 +805,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L477">property <b>secondaryArtifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondaryArtifact'>inputs.codebuild.ProjectSecondaryArtifact</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondaryArtifact'>ProjectSecondaryArtifact</a>&gt;[]&gt;;</code></pre>
 
 A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
 
@@ -813,7 +813,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L481">property <b>secondarySources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondarySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySource'>inputs.codebuild.ProjectSecondarySource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondarySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySource'>ProjectSecondarySource</a>&gt;[]&gt;;</code></pre>
 
 A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
 
@@ -829,7 +829,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L489">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSource'>inputs.codebuild.ProjectSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSource'>ProjectSource</a>&gt;;</code></pre>
 
 Information about the project's input source code. Source blocks are documented below.
 
@@ -845,7 +845,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L497">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectVpcConfig'>inputs.codebuild.ProjectVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectVpcConfig'>ProjectVpcConfig</a>&gt;;</code></pre>
 
 Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 
@@ -871,7 +871,7 @@ The ARN of the CodeBuild project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L371">property <b>artifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>artifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectArtifacts'>inputs.codebuild.ProjectArtifacts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>artifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectArtifacts'>ProjectArtifacts</a>&gt;;</code></pre>
 
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
@@ -903,7 +903,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L387">property <b>cache</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectCache'>inputs.codebuild.ProjectCache</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectCache'>ProjectCache</a>&gt;;</code></pre>
 
 Information about the cache storage for the project. Cache blocks are documented below.
 
@@ -927,7 +927,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L399">property <b>environment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironment'>inputs.codebuild.ProjectEnvironment</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironment'>ProjectEnvironment</a>&gt;;</code></pre>
 
 Information about the project's build environment. Environment blocks are documented below.
 
@@ -935,7 +935,7 @@ Information about the project's build environment. Environment blocks are docume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L403">property <b>logsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfig'>inputs.codebuild.ProjectLogsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfig'>ProjectLogsConfig</a>&gt;;</code></pre>
 
 Configuration for the builds to store log data to CloudWatch or S3.
 
@@ -951,7 +951,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L411">property <b>secondaryArtifacts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondaryArtifact'>inputs.codebuild.ProjectSecondaryArtifact</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondaryArtifact'>ProjectSecondaryArtifact</a>&gt;[]&gt;;</code></pre>
 
 A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
 
@@ -959,7 +959,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L415">property <b>secondarySources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondarySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySource'>inputs.codebuild.ProjectSecondarySource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondarySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySource'>ProjectSecondarySource</a>&gt;[]&gt;;</code></pre>
 
 A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
 
@@ -975,7 +975,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L423">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSource'>inputs.codebuild.ProjectSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSource'>ProjectSource</a>&gt;;</code></pre>
 
 Information about the project's input source code. Source blocks are documented below.
 
@@ -991,7 +991,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/project.ts#L431">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectVpcConfig'>inputs.codebuild.ProjectVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectVpcConfig'>ProjectVpcConfig</a>&gt;;</code></pre>
 
 Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 
@@ -1109,7 +1109,7 @@ A regular expression used to determine which branches get built. Default is all 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/webhook.ts#L179">property <b>filterGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filterGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilterGroup'>inputs.codebuild.WebhookFilterGroup</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filterGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilterGroup'>WebhookFilterGroup</a>&gt;[]&gt;;</code></pre>
 
 Information about the webhook's trigger. Filter group blocks are documented below.
 
@@ -1143,7 +1143,7 @@ A regular expression used to determine which branches get built. Default is all 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/codebuild/webhook.ts#L149">property <b>filterGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filterGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilterGroup'>inputs.codebuild.WebhookFilterGroup</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filterGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilterGroup'>WebhookFilterGroup</a>&gt;[]&gt;;</code></pre>
 
 Information about the webhook's trigger. Filter group blocks are documented below.
 

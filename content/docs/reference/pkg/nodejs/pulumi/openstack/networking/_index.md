@@ -216,7 +216,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AddressScope</code></pre>
 
 
 Returns true if the given object is an instance of AddressScope.  This is designed to work even
@@ -352,7 +352,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FloatingIp</code></pre>
 
 
 Returns true if the given object is an instance of FloatingIp.  This is designed to work even
@@ -567,7 +567,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FloatingIpAssociate</code></pre>
 
 
 Returns true if the given object is an instance of FloatingIpAssociate.  This is designed to work even
@@ -714,7 +714,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Network</code></pre>
 
 
 Returns true if the given object is an instance of Network.  This is designed to work even
@@ -843,7 +843,7 @@ network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/network.ts#L150">property <b>segments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>segments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#NetworkSegment'>outputs.networking.NetworkSegment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>segments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#NetworkSegment'>NetworkSegment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of one or more provider segment objects.
 
@@ -1013,7 +1013,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Port</code></pre>
 
 
 Returns true if the given object is an instance of Port.  This is designed to work even
@@ -1060,7 +1060,7 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L129">property <b>allowedAddressPairs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>allowedAddressPairs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortAllowedAddressPair'>outputs.networking.PortAllowedAddressPair</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>allowedAddressPairs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortAllowedAddressPair'>PortAllowedAddressPair</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -1070,7 +1070,7 @@ below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L134">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortBinding'>outputs.networking.PortBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortBinding'>PortBinding</a>&gt;;</code></pre>
 
 The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -1123,7 +1123,7 @@ is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L164">property <b>extraDhcpOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>extraDhcpOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortExtraDhcpOption'>outputs.networking.PortExtraDhcpOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>extraDhcpOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortExtraDhcpOption'>PortExtraDhcpOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -1133,7 +1133,7 @@ times.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L169">property <b>fixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>fixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortFixedIp'>outputs.networking.PortFixedIp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>fixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#PortFixedIp'>PortFixedIp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of desired IPs for
 this port. The structure is described below.
@@ -1320,7 +1320,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PortSecGroupAssociate</code></pre>
 
 
 Returns true if the given object is an instance of PortSecGroupAssociate.  This is designed to work even
@@ -1459,7 +1459,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QosBandwidthLimitRule</code></pre>
 
 
 Returns true if the given object is an instance of QosBandwidthLimitRule.  This is designed to work even
@@ -1594,7 +1594,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QosDscpMarkingRule</code></pre>
 
 
 Returns true if the given object is an instance of QosDscpMarkingRule.  This is designed to work even
@@ -1711,7 +1711,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QosMinimumBandwidthRule</code></pre>
 
 
 Returns true if the given object is an instance of QosMinimumBandwidthRule.  This is designed to work even
@@ -1833,7 +1833,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QosPolicy</code></pre>
 
 
 Returns true if the given object is an instance of QosPolicy.  This is designed to work even
@@ -2018,7 +2018,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QuotaV2</code></pre>
 
 
 Returns true if the given object is an instance of QuotaV2.  This is designed to work even
@@ -2220,7 +2220,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RbacPolicyV2</code></pre>
 
 
 Returns true if the given object is an instance of RbacPolicyV2.  This is designed to work even
@@ -2358,7 +2358,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Router</code></pre>
 
 
 Returns true if the given object is an instance of Router.  This is designed to work even
@@ -2425,7 +2425,7 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L92">property <b>externalFixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>externalFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#RouterExternalFixedIp'>outputs.networking.RouterExternalFixedIp</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>externalFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#RouterExternalFixedIp'>RouterExternalFixedIp</a>[]&gt;;</code></pre>
 
 An external fixed IP for the router. This
 can be repeated. The structure is described below. An `externalNetworkId`
@@ -2522,7 +2522,7 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L137">property <b>vendorOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vendorOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#RouterVendorOptions'>outputs.networking.RouterVendorOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vendorOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#RouterVendorOptions'>RouterVendorOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Map of additional vendor-specific options.
 Supported options are described below.
@@ -2599,7 +2599,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouterInterface</code></pre>
 
 
 Returns true if the given object is an instance of RouterInterface.  This is designed to work even
@@ -2744,7 +2744,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouterRoute</code></pre>
 
 
 Returns true if the given object is an instance of RouterRoute.  This is designed to work even
@@ -2853,7 +2853,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecGroup</code></pre>
 
 
 Returns true if the given object is an instance of SecGroup.  This is designed to work even
@@ -3012,7 +3012,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecGroupRule</code></pre>
 
 
 Returns true if the given object is an instance of SecGroupRule.  This is designed to work even
@@ -3225,7 +3225,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subnet</code></pre>
 
 
 Returns true if the given object is an instance of Subnet.  This is designed to work even
@@ -3244,7 +3244,7 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L69">property <b>allocationPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>allocationPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPool'>outputs.networking.SubnetAllocationPool</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>allocationPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPool'>SubnetAllocationPool</a>[]&gt;;</code></pre>
 
 A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -3257,7 +3257,7 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L76">property <b>allocationPoolsCollection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>allocationPoolsCollection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPoolsCollection'>outputs.networking.SubnetAllocationPoolsCollection</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>allocationPoolsCollection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPoolsCollection'>SubnetAllocationPoolsCollection</a>[]&gt;;</code></pre>
 
 A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -3317,7 +3317,7 @@ existing subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L114">property <b>hostRoutes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hostRoutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetHostRoute'>outputs.networking.SubnetHostRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hostRoutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetHostRoute'>SubnetHostRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -3537,7 +3537,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetPool</code></pre>
 
 
 Returns true if the given object is an instance of SubnetPool.  This is designed to work even
@@ -3813,7 +3813,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetRoute</code></pre>
 
 
 Returns true if the given object is an instance of SubnetRoute.  This is designed to work even
@@ -3965,7 +3965,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Trunk</code></pre>
 
 
 Returns true if the given object is an instance of Trunk.  This is designed to work even
@@ -4042,7 +4042,7 @@ trunk.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/trunk.ts#L120">property <b>subPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#TrunkSubPort'>outputs.networking.TrunkSubPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#TrunkSubPort'>TrunkSubPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -5849,7 +5849,7 @@ The set of string tags applied on the port.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getPort.ts#L152">property <b>allowedAddressPairs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortAllowedAddressPair'>outputs.networking.GetPortAllowedAddressPair</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortAllowedAddressPair'>GetPortAllowedAddressPair</a>[];</code></pre>
 
 An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -5859,7 +5859,7 @@ below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getPort.ts#L156">property <b>bindings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortBinding'>outputs.networking.GetPortBinding</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortBinding'>GetPortBinding</a>[];</code></pre>
 
 The port binding information. The structure is described below.
 
@@ -5907,7 +5907,7 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getPort.ts#L181">property <b>extraDhcpOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortExtraDhcpOption'>outputs.networking.GetPortExtraDhcpOption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortExtraDhcpOption'>GetPortExtraDhcpOption</a>[];</code></pre>
 
 An extra DHCP option configured on the port.
 The structure is described below.
@@ -6571,7 +6571,7 @@ The value that points out if the Source NAT is enabled on the router.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getRouter.ts#L117">property <b>externalFixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>externalFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetRouterExternalFixedIp'>outputs.networking.GetRouterExternalFixedIp</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>externalFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetRouterExternalFixedIp'>GetRouterExternalFixedIp</a>[];</code></pre>
 
 The external fixed IPs of the router.
 
@@ -7176,7 +7176,7 @@ A set of string tags applied on the subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getSubnet.ts#L136">property <b>allocationPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allocationPools: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetAllocationPool'>outputs.networking.GetSubnetAllocationPool</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allocationPools: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetAllocationPool'>GetSubnetAllocationPool</a>[];</code></pre>
 
 Allocation pools of the subnet.
 
@@ -7225,7 +7225,7 @@ Whether the subnet has DHCP enabled or not.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getSubnet.ts#L153">property <b>hostRoutes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRoutes: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetHostRoute'>outputs.networking.GetSubnetHostRoute</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRoutes: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetHostRoute'>GetSubnetHostRoute</a>[];</code></pre>
 
 Host Routes of the subnet.
 
@@ -7442,7 +7442,7 @@ The ID of the trunk subport.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/getTrunk.ts#L115">property <b>subPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subPorts: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetTrunkSubPort'>outputs.networking.GetTrunkSubPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subPorts: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetTrunkSubPort'>GetTrunkSubPort</a>[];</code></pre>
 
 The set of the trunk subports. The structure of each subport is
 described below.
@@ -7572,7 +7572,7 @@ network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/network.ts#L408">property <b>segments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#NetworkSegment'>inputs.networking.NetworkSegment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#NetworkSegment'>NetworkSegment</a>&gt;[]&gt;;</code></pre>
 
 An array of one or more provider segment objects.
 
@@ -7746,7 +7746,7 @@ network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/network.ts#L311">property <b>segments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#NetworkSegment'>inputs.networking.NetworkSegment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#NetworkSegment'>NetworkSegment</a>&gt;[]&gt;;</code></pre>
 
 An array of one or more provider segment objects.
 
@@ -7820,7 +7820,7 @@ Administrative up/down status for the port
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L476">property <b>allowedAddressPairs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortAllowedAddressPair'>inputs.networking.PortAllowedAddressPair</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortAllowedAddressPair'>PortAllowedAddressPair</a>&gt;[]&gt;;</code></pre>
 
 An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -7830,7 +7830,7 @@ below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L481">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortBinding'>inputs.networking.PortBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortBinding'>PortBinding</a>&gt;;</code></pre>
 
 The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -7875,7 +7875,7 @@ is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L507">property <b>extraDhcpOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortExtraDhcpOption'>inputs.networking.PortExtraDhcpOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortExtraDhcpOption'>PortExtraDhcpOption</a>&gt;[]&gt;;</code></pre>
 
 An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -7885,7 +7885,7 @@ times.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L512">property <b>fixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortFixedIp'>inputs.networking.PortFixedIp</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortFixedIp'>PortFixedIp</a>&gt;[]&gt;;</code></pre>
 
 An array of desired IPs for
 this port. The structure is described below.
@@ -8163,7 +8163,7 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L349">property <b>allowedAddressPairs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortAllowedAddressPair'>inputs.networking.PortAllowedAddressPair</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortAllowedAddressPair'>PortAllowedAddressPair</a>&gt;[]&gt;;</code></pre>
 
 An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -8173,7 +8173,7 @@ below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L354">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortBinding'>inputs.networking.PortBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortBinding'>PortBinding</a>&gt;;</code></pre>
 
 The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -8226,7 +8226,7 @@ is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L384">property <b>extraDhcpOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortExtraDhcpOption'>inputs.networking.PortExtraDhcpOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortExtraDhcpOption'>PortExtraDhcpOption</a>&gt;[]&gt;;</code></pre>
 
 An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -8236,7 +8236,7 @@ times.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/port.ts#L389">property <b>fixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortFixedIp'>inputs.networking.PortFixedIp</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#PortFixedIp'>PortFixedIp</a>&gt;[]&gt;;</code></pre>
 
 An array of desired IPs for
 this port. The structure is described below.
@@ -9238,7 +9238,7 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L324">property <b>externalFixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterExternalFixedIp'>inputs.networking.RouterExternalFixedIp</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterExternalFixedIp'>RouterExternalFixedIp</a>&gt;[]&gt;;</code></pre>
 
 An external fixed IP for the router. This
 can be repeated. The structure is described below. An `externalNetworkId`
@@ -9317,7 +9317,7 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L369">property <b>vendorOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterVendorOptions'>inputs.networking.RouterVendorOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterVendorOptions'>RouterVendorOptions</a>&gt;;</code></pre>
 
 Map of additional vendor-specific options.
 Supported options are described below.
@@ -9585,7 +9585,7 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L238">property <b>externalFixedIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterExternalFixedIp'>inputs.networking.RouterExternalFixedIp</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterExternalFixedIp'>RouterExternalFixedIp</a>&gt;[]&gt;;</code></pre>
 
 An external fixed IP for the router. This
 can be repeated. The structure is described below. An `externalNetworkId`
@@ -9664,7 +9664,7 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/router.ts#L283">property <b>vendorOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterVendorOptions'>inputs.networking.RouterVendorOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#RouterVendorOptions'>RouterVendorOptions</a>&gt;;</code></pre>
 
 Map of additional vendor-specific options.
 Supported options are described below.
@@ -10092,7 +10092,7 @@ The set of arguments for constructing a Subnet resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L386">property <b>allocationPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPool'>inputs.networking.SubnetAllocationPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPool'>SubnetAllocationPool</a>&gt;[]&gt;;</code></pre>
 
 A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -10105,7 +10105,7 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L393">property <b>allocationPoolsCollection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPoolsCollection'>inputs.networking.SubnetAllocationPoolsCollection</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPoolsCollection'>SubnetAllocationPoolsCollection</a>&gt;[]&gt;;</code></pre>
 
 A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -10165,7 +10165,7 @@ existing subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L431">property <b>hostRoutes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetHostRoute'>inputs.networking.SubnetHostRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetHostRoute'>SubnetHostRoute</a>&gt;[]&gt;;</code></pre>
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -10746,7 +10746,7 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L265">property <b>allocationPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPool'>inputs.networking.SubnetAllocationPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPool'>SubnetAllocationPool</a>&gt;[]&gt;;</code></pre>
 
 A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -10759,7 +10759,7 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L272">property <b>allocationPoolsCollection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPoolsCollection'>inputs.networking.SubnetAllocationPoolsCollection</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPoolsCollection'>SubnetAllocationPoolsCollection</a>&gt;[]&gt;;</code></pre>
 
 A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -10819,7 +10819,7 @@ existing subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/subnet.ts#L310">property <b>hostRoutes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetHostRoute'>inputs.networking.SubnetHostRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetHostRoute'>SubnetHostRoute</a>&gt;[]&gt;;</code></pre>
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -10999,7 +10999,7 @@ trunk.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/trunk.ts#L269">property <b>subPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#TrunkSubPort'>inputs.networking.TrunkSubPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#TrunkSubPort'>TrunkSubPort</a>&gt;[]&gt;;</code></pre>
 
 The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -11093,7 +11093,7 @@ trunk.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/networking/trunk.ts#L220">property <b>subPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#TrunkSubPort'>inputs.networking.TrunkSubPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#TrunkSubPort'>TrunkSubPort</a>&gt;[]&gt;;</code></pre>
 
 The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.

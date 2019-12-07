@@ -745,7 +745,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BgpSession</code></pre>
 
 
 Returns true if the given object is an instance of BgpSession.  This is designed to work even
@@ -872,7 +872,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Connect</code></pre>
 
 
 Returns true if the given object is an instance of Connect.  This is designed to work even
@@ -1121,7 +1121,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Device</code></pre>
 
 
 Returns true if the given object is an instance of Device.  This is designed to work even
@@ -1261,7 +1261,7 @@ Whether the device is locked
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/device.ts#L222">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DeviceNetwork'>outputs.DeviceNetwork</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DeviceNetwork'>DeviceNetwork</a>[]&gt;;</code></pre>
 
 The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `packet_device.name.network.0`
@@ -1290,7 +1290,7 @@ The device plan slug. To find the plan slug, visit [Device plans API docs](https
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/device.ts#L235">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DevicePort'>outputs.DevicePort</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DevicePort'>DevicePort</a>[]&gt;;</code></pre>
 
 Ports assigned to the device
 
@@ -1470,7 +1470,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IpAttachment</code></pre>
 
 
 Returns true if the given object is an instance of IpAttachment.  This is designed to work even
@@ -1641,7 +1641,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Organization</code></pre>
 
 
 Returns true if the given object is an instance of Organization.  This is designed to work even
@@ -1826,7 +1826,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PortVlanAttachment</code></pre>
 
 
 Returns true if the given object is an instance of PortVlanAttachment.  This is designed to work even
@@ -1947,7 +1947,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Project</code></pre>
 
 
 Returns true if the given object is an instance of Project.  This is designed to work even
@@ -1965,7 +1965,7 @@ Enable or disable [Backend Transfer](https://support.packet.com/kb/articles/back
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/project.ts#L46">property <b>bgpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bgpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#ProjectBgpConfig'>outputs.ProjectBgpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bgpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#ProjectBgpConfig'>ProjectBgpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optional BGP settings. Refer to [Packet guide for BGP](https://support.packet.com/kb/articles/bgp).
 
@@ -2100,7 +2100,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectSshKey</code></pre>
 
 
 Returns true if the given object is an instance of ProjectSshKey.  This is designed to work even
@@ -2221,7 +2221,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -2312,7 +2312,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReservedIpBlock</code></pre>
 
 
 Returns true if the given object is an instance of ReservedIpBlock.  This is designed to work even
@@ -2524,7 +2524,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpotMarketRequest</code></pre>
 
 
 Returns true if the given object is an instance of SpotMarketRequest.  This is designed to work even
@@ -2567,7 +2567,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/spotMarketRequest.ts#L79">property <b>instanceParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>instanceParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#SpotMarketRequestInstanceParameters'>outputs.SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>instanceParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#SpotMarketRequestInstanceParameters'>SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
 
 Device parameters. See device resource for details
 
@@ -2651,7 +2651,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SshKey</code></pre>
 
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
@@ -2790,7 +2790,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Vlan</code></pre>
 
 
 Returns true if the given object is an instance of Vlan.  This is designed to work even
@@ -2893,7 +2893,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Volume</code></pre>
 
 
 Returns true if the given object is an instance of Volume.  This is designed to work even
@@ -2903,7 +2903,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/volume.ts#L44">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeAttachment'>outputs.VolumeAttachment</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeAttachment'>VolumeAttachment</a>[]&gt;;</code></pre>
 
 A list of attachments, each with it's own `href` attribute
 
@@ -2992,7 +2992,7 @@ The size in GB to make the volume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/volume.ts#L84">property <b>snapshotPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snapshotPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeSnapshotPolicy'>outputs.VolumeSnapshotPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snapshotPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeSnapshotPolicy'>VolumeSnapshotPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optional list of snapshot policies
 
@@ -3068,7 +3068,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VolumeAttachment</code></pre>
 
 
 Returns true if the given object is an instance of VolumeAttachment.  This is designed to work even
@@ -3795,7 +3795,7 @@ Whether the device is locked
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/device.ts#L459">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#DeviceNetwork'>inputs.DeviceNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#DeviceNetwork'>DeviceNetwork</a>&gt;[]&gt;;</code></pre>
 
 The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `packet_device.name.network.0`
@@ -3824,7 +3824,7 @@ The device plan slug. To find the plan slug, visit [Device plans API docs](https
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/device.ts#L472">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#DevicePort'>inputs.DevicePort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#DevicePort'>DevicePort</a>&gt;[]&gt;;</code></pre>
 
 Ports assigned to the device
 
@@ -4068,7 +4068,7 @@ L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individ
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/getDevice.ts#L98">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDeviceNetwork'>outputs.GetDeviceNetwork</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDeviceNetwork'>GetDeviceNetwork</a>[];</code></pre>
 
 The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `packet_device.name.network.0`
@@ -4097,7 +4097,7 @@ The hardware config of the device
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/getDevice.ts#L114">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDevicePort'>outputs.GetDevicePort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDevicePort'>GetDevicePort</a>[];</code></pre>
 
 Ports assigned to the device
 
@@ -4632,7 +4632,7 @@ Whether Backend Transfer is enabled for this project
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/getProject.ts#L56">property <b>bgpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetProjectBgpConfig'>outputs.GetProjectBgpConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetProjectBgpConfig'>GetProjectBgpConfig</a>;</code></pre>
 
 Optional BGP settings. Refer to [Packet guide for BGP](https://support.packet.com/kb/articles/bgp).
 
@@ -4939,7 +4939,7 @@ The size in GB of the volume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/getVolume.ts#L83">property <b>snapshotPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetVolumeSnapshotPolicy'>outputs.GetVolumeSnapshotPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetVolumeSnapshotPolicy'>GetVolumeSnapshotPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-state">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/getVolume.ts#L87">property <b>state</b></a>
 </h4>
@@ -5360,7 +5360,7 @@ Enable or disable [Backend Transfer](https://support.packet.com/kb/articles/back
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/project.ts#L156">property <b>bgpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#ProjectBgpConfig'>inputs.ProjectBgpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#ProjectBgpConfig'>ProjectBgpConfig</a>&gt;;</code></pre>
 
 Optional BGP settings. Refer to [Packet guide for BGP](https://support.packet.com/kb/articles/bgp).
 
@@ -5510,7 +5510,7 @@ Enable or disable [Backend Transfer](https://support.packet.com/kb/articles/back
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/project.ts#L122">property <b>bgpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#ProjectBgpConfig'>inputs.ProjectBgpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#ProjectBgpConfig'>ProjectBgpConfig</a>&gt;;</code></pre>
 
 Optional BGP settings. Refer to [Packet guide for BGP](https://support.packet.com/kb/articles/bgp).
 
@@ -5786,7 +5786,7 @@ Facility IDs where devices should be created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/spotMarketRequest.ts#L204">property <b>instanceParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#SpotMarketRequestInstanceParameters'>inputs.SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#SpotMarketRequestInstanceParameters'>SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
 
 Device parameters. See device resource for details
 
@@ -5852,7 +5852,7 @@ Facility IDs where devices should be created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/spotMarketRequest.ts#L170">property <b>instanceParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#SpotMarketRequestInstanceParameters'>inputs.SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#SpotMarketRequestInstanceParameters'>SpotMarketRequestInstanceParameters</a>&gt;;</code></pre>
 
 Device parameters. See device resource for details
 
@@ -6112,7 +6112,7 @@ The size in GB to make the volume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/volume.ts#L251">property <b>snapshotPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeSnapshotPolicy'>inputs.VolumeSnapshotPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeSnapshotPolicy'>VolumeSnapshotPolicy</a>&gt;[]&gt;;</code></pre>
 
 Optional list of snapshot policies
 
@@ -6182,7 +6182,7 @@ Input properties used for looking up and filtering Volume resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/volume.ts#L165">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeAttachment'>inputs.VolumeAttachment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeAttachment'>VolumeAttachment</a>&gt;[]&gt;;</code></pre>
 
 A list of attachments, each with it's own `href` attribute
 
@@ -6262,7 +6262,7 @@ The size in GB to make the volume
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/volume.ts#L205">property <b>snapshotPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeSnapshotPolicy'>inputs.VolumeSnapshotPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeSnapshotPolicy'>VolumeSnapshotPolicy</a>&gt;[]&gt;;</code></pre>
 
 Optional list of snapshot policies
 

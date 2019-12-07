@@ -87,7 +87,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AppProfile</code></pre>
 
 
 Returns true if the given object is an instance of AppProfile.  This is designed to work even
@@ -166,7 +166,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/appProfile.ts#L74">property <b>singleClusterRouting</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>singleClusterRouting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AppProfileSingleClusterRouting'>outputs.bigquery.AppProfileSingleClusterRouting</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>singleClusterRouting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Use a single-cluster routing policy.
 
@@ -226,7 +226,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dataset</code></pre>
 
 
 Returns true if the given object is an instance of Dataset.  This is designed to work even
@@ -236,7 +236,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L42">property <b>accesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetAccess'>outputs.bigquery.DatasetAccess</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetAccess'>DatasetAccess</a>[]&gt;;</code></pre>
 
 An array of objects that define dataset access for one or more entities.
 
@@ -261,7 +261,7 @@ or underscores (_). The maximum length is 1,024 characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L57">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>defaultEncryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetDefaultEncryptionConfiguration'>outputs.bigquery.DatasetDefaultEncryptionConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>defaultEncryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
 tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides
@@ -442,7 +442,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DataTransferConfig</code></pre>
 
 
 Returns true if the given object is an instance of DataTransferConfig.  This is designed to work even
@@ -663,7 +663,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Table</code></pre>
 
 
 Returns true if the given object is an instance of Table.  This is designed to work even
@@ -727,7 +727,7 @@ reclaimed.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L135">property <b>externalDataConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>externalDataConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfiguration'>outputs.bigquery.TableExternalDataConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>externalDataConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -841,7 +841,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L190">property <b>timePartitioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>timePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableTimePartitioning'>outputs.bigquery.TableTimePartitioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>timePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableTimePartitioning'>TableTimePartitioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -867,7 +867,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L199">property <b>view</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>view: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableView'>outputs.bigquery.TableView</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>view: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableView'>TableView</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 If specified, configures this table as a view.
 Structure is documented below.
@@ -940,7 +940,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/appProfile.ts#L197">property <b>singleClusterRouting</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>inputs.bigquery.AppProfileSingleClusterRouting</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a>&gt;;</code></pre>
 
 Use a single-cluster routing policy.
 
@@ -1018,7 +1018,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/appProfile.ts#L160">property <b>singleClusterRouting</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>inputs.bigquery.AppProfileSingleClusterRouting</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a>&gt;;</code></pre>
 
 Use a single-cluster routing policy.
 
@@ -1036,7 +1036,7 @@ The set of arguments for constructing a Dataset resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L282">property <b>accesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>inputs.bigquery.DatasetAccess</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>DatasetAccess</a>&gt;[]&gt;;</code></pre>
 
 An array of objects that define dataset access for one or more entities.
 
@@ -1053,7 +1053,7 @@ or underscores (_). The maximum length is 1,024 characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L293">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>inputs.bigquery.DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
 
 The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
 tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides
@@ -1159,7 +1159,7 @@ Input properties used for looking up and filtering Dataset resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L191">property <b>accesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>inputs.bigquery.DatasetAccess</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>DatasetAccess</a>&gt;[]&gt;;</code></pre>
 
 An array of objects that define dataset access for one or more entities.
 
@@ -1184,7 +1184,7 @@ or underscores (_). The maximum length is 1,024 characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/dataset.ts#L206">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>inputs.bigquery.DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
 
 The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
 tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides
@@ -1544,7 +1544,7 @@ reclaimed.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L414">property <b>externalDataConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>inputs.bigquery.TableExternalDataConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a>&gt;;</code></pre>
 
 Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -1601,7 +1601,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L445">property <b>timePartitioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>inputs.bigquery.TableTimePartitioning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>TableTimePartitioning</a>&gt;;</code></pre>
 
 If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -1610,7 +1610,7 @@ partitioning for this table. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L450">property <b>view</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>inputs.bigquery.TableView</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>TableView</a>&gt;;</code></pre>
 
 If specified, configures this table as a view.
 Structure is documented below.
@@ -1683,7 +1683,7 @@ reclaimed.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L315">property <b>externalDataConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>inputs.bigquery.TableExternalDataConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a>&gt;;</code></pre>
 
 Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -1788,7 +1788,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L370">property <b>timePartitioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>inputs.bigquery.TableTimePartitioning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>TableTimePartitioning</a>&gt;;</code></pre>
 
 If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -1805,7 +1805,7 @@ Describes the table type.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/bigquery/table.ts#L379">property <b>view</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>inputs.bigquery.TableView</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>TableView</a>&gt;;</code></pre>
 
 If specified, configures this table as a view.
 Structure is documented below.

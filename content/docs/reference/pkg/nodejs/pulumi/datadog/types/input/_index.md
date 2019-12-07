@@ -527,112 +527,112 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L25">property <b>alertGraphDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alertGraphDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertGraphDefinition'>inputs.DashboardWidgetAlertGraphDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alertGraphDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetAlertGraphDefinition'>DashboardWidgetAlertGraphDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-alertValueDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L26">property <b>alertValueDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alertValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertValueDefinition'>inputs.DashboardWidgetAlertValueDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alertValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetAlertValueDefinition'>DashboardWidgetAlertValueDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-changeDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L27">property <b>changeDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>changeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinition'>inputs.DashboardWidgetChangeDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>changeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinition'>DashboardWidgetChangeDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-checkStatusDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L28">property <b>checkStatusDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>checkStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetCheckStatusDefinition'>inputs.DashboardWidgetCheckStatusDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>checkStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetCheckStatusDefinition'>DashboardWidgetCheckStatusDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-distributionDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L29">property <b>distributionDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>distributionDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinition'>inputs.DashboardWidgetDistributionDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>distributionDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinition'>DashboardWidgetDistributionDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-eventStreamDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L30">property <b>eventStreamDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventStreamDefinition'>inputs.DashboardWidgetEventStreamDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetEventStreamDefinition'>DashboardWidgetEventStreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-eventTimelineDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L31">property <b>eventTimelineDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventTimelineDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventTimelineDefinition'>inputs.DashboardWidgetEventTimelineDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventTimelineDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetEventTimelineDefinition'>DashboardWidgetEventTimelineDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-freeTextDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L32">property <b>freeTextDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>freeTextDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetFreeTextDefinition'>inputs.DashboardWidgetFreeTextDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>freeTextDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetFreeTextDefinition'>DashboardWidgetFreeTextDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-groupDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L33">property <b>groupDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinition'>inputs.DashboardWidgetGroupDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinition'>DashboardWidgetGroupDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-heatmapDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L34">property <b>heatmapDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>heatmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinition'>inputs.DashboardWidgetHeatmapDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>heatmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinition'>DashboardWidgetHeatmapDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-hostmapDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L35">property <b>hostmapDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinition'>inputs.DashboardWidgetHostmapDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinition'>DashboardWidgetHostmapDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-iframeDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L36">property <b>iframeDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iframeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetIframeDefinition'>inputs.DashboardWidgetIframeDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iframeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetIframeDefinition'>DashboardWidgetIframeDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-imageDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L37">property <b>imageDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetImageDefinition'>inputs.DashboardWidgetImageDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetImageDefinition'>DashboardWidgetImageDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-layout">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L38">property <b>layout</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>layout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLayout'>inputs.DashboardWidgetLayout</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>layout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetLayout'>DashboardWidgetLayout</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-logStreamDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L39">property <b>logStreamDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLogStreamDefinition'>inputs.DashboardWidgetLogStreamDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetLogStreamDefinition'>DashboardWidgetLogStreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-manageStatusDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L40">property <b>manageStatusDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>manageStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetManageStatusDefinition'>inputs.DashboardWidgetManageStatusDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>manageStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetManageStatusDefinition'>DashboardWidgetManageStatusDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-noteDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L41">property <b>noteDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>noteDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetNoteDefinition'>inputs.DashboardWidgetNoteDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>noteDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetNoteDefinition'>DashboardWidgetNoteDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-queryValueDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L42">property <b>queryValueDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queryValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinition'>inputs.DashboardWidgetQueryValueDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queryValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinition'>DashboardWidgetQueryValueDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-scatterplotDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L43">property <b>scatterplotDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scatterplotDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinition'>inputs.DashboardWidgetScatterplotDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scatterplotDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinition'>DashboardWidgetScatterplotDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-timeseriesDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L44">property <b>timeseriesDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeseriesDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinition'>inputs.DashboardWidgetTimeseriesDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeseriesDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinition'>DashboardWidgetTimeseriesDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-toplistDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L45">property <b>toplistDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>toplistDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinition'>inputs.DashboardWidgetToplistDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>toplistDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinition'>DashboardWidgetToplistDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-traceServiceDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L46">property <b>traceServiceDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>traceServiceDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTraceServiceDefinition'>inputs.DashboardWidgetTraceServiceDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>traceServiceDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTraceServiceDefinition'>DashboardWidgetTraceServiceDefinition</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetAlertGraphDefinition" data-link-title="DashboardWidgetAlertGraphDefinition">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L49">
         interface <strong>DashboardWidgetAlertGraphDefinition</strong>
@@ -649,7 +649,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L51">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertGraphDefinitionTime'>inputs.DashboardWidgetAlertGraphDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetAlertGraphDefinitionTime'>DashboardWidgetAlertGraphDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetAlertGraphDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L52">property <b>title</b></a>
 </h4>
@@ -735,12 +735,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L73">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequest'>inputs.DashboardWidgetChangeDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequest'>DashboardWidgetChangeDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L74">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionTime'>inputs.DashboardWidgetChangeDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionTime'>DashboardWidgetChangeDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L75">property <b>title</b></a>
 </h4>
@@ -767,7 +767,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L81">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQuery'>inputs.DashboardWidgetChangeDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestApmQuery'>DashboardWidgetChangeDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequest-changeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L82">property <b>changeType</b></a>
 </h4>
@@ -787,7 +787,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L85">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQuery'>inputs.DashboardWidgetChangeDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestLogQuery'>DashboardWidgetChangeDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequest-orderBy">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L86">property <b>orderBy</b></a>
 </h4>
@@ -802,7 +802,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L88">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestProcessQuery'>inputs.DashboardWidgetChangeDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestProcessQuery'>DashboardWidgetChangeDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L89">property <b>q</b></a>
 </h4>
@@ -824,12 +824,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L94">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetChangeDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestApmQueryCompute'>DashboardWidgetChangeDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L95">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetChangeDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestApmQueryGroupBy'>DashboardWidgetChangeDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L96">property <b>index</b></a>
 </h4>
@@ -839,7 +839,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L97">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetChangeDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestApmQuerySearch'>DashboardWidgetChangeDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetChangeDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetChangeDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L100">
         interface <strong>DashboardWidgetChangeDefinitionRequestApmQueryCompute</strong>
@@ -883,7 +883,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L109">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort'>DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L112">
         interface <strong>DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort</strong>
@@ -929,12 +929,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L123">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetChangeDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestLogQueryCompute'>DashboardWidgetChangeDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L124">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetChangeDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestLogQueryGroupBy'>DashboardWidgetChangeDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetChangeDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L125">property <b>index</b></a>
 </h4>
@@ -944,7 +944,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L126">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetChangeDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestLogQuerySearch'>DashboardWidgetChangeDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetChangeDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetChangeDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L129">
         interface <strong>DashboardWidgetChangeDefinitionRequestLogQueryCompute</strong>
@@ -988,7 +988,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L138">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort'>DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L141">
         interface <strong>DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort</strong>
@@ -1098,7 +1098,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L168">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetCheckStatusDefinitionTime'>inputs.DashboardWidgetCheckStatusDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetCheckStatusDefinitionTime'>DashboardWidgetCheckStatusDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetCheckStatusDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L169">property <b>title</b></a>
 </h4>
@@ -1137,12 +1137,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L179">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequest'>inputs.DashboardWidgetDistributionDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequest'>DashboardWidgetDistributionDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L180">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionTime'>inputs.DashboardWidgetDistributionDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionTime'>DashboardWidgetDistributionDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L181">property <b>title</b></a>
 </h4>
@@ -1169,17 +1169,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L187">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQuery'>inputs.DashboardWidgetDistributionDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestApmQuery'>DashboardWidgetDistributionDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L188">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQuery'>inputs.DashboardWidgetDistributionDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestLogQuery'>DashboardWidgetDistributionDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L189">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestProcessQuery'>inputs.DashboardWidgetDistributionDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestProcessQuery'>DashboardWidgetDistributionDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L190">property <b>q</b></a>
 </h4>
@@ -1189,7 +1189,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L191">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestStyle'>inputs.DashboardWidgetDistributionDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestStyle'>DashboardWidgetDistributionDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetDistributionDefinitionRequestApmQuery" data-link-title="DashboardWidgetDistributionDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L194">
         interface <strong>DashboardWidgetDistributionDefinitionRequestApmQuery</strong>
@@ -1201,12 +1201,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L195">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetDistributionDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestApmQueryCompute'>DashboardWidgetDistributionDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L196">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy'>DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L197">property <b>index</b></a>
 </h4>
@@ -1216,7 +1216,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L198">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetDistributionDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestApmQuerySearch'>DashboardWidgetDistributionDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetDistributionDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetDistributionDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L201">
         interface <strong>DashboardWidgetDistributionDefinitionRequestApmQueryCompute</strong>
@@ -1260,7 +1260,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L210">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort'>DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L213">
         interface <strong>DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort</strong>
@@ -1306,12 +1306,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L224">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetDistributionDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestLogQueryCompute'>DashboardWidgetDistributionDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L225">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy'>DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetDistributionDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L226">property <b>index</b></a>
 </h4>
@@ -1321,7 +1321,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L227">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetDistributionDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestLogQuerySearch'>DashboardWidgetDistributionDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetDistributionDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetDistributionDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L230">
         interface <strong>DashboardWidgetDistributionDefinitionRequestLogQueryCompute</strong>
@@ -1365,7 +1365,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L239">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort'>DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L242">
         interface <strong>DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort</strong>
@@ -1472,7 +1472,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L270">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventStreamDefinitionTime'>inputs.DashboardWidgetEventStreamDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetEventStreamDefinitionTime'>DashboardWidgetEventStreamDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetEventStreamDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L271">property <b>title</b></a>
 </h4>
@@ -1516,7 +1516,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L282">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventTimelineDefinitionTime'>inputs.DashboardWidgetEventTimelineDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetEventTimelineDefinitionTime'>DashboardWidgetEventTimelineDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetEventTimelineDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L283">property <b>title</b></a>
 </h4>
@@ -1592,7 +1592,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L302">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidget'>inputs.DashboardWidgetGroupDefinitionWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidget'>DashboardWidgetGroupDefinitionWidget</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidget" data-link-title="DashboardWidgetGroupDefinitionWidget">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L305">
         interface <strong>DashboardWidgetGroupDefinitionWidget</strong>
@@ -1604,107 +1604,107 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L306">property <b>alertGraphDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alertGraphDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alertGraphDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition'>DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-alertValueDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L307">property <b>alertValueDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alertValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertValueDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetAlertValueDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alertValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetAlertValueDefinition'>DashboardWidgetGroupDefinitionWidgetAlertValueDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-changeDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L308">property <b>changeDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>changeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>changeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinition'>DashboardWidgetGroupDefinitionWidgetChangeDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-checkStatusDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L309">property <b>checkStatusDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>checkStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>checkStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition'>DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-distributionDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L310">property <b>distributionDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>distributionDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>distributionDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinition'>DashboardWidgetGroupDefinitionWidgetDistributionDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-eventStreamDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L311">property <b>eventStreamDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetEventStreamDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetEventStreamDefinition'>DashboardWidgetGroupDefinitionWidgetEventStreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-eventTimelineDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L312">property <b>eventTimelineDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventTimelineDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventTimelineDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition'>DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-freeTextDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L313">property <b>freeTextDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>freeTextDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetFreeTextDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetFreeTextDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>freeTextDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetFreeTextDefinition'>DashboardWidgetGroupDefinitionWidgetFreeTextDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-heatmapDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L314">property <b>heatmapDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>heatmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>heatmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinition'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-hostmapDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L315">property <b>hostmapDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostmapDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinition'>DashboardWidgetGroupDefinitionWidgetHostmapDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-iframeDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L316">property <b>iframeDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iframeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetIframeDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetIframeDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iframeDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetIframeDefinition'>DashboardWidgetGroupDefinitionWidgetIframeDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-imageDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L317">property <b>imageDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetImageDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetImageDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetImageDefinition'>DashboardWidgetGroupDefinitionWidgetImageDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-layout">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L318">property <b>layout</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>layout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLayout'>inputs.DashboardWidgetGroupDefinitionWidgetLayout</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>layout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetLayout'>DashboardWidgetGroupDefinitionWidgetLayout</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-logStreamDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L319">property <b>logStreamDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetLogStreamDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logStreamDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetLogStreamDefinition'>DashboardWidgetGroupDefinitionWidgetLogStreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-manageStatusDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L320">property <b>manageStatusDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>manageStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetManageStatusDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetManageStatusDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>manageStatusDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetManageStatusDefinition'>DashboardWidgetGroupDefinitionWidgetManageStatusDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-noteDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L321">property <b>noteDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>noteDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetNoteDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetNoteDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>noteDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetNoteDefinition'>DashboardWidgetGroupDefinitionWidgetNoteDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-queryValueDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L322">property <b>queryValueDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queryValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queryValueDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinition'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-scatterplotDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L323">property <b>scatterplotDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scatterplotDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scatterplotDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinition'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-timeseriesDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L324">property <b>timeseriesDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeseriesDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeseriesDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-toplistDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L325">property <b>toplistDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>toplistDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>toplistDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinition'>DashboardWidgetGroupDefinitionWidgetToplistDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidget-traceServiceDefinition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L326">property <b>traceServiceDefinition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>traceServiceDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition'>inputs.DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>traceServiceDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition'>DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition" data-link-title="DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L329">
         interface <strong>DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition</strong>
@@ -1721,7 +1721,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L331">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime'>DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L332">property <b>title</b></a>
 </h4>
@@ -1807,12 +1807,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L353">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L354">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L355">property <b>title</b></a>
 </h4>
@@ -1839,7 +1839,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L361">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest-changeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L362">property <b>changeType</b></a>
 </h4>
@@ -1859,7 +1859,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L365">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest-orderBy">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L366">property <b>orderBy</b></a>
 </h4>
@@ -1874,7 +1874,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L368">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L369">property <b>q</b></a>
 </h4>
@@ -1896,12 +1896,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L374">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L375">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L376">property <b>index</b></a>
 </h4>
@@ -1911,7 +1911,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L377">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L380">
         interface <strong>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute</strong>
@@ -1955,7 +1955,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L389">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L392">
         interface <strong>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort</strong>
@@ -2001,12 +2001,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L403">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L404">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L405">property <b>index</b></a>
 </h4>
@@ -2016,7 +2016,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L406">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L409">
         interface <strong>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute</strong>
@@ -2060,7 +2060,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L418">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L421">
         interface <strong>DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort</strong>
@@ -2170,7 +2170,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L448">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime'>DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L449">property <b>title</b></a>
 </h4>
@@ -2209,12 +2209,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L459">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L460">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L461">property <b>title</b></a>
 </h4>
@@ -2241,17 +2241,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L467">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L468">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L469">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L470">property <b>q</b></a>
 </h4>
@@ -2261,7 +2261,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L471">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery" data-link-title="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L474">
         interface <strong>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery</strong>
@@ -2273,12 +2273,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L475">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L476">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L477">property <b>index</b></a>
 </h4>
@@ -2288,7 +2288,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L478">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L481">
         interface <strong>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute</strong>
@@ -2332,7 +2332,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L490">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L493">
         interface <strong>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort</strong>
@@ -2378,12 +2378,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L504">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L505">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L506">property <b>index</b></a>
 </h4>
@@ -2393,7 +2393,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L507">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L510">
         interface <strong>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute</strong>
@@ -2437,7 +2437,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L519">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L522">
         interface <strong>DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort</strong>
@@ -2544,7 +2544,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L550">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime'>DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetEventStreamDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L551">property <b>title</b></a>
 </h4>
@@ -2588,7 +2588,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L562">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime'>DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L563">property <b>title</b></a>
 </h4>
@@ -2654,12 +2654,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L580">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L581">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L582">property <b>title</b></a>
 </h4>
@@ -2679,7 +2679,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L585">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L588">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest</strong>
@@ -2691,17 +2691,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L589">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L590">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L591">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L592">property <b>q</b></a>
 </h4>
@@ -2711,7 +2711,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L593">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L596">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery</strong>
@@ -2723,12 +2723,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L597">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L598">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L599">property <b>index</b></a>
 </h4>
@@ -2738,7 +2738,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L600">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L603">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute</strong>
@@ -2782,7 +2782,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L612">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L615">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort</strong>
@@ -2828,12 +2828,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L626">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L627">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L628">property <b>index</b></a>
 </h4>
@@ -2843,7 +2843,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L629">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L632">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute</strong>
@@ -2887,7 +2887,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L641">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L644">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort</strong>
@@ -3036,7 +3036,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L682">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinition-scopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L683">property <b>scopes</b></a>
 </h4>
@@ -3046,7 +3046,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L684">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L685">property <b>title</b></a>
 </h4>
@@ -3073,12 +3073,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L691">property <b>fills</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fills?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fills?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest-sizes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L692">property <b>sizes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L695">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill</strong>
@@ -3090,17 +3090,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L696">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L697">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L698">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L699">property <b>q</b></a>
 </h4>
@@ -3117,12 +3117,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L703">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L704">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L705">property <b>index</b></a>
 </h4>
@@ -3132,7 +3132,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L706">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L709">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute</strong>
@@ -3176,7 +3176,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L718">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L721">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</strong>
@@ -3222,12 +3222,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L732">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L733">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L734">property <b>index</b></a>
 </h4>
@@ -3237,7 +3237,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L735">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L738">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute</strong>
@@ -3281,7 +3281,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L747">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L750">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</strong>
@@ -3354,17 +3354,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L768">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L769">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L770">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L771">property <b>q</b></a>
 </h4>
@@ -3381,12 +3381,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L775">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L776">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L777">property <b>index</b></a>
 </h4>
@@ -3396,7 +3396,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L778">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L781">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute</strong>
@@ -3440,7 +3440,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L790">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L793">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</strong>
@@ -3486,12 +3486,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L804">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L805">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L806">property <b>index</b></a>
 </h4>
@@ -3501,7 +3501,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L807">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L810">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute</strong>
@@ -3545,7 +3545,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L819">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L822">
         interface <strong>DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</strong>
@@ -3721,7 +3721,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L867">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime'>DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetLogStreamDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L868">property <b>title</b></a>
 </h4>
@@ -3874,7 +3874,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L904">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinition-textAlign">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L905">property <b>textAlign</b></a>
 </h4>
@@ -3884,7 +3884,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L906">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L907">property <b>title</b></a>
 </h4>
@@ -3916,22 +3916,22 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L914">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest-conditionalFormats">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L915">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L916">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L917">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L918">property <b>q</b></a>
 </h4>
@@ -3948,12 +3948,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L922">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L923">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L924">property <b>index</b></a>
 </h4>
@@ -3963,7 +3963,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L925">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L928">
         interface <strong>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute</strong>
@@ -4007,7 +4007,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L937">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L940">
         interface <strong>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort</strong>
@@ -4100,12 +4100,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L962">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L963">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L964">property <b>index</b></a>
 </h4>
@@ -4115,7 +4115,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L965">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L968">
         interface <strong>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute</strong>
@@ -4159,7 +4159,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L977">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L980">
         interface <strong>DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort</strong>
@@ -4249,12 +4249,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1003">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1004">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1005">property <b>title</b></a>
 </h4>
@@ -4274,12 +4274,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1008">property <b>xaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinition-yaxis">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1009">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1012">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest</strong>
@@ -4291,12 +4291,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1013">property <b>xes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest-ys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1014">property <b>ys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1017">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX</strong>
@@ -4313,17 +4313,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1019">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1020">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1021">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1022">property <b>q</b></a>
 </h4>
@@ -4340,12 +4340,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1026">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1027">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1028">property <b>index</b></a>
 </h4>
@@ -4355,7 +4355,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1029">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1032">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute</strong>
@@ -4399,7 +4399,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1041">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1044">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</strong>
@@ -4445,12 +4445,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1055">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1056">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1057">property <b>index</b></a>
 </h4>
@@ -4460,7 +4460,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1058">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1061">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute</strong>
@@ -4504,7 +4504,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1070">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1073">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</strong>
@@ -4582,17 +4582,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1092">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1093">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1094">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1095">property <b>q</b></a>
 </h4>
@@ -4609,12 +4609,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1099">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1100">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1101">property <b>index</b></a>
 </h4>
@@ -4624,7 +4624,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1102">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1105">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute</strong>
@@ -4668,7 +4668,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1114">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1117">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</strong>
@@ -4714,12 +4714,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1128">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1129">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1130">property <b>index</b></a>
 </h4>
@@ -4729,7 +4729,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1131">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1134">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute</strong>
@@ -4773,7 +4773,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1143">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1146">
         interface <strong>DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</strong>
@@ -4922,7 +4922,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1184">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition-legendSize">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1185">property <b>legendSize</b></a>
 </h4>
@@ -4932,12 +4932,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1186">property <b>markers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition-requests">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1187">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition-showLegend">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1188">property <b>showLegend</b></a>
 </h4>
@@ -4947,7 +4947,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1189">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1190">property <b>title</b></a>
 </h4>
@@ -4967,7 +4967,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1193">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1196">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent</strong>
@@ -5013,7 +5013,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1207">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest-displayType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1208">property <b>displayType</b></a>
 </h4>
@@ -5023,17 +5023,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1209">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest-metadatas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1210">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1211">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1212">property <b>q</b></a>
 </h4>
@@ -5043,7 +5043,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1213">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1216">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery</strong>
@@ -5055,12 +5055,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1217">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1218">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1219">property <b>index</b></a>
 </h4>
@@ -5070,7 +5070,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1220">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1223">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute</strong>
@@ -5114,7 +5114,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1232">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1235">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</strong>
@@ -5160,12 +5160,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1246">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1247">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1248">property <b>index</b></a>
 </h4>
@@ -5175,7 +5175,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1249">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1252">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute</strong>
@@ -5219,7 +5219,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1261">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1264">
         interface <strong>DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</strong>
@@ -5375,12 +5375,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1305">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1306">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1307">property <b>title</b></a>
 </h4>
@@ -5407,22 +5407,22 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1313">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest-conditionalFormats">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1314">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1315">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1316">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1317">property <b>q</b></a>
 </h4>
@@ -5432,7 +5432,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1318">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery" data-link-title="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1321">
         interface <strong>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery</strong>
@@ -5444,12 +5444,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1322">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1323">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1324">property <b>index</b></a>
 </h4>
@@ -5459,7 +5459,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1325">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1328">
         interface <strong>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute</strong>
@@ -5503,7 +5503,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1337">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1340">
         interface <strong>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort</strong>
@@ -5596,12 +5596,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1362">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1363">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1364">property <b>index</b></a>
 </h4>
@@ -5611,7 +5611,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1365">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1368">
         interface <strong>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute</strong>
@@ -5655,7 +5655,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1377">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort'>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1380">
         interface <strong>DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort</strong>
@@ -5807,7 +5807,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1417">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime'>inputs.DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime'>DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1418">property <b>title</b></a>
 </h4>
@@ -5846,12 +5846,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1428">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequest'>inputs.DashboardWidgetHeatmapDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequest'>DashboardWidgetHeatmapDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1429">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionTime'>inputs.DashboardWidgetHeatmapDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionTime'>DashboardWidgetHeatmapDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1430">property <b>title</b></a>
 </h4>
@@ -5871,7 +5871,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1433">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionYaxis'>inputs.DashboardWidgetHeatmapDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionYaxis'>DashboardWidgetHeatmapDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequest" data-link-title="DashboardWidgetHeatmapDefinitionRequest">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1436">
         interface <strong>DashboardWidgetHeatmapDefinitionRequest</strong>
@@ -5883,17 +5883,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1437">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQuery'>inputs.DashboardWidgetHeatmapDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestApmQuery'>DashboardWidgetHeatmapDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1438">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQuery'>inputs.DashboardWidgetHeatmapDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestLogQuery'>DashboardWidgetHeatmapDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1439">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestProcessQuery'>inputs.DashboardWidgetHeatmapDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestProcessQuery'>DashboardWidgetHeatmapDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1440">property <b>q</b></a>
 </h4>
@@ -5903,7 +5903,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1441">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestStyle'>inputs.DashboardWidgetHeatmapDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestStyle'>DashboardWidgetHeatmapDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequestApmQuery" data-link-title="DashboardWidgetHeatmapDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1444">
         interface <strong>DashboardWidgetHeatmapDefinitionRequestApmQuery</strong>
@@ -5915,12 +5915,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1445">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetHeatmapDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestApmQueryCompute'>DashboardWidgetHeatmapDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1446">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy'>DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1447">property <b>index</b></a>
 </h4>
@@ -5930,7 +5930,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1448">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetHeatmapDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestApmQuerySearch'>DashboardWidgetHeatmapDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetHeatmapDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1451">
         interface <strong>DashboardWidgetHeatmapDefinitionRequestApmQueryCompute</strong>
@@ -5974,7 +5974,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1460">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort'>DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1463">
         interface <strong>DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort</strong>
@@ -6020,12 +6020,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1474">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetHeatmapDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestLogQueryCompute'>DashboardWidgetHeatmapDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1475">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy'>DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHeatmapDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1476">property <b>index</b></a>
 </h4>
@@ -6035,7 +6035,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1477">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetHeatmapDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestLogQuerySearch'>DashboardWidgetHeatmapDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetHeatmapDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1480">
         interface <strong>DashboardWidgetHeatmapDefinitionRequestLogQueryCompute</strong>
@@ -6079,7 +6079,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1489">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort'>DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1492">
         interface <strong>DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort</strong>
@@ -6228,7 +6228,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1530">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequest'>inputs.DashboardWidgetHostmapDefinitionRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequest'>DashboardWidgetHostmapDefinitionRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinition-scopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1531">property <b>scopes</b></a>
 </h4>
@@ -6238,7 +6238,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1532">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionStyle'>inputs.DashboardWidgetHostmapDefinitionStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionStyle'>DashboardWidgetHostmapDefinitionStyle</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1533">property <b>title</b></a>
 </h4>
@@ -6265,12 +6265,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1539">property <b>fills</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fills?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFill'>inputs.DashboardWidgetHostmapDefinitionRequestFill</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fills?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFill'>DashboardWidgetHostmapDefinitionRequestFill</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequest-sizes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1540">property <b>sizes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSize'>inputs.DashboardWidgetHostmapDefinitionRequestSize</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSize'>DashboardWidgetHostmapDefinitionRequestSize</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestFill" data-link-title="DashboardWidgetHostmapDefinitionRequestFill">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1543">
         interface <strong>DashboardWidgetHostmapDefinitionRequestFill</strong>
@@ -6282,17 +6282,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1544">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQuery'>inputs.DashboardWidgetHostmapDefinitionRequestFillApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillApmQuery'>DashboardWidgetHostmapDefinitionRequestFillApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFill-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1545">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQuery'>inputs.DashboardWidgetHostmapDefinitionRequestFillLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillLogQuery'>DashboardWidgetHostmapDefinitionRequestFillLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFill-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1546">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillProcessQuery'>inputs.DashboardWidgetHostmapDefinitionRequestFillProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillProcessQuery'>DashboardWidgetHostmapDefinitionRequestFillProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFill-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1547">property <b>q</b></a>
 </h4>
@@ -6309,12 +6309,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1551">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute'>inputs.DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute'>DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFillApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1552">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy'>inputs.DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy'>DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFillApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1553">property <b>index</b></a>
 </h4>
@@ -6324,7 +6324,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1554">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch'>inputs.DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch'>DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute" data-link-title="DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1557">
         interface <strong>DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute</strong>
@@ -6368,7 +6368,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1566">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort'>inputs.DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort'>DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort" data-link-title="DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1569">
         interface <strong>DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort</strong>
@@ -6414,12 +6414,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1580">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute'>inputs.DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute'>DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFillLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1581">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy'>inputs.DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy'>DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestFillLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1582">property <b>index</b></a>
 </h4>
@@ -6429,7 +6429,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1583">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch'>inputs.DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch'>DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute" data-link-title="DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1586">
         interface <strong>DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute</strong>
@@ -6473,7 +6473,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1595">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort'>inputs.DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort'>DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort" data-link-title="DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1598">
         interface <strong>DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort</strong>
@@ -6546,17 +6546,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1616">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQuery'>inputs.DashboardWidgetHostmapDefinitionRequestSizeApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeApmQuery'>DashboardWidgetHostmapDefinitionRequestSizeApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSize-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1617">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQuery'>inputs.DashboardWidgetHostmapDefinitionRequestSizeLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeLogQuery'>DashboardWidgetHostmapDefinitionRequestSizeLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSize-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1618">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeProcessQuery'>inputs.DashboardWidgetHostmapDefinitionRequestSizeProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeProcessQuery'>DashboardWidgetHostmapDefinitionRequestSizeProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSize-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1619">property <b>q</b></a>
 </h4>
@@ -6573,12 +6573,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1623">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute'>inputs.DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute'>DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSizeApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1624">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy'>inputs.DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy'>DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSizeApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1625">property <b>index</b></a>
 </h4>
@@ -6588,7 +6588,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1626">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch'>inputs.DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch'>DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute" data-link-title="DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1629">
         interface <strong>DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute</strong>
@@ -6632,7 +6632,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1638">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort'>inputs.DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort'>DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort" data-link-title="DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1641">
         interface <strong>DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort</strong>
@@ -6678,12 +6678,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1652">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute'>inputs.DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute'>DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSizeLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1653">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy'>inputs.DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy'>DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetHostmapDefinitionRequestSizeLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1654">property <b>index</b></a>
 </h4>
@@ -6693,7 +6693,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1655">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch'>inputs.DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch'>DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute" data-link-title="DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1658">
         interface <strong>DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute</strong>
@@ -6737,7 +6737,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1667">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort'>inputs.DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort'>DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort" data-link-title="DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1670">
         interface <strong>DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort</strong>
@@ -6913,7 +6913,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1715">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLogStreamDefinitionTime'>inputs.DashboardWidgetLogStreamDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetLogStreamDefinitionTime'>DashboardWidgetLogStreamDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetLogStreamDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1716">property <b>title</b></a>
 </h4>
@@ -7066,7 +7066,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1752">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequest'>inputs.DashboardWidgetQueryValueDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequest'>DashboardWidgetQueryValueDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinition-textAlign">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1753">property <b>textAlign</b></a>
 </h4>
@@ -7076,7 +7076,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1754">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionTime'>inputs.DashboardWidgetQueryValueDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionTime'>DashboardWidgetQueryValueDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1755">property <b>title</b></a>
 </h4>
@@ -7108,22 +7108,22 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1762">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQuery'>inputs.DashboardWidgetQueryValueDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestApmQuery'>DashboardWidgetQueryValueDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequest-conditionalFormats">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1763">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestConditionalFormat'>inputs.DashboardWidgetQueryValueDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestConditionalFormat'>DashboardWidgetQueryValueDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1764">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQuery'>inputs.DashboardWidgetQueryValueDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestLogQuery'>DashboardWidgetQueryValueDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1765">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestProcessQuery'>inputs.DashboardWidgetQueryValueDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestProcessQuery'>DashboardWidgetQueryValueDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1766">property <b>q</b></a>
 </h4>
@@ -7140,12 +7140,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1770">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetQueryValueDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestApmQueryCompute'>DashboardWidgetQueryValueDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1771">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy'>DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1772">property <b>index</b></a>
 </h4>
@@ -7155,7 +7155,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1773">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetQueryValueDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestApmQuerySearch'>DashboardWidgetQueryValueDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetQueryValueDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetQueryValueDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1776">
         interface <strong>DashboardWidgetQueryValueDefinitionRequestApmQueryCompute</strong>
@@ -7199,7 +7199,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1785">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort'>DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1788">
         interface <strong>DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort</strong>
@@ -7292,12 +7292,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1810">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetQueryValueDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestLogQueryCompute'>DashboardWidgetQueryValueDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1811">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy'>DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetQueryValueDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1812">property <b>index</b></a>
 </h4>
@@ -7307,7 +7307,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1813">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetQueryValueDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestLogQuerySearch'>DashboardWidgetQueryValueDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetQueryValueDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetQueryValueDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1816">
         interface <strong>DashboardWidgetQueryValueDefinitionRequestLogQueryCompute</strong>
@@ -7351,7 +7351,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1825">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort'>DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1828">
         interface <strong>DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort</strong>
@@ -7441,12 +7441,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1851">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequest'>inputs.DashboardWidgetScatterplotDefinitionRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequest'>DashboardWidgetScatterplotDefinitionRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1852">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionTime'>inputs.DashboardWidgetScatterplotDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionTime'>DashboardWidgetScatterplotDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1853">property <b>title</b></a>
 </h4>
@@ -7466,12 +7466,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1856">property <b>xaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionXaxis'>inputs.DashboardWidgetScatterplotDefinitionXaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionXaxis'>DashboardWidgetScatterplotDefinitionXaxis</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinition-yaxis">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1857">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionYaxis'>inputs.DashboardWidgetScatterplotDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionYaxis'>DashboardWidgetScatterplotDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequest" data-link-title="DashboardWidgetScatterplotDefinitionRequest">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1860">
         interface <strong>DashboardWidgetScatterplotDefinitionRequest</strong>
@@ -7483,12 +7483,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1861">property <b>xes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestX'>inputs.DashboardWidgetScatterplotDefinitionRequestX</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestX'>DashboardWidgetScatterplotDefinitionRequestX</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequest-ys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1862">property <b>ys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestY'>inputs.DashboardWidgetScatterplotDefinitionRequestY</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestY'>DashboardWidgetScatterplotDefinitionRequestY</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestX" data-link-title="DashboardWidgetScatterplotDefinitionRequestX">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1865">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestX</strong>
@@ -7505,17 +7505,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1867">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestXApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXApmQuery'>DashboardWidgetScatterplotDefinitionRequestXApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestX-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1868">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestXLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXLogQuery'>DashboardWidgetScatterplotDefinitionRequestXLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestX-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1869">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXProcessQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestXProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXProcessQuery'>DashboardWidgetScatterplotDefinitionRequestXProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestX-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1870">property <b>q</b></a>
 </h4>
@@ -7532,12 +7532,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1874">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute'>inputs.DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute'>DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestXApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1875">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy'>inputs.DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy'>DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestXApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1876">property <b>index</b></a>
 </h4>
@@ -7547,7 +7547,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1877">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch'>inputs.DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch'>DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute" data-link-title="DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1880">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute</strong>
@@ -7591,7 +7591,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1889">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort'>inputs.DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort'>DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort" data-link-title="DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1892">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort</strong>
@@ -7637,12 +7637,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1903">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute'>inputs.DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute'>DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestXLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1904">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy'>inputs.DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy'>DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestXLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1905">property <b>index</b></a>
 </h4>
@@ -7652,7 +7652,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1906">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch'>inputs.DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch'>DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute" data-link-title="DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1909">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute</strong>
@@ -7696,7 +7696,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1918">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort'>inputs.DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort'>DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort" data-link-title="DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1921">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort</strong>
@@ -7774,17 +7774,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1940">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestYApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYApmQuery'>DashboardWidgetScatterplotDefinitionRequestYApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestY-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1941">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestYLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYLogQuery'>DashboardWidgetScatterplotDefinitionRequestYLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestY-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1942">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYProcessQuery'>inputs.DashboardWidgetScatterplotDefinitionRequestYProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYProcessQuery'>DashboardWidgetScatterplotDefinitionRequestYProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestY-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1943">property <b>q</b></a>
 </h4>
@@ -7801,12 +7801,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1947">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute'>inputs.DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute'>DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestYApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1948">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy'>inputs.DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy'>DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestYApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1949">property <b>index</b></a>
 </h4>
@@ -7816,7 +7816,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1950">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch'>inputs.DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch'>DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute" data-link-title="DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1953">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute</strong>
@@ -7860,7 +7860,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1962">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort'>inputs.DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort'>DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort" data-link-title="DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1965">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort</strong>
@@ -7906,12 +7906,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1976">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute'>inputs.DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute'>DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestYLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1977">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy'>inputs.DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy'>DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetScatterplotDefinitionRequestYLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1978">property <b>index</b></a>
 </h4>
@@ -7921,7 +7921,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1979">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch'>inputs.DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch'>DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute" data-link-title="DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1982">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute</strong>
@@ -7965,7 +7965,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1991">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort'>inputs.DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort'>DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort" data-link-title="DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L1994">
         interface <strong>DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort</strong>
@@ -8114,7 +8114,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2032">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionEvent'>inputs.DashboardWidgetTimeseriesDefinitionEvent</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionEvent'>DashboardWidgetTimeseriesDefinitionEvent</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinition-legendSize">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2033">property <b>legendSize</b></a>
 </h4>
@@ -8124,12 +8124,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2034">property <b>markers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionMarker'>inputs.DashboardWidgetTimeseriesDefinitionMarker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionMarker'>DashboardWidgetTimeseriesDefinitionMarker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinition-requests">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2035">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequest'>inputs.DashboardWidgetTimeseriesDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequest'>DashboardWidgetTimeseriesDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinition-showLegend">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2036">property <b>showLegend</b></a>
 </h4>
@@ -8139,7 +8139,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2037">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionTime'>inputs.DashboardWidgetTimeseriesDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionTime'>DashboardWidgetTimeseriesDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2038">property <b>title</b></a>
 </h4>
@@ -8159,7 +8159,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2041">property <b>yaxis</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionYaxis'>inputs.DashboardWidgetTimeseriesDefinitionYaxis</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yaxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionYaxis'>DashboardWidgetTimeseriesDefinitionYaxis</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionEvent" data-link-title="DashboardWidgetTimeseriesDefinitionEvent">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2044">
         interface <strong>DashboardWidgetTimeseriesDefinitionEvent</strong>
@@ -8205,7 +8205,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2055">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQuery'>inputs.DashboardWidgetTimeseriesDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestApmQuery'>DashboardWidgetTimeseriesDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequest-displayType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2056">property <b>displayType</b></a>
 </h4>
@@ -8215,17 +8215,17 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2057">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQuery'>inputs.DashboardWidgetTimeseriesDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestLogQuery'>DashboardWidgetTimeseriesDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequest-metadatas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2058">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestMetadata'>inputs.DashboardWidgetTimeseriesDefinitionRequestMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestMetadata'>DashboardWidgetTimeseriesDefinitionRequestMetadata</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2059">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestProcessQuery'>inputs.DashboardWidgetTimeseriesDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestProcessQuery'>DashboardWidgetTimeseriesDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2060">property <b>q</b></a>
 </h4>
@@ -8235,7 +8235,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2061">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestStyle'>inputs.DashboardWidgetTimeseriesDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestStyle'>DashboardWidgetTimeseriesDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionRequestApmQuery" data-link-title="DashboardWidgetTimeseriesDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2064">
         interface <strong>DashboardWidgetTimeseriesDefinitionRequestApmQuery</strong>
@@ -8247,12 +8247,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2065">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute'>DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2066">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy'>DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2067">property <b>index</b></a>
 </h4>
@@ -8262,7 +8262,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2068">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch'>DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2071">
         interface <strong>DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute</strong>
@@ -8306,7 +8306,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2080">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort'>DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2083">
         interface <strong>DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort</strong>
@@ -8352,12 +8352,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2094">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute'>DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2095">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy'>DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTimeseriesDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2096">property <b>index</b></a>
 </h4>
@@ -8367,7 +8367,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2097">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch'>DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2100">
         interface <strong>DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute</strong>
@@ -8411,7 +8411,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2109">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort'>DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2112">
         interface <strong>DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort</strong>
@@ -8567,12 +8567,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2153">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequest'>inputs.DashboardWidgetToplistDefinitionRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequest'>DashboardWidgetToplistDefinitionRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinition-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2154">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionTime'>inputs.DashboardWidgetToplistDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionTime'>DashboardWidgetToplistDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2155">property <b>title</b></a>
 </h4>
@@ -8599,22 +8599,22 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2161">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQuery'>inputs.DashboardWidgetToplistDefinitionRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestApmQuery'>DashboardWidgetToplistDefinitionRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequest-conditionalFormats">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2162">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestConditionalFormat'>inputs.DashboardWidgetToplistDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestConditionalFormat'>DashboardWidgetToplistDefinitionRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequest-logQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2163">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQuery'>inputs.DashboardWidgetToplistDefinitionRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestLogQuery'>DashboardWidgetToplistDefinitionRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequest-processQuery">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2164">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestProcessQuery'>inputs.DashboardWidgetToplistDefinitionRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestProcessQuery'>DashboardWidgetToplistDefinitionRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2165">property <b>q</b></a>
 </h4>
@@ -8624,7 +8624,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2166">property <b>style</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestStyle'>inputs.DashboardWidgetToplistDefinitionRequestStyle</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>style?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestStyle'>DashboardWidgetToplistDefinitionRequestStyle</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetToplistDefinitionRequestApmQuery" data-link-title="DashboardWidgetToplistDefinitionRequestApmQuery">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2169">
         interface <strong>DashboardWidgetToplistDefinitionRequestApmQuery</strong>
@@ -8636,12 +8636,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2170">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryCompute'>inputs.DashboardWidgetToplistDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestApmQueryCompute'>DashboardWidgetToplistDefinitionRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2171">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBy'>inputs.DashboardWidgetToplistDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestApmQueryGroupBy'>DashboardWidgetToplistDefinitionRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2172">property <b>index</b></a>
 </h4>
@@ -8651,7 +8651,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2173">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQuerySearch'>inputs.DashboardWidgetToplistDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestApmQuerySearch'>DashboardWidgetToplistDefinitionRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetToplistDefinitionRequestApmQueryCompute" data-link-title="DashboardWidgetToplistDefinitionRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2176">
         interface <strong>DashboardWidgetToplistDefinitionRequestApmQueryCompute</strong>
@@ -8695,7 +8695,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2185">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort'>inputs.DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort'>DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort" data-link-title="DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2188">
         interface <strong>DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort</strong>
@@ -8788,12 +8788,12 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2210">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryCompute'>inputs.DashboardWidgetToplistDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestLogQueryCompute'>DashboardWidgetToplistDefinitionRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2211">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBy'>inputs.DashboardWidgetToplistDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestLogQueryGroupBy'>DashboardWidgetToplistDefinitionRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetToplistDefinitionRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2212">property <b>index</b></a>
 </h4>
@@ -8803,7 +8803,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2213">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQuerySearch'>inputs.DashboardWidgetToplistDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestLogQuerySearch'>DashboardWidgetToplistDefinitionRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetToplistDefinitionRequestLogQueryCompute" data-link-title="DashboardWidgetToplistDefinitionRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2216">
         interface <strong>DashboardWidgetToplistDefinitionRequestLogQueryCompute</strong>
@@ -8847,7 +8847,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2225">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort'>inputs.DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort'>DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort" data-link-title="DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2228">
         interface <strong>DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort</strong>
@@ -8999,7 +8999,7 @@ The type of this dashboard. Available options are: `customTimeboard`, `customScr
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2265">property <b>time</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTraceServiceDefinitionTime'>inputs.DashboardWidgetTraceServiceDefinitionTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>time?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardWidgetTraceServiceDefinitionTime'>DashboardWidgetTraceServiceDefinitionTime</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidgetTraceServiceDefinition-title">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2266">property <b>title</b></a>
 </h4>
@@ -9097,62 +9097,62 @@ A list of week days to repeat on. Choose from: Mon, Tue, Wed, Thu, Fri, Sat or S
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2303">property <b>arithmeticProcessor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>arithmeticProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorArithmeticProcessor'>inputs.LogsCustomPipelineProcessorArithmeticProcessor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>arithmeticProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorArithmeticProcessor'>LogsCustomPipelineProcessorArithmeticProcessor</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-attributeRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2304">property <b>attributeRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributeRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorAttributeRemapper'>inputs.LogsCustomPipelineProcessorAttributeRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributeRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorAttributeRemapper'>LogsCustomPipelineProcessorAttributeRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-categoryProcessor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2305">property <b>categoryProcessor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>categoryProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessor'>inputs.LogsCustomPipelineProcessorCategoryProcessor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>categoryProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorCategoryProcessor'>LogsCustomPipelineProcessorCategoryProcessor</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-dateRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2306">property <b>dateRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dateRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorDateRemapper'>inputs.LogsCustomPipelineProcessorDateRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dateRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorDateRemapper'>LogsCustomPipelineProcessorDateRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-grokParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2307">property <b>grokParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grokParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParser'>inputs.LogsCustomPipelineProcessorGrokParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grokParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorGrokParser'>LogsCustomPipelineProcessorGrokParser</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-messageRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2308">property <b>messageRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>messageRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorMessageRemapper'>inputs.LogsCustomPipelineProcessorMessageRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>messageRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorMessageRemapper'>LogsCustomPipelineProcessorMessageRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-pipeline">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2309">property <b>pipeline</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pipeline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipeline'>inputs.LogsCustomPipelineProcessorPipeline</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pipeline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipeline'>LogsCustomPipelineProcessorPipeline</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-serviceRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2310">property <b>serviceRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorServiceRemapper'>inputs.LogsCustomPipelineProcessorServiceRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorServiceRemapper'>LogsCustomPipelineProcessorServiceRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-statusRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2311">property <b>statusRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statusRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorStatusRemapper'>inputs.LogsCustomPipelineProcessorStatusRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statusRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorStatusRemapper'>LogsCustomPipelineProcessorStatusRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-traceIdRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2312">property <b>traceIdRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>traceIdRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorTraceIdRemapper'>inputs.LogsCustomPipelineProcessorTraceIdRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>traceIdRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorTraceIdRemapper'>LogsCustomPipelineProcessorTraceIdRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-urlParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2313">property <b>urlParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUrlParser'>inputs.LogsCustomPipelineProcessorUrlParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorUrlParser'>LogsCustomPipelineProcessorUrlParser</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessor-userAgentParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2314">property <b>userAgentParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userAgentParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUserAgentParser'>inputs.LogsCustomPipelineProcessorUserAgentParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userAgentParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorUserAgentParser'>LogsCustomPipelineProcessorUserAgentParser</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LogsCustomPipelineProcessorArithmeticProcessor" data-link-title="LogsCustomPipelineProcessorArithmeticProcessor">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2317">
         interface <strong>LogsCustomPipelineProcessorArithmeticProcessor</strong>
@@ -9282,7 +9282,7 @@ Defines if the target is a log `attribute` or `tag`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2379">property <b>categories</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategory'>inputs.LogsCustomPipelineProcessorCategoryProcessorCategory</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorCategoryProcessorCategory'>LogsCustomPipelineProcessorCategoryProcessorCategory</a>&gt;[]&gt;;</code></pre>
 
 List of filters to match or exclude a log with their corresponding name to assign a custom value to the log.
 
@@ -9321,7 +9321,7 @@ Name of the parent attribute that contains all the extracted details from the so
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2398">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter'>inputs.LogsCustomPipelineProcessorCategoryProcessorCategoryFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter'>LogsCustomPipelineProcessorCategoryProcessorCategoryFilter</a>&gt;[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -9387,7 +9387,7 @@ List of source attributes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2425">property <b>grok</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grok: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParserGrok'>inputs.LogsCustomPipelineProcessorGrokParserGrok</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grok: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorGrokParserGrok'>LogsCustomPipelineProcessorGrokParserGrok</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorGrokParser-isEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2429">property <b>isEnabled</b></a>
 </h4>
@@ -9478,7 +9478,7 @@ List of source attributes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2471">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineFilter'>inputs.LogsCustomPipelineProcessorPipelineFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineFilter'>LogsCustomPipelineProcessorPipelineFilter</a>&gt;[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -9502,7 +9502,7 @@ Name of the processor
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2483">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessor'>inputs.LogsCustomPipelineProcessorPipelineProcessor</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessor'>LogsCustomPipelineProcessorPipelineProcessor</a>&gt;[]&gt;;</code></pre>
 
 Processors. Nested pipeline can't take any other nested pipeline as its processor.
 
@@ -9529,57 +9529,57 @@ Processors. Nested pipeline can't take any other nested pipeline as its processo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2491">property <b>arithmeticProcessor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>arithmeticProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor'>inputs.LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>arithmeticProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor'>LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-attributeRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2492">property <b>attributeRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributeRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributeRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper'>LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-categoryProcessor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2493">property <b>categoryProcessor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>categoryProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor'>inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>categoryProcessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor'>LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-dateRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2494">property <b>dateRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dateRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorDateRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorDateRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dateRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorDateRemapper'>LogsCustomPipelineProcessorPipelineProcessorDateRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-grokParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2495">property <b>grokParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grokParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParser'>inputs.LogsCustomPipelineProcessorPipelineProcessorGrokParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grokParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorGrokParser'>LogsCustomPipelineProcessorPipelineProcessorGrokParser</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-messageRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2496">property <b>messageRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>messageRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorMessageRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>messageRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper'>LogsCustomPipelineProcessorPipelineProcessorMessageRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-serviceRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2497">property <b>serviceRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorServiceRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper'>LogsCustomPipelineProcessorPipelineProcessorServiceRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-statusRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2498">property <b>statusRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statusRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorStatusRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statusRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper'>LogsCustomPipelineProcessorPipelineProcessorStatusRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-traceIdRemapper">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2499">property <b>traceIdRemapper</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>traceIdRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper'>inputs.LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>traceIdRemapper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper'>LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-urlParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2500">property <b>urlParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUrlParser'>inputs.LogsCustomPipelineProcessorPipelineProcessorUrlParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorUrlParser'>LogsCustomPipelineProcessorPipelineProcessorUrlParser</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessor-userAgentParser">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2501">property <b>userAgentParser</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userAgentParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser'>inputs.LogsCustomPipelineProcessorPipelineProcessorUserAgentParser</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userAgentParser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser'>LogsCustomPipelineProcessorPipelineProcessorUserAgentParser</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor" data-link-title="LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2504">
         interface <strong>LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor</strong>
@@ -9709,7 +9709,7 @@ Defines if the target is a log `attribute` or `tag`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2566">property <b>categories</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory'>inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory'>LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory</a>&gt;[]&gt;;</code></pre>
 
 List of filters to match or exclude a log with their corresponding name to assign a custom value to the log.
 
@@ -9748,7 +9748,7 @@ Name of the parent attribute that contains all the extracted details from the so
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2585">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter'>inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter'>LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter</a>&gt;[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -9814,7 +9814,7 @@ List of source attributes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2612">property <b>grok</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grok: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok'>inputs.LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grok: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok'>LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineProcessorPipelineProcessorGrokParser-isEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2616">property <b>isEnabled</b></a>
 </h4>
@@ -10279,7 +10279,7 @@ Name of the parent attribute that contains all the extracted details from the so
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2837">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilterFilter'>inputs.LogsIndexExclusionFilterFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogsIndexExclusionFilterFilter'>LogsIndexExclusionFilterFilter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsIndexExclusionFilter-isEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2841">property <b>isEnabled</b></a>
 </h4>
@@ -10604,7 +10604,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2926">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetRule'>inputs.ScreenBoardWidgetRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetRule'>ScreenBoardWidgetRule</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidget-serviceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2927">property <b>serviceName</b></a>
 </h4>
@@ -10664,7 +10664,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2938">property <b>tileDeves</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tileDeves?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDef'>inputs.ScreenBoardWidgetTileDef</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tileDeves?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDef'>ScreenBoardWidgetTileDef</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidget-time">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2939">property <b>time</b></a>
 </h4>
@@ -10768,7 +10768,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2962">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefEvent'>inputs.ScreenBoardWidgetTileDefEvent</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefEvent'>ScreenBoardWidgetTileDefEvent</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDef-groups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2963">property <b>groups</b></a>
 </h4>
@@ -10778,7 +10778,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2964">property <b>markers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefMarker'>inputs.ScreenBoardWidgetTileDefMarker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefMarker'>ScreenBoardWidgetTileDefMarker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDef-noGroupHosts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2965">property <b>noGroupHosts</b></a>
 </h4>
@@ -10803,7 +10803,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2969">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequest'>inputs.ScreenBoardWidgetTileDefRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequest'>ScreenBoardWidgetTileDefRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDef-scopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2970">property <b>scopes</b></a>
 </h4>
@@ -10874,7 +10874,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2988">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQuery'>inputs.ScreenBoardWidgetTileDefRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestApmQuery'>ScreenBoardWidgetTileDefRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequest-changeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2989">property <b>changeType</b></a>
 </h4>
@@ -10889,7 +10889,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2991">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestConditionalFormat'>inputs.ScreenBoardWidgetTileDefRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestConditionalFormat'>ScreenBoardWidgetTileDefRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequest-extraCol">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2992">property <b>extraCol</b></a>
 </h4>
@@ -10909,7 +10909,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2995">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQuery'>inputs.ScreenBoardWidgetTileDefRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestLogQuery'>ScreenBoardWidgetTileDefRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequest-metadataJson">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L2999">property <b>metadataJson</b></a>
 </h4>
@@ -10937,7 +10937,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3003">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestProcessQuery'>inputs.ScreenBoardWidgetTileDefRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestProcessQuery'>ScreenBoardWidgetTileDefRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3004">property <b>q</b></a>
 </h4>
@@ -10979,12 +10979,12 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3013">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryCompute'>inputs.ScreenBoardWidgetTileDefRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestApmQueryCompute'>ScreenBoardWidgetTileDefRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3014">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryGroupBy'>inputs.ScreenBoardWidgetTileDefRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestApmQueryGroupBy'>ScreenBoardWidgetTileDefRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3015">property <b>index</b></a>
 </h4>
@@ -10994,7 +10994,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3016">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQuerySearch'>inputs.ScreenBoardWidgetTileDefRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestApmQuerySearch'>ScreenBoardWidgetTileDefRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScreenBoardWidgetTileDefRequestApmQueryCompute" data-link-title="ScreenBoardWidgetTileDefRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3019">
         interface <strong>ScreenBoardWidgetTileDefRequestApmQueryCompute</strong>
@@ -11038,7 +11038,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3028">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryGroupBySort'>inputs.ScreenBoardWidgetTileDefRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestApmQueryGroupBySort'>ScreenBoardWidgetTileDefRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScreenBoardWidgetTileDefRequestApmQueryGroupBySort" data-link-title="ScreenBoardWidgetTileDefRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3031">
         interface <strong>ScreenBoardWidgetTileDefRequestApmQueryGroupBySort</strong>
@@ -11121,12 +11121,12 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3051">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryCompute'>inputs.ScreenBoardWidgetTileDefRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestLogQueryCompute'>ScreenBoardWidgetTileDefRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3052">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryGroupBy'>inputs.ScreenBoardWidgetTileDefRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestLogQueryGroupBy'>ScreenBoardWidgetTileDefRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScreenBoardWidgetTileDefRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3053">property <b>index</b></a>
 </h4>
@@ -11136,7 +11136,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3054">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQuerySearch'>inputs.ScreenBoardWidgetTileDefRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestLogQuerySearch'>ScreenBoardWidgetTileDefRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScreenBoardWidgetTileDefRequestLogQueryCompute" data-link-title="ScreenBoardWidgetTileDefRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3057">
         interface <strong>ScreenBoardWidgetTileDefRequestLogQueryCompute</strong>
@@ -11180,7 +11180,7 @@ describes how long a metric must be anomalous before an alert triggers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3066">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryGroupBySort'>inputs.ScreenBoardWidgetTileDefRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScreenBoardWidgetTileDefRequestLogQueryGroupBySort'>ScreenBoardWidgetTileDefRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScreenBoardWidgetTileDefRequestLogQueryGroupBySort" data-link-title="ScreenBoardWidgetTileDefRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3069">
         interface <strong>ScreenBoardWidgetTileDefRequestLogQueryGroupBySort</strong>
@@ -11426,7 +11426,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3148">property <b>markers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphMarker'>inputs.TimeBoardGraphMarker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>markers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphMarker'>TimeBoardGraphMarker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraph-nodeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3149">property <b>nodeType</b></a>
 </h4>
@@ -11441,7 +11441,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3151">property <b>requests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequest'>inputs.TimeBoardGraphRequest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequest'>TimeBoardGraphRequest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraph-scopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3152">property <b>scopes</b></a>
 </h4>
@@ -11510,7 +11510,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3168">property <b>apmQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQuery'>inputs.TimeBoardGraphRequestApmQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apmQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestApmQuery'>TimeBoardGraphRequestApmQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequest-changeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3169">property <b>changeType</b></a>
 </h4>
@@ -11525,7 +11525,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3171">property <b>conditionalFormats</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestConditionalFormat'>inputs.TimeBoardGraphRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestConditionalFormat'>TimeBoardGraphRequestConditionalFormat</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequest-extraCol">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3172">property <b>extraCol</b></a>
 </h4>
@@ -11540,7 +11540,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3174">property <b>logQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQuery'>inputs.TimeBoardGraphRequestLogQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestLogQuery'>TimeBoardGraphRequestLogQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequest-metadataJson">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3175">property <b>metadataJson</b></a>
 </h4>
@@ -11560,7 +11560,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3178">property <b>processQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestProcessQuery'>inputs.TimeBoardGraphRequestProcessQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestProcessQuery'>TimeBoardGraphRequestProcessQuery</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequest-q">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3179">property <b>q</b></a>
 </h4>
@@ -11592,12 +11592,12 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3186">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryCompute'>inputs.TimeBoardGraphRequestApmQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestApmQueryCompute'>TimeBoardGraphRequestApmQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequestApmQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3187">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryGroupBy'>inputs.TimeBoardGraphRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestApmQueryGroupBy'>TimeBoardGraphRequestApmQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequestApmQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3188">property <b>index</b></a>
 </h4>
@@ -11607,7 +11607,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3189">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQuerySearch'>inputs.TimeBoardGraphRequestApmQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestApmQuerySearch'>TimeBoardGraphRequestApmQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeBoardGraphRequestApmQueryCompute" data-link-title="TimeBoardGraphRequestApmQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3192">
         interface <strong>TimeBoardGraphRequestApmQueryCompute</strong>
@@ -11651,7 +11651,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3201">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryGroupBySort'>inputs.TimeBoardGraphRequestApmQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestApmQueryGroupBySort'>TimeBoardGraphRequestApmQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeBoardGraphRequestApmQueryGroupBySort" data-link-title="TimeBoardGraphRequestApmQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3204">
         interface <strong>TimeBoardGraphRequestApmQueryGroupBySort</strong>
@@ -11729,12 +11729,12 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3223">property <b>compute</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryCompute'>inputs.TimeBoardGraphRequestLogQueryCompute</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestLogQueryCompute'>TimeBoardGraphRequestLogQueryCompute</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequestLogQuery-groupBies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3224">property <b>groupBies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryGroupBy'>inputs.TimeBoardGraphRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestLogQueryGroupBy'>TimeBoardGraphRequestLogQueryGroupBy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeBoardGraphRequestLogQuery-index">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3225">property <b>index</b></a>
 </h4>
@@ -11744,7 +11744,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3226">property <b>search</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQuerySearch'>inputs.TimeBoardGraphRequestLogQuerySearch</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>search?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestLogQuerySearch'>TimeBoardGraphRequestLogQuerySearch</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeBoardGraphRequestLogQueryCompute" data-link-title="TimeBoardGraphRequestLogQueryCompute">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3229">
         interface <strong>TimeBoardGraphRequestLogQueryCompute</strong>
@@ -11788,7 +11788,7 @@ the string version to specify additional digits in the case of `99` but want 3 d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3238">property <b>sort</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryGroupBySort'>inputs.TimeBoardGraphRequestLogQueryGroupBySort</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeBoardGraphRequestLogQueryGroupBySort'>TimeBoardGraphRequestLogQueryGroupBySort</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeBoardGraphRequestLogQueryGroupBySort" data-link-title="TimeBoardGraphRequestLogQueryGroupBySort">
     <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/types/input.ts#L3241">
         interface <strong>TimeBoardGraphRequestLogQueryGroupBySort</strong>

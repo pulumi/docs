@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Fleet</code></pre>
 
 
 Returns true if the given object is an instance of Fleet.  This is designed to work even
@@ -189,7 +189,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L107">property <b>identityProvider</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identityProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetIdentityProvider'>outputs.worklink.FleetIdentityProvider</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identityProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetIdentityProvider'>FleetIdentityProvider</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 
@@ -213,7 +213,7 @@ A region-unique name for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L119">property <b>network</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetNetwork'>outputs.worklink.FleetNetwork</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetNetwork'>FleetNetwork</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 
@@ -295,7 +295,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is WebsiteCertificateAuthorityAssociation</code></pre>
 
 
 Returns true if the given object is an instance of WebsiteCertificateAuthorityAssociation.  This is designed to work even
@@ -392,7 +392,7 @@ The name of the fleet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L242">property <b>identityProvider</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetIdentityProvider'>inputs.worklink.FleetIdentityProvider</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetIdentityProvider'>FleetIdentityProvider</a>&gt;;</code></pre>
 
 Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 
@@ -408,7 +408,7 @@ A region-unique name for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L250">property <b>network</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetNetwork'>inputs.worklink.FleetNetwork</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetNetwork'>FleetNetwork</a>&gt;;</code></pre>
 
 Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 
@@ -482,7 +482,7 @@ The name of the fleet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L204">property <b>identityProvider</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetIdentityProvider'>inputs.worklink.FleetIdentityProvider</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetIdentityProvider'>FleetIdentityProvider</a>&gt;;</code></pre>
 
 Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 
@@ -506,7 +506,7 @@ A region-unique name for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/worklink/fleet.ts#L216">property <b>network</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetNetwork'>inputs.worklink.FleetNetwork</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetNetwork'>FleetNetwork</a>&gt;;</code></pre>
 
 Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 

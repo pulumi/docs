@@ -273,7 +273,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -969,7 +969,7 @@ the image. Valid items are the numeric account ID or `self`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmi.ts#L77">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter'>inputs.GetAmiFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter'>GetAmiFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -1032,7 +1032,7 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmiIds.ts#L62">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiIdsFilter'>inputs.GetAmiIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiIdsFilter'>GetAmiIdsFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There
 are several valid keys, for a full reference, check out
@@ -1085,7 +1085,7 @@ A collection of values returned by getAmiIds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmiIds.ts#L86">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiIdsFilter'>outputs.GetAmiIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiIdsFilter'>GetAmiIdsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmiIds.ts#L94">property <b>id</b></a>
 </h4>
@@ -1136,7 +1136,7 @@ The OS architecture of the AMI (ie: `i386` or `x8664`).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmi.ts#L123">property <b>blockDeviceMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping'>outputs.GetAmiBlockDeviceMapping</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping'>GetAmiBlockDeviceMapping</a>[];</code></pre>
 
 The block device mappings of the AMI.
 * `block_device_mappings.#.device_name` - The physical name of the device.
@@ -1180,7 +1180,7 @@ creation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmi.ts#L134">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter'>outputs.GetAmiFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter'>GetAmiFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-hypervisor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmi.ts#L138">property <b>hypervisor</b></a>
 </h4>
@@ -1282,7 +1282,7 @@ The value is Windows for `Windows` AMIs; otherwise blank.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAmi.ts#L181">property <b>productCodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>productCodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode'>outputs.GetAmiProductCode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>productCodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode'>GetAmiProductCode</a>[];</code></pre>
 
 Any product codes associated with the AMI.
 * `product_codes.#.product_code_id` - The product code.
@@ -1473,7 +1473,7 @@ A collection of arguments for invoking getAutoscalingGroups.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAutoscalingGroups.ts#L68">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAutoscalingGroupsFilter'>inputs.GetAutoscalingGroupsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAutoscalingGroupsFilter'>GetAutoscalingGroupsFilter</a>[];</code></pre>
 
 A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 
@@ -1499,7 +1499,7 @@ A list of the Autoscaling Groups Arns in the current region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAutoscalingGroups.ts#L79">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAutoscalingGroupsFilter'>outputs.GetAutoscalingGroupsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAutoscalingGroupsFilter'>GetAutoscalingGroupsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getAutoscalingGroups.ts#L87">property <b>id</b></a>
 </h4>
@@ -1806,7 +1806,7 @@ A collection of arguments for invoking getElasticIp.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getElasticIp.ts#L91">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetElasticIpFilter'>inputs.GetElasticIpFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetElasticIpFilter'>GetElasticIpFilter</a>[];</code></pre>
 
 One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
 
@@ -1864,7 +1864,7 @@ Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getElasticIp.ts#L118">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetElasticIpFilter'>outputs.GetElasticIpFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetElasticIpFilter'>GetElasticIpFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticIpResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/getElasticIp.ts#L122">property <b>id</b></a>
 </h4>
@@ -2259,7 +2259,7 @@ The name of the selected region.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, <a href='#Diff'>Diff</a>&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, Diff&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/provider.ts#L80">
         interface <strong>ProviderArgs</strong>
@@ -2288,12 +2288,12 @@ console.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/provider.ts#L87">property <b>assumeRole</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>assumeRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderAssumeRole'>inputs.ProviderAssumeRole</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>assumeRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderAssumeRole'>ProviderAssumeRole</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-endpoints">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/provider.ts#L88">property <b>endpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderEndpoint'>inputs.ProviderEndpoint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderEndpoint'>ProviderEndpoint</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-forbiddenAccountIds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/provider.ts#L89">property <b>forbiddenAccountIds</b></a>
 </h4>

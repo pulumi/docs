@@ -126,7 +126,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -141,7 +141,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L85">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAuthenticationConfiguration'>outputs.healthcare.ServiceAuthenticationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `authenticationConfiguration` block as defined below.
 
@@ -149,7 +149,7 @@ An `authenticationConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L89">property <b>corsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>corsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCorsConfiguration'>outputs.healthcare.ServiceCorsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>corsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `corsConfiguration` block as defined below.
 
@@ -317,7 +317,7 @@ A collection of values returned by getService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/getService.ts#L81">property <b>authenticationConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAuthenticationConfiguration'>outputs.healthcare.GetServiceAuthenticationConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAuthenticationConfiguration'>GetServiceAuthenticationConfiguration</a>[];</code></pre>
 
 An `authenticationConfiguration` block as defined below.
 
@@ -325,7 +325,7 @@ An `authenticationConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/getService.ts#L85">property <b>corsConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceCorsConfiguration'>outputs.healthcare.GetServiceCorsConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceCorsConfiguration'>GetServiceCorsConfiguration</a>[];</code></pre>
 
 A `corsConfiguration` block as defined below.
 
@@ -395,7 +395,7 @@ The set of arguments for constructing a Service resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L212">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>inputs.healthcare.ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
 
 An `authenticationConfiguration` block as defined below.
 
@@ -403,7 +403,7 @@ An `authenticationConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L216">property <b>corsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>inputs.healthcare.ServiceCorsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a>&gt;;</code></pre>
 
 A `corsConfiguration` block as defined below.
 
@@ -474,7 +474,7 @@ Input properties used for looking up and filtering Service resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L173">property <b>authenticationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>inputs.healthcare.ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
 
 An `authenticationConfiguration` block as defined below.
 
@@ -482,7 +482,7 @@ An `authenticationConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/healthcare/service.ts#L177">property <b>corsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>inputs.healthcare.ServiceCorsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a>&gt;;</code></pre>
 
 A `corsConfiguration` block as defined below.
 

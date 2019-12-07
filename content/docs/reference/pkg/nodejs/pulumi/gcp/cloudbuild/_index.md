@@ -78,7 +78,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Trigger</code></pre>
 
 
 Returns true if the given object is an instance of Trigger.  This is designed to work even
@@ -88,7 +88,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L42">property <b>build</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuild'>outputs.cloudbuild.TriggerBuild</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuild'>TriggerBuild</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Contents of the build template. Either a filename or build template must be provided.
 
@@ -129,7 +129,7 @@ must be provided.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L63">property <b>github</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>github: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithub'>outputs.cloudbuild.TriggerGithub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>github: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithub'>TriggerGithub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
@@ -202,7 +202,7 @@ The unique identifier for the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L101">property <b>triggerTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>triggerTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerTriggerTemplate'>outputs.cloudbuild.TriggerTriggerTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>triggerTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerTriggerTemplate'>TriggerTriggerTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a
@@ -234,7 +234,7 @@ The set of arguments for constructing a Trigger resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L231">property <b>build</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>inputs.cloudbuild.TriggerBuild</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>TriggerBuild</a>&gt;;</code></pre>
 
 Contents of the build template. Either a filename or build template must be provided.
 
@@ -267,7 +267,7 @@ must be provided.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L248">property <b>github</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>inputs.cloudbuild.TriggerGithub</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>TriggerGithub</a>&gt;;</code></pre>
 
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
@@ -323,7 +323,7 @@ Substitutions data for Build resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L282">property <b>triggerTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>inputs.cloudbuild.TriggerTriggerTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>TriggerTriggerTemplate</a>&gt;;</code></pre>
 
 Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a
@@ -343,7 +343,7 @@ Input properties used for looking up and filtering Trigger resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L162">property <b>build</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>inputs.cloudbuild.TriggerBuild</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>TriggerBuild</a>&gt;;</code></pre>
 
 Contents of the build template. Either a filename or build template must be provided.
 
@@ -384,7 +384,7 @@ must be provided.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L183">property <b>github</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>inputs.cloudbuild.TriggerGithub</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>TriggerGithub</a>&gt;;</code></pre>
 
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
@@ -448,7 +448,7 @@ The unique identifier for the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L221">property <b>triggerTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>inputs.cloudbuild.TriggerTriggerTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>TriggerTriggerTemplate</a>&gt;;</code></pre>
 
 Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a

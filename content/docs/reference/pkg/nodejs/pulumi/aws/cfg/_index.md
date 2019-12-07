@@ -113,7 +113,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AggregateAuthorization</code></pre>
 
 
 Returns true if the given object is an instance of AggregateAuthorization.  This is designed to work even
@@ -268,7 +268,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConfigurationAggregator</code></pre>
 
 
 Returns true if the given object is an instance of ConfigurationAggregator.  This is designed to work even
@@ -278,7 +278,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L94">property <b>accountAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accountAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorAccountAggregationSource'>outputs.cfg.ConfigurationAggregatorAccountAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accountAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The account(s) to aggregate config data from as documented below.
 
@@ -311,7 +311,7 @@ The name of the configuration aggregator.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L106">property <b>organizationAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>organizationAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorOrganizationAggregationSource'>outputs.cfg.ConfigurationAggregatorOrganizationAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>organizationAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The organization to aggregate config data from as documented below.
 
@@ -435,7 +435,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DeliveryChannel</code></pre>
 
 
 Returns true if the given object is an instance of DeliveryChannel.  This is designed to work even
@@ -478,7 +478,7 @@ The prefix for the specified S3 bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/deliveryChannel.ts#L110">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snapshotDeliveryProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeliveryChannelSnapshotDeliveryProperties'>outputs.cfg.DeliveryChannelSnapshotDeliveryProperties</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snapshotDeliveryProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Options for how AWS Config delivers configuration snapshots. See below
 
@@ -573,7 +573,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrganizationCustomRule</code></pre>
 
 
 Returns true if the given object is an instance of OrganizationCustomRule.  This is designed to work even
@@ -761,7 +761,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrganizationManagedRule</code></pre>
 
 
 Returns true if the given object is an instance of OrganizationManagedRule.  This is designed to work even
@@ -951,7 +951,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Recorder</code></pre>
 
 
 Returns true if the given object is an instance of Recorder.  This is designed to work even
@@ -978,7 +978,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/recorder.ts#L77">property <b>recordingGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>recordingGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecorderRecordingGroup'>outputs.cfg.RecorderRecordingGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>recordingGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
 
 Recording group - see below.
 
@@ -1109,7 +1109,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RecorderStatus</code></pre>
 
 
 Returns true if the given object is an instance of RecorderStatus.  This is designed to work even
@@ -1275,7 +1275,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Rule</code></pre>
 
 
 Returns true if the given object is an instance of Rule.  This is designed to work even
@@ -1343,7 +1343,7 @@ The ID of the config rule
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L146">property <b>scope</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleScope'>outputs.cfg.RuleScope</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleScope'>RuleScope</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
@@ -1351,7 +1351,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L151">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleSource'>outputs.cfg.RuleSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleSource'>RuleSource</a>&gt;;</code></pre>
 
 Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -1466,7 +1466,7 @@ The set of arguments for constructing a ConfigurationAggregator resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L181">property <b>accountAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>inputs.cfg.ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
 
 The account(s) to aggregate config data from as documented below.
 
@@ -1482,7 +1482,7 @@ The name of the configuration aggregator.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L189">property <b>organizationAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>inputs.cfg.ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
 
 The organization to aggregate config data from as documented below.
 
@@ -1508,7 +1508,7 @@ Input properties used for looking up and filtering ConfigurationAggregator resou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L155">property <b>accountAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>inputs.cfg.ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
 
 The account(s) to aggregate config data from as documented below.
 
@@ -1532,7 +1532,7 @@ The name of the configuration aggregator.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/configurationAggregator.ts#L167">property <b>organizationAggregationSource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>inputs.cfg.ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
 
 The organization to aggregate config data from as documented below.
 
@@ -1582,7 +1582,7 @@ The prefix for the specified S3 bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/deliveryChannel.ts#L200">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>inputs.cfg.DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
 
 Options for how AWS Config delivers configuration snapshots. See below
 
@@ -1632,7 +1632,7 @@ The prefix for the specified S3 bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/deliveryChannel.ts#L174">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>inputs.cfg.DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
 
 Options for how AWS Config delivers configuration snapshots. See below
 
@@ -2058,7 +2058,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/recorder.ts#L151">property <b>recordingGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>inputs.cfg.RecorderRecordingGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
 
 Recording group - see below.
 
@@ -2094,7 +2094,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/recorder.ts#L131">property <b>recordingGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>inputs.cfg.RecorderRecordingGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
 
 Recording group - see below.
 
@@ -2207,7 +2207,7 @@ The name of the rule
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L272">property <b>scope</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>inputs.cfg.RuleScope</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>RuleScope</a>&gt;;</code></pre>
 
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
@@ -2215,7 +2215,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L277">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>inputs.cfg.RuleSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>RuleSource</a>&gt;;</code></pre>
 
 Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -2291,7 +2291,7 @@ The ID of the config rule
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L236">property <b>scope</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>inputs.cfg.RuleScope</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>RuleScope</a>&gt;;</code></pre>
 
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
@@ -2299,7 +2299,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cfg/rule.ts#L241">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>inputs.cfg.RuleSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>RuleSource</a>&gt;;</code></pre>
 
 Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.

@@ -137,7 +137,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BackendAddressPool</code></pre>
 
 
 Returns true if the given object is an instance of BackendAddressPool.  This is designed to work even
@@ -279,7 +279,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancer</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
@@ -289,7 +289,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/loadBalancer.ts#L68">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoadBalancerFrontendIpConfiguration'>outputs.lb.LoadBalancerFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
 
@@ -453,7 +453,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NatPool</code></pre>
 
 
 Returns true if the given object is an instance of NatPool.  This is designed to work even
@@ -636,7 +636,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NatRule</code></pre>
 
 
 Returns true if the given object is an instance of NatRule.  This is designed to work even
@@ -827,7 +827,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutboundRule</code></pre>
 
 
 Returns true if the given object is an instance of OutboundRule.  This is designed to work even
@@ -861,7 +861,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/outboundRule.ts#L95">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutboundRuleFrontendIpConfiguration'>outputs.lb.OutboundRuleFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 
@@ -1003,7 +1003,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Probe</code></pre>
 
 
 Returns true if the given object is an instance of Probe.  This is designed to work even
@@ -1184,7 +1184,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Rule</code></pre>
 
 
 Returns true if the given object is an instance of Rule.  This is designed to work even
@@ -1502,7 +1502,7 @@ A collection of values returned by getBackendAddressPool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/getBackendAddressPool.ts#L51">property <b>backendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBackendAddressPoolBackendIpConfiguration'>outputs.lb.GetBackendAddressPoolBackendIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBackendAddressPoolBackendIpConfiguration'>GetBackendAddressPoolBackendIpConfiguration</a>[];</code></pre>
 
 An array of references to IP addresses defined in network interfaces.
 
@@ -1567,7 +1567,7 @@ A collection of values returned by getLB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/getLB.ts#L65">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLBFrontendIpConfiguration'>outputs.lb.GetLBFrontendIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLBFrontendIpConfiguration'>GetLBFrontendIpConfiguration</a>[];</code></pre>
 
 (Optional) A `frontendIpConfiguration` block as documented below.
 
@@ -1646,7 +1646,7 @@ The set of arguments for constructing a LoadBalancer resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/loadBalancer.ts#L188">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>inputs.lb.LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
 
@@ -1704,7 +1704,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/loadBalancer.ts#L150">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>inputs.lb.LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
 
@@ -2133,7 +2133,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/outboundRule.ts#L234">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>inputs.lb.OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 
@@ -2215,7 +2215,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/lb/outboundRule.ts#L192">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>inputs.lb.OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 

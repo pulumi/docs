@@ -35,7 +35,7 @@ meta_desc: "Explore members of the lambda module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Emitted as an aggregate metric for all functions in the account, and for functions that have
@@ -52,7 +52,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Incremented when Lambda is unable to write the failed event payload to your configured Dead
@@ -72,7 +72,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the elapsed wall clock time from when the function code starts executing as a result
@@ -90,7 +90,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of invocations that failed due to errors in the function (response code
@@ -116,7 +116,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of times a function is invoked in response to an event or invocation API
@@ -134,7 +134,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Emitted for stream-based invocations only (functions triggered by an Amazon DynamoDB stream
@@ -150,7 +150,7 @@ Units: Milliseconds
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LambdaMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LambdaMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="LambdaMetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -232,7 +232,7 @@ Filters the metric data by Lambda function resource, such as function version or
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -242,7 +242,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -283,7 +283,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#LambdaMetricName'>LambdaMetricName</a>, change: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#LambdaMetricName'>LambdaMetricName</a>, change: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/Lambda metric with the requested [metricName]. See
@@ -309,7 +309,7 @@ functions:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Measures the number of Lambda function invocation attempts that were throttled due to
@@ -325,7 +325,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Emitted as an aggregate metric for all functions in the account only. Not applicable for

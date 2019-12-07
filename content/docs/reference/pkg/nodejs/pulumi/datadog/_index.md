@@ -149,7 +149,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dashboard</code></pre>
 
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
@@ -200,7 +200,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L58">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariable'>outputs.DashboardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariable'>DashboardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of template variables for this dashboard.
 
@@ -225,7 +225,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L66">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidget'>outputs.DashboardWidget</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidget'>DashboardWidget</a>[]&gt;;</code></pre>
 
 The list of widgets to display on the dashboard.
 
@@ -276,7 +276,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DashboardList</code></pre>
 
 
 Returns true if the given object is an instance of DashboardList.  This is designed to work even
@@ -286,7 +286,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboardList.ts#L42">property <b>dashItems</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dashItems: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardListDashItem'>outputs.DashboardListDashItem</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dashItems: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardListDashItem'>DashboardListDashItem</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An individual dashboard object to add to this Dashboard List. If present, must contain the following:
 
@@ -383,7 +383,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Downtime</code></pre>
 
 
 Returns true if the given object is an instance of Downtime.  This is designed to work even
@@ -458,7 +458,7 @@ A list of monitor tags to match. The resulting downtime applies to monitors that
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/downtime.ts#L90">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DowntimeRecurrence'>outputs.DowntimeRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DowntimeRecurrence'>DowntimeRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A dictionary to configure the downtime to be recurring.
 
@@ -705,7 +705,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogsCustomPipeline</code></pre>
 
 
 Returns true if the given object is an instance of LogsCustomPipeline.  This is designed to work even
@@ -715,7 +715,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L198">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineFilter'>outputs.LogsCustomPipelineFilter</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -748,7 +748,7 @@ Name of the processor
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L210">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>processors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessor'>outputs.LogsCustomPipelineProcessor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>processors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Processors. Nested pipeline can't take any other nested pipeline as its processor.
 
@@ -808,7 +808,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogsIndex</code></pre>
 
 
 Returns true if the given object is an instance of LogsIndex.  This is designed to work even
@@ -818,7 +818,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L42">property <b>exclusionFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>exclusionFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexExclusionFilter'>outputs.LogsIndexExclusionFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>exclusionFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of exclusion filters.
 
@@ -826,7 +826,7 @@ List of exclusion filters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L43">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexFilter'>outputs.LogsIndexFilter</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexFilter'>LogsIndexFilter</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsIndex-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L12">property <b>id</b></a>
 </h4>
@@ -902,7 +902,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogsIndexOrder</code></pre>
 
 
 Returns true if the given object is an instance of LogsIndexOrder.  This is designed to work even
@@ -1009,7 +1009,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogsIntegrationPipeline</code></pre>
 
 
 Returns true if the given object is an instance of LogsIntegrationPipeline.  This is designed to work even
@@ -1090,7 +1090,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogsPipelineOrder</code></pre>
 
 
 Returns true if the given object is an instance of LogsPipelineOrder.  This is designed to work even
@@ -1196,7 +1196,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MetricMetadata</code></pre>
 
 
 Returns true if the given object is an instance of MetricMetadata.  This is designed to work even
@@ -1320,7 +1320,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Monitor</code></pre>
 
 
 Returns true if the given object is an instance of Monitor.  This is designed to work even
@@ -1474,7 +1474,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L114">property <b>thresholdWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>thresholdWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholdWindows'>outputs.MonitorThresholdWindows</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>thresholdWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholdWindows'>MonitorThresholdWindows</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`. Can only be used for, and are required for, anomaly monitors.
 * `recoveryWindow` describes how long an anomalous metric must be normal before the alert recovers.
@@ -1483,7 +1483,7 @@ A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L142">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholds'>outputs.MonitorThresholds</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholds'>MonitorThresholds</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 * Metric alerts:
 A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
@@ -1583,7 +1583,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -1665,7 +1665,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ScreenBoard</code></pre>
 
 
 Returns true if the given object is an instance of ScreenBoard.  This is designed to work even
@@ -1705,7 +1705,7 @@ Whether the screenboard is shared or not
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L55">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardTemplateVariable'>outputs.ScreenBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 
@@ -1730,7 +1730,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L63">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidget'>outputs.ScreenBoardWidget</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidget'>ScreenBoardWidget</a>[]&gt;;</code></pre>
 
 A list of widget definitions.
 
@@ -1864,7 +1864,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServiceLevelObjective</code></pre>
 
 
 Returns true if the given object is an instance of ServiceLevelObjective.  This is designed to work even
@@ -1923,7 +1923,7 @@ Name of Datadog service level objective
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L137">property <b>query</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveQuery'>outputs.ServiceLevelObjectiveQuery</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
 
@@ -1939,7 +1939,7 @@ A list of tags to associate with your service level objective. This can help you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L145">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveThreshold'>outputs.ServiceLevelObjectiveThreshold</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>[]&gt;;</code></pre>
 
 - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
@@ -2009,7 +2009,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SyntheticsTest</code></pre>
 
 
 Returns true if the given object is an instance of SyntheticsTest.  This is designed to work even
@@ -2058,12 +2058,12 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L45">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestOptions'>outputs.SyntheticsTestOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestOptions'>SyntheticsTestOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTest-request">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L46">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestRequest'>outputs.SyntheticsTestRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTest-requestHeaders">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L47">property <b>requestHeaders</b></a>
 </h4>
@@ -2149,7 +2149,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TimeBoard</code></pre>
 
 
 Returns true if the given object is an instance of TimeBoard.  This is designed to work even
@@ -2167,7 +2167,7 @@ A description of the dashboard's content.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L50">property <b>graphs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraph'>outputs.TimeBoardGraph</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraph'>TimeBoardGraph</a>[]&gt;;</code></pre>
 
 A list of graph definitions.
 
@@ -2189,7 +2189,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L55">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardTemplateVariable'>outputs.TimeBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 
@@ -2273,7 +2273,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -2433,7 +2433,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L174">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>inputs.DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 The list of template variables for this dashboard.
 
@@ -2449,7 +2449,7 @@ The title of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L182">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
 
 The list of widgets to display on the dashboard.
 
@@ -2467,7 +2467,7 @@ The set of arguments for constructing a DashboardList resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboardList.ts#L102">property <b>dashItems</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>inputs.DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
 
 An individual dashboard object to add to this Dashboard List. If present, must contain the following:
 
@@ -2493,7 +2493,7 @@ Input properties used for looking up and filtering DashboardList resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboardList.ts#L88">property <b>dashItems</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>inputs.DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
 
 An individual dashboard object to add to this Dashboard List. If present, must contain the following:
 
@@ -2551,7 +2551,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L140">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>inputs.DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 The list of template variables for this dashboard.
 
@@ -2567,7 +2567,7 @@ The title of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/dashboard.ts#L148">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
 
 The list of widgets to display on the dashboard.
 
@@ -2641,7 +2641,7 @@ A list of monitor tags to match. The resulting downtime applies to monitors that
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/downtime.ts#L250">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>inputs.DowntimeRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>DowntimeRecurrence</a>&gt;;</code></pre>
 
 A dictionary to configure the downtime to be recurring.
 
@@ -2747,7 +2747,7 @@ A list of monitor tags to match. The resulting downtime applies to monitors that
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/downtime.ts#L196">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>inputs.DowntimeRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>DowntimeRecurrence</a>&gt;;</code></pre>
 
 A dictionary to configure the downtime to be recurring.
 
@@ -2963,7 +2963,7 @@ The set of arguments for constructing a LogsCustomPipeline resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L281">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>inputs.LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -2987,7 +2987,7 @@ Name of the processor
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L293">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>inputs.LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
 
 Processors. Nested pipeline can't take any other nested pipeline as its processor.
 
@@ -3005,7 +3005,7 @@ Input properties used for looking up and filtering LogsCustomPipeline resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L259">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>inputs.LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
 
 Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 
@@ -3029,7 +3029,7 @@ Name of the processor
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsCustomPipeline.ts#L271">property <b>processors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>inputs.LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
 
 Processors. Nested pipeline can't take any other nested pipeline as its processor.
 
@@ -3047,7 +3047,7 @@ The set of arguments for constructing a LogsIndex resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L109">property <b>exclusionFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>inputs.LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
 
 List of exclusion filters.
 
@@ -3055,7 +3055,7 @@ List of exclusion filters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L110">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>inputs.LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsIndexArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L114">property <b>name</b></a>
 </h4>
@@ -3130,7 +3130,7 @@ Input properties used for looking up and filtering LogsIndex resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L94">property <b>exclusionFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>inputs.LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
 
 List of exclusion filters.
 
@@ -3138,7 +3138,7 @@ List of exclusion filters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L95">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>inputs.LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsIndexState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/logsIndex.ts#L99">property <b>name</b></a>
 </h4>
@@ -3512,7 +3512,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L441">property <b>thresholdWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholdWindows'>inputs.MonitorThresholdWindows</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholdWindows'>MonitorThresholdWindows</a>&gt;;</code></pre>
 
 A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`. Can only be used for, and are required for, anomaly monitors.
 * `recoveryWindow` describes how long an anomalous metric must be normal before the alert recovers.
@@ -3521,7 +3521,7 @@ A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L469">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholds'>inputs.MonitorThresholds</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholds'>MonitorThresholds</a>&gt;;</code></pre>
 
 * Metric alerts:
 A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
@@ -3720,7 +3720,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L316">property <b>thresholdWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholdWindows'>inputs.MonitorThresholdWindows</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholdWindows'>MonitorThresholdWindows</a>&gt;;</code></pre>
 
 A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`. Can only be used for, and are required for, anomaly monitors.
 * `recoveryWindow` describes how long an anomalous metric must be normal before the alert recovers.
@@ -3729,7 +3729,7 @@ A mapping containing `recoveryWindow` and `triggerWindow` values, e.g. `last15m`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/monitor.ts#L344">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholds'>inputs.MonitorThresholds</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholds'>MonitorThresholds</a>&gt;;</code></pre>
 
 * Metric alerts:
 A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
@@ -3839,7 +3839,7 @@ Whether the screenboard is shared or not
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L162">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>inputs.ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 
@@ -3855,7 +3855,7 @@ Name of the screenboard
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L170">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>inputs.ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
 
 A list of widget definitions.
 
@@ -3902,7 +3902,7 @@ Whether the screenboard is shared or not
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L131">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>inputs.ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 
@@ -3918,7 +3918,7 @@ Name of the screenboard
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/screenBoard.ts#L139">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>inputs.ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
 
 A list of widget definitions.
 
@@ -3984,7 +3984,7 @@ Name of Datadog service level objective
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L277">property <b>query</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>inputs.ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
 
 The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
 
@@ -4000,7 +4000,7 @@ A list of tags to associate with your service level objective. This can help you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L285">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>inputs.ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
 
 - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
@@ -4068,7 +4068,7 @@ Name of Datadog service level objective
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L233">property <b>query</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>inputs.ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
 
 The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
 
@@ -4084,7 +4084,7 @@ A list of tags to associate with your service level objective. This can help you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/serviceLevelObjective.ts#L241">property <b>thresholds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>inputs.ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
 
 - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
@@ -4137,12 +4137,12 @@ The set of arguments for constructing a SyntheticsTest resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L151">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>inputs.SyntheticsTestOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>SyntheticsTestOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-request">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L152">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>inputs.SyntheticsTestRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-requestHeaders">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L153">property <b>requestHeaders</b></a>
 </h4>
@@ -4212,12 +4212,12 @@ Input properties used for looking up and filtering SyntheticsTest resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L133">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>inputs.SyntheticsTestOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>SyntheticsTestOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestState-request">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L134">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>inputs.SyntheticsTestRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestState-requestHeaders">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/syntheticsTest.ts#L135">property <b>requestHeaders</b></a>
 </h4>
@@ -4265,7 +4265,7 @@ A description of the dashboard's content.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L140">property <b>graphs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>inputs.TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
 
 A list of graph definitions.
 
@@ -4278,7 +4278,7 @@ A list of graph definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L145">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>inputs.TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 
@@ -4312,7 +4312,7 @@ A description of the dashboard's content.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L117">property <b>graphs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>graphs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>inputs.TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>graphs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
 
 A list of graph definitions.
 
@@ -4325,7 +4325,7 @@ A list of graph definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/timeBoard.ts#L122">property <b>templateVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>inputs.TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
 
 A list of template variables for using Dashboard templating.
 

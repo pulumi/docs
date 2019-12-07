@@ -121,7 +121,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CatalogDatabase</code></pre>
 
 
 Returns true if the given object is an instance of CatalogDatabase.  This is designed to work even
@@ -302,7 +302,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CatalogTable</code></pre>
 
 
 Returns true if the given object is an instance of CatalogTable.  This is designed to work even
@@ -369,7 +369,7 @@ A map of initialization parameters for the SerDe, in key-value form.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L136">property <b>partitionKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>partitionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTablePartitionKey'>outputs.glue.CatalogTablePartitionKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>partitionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 
@@ -385,7 +385,7 @@ Retention time for this table.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L144">property <b>storageDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptor'>outputs.glue.CatalogTableStorageDescriptor</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 
@@ -537,7 +537,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Classifier</code></pre>
 
 
 Returns true if the given object is an instance of Classifier.  This is designed to work even
@@ -547,7 +547,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L110">property <b>csvClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>csvClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierCsvClassifier'>outputs.glue.ClassifierCsvClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>csvClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierCsvClassifier'>ClassifierCsvClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A classifier for Csv content. Defined below.
 
@@ -555,7 +555,7 @@ A classifier for Csv content. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L114">property <b>grokClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>grokClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierGrokClassifier'>outputs.glue.ClassifierGrokClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>grokClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierGrokClassifier'>ClassifierGrokClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A classifier that uses grok patterns. Defined below.
 
@@ -572,7 +572,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L118">property <b>jsonClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>jsonClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierJsonClassifier'>outputs.glue.ClassifierJsonClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>jsonClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierJsonClassifier'>ClassifierJsonClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A classifier for JSON content. Defined below.
 
@@ -597,7 +597,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L126">property <b>xmlClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>xmlClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierXmlClassifier'>outputs.glue.ClassifierXmlClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>xmlClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierXmlClassifier'>ClassifierXmlClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A classifier for XML content. Defined below.
 
@@ -689,7 +689,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Connection</code></pre>
 
 
 Returns true if the given object is an instance of Connection.  This is designed to work even
@@ -756,7 +756,7 @@ The name of the connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/connection.ts#L107">property <b>physicalConnectionRequirements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>physicalConnectionRequirements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConnectionPhysicalConnectionRequirements'>outputs.glue.ConnectionPhysicalConnectionRequirements</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>physicalConnectionRequirements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 
@@ -893,7 +893,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Crawler</code></pre>
 
 
 Returns true if the given object is an instance of Crawler.  This is designed to work even
@@ -911,7 +911,7 @@ The ARN of the crawler
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L120">property <b>catalogTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>catalogTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerCatalogTarget'>outputs.glue.CrawlerCatalogTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>catalogTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Crawler-classifiers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L124">property <b>classifiers</b></a>
 </h4>
@@ -948,7 +948,7 @@ Description of the crawler.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L140">property <b>dynamodbTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dynamodbTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerDynamodbTarget'>outputs.glue.CrawlerDynamodbTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dynamodbTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of nested DynamoDB target arguments. See below.
 
@@ -965,7 +965,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L144">property <b>jdbcTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>jdbcTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerJdbcTarget'>outputs.glue.CrawlerJdbcTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>jdbcTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of nested JBDC target arguments. See below.
 
@@ -989,7 +989,7 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L156">property <b>s3Targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>s3Targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerS3Target'>outputs.glue.CrawlerS3Target</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>s3Targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerS3Target'>CrawlerS3Target</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List nested Amazon S3 target arguments. See below.
 
@@ -1005,7 +1005,7 @@ A cron expression used to specify the schedule. For more information, see [Time-
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L164">property <b>schemaChangePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schemaChangePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerSchemaChangePolicy'>outputs.glue.CrawlerSchemaChangePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schemaChangePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Policy for the crawler's update and deletion behavior.
 
@@ -1146,7 +1146,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
@@ -1172,7 +1172,7 @@ Amazon Resource Name (ARN) of Glue Job
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L107">property <b>command</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobCommand'>outputs.glue.JobCommand</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobCommand'>JobCommand</a>&gt;;</code></pre>
 
 The command of the job. Defined below.
 
@@ -1204,7 +1204,7 @@ Description of the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L123">property <b>executionProperty</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>executionProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobExecutionProperty'>outputs.glue.JobExecutionProperty</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>executionProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</code></pre>
 
 Execution property of the job. Defined below.
 
@@ -1377,7 +1377,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of SecurityConfiguration.  This is designed to work even
@@ -1387,7 +1387,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/securityConfiguration.ts#L66">property <b>encryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityConfigurationEncryptionConfiguration'>outputs.glue.SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
 
 Configuration block containing encryption configuration. Detailed below.
 
@@ -1561,7 +1561,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Trigger</code></pre>
 
 
 Returns true if the given object is an instance of Trigger.  This is designed to work even
@@ -1571,7 +1571,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L139">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerAction'>outputs.glue.TriggerAction</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerAction'>TriggerAction</a>[]&gt;;</code></pre>
 
 List of actions initiated by this trigger when it fires. Defined below.
 
@@ -1620,7 +1620,7 @@ The name of the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L159">property <b>predicate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>predicate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerPredicate'>outputs.glue.TriggerPredicate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>predicate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerPredicate'>TriggerPredicate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 
@@ -1745,7 +1745,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Workflow</code></pre>
 
 
 Returns true if the given object is an instance of Workflow.  This is designed to work even
@@ -2165,7 +2165,7 @@ A map of initialization parameters for the SerDe, in key-value form.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L296">property <b>partitionKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionKey'>inputs.glue.CatalogTablePartitionKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>&gt;[]&gt;;</code></pre>
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 
@@ -2181,7 +2181,7 @@ Retention time for this table.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L304">property <b>storageDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptor'>inputs.glue.CatalogTableStorageDescriptor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a>&gt;;</code></pre>
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 
@@ -2271,7 +2271,7 @@ A map of initialization parameters for the SerDe, in key-value form.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L242">property <b>partitionKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionKey'>inputs.glue.CatalogTablePartitionKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>&gt;[]&gt;;</code></pre>
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 
@@ -2287,7 +2287,7 @@ Retention time for this table.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/catalogTable.ts#L250">property <b>storageDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptor'>inputs.glue.CatalogTableStorageDescriptor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a>&gt;;</code></pre>
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 
@@ -2329,7 +2329,7 @@ The set of arguments for constructing a Classifier resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L197">property <b>csvClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>csvClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierCsvClassifier'>inputs.glue.ClassifierCsvClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>csvClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierCsvClassifier'>ClassifierCsvClassifier</a>&gt;;</code></pre>
 
 A classifier for Csv content. Defined below.
 
@@ -2337,7 +2337,7 @@ A classifier for Csv content. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L201">property <b>grokClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierGrokClassifier'>inputs.glue.ClassifierGrokClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierGrokClassifier'>ClassifierGrokClassifier</a>&gt;;</code></pre>
 
 A classifier that uses grok patterns. Defined below.
 
@@ -2345,7 +2345,7 @@ A classifier that uses grok patterns. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L205">property <b>jsonClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierJsonClassifier'>inputs.glue.ClassifierJsonClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierJsonClassifier'>ClassifierJsonClassifier</a>&gt;;</code></pre>
 
 A classifier for JSON content. Defined below.
 
@@ -2361,7 +2361,7 @@ The name of the classifier.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L213">property <b>xmlClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierXmlClassifier'>inputs.glue.ClassifierXmlClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierXmlClassifier'>ClassifierXmlClassifier</a>&gt;;</code></pre>
 
 A classifier for XML content. Defined below.
 
@@ -2379,7 +2379,7 @@ Input properties used for looking up and filtering Classifier resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L171">property <b>csvClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>csvClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierCsvClassifier'>inputs.glue.ClassifierCsvClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>csvClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierCsvClassifier'>ClassifierCsvClassifier</a>&gt;;</code></pre>
 
 A classifier for Csv content. Defined below.
 
@@ -2387,7 +2387,7 @@ A classifier for Csv content. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L175">property <b>grokClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierGrokClassifier'>inputs.glue.ClassifierGrokClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierGrokClassifier'>ClassifierGrokClassifier</a>&gt;;</code></pre>
 
 A classifier that uses grok patterns. Defined below.
 
@@ -2395,7 +2395,7 @@ A classifier that uses grok patterns. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L179">property <b>jsonClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierJsonClassifier'>inputs.glue.ClassifierJsonClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierJsonClassifier'>ClassifierJsonClassifier</a>&gt;;</code></pre>
 
 A classifier for JSON content. Defined below.
 
@@ -2411,7 +2411,7 @@ The name of the classifier.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/classifier.ts#L187">property <b>xmlClassifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierXmlClassifier'>inputs.glue.ClassifierXmlClassifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierXmlClassifier'>ClassifierXmlClassifier</a>&gt;;</code></pre>
 
 A classifier for XML content. Defined below.
 
@@ -2477,7 +2477,7 @@ The name of the connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/connection.ts#L217">property <b>physicalConnectionRequirements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConnectionPhysicalConnectionRequirements'>inputs.glue.ConnectionPhysicalConnectionRequirements</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a>&gt;;</code></pre>
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 
@@ -2543,7 +2543,7 @@ The name of the connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/connection.ts#L183">property <b>physicalConnectionRequirements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConnectionPhysicalConnectionRequirements'>inputs.glue.ConnectionPhysicalConnectionRequirements</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a>&gt;;</code></pre>
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 
@@ -2561,7 +2561,7 @@ The set of arguments for constructing a Crawler resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L313">property <b>catalogTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerCatalogTarget'>inputs.glue.CrawlerCatalogTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CrawlerArgs-classifiers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L317">property <b>classifiers</b></a>
 </h4>
@@ -2598,7 +2598,7 @@ Description of the crawler.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L333">property <b>dynamodbTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerDynamodbTarget'>inputs.glue.CrawlerDynamodbTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>&gt;[]&gt;;</code></pre>
 
 List of nested DynamoDB target arguments. See below.
 
@@ -2606,7 +2606,7 @@ List of nested DynamoDB target arguments. See below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L337">property <b>jdbcTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerJdbcTarget'>inputs.glue.CrawlerJdbcTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>&gt;[]&gt;;</code></pre>
 
 List of nested JBDC target arguments. See below.
 
@@ -2630,7 +2630,7 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L349">property <b>s3Targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerS3Target'>inputs.glue.CrawlerS3Target</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerS3Target'>CrawlerS3Target</a>&gt;[]&gt;;</code></pre>
 
 List nested Amazon S3 target arguments. See below.
 
@@ -2646,7 +2646,7 @@ A cron expression used to specify the schedule. For more information, see [Time-
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L357">property <b>schemaChangePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerSchemaChangePolicy'>inputs.glue.CrawlerSchemaChangePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a>&gt;;</code></pre>
 
 Policy for the crawler's update and deletion behavior.
 
@@ -2696,7 +2696,7 @@ The ARN of the crawler
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L250">property <b>catalogTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerCatalogTarget'>inputs.glue.CrawlerCatalogTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CrawlerState-classifiers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L254">property <b>classifiers</b></a>
 </h4>
@@ -2733,7 +2733,7 @@ Description of the crawler.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L270">property <b>dynamodbTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerDynamodbTarget'>inputs.glue.CrawlerDynamodbTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>&gt;[]&gt;;</code></pre>
 
 List of nested DynamoDB target arguments. See below.
 
@@ -2741,7 +2741,7 @@ List of nested DynamoDB target arguments. See below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L274">property <b>jdbcTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerJdbcTarget'>inputs.glue.CrawlerJdbcTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>&gt;[]&gt;;</code></pre>
 
 List of nested JBDC target arguments. See below.
 
@@ -2765,7 +2765,7 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L286">property <b>s3Targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerS3Target'>inputs.glue.CrawlerS3Target</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerS3Target'>CrawlerS3Target</a>&gt;[]&gt;;</code></pre>
 
 List nested Amazon S3 target arguments. See below.
 
@@ -2781,7 +2781,7 @@ A cron expression used to specify the schedule. For more information, see [Time-
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/crawler.ts#L294">property <b>schemaChangePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerSchemaChangePolicy'>inputs.glue.CrawlerSchemaChangePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a>&gt;;</code></pre>
 
 Policy for the crawler's update and deletion behavior.
 
@@ -2823,7 +2823,7 @@ A collection of arguments for invoking getScript.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/getScript.ts#L230">property <b>dagEdges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dagEdges: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagEdge'>inputs.glue.GetScriptDagEdge</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dagEdges: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagEdge'>GetScriptDagEdge</a>[];</code></pre>
 
 A list of the edges in the DAG. Defined below.
 
@@ -2831,7 +2831,7 @@ A list of the edges in the DAG. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/getScript.ts#L234">property <b>dagNodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dagNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagNode'>inputs.glue.GetScriptDagNode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dagNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagNode'>GetScriptDagNode</a>[];</code></pre>
 
 A list of the nodes in the DAG. Defined below.
 
@@ -2857,12 +2857,12 @@ A collection of values returned by getScript.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/getScript.ts#L245">property <b>dagEdges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dagEdges: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagEdge'>outputs.glue.GetScriptDagEdge</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dagEdges: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagEdge'>GetScriptDagEdge</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetScriptResult-dagNodes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/getScript.ts#L246">property <b>dagNodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dagNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagNode'>outputs.glue.GetScriptDagNode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dagNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagNode'>GetScriptDagNode</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetScriptResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/getScript.ts#L259">property <b>id</b></a>
 </h4>
@@ -2914,7 +2914,7 @@ The set of arguments for constructing a Job resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L316">property <b>command</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobCommand'>inputs.glue.JobCommand</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobCommand'>JobCommand</a>&gt;;</code></pre>
 
 The command of the job. Defined below.
 
@@ -2946,7 +2946,7 @@ Description of the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L332">property <b>executionProperty</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobExecutionProperty'>inputs.glue.JobExecutionProperty</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</code></pre>
 
 Execution property of the job. Defined below.
 
@@ -3060,7 +3060,7 @@ Amazon Resource Name (ARN) of Glue Job
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L246">property <b>command</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobCommand'>inputs.glue.JobCommand</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobCommand'>JobCommand</a>&gt;;</code></pre>
 
 The command of the job. Defined below.
 
@@ -3092,7 +3092,7 @@ Description of the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/job.ts#L262">property <b>executionProperty</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobExecutionProperty'>inputs.glue.JobExecutionProperty</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</code></pre>
 
 Execution property of the job. Defined below.
 
@@ -3190,7 +3190,7 @@ The set of arguments for constructing a SecurityConfiguration resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/securityConfiguration.ts#L126">property <b>encryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityConfigurationEncryptionConfiguration'>inputs.glue.SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
 
 Configuration block containing encryption configuration. Detailed below.
 
@@ -3216,7 +3216,7 @@ Input properties used for looking up and filtering SecurityConfiguration resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/securityConfiguration.ts#L112">property <b>encryptionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityConfigurationEncryptionConfiguration'>inputs.glue.SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</code></pre>
 
 Configuration block containing encryption configuration. Detailed below.
 
@@ -3242,7 +3242,7 @@ The set of arguments for constructing a Trigger resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L282">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerAction'>inputs.glue.TriggerAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerAction'>TriggerAction</a>&gt;[]&gt;;</code></pre>
 
 List of actions initiated by this trigger when it fires. Defined below.
 
@@ -3274,7 +3274,7 @@ The name of the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L298">property <b>predicate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicate'>inputs.glue.TriggerPredicate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicate'>TriggerPredicate</a>&gt;;</code></pre>
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 
@@ -3324,7 +3324,7 @@ Input properties used for looking up and filtering Trigger resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L236">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerAction'>inputs.glue.TriggerAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerAction'>TriggerAction</a>&gt;[]&gt;;</code></pre>
 
 List of actions initiated by this trigger when it fires. Defined below.
 
@@ -3364,7 +3364,7 @@ The name of the trigger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/glue/trigger.ts#L256">property <b>predicate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicate'>inputs.glue.TriggerPredicate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicate'>TriggerPredicate</a>&gt;;</code></pre>
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 

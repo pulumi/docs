@@ -124,7 +124,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Alias</code></pre>
 
 
 Returns true if the given object is an instance of Alias.  This is designed to work even
@@ -264,7 +264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Ciphertext</code></pre>
 
 
 Returns true if the given object is an instance of Ciphertext.  This is designed to work even
@@ -382,7 +382,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExternalKey</code></pre>
 
 
 Returns true if the given object is an instance of ExternalKey.  This is designed to work even
@@ -582,7 +582,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Grant</code></pre>
 
 
 Returns true if the given object is an instance of Grant.  This is designed to work even
@@ -592,7 +592,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/grant.ts#L83">property <b>constraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>constraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GrantConstraint'>outputs.kms.GrantConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>constraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GrantConstraint'>GrantConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 
@@ -746,7 +746,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Key</code></pre>
 
 
 Returns true if the given object is an instance of Key.  This is designed to work even
@@ -1567,7 +1567,7 @@ A collection of arguments for invoking getSecret.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecret.ts#L33">property <b>secrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretSecret'>inputs.kms.GetSecretSecret</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretSecret'>GetSecretSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretResult" data-link-title="GetSecretResult">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecret.ts#L39">
         interface <strong>GetSecretResult</strong>
@@ -1590,7 +1590,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecret.ts#L40">property <b>secrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretSecret'>outputs.kms.GetSecretSecret</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretSecret'>GetSecretSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretsArgs" data-link-title="GetSecretsArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecrets.ts#L32">
         interface <strong>GetSecretsArgs</strong>
@@ -1605,7 +1605,7 @@ A collection of arguments for invoking getSecrets.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecrets.ts#L36">property <b>secrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretsSecret'>inputs.kms.GetSecretsSecret</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretsSecret'>GetSecretsSecret</a>[];</code></pre>
 
 One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
 
@@ -1639,7 +1639,7 @@ Map containing each `secret` `name` as the key with its decrypted plaintext valu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/getSecrets.ts#L47">property <b>secrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretsSecret'>outputs.kms.GetSecretsSecret</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretsSecret'>GetSecretsSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GrantArgs" data-link-title="GrantArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/grant.ts#L223">
         interface <strong>GrantArgs</strong>
@@ -1654,7 +1654,7 @@ The set of arguments for constructing a Grant resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/grant.ts#L227">property <b>constraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>inputs.kms.GrantConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>GrantConstraint</a>&gt;[]&gt;;</code></pre>
 
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 
@@ -1727,7 +1727,7 @@ Input properties used for looking up and filtering Grant resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/kms/grant.ts#L182">property <b>constraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>inputs.kms.GrantConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>GrantConstraint</a>&gt;[]&gt;;</code></pre>
 
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 

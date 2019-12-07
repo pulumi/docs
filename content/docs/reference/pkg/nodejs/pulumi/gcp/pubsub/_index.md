@@ -104,7 +104,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subscription</code></pre>
 
 
 Returns true if the given object is an instance of Subscription.  This is designed to work even
@@ -130,7 +130,7 @@ system will eventually redeliver the message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L57">property <b>expirationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>expirationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionExpirationPolicy'>outputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>expirationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionExpirationPolicy'>SubscriptionExpirationPolicy</a>&gt;;</code></pre>
 
 A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as
 long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations
@@ -192,7 +192,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L84">property <b>pushConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pushConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionPushConfig'>outputs.pubsub.SubscriptionPushConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pushConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionPushConfig'>SubscriptionPushConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies
 that the subscriber will pull and ack messages using API methods.
@@ -324,7 +324,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubscriptionIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of SubscriptionIAMBinding.  This is designed to work even
@@ -334,7 +334,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L93">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionIAMBindingCondition'>outputs.pubsub.SubscriptionIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionIAMBindingCondition'>SubscriptionIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L97">property <b>etag</b></a>
 </h4>
@@ -494,7 +494,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubscriptionIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of SubscriptionIAMMember.  This is designed to work even
@@ -504,7 +504,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L93">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionIAMMemberCondition'>outputs.pubsub.SubscriptionIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionIAMMemberCondition'>SubscriptionIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L97">property <b>etag</b></a>
 </h4>
@@ -664,7 +664,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubscriptionIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of SubscriptionIAMPolicy.  This is designed to work even
@@ -769,7 +769,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Topic</code></pre>
 
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
@@ -780,7 +780,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Creates and publishes a Cloud Functions that will be triggered by messages published to
@@ -822,7 +822,7 @@ A set of key/value label pairs to assign to this Topic.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topic.ts#L54">property <b>messageStoragePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>messageStoragePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicMessageStoragePolicy'>outputs.pubsub.TopicMessageStoragePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>messageStoragePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicMessageStoragePolicy'>TopicMessageStoragePolicy</a>&gt;;</code></pre>
 
 Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If
 not present, then no constraints are in effect.
@@ -900,7 +900,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of TopicIAMBinding.  This is designed to work even
@@ -910,7 +910,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicIAMBindingCondition'>outputs.pubsub.TopicIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicIAMBindingCondition'>TopicIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L43">property <b>etag</b></a>
 </h4>
@@ -1016,7 +1016,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of TopicIAMMember.  This is designed to work even
@@ -1026,7 +1026,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicIAMMemberCondition'>outputs.pubsub.TopicIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TopicIAMMemberCondition'>TopicIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L43">property <b>etag</b></a>
 </h4>
@@ -1132,7 +1132,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of TopicIAMPolicy.  This is designed to work even
@@ -1223,7 +1223,7 @@ system will eventually redeliver the message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L227">property <b>expirationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>inputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>SubscriptionExpirationPolicy</a>&gt;;</code></pre>
 
 A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as
 long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations
@@ -1271,7 +1271,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L253">property <b>pushConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>inputs.pubsub.SubscriptionPushConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>SubscriptionPushConfig</a>&gt;;</code></pre>
 
 If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies
 that the subscriber will pull and ack messages using API methods.
@@ -1307,7 +1307,7 @@ The set of arguments for constructing a SubscriptionIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L193">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMBindingCondition'>inputs.pubsub.SubscriptionIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMBindingCondition'>SubscriptionIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L194">property <b>members</b></a>
 </h4>
@@ -1354,7 +1354,7 @@ Input properties used for looking up and filtering SubscriptionIAMBinding resour
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L166">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMBindingCondition'>inputs.pubsub.SubscriptionIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMBindingCondition'>SubscriptionIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L170">property <b>etag</b></a>
 </h4>
@@ -1409,7 +1409,7 @@ The set of arguments for constructing a SubscriptionIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L193">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMMemberCondition'>inputs.pubsub.SubscriptionIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMMemberCondition'>SubscriptionIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L194">property <b>member</b></a>
 </h4>
@@ -1456,7 +1456,7 @@ Input properties used for looking up and filtering SubscriptionIAMMember resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L166">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMMemberCondition'>inputs.pubsub.SubscriptionIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionIAMMemberCondition'>SubscriptionIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L170">property <b>etag</b></a>
 </h4>
@@ -1607,7 +1607,7 @@ system will eventually redeliver the message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L166">property <b>expirationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>inputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>SubscriptionExpirationPolicy</a>&gt;;</code></pre>
 
 A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as
 long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations
@@ -1660,7 +1660,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/subscription.ts#L193">property <b>pushConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>inputs.pubsub.SubscriptionPushConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>SubscriptionPushConfig</a>&gt;;</code></pre>
 
 If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies
 that the subscriber will pull and ack messages using API methods.
@@ -1715,7 +1715,7 @@ A set of key/value label pairs to assign to this Topic.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topic.ts#L151">property <b>messageStoragePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>messageStoragePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicMessageStoragePolicy'>inputs.pubsub.TopicMessageStoragePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>messageStoragePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicMessageStoragePolicy'>TopicMessageStoragePolicy</a>&gt;;</code></pre>
 
 Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If
 not present, then no constraints are in effect.
@@ -1743,7 +1743,7 @@ If it is not provided, the provider project is used.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Context'>Context</a></code></pre>
 
 Shape of the [context] object passed to a Cloud Function when a topic event fires.
 
@@ -1817,7 +1817,7 @@ message.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicEventCallbackFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicEventCallbackFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunctionArgs'>CallbackFunctionArgs</a></code></pre>
 
 Arguments that can be provided to control the Cloud Function created as the serverless endpoint
 for a topic event.
@@ -1959,7 +1959,7 @@ The set of arguments for constructing a TopicIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L139">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMBindingCondition'>inputs.pubsub.TopicIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMBindingCondition'>TopicIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L140">property <b>members</b></a>
 </h4>
@@ -2006,7 +2006,7 @@ Input properties used for looking up and filtering TopicIAMBinding resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L112">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMBindingCondition'>inputs.pubsub.TopicIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMBindingCondition'>TopicIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMBinding.ts#L116">property <b>etag</b></a>
 </h4>
@@ -2061,7 +2061,7 @@ The set of arguments for constructing a TopicIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L139">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMMemberCondition'>inputs.pubsub.TopicIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMMemberCondition'>TopicIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L140">property <b>member</b></a>
 </h4>
@@ -2108,7 +2108,7 @@ Input properties used for looking up and filtering TopicIAMMember resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L112">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMMemberCondition'>inputs.pubsub.TopicIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicIAMMemberCondition'>TopicIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topicIAMMember.ts#L116">property <b>etag</b></a>
 </h4>
@@ -2279,7 +2279,7 @@ A set of key/value label pairs to assign to this Topic.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/pubsub/topic.ts#L120">property <b>messageStoragePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>messageStoragePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicMessageStoragePolicy'>inputs.pubsub.TopicMessageStoragePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>messageStoragePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TopicMessageStoragePolicy'>TopicMessageStoragePolicy</a>&gt;;</code></pre>
 
 Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If
 not present, then no constraints are in effect.

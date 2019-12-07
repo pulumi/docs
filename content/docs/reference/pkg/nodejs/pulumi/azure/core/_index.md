@@ -118,7 +118,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceGroup</code></pre>
 
 
 Returns true if the given object is an instance of ResourceGroup.  This is designed to work even
@@ -304,7 +304,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TemplateDeployment</code></pre>
 
 
 Returns true if the given object is an instance of TemplateDeployment.  This is designed to work even
@@ -746,7 +746,7 @@ The name of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/core/getResources.ts#L83">property <b>resources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetResourcesResource'>outputs.core.GetResourcesResource</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetResourcesResource'>GetResourcesResource</a>[];</code></pre>
 
 One or more `resource` blocks as defined below.
 
@@ -921,7 +921,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/core/getSubscriptions.ts#L65">property <b>subscriptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSubscriptionsSubscription'>outputs.core.GetSubscriptionsSubscription</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSubscriptionsSubscription'>GetSubscriptionsSubscription</a>[];</code></pre>
 
 One or more `subscription` blocks as defined below.
 

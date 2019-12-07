@@ -169,7 +169,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Domain</code></pre>
 
 
 Returns true if the given object is an instance of Domain.  This is designed to work even
@@ -372,7 +372,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainRecord</code></pre>
 
 
 Returns true if the given object is an instance of DomainRecord.  This is designed to work even
@@ -583,7 +583,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Image</code></pre>
 
 
 Returns true if the given object is an instance of Image.  This is designed to work even
@@ -751,7 +751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -761,7 +761,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L39">property <b>alerts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>alerts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceAlerts'>outputs.InstanceAlerts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>alerts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceAlerts'>InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-authorizedKeys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L43">property <b>authorizedKeys</b></a>
 </h4>
@@ -790,7 +790,7 @@ A Backup ID from another Linode's available backups. Your User must have readWri
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L55">property <b>backups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackups'>outputs.InstanceBackups</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackups'>InstanceBackups</a>&gt;;</code></pre>
 
 Information about this Linode's backups status.
 
@@ -814,7 +814,7 @@ The Label of the Instance Config that should be used to boot the Linode instance
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L67">property <b>configs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>configs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfig'>outputs.InstanceConfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>configs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfig'>InstanceConfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
@@ -822,7 +822,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L68">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceDisk'>outputs.InstanceDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceDisk'>InstanceDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-group">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L72">property <b>group</b></a>
 </h4>
@@ -919,7 +919,7 @@ The password that will be initialially assigned to the 'root' user account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L112">property <b>specs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>specs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceSpecs'>outputs.InstanceSpecs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>specs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceSpecs'>InstanceSpecs</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-stackscriptData">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L116">property <b>stackscriptData</b></a>
 </h4>
@@ -1032,7 +1032,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeBalancer</code></pre>
 
 
 Returns true if the given object is an instance of NodeBalancer.  This is designed to work even
@@ -1112,7 +1112,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancer.ts#L68">property <b>transfer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>transfer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerTransfer'>outputs.NodeBalancerTransfer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>transfer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerTransfer'>NodeBalancerTransfer</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancer-updated">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancer.ts#L69">property <b>updated</b></a>
 </h4>
@@ -1174,7 +1174,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeBalancerConfig</code></pre>
 
 
 Returns true if the given object is an instance of NodeBalancerConfig.  This is designed to work even
@@ -1266,7 +1266,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancerConfig.ts#L76">property <b>nodeStatus</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodeStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerConfigNodeStatus'>outputs.NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodeStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerConfigNodeStatus'>NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-nodebalancerId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancerConfig.ts#L80">property <b>nodebalancerId</b></a>
 </h4>
@@ -1387,7 +1387,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeBalancerNode</code></pre>
 
 
 Returns true if the given object is an instance of NodeBalancerNode.  This is designed to work even
@@ -1516,7 +1516,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ObjectStorageBucket</code></pre>
 
 
 Returns true if the given object is an instance of ObjectStorageBucket.  This is designed to work even
@@ -1626,7 +1626,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ObjectStorageKey</code></pre>
 
 
 Returns true if the given object is an instance of ObjectStorageKey.  This is designed to work even
@@ -1715,7 +1715,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -1818,7 +1818,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Rdns</code></pre>
 
 
 Returns true if the given object is an instance of Rdns.  This is designed to work even
@@ -1937,7 +1937,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SshKey</code></pre>
 
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
@@ -2032,7 +2032,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StackScript</code></pre>
 
 
 Returns true if the given object is an instance of StackScript.  This is designed to work even
@@ -2140,7 +2140,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/stackScript.ts#L83">property <b>userDefinedFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>userDefinedFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#StackScriptUserDefinedField'>outputs.StackScriptUserDefinedField</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>userDefinedFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#StackScriptUserDefinedField'>StackScriptUserDefinedField</a>[]&gt;;</code></pre>
 
 This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -2208,7 +2208,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Token</code></pre>
 
 
 Returns true if the given object is an instance of Token.  This is designed to work even
@@ -2373,7 +2373,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Volume</code></pre>
 
 
 Returns true if the given object is an instance of Volume.  This is designed to work even
@@ -3668,7 +3668,7 @@ A collection of values returned by getInstanceType.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getInstanceType.ts#L78">property <b>addons</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddons'>outputs.GetInstanceTypeAddons</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddons'>GetInstanceTypeAddons</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-class">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getInstanceType.ts#L79">property <b>class</b></a>
 </h4>
@@ -3703,7 +3703,7 @@ A collection of values returned by getInstanceType.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getInstanceType.ts#L85">property <b>price</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>price: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypePrice'>outputs.GetInstanceTypePrice</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>price: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypePrice'>GetInstanceTypePrice</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-transfer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getInstanceType.ts#L86">property <b>transfer</b></a>
 </h4>
@@ -3915,7 +3915,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getProfile.ts#L84">property <b>referrals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>referrals: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetProfileReferrals'>outputs.GetProfileReferrals</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>referrals: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetProfileReferrals'>GetProfileReferrals</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-restricted">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/getProfile.ts#L85">property <b>restricted</b></a>
 </h4>
@@ -4252,7 +4252,7 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L337">property <b>alerts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>inputs.InstanceAlerts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-authorizedKeys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L341">property <b>authorizedKeys</b></a>
 </h4>
@@ -4297,7 +4297,7 @@ The Label of the Instance Config that should be used to boot the Linode instance
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L361">property <b>configs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>inputs.InstanceConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>InstanceConfig</a>&gt;[]&gt;;</code></pre>
 
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
@@ -4305,7 +4305,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L362">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>inputs.InstanceDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>InstanceDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-group">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L366">property <b>group</b></a>
 </h4>
@@ -4416,7 +4416,7 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L229">property <b>alerts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>inputs.InstanceAlerts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-authorizedKeys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L233">property <b>authorizedKeys</b></a>
 </h4>
@@ -4445,7 +4445,7 @@ A Backup ID from another Linode's available backups. Your User must have readWri
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L245">property <b>backups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceBackups'>inputs.InstanceBackups</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceBackups'>InstanceBackups</a>&gt;;</code></pre>
 
 Information about this Linode's backups status.
 
@@ -4469,7 +4469,7 @@ The Label of the Instance Config that should be used to boot the Linode instance
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L257">property <b>configs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>inputs.InstanceConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>InstanceConfig</a>&gt;[]&gt;;</code></pre>
 
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
@@ -4477,7 +4477,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L258">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>inputs.InstanceDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>InstanceDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-group">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L262">property <b>group</b></a>
 </h4>
@@ -4565,7 +4565,7 @@ The password that will be initialially assigned to the 'root' user account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L302">property <b>specs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>specs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceSpecs'>inputs.InstanceSpecs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>specs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceSpecs'>InstanceSpecs</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-stackscriptData">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/instance.ts#L306">property <b>stackscriptData</b></a>
 </h4>
@@ -4882,7 +4882,7 @@ What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancerConfig.ts#L216">property <b>nodeStatus</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerConfigNodeStatus'>inputs.NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerConfigNodeStatus'>NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-nodebalancerId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancerConfig.ts#L220">property <b>nodebalancerId</b></a>
 </h4>
@@ -5146,7 +5146,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancer.ts#L153">property <b>transfer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>transfer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerTransfer'>inputs.NodeBalancerTransfer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>transfer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerTransfer'>NodeBalancerTransfer</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerState-updated">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/nodeBalancer.ts#L154">property <b>updated</b></a>
 </h4>
@@ -5472,7 +5472,7 @@ The script to execute when provisioning a new Linode with this StackScript.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/stackScript.ts#L248">property <b>userDefinedFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>inputs.StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
 
 This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -5571,7 +5571,7 @@ The date this StackScript was updated.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/stackScript.ts#L205">property <b>userDefinedFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>inputs.StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
 
 This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.

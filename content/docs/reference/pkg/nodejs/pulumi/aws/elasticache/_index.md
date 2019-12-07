@@ -156,7 +156,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -193,7 +193,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/cluster.ts#L115">property <b>cacheNodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCacheNode'>outputs.elasticache.ClusterCacheNode</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCacheNode'>ClusterCacheNode</a>[]&gt;;</code></pre>
 
 List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -480,7 +480,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ParameterGroup</code></pre>
 
 
 Returns true if the given object is an instance of ParameterGroup.  This is designed to work even
@@ -523,7 +523,7 @@ The name of the ElastiCache parameter.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/parameterGroup.ts#L79">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>outputs.elasticache.ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of ElastiCache parameters to apply.
 
@@ -672,7 +672,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReplicationGroup</code></pre>
 
 
 Returns true if the given object is an instance of ReplicationGroup.  This is designed to work even
@@ -730,7 +730,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/replicationGroup.ts#L155">property <b>clusterMode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clusterMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReplicationGroupClusterMode'>outputs.elasticache.ReplicationGroupClusterMode</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clusterMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
 
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 
@@ -1013,7 +1013,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityGroup</code></pre>
 
 
 Returns true if the given object is an instance of SecurityGroup.  This is designed to work even
@@ -1140,7 +1140,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetGroup</code></pre>
 
 
 Returns true if the given object is an instance of SubnetGroup.  This is designed to work even
@@ -1496,7 +1496,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/cluster.ts#L324">property <b>cacheNodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCacheNode'>inputs.elasticache.ClusterCacheNode</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCacheNode'>ClusterCacheNode</a>&gt;[]&gt;;</code></pre>
 
 List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -1743,7 +1743,7 @@ The Availability Zone for the cache cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/getCluster.ts#L65">property <b>cacheNodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCacheNode'>outputs.elasticache.GetClusterCacheNode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCacheNode'>GetClusterCacheNode</a>[];</code></pre>
 
 List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -2072,7 +2072,7 @@ The name of the ElastiCache parameter.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/parameterGroup.ts#L159">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.elasticache.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
 
 A list of ElastiCache parameters to apply.
 
@@ -2114,7 +2114,7 @@ The name of the ElastiCache parameter.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/parameterGroup.ts#L137">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.elasticache.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
 
 A list of ElastiCache parameters to apply.
 
@@ -2180,7 +2180,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/replicationGroup.ts#L517">property <b>clusterMode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>inputs.elasticache.ReplicationGroupClusterMode</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
 
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 
@@ -2417,7 +2417,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elasticache/replicationGroup.ts#L380">property <b>clusterMode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>inputs.elasticache.ReplicationGroupClusterMode</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
 
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 

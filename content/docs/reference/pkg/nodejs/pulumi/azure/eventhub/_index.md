@@ -136,7 +136,7 @@ meta_desc: "Explore members of the eventhub module in the @pulumi/azure package.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This function has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> onGridBlobCreated: <a href='#onGridBlobCreated'>onGridBlobCreated</a> = <span class='s2'> eventgrid.events.onGridBlobCreated</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> onGridBlobCreated: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#onGridBlobCreated'>onGridBlobCreated</a> = <span class='s2'> eventgrid.events.onGridBlobCreated</span>;</code></pre>
 <h3 class="pdoc-module-header" id="onGridBlobDeleted" data-link-title="onGridBlobDeleted">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L365">
         const <strong>onGridBlobDeleted</strong>
@@ -147,7 +147,7 @@ This function has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This function has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> onGridBlobDeleted: <a href='#onGridBlobDeleted'>onGridBlobDeleted</a> = <span class='s2'> eventgrid.events.onGridBlobDeleted</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> onGridBlobDeleted: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#onGridBlobDeleted'>onGridBlobDeleted</a> = <span class='s2'> eventgrid.events.onGridBlobDeleted</span>;</code></pre>
 <h3 class="pdoc-module-header" id="onResourceGroupEvent" data-link-title="onResourceGroupEvent">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L370">
         const <strong>onResourceGroupEvent</strong>
@@ -158,7 +158,7 @@ This function has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This function has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>const</span> onResourceGroupEvent: <a href='#onResourceGroupEvent'>onResourceGroupEvent</a> = <span class='s2'> eventgrid.events.onResourceGroupEvent</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>const</span> onResourceGroupEvent: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#onResourceGroupEvent'>onResourceGroupEvent</a> = <span class='s2'> eventgrid.events.onResourceGroupEvent</span>;</code></pre>
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthorizationRule" data-link-title="AuthorizationRule">
@@ -244,7 +244,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of AuthorizationRule.  This is designed to work even
@@ -442,7 +442,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConsumerGroup</code></pre>
 
 
 Returns true if the given object is an instance of ConsumerGroup.  This is designed to work even
@@ -578,7 +578,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Domain</code></pre>
 
 
 Returns true if the given object is an instance of Domain.  This is designed to work even
@@ -605,7 +605,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L66">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingDefaultValues'>outputs.eventhub.DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `inputMappingDefaultValues` block as defined below.
 
@@ -613,7 +613,7 @@ A `inputMappingDefaultValues` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L70">property <b>inputMappingFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingFields'>outputs.eventhub.DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingFields'>DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `inputMappingFields` block as defined below.
 
@@ -751,7 +751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventGridTopic</code></pre>
 
 
 Returns true if the given object is an instance of EventGridTopic.  This is designed to work even
@@ -919,7 +919,7 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHub</code></pre>
 
 
 Returns true if the given object is an instance of EventHub.  This is designed to work even
@@ -942,7 +942,7 @@ Use [getEventFunction] if you want to compose multiple Functions into the same A
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHub.ts#L71">property <b>captureDescription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>captureDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubCaptureDescription'>outputs.eventhub.EventHubCaptureDescription</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>captureDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubCaptureDescription'>EventHubCaptureDescription</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `captureDescription` block as defined below.
 
@@ -1100,7 +1100,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHubAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of EventHubAuthorizationRule.  This is designed to work even
@@ -1298,7 +1298,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHubConsumerGroup</code></pre>
 
 
 Returns true if the given object is an instance of EventHubConsumerGroup.  This is designed to work even
@@ -1436,7 +1436,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHubNamespace</code></pre>
 
 
 Returns true if the given object is an instance of EventHubNamespace.  This is designed to work even
@@ -1537,7 +1537,7 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHubNamespace.ts#L106">property <b>networkRulesets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkRulesets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesets'>outputs.eventhub.EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkRulesets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesets'>EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
 
 A `networkRulesets` block as defined below.
 
@@ -1650,7 +1650,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHubNamespaceAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of EventHubNamespaceAuthorizationRule.  This is designed to work even
@@ -1834,7 +1834,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventhubNamespaceDisasterRecoveryConfig</code></pre>
 
 
 Returns true if the given object is an instance of EventhubNamespaceDisasterRecoveryConfig.  This is designed to work even
@@ -1978,7 +1978,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventSubscription</code></pre>
 
 
 Returns true if the given object is an instance of EventSubscription.  This is designed to work even
@@ -1996,7 +1996,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L79">property <b>eventhubEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionEventhubEndpoint'>outputs.eventhub.EventSubscriptionEventhubEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `eventhubEndpoint` block as defined below.
 
@@ -2004,7 +2004,7 @@ A `eventhubEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L83">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionHybridConnectionEndpoint'>outputs.eventhub.EventSubscriptionHybridConnectionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `hybridConnectionEndpoint` block as defined below.
 
@@ -2045,7 +2045,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L99">property <b>retryPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionRetryPolicy'>outputs.eventhub.EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
 
 A `retryPolicy` block as defined below.
 
@@ -2061,7 +2061,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L107">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageBlobDeadLetterDestination'>outputs.eventhub.EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageBlobDeadLetterDestination` block as defined below.
 
@@ -2069,7 +2069,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L111">property <b>storageQueueEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageQueueEndpoint'>outputs.eventhub.EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageQueueEndpoint` block as defined below.
 
@@ -2077,7 +2077,7 @@ A `storageQueueEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L115">property <b>subjectFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionSubjectFilter'>outputs.eventhub.EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `subjectFilter` block as defined below.
 
@@ -2102,7 +2102,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L123">property <b>webhookEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionWebhookEndpoint'>outputs.eventhub.EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `webhookEndpoint` block as defined below.
 
@@ -2174,7 +2174,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Namespace</code></pre>
 
 
 Returns true if the given object is an instance of Namespace.  This is designed to work even
@@ -2365,7 +2365,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NamespaceAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of NamespaceAuthorizationRule.  This is designed to work even
@@ -2539,7 +2539,7 @@ properties used to qualify the lookup.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 The [Queue] type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/queue.ts#L38">method <b>getProvider</b></a>
@@ -2553,7 +2553,7 @@ The [Queue] type has moved to the [servicebus] module.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Queue</code></pre>
 
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
@@ -2568,7 +2568,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 The [Queue] type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueEventSubscription'>QueueEventSubscription</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/queue.ts#L69">property <b>autoDeleteOnIdle</b></a>
@@ -2819,7 +2819,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QueueAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of QueueAuthorizationRule.  This is designed to work even
@@ -3010,7 +3010,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subscription</code></pre>
 
 
 Returns true if the given object is an instance of Subscription.  This is designed to work even
@@ -3294,7 +3294,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubscriptionRule</code></pre>
 
 
 Returns true if the given object is an instance of SubscriptionRule.  This is designed to work even
@@ -3312,7 +3312,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/subscriptionRule.ts#L127">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>outputs.eventhub.SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -3462,7 +3462,7 @@ properties used to qualify the lookup.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 The [Topic] type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>): <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/topic.ts#L40">method <b>getProvider</b></a>
@@ -3476,7 +3476,7 @@ The [Topic] type has moved to the [servicebus] module.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Topic</code></pre>
 
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
@@ -3491,7 +3491,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 The [Topic] type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#TopicEventSubscription'>TopicEventSubscription</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/topic.ts#L71">property <b>autoDeleteOnIdle</b></a>
@@ -3725,7 +3725,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of TopicAuthorizationRule.  This is designed to work even
@@ -4230,7 +4230,7 @@ The set of arguments for constructing a Domain resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L202">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>inputs.eventhub.DomainInputMappingDefaultValues</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</code></pre>
 
 A `inputMappingDefaultValues` block as defined below.
 
@@ -4238,7 +4238,7 @@ A `inputMappingDefaultValues` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L206">property <b>inputMappingFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>inputs.eventhub.DomainInputMappingFields</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</code></pre>
 
 A `inputMappingFields` block as defined below.
 
@@ -4304,7 +4304,7 @@ The Endpoint associated with the EventGrid Domain.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L160">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>inputs.eventhub.DomainInputMappingDefaultValues</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</code></pre>
 
 A `inputMappingDefaultValues` block as defined below.
 
@@ -4312,7 +4312,7 @@ A `inputMappingDefaultValues` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/domain.ts#L164">property <b>inputMappingFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>inputs.eventhub.DomainInputMappingFields</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</code></pre>
 
 A `inputMappingFields` block as defined below.
 
@@ -4382,7 +4382,7 @@ A mapping of tags to assign to the resource.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> EventGridCallbackSubscriptionArgs = eventgrid.EventGridCallbackSubscriptionArgs&lt;T&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridCallbackSubscriptionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridContext" data-link-title="EventGridContext">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L324">
         type <strong>EventGridContext</strong>
@@ -4393,7 +4393,7 @@ This type has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> EventGridContext = eventgrid.EventGridContext&lt;T&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridContext = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#EventGridContext'>EventGridContext</a>&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridEvent" data-link-title="EventGridEvent">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L319">
         type <strong>EventGridEvent</strong>
@@ -4404,7 +4404,7 @@ This type has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> EventGridEvent = eventgrid.EventGridEvent&lt;T&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridEvent = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#EventGridEvent'>EventGridEvent</a>&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridFunctionArgs" data-link-title="EventGridFunctionArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L329">
         type <strong>EventGridFunctionArgs</strong>
@@ -4415,7 +4415,7 @@ This type has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> EventGridFunctionArgs = eventgrid.EventGridFunctionArgs&lt;T&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridFunctionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#EventGridFunctionArgs'>EventGridFunctionArgs</a>&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridScope" data-link-title="EventGridScope">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L341">
         type <strong>EventGridScope</strong>
@@ -4426,7 +4426,7 @@ This type has moved to the [eventgrid] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> EventGridScope = eventgrid.EventGridScope;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridScope = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#EventGridScope'>EventGridScope</a>;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridTopicArgs" data-link-title="EventGridTopicArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventGridTopic.ts#L170">
         interface <strong>EventGridTopicArgs</strong>
@@ -4549,7 +4549,7 @@ The set of arguments for constructing a EventHub resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHub.ts#L194">property <b>captureDescription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubCaptureDescription'>inputs.eventhub.EventHubCaptureDescription</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubCaptureDescription'>EventHubCaptureDescription</a>&gt;;</code></pre>
 
 A `captureDescription` block as defined below.
 
@@ -4965,7 +4965,7 @@ Specifies the user metadata.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventHubContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventHubContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Data that will be passed along in the context object to the EventHubCallback.
 
@@ -4974,7 +4974,7 @@ Data that will be passed along in the context object to the EventHubCallback.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: R): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 A callback function that signals to the runtime that your code has completed. If your
@@ -5052,7 +5052,7 @@ at the default trace level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L67">property <b>req</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
 
 HTTP request object. Provided to your function when using HTTP Bindings.
 
@@ -5070,7 +5070,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventHubFunction</span> <span class='kr'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventHubFunction</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Function'>Function</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Azure Function triggered by an Event Hub.
 
@@ -5101,7 +5101,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 Function callback.
 
@@ -5124,7 +5124,7 @@ Function name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -5133,7 +5133,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -5172,7 +5172,7 @@ Event Hub to subscribe the Function to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -5180,7 +5180,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -5246,7 +5246,7 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHubNamespace.ts#L275">property <b>networkRulesets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRulesets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesets'>inputs.eventhub.EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRulesets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesets'>EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
 
 A `networkRulesets` block as defined below.
 
@@ -5628,7 +5628,7 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHubNamespace.ts#L229">property <b>networkRulesets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRulesets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesets'>inputs.eventhub.EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRulesets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesets'>EventHubNamespaceNetworkRulesets</a>&gt;;</code></pre>
 
 A `networkRulesets` block as defined below.
 
@@ -5670,7 +5670,7 @@ Input properties used for looking up and filtering EventHub resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventHub.ts#L159">property <b>captureDescription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubCaptureDescription'>inputs.eventhub.EventHubCaptureDescription</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubCaptureDescription'>EventHubCaptureDescription</a>&gt;;</code></pre>
 
 A `captureDescription` block as defined below.
 
@@ -5733,13 +5733,13 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventHubSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventHubSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="EventHubSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L172"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EventHubSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventHub: EventHub, args: <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EventHubSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventHub: EventHub, args: <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventHubSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L170">method <b>getProvider</b></a>
@@ -5753,7 +5753,7 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -5780,7 +5780,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventHubSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L170">property <b>urn</b></a>
 </h4>
@@ -5796,7 +5796,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventHubSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventHubSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a>, <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="EventHubSubscriptionArgs-account">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h4>
@@ -5819,7 +5819,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -5828,7 +5828,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -5912,7 +5912,7 @@ Is the Function App enabled?
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
 
 Host configuration options.
 
@@ -5940,7 +5940,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -5973,7 +5973,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -6058,7 +6058,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L249">property <b>eventhubEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>inputs.eventhub.EventSubscriptionEventhubEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</code></pre>
 
 A `eventhubEndpoint` block as defined below.
 
@@ -6066,7 +6066,7 @@ A `eventhubEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L253">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>inputs.eventhub.EventSubscriptionHybridConnectionEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</code></pre>
 
 A `hybridConnectionEndpoint` block as defined below.
 
@@ -6098,7 +6098,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L269">property <b>retryPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>inputs.eventhub.EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
 
 A `retryPolicy` block as defined below.
 
@@ -6114,7 +6114,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L277">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>inputs.eventhub.EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
 
 A `storageBlobDeadLetterDestination` block as defined below.
 
@@ -6122,7 +6122,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L281">property <b>storageQueueEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>inputs.eventhub.EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
 
 A `storageQueueEndpoint` block as defined below.
 
@@ -6130,7 +6130,7 @@ A `storageQueueEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L285">property <b>subjectFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>inputs.eventhub.EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
 
 A `subjectFilter` block as defined below.
 
@@ -6146,7 +6146,7 @@ Specifies the name of the topic to associate with the event subscription.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L293">property <b>webhookEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>inputs.eventhub.EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
 
 A `webhookEndpoint` block as defined below.
 
@@ -6172,7 +6172,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L191">property <b>eventhubEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>inputs.eventhub.EventSubscriptionEventhubEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</code></pre>
 
 A `eventhubEndpoint` block as defined below.
 
@@ -6180,7 +6180,7 @@ A `eventhubEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L195">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>inputs.eventhub.EventSubscriptionHybridConnectionEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</code></pre>
 
 A `hybridConnectionEndpoint` block as defined below.
 
@@ -6212,7 +6212,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L211">property <b>retryPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>inputs.eventhub.EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
 
 A `retryPolicy` block as defined below.
 
@@ -6228,7 +6228,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L219">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>inputs.eventhub.EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
 
 A `storageBlobDeadLetterDestination` block as defined below.
 
@@ -6236,7 +6236,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L223">property <b>storageQueueEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>inputs.eventhub.EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
 
 A `storageQueueEndpoint` block as defined below.
 
@@ -6244,7 +6244,7 @@ A `storageQueueEndpoint` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L227">property <b>subjectFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>inputs.eventhub.EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
 
 A `subjectFilter` block as defined below.
 
@@ -6260,7 +6260,7 @@ Specifies the name of the topic to associate with the event subscription.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/eventSubscription.ts#L235">property <b>webhookEndpoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>inputs.eventhub.EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
 
 A `webhookEndpoint` block as defined below.
 
@@ -6270,12 +6270,12 @@ A `webhookEndpoint` block as defined below.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetEventHubFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetEventHubFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="GetEventHubFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -6284,7 +6284,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -6315,7 +6315,7 @@ Optional Consumer Group to subscribe the FunctionApp to. If not present, the def
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -6323,7 +6323,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -6747,7 +6747,7 @@ Whether or not this ServiceBus Namespace is zone redundant.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> GetTopicFunctionArgs = servicebus.GetTopicFunctionArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> GetTopicFunctionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/namespace.ts#L220">
         interface <strong>NamespaceArgs</strong>
@@ -7400,7 +7400,7 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> QueueEventSubscriptionArgs = servicebus.QueueEventSubscriptionArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> QueueEventSubscriptionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/queue.ts#L217">
         interface <strong>QueueState</strong>
@@ -7571,7 +7571,7 @@ create the namespace. Changing this forces a new resource to be created.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> ResourceGroupEventGridCallbackSubscriptionArgs = eventgrid.ResourceGroupEventGridCallbackSubscriptionArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> ResourceGroupEventGridCallbackSubscriptionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#ResourceGroupEventGridCallbackSubscriptionArgs'>ResourceGroupEventGridCallbackSubscriptionArgs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceBusCallback" data-link-title="ServiceBusCallback">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L256">
         type <strong>ServiceBusCallback</strong>
@@ -7593,7 +7593,7 @@ This type has moved to the [servicebus] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> ServiceBusContext = servicebus.ServiceBusContext;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusContext = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusContext'>ServiceBusContext</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceBusFunctionArgs" data-link-title="ServiceBusFunctionArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L261">
         type <strong>ServiceBusFunctionArgs</strong>
@@ -7604,7 +7604,7 @@ This type has moved to the [servicebus] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> ServiceBusFunctionArgs = servicebus.ServiceBusFunctionArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusFunctionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusFunctionArgs'>ServiceBusFunctionArgs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceBusHostExtensions" data-link-title="ServiceBusHostExtensions">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L246">
         type <strong>ServiceBusHostExtensions</strong>
@@ -7615,7 +7615,7 @@ This type has moved to the [servicebus] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostExtensions = servicebus.ServiceBusHostExtensions;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostExtensions = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusHostExtensions'>ServiceBusHostExtensions</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceBusHostSettings" data-link-title="ServiceBusHostSettings">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L251">
         type <strong>ServiceBusHostSettings</strong>
@@ -7626,7 +7626,7 @@ This type has moved to the [servicebus] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostSettings = servicebus.ServiceBusHostSettings;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostSettings = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#ServiceBusHostSettings'>ServiceBusHostSettings</a>;</code></pre>
 <h3 class="pdoc-module-header" id="StorageAccountEventGridCallbackSubscriptionArgs" data-link-title="StorageAccountEventGridCallbackSubscriptionArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/zMixins.ts#L346">
         type <strong>StorageAccountEventGridCallbackSubscriptionArgs</strong>
@@ -7637,7 +7637,7 @@ This type has moved to the [servicebus] module.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [eventgrid] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> StorageAccountEventGridCallbackSubscriptionArgs = eventgrid.StorageAccountEventGridCallbackSubscriptionArgs&lt;T&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> StorageAccountEventGridCallbackSubscriptionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/subscription.ts#L293">
         interface <strong>SubscriptionArgs</strong>
@@ -7802,7 +7802,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/subscriptionRule.ts#L269">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.eventhub.SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -7884,7 +7884,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/subscriptionRule.ts#L227">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.eventhub.SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -8404,7 +8404,7 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 This type has moved to the [servicebus] module.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> TopicEventSubscriptionArgs = servicebus.TopicAuthorizationRuleArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> TopicEventSubscriptionArgs = <a href='/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#TopicAuthorizationRuleArgs'>TopicAuthorizationRuleArgs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/eventhub/topic.ts#L207">
         interface <strong>TopicState</strong>

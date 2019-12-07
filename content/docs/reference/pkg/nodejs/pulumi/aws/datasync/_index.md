@@ -105,7 +105,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Agent</code></pre>
 
 
 Returns true if the given object is an instance of Agent.  This is designed to work even
@@ -237,7 +237,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EfsLocation</code></pre>
 
 
 Returns true if the given object is an instance of EfsLocation.  This is designed to work even
@@ -255,7 +255,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L69">property <b>ec2Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EfsLocationEc2Config'>outputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EfsLocationEc2Config'>EfsLocationEc2Config</a>&gt;;</code></pre>
 
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
@@ -263,7 +263,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L73">property <b>efsFileSystemArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of EFS File System.
 
@@ -372,7 +372,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NfsLocation</code></pre>
 
 
 Returns true if the given object is an instance of NfsLocation.  This is designed to work even
@@ -399,7 +399,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/nfsLocation.ts#L65">property <b>onPremConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsLocationOnPremConfig'>outputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsLocationOnPremConfig'>NfsLocationOnPremConfig</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to the NFS File System.
 
@@ -505,7 +505,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is S3Location</code></pre>
 
 
 Returns true if the given object is an instance of S3Location.  This is designed to work even
@@ -532,7 +532,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L65">property <b>s3BucketArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the S3 Bucket.
 
@@ -540,7 +540,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L69">property <b>s3Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#S3LocationS3Config'>outputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#S3LocationS3Config'>S3LocationS3Config</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to S3.
 
@@ -638,7 +638,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Task</code></pre>
 
 
 Returns true if the given object is an instance of Task.  This is designed to work even
@@ -656,7 +656,7 @@ Amazon Resource Name (ARN) of the DataSync Task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L65">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cloudwatchLogGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cloudwatchLogGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
@@ -664,7 +664,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L69">property <b>destinationLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of destination DataSync Location.
 
@@ -689,7 +689,7 @@ Name of the DataSync Task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L77">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskOptions'>outputs.datasync.TaskOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskOptions'>TaskOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
@@ -697,7 +697,7 @@ Configuration block containing option that controls the default behavior when yo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L81">property <b>sourceLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of source DataSync Location.
 
@@ -827,7 +827,7 @@ The set of arguments for constructing a EfsLocation resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L162">property <b>ec2Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>inputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>EfsLocationEc2Config</a>&gt;;</code></pre>
 
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
@@ -835,7 +835,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L166">property <b>efsFileSystemArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of EFS File System.
 
@@ -877,7 +877,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L139">property <b>ec2Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ec2Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>inputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ec2Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>EfsLocationEc2Config</a>&gt;;</code></pre>
 
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
@@ -885,7 +885,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/efsLocation.ts#L143">property <b>efsFileSystemArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>efsFileSystemArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>efsFileSystemArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of EFS File System.
 
@@ -924,7 +924,7 @@ The set of arguments for constructing a NfsLocation resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/nfsLocation.ts#L161">property <b>onPremConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>inputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>NfsLocationOnPremConfig</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to the NFS File System.
 
@@ -974,7 +974,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/nfsLocation.ts#L138">property <b>onPremConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>onPremConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>inputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onPremConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>NfsLocationOnPremConfig</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to the NFS File System.
 
@@ -1021,7 +1021,7 @@ The set of arguments for constructing a S3Location resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L161">property <b>s3BucketArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the S3 Bucket.
 
@@ -1029,7 +1029,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L165">property <b>s3Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>inputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>S3LocationS3Config</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to S3.
 
@@ -1071,7 +1071,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L138">property <b>s3BucketArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3BucketArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3BucketArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the S3 Bucket.
 
@@ -1079,7 +1079,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/s3Location.ts#L142">property <b>s3Config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>inputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>S3LocationS3Config</a>&gt;;</code></pre>
 
 Configuration block containing information for connecting to S3.
 
@@ -1118,7 +1118,7 @@ The set of arguments for constructing a Task resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L174">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
@@ -1126,7 +1126,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L178">property <b>destinationLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of destination DataSync Location.
 
@@ -1142,7 +1142,7 @@ Name of the DataSync Task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L186">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>inputs.datasync.TaskOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>TaskOptions</a>&gt;;</code></pre>
 
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
@@ -1150,7 +1150,7 @@ Configuration block containing option that controls the default behavior when yo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L190">property <b>sourceLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of source DataSync Location.
 
@@ -1184,7 +1184,7 @@ Amazon Resource Name (ARN) of the DataSync Task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L144">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
@@ -1192,7 +1192,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L148">property <b>destinationLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destinationLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destinationLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of destination DataSync Location.
 
@@ -1208,7 +1208,7 @@ Name of the DataSync Task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L156">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>inputs.datasync.TaskOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>TaskOptions</a>&gt;;</code></pre>
 
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
@@ -1216,7 +1216,7 @@ Configuration block containing option that controls the default behavior when yo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datasync/task.ts#L160">property <b>sourceLocationArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 Amazon Resource Name (ARN) of source DataSync Location.
 

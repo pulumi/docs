@@ -35,7 +35,7 @@ meta_desc: "Explore members of the efs module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>burstCreditBalance(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>burstCreditBalance(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of burst credits that a file system has.
@@ -59,7 +59,7 @@ Valid statistics: Minimum, Maximum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>clientConnections(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientConnections(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of client connections to a file system. When using a standard client, there is one
@@ -79,7 +79,7 @@ Valid statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>dataReadIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataReadIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes for each file system read operation.
@@ -103,7 +103,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>dataWriteIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataWriteIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes for each file write operation.
@@ -126,7 +126,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EfsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EfsMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="EfsMetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -191,7 +191,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -201,7 +201,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -242,7 +242,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metadataIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadataIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes for each metadata operation.
@@ -266,7 +266,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#EfsMetricName'>EfsMetricName</a>, change: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#EfsMetricName'>EfsMetricName</a>, change: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/EFS metric with the requested [metricName]. See
@@ -293,7 +293,7 @@ takes the form of fs-XXXXXXXX.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>percentIOLimit(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>percentIOLimit(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Shows how close a file system is to reaching the I/O limit of the General Purpose performance
@@ -312,7 +312,7 @@ Units: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>permittedThroughput(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>permittedThroughput(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The maximum amount of throughput a file system is allowed. For file systems in the
@@ -337,7 +337,7 @@ Valid statistics: Minimum, Maximum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>totalIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>totalIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes for each file system operation, including data read, data write, and

@@ -1000,7 +1000,7 @@ meta_desc: "Explore members of the input module in the @pulumi/kubernetes packag
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is MutatingWebhookConfiguration</code></pre>
 
 <h3 class="pdoc-module-header" id="isMutatingWebhookConfigurationList" data-link-title="isMutatingWebhookConfigurationList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L236">
@@ -1009,7 +1009,7 @@ meta_desc: "Explore members of the input module in the @pulumi/kubernetes packag
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is MutatingWebhookConfigurationList</code></pre>
 
 <h3 class="pdoc-module-header" id="isValidatingWebhookConfiguration" data-link-title="isValidatingWebhookConfiguration">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L487">
@@ -1018,7 +1018,7 @@ meta_desc: "Explore members of the input module in the @pulumi/kubernetes packag
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ValidatingWebhookConfiguration</code></pre>
 
 <h3 class="pdoc-module-header" id="isValidatingWebhookConfigurationList" data-link-title="isValidatingWebhookConfigurationList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L524">
@@ -1027,7 +1027,7 @@ meta_desc: "Explore members of the input module in the @pulumi/kubernetes packag
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ValidatingWebhookConfigurationList</code></pre>
 
 <h3 class="pdoc-module-header" id="MutatingWebhook" data-link-title="MutatingWebhook">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13">
@@ -1763,7 +1763,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is MutatingWebhookConfiguration</code></pre>
 
 <h3 class="pdoc-module-header" id="isMutatingWebhookConfigurationList" data-link-title="isMutatingWebhookConfigurationList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L804">
@@ -1772,7 +1772,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isMutatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is MutatingWebhookConfigurationList</code></pre>
 
 <h3 class="pdoc-module-header" id="isValidatingWebhookConfiguration" data-link-title="isValidatingWebhookConfiguration">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L1056">
@@ -1781,7 +1781,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfiguration(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ValidatingWebhookConfiguration</code></pre>
 
 <h3 class="pdoc-module-header" id="isValidatingWebhookConfigurationList" data-link-title="isValidatingWebhookConfigurationList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L1093">
@@ -1790,7 +1790,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isValidatingWebhookConfigurationList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ValidatingWebhookConfigurationList</code></pre>
 
 <h3 class="pdoc-module-header" id="MutatingWebhook" data-link-title="MutatingWebhook">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L580">
@@ -3116,7 +3116,7 @@ ExternalDocumentation allows referencing an external resource for extended docum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinition(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinition(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CustomResourceDefinition</code></pre>
 
 <h3 class="pdoc-module-header" id="isCustomResourceDefinitionList" data-link-title="isCustomResourceDefinitionList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L1315">
@@ -3125,7 +3125,7 @@ ExternalDocumentation allows referencing an external resource for extended docum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinitionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinitionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CustomResourceDefinitionList</code></pre>
 
 <h3 class="pdoc-module-header" id="JSONSchemaProps" data-link-title="JSONSchemaProps">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L1563">
@@ -4197,7 +4197,7 @@ ExternalDocumentation allows referencing an external resource for extended docum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinition(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinition(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CustomResourceDefinition</code></pre>
 
 <h3 class="pdoc-module-header" id="isCustomResourceDefinitionList" data-link-title="isCustomResourceDefinitionList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2019">
@@ -4206,7 +4206,7 @@ ExternalDocumentation allows referencing an external resource for extended docum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinitionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCustomResourceDefinitionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CustomResourceDefinitionList</code></pre>
 
 <h3 class="pdoc-module-header" id="JSONSchemaProps" data-link-title="JSONSchemaProps">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2308">
@@ -4835,7 +4835,7 @@ Current service state of apiService.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIService</code></pre>
 
 <h3 class="pdoc-module-header" id="isAPIServiceList" data-link-title="isAPIServiceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2661">
@@ -4844,7 +4844,7 @@ Current service state of apiService.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIServiceList</code></pre>
 
 <h3 class="pdoc-module-header" id="ServiceReference" data-link-title="ServiceReference">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2744">
@@ -5132,7 +5132,7 @@ Current service state of apiService.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIService</code></pre>
 
 <h3 class="pdoc-module-header" id="isAPIServiceList" data-link-title="isAPIServiceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2861">
@@ -5141,7 +5141,7 @@ Current service state of apiService.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIServiceList</code></pre>
 
 <h3 class="pdoc-module-header" id="ServiceReference" data-link-title="ServiceReference">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L2944">
@@ -5975,7 +5975,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevision</code></pre>
 
 <h3 class="pdoc-module-header" id="isControllerRevisionList" data-link-title="isControllerRevisionList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3052">
@@ -5984,7 +5984,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevisionList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDaemonSet" data-link-title="isDaemonSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3090">
@@ -5993,7 +5993,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isDaemonSetList" data-link-title="isDaemonSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3159">
@@ -6002,7 +6002,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeployment" data-link-title="isDeployment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3318">
@@ -6011,7 +6011,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Deployment</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentList" data-link-title="isDeploymentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3391">
@@ -6020,7 +6020,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentList</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSet" data-link-title="isReplicaSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3557">
@@ -6029,7 +6029,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSetList" data-link-title="isReplicaSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3627">
@@ -6038,7 +6038,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSet" data-link-title="isStatefulSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3806">
@@ -6047,7 +6047,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSetList" data-link-title="isStatefulSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3870">
@@ -6056,7 +6056,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="ReplicaSet" data-link-title="ReplicaSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L3525">
@@ -7302,7 +7302,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevision</code></pre>
 
 <h3 class="pdoc-module-header" id="isControllerRevisionList" data-link-title="isControllerRevisionList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4112">
@@ -7311,7 +7311,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevisionList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeployment" data-link-title="isDeployment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4151">
@@ -7320,7 +7320,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Deployment</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentList" data-link-title="isDeploymentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4224">
@@ -7329,7 +7329,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentRollback" data-link-title="isDeploymentRollback">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4265">
@@ -7338,7 +7338,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentRollback(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentRollback(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentRollback</code></pre>
 
 <h3 class="pdoc-module-header" id="isScale" data-link-title="isScale">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4492">
@@ -7347,7 +7347,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Scale</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSet" data-link-title="isStatefulSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4573">
@@ -7356,7 +7356,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSetList" data-link-title="isStatefulSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4637">
@@ -7365,7 +7365,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="RollbackConfig" data-link-title="RollbackConfig">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4405">
@@ -8722,7 +8722,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevision(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevision</code></pre>
 
 <h3 class="pdoc-module-header" id="isControllerRevisionList" data-link-title="isControllerRevisionList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4879">
@@ -8731,7 +8731,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isControllerRevisionList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ControllerRevisionList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDaemonSet" data-link-title="isDaemonSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4920">
@@ -8740,7 +8740,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isDaemonSetList" data-link-title="isDaemonSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L4989">
@@ -8749,7 +8749,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeployment" data-link-title="isDeployment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5151">
@@ -8758,7 +8758,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Deployment</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentList" data-link-title="isDeploymentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5224">
@@ -8767,7 +8767,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentList</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSet" data-link-title="isReplicaSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5393">
@@ -8776,7 +8776,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSetList" data-link-title="isReplicaSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5463">
@@ -8785,7 +8785,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isScale" data-link-title="isScale">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5642">
@@ -8794,7 +8794,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Scale</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSet" data-link-title="isStatefulSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5723">
@@ -8803,7 +8803,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatefulSetList" data-link-title="isStatefulSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5787">
@@ -8812,7 +8812,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatefulSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StatefulSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="ReplicaSet" data-link-title="ReplicaSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L5361">
@@ -9760,7 +9760,7 @@ Webhook to send events required
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAuditSink(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAuditSink(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is AuditSink</code></pre>
 
 <h3 class="pdoc-module-header" id="isAuditSinkList" data-link-title="isAuditSinkList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6011">
@@ -9769,7 +9769,7 @@ Webhook to send events required
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAuditSinkList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAuditSinkList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is AuditSinkList</code></pre>
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6035">
@@ -10000,7 +10000,7 @@ UID of the referent.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isBoundObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isBoundObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is BoundObjectReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isTokenRequest" data-link-title="isTokenRequest">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6221">
@@ -10009,7 +10009,7 @@ UID of the referent.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isTokenRequest(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isTokenRequest(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is TokenRequest</code></pre>
 
 <h3 class="pdoc-module-header" id="isTokenReview" data-link-title="isTokenReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6304">
@@ -10018,7 +10018,7 @@ UID of the referent.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isTokenReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isTokenReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is TokenReview</code></pre>
 
 <h3 class="pdoc-module-header" id="TokenRequest" data-link-title="TokenRequest">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6196">
@@ -10305,7 +10305,7 @@ The name that uniquely identifies this user among all active users.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isTokenReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isTokenReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is TokenReview</code></pre>
 
 <h3 class="pdoc-module-header" id="TokenReview" data-link-title="TokenReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6396">
@@ -10481,7 +10481,7 @@ The name that uniquely identifies this user among all active users.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLocalSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLocalSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LocalSubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSelfSubjectAccessReview" data-link-title="isSelfSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6703">
@@ -10490,7 +10490,7 @@ The name that uniquely identifies this user among all active users.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSelfSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSelfSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SelfSubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSelfSubjectRulesReview" data-link-title="isSelfSubjectRulesReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6762">
@@ -10499,7 +10499,7 @@ The name that uniquely identifies this user among all active users.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSelfSubjectRulesReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSelfSubjectRulesReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SelfSubjectRulesReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSubjectAccessReview" data-link-title="isSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6808">
@@ -10508,7 +10508,7 @@ The name that uniquely identifies this user among all active users.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="LocalSubjectAccessReview" data-link-title="LocalSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6519">
@@ -11088,7 +11088,7 @@ list ordering isn't significant, may contain duplicates, and possibly be incompl
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLocalSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLocalSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LocalSubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSelfSubjectAccessReview" data-link-title="isSelfSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7112">
@@ -11097,7 +11097,7 @@ list ordering isn't significant, may contain duplicates, and possibly be incompl
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSelfSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSelfSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SelfSubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSelfSubjectRulesReview" data-link-title="isSelfSubjectRulesReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7171">
@@ -11106,7 +11106,7 @@ list ordering isn't significant, may contain duplicates, and possibly be incompl
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSelfSubjectRulesReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSelfSubjectRulesReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SelfSubjectRulesReview</code></pre>
 
 <h3 class="pdoc-module-header" id="isSubjectAccessReview" data-link-title="isSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7217">
@@ -11115,7 +11115,7 @@ list ordering isn't significant, may contain duplicates, and possibly be incompl
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSubjectAccessReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SubjectAccessReview</code></pre>
 
 <h3 class="pdoc-module-header" id="LocalSubjectAccessReview" data-link-title="LocalSubjectAccessReview">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L6928">
@@ -11929,7 +11929,7 @@ most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CrossVersionObjectReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscaler" data-link-title="isHorizontalPodAutoscaler">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7396">
@@ -11938,7 +11938,7 @@ most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscaler</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscalerList" data-link-title="isHorizontalPodAutoscalerList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7432">
@@ -11947,7 +11947,7 @@ most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscalerList</code></pre>
 
 <h3 class="pdoc-module-header" id="isScale" data-link-title="isScale">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7537">
@@ -11956,7 +11956,7 @@ most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Scale</code></pre>
 
 <h3 class="pdoc-module-header" id="Scale" data-link-title="Scale">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7506">
@@ -12454,7 +12454,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CrossVersionObjectReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscaler" data-link-title="isHorizontalPodAutoscaler">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7698">
@@ -12463,7 +12463,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscaler</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscalerList" data-link-title="isHorizontalPodAutoscalerList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7767">
@@ -12472,7 +12472,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscalerList</code></pre>
 
 <h3 class="pdoc-module-header" id="MetricSpec" data-link-title="MetricSpec">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L7854">
@@ -13234,7 +13234,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CrossVersionObjectReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscaler" data-link-title="isHorizontalPodAutoscaler">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8227">
@@ -13243,7 +13243,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscaler</code></pre>
 
 <h3 class="pdoc-module-header" id="isHorizontalPodAutoscalerList" data-link-title="isHorizontalPodAutoscalerList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8296">
@@ -13252,7 +13252,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is HorizontalPodAutoscalerList</code></pre>
 
 <h3 class="pdoc-module-header" id="MetricIdentifier" data-link-title="MetricIdentifier">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8383">
@@ -13673,7 +13673,7 @@ Name is the name of the resource in question.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Job</code></pre>
 
 <h3 class="pdoc-module-header" id="isJobList" data-link-title="isJobList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8775">
@@ -13682,7 +13682,7 @@ Name is the name of the resource in question.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is JobList</code></pre>
 
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8670">
@@ -14209,7 +14209,7 @@ Information when was the last time the job was successfully scheduled.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCronJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCronJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CronJob</code></pre>
 
 <h3 class="pdoc-module-header" id="isCronJobList" data-link-title="isCronJobList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L8967">
@@ -14218,7 +14218,7 @@ Information when was the last time the job was successfully scheduled.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCronJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCronJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CronJobList</code></pre>
 
 <h3 class="pdoc-module-header" id="JobTemplateSpec" data-link-title="JobTemplateSpec">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9040">
@@ -14454,7 +14454,7 @@ Information when was the last time the job was successfully scheduled.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCronJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCronJob(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CronJob</code></pre>
 
 <h3 class="pdoc-module-header" id="isCronJobList" data-link-title="isCronJobList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9130">
@@ -14463,7 +14463,7 @@ Information when was the last time the job was successfully scheduled.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCronJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCronJobList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CronJobList</code></pre>
 
 <h3 class="pdoc-module-header" id="JobTemplateSpec" data-link-title="JobTemplateSpec">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9203">
@@ -14709,7 +14709,7 @@ Conditions applied to the request, such as approval or denial.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCertificateSigningRequest(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCertificateSigningRequest(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CertificateSigningRequest</code></pre>
 
 <h3 class="pdoc-module-header" id="isCertificateSigningRequestList" data-link-title="isCertificateSigningRequestList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9314">
@@ -14718,7 +14718,7 @@ Conditions applied to the request, such as approval or denial.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCertificateSigningRequestList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCertificateSigningRequestList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CertificateSigningRequestList</code></pre>
 
 <h2 id="coordination.v1" data-link-title="coordination.v1">namespace <strong>coordination.v1</strong></h2>
 <h3 class="pdoc-module-header" id="isLease" data-link-title="isLease">
@@ -14728,7 +14728,7 @@ Conditions applied to the request, such as approval or denial.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLease(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLease(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Lease</code></pre>
 
 <h3 class="pdoc-module-header" id="isLeaseList" data-link-title="isLeaseList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9453">
@@ -14737,7 +14737,7 @@ Conditions applied to the request, such as approval or denial.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLeaseList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLeaseList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LeaseList</code></pre>
 
 <h3 class="pdoc-module-header" id="Lease" data-link-title="Lease">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9385">
@@ -14897,7 +14897,7 @@ renewTime is a time when the current holder of a lease has last updated the leas
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLease(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLease(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Lease</code></pre>
 
 <h3 class="pdoc-module-header" id="isLeaseList" data-link-title="isLeaseList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9564">
@@ -14906,7 +14906,7 @@ renewTime is a time when the current holder of a lease has last updated the leas
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLeaseList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLeaseList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LeaseList</code></pre>
 
 <h3 class="pdoc-module-header" id="Lease" data-link-title="Lease">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L9496">
@@ -18408,7 +18408,7 @@ The header field value
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Binding</code></pre>
 
 <h3 class="pdoc-module-header" id="isComponentStatus" data-link-title="isComponentStatus">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L10168">
@@ -18417,7 +18417,7 @@ The header field value
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isComponentStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isComponentStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ComponentStatus</code></pre>
 
 <h3 class="pdoc-module-header" id="isComponentStatusList" data-link-title="isComponentStatusList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L10205">
@@ -18426,7 +18426,7 @@ The header field value
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isComponentStatusList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isComponentStatusList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ComponentStatusList</code></pre>
 
 <h3 class="pdoc-module-header" id="isConfigMap" data-link-title="isConfigMap">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L10253">
@@ -18435,7 +18435,7 @@ The header field value
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isConfigMap(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isConfigMap(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ConfigMap</code></pre>
 
 <h3 class="pdoc-module-header" id="isConfigMapList" data-link-title="isConfigMapList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L10334">
@@ -18444,7 +18444,7 @@ The header field value
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isConfigMapList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isConfigMapList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ConfigMapList</code></pre>
 
 <h3 class="pdoc-module-header" id="ISCSIPersistentVolumeSource" data-link-title="ISCSIPersistentVolumeSource">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L11930">
@@ -18665,7 +18665,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEndpoints(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEndpoints(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Endpoints</code></pre>
 
 <h3 class="pdoc-module-header" id="isEndpointsList" data-link-title="isEndpointsList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L11107">
@@ -18674,7 +18674,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEndpointsList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEndpointsList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is EndpointsList</code></pre>
 
 <h3 class="pdoc-module-header" id="isEvent" data-link-title="isEvent">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L11459">
@@ -18683,7 +18683,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEvent(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEvent(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Event</code></pre>
 
 <h3 class="pdoc-module-header" id="isEventList" data-link-title="isEventList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L11496">
@@ -18692,7 +18692,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEventList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEventList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is EventList</code></pre>
 
 <h3 class="pdoc-module-header" id="isLimitRange" data-link-title="isLimitRange">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12156">
@@ -18701,7 +18701,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLimitRange(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLimitRange(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LimitRange</code></pre>
 
 <h3 class="pdoc-module-header" id="isLimitRangeList" data-link-title="isLimitRangeList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12234">
@@ -18710,7 +18710,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLimitRangeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLimitRangeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is LimitRangeList</code></pre>
 
 <h3 class="pdoc-module-header" id="isNamespace" data-link-title="isNamespace">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12377">
@@ -18719,7 +18719,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNamespace(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNamespace(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Namespace</code></pre>
 
 <h3 class="pdoc-module-header" id="isNamespaceList" data-link-title="isNamespaceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12441">
@@ -18728,7 +18728,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNamespaceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNamespaceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NamespaceList</code></pre>
 
 <h3 class="pdoc-module-header" id="isNode" data-link-title="isNode">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12511">
@@ -18737,7 +18737,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNode(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNode(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Node</code></pre>
 
 <h3 class="pdoc-module-header" id="isNodeList" data-link-title="isNodeList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12708">
@@ -18746,7 +18746,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNodeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNodeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NodeList</code></pre>
 
 <h3 class="pdoc-module-header" id="isObjectFieldSelector" data-link-title="isObjectFieldSelector">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12969">
@@ -18755,7 +18755,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isObjectFieldSelector(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isObjectFieldSelector(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ObjectFieldSelector</code></pre>
 
 <h3 class="pdoc-module-header" id="isObjectReference" data-link-title="isObjectReference">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13025">
@@ -18764,7 +18764,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ObjectReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isPersistentVolume" data-link-title="isPersistentVolume">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13065">
@@ -18773,7 +18773,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPersistentVolume(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPersistentVolume(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PersistentVolume</code></pre>
 
 <h3 class="pdoc-module-header" id="isPersistentVolumeClaim" data-link-title="isPersistentVolumeClaim">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13103">
@@ -18782,7 +18782,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeClaim(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeClaim(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PersistentVolumeClaim</code></pre>
 
 <h3 class="pdoc-module-header" id="isPersistentVolumeClaimList" data-link-title="isPersistentVolumeClaimList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13176">
@@ -18791,7 +18791,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeClaimList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeClaimList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PersistentVolumeClaimList</code></pre>
 
 <h3 class="pdoc-module-header" id="isPersistentVolumeList" data-link-title="isPersistentVolumeList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13317">
@@ -18800,7 +18800,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPersistentVolumeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PersistentVolumeList</code></pre>
 
 <h3 class="pdoc-module-header" id="isPod" data-link-title="isPod">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13587">
@@ -18809,7 +18809,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPod(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPod(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Pod</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodList" data-link-title="isPodList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L13806">
@@ -18818,7 +18818,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodList</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodTemplate" data-link-title="isPodTemplate">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14296">
@@ -18827,7 +18827,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodTemplate(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodTemplate(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodTemplate</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodTemplateList" data-link-title="isPodTemplateList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14333">
@@ -18836,7 +18836,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodTemplateList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodTemplateList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodTemplateList</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicationController" data-link-title="isReplicationController">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14666">
@@ -18845,7 +18845,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicationController(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicationController(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicationController</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicationControllerList" data-link-title="isReplicationControllerList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14737">
@@ -18854,7 +18854,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicationControllerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicationControllerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicationControllerList</code></pre>
 
 <h3 class="pdoc-module-header" id="isResourceQuota" data-link-title="isResourceQuota">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14875">
@@ -18863,7 +18863,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isResourceQuota(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isResourceQuota(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ResourceQuota</code></pre>
 
 <h3 class="pdoc-module-header" id="isResourceQuotaList" data-link-title="isResourceQuotaList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L14913">
@@ -18872,7 +18872,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isResourceQuotaList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isResourceQuotaList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ResourceQuotaList</code></pre>
 
 <h3 class="pdoc-module-header" id="isSecret" data-link-title="isSecret">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15222">
@@ -18881,7 +18881,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSecret(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSecret(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Secret</code></pre>
 
 <h3 class="pdoc-module-header" id="isSecretList" data-link-title="isSecretList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15304">
@@ -18890,7 +18890,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSecretList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSecretList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is SecretList</code></pre>
 
 <h3 class="pdoc-module-header" id="isService" data-link-title="isService">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15514">
@@ -18899,7 +18899,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Service</code></pre>
 
 <h3 class="pdoc-module-header" id="isServiceAccount" data-link-title="isServiceAccount">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15569">
@@ -18908,7 +18908,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isServiceAccount(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isServiceAccount(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ServiceAccount</code></pre>
 
 <h3 class="pdoc-module-header" id="isServiceAccountList" data-link-title="isServiceAccountList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15607">
@@ -18917,7 +18917,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isServiceAccountList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isServiceAccountList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ServiceAccountList</code></pre>
 
 <h3 class="pdoc-module-header" id="isServiceList" data-link-title="isServiceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L15674">
@@ -18926,7 +18926,7 @@ default (typically TCP ports 860 and 3260).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ServiceList</code></pre>
 
 <h3 class="pdoc-module-header" id="KeyToPath" data-link-title="KeyToPath">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L12069">
@@ -25523,7 +25523,7 @@ Standard list metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEndpointSlice(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEndpointSlice(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is EndpointSlice</code></pre>
 
 <h3 class="pdoc-module-header" id="isEndpointSliceList" data-link-title="isEndpointSliceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L16699">
@@ -25532,7 +25532,7 @@ Standard list metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEndpointSliceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEndpointSliceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is EndpointSliceList</code></pre>
 
 <h2 id="events.v1beta1" data-link-title="events.v1beta1">namespace <strong>events.v1beta1</strong></h2>
 <h3 class="pdoc-module-header" id="Event" data-link-title="Event">
@@ -25781,7 +25781,7 @@ Information whether this series is ongoing or finished. Deprecated. Planned remo
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEvent(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEvent(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Event</code></pre>
 
 <h3 class="pdoc-module-header" id="isEventList" data-link-title="isEventList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L16846">
@@ -25790,7 +25790,7 @@ Information whether this series is ongoing or finished. Deprecated. Planned remo
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEventList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEventList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is EventList</code></pre>
 
 <h2 id="extensions.v1beta1" data-link-title="extensions.v1beta1">namespace <strong>extensions.v1beta1</strong></h2>
 <h3 class="pdoc-module-header" id="AllowedCSIDriver" data-link-title="AllowedCSIDriver">
@@ -27046,7 +27046,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isDaemonSetList" data-link-title="isDaemonSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17035">
@@ -27055,7 +27055,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDaemonSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DaemonSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeployment" data-link-title="isDeployment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17203">
@@ -27064,7 +27064,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeployment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Deployment</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentList" data-link-title="isDeploymentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17276">
@@ -27073,7 +27073,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentList</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeploymentRollback" data-link-title="isDeploymentRollback">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17317">
@@ -27082,7 +27082,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeploymentRollback(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeploymentRollback(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeploymentRollback</code></pre>
 
 <h3 class="pdoc-module-header" id="isIngress" data-link-title="isIngress">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17609">
@@ -27091,7 +27091,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isIngress(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isIngress(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Ingress</code></pre>
 
 <h3 class="pdoc-module-header" id="isIngressList" data-link-title="isIngressList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17663">
@@ -27100,7 +27100,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isIngressList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isIngressList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is IngressList</code></pre>
 
 <h3 class="pdoc-module-header" id="isNetworkPolicy" data-link-title="isNetworkPolicy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17790">
@@ -27109,7 +27109,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNetworkPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNetworkPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NetworkPolicy</code></pre>
 
 <h3 class="pdoc-module-header" id="isNetworkPolicyList" data-link-title="isNetworkPolicyList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17882">
@@ -27118,7 +27118,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNetworkPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNetworkPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NetworkPolicyList</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodSecurityPolicy" data-link-title="isPodSecurityPolicy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18026">
@@ -27127,7 +27127,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodSecurityPolicy</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodSecurityPolicyList" data-link-title="isPodSecurityPolicyList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18064">
@@ -27136,7 +27136,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodSecurityPolicyList</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSet" data-link-title="isReplicaSet">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18269">
@@ -27145,7 +27145,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSet(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSet</code></pre>
 
 <h3 class="pdoc-module-header" id="isReplicaSetList" data-link-title="isReplicaSetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18339">
@@ -27154,7 +27154,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isReplicaSetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ReplicaSetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isScale" data-link-title="isScale">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18594">
@@ -27163,7 +27163,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isScale(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Scale</code></pre>
 
 <h3 class="pdoc-module-header" id="NetworkPolicy" data-link-title="NetworkPolicy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L17760">
@@ -28858,7 +28858,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIGroup(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIGroup(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIGroup</code></pre>
 
 <h3 class="pdoc-module-header" id="isAPIGroupList" data-link-title="isAPIGroupList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18745">
@@ -28867,7 +28867,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIGroupList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIGroupList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIGroupList</code></pre>
 
 <h3 class="pdoc-module-header" id="isAPIResourceList" data-link-title="isAPIResourceList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18849">
@@ -28876,7 +28876,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIResourceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIResourceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIResourceList</code></pre>
 
 <h3 class="pdoc-module-header" id="isAPIVersions" data-link-title="isAPIVersions">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18892">
@@ -28885,7 +28885,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isAPIVersions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isAPIVersions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is APIVersions</code></pre>
 
 <h3 class="pdoc-module-header" id="isDeleteOptions" data-link-title="isDeleteOptions">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18957">
@@ -28894,7 +28894,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isDeleteOptions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isDeleteOptions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is DeleteOptions</code></pre>
 
 <h3 class="pdoc-module-header" id="isManagedFieldsEntry" data-link-title="isManagedFieldsEntry">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19116">
@@ -28903,7 +28903,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isManagedFieldsEntry(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isManagedFieldsEntry(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ManagedFieldsEntry</code></pre>
 
 <h3 class="pdoc-module-header" id="isOwnerReference" data-link-title="isOwnerReference">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19327">
@@ -28912,7 +28912,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isOwnerReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isOwnerReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is OwnerReference</code></pre>
 
 <h3 class="pdoc-module-header" id="isStatus" data-link-title="isStatus">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19420">
@@ -28921,7 +28921,7 @@ trouble of splitting the GroupVersion.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Status</code></pre>
 
 <h3 class="pdoc-module-header" id="LabelSelector" data-link-title="LabelSelector">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L18985">
@@ -29705,7 +29705,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNetworkPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNetworkPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NetworkPolicy</code></pre>
 
 <h3 class="pdoc-module-header" id="isNetworkPolicyList" data-link-title="isNetworkPolicyList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19670">
@@ -29714,7 +29714,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isNetworkPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isNetworkPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is NetworkPolicyList</code></pre>
 
 <h3 class="pdoc-module-header" id="NetworkPolicy" data-link-title="NetworkPolicy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19551">
@@ -30332,7 +30332,7 @@ termination and value of the Host header is used for routing.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isIngress(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isIngress(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Ingress</code></pre>
 
 <h3 class="pdoc-module-header" id="isIngressList" data-link-title="isIngressList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L19906">
@@ -30341,7 +30341,7 @@ termination and value of the Host header is used for routing.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isIngressList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isIngressList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is IngressList</code></pre>
 
 <h2 id="node.v1alpha1" data-link-title="node.v1alpha1">namespace <strong>node.v1alpha1</strong></h2>
 <h3 class="pdoc-module-header" id="isRuntimeClass" data-link-title="isRuntimeClass">
@@ -30351,7 +30351,7 @@ termination and value of the Host header is used for routing.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRuntimeClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRuntimeClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RuntimeClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isRuntimeClassList" data-link-title="isRuntimeClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20092">
@@ -30360,7 +30360,7 @@ termination and value of the Host header is used for routing.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRuntimeClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRuntimeClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RuntimeClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="Overhead" data-link-title="Overhead">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20007">
@@ -30572,7 +30572,7 @@ RuntimeClass.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRuntimeClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRuntimeClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RuntimeClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isRuntimeClassList" data-link-title="isRuntimeClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20267">
@@ -30581,7 +30581,7 @@ RuntimeClass.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRuntimeClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRuntimeClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RuntimeClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="Overhead" data-link-title="Overhead">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20161">
@@ -31025,7 +31025,7 @@ min is the start of the range, inclusive.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isEviction(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isEviction(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Eviction</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodDisruptionBudget" data-link-title="isPodDisruptionBudget">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20508">
@@ -31034,7 +31034,7 @@ min is the start of the range, inclusive.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodDisruptionBudget(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodDisruptionBudget(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodDisruptionBudget</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodDisruptionBudgetList" data-link-title="isPodDisruptionBudgetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20540">
@@ -31043,7 +31043,7 @@ min is the start of the range, inclusive.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodDisruptionBudgetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodDisruptionBudgetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodDisruptionBudgetList</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodSecurityPolicy" data-link-title="isPodSecurityPolicy">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20654">
@@ -31052,7 +31052,7 @@ min is the start of the range, inclusive.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodSecurityPolicy</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodSecurityPolicyList" data-link-title="isPodSecurityPolicyList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20691">
@@ -31061,7 +31061,7 @@ min is the start of the range, inclusive.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodSecurityPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodSecurityPolicyList</code></pre>
 
 <h3 class="pdoc-module-header" id="PodDisruptionBudget" data-link-title="PodDisruptionBudget">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L20481">
@@ -31981,7 +31981,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRole</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBinding" data-link-title="isClusterRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21059">
@@ -31990,7 +31990,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBindingList" data-link-title="isClusterRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21095">
@@ -31999,7 +31999,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleList" data-link-title="isClusterRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21131">
@@ -32008,7 +32008,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRole" data-link-title="isRole">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21210">
@@ -32017,7 +32017,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Role</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBinding" data-link-title="isRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21255">
@@ -32026,7 +32026,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBindingList" data-link-title="isRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21291">
@@ -32035,7 +32035,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleList" data-link-title="isRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21327">
@@ -32044,7 +32044,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="PolicyRule" data-link-title="PolicyRule">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21139">
@@ -32634,7 +32634,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRole</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBinding" data-link-title="isClusterRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21486">
@@ -32643,7 +32643,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBindingList" data-link-title="isClusterRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21522">
@@ -32652,7 +32652,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleList" data-link-title="isClusterRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21558">
@@ -32661,7 +32661,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRole" data-link-title="isRole">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21638">
@@ -32670,7 +32670,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Role</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBinding" data-link-title="isRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21683">
@@ -32679,7 +32679,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBindingList" data-link-title="isRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21719">
@@ -32688,7 +32688,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleList" data-link-title="isRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21755">
@@ -32697,7 +32697,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="isSubject" data-link-title="isSubject">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21814">
@@ -32706,7 +32706,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isSubject(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isSubject(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Subject</code></pre>
 
 <h3 class="pdoc-module-header" id="PolicyRule" data-link-title="PolicyRule">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21566">
@@ -33298,7 +33298,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRole</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBinding" data-link-title="isClusterRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21918">
@@ -33307,7 +33307,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleBindingList" data-link-title="isClusterRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21954">
@@ -33316,7 +33316,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isClusterRoleList" data-link-title="isClusterRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21990">
@@ -33325,7 +33325,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isClusterRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is ClusterRoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRole" data-link-title="isRole">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22070">
@@ -33334,7 +33334,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRole(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is Role</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBinding" data-link-title="isRoleBinding">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22115">
@@ -33343,7 +33343,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBinding</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleBindingList" data-link-title="isRoleBindingList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22151">
@@ -33352,7 +33352,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleBindingList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleBindingList</code></pre>
 
 <h3 class="pdoc-module-header" id="isRoleList" data-link-title="isRoleList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22187">
@@ -33361,7 +33361,7 @@ Standard object's metadata.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isRoleList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is RoleList</code></pre>
 
 <h3 class="pdoc-module-header" id="PolicyRule" data-link-title="PolicyRule">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L21998">
@@ -33719,7 +33719,7 @@ Namespace of the referenced object.  If the object kind is non-namespace, such a
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isPriorityClassList" data-link-title="isPriorityClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22346">
@@ -33728,7 +33728,7 @@ Namespace of the referenced object.  If the object kind is non-namespace, such a
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="PriorityClass" data-link-title="PriorityClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22256">
@@ -33869,7 +33869,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isPriorityClassList" data-link-title="isPriorityClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22448">
@@ -33878,7 +33878,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="PriorityClass" data-link-title="PriorityClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22358">
@@ -34020,7 +34020,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isPriorityClassList" data-link-title="isPriorityClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22550">
@@ -34029,7 +34029,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPriorityClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PriorityClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="PriorityClass" data-link-title="PriorityClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22460">
@@ -34171,7 +34171,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodPreset(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodPreset(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodPreset</code></pre>
 
 <h3 class="pdoc-module-header" id="isPodPresetList" data-link-title="isPodPresetList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22625">
@@ -34180,7 +34180,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isPodPresetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isPodPresetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is PodPresetList</code></pre>
 
 <h3 class="pdoc-module-header" id="PodPreset" data-link-title="PodPreset">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22563">
@@ -34331,7 +34331,7 @@ Volumes defines the collection of Volume to inject into the pod.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStorageClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStorageClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StorageClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isStorageClassList" data-link-title="isStorageClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22780">
@@ -34340,7 +34340,7 @@ Volumes defines the collection of Volume to inject into the pod.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStorageClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStorageClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StorageClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="isVolumeAttachment" data-link-title="isVolumeAttachment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22821">
@@ -34349,7 +34349,7 @@ Volumes defines the collection of Volume to inject into the pod.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachment</code></pre>
 
 <h3 class="pdoc-module-header" id="isVolumeAttachmentList" data-link-title="isVolumeAttachmentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22858">
@@ -34358,7 +34358,7 @@ Volumes defines the collection of Volume to inject into the pod.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachmentList</code></pre>
 
 <h3 class="pdoc-module-header" id="StorageClass" data-link-title="StorageClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22674">
@@ -34770,7 +34770,7 @@ Time the error was encountered.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachment</code></pre>
 
 <h3 class="pdoc-module-header" id="isVolumeAttachmentList" data-link-title="isVolumeAttachmentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23035">
@@ -34779,7 +34779,7 @@ Time the error was encountered.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachmentList</code></pre>
 
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L22967">
@@ -35385,7 +35385,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCSIDriver(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCSIDriver(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CSIDriver</code></pre>
 
 <h3 class="pdoc-module-header" id="isCSIDriverList" data-link-title="isCSIDriverList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23218">
@@ -35394,7 +35394,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCSIDriverList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCSIDriverList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CSIDriverList</code></pre>
 
 <h3 class="pdoc-module-header" id="isCSINode" data-link-title="isCSINode">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23315">
@@ -35403,7 +35403,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCSINode(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCSINode(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CSINode</code></pre>
 
 <h3 class="pdoc-module-header" id="isCSINodeList" data-link-title="isCSINodeList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23393">
@@ -35412,7 +35412,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isCSINodeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isCSINodeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is CSINodeList</code></pre>
 
 <h3 class="pdoc-module-header" id="isStorageClass" data-link-title="isStorageClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23486">
@@ -35421,7 +35421,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStorageClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStorageClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StorageClass</code></pre>
 
 <h3 class="pdoc-module-header" id="isStorageClassList" data-link-title="isStorageClassList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23523">
@@ -35430,7 +35430,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isStorageClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isStorageClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is StorageClassList</code></pre>
 
 <h3 class="pdoc-module-header" id="isVolumeAttachment" data-link-title="isVolumeAttachment">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23564">
@@ -35439,7 +35439,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachment</code></pre>
 
 <h3 class="pdoc-module-header" id="isVolumeAttachmentList" data-link-title="isVolumeAttachmentList">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23601">
@@ -35448,7 +35448,7 @@ the list are uninstalled, this can become empty.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): o is VolumeAttachmentList</code></pre>
 
 <h3 class="pdoc-module-header" id="StorageClass" data-link-title="StorageClass">
     <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/types/input.ts#L23417">

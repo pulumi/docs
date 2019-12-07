@@ -213,7 +213,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -285,7 +285,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L196">property <b>stepScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stepScalingPolicyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfiguration'>outputs.appautoscaling.PolicyStepScalingPolicyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stepScalingPolicyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfiguration'>PolicyStepScalingPolicyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Step scaling policy configuration, requires `policyType = "StepScaling"` (default). See supported fields below.
 
@@ -293,7 +293,7 @@ Step scaling policy configuration, requires `policyType = "StepScaling"` (defaul
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L200">property <b>targetTrackingScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetTrackingScalingPolicyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfiguration'>outputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetTrackingScalingPolicyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfiguration'>PolicyTargetTrackingScalingPolicyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A target tracking policy, requires `policyType = "TargetTrackingScaling"`. See supported fields below.
 
@@ -409,7 +409,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ScheduledAction</code></pre>
 
 
 Returns true if the given object is an instance of ScheduledAction.  This is designed to work even
@@ -468,7 +468,7 @@ The scalable dimension. Documentation can be found in the parameter at: [AWS App
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/scheduledAction.ts#L118">property <b>scalableTargetAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scalableTargetAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ScheduledActionScalableTargetAction'>outputs.appautoscaling.ScheduledActionScalableTargetAction</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scalableTargetAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ScheduledActionScalableTargetAction'>ScheduledActionScalableTargetAction</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The new minimum and maximum capacity. You can set both values or just one. See below
 
@@ -619,7 +619,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Target</code></pre>
 
 
 Returns true if the given object is an instance of Target.  This is designed to work even
@@ -754,7 +754,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L322">property <b>stepScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration'>inputs.appautoscaling.PolicyStepScalingPolicyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration'>PolicyStepScalingPolicyConfiguration</a>&gt;;</code></pre>
 
 Step scaling policy configuration, requires `policyType = "StepScaling"` (default). See supported fields below.
 
@@ -762,7 +762,7 @@ Step scaling policy configuration, requires `policyType = "StepScaling"` (defaul
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L326">property <b>targetTrackingScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetTrackingScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration'>inputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTrackingScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration'>PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;;</code></pre>
 
 A target tracking policy, requires `policyType = "TargetTrackingScaling"`. See supported fields below.
 
@@ -833,7 +833,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L287">property <b>stepScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration'>inputs.appautoscaling.PolicyStepScalingPolicyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration'>PolicyStepScalingPolicyConfiguration</a>&gt;;</code></pre>
 
 Step scaling policy configuration, requires `policyType = "StepScaling"` (default). See supported fields below.
 
@@ -841,7 +841,7 @@ Step scaling policy configuration, requires `policyType = "StepScaling"` (defaul
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/policy.ts#L291">property <b>targetTrackingScalingPolicyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetTrackingScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration'>inputs.appautoscaling.PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTrackingScalingPolicyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration'>PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;;</code></pre>
 
 A target tracking policy, requires `policyType = "TargetTrackingScaling"`. See supported fields below.
 
@@ -891,7 +891,7 @@ The scalable dimension. Documentation can be found in the parameter at: [AWS App
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/scheduledAction.ts#L247">property <b>scalableTargetAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalableTargetAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScheduledActionScalableTargetAction'>inputs.appautoscaling.ScheduledActionScalableTargetAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalableTargetAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScheduledActionScalableTargetAction'>ScheduledActionScalableTargetAction</a>&gt;;</code></pre>
 
 The new minimum and maximum capacity. You can set both values or just one. See below
 
@@ -973,7 +973,7 @@ The scalable dimension. Documentation can be found in the parameter at: [AWS App
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appautoscaling/scheduledAction.ts#L209">property <b>scalableTargetAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalableTargetAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScheduledActionScalableTargetAction'>inputs.appautoscaling.ScheduledActionScalableTargetAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalableTargetAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScheduledActionScalableTargetAction'>ScheduledActionScalableTargetAction</a>&gt;;</code></pre>
 
 The new minimum and maximum capacity. You can set both values or just one. See below
 

@@ -123,7 +123,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Secret</code></pre>
 
 
 Returns true if the given object is an instance of Secret.  This is designed to work even
@@ -211,7 +211,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/secretsmanager/secret.ts#L108">property <b>rotationRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rotationRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecretRotationRules'>outputs.secretsmanager.SecretRotationRules</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rotationRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecretRotationRules'>SecretRotationRules</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A structure that defines the rotation configuration for this secret. Defined below.
 
@@ -297,7 +297,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecretVersion</code></pre>
 
 
 Returns true if the given object is an instance of SecretVersion.  This is designed to work even
@@ -553,7 +553,7 @@ Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/secretsmanager/getSecret.ts#L101">property <b>rotationRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rotationRules: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretRotationRule'>outputs.secretsmanager.GetSecretRotationRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rotationRules: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretRotationRule'>GetSecretRotationRule</a>[];</code></pre>
 
 Rotation rules if rotation is enabled.
 
@@ -731,7 +731,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/secretsmanager/secret.ts#L241">property <b>rotationRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rotationRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecretRotationRules'>inputs.secretsmanager.SecretRotationRules</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rotationRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecretRotationRules'>SecretRotationRules</a>&gt;;</code></pre>
 
 A structure that defines the rotation configuration for this secret. Defined below.
 
@@ -826,7 +826,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/secretsmanager/secret.ts#L202">property <b>rotationRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rotationRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecretRotationRules'>inputs.secretsmanager.SecretRotationRules</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rotationRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecretRotationRules'>SecretRotationRules</a>&gt;;</code></pre>
 
 A structure that defines the rotation configuration for this secret. Defined below.
 

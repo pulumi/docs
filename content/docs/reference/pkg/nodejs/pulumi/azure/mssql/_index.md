@@ -120,7 +120,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ElasticPool</code></pre>
 
 
 Returns true if the given object is an instance of ElasticPool.  This is designed to work even
@@ -130,7 +130,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L75">property <b>elasticPoolProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolElasticPoolProperties'>outputs.mssql.ElasticPoolElasticPoolProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElasticPool-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L48">property <b>id</b></a>
 </h4>
@@ -176,7 +176,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L95">property <b>perDatabaseSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolPerDatabaseSettings'>outputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
 
 A `perDatabaseSettings` block as defined below.
 
@@ -200,7 +200,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L107">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolSku'>outputs.mssql.ElasticPoolSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 
@@ -308,7 +308,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L247">property <b>perDatabaseSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>inputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
 
 A `perDatabaseSettings` block as defined below.
 
@@ -332,7 +332,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L259">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>inputs.mssql.ElasticPoolSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 
@@ -366,7 +366,7 @@ Input properties used for looking up and filtering ElasticPool resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L181">property <b>elasticPoolProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolElasticPoolProperties'>inputs.mssql.ElasticPoolElasticPoolProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElasticPoolState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L185">property <b>location</b></a>
 </h4>
@@ -403,7 +403,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L201">property <b>perDatabaseSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>inputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</code></pre>
 
 A `perDatabaseSettings` block as defined below.
 
@@ -427,7 +427,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/mssql/elasticPool.ts#L213">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>inputs.mssql.ElasticPoolSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 

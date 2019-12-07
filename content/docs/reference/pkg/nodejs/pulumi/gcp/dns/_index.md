@@ -90,7 +90,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ManagedZone</code></pre>
 
 
 Returns true if the given object is an instance of ManagedZone.  This is designed to work even
@@ -116,7 +116,7 @@ The DNS name of this managed zone, for instance "example.com.".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L50">property <b>dnssecConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dnssecConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig'>outputs.dns.ManagedZoneDnssecConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dnssecConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig'>ManagedZoneDnssecConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 DNSSEC configuration
 
@@ -124,7 +124,7 @@ DNSSEC configuration
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L55">property <b>forwardingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>forwardingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig'>outputs.dns.ManagedZoneForwardingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>forwardingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig'>ManagedZoneForwardingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.
@@ -166,7 +166,7 @@ Delegate your managed_zone to these virtual name servers; defined by the server
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L72">property <b>peeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>peeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig'>outputs.dns.ManagedZonePeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>peeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig'>ManagedZonePeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.
@@ -175,7 +175,7 @@ network to peer with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L76">property <b>privateVisibilityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>privateVisibilityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig'>outputs.dns.ManagedZonePrivateVisibilityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>privateVisibilityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig'>ManagedZonePrivateVisibilityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
 
@@ -253,7 +253,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -263,7 +263,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L43">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>alternativeNameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAlternativeNameServerConfig'>outputs.dns.PolicyAlternativeNameServerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>alternativeNameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAlternativeNameServerConfig'>PolicyAlternativeNameServerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
 server that you choose. Names such as .internal are not available when an alternative name server is specified.
@@ -314,7 +314,7 @@ User assigned name for this policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L64">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyNetwork'>outputs.dns.PolicyNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyNetwork'>PolicyNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of network names specifying networks to which this policy is applied.
 
@@ -498,7 +498,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RecordSet</code></pre>
 
 
 Returns true if the given object is an instance of RecordSet.  This is designed to work even
@@ -720,7 +720,7 @@ The DNS name of this managed zone, for instance "example.com.".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L208">property <b>dnssecConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>ManagedZoneDnssecConfig</a>&gt;;</code></pre>
 
 DNSSEC configuration
 
@@ -728,7 +728,7 @@ DNSSEC configuration
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L213">property <b>forwardingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>ManagedZoneForwardingConfig</a>&gt;;</code></pre>
 
 The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.
@@ -753,7 +753,7 @@ User assigned name for this resource. Must be unique within the project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L226">property <b>peeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>ManagedZonePeeringConfig</a>&gt;;</code></pre>
 
 The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.
@@ -762,7 +762,7 @@ network to peer with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L230">property <b>privateVisibilityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
 
 For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
 
@@ -814,7 +814,7 @@ The DNS name of this managed zone, for instance "example.com.".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L154">property <b>dnssecConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>ManagedZoneDnssecConfig</a>&gt;;</code></pre>
 
 DNSSEC configuration
 
@@ -822,7 +822,7 @@ DNSSEC configuration
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L159">property <b>forwardingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>ManagedZoneForwardingConfig</a>&gt;;</code></pre>
 
 The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.
@@ -855,7 +855,7 @@ Delegate your managed_zone to these virtual name servers; defined by the server
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L176">property <b>peeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>ManagedZonePeeringConfig</a>&gt;;</code></pre>
 
 The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.
@@ -864,7 +864,7 @@ network to peer with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/managedZone.ts#L180">property <b>privateVisibilityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
 
 For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
 
@@ -900,7 +900,7 @@ The set of arguments for constructing a Policy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L156">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
 
 Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
 server that you choose. Names such as .internal are not available when an alternative name server is specified.
@@ -942,7 +942,7 @@ User assigned name for this policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L177">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>PolicyNetwork</a>&gt;[]&gt;;</code></pre>
 
 List of network names specifying networks to which this policy is applied.
 
@@ -969,7 +969,7 @@ Input properties used for looking up and filtering Policy resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L119">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
 
 Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
 server that you choose. Names such as .internal are not available when an alternative name server is specified.
@@ -1011,7 +1011,7 @@ User assigned name for this policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dns/policy.ts#L140">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>PolicyNetwork</a>&gt;[]&gt;;</code></pre>
 
 List of network names specifying networks to which this policy is applied.
 

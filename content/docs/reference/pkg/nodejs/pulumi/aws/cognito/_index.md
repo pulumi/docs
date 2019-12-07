@@ -141,7 +141,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IdentityPool</code></pre>
 
 
 Returns true if the given object is an instance of IdentityPool.  This is designed to work even
@@ -167,7 +167,7 @@ The ARN of the identity pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPool.ts#L86">property <b>cognitoIdentityProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cognitoIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolCognitoIdentityProvider'>outputs.cognito.IdentityPoolCognitoIdentityProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cognitoIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolCognitoIdentityProvider'>IdentityPoolCognitoIdentityProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of Amazon Cognito Identity user pools and their client IDs.
 
@@ -362,7 +362,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IdentityPoolRoleAttachment</code></pre>
 
 
 Returns true if the given object is an instance of IdentityPoolRoleAttachment.  This is designed to work even
@@ -389,7 +389,7 @@ An identity pool ID in the format REGION:GUID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L123">property <b>roleMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoleMapping'>outputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoleMapping'>IdentityPoolRoleAttachmentRoleMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A List of Role Mapping.
 
@@ -397,7 +397,7 @@ A List of Role Mapping.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L127">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoles'>outputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoles'>IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 
@@ -484,7 +484,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IdentityProvider</code></pre>
 
 
 Returns true if the given object is an instance of IdentityProvider.  This is designed to work even
@@ -637,7 +637,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceServer</code></pre>
 
 
 Returns true if the given object is an instance of ResourceServer.  This is designed to work even
@@ -680,7 +680,7 @@ A list of all scopes configured for this resource server in the format identifie
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/resourceServer.ts#L84">property <b>scopes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceServerScope'>outputs.cognito.ResourceServerScope</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceServerScope'>ResourceServerScope</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of Authorization Scope.
 
@@ -786,7 +786,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserGroup</code></pre>
 
 
 Returns true if the given object is an instance of UserGroup.  This is designed to work even
@@ -910,7 +910,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserPool</code></pre>
 
 
 Returns true if the given object is an instance of UserPool.  This is designed to work even
@@ -920,7 +920,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L55">property <b>adminCreateUserConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>adminCreateUserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfig'>outputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>adminCreateUserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfig'>UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
 
 The configuration for AdminCreateUser requests.
 
@@ -960,7 +960,7 @@ The date the user pool was created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L75">property <b>deviceConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>deviceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolDeviceConfiguration'>outputs.cognito.UserPoolDeviceConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>deviceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolDeviceConfiguration'>UserPoolDeviceConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The configuration for the user pool's device tracking.
 
@@ -968,7 +968,7 @@ The configuration for the user pool's device tracking.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L79">property <b>emailConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>emailConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolEmailConfiguration'>outputs.cognito.UserPoolEmailConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>emailConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolEmailConfiguration'>UserPoolEmailConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The Email Configuration.
 
@@ -1009,7 +1009,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L95">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolLambdaConfig'>outputs.cognito.UserPoolLambdaConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolLambdaConfig'>UserPoolLambdaConfig</a>&gt;;</code></pre>
 
 A container for the AWS Lambda triggers associated with the user pool.
 
@@ -1041,7 +1041,7 @@ The name of the attribute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L111">property <b>passwordPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolPasswordPolicy'>outputs.cognito.UserPoolPasswordPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolPasswordPolicy'>UserPoolPasswordPolicy</a>&gt;;</code></pre>
 
 A container for information about the user pool password policy.
 
@@ -1049,7 +1049,7 @@ A container for information about the user pool password policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L115">property <b>schemas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schemas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchema'>outputs.cognito.UserPoolSchema</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schemas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchema'>UserPoolSchema</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
 
@@ -1065,7 +1065,7 @@ A string representing the SMS authentication message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L123">property <b>smsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>smsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSmsConfiguration'>outputs.cognito.UserPoolSmsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>smsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSmsConfiguration'>UserPoolSmsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The SMS Configuration.
 
@@ -1098,7 +1098,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L135">property <b>userPoolAddOns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>userPoolAddOns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolUserPoolAddOns'>outputs.cognito.UserPoolUserPoolAddOns</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>userPoolAddOns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolUserPoolAddOns'>UserPoolUserPoolAddOns</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
 
@@ -1114,7 +1114,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L143">property <b>verificationMessageTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>verificationMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolVerificationMessageTemplate'>outputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>verificationMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolVerificationMessageTemplate'>UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
 
 The verification message templates configuration.
 
@@ -1194,7 +1194,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserPoolClient</code></pre>
 
 
 Returns true if the given object is an instance of UserPoolClient.  This is designed to work even
@@ -1413,7 +1413,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserPoolDomain</code></pre>
 
 
 Returns true if the given object is an instance of UserPoolDomain.  This is designed to work even
@@ -1606,7 +1606,7 @@ Whether the identity pool supports unauthenticated logins or not.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPool.ts#L214">property <b>cognitoIdentityProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>inputs.cognito.IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</code></pre>
 
 An array of Amazon Cognito Identity user pools and their client IDs.
 
@@ -1681,7 +1681,7 @@ An identity pool ID in the format REGION:GUID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L196">property <b>roleMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>inputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</code></pre>
 
 A List of Role Mapping.
 
@@ -1689,7 +1689,7 @@ A List of Role Mapping.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L200">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>inputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 
@@ -1715,7 +1715,7 @@ An identity pool ID in the format REGION:GUID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L178">property <b>roleMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>inputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</code></pre>
 
 A List of Role Mapping.
 
@@ -1723,7 +1723,7 @@ A List of Role Mapping.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L182">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>inputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>IdentityPoolRoleAttachmentRoles</a>&gt;;</code></pre>
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 
@@ -1757,7 +1757,7 @@ The ARN of the identity pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/identityPool.ts#L175">property <b>cognitoIdentityProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>inputs.cognito.IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</code></pre>
 
 An array of Amazon Cognito Identity user pools and their client IDs.
 
@@ -1956,7 +1956,7 @@ A name for the resource server.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/resourceServer.ts#L171">property <b>scopes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>inputs.cognito.ResourceServerScope</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>ResourceServerScope</a>&gt;[]&gt;;</code></pre>
 
 A list of Authorization Scope.
 
@@ -2003,7 +2003,7 @@ A list of all scopes configured for this resource server in the format identifie
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/resourceServer.ts#L148">property <b>scopes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>inputs.cognito.ResourceServerScope</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>ResourceServerScope</a>&gt;[]&gt;;</code></pre>
 
 A list of Authorization Scope.
 
@@ -2126,7 +2126,7 @@ The set of arguments for constructing a UserPool resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L322">property <b>adminCreateUserConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>inputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
 
 The configuration for AdminCreateUser requests.
 
@@ -2150,7 +2150,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L334">property <b>deviceConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>inputs.cognito.UserPoolDeviceConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>UserPoolDeviceConfiguration</a>&gt;;</code></pre>
 
 The configuration for the user pool's device tracking.
 
@@ -2158,7 +2158,7 @@ The configuration for the user pool's device tracking.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L338">property <b>emailConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>inputs.cognito.UserPoolEmailConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>UserPoolEmailConfiguration</a>&gt;;</code></pre>
 
 The Email Configuration.
 
@@ -2182,7 +2182,7 @@ A string representing the email verification subject. Conflicts with `verificati
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L350">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>inputs.cognito.UserPoolLambdaConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>UserPoolLambdaConfig</a>&gt;;</code></pre>
 
 A container for the AWS Lambda triggers associated with the user pool.
 
@@ -2206,7 +2206,7 @@ The name of the attribute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L362">property <b>passwordPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>inputs.cognito.UserPoolPasswordPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>UserPoolPasswordPolicy</a>&gt;;</code></pre>
 
 A container for information about the user pool password policy.
 
@@ -2214,7 +2214,7 @@ A container for information about the user pool password policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L366">property <b>schemas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>inputs.cognito.UserPoolSchema</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>UserPoolSchema</a>&gt;[]&gt;;</code></pre>
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
 
@@ -2230,7 +2230,7 @@ A string representing the SMS authentication message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L374">property <b>smsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>inputs.cognito.UserPoolSmsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>UserPoolSmsConfiguration</a>&gt;;</code></pre>
 
 The SMS Configuration.
 
@@ -2254,7 +2254,7 @@ A mapping of tags to assign to the User Pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L386">property <b>userPoolAddOns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>inputs.cognito.UserPoolUserPoolAddOns</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>UserPoolUserPoolAddOns</a>&gt;;</code></pre>
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
 
@@ -2270,7 +2270,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L394">property <b>verificationMessageTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>inputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
 
 The verification message templates configuration.
 
@@ -2640,7 +2640,7 @@ Input properties used for looking up and filtering UserPool resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L224">property <b>adminCreateUserConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>inputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>UserPoolAdminCreateUserConfig</a>&gt;;</code></pre>
 
 The configuration for AdminCreateUser requests.
 
@@ -2680,7 +2680,7 @@ The date the user pool was created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L244">property <b>deviceConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>inputs.cognito.UserPoolDeviceConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>UserPoolDeviceConfiguration</a>&gt;;</code></pre>
 
 The configuration for the user pool's device tracking.
 
@@ -2688,7 +2688,7 @@ The configuration for the user pool's device tracking.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L248">property <b>emailConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>inputs.cognito.UserPoolEmailConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>UserPoolEmailConfiguration</a>&gt;;</code></pre>
 
 The Email Configuration.
 
@@ -2720,7 +2720,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L264">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>inputs.cognito.UserPoolLambdaConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>UserPoolLambdaConfig</a>&gt;;</code></pre>
 
 A container for the AWS Lambda triggers associated with the user pool.
 
@@ -2752,7 +2752,7 @@ The name of the attribute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L280">property <b>passwordPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>inputs.cognito.UserPoolPasswordPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>UserPoolPasswordPolicy</a>&gt;;</code></pre>
 
 A container for information about the user pool password policy.
 
@@ -2760,7 +2760,7 @@ A container for information about the user pool password policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L284">property <b>schemas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>inputs.cognito.UserPoolSchema</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>UserPoolSchema</a>&gt;[]&gt;;</code></pre>
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
 
@@ -2776,7 +2776,7 @@ A string representing the SMS authentication message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L292">property <b>smsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>inputs.cognito.UserPoolSmsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>UserPoolSmsConfiguration</a>&gt;;</code></pre>
 
 The SMS Configuration.
 
@@ -2800,7 +2800,7 @@ A mapping of tags to assign to the User Pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L304">property <b>userPoolAddOns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>inputs.cognito.UserPoolUserPoolAddOns</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>UserPoolUserPoolAddOns</a>&gt;;</code></pre>
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
 
@@ -2816,7 +2816,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cognito/userPool.ts#L312">property <b>verificationMessageTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>inputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>UserPoolVerificationMessageTemplate</a>&gt;;</code></pre>
 
 The verification message templates configuration.
 

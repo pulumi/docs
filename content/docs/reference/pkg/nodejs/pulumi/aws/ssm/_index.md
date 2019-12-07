@@ -148,7 +148,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Activation</code></pre>
 
 
 Returns true if the given object is an instance of Activation.  This is designed to work even
@@ -307,7 +307,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Association</code></pre>
 
 
 Returns true if the given object is an instance of Association.  This is designed to work even
@@ -390,7 +390,7 @@ The name of the SSM document to apply.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L90">property <b>outputLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>outputLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationOutputLocation'>outputs.ssm.AssociationOutputLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>outputLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationOutputLocation'>AssociationOutputLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An output location block. Output Location is documented below.
 
@@ -414,7 +414,7 @@ A cron expression when the association will be applied to the target(s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L102">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationTarget'>outputs.ssm.AssociationTarget</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationTarget'>AssociationTarget</a>[]&gt;;</code></pre>
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
@@ -520,7 +520,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Document</code></pre>
 
 
 Returns true if the given object is an instance of Document.  This is designed to work even
@@ -632,7 +632,7 @@ The AWS user account of the person who created the document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/document.ts#L133">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentParameter'>outputs.ssm.DocumentParameter</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentParameter'>DocumentParameter</a>[]&gt;;</code></pre>
 
 The parameters that are available to this document.
 
@@ -640,7 +640,7 @@ The parameters that are available to this document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/document.ts#L137">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentPermissions'>outputs.ssm.DocumentPermissions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentPermissions'>DocumentPermissions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Additional Permissions to attach to the document. See Permissions below for details.
 
@@ -747,7 +747,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MaintenanceWindow</code></pre>
 
 
 Returns true if the given object is an instance of MaintenanceWindow.  This is designed to work even
@@ -922,7 +922,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MaintenanceWindowTarget</code></pre>
 
 
 Returns true if the given object is an instance of MaintenanceWindowTarget.  This is designed to work even
@@ -973,7 +973,7 @@ The type of target being registered with the Maintenance Window. Possible values
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L82">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTargetTarget'>outputs.ssm.MaintenanceWindowTargetTarget</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>[]&gt;;</code></pre>
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
 
@@ -1167,7 +1167,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MaintenanceWindowTask</code></pre>
 
 
 Returns true if the given object is an instance of MaintenanceWindowTask.  This is designed to work even
@@ -1194,7 +1194,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L172">property <b>loggingInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loggingInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskLoggingInfo'>outputs.ssm.MaintenanceWindowTaskLoggingInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loggingInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskLoggingInfo'>MaintenanceWindowTaskLoggingInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -1242,7 +1242,7 @@ The IAM service role to assume during task execution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L196">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTarget'>outputs.ssm.MaintenanceWindowTaskTarget</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>[]&gt;;</code></pre>
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
@@ -1258,7 +1258,7 @@ The ARN of the task to execute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L204">property <b>taskInvocationParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>taskInvocationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>taskInvocationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
 
@@ -1266,7 +1266,7 @@ The parameters for task execution. This argument is conflict with `taskParameter
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L208">property <b>taskParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>taskParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskParameter'>outputs.ssm.MaintenanceWindowTaskTaskParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>taskParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskParameter'>MaintenanceWindowTaskTaskParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -1389,7 +1389,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Parameter</code></pre>
 
 
 Returns true if the given object is an instance of Parameter.  This is designed to work even
@@ -1632,7 +1632,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PatchBaseline</code></pre>
 
 
 Returns true if the given object is an instance of PatchBaseline.  This is designed to work even
@@ -1642,7 +1642,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L126">property <b>approvalRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>approvalRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineApprovalRule'>outputs.ssm.PatchBaselineApprovalRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>approvalRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
@@ -1674,7 +1674,7 @@ The description of the patch baseline.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L142">property <b>globalFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>globalFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineGlobalFilter'>outputs.ssm.PatchBaselineGlobalFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>globalFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
@@ -1789,7 +1789,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PatchGroup</code></pre>
 
 
 Returns true if the given object is an instance of PatchGroup.  This is designed to work even
@@ -1937,7 +1937,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceDataSync</code></pre>
 
 
 Returns true if the given object is an instance of ResourceDataSync.  This is designed to work even
@@ -1964,7 +1964,7 @@ Name for the configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/resourceDataSync.ts#L107">property <b>s3Destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceDataSyncS3Destination'>outputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
 
 Amazon S3 configuration details for the sync.
 
@@ -2263,7 +2263,7 @@ The name of the SSM document to apply.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L243">property <b>outputLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>inputs.ssm.AssociationOutputLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>AssociationOutputLocation</a>&gt;;</code></pre>
 
 An output location block. Output Location is documented below.
 
@@ -2287,7 +2287,7 @@ A cron expression when the association will be applied to the target(s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L255">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>inputs.ssm.AssociationTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>AssociationTarget</a>&gt;[]&gt;;</code></pre>
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
@@ -2369,7 +2369,7 @@ The name of the SSM document to apply.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L193">property <b>outputLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>inputs.ssm.AssociationOutputLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>AssociationOutputLocation</a>&gt;;</code></pre>
 
 An output location block. Output Location is documented below.
 
@@ -2393,7 +2393,7 @@ A cron expression when the association will be applied to the target(s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/association.ts#L205">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>inputs.ssm.AssociationTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>AssociationTarget</a>&gt;[]&gt;;</code></pre>
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
@@ -2443,7 +2443,7 @@ The name of the document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/document.ts#L321">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>inputs.ssm.DocumentPermissions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>DocumentPermissions</a>&gt;;</code></pre>
 
 Additional Permissions to attach to the document. See Permissions below for details.
 
@@ -2562,7 +2562,7 @@ The AWS user account of the person who created the document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/document.ts#L275">property <b>parameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentParameter'>inputs.ssm.DocumentParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentParameter'>DocumentParameter</a>&gt;[]&gt;;</code></pre>
 
 The parameters that are available to this document.
 
@@ -2570,7 +2570,7 @@ The parameters that are available to this document.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/document.ts#L279">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>inputs.ssm.DocumentPermissions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>DocumentPermissions</a>&gt;;</code></pre>
 
 Additional Permissions to attach to the document. See Permissions below for details.
 
@@ -2997,7 +2997,7 @@ The type of target being registered with the Maintenance Window. Possible values
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L188">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>inputs.ssm.MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
 
@@ -3055,7 +3055,7 @@ The type of target being registered with the Maintenance Window. Possible values
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L158">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>inputs.ssm.MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
 
@@ -3089,7 +3089,7 @@ The description of the maintenance window task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L360">property <b>loggingInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>inputs.ssm.MaintenanceWindowTaskLoggingInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>MaintenanceWindowTaskLoggingInfo</a>&gt;;</code></pre>
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -3137,7 +3137,7 @@ The IAM service role to assume during task execution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L384">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>inputs.ssm.MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
@@ -3153,7 +3153,7 @@ The ARN of the task to execute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L392">property <b>taskInvocationParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>inputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
 
@@ -3161,7 +3161,7 @@ The parameters for task execution. This argument is conflict with `taskParameter
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L396">property <b>taskParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>inputs.ssm.MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</code></pre>
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -3203,7 +3203,7 @@ The description of the maintenance window task.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L302">property <b>loggingInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>inputs.ssm.MaintenanceWindowTaskLoggingInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>MaintenanceWindowTaskLoggingInfo</a>&gt;;</code></pre>
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -3251,7 +3251,7 @@ The IAM service role to assume during task execution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L326">property <b>targets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>inputs.ssm.MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
@@ -3267,7 +3267,7 @@ The ARN of the task to execute.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L334">property <b>taskInvocationParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>inputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
 
@@ -3275,7 +3275,7 @@ The parameters for task execution. This argument is conflict with `taskParameter
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/maintenanceWindowTask.ts#L338">property <b>taskParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>inputs.ssm.MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</code></pre>
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
 
@@ -3504,7 +3504,7 @@ The set of arguments for constructing a PatchBaseline resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L247">property <b>approvalRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>inputs.ssm.PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
@@ -3536,7 +3536,7 @@ The description of the patch baseline.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L263">property <b>globalFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>inputs.ssm.PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
@@ -3583,7 +3583,7 @@ Input properties used for looking up and filtering PatchBaseline resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L208">property <b>approvalRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>inputs.ssm.PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
@@ -3615,7 +3615,7 @@ The description of the patch baseline.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/patchBaseline.ts#L224">property <b>globalFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>inputs.ssm.PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
@@ -3722,7 +3722,7 @@ Name for the configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/resourceDataSync.ts#L167">property <b>s3Destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>inputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
 
 Amazon S3 configuration details for the sync.
 
@@ -3748,7 +3748,7 @@ Name for the configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ssm/resourceDataSync.ts#L153">property <b>s3Destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>s3Destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>inputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>s3Destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
 
 Amazon S3 configuration details for the sync.
 

@@ -212,7 +212,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Application</code></pre>
 
 
 Returns true if the given object is an instance of Application.  This is designed to work even
@@ -222,7 +222,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L98">property <b>appRoles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationAppRole'>outputs.ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationAppRole'>ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 
@@ -295,7 +295,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L130">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOauth2Permission'>outputs.ApplicationOauth2Permission</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -332,7 +332,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L147">property <b>requiredResourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccess'>outputs.ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A collection of `requiredResourceAccess` blocks as documented below.
 
@@ -424,7 +424,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationPassword</code></pre>
 
 
 Returns true if the given object is an instance of ApplicationPassword.  This is designed to work even
@@ -548,7 +548,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -668,7 +668,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GroupMember</code></pre>
 
 
 Returns true if the given object is an instance of GroupMember.  This is designed to work even
@@ -749,7 +749,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -855,7 +855,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServicePrincipal</code></pre>
 
 
 Returns true if the given object is an instance of ServicePrincipal.  This is designed to work even
@@ -898,7 +898,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/servicePrincipal.ts#L82">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalOauth2Permission'>outputs.ServicePrincipalOauth2Permission</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -1001,7 +1001,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServicePrincipalPassword</code></pre>
 
 
 Returns true if the given object is an instance of ServicePrincipalPassword.  This is designed to work even
@@ -1138,7 +1138,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -1469,7 +1469,7 @@ The set of arguments for constructing a Application resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L279">property <b>appRoles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</code></pre>
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 
@@ -1525,7 +1525,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L307">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -1554,7 +1554,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L320">property <b>requiredResourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</code></pre>
 
 A collection of `requiredResourceAccess` blocks as documented below.
 
@@ -1706,7 +1706,7 @@ Input properties used for looking up and filtering Application resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L216">property <b>appRoles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</code></pre>
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 
@@ -1770,7 +1770,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L248">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -1807,7 +1807,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/application.ts#L265">property <b>requiredResourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</code></pre>
 
 A collection of `requiredResourceAccess` blocks as documented below.
 
@@ -1841,7 +1841,7 @@ Specifies the name of the Application within Azure Active Directory.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getApplication.ts#L55">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission'>inputs.GetApplicationOauth2Permission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetApplicationArgs-objectId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getApplication.ts#L59">property <b>objectId</b></a>
 </h4>
@@ -1864,7 +1864,7 @@ A collection of values returned by getApplication.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getApplication.ts#L69">property <b>appRoles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole'>outputs.GetApplicationAppRole</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole'>GetApplicationAppRole</a>[];</code></pre>
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 
@@ -1930,7 +1930,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getApplication.ts#L95">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission'>outputs.GetApplicationOauth2Permission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</code></pre>
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -1959,7 +1959,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getApplication.ts#L108">property <b>requiredResourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess'>outputs.GetApplicationRequiredResourceAccess</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess'>GetApplicationRequiredResourceAccess</a>[];</code></pre>
 
 A collection of `requiredResourceAccess` blocks as documented below.
 
@@ -2019,7 +2019,7 @@ A collection of values returned by getDomains.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getDomains.ts#L70">property <b>domains</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetDomainsDomain'>outputs.GetDomainsDomain</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetDomainsDomain'>GetDomainsDomain</a>[];</code></pre>
 
 One or more `domain` blocks as defined below.
 
@@ -2227,7 +2227,7 @@ The Display Name of the Azure AD Application associated with this Service Princi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getServicePrincipal.ts#L83">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission'>inputs.GetServicePrincipalOauth2Permission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</code></pre>
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -2253,7 +2253,7 @@ A collection of values returned by getServicePrincipal.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getServicePrincipal.ts#L94">property <b>appRoles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole'>outputs.GetServicePrincipalAppRole</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole'>GetServicePrincipalAppRole</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePrincipalResult-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getServicePrincipal.ts#L95">property <b>applicationId</b></a>
 </h4>
@@ -2279,7 +2279,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getServicePrincipal.ts#L100">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission'>outputs.GetServicePrincipalOauth2Permission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePrincipalResult-objectId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/getServicePrincipal.ts#L101">property <b>objectId</b></a>
 </h4>
@@ -2685,7 +2685,7 @@ The ID of the Azure AD Application for which to create a Service Principal.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/servicePrincipal.ts#L178">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
 
@@ -2851,7 +2851,7 @@ The Display Name of the Azure Active Directory Application associated with this 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/servicePrincipal.ts#L152">property <b>oauth2Permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</code></pre>
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
 

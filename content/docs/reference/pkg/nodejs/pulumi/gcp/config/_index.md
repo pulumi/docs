@@ -64,8 +64,8 @@ meta_desc: "Explore members of the config module in the @pulumi/gcp package."
     <li><a href="#region"><span class="symbol api"></span>region</a></li>
     <li><a href="#resourceManagerCustomEndpoint"><span class="symbol api"></span>resourceManagerCustomEndpoint</a></li>
     <li><a href="#resourceManagerV2beta1CustomEndpoint"><span class="symbol api"></span>resourceManagerV2beta1CustomEndpoint</a></li>
-    <li><a href="#runtimeconfigCustomEndpoint"><span class="symbol api"></span>runtimeconfigCustomEndpoint</a></li>
     <li><a href="#runtimeConfigCustomEndpoint"><span class="symbol api"></span>runtimeConfigCustomEndpoint</a></li>
+    <li><a href="#runtimeconfigCustomEndpoint"><span class="symbol api"></span>runtimeconfigCustomEndpoint</a></li>
     <li><a href="#scopes"><span class="symbol api"></span>scopes</a></li>
     <li><a href="#securityCenterCustomEndpoint"><span class="symbol api"></span>securityCenterCustomEndpoint</a></li>
     <li><a href="#securityScannerCustomEndpoint"><span class="symbol api"></span>securityScannerCustomEndpoint</a></li>
@@ -391,13 +391,6 @@ meta_desc: "Explore members of the config module in the @pulumi/gcp package."
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> resourceManagerV2beta1CustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;resourceManagerV2beta1CustomEndpoint&#34;)</span>;</code></pre>
-<h3 class="pdoc-module-header" id="runtimeconfigCustomEndpoint" data-link-title="runtimeconfigCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/config/vars.ts#L53">
-        let <strong>runtimeconfigCustomEndpoint</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kd'>let</span> runtimeconfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeconfigCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="runtimeConfigCustomEndpoint" data-link-title="runtimeConfigCustomEndpoint">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/config/vars.ts#L52">
         let <strong>runtimeConfigCustomEndpoint</strong>
@@ -405,6 +398,13 @@ meta_desc: "Explore members of the config module in the @pulumi/gcp package."
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> runtimeConfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeConfigCustomEndpoint&#34;)</span>;</code></pre>
+<h3 class="pdoc-module-header" id="runtimeconfigCustomEndpoint" data-link-title="runtimeconfigCustomEndpoint">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/config/vars.ts#L53">
+        let <strong>runtimeconfigCustomEndpoint</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> runtimeconfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeconfigCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="scopes" data-link-title="scopes">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/config/vars.ts#L54">
         let <strong>scopes</strong>

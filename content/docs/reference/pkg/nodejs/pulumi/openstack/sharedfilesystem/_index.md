@@ -102,7 +102,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityService</code></pre>
 
 
 Returns true if the given object is an instance of SecurityService.  This is designed to work even
@@ -299,7 +299,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Share</code></pre>
 
 
 Returns true if the given object is an instance of Share.  This is designed to work even
@@ -336,7 +336,7 @@ Changing this updates the description of the existing share.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/sharedfilesystem/share.ts#L87">property <b>exportLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>exportLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ShareExportLocation'>outputs.sharedfilesystem.ShareExportLocation</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>exportLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ShareExportLocation'>ShareExportLocation</a>[]&gt;;</code></pre>
 
 A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
@@ -530,7 +530,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ShareAccess</code></pre>
 
 
 Returns true if the given object is an instance of ShareAccess.  This is designed to work even
@@ -654,7 +654,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ShareNetwork</code></pre>
 
 
 Returns true if the given object is an instance of ShareNetwork.  This is designed to work even
@@ -1257,7 +1257,7 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/sharedfilesystem/getShare.ts#L116">property <b>exportLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>exportLocations: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetShareExportLocation'>outputs.sharedfilesystem.GetShareExportLocation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>exportLocations: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetShareExportLocation'>GetShareExportLocation</a>[];</code></pre>
 
 A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
@@ -2140,7 +2140,7 @@ Changing this updates the description of the existing share.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/sharedfilesystem/share.ts#L248">property <b>exportLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>exportLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ShareExportLocation'>inputs.sharedfilesystem.ShareExportLocation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>exportLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ShareExportLocation'>ShareExportLocation</a>&gt;[]&gt;;</code></pre>
 
 A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.

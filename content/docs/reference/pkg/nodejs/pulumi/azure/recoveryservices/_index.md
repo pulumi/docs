@@ -137,7 +137,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Fabric</code></pre>
 
 
 Returns true if the given object is an instance of Fabric.  This is designed to work even
@@ -289,7 +289,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkMapping</code></pre>
 
 
 Returns true if the given object is an instance of NetworkMapping.  This is designed to work even
@@ -448,7 +448,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProtectedVM</code></pre>
 
 
 Returns true if the given object is an instance of ProtectedVM.  This is designed to work even
@@ -590,7 +590,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProtectionContainer</code></pre>
 
 
 Returns true if the given object is an instance of ProtectionContainer.  This is designed to work even
@@ -748,7 +748,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProtectionContainerMapping</code></pre>
 
 
 Returns true if the given object is an instance of ProtectionContainerMapping.  This is designed to work even
@@ -931,7 +931,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProtectionPolicyVM</code></pre>
 
 
 Returns true if the given object is an instance of ProtectionPolicyVM.  This is designed to work even
@@ -941,7 +941,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L98">property <b>backup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMBackup'>outputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</code></pre>
 
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
@@ -982,7 +982,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L114">property <b>retentionDaily</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionDaily'>outputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
@@ -990,7 +990,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L118">property <b>retentionMonthly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionMonthly'>outputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
@@ -998,7 +998,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L122">property <b>retentionWeekly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionWeekly'>outputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
@@ -1006,7 +1006,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L126">property <b>retentionYearly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionYearly'>outputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
@@ -1207,7 +1207,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReplicatedVm</code></pre>
 
 
 Returns true if the given object is an instance of ReplicatedVm.  This is designed to work even
@@ -1226,7 +1226,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/replicatedVm.ts#L167">property <b>managedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>managedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReplicatedVmManagedDisk'>outputs.recoveryservices.ReplicatedVmManagedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>managedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `managedDisk` block.
 
@@ -1395,7 +1395,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ReplicationPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ReplicationPolicy.  This is designed to work even
@@ -1524,7 +1524,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Vault</code></pre>
 
 
 Returns true if the given object is an instance of Vault.  This is designed to work even
@@ -2344,7 +2344,7 @@ The set of arguments for constructing a ProtectionPolicyVM resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L244">property <b>backup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</code></pre>
 
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
@@ -2376,7 +2376,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L260">property <b>retentionDaily</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
 
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
@@ -2384,7 +2384,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L264">property <b>retentionMonthly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
 
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
@@ -2392,7 +2392,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L268">property <b>retentionWeekly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
@@ -2400,7 +2400,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L272">property <b>retentionYearly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
 
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
@@ -2434,7 +2434,7 @@ Input properties used for looking up and filtering ProtectionPolicyVM resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L198">property <b>backup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</code></pre>
 
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
@@ -2466,7 +2466,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L214">property <b>retentionDaily</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
 
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
@@ -2474,7 +2474,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L218">property <b>retentionMonthly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
 
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
@@ -2482,7 +2482,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L222">property <b>retentionWeekly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
@@ -2490,7 +2490,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L226">property <b>retentionYearly</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
 
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
@@ -2524,7 +2524,7 @@ The set of arguments for constructing a ReplicatedVm resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/replicatedVm.ts#L345">property <b>managedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `managedDisk` block.
 
@@ -2627,7 +2627,7 @@ Input properties used for looking up and filtering ReplicatedVm resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/recoveryservices/replicatedVm.ts#L294">property <b>managedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `managedDisk` block.
 

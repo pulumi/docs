@@ -104,7 +104,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -147,7 +147,7 @@ The resource group's name. A resource group name can have a maximum of 127 chara
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/resourcegroups/group.ts#L80">property <b>resourceQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupResourceQuery'>outputs.resourcegroups.GroupResourceQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupResourceQuery'>GroupResourceQuery</a>&gt;;</code></pre>
 
 A `resourceQuery` block. Resource queries are documented below.
 
@@ -201,7 +201,7 @@ The resource group's name. A resource group name can have a maximum of 127 chara
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/resourcegroups/group.ts#L166">property <b>resourceQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupResourceQuery'>inputs.resourcegroups.GroupResourceQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupResourceQuery'>GroupResourceQuery</a>&gt;;</code></pre>
 
 A `resourceQuery` block. Resource queries are documented below.
 
@@ -251,7 +251,7 @@ The resource group's name. A resource group name can have a maximum of 127 chara
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/resourcegroups/group.ts#L144">property <b>resourceQuery</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupResourceQuery'>inputs.resourcegroups.GroupResourceQuery</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupResourceQuery'>GroupResourceQuery</a>&gt;;</code></pre>
 
 A `resourceQuery` block. Resource queries are documented below.
 

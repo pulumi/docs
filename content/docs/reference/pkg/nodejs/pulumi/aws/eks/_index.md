@@ -189,7 +189,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -207,7 +207,7 @@ The Amazon Resource Name (ARN) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L142">property <b>certificateAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCertificateAuthority'>outputs.eks.ClusterCertificateAuthority</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCertificateAuthority'>ClusterCertificateAuthority</a>&gt;;</code></pre>
 
 Nested attribute containing `certificate-authority-data` for your cluster.
 
@@ -245,7 +245,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L155">property <b>identities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterIdentity'>outputs.eks.ClusterIdentity</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterIdentity'>ClusterIdentity</a>[]&gt;;</code></pre>
 
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 
@@ -310,7 +310,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L183">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterVpcConfig'>outputs.eks.ClusterVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
 
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
@@ -363,7 +363,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FargateProfile</code></pre>
 
 
 Returns true if the given object is an instance of FargateProfile.  This is designed to work even
@@ -414,7 +414,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/fargateProfile.ts#L60">property <b>selectors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FargateProfileSelector'>outputs.eks.FargateProfileSelector</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FargateProfileSelector'>FargateProfileSelector</a>[]&gt;;</code></pre>
 
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
@@ -500,7 +500,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeGroup</code></pre>
 
 
 Returns true if the given object is an instance of NodeGroup.  This is designed to work even
@@ -582,7 +582,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L71">property <b>remoteAccess</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>remoteAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupRemoteAccess'>outputs.eks.NodeGroupRemoteAccess</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>remoteAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block with remote access settings. Detailed below.
 
@@ -590,7 +590,7 @@ Configuration block with remote access settings. Detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L75">property <b>resources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResource'>outputs.eks.NodeGroupResource</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResource'>NodeGroupResource</a>[]&gt;;</code></pre>
 
 List of objects containing information about underlying resources.
 
@@ -598,7 +598,7 @@ List of objects containing information about underlying resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L79">property <b>scalingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupScalingConfig'>outputs.eks.NodeGroupScalingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
 
 Configuration block with scaling settings. Detailed below.
 
@@ -747,7 +747,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L325">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>inputs.eks.ClusterVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
 
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
@@ -773,7 +773,7 @@ The Amazon Resource Name (ARN) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L254">property <b>certificateAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCertificateAuthority'>inputs.eks.ClusterCertificateAuthority</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCertificateAuthority'>ClusterCertificateAuthority</a>&gt;;</code></pre>
 
 Nested attribute containing `certificate-authority-data` for your cluster.
 
@@ -802,7 +802,7 @@ The endpoint for your Kubernetes API server.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L267">property <b>identities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterIdentity'>inputs.eks.ClusterIdentity</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterIdentity'>ClusterIdentity</a>&gt;[]&gt;;</code></pre>
 
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 
@@ -858,7 +858,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/cluster.ts#L295">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>inputs.eks.ClusterVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
 
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
@@ -900,7 +900,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/fargateProfile.ts#L182">property <b>selectors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>inputs.eks.FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
 
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
@@ -966,7 +966,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/fargateProfile.ts#L148">property <b>selectors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>inputs.eks.FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
 
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
@@ -1088,7 +1088,7 @@ The Amazon Resource Name (ARN) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/getCluster.ts#L68">property <b>certificateAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCertificateAuthority'>outputs.eks.GetClusterCertificateAuthority</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCertificateAuthority'>GetClusterCertificateAuthority</a>;</code></pre>
 
 Nested attribute containing `certificate-authority-data` for your cluster.
 
@@ -1128,7 +1128,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/getCluster.ts#L84">property <b>identities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentity'>outputs.eks.GetClusterIdentity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentity'>GetClusterIdentity</a>[];</code></pre>
 
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
 
@@ -1181,7 +1181,7 @@ The Kubernetes server version for the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/getCluster.ts#L109">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterVpcConfig'>outputs.eks.GetClusterVpcConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterVpcConfig'>GetClusterVpcConfig</a>;</code></pre>
 
 Nested attribute containing VPC configuration for the cluster.
 
@@ -1254,7 +1254,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L255">property <b>remoteAccess</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>inputs.eks.NodeGroupRemoteAccess</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a>&gt;;</code></pre>
 
 Configuration block with remote access settings. Detailed below.
 
@@ -1262,7 +1262,7 @@ Configuration block with remote access settings. Detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L259">property <b>scalingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>inputs.eks.NodeGroupScalingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
 
 Configuration block with scaling settings. Detailed below.
 
@@ -1364,7 +1364,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L201">property <b>remoteAccess</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>inputs.eks.NodeGroupRemoteAccess</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a>&gt;;</code></pre>
 
 Configuration block with remote access settings. Detailed below.
 
@@ -1372,7 +1372,7 @@ Configuration block with remote access settings. Detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L205">property <b>resources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupResource'>inputs.eks.NodeGroupResource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupResource'>NodeGroupResource</a>&gt;[]&gt;;</code></pre>
 
 List of objects containing information about underlying resources.
 
@@ -1380,7 +1380,7 @@ List of objects containing information about underlying resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/eks/nodeGroup.ts#L209">property <b>scalingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>inputs.eks.NodeGroupScalingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
 
 Configuration block with scaling settings. Detailed below.
 

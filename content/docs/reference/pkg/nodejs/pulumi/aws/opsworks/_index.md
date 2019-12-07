@@ -162,7 +162,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Application</code></pre>
 
 
 Returns true if the given object is an instance of Application.  This is designed to work even
@@ -172,7 +172,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L81">property <b>appSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>appSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationAppSource'>outputs.opsworks.ApplicationAppSource</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>appSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationAppSource'>ApplicationAppSource</a>[]&gt;;</code></pre>
 
 SCM configuration of the app as described below.
 
@@ -252,7 +252,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L121">property <b>environments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>environments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationEnvironment'>outputs.opsworks.ApplicationEnvironment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>environments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationEnvironment'>ApplicationEnvironment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Object to define environment variables.  Object is described below.
 
@@ -293,7 +293,7 @@ A short, machine-readable name for the application. This can only be defined on 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L137">property <b>sslConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationSslConfiguration'>outputs.opsworks.ApplicationSslConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationSslConfiguration'>ApplicationSslConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The SSL configuration of the app. Object is described below.
 
@@ -383,7 +383,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CustomLayer</code></pre>
 
 
 Returns true if the given object is an instance of CustomLayer.  This is designed to work even
@@ -474,7 +474,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/customLayer.ts#L89">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CustomLayerEbsVolume'>outputs.opsworks.CustomLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CustomLayerEbsVolume'>CustomLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -621,7 +621,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GangliaLayer</code></pre>
 
 
 Returns true if the given object is an instance of GangliaLayer.  This is designed to work even
@@ -712,7 +712,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/gangliaLayer.ts#L89">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GangliaLayerEbsVolume'>outputs.opsworks.GangliaLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GangliaLayerEbsVolume'>GangliaLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -875,7 +875,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HaproxyLayer</code></pre>
 
 
 Returns true if the given object is an instance of HaproxyLayer.  This is designed to work even
@@ -966,7 +966,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/haproxyLayer.ts#L89">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#HaproxyLayerEbsVolume'>outputs.opsworks.HaproxyLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#HaproxyLayerEbsVolume'>HaproxyLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -1210,7 +1210,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -1276,7 +1276,7 @@ by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L138">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice'>outputs.opsworks.InstanceEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -1311,7 +1311,7 @@ EC2 instance ID
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L153">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice'>outputs.opsworks.InstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -1449,7 +1449,7 @@ The public IP address assigned to the instance, if applicable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L206">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice'>outputs.opsworks.InstanceRootBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>[]&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -1608,7 +1608,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JavaAppLayer</code></pre>
 
 
 Returns true if the given object is an instance of JavaAppLayer.  This is designed to work even
@@ -1715,7 +1715,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/javaAppLayer.ts#L96">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JavaAppLayerEbsVolume'>outputs.opsworks.JavaAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JavaAppLayerEbsVolume'>JavaAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -1877,7 +1877,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MemcachedLayer</code></pre>
 
 
 Returns true if the given object is an instance of MemcachedLayer.  This is designed to work even
@@ -1976,7 +1976,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/memcachedLayer.ts#L92">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MemcachedLayerEbsVolume'>outputs.opsworks.MemcachedLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MemcachedLayerEbsVolume'>MemcachedLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -2117,7 +2117,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MysqlLayer</code></pre>
 
 
 Returns true if the given object is an instance of MysqlLayer.  This is designed to work even
@@ -2208,7 +2208,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/mysqlLayer.ts#L91">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MysqlLayerEbsVolume'>outputs.opsworks.MysqlLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MysqlLayerEbsVolume'>MysqlLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -2362,7 +2362,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodejsAppLayer</code></pre>
 
 
 Returns true if the given object is an instance of NodejsAppLayer.  This is designed to work even
@@ -2453,7 +2453,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/nodejsAppLayer.ts#L88">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodejsAppLayerEbsVolume'>outputs.opsworks.NodejsAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodejsAppLayerEbsVolume'>NodejsAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -2603,7 +2603,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Permission</code></pre>
 
 
 Returns true if the given object is an instance of Permission.  This is designed to work even
@@ -2727,7 +2727,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PhpAppLayer</code></pre>
 
 
 Returns true if the given object is an instance of PhpAppLayer.  This is designed to work even
@@ -2818,7 +2818,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/phpAppLayer.ts#L88">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PhpAppLayerEbsVolume'>outputs.opsworks.PhpAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PhpAppLayerEbsVolume'>PhpAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -2956,7 +2956,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RailsAppLayer</code></pre>
 
 
 Returns true if the given object is an instance of RailsAppLayer.  This is designed to work even
@@ -3063,7 +3063,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/railsAppLayer.ts#L96">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RailsAppLayerEbsVolume'>outputs.opsworks.RailsAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RailsAppLayerEbsVolume'>RailsAppLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -3239,7 +3239,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RdsDbInstance</code></pre>
 
 
 Returns true if the given object is an instance of RdsDbInstance.  This is designed to work even
@@ -3366,7 +3366,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Stack</code></pre>
 
 
 Returns true if the given object is an instance of Stack.  This is designed to work even
@@ -3421,7 +3421,7 @@ Version of the configuration manager to use. Defaults to "11.4".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/stack.ts#L88">property <b>customCookbooksSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customCookbooksSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StackCustomCookbooksSource'>outputs.opsworks.StackCustomCookbooksSource</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customCookbooksSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StackCustomCookbooksSource'>StackCustomCookbooksSource</a>[]&gt;;</code></pre>
 
 When `useCustomCookbooks` is set, provide this sub-object as
 described below.
@@ -3643,7 +3643,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StaticWebLayer</code></pre>
 
 
 Returns true if the given object is an instance of StaticWebLayer.  This is designed to work even
@@ -3731,7 +3731,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/staticWebLayer.ts#L85">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StaticWebLayerEbsVolume'>outputs.opsworks.StaticWebLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsVolumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StaticWebLayerEbsVolume'>StaticWebLayerEbsVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -3870,7 +3870,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UserProfile</code></pre>
 
 
 Returns true if the given object is an instance of UserProfile.  This is designed to work even
@@ -3943,7 +3943,7 @@ The set of arguments for constructing a Application resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L294">property <b>appSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppSource'>inputs.opsworks.ApplicationAppSource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppSource'>ApplicationAppSource</a>&gt;[]&gt;;</code></pre>
 
 SCM configuration of the app as described below.
 
@@ -4023,7 +4023,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L334">property <b>environments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>environments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationEnvironment'>inputs.opsworks.ApplicationEnvironment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>environments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationEnvironment'>ApplicationEnvironment</a>&gt;[]&gt;;</code></pre>
 
 Object to define environment variables.  Object is described below.
 
@@ -4055,7 +4055,7 @@ A short, machine-readable name for the application. This can only be defined on 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L350">property <b>sslConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationSslConfiguration'>inputs.opsworks.ApplicationSslConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationSslConfiguration'>ApplicationSslConfiguration</a>&gt;[]&gt;;</code></pre>
 
 The SSL configuration of the app. Object is described below.
 
@@ -4089,7 +4089,7 @@ Input properties used for looking up and filtering Application resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L220">property <b>appSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppSource'>inputs.opsworks.ApplicationAppSource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppSource'>ApplicationAppSource</a>&gt;[]&gt;;</code></pre>
 
 SCM configuration of the app as described below.
 
@@ -4169,7 +4169,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L260">property <b>environments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>environments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationEnvironment'>inputs.opsworks.ApplicationEnvironment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>environments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationEnvironment'>ApplicationEnvironment</a>&gt;[]&gt;;</code></pre>
 
 Object to define environment variables.  Object is described below.
 
@@ -4201,7 +4201,7 @@ A short, machine-readable name for the application. This can only be defined on 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/application.ts#L276">property <b>sslConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationSslConfiguration'>inputs.opsworks.ApplicationSslConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationSslConfiguration'>ApplicationSslConfiguration</a>&gt;[]&gt;;</code></pre>
 
 The SSL configuration of the app. Object is described below.
 
@@ -4316,7 +4316,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/customLayer.ts#L312">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CustomLayerEbsVolume'>inputs.opsworks.CustomLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CustomLayerEbsVolume'>CustomLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -4479,7 +4479,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/customLayer.ts#L237">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CustomLayerEbsVolume'>inputs.opsworks.CustomLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CustomLayerEbsVolume'>CustomLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -4642,7 +4642,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/gangliaLayer.ts#L332">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GangliaLayerEbsVolume'>inputs.opsworks.GangliaLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GangliaLayerEbsVolume'>GangliaLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -4821,7 +4821,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/gangliaLayer.ts#L249">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GangliaLayerEbsVolume'>inputs.opsworks.GangliaLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GangliaLayerEbsVolume'>GangliaLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -5000,7 +5000,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/haproxyLayer.ts#L362">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#HaproxyLayerEbsVolume'>inputs.opsworks.HaproxyLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#HaproxyLayerEbsVolume'>HaproxyLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -5203,7 +5203,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/haproxyLayer.ts#L267">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#HaproxyLayerEbsVolume'>inputs.opsworks.HaproxyLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#HaproxyLayerEbsVolume'>HaproxyLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -5381,7 +5381,7 @@ by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L539">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>inputs.opsworks.InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -5408,7 +5408,7 @@ If true, the launched EC2 instance will be EBS-optimized.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L550">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>inputs.opsworks.InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -5537,7 +5537,7 @@ The public IP address assigned to the instance, if applicable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L603">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>inputs.opsworks.InstanceRootBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5697,7 +5697,7 @@ by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L399">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>inputs.opsworks.InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -5732,7 +5732,7 @@ EC2 instance ID
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L414">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>inputs.opsworks.InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -5861,7 +5861,7 @@ The public IP address assigned to the instance, if applicable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/instance.ts#L467">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>inputs.opsworks.InstanceRootBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -6062,7 +6062,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/javaAppLayer.ts#L356">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JavaAppLayerEbsVolume'>inputs.opsworks.JavaAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JavaAppLayerEbsVolume'>JavaAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -6257,7 +6257,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/javaAppLayer.ts#L265">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JavaAppLayerEbsVolume'>inputs.opsworks.JavaAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JavaAppLayerEbsVolume'>JavaAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -6444,7 +6444,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/memcachedLayer.ts#L312">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MemcachedLayerEbsVolume'>inputs.opsworks.MemcachedLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MemcachedLayerEbsVolume'>MemcachedLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -6607,7 +6607,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/memcachedLayer.ts#L237">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MemcachedLayerEbsVolume'>inputs.opsworks.MemcachedLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MemcachedLayerEbsVolume'>MemcachedLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -6762,7 +6762,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/mysqlLayer.ts#L321">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MysqlLayerEbsVolume'>inputs.opsworks.MysqlLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MysqlLayerEbsVolume'>MysqlLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -6933,7 +6933,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/mysqlLayer.ts#L242">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MysqlLayerEbsVolume'>inputs.opsworks.MysqlLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MysqlLayerEbsVolume'>MysqlLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -7104,7 +7104,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/nodejsAppLayer.ts#L308">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodejsAppLayerEbsVolume'>inputs.opsworks.NodejsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodejsAppLayerEbsVolume'>NodejsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -7267,7 +7267,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/nodejsAppLayer.ts#L233">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodejsAppLayerEbsVolume'>inputs.opsworks.NodejsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodejsAppLayerEbsVolume'>NodejsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -7530,7 +7530,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/phpAppLayer.ts#L298">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PhpAppLayerEbsVolume'>inputs.opsworks.PhpAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PhpAppLayerEbsVolume'>PhpAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -7685,7 +7685,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/phpAppLayer.ts#L227">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PhpAppLayerEbsVolume'>inputs.opsworks.PhpAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PhpAppLayerEbsVolume'>PhpAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -7856,7 +7856,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/railsAppLayer.ts#L366">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RailsAppLayerEbsVolume'>inputs.opsworks.RailsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RailsAppLayerEbsVolume'>RailsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -8059,7 +8059,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/railsAppLayer.ts#L271">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RailsAppLayerEbsVolume'>inputs.opsworks.RailsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RailsAppLayerEbsVolume'>RailsAppLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -8289,7 +8289,7 @@ Version of the configuration manager to use. Defaults to "11.4".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/stack.ts#L375">property <b>customCookbooksSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customCookbooksSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StackCustomCookbooksSource'>inputs.opsworks.StackCustomCookbooksSource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customCookbooksSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StackCustomCookbooksSource'>StackCustomCookbooksSource</a>&gt;[]&gt;;</code></pre>
 
 When `useCustomCookbooks` is set, provide this sub-object as
 described below.
@@ -8487,7 +8487,7 @@ Version of the configuration manager to use. Defaults to "11.4".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/stack.ts#L273">property <b>customCookbooksSources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customCookbooksSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StackCustomCookbooksSource'>inputs.opsworks.StackCustomCookbooksSource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customCookbooksSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StackCustomCookbooksSource'>StackCustomCookbooksSource</a>&gt;[]&gt;;</code></pre>
 
 When `useCustomCookbooks` is set, provide this sub-object as
 described below.
@@ -8723,7 +8723,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/staticWebLayer.ts#L289">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StaticWebLayerEbsVolume'>inputs.opsworks.StaticWebLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StaticWebLayerEbsVolume'>StaticWebLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 
@@ -8875,7 +8875,7 @@ Whether to enable Elastic Load Balancing connection draining.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/opsworks/staticWebLayer.ts#L221">property <b>ebsVolumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StaticWebLayerEbsVolume'>inputs.opsworks.StaticWebLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StaticWebLayerEbsVolume'>StaticWebLayerEbsVolume</a>&gt;[]&gt;;</code></pre>
 
 `ebsVolume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 

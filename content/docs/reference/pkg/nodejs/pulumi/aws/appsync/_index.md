@@ -107,7 +107,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiKey</code></pre>
 
 
 Returns true if the given object is an instance of ApiKey.  This is designed to work even
@@ -273,7 +273,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DataSource</code></pre>
 
 
 Returns true if the given object is an instance of DataSource.  This is designed to work even
@@ -307,7 +307,7 @@ A description of the DataSource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L117">property <b>dynamodbConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dynamodbConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceDynamodbConfig'>outputs.appsync.DataSourceDynamodbConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dynamodbConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 DynamoDB settings. See below
 
@@ -315,7 +315,7 @@ DynamoDB settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L121">property <b>elasticsearchConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>elasticsearchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceElasticsearchConfig'>outputs.appsync.DataSourceElasticsearchConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>elasticsearchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Amazon Elasticsearch settings. See below
 
@@ -323,7 +323,7 @@ Amazon Elasticsearch settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L125">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceHttpConfig'>outputs.appsync.DataSourceHttpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceHttpConfig'>DataSourceHttpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 HTTP settings. See below
 
@@ -340,7 +340,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L129">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceLambdaConfig'>outputs.appsync.DataSourceLambdaConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 AWS Lambda settings. See below
 
@@ -482,7 +482,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Function</code></pre>
 
 
 Returns true if the given object is an instance of Function.  This is designed to work even
@@ -745,7 +745,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GraphQLApi</code></pre>
 
 
 Returns true if the given object is an instance of GraphQLApi.  This is designed to work even
@@ -755,7 +755,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L162">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>additionalAuthenticationProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProvider'>outputs.appsync.GraphQLApiAdditionalAuthenticationProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>additionalAuthenticationProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
@@ -788,7 +788,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L174">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiLogConfig'>outputs.appsync.GraphQLApiLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing logging configuration. Defined below.
 
@@ -804,7 +804,7 @@ A user-supplied name for the GraphqlApi.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L182">property <b>openidConnectConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>openidConnectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiOpenidConnectConfig'>outputs.appsync.GraphQLApiOpenidConnectConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>openidConnectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing OpenID Connect configuration. Defined below.
 
@@ -845,7 +845,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L198">property <b>userPoolConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>userPoolConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiUserPoolConfig'>outputs.appsync.GraphQLApiUserPoolConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>userPoolConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The Amazon Cognito User Pool configuration. Defined below.
 
@@ -972,7 +972,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Resolver</code></pre>
 
 
 Returns true if the given object is an instance of Resolver.  This is designed to work even
@@ -1031,7 +1031,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/resolver.ts#L138">property <b>pipelineConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pipelineConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverPipelineConfig'>outputs.appsync.ResolverPipelineConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pipelineConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverPipelineConfig'>ResolverPipelineConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
 
@@ -1177,7 +1177,7 @@ A description of the DataSource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L256">property <b>dynamodbConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>inputs.appsync.DataSourceDynamodbConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</code></pre>
 
 DynamoDB settings. See below
 
@@ -1185,7 +1185,7 @@ DynamoDB settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L260">property <b>elasticsearchConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>inputs.appsync.DataSourceElasticsearchConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</code></pre>
 
 Amazon Elasticsearch settings. See below
 
@@ -1193,7 +1193,7 @@ Amazon Elasticsearch settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L264">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>inputs.appsync.DataSourceHttpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</code></pre>
 
 HTTP settings. See below
 
@@ -1201,7 +1201,7 @@ HTTP settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L268">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>inputs.appsync.DataSourceLambdaConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</code></pre>
 
 AWS Lambda settings. See below
 
@@ -1267,7 +1267,7 @@ A description of the DataSource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L214">property <b>dynamodbConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>inputs.appsync.DataSourceDynamodbConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</code></pre>
 
 DynamoDB settings. See below
 
@@ -1275,7 +1275,7 @@ DynamoDB settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L218">property <b>elasticsearchConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>inputs.appsync.DataSourceElasticsearchConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</code></pre>
 
 Amazon Elasticsearch settings. See below
 
@@ -1283,7 +1283,7 @@ Amazon Elasticsearch settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L222">property <b>httpConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>inputs.appsync.DataSourceHttpConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</code></pre>
 
 HTTP settings. See below
 
@@ -1291,7 +1291,7 @@ HTTP settings. See below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/dataSource.ts#L226">property <b>lambdaConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>inputs.appsync.DataSourceLambdaConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</code></pre>
 
 AWS Lambda settings. See below
 
@@ -1481,7 +1481,7 @@ The set of arguments for constructing a GraphQLApi resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L302">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>inputs.appsync.GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
 
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
@@ -1497,7 +1497,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L310">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>inputs.appsync.GraphQLApiLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</code></pre>
 
 Nested argument containing logging configuration. Defined below.
 
@@ -1513,7 +1513,7 @@ A user-supplied name for the GraphqlApi.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L318">property <b>openidConnectConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>inputs.appsync.GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
 
 Nested argument containing OpenID Connect configuration. Defined below.
 
@@ -1537,7 +1537,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L330">property <b>userPoolConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>inputs.appsync.GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
 
 The Amazon Cognito User Pool configuration. Defined below.
 
@@ -1555,7 +1555,7 @@ Input properties used for looking up and filtering GraphQLApi resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L256">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>inputs.appsync.GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
 
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
@@ -1579,7 +1579,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L268">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>inputs.appsync.GraphQLApiLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</code></pre>
 
 Nested argument containing logging configuration. Defined below.
 
@@ -1595,7 +1595,7 @@ A user-supplied name for the GraphqlApi.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L276">property <b>openidConnectConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>inputs.appsync.GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
 
 Nested argument containing OpenID Connect configuration. Defined below.
 
@@ -1627,7 +1627,7 @@ Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/graphQLApi.ts#L292">property <b>userPoolConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>inputs.appsync.GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
 
 The Amazon Cognito User Pool configuration. Defined below.
 
@@ -1677,7 +1677,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/resolver.ts#L276">property <b>pipelineConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>inputs.appsync.ResolverPipelineConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</code></pre>
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
 
@@ -1759,7 +1759,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/appsync/resolver.ts#L238">property <b>pipelineConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>inputs.appsync.ResolverPipelineConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</code></pre>
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
 

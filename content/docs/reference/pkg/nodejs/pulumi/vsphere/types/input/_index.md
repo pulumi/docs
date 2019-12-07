@@ -178,7 +178,7 @@ ISO. Conflicts with `clientDevice`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L66">property <b>customize</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomize'>inputs.VirtualMachineCloneCustomize</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualMachineCloneCustomize'>VirtualMachineCloneCustomize</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineClone-linkedClone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L67">property <b>linkedClone</b></a>
 </h4>
@@ -225,12 +225,12 @@ ISO. Conflicts with `clientDevice`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L77">property <b>linuxOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeLinuxOptions'>inputs.VirtualMachineCloneCustomizeLinuxOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualMachineCloneCustomizeLinuxOptions'>VirtualMachineCloneCustomizeLinuxOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-networkInterfaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L83">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeNetworkInterface'>inputs.VirtualMachineCloneCustomizeNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualMachineCloneCustomizeNetworkInterface'>VirtualMachineCloneCustomizeNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -245,7 +245,7 @@ below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L85">property <b>windowsOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>windowsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeWindowsOptions'>inputs.VirtualMachineCloneCustomizeWindowsOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>windowsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualMachineCloneCustomizeWindowsOptions'>VirtualMachineCloneCustomizeWindowsOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-windowsSysprepText">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/input.ts#L86">property <b>windowsSysprepText</b></a>
 </h4>

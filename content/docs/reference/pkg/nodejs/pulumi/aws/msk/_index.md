@@ -152,7 +152,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -186,7 +186,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L116">property <b>brokerNodeGroupInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterBrokerNodeGroupInfo'>outputs.msk.ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
 
 Configuration block for the broker nodes of the Kafka cluster.
 
@@ -194,7 +194,7 @@ Configuration block for the broker nodes of the Kafka cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L120">property <b>clientAuthentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clientAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClientAuthentication'>outputs.msk.ClusterClientAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clientAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClientAuthentication'>ClusterClientAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block for specifying a client authentication. See below.
 
@@ -210,7 +210,7 @@ Name of the MSK cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L128">property <b>configurationInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>configurationInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterConfigurationInfo'>outputs.msk.ClusterConfigurationInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>configurationInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterConfigurationInfo'>ClusterConfigurationInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 
@@ -227,7 +227,7 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L137">property <b>encryptionInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryptionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEncryptionInfo'>outputs.msk.ClusterEncryptionInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryptionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEncryptionInfo'>ClusterEncryptionInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block for specifying encryption. See below.
 
@@ -354,7 +354,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Configuration</code></pre>
 
 
 Returns true if the given object is an instance of Configuration.  This is designed to work even
@@ -494,7 +494,7 @@ The set of arguments for constructing a Cluster resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L295">property <b>brokerNodeGroupInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBrokerNodeGroupInfo'>inputs.msk.ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
 
 Configuration block for the broker nodes of the Kafka cluster.
 
@@ -502,7 +502,7 @@ Configuration block for the broker nodes of the Kafka cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L299">property <b>clientAuthentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClientAuthentication'>inputs.msk.ClusterClientAuthentication</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClientAuthentication'>ClusterClientAuthentication</a>&gt;;</code></pre>
 
 Configuration block for specifying a client authentication. See below.
 
@@ -518,7 +518,7 @@ Name of the MSK cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L307">property <b>configurationInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterConfigurationInfo'>inputs.msk.ClusterConfigurationInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterConfigurationInfo'>ClusterConfigurationInfo</a>&gt;;</code></pre>
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 
@@ -526,7 +526,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L311">property <b>encryptionInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionInfo'>inputs.msk.ClusterEncryptionInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionInfo'>ClusterEncryptionInfo</a>&gt;;</code></pre>
 
 Configuration block for specifying encryption. See below.
 
@@ -600,7 +600,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L244">property <b>brokerNodeGroupInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>brokerNodeGroupInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBrokerNodeGroupInfo'>inputs.msk.ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>brokerNodeGroupInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</code></pre>
 
 Configuration block for the broker nodes of the Kafka cluster.
 
@@ -608,7 +608,7 @@ Configuration block for the broker nodes of the Kafka cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L248">property <b>clientAuthentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClientAuthentication'>inputs.msk.ClusterClientAuthentication</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClientAuthentication'>ClusterClientAuthentication</a>&gt;;</code></pre>
 
 Configuration block for specifying a client authentication. See below.
 
@@ -624,7 +624,7 @@ Name of the MSK cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L256">property <b>configurationInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterConfigurationInfo'>inputs.msk.ClusterConfigurationInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterConfigurationInfo'>ClusterConfigurationInfo</a>&gt;;</code></pre>
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 
@@ -641,7 +641,7 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/msk/cluster.ts#L265">property <b>encryptionInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionInfo'>inputs.msk.ClusterEncryptionInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionInfo'>ClusterEncryptionInfo</a>&gt;;</code></pre>
 
 Configuration block for specifying encryption. See below.
 

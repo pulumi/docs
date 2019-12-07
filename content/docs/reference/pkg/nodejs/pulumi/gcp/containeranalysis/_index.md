@@ -78,7 +78,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Note</code></pre>
 
 
 Returns true if the given object is an instance of Note.  This is designed to work even
@@ -88,7 +88,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/containeranalysis/note.ts#L46">property <b>attestationAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthority'>outputs.containeranalysis.NoteAttestationAuthority</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
 
 Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
 AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for
@@ -144,7 +144,7 @@ The set of arguments for constructing a Note resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/containeranalysis/note.ts#L118">property <b>attestationAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>inputs.containeranalysis.NoteAttestationAuthority</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
 
 Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
 AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for
@@ -179,7 +179,7 @@ Input properties used for looking up and filtering Note resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/containeranalysis/note.ts#L99">property <b>attestationAuthority</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attestationAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>inputs.containeranalysis.NoteAttestationAuthority</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attestationAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
 
 Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
 AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for

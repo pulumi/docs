@@ -166,7 +166,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Bucket</code></pre>
 
 
 Returns true if the given object is an instance of Bucket.  This is designed to work even
@@ -177,7 +177,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onObjectArchived(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onObjectArchived(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Creates and publishes a Cloud Functions that will be triggered when a live version of an
@@ -192,7 +192,7 @@ See https://cloud.google.com/storage/docs/object-versioning for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onObjectDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onObjectDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Creates and publishes a Cloud Functions that will be triggered when an object is
@@ -210,7 +210,7 @@ See https://cloud.google.com/storage/docs/object-versioning for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onObjectEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args: <a href='#BucketEventArgs'>BucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onObjectEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args: <a href='#BucketEventArgs'>BucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Generic helper for registering for any event.
@@ -220,7 +220,7 @@ Generic helper for registering for any event.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onObjectFinalized(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onObjectFinalized(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Creates and publishes a Cloud Functions that will be triggered when a new object is
@@ -232,7 +232,7 @@ created) in this bucket.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>onObjectMetadataUpdated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onObjectMetadataUpdated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunction'>CallbackFunction</a></code></pre>
 
 
 Creates and publishes a Cloud Functions that will be triggered when the metadata of an
@@ -252,7 +252,7 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L77">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketCor'>outputs.storage.BucketCor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketCor'>BucketCor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -260,7 +260,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L81">property <b>encryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketEncryption'>outputs.storage.BucketEncryption</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketEncryption'>BucketEncryption</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucket's encryption configuration.
 
@@ -295,7 +295,7 @@ A set of key/value label pairs to assign to the bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L95">property <b>lifecycleRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lifecycleRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRule'>outputs.storage.BucketLifecycleRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lifecycleRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRule'>BucketLifecycleRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -311,7 +311,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L103">property <b>logging</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLogging'>outputs.storage.BucketLogging</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLogging'>BucketLogging</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
@@ -344,7 +344,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L120">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketRetentionPolicy'>outputs.storage.BucketRetentionPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketRetentionPolicy'>BucketRetentionPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
@@ -385,7 +385,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L136">property <b>versioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketVersioning'>outputs.storage.BucketVersioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketVersioning'>BucketVersioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
@@ -393,7 +393,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L140">property <b>website</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>website: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketWebsite'>outputs.storage.BucketWebsite</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>website: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketWebsite'>BucketWebsite</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration if the bucket acts as a website. Structure is documented below.
 
@@ -458,7 +458,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketAccessControl</code></pre>
 
 
 Returns true if the given object is an instance of BucketAccessControl.  This is designed to work even
@@ -597,7 +597,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketACL</code></pre>
 
 
 Returns true if the given object is an instance of BucketACL.  This is designed to work even
@@ -759,7 +759,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of BucketIAMBinding.  This is designed to work even
@@ -777,7 +777,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L102">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMBindingCondition'>outputs.storage.BucketIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L106">property <b>etag</b></a>
 </h4>
@@ -924,7 +924,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of BucketIAMMember.  This is designed to work even
@@ -942,7 +942,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L102">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMMemberCondition'>outputs.storage.BucketIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L106">property <b>etag</b></a>
 </h4>
@@ -1089,7 +1089,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of BucketIAMPolicy.  This is designed to work even
@@ -1202,7 +1202,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BucketObject</code></pre>
 
 
 Returns true if the given object is an instance of BucketObject.  This is designed to work even
@@ -1324,7 +1324,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketObject.ts#L116">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A path to the data you want to upload. Must be defined
 if `content` is not.
@@ -1431,7 +1431,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultObjectAccessControl</code></pre>
 
 
 Returns true if the given object is an instance of DefaultObjectAccessControl.  This is designed to work even
@@ -1508,7 +1508,7 @@ The name of the object, if applied to an object.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/defaultObjectAccessControl.ts#L108">property <b>projectTeam</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>projectTeam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DefaultObjectAccessControlProjectTeam'>outputs.storage.DefaultObjectAccessControlProjectTeam</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>projectTeam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DefaultObjectAccessControlProjectTeam'>DefaultObjectAccessControlProjectTeam</a>&gt;;</code></pre>
 
 The project team associated with the entity
 
@@ -1610,7 +1610,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultObjectACL</code></pre>
 
 
 Returns true if the given object is an instance of DefaultObjectACL.  This is designed to work even
@@ -1740,7 +1740,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Notification</code></pre>
 
 
 Returns true if the given object is an instance of Notification.  This is designed to work even
@@ -1917,7 +1917,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ObjectAccessControl</code></pre>
 
 
 Returns true if the given object is an instance of ObjectAccessControl.  This is designed to work even
@@ -1994,7 +1994,7 @@ The name of the object to apply the access control to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/objectAccessControl.ts#L112">property <b>projectTeam</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>projectTeam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ObjectAccessControlProjectTeam'>outputs.storage.ObjectAccessControlProjectTeam</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>projectTeam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ObjectAccessControlProjectTeam'>ObjectAccessControlProjectTeam</a>&gt;;</code></pre>
 
 The project team associated with the entity
 
@@ -2099,7 +2099,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ObjectACL</code></pre>
 
 
 Returns true if the given object is an instance of ObjectACL.  This is designed to work even
@@ -2275,7 +2275,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TransferJob</code></pre>
 
 
 Returns true if the given object is an instance of TransferJob.  This is designed to work even
@@ -2343,7 +2343,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L139">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobSchedule'>outputs.storage.TransferJobSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
 
 Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 
@@ -2359,7 +2359,7 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L147">property <b>transferSpec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobTransferSpec'>outputs.storage.TransferJobTransferSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
 
 Transfer specification. Structure documented below.
 
@@ -2711,7 +2711,7 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L290">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>inputs.storage.BucketCor</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>BucketCor</a>&gt;[]&gt;;</code></pre>
 
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -2719,7 +2719,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L294">property <b>encryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>inputs.storage.BucketEncryption</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>BucketEncryption</a>&gt;;</code></pre>
 
 The bucket's encryption configuration.
 
@@ -2745,7 +2745,7 @@ A set of key/value label pairs to assign to the bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L308">property <b>lifecycleRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>inputs.storage.BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
 
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -2761,7 +2761,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L316">property <b>logging</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>inputs.storage.BucketLogging</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>BucketLogging</a>&gt;;</code></pre>
 
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
@@ -2794,7 +2794,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L333">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>inputs.storage.BucketRetentionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>BucketRetentionPolicy</a>&gt;;</code></pre>
 
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
@@ -2810,7 +2810,7 @@ The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L341">property <b>versioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>inputs.storage.BucketVersioning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>BucketVersioning</a>&gt;;</code></pre>
 
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
@@ -2818,7 +2818,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L345">property <b>website</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>inputs.storage.BucketWebsite</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>BucketWebsite</a>&gt;;</code></pre>
 
 Configuration if the bucket acts as a website. Structure is documented below.
 
@@ -2828,7 +2828,7 @@ Configuration if the bucket acts as a website. Structure is documented below.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Context'>Context</a></code></pre>
 
 Shape of the [context] object passed to a Cloud Function when a bucket event fires.
 
@@ -2993,7 +2993,7 @@ See https://cloud.google.com/storage/docs/json_api/v1/objects for more details.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketEventCallbackFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketEventCallbackFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#CallbackFunctionArgs'>CallbackFunctionArgs</a></code></pre>
 
 Arguments that can be provided to control the Cloud Function created as the serverless endpoint
 for a bucket event.
@@ -3143,7 +3143,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L188">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>inputs.storage.BucketIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L189">property <b>members</b></a>
 </h4>
@@ -3180,7 +3180,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L167">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>inputs.storage.BucketIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMBinding.ts#L171">property <b>etag</b></a>
 </h4>
@@ -3225,7 +3225,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L188">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>inputs.storage.BucketIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L189">property <b>member</b></a>
 </h4>
@@ -3262,7 +3262,7 @@ The name of the bucket it applies to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L167">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>inputs.storage.BucketIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketIAMMember.ts#L171">property <b>etag</b></a>
 </h4>
@@ -3423,7 +3423,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketObject.ts#L293">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 
 A path to the data you want to upload. Must be defined
 if `content` is not.
@@ -3555,7 +3555,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucketObject.ts#L242">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 
 A path to the data you want to upload. Must be defined
 if `content` is not.
@@ -3592,7 +3592,7 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L213">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>inputs.storage.BucketCor</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>BucketCor</a>&gt;[]&gt;;</code></pre>
 
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -3600,7 +3600,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L217">property <b>encryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>inputs.storage.BucketEncryption</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>BucketEncryption</a>&gt;;</code></pre>
 
 The bucket's encryption configuration.
 
@@ -3626,7 +3626,7 @@ A set of key/value label pairs to assign to the bucket.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L231">property <b>lifecycleRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>inputs.storage.BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
 
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
@@ -3642,7 +3642,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L239">property <b>logging</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>inputs.storage.BucketLogging</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>BucketLogging</a>&gt;;</code></pre>
 
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
@@ -3675,7 +3675,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L256">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>inputs.storage.BucketRetentionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>BucketRetentionPolicy</a>&gt;;</code></pre>
 
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
@@ -3707,7 +3707,7 @@ The base URL of the bucket, in the format `gs://<bucket-name>`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L272">property <b>versioning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>inputs.storage.BucketVersioning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>BucketVersioning</a>&gt;;</code></pre>
 
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
@@ -3715,7 +3715,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/bucket.ts#L276">property <b>website</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>inputs.storage.BucketWebsite</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>BucketWebsite</a>&gt;;</code></pre>
 
 Configuration if the bucket acts as a website. Structure is documented below.
 
@@ -3835,7 +3835,7 @@ The name of the object, if applied to an object.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/defaultObjectAccessControl.ts#L204">property <b>projectTeam</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>projectTeam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DefaultObjectAccessControlProjectTeam'>inputs.storage.DefaultObjectAccessControlProjectTeam</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>projectTeam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DefaultObjectAccessControlProjectTeam'>DefaultObjectAccessControlProjectTeam</a>&gt;;</code></pre>
 
 The project team associated with the entity
 
@@ -4567,7 +4567,7 @@ The name of the object to apply the access control to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/objectAccessControl.ts#L211">property <b>projectTeam</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>projectTeam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ObjectAccessControlProjectTeam'>inputs.storage.ObjectAccessControlProjectTeam</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>projectTeam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ObjectAccessControlProjectTeam'>ObjectAccessControlProjectTeam</a>&gt;;</code></pre>
 
 The project team associated with the entity
 
@@ -4713,7 +4713,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L261">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>inputs.storage.TransferJobSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
 
 Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 
@@ -4729,7 +4729,7 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L269">property <b>transferSpec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>inputs.storage.TransferJobTransferSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
 
 Transfer specification. Structure documented below.
 
@@ -4796,7 +4796,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L234">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>inputs.storage.TransferJobSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
 
 Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 
@@ -4812,7 +4812,7 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/storage/transferJob.ts#L242">property <b>transferSpec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>transferSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>inputs.storage.TransferJobTransferSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>transferSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
 
 Transfer specification. Structure documented below.
 

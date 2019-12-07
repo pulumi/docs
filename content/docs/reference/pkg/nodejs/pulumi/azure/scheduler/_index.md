@@ -182,7 +182,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
@@ -192,7 +192,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L137">property <b>actionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionStorageQueue'>outputs.scheduler.JobActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionStorageQueue'>JobActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `actionStorageQueue` block defining a storage queue job action as described below. Note this is identical to an `errorActionStorageQueue` block.
 
@@ -200,7 +200,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L141">property <b>actionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionWeb'>outputs.scheduler.JobActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionWeb'>JobActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `actionWeb` block defining the job action as described below. Note this is identical to an `errorActionWeb` block.
 
@@ -208,7 +208,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L145">property <b>errorActionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>errorActionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionStorageQueue'>outputs.scheduler.JobErrorActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>errorActionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `errorActionStorageQueue` block defining the a web action to take on an error as described below. Note this is identical to an `actionStorageQueue` block.
 
@@ -216,7 +216,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L149">property <b>errorActionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>errorActionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionWeb'>outputs.scheduler.JobErrorActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>errorActionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionWeb'>JobErrorActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `errorActionWeb` block defining the action to take on an error as described below. Note this is identical to an `actionWeb` block.
 
@@ -249,7 +249,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L161">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRecurrence'>outputs.scheduler.JobRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRecurrence'>JobRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `recurrence` block defining a job occurrence schedule.
 
@@ -265,7 +265,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L169">property <b>retry</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRetry'>outputs.scheduler.JobRetry</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRetry'>JobRetry</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `retry` block defining how to retry as described below.
 
@@ -367,7 +367,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobCollection</code></pre>
 
 
 Returns true if the given object is an instance of JobCollection.  This is designed to work even
@@ -402,7 +402,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/jobCollection.ts#L76">property <b>quota</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>quota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobCollectionQuota'>outputs.scheduler.JobCollectionQuota</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>quota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobCollectionQuota'>JobCollectionQuota</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configures the Job collection quotas as documented in the `quota` block below.
 
@@ -542,7 +542,7 @@ The Azure location where the resource exists.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/getJobCollection.ts#L72">property <b>quotas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quotas: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetJobCollectionQuota'>outputs.scheduler.GetJobCollectionQuota</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quotas: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetJobCollectionQuota'>GetJobCollectionQuota</a>[];</code></pre>
 
 The Job collection quotas as documented in the `quota` block below.
 
@@ -589,7 +589,7 @@ The set of arguments for constructing a Job resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L290">property <b>actionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>inputs.scheduler.JobActionStorageQueue</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>JobActionStorageQueue</a>&gt;;</code></pre>
 
 A `actionStorageQueue` block defining a storage queue job action as described below. Note this is identical to an `errorActionStorageQueue` block.
 
@@ -597,7 +597,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L294">property <b>actionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>inputs.scheduler.JobActionWeb</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>JobActionWeb</a>&gt;;</code></pre>
 
 A `actionWeb` block defining the job action as described below. Note this is identical to an `errorActionWeb` block.
 
@@ -605,7 +605,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L298">property <b>errorActionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>inputs.scheduler.JobErrorActionStorageQueue</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a>&gt;;</code></pre>
 
 A `errorActionStorageQueue` block defining the a web action to take on an error as described below. Note this is identical to an `actionStorageQueue` block.
 
@@ -613,7 +613,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L302">property <b>errorActionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>inputs.scheduler.JobErrorActionWeb</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>JobErrorActionWeb</a>&gt;;</code></pre>
 
 A `errorActionWeb` block defining the action to take on an error as described below. Note this is identical to an `actionWeb` block.
 
@@ -637,7 +637,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L314">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>inputs.scheduler.JobRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>JobRecurrence</a>&gt;;</code></pre>
 
 A `recurrence` block defining a job occurrence schedule.
 
@@ -653,7 +653,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L322">property <b>retry</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>inputs.scheduler.JobRetry</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>JobRetry</a>&gt;;</code></pre>
 
 A `retry` block defining how to retry as described below.
 
@@ -703,7 +703,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/jobCollection.ts#L189">property <b>quota</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>inputs.scheduler.JobCollectionQuota</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>JobCollectionQuota</a>&gt;;</code></pre>
 
 Configures the Job collection quotas as documented in the `quota` block below.
 
@@ -769,7 +769,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/jobCollection.ts#L155">property <b>quota</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>inputs.scheduler.JobCollectionQuota</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>JobCollectionQuota</a>&gt;;</code></pre>
 
 Configures the Job collection quotas as documented in the `quota` block below.
 
@@ -819,7 +819,7 @@ Input properties used for looking up and filtering Job resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L240">property <b>actionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>inputs.scheduler.JobActionStorageQueue</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>JobActionStorageQueue</a>&gt;;</code></pre>
 
 A `actionStorageQueue` block defining a storage queue job action as described below. Note this is identical to an `errorActionStorageQueue` block.
 
@@ -827,7 +827,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L244">property <b>actionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>inputs.scheduler.JobActionWeb</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>JobActionWeb</a>&gt;;</code></pre>
 
 A `actionWeb` block defining the job action as described below. Note this is identical to an `errorActionWeb` block.
 
@@ -835,7 +835,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L248">property <b>errorActionStorageQueue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>inputs.scheduler.JobErrorActionStorageQueue</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a>&gt;;</code></pre>
 
 A `errorActionStorageQueue` block defining the a web action to take on an error as described below. Note this is identical to an `actionStorageQueue` block.
 
@@ -843,7 +843,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L252">property <b>errorActionWeb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>inputs.scheduler.JobErrorActionWeb</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>JobErrorActionWeb</a>&gt;;</code></pre>
 
 A `errorActionWeb` block defining the action to take on an error as described below. Note this is identical to an `actionWeb` block.
 
@@ -867,7 +867,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L264">property <b>recurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>inputs.scheduler.JobRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>JobRecurrence</a>&gt;;</code></pre>
 
 A `recurrence` block defining a job occurrence schedule.
 
@@ -883,7 +883,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/scheduler/job.ts#L272">property <b>retry</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>inputs.scheduler.JobRetry</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>JobRetry</a>&gt;;</code></pre>
 
 A `retry` block defining how to retry as described below.
 

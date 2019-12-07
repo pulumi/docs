@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Lab</code></pre>
 
 
 Returns true if the given object is an instance of Lab.  This is designed to work even
@@ -328,7 +328,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinuxVirtualMachine</code></pre>
 
 
 Returns true if the given object is an instance of LinuxVirtualMachine.  This is designed to work even
@@ -362,7 +362,7 @@ The FQDN of the Virtual Machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L101">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineGalleryImageReference'>outputs.devtest.LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -379,7 +379,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L105">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineInboundNatRule'>outputs.devtest.LinuxVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -582,7 +582,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -760,7 +760,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Schedule</code></pre>
 
 
 Returns true if the given object is an instance of Schedule.  This is designed to work even
@@ -770,12 +770,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L75">property <b>dailyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dailyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleDailyRecurrence'>outputs.devtest.ScheduleDailyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dailyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-hourlyRecurrence">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L76">property <b>hourlyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hourlyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleHourlyRecurrence'>outputs.devtest.ScheduleHourlyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hourlyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L48">property <b>id</b></a>
 </h4>
@@ -813,7 +813,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L89">property <b>notificationSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleNotificationSettings'>outputs.devtest.ScheduleNotificationSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L93">property <b>resourceGroupName</b></a>
 </h4>
@@ -867,7 +867,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L110">property <b>weeklyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>weeklyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleWeeklyRecurrence'>outputs.devtest.ScheduleWeeklyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>weeklyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualNetwork" data-link-title="VirtualNetwork">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/virtualNetwork.ts#L40">
         Resource <strong>VirtualNetwork</strong>
@@ -943,7 +943,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetwork</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetwork.  This is designed to work even
@@ -994,7 +994,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/virtualNetwork.ts#L86">property <b>subnet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkSubnet'>outputs.devtest.VirtualNetworkSubnet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
 
 A `subnet` block as defined below.
 
@@ -1116,7 +1116,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is WindowsVirtualMachine</code></pre>
 
 
 Returns true if the given object is an instance of WindowsVirtualMachine.  This is designed to work even
@@ -1150,7 +1150,7 @@ The FQDN of the Virtual Machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L100">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineGalleryImageReference'>outputs.devtest.WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -1167,7 +1167,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L104">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineInboundNatRule'>outputs.devtest.WindowsVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -1519,7 +1519,7 @@ A collection of values returned by getVirtualNetwork.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/getVirtualNetwork.ts#L71">property <b>allowedSubnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allowedSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkAllowedSubnet'>outputs.devtest.GetVirtualNetworkAllowedSubnet</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allowedSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkAllowedSubnet'>GetVirtualNetworkAllowedSubnet</a>[];</code></pre>
 
 The list of subnets enabled for the virtual network as defined below.
 
@@ -1550,7 +1550,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/getVirtualNetwork.ts#L78">property <b>subnetOverrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkSubnetOverrides'>outputs.devtest.GetVirtualNetworkSubnetOverrides</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkSubnetOverrides'>GetVirtualNetworkSubnetOverrides</a>;</code></pre>
 
 The list of permission overrides for the subnets as defined below.
 
@@ -1740,7 +1740,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L348">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>inputs.devtest.LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -1748,7 +1748,7 @@ A `galleryImageReference` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L352">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>inputs.devtest.LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -1894,7 +1894,7 @@ The FQDN of the Virtual Machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L270">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>inputs.devtest.LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -1902,7 +1902,7 @@ A `galleryImageReference` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/linuxVirtualMachine.ts#L274">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>inputs.devtest.LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -2196,12 +2196,12 @@ The set of arguments for constructing a Schedule resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L223">property <b>dailyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>inputs.devtest.ScheduleDailyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-hourlyRecurrence">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L224">property <b>hourlyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>inputs.devtest.ScheduleHourlyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-labName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L228">property <b>labName</b></a>
 </h4>
@@ -2230,7 +2230,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L237">property <b>notificationSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>inputs.devtest.ScheduleNotificationSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L241">property <b>resourceGroupName</b></a>
 </h4>
@@ -2275,7 +2275,7 @@ The time zone ID (e.g. Pacific Standard time).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L258">property <b>weeklyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>inputs.devtest.ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L180">
         interface <strong>ScheduleState</strong>
@@ -2290,12 +2290,12 @@ Input properties used for looking up and filtering Schedule resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L181">property <b>dailyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>inputs.devtest.ScheduleDailyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-hourlyRecurrence">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L182">property <b>hourlyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>inputs.devtest.ScheduleHourlyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-labName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L186">property <b>labName</b></a>
 </h4>
@@ -2324,7 +2324,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L195">property <b>notificationSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notificationSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>inputs.devtest.ScheduleNotificationSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notificationSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L199">property <b>resourceGroupName</b></a>
 </h4>
@@ -2369,7 +2369,7 @@ The time zone ID (e.g. Pacific Standard time).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/schedule.ts#L216">property <b>weeklyRecurrence</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>inputs.devtest.ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualNetworkArgs" data-link-title="VirtualNetworkArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/virtualNetwork.ts#L179">
         interface <strong>VirtualNetworkArgs</strong>
@@ -2416,7 +2416,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/virtualNetwork.ts#L199">property <b>subnet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>inputs.devtest.VirtualNetworkSubnet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
 
 A `subnet` block as defined below.
 
@@ -2474,7 +2474,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/virtualNetwork.ts#L165">property <b>subnet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>inputs.devtest.VirtualNetworkSubnet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
 
 A `subnet` block as defined below.
 
@@ -2524,7 +2524,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L340">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>inputs.devtest.WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -2532,7 +2532,7 @@ A `galleryImageReference` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L344">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>inputs.devtest.WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -2670,7 +2670,7 @@ The FQDN of the Virtual Machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L266">property <b>galleryImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>inputs.devtest.WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
 
 A `galleryImageReference` block as defined below.
 
@@ -2678,7 +2678,7 @@ A `galleryImageReference` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/devtest/windowsVirtualMachine.ts#L270">property <b>inboundNatRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>inputs.devtest.WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 

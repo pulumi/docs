@@ -243,7 +243,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeCluster</code></pre>
 
 
 Returns true if the given object is an instance of ComputeCluster.  This is designed to work even
@@ -926,7 +926,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterHostGroup</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterHostGroup.  This is designed to work even
@@ -1105,7 +1105,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterVmAffinityRule</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterVmAffinityRule.  This is designed to work even
@@ -1301,7 +1301,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterVmAntiAffinityRule</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterVmAntiAffinityRule.  This is designed to work even
@@ -1513,7 +1513,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterVmDependencyRule</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterVmDependencyRule.  This is designed to work even
@@ -1716,7 +1716,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterVmGroup</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterVmGroup.  This is designed to work even
@@ -1914,7 +1914,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeClusterVmHostRule</code></pre>
 
 
 Returns true if the given object is an instance of ComputeClusterVmHostRule.  This is designed to work even
@@ -2050,7 +2050,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CustomAttribute</code></pre>
 
 
 Returns true if the given object is an instance of CustomAttribute.  This is designed to work even
@@ -2165,7 +2165,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Datacenter</code></pre>
 
 
 Returns true if the given object is an instance of Datacenter.  This is designed to work even
@@ -2282,7 +2282,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatastoreCluster</code></pre>
 
 
 Returns true if the given object is an instance of DatastoreCluster.  This is designed to work even
@@ -2663,7 +2663,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatastoreClusterVmAntiAffinityRule</code></pre>
 
 
 Returns true if the given object is an instance of DatastoreClusterVmAntiAffinityRule.  This is designed to work even
@@ -2908,7 +2908,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DistributedPortGroup</code></pre>
 
 
 Returns true if the given object is an instance of DistributedPortGroup.  This is designed to work even
@@ -3339,7 +3339,7 @@ on this port group to be overridden on an individual port.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedPortGroup.ts#L387">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vlanRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedPortGroupVlanRange'>outputs.DistributedPortGroupVlanRange</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vlanRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedPortGroupVlanRange'>DistributedPortGroupVlanRange</a>[]&gt;;</code></pre>
 
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
@@ -3390,7 +3390,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DistributedVirtualSwitch</code></pre>
 
 
 Returns true if the given object is an instance of DistributedVirtualSwitch.  This is designed to work even
@@ -3639,7 +3639,7 @@ The allocation level for the hbr traffic class. Can be one of high, low, normal,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L174">property <b>hosts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchHost'>outputs.DistributedVirtualSwitchHost</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchHost'>DistributedVirtualSwitchHost</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Use the `host` block to declare a host specification. The
 options are:
@@ -4127,7 +4127,7 @@ The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L434">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vlanRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchVlanRange'>outputs.DistributedVirtualSwitchVlanRange</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vlanRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchVlanRange'>DistributedVirtualSwitchVlanRange</a>[]&gt;;</code></pre>
 
 Used to denote VLAN trunking. Use the `minVlan`
 and `maxVlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -4310,7 +4310,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DpmHostOverride</code></pre>
 
 
 Returns true if the given object is an instance of DpmHostOverride.  This is designed to work even
@@ -4495,7 +4495,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DrsVmOverride</code></pre>
 
 
 Returns true if the given object is an instance of DrsVmOverride.  This is designed to work even
@@ -4604,7 +4604,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is File</code></pre>
 
 
 Returns true if the given object is an instance of File.  This is designed to work even
@@ -4734,7 +4734,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Folder</code></pre>
 
 
 Returns true if the given object is an instance of Folder.  This is designed to work even
@@ -4926,7 +4926,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HaVmOverride</code></pre>
 
 
 Returns true if the given object is an instance of HaVmOverride.  This is designed to work even
@@ -5177,7 +5177,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Host</code></pre>
 
 
 Returns true if the given object is an instance of Host.  This is designed to work even
@@ -5422,7 +5422,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HostPortGroup</code></pre>
 
 
 Returns true if the given object is an instance of HostPortGroup.  This is designed to work even
@@ -5535,7 +5535,7 @@ If true, the teaming policy will notify the broadcast network of a NIC failover,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/hostPortGroup.ts#L168">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#HostPortGroupPorts'>outputs.HostPortGroupPorts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#HostPortGroupPorts'>HostPortGroupPorts</a>&gt;;</code></pre>
 
 A list of ports that currently exist and are used on this port group.
 
@@ -5664,7 +5664,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HostVirtualSwitch</code></pre>
 
 
 Returns true if the given object is an instance of HostVirtualSwitch.  This is designed to work even
@@ -5948,7 +5948,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is License</code></pre>
 
 
 Returns true if the given object is an instance of License.  This is designed to work even
@@ -6067,7 +6067,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NasDatastore</code></pre>
 
 
 Returns true if the given object is an instance of NasDatastore.  This is designed to work even
@@ -6306,7 +6306,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -6418,7 +6418,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourcePool</code></pre>
 
 
 Returns true if the given object is an instance of ResourcePool.  This is designed to work even
@@ -6701,7 +6701,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StorageDrsVmOverride</code></pre>
 
 
 Returns true if the given object is an instance of StorageDrsVmOverride.  This is designed to work even
@@ -6824,7 +6824,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Tag</code></pre>
 
 
 Returns true if the given object is an instance of Tag.  This is designed to work even
@@ -6921,7 +6921,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TagCategory</code></pre>
 
 
 Returns true if the given object is an instance of TagCategory.  This is designed to work even
@@ -7111,7 +7111,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VappContainer</code></pre>
 
 
 Returns true if the given object is an instance of VappContainer.  This is designed to work even
@@ -7332,7 +7332,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VappEntity</code></pre>
 
 
 Returns true if the given object is an instance of VappEntity.  This is designed to work even
@@ -7517,7 +7517,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualDisk</code></pre>
 
 
 Returns true if the given object is an instance of VirtualDisk.  This is designed to work even
@@ -7654,7 +7654,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualMachine</code></pre>
 
 
 Returns true if the given object is an instance of VirtualMachine.  This is designed to work even
@@ -7711,7 +7711,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L70">property <b>cdrom</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cdrom: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCdrom'>outputs.VirtualMachineCdrom</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cdrom: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCdrom'>VirtualMachineCdrom</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -7730,7 +7730,7 @@ configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L83">property <b>clone</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineClone'>outputs.VirtualMachineClone</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineClone'>VirtualMachineClone</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -7845,7 +7845,7 @@ The IP address selected by Terraform to be used for the provisioner.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L148">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineDisk'>outputs.VirtualMachineDisk</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineDisk'>VirtualMachineDisk</a>[]&gt;;</code></pre>
 
 A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -8110,7 +8110,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L301">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineNetworkInterface'>outputs.VirtualMachineNetworkInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineNetworkInterface'>VirtualMachineNetworkInterface</a>[]&gt;;</code></pre>
 
 A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -8290,7 +8290,7 @@ virtual disk on the virtual machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L402">property <b>vapp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vapp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineVapp'>outputs.VirtualMachineVapp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vapp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineVapp'>VirtualMachineVapp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -8451,7 +8451,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualMachineSnapshot</code></pre>
 
 
 Returns true if the given object is an instance of VirtualMachineSnapshot.  This is designed to work even
@@ -8584,7 +8584,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VmfsDatastore</code></pre>
 
 
 Returns true if the given object is an instance of VmfsDatastore.  This is designed to work even
@@ -12066,7 +12066,7 @@ on this port group to be overridden on an individual port.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedPortGroup.ts#L953">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedPortGroupVlanRange'>inputs.DistributedPortGroupVlanRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedPortGroupVlanRange'>DistributedPortGroupVlanRange</a>&gt;[]&gt;;</code></pre>
 
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
@@ -12487,7 +12487,7 @@ on this port group to be overridden on an individual port.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedPortGroup.ts#L736">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedPortGroupVlanRange'>inputs.DistributedPortGroupVlanRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedPortGroupVlanRange'>DistributedPortGroupVlanRange</a>&gt;[]&gt;;</code></pre>
 
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
@@ -12736,7 +12736,7 @@ The allocation level for the hbr traffic class. Can be one of high, low, normal,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L1244">property <b>hosts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchHost'>inputs.DistributedVirtualSwitchHost</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchHost'>DistributedVirtualSwitchHost</a>&gt;[]&gt;;</code></pre>
 
 Use the `host` block to declare a host specification. The
 options are:
@@ -13206,7 +13206,7 @@ The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L1504">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchVlanRange'>inputs.DistributedVirtualSwitchVlanRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchVlanRange'>DistributedVirtualSwitchVlanRange</a>&gt;[]&gt;;</code></pre>
 
 Used to denote VLAN trunking. Use the `minVlan`
 and `maxVlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -13530,7 +13530,7 @@ The allocation level for the hbr traffic class. Can be one of high, low, normal,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L814">property <b>hosts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchHost'>inputs.DistributedVirtualSwitchHost</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchHost'>DistributedVirtualSwitchHost</a>&gt;[]&gt;;</code></pre>
 
 Use the `host` block to declare a host specification. The
 options are:
@@ -14000,7 +14000,7 @@ The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/distributedVirtualSwitch.ts#L1074">property <b>vlanRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchVlanRange'>inputs.DistributedVirtualSwitchVlanRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vlanRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchVlanRange'>DistributedVirtualSwitchVlanRange</a>&gt;[]&gt;;</code></pre>
 
 Used to denote VLAN trunking. Use the `minVlan`
 and `maxVlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -15346,7 +15346,7 @@ guestId is a non-specific operating system, like `otherGuest`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/getVirtualMachine.ts#L96">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#GetVirtualMachineDisk'>outputs.GetVirtualMachineDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#GetVirtualMachineDisk'>GetVirtualMachineDisk</a>[];</code></pre>
 
 Information about each of the disks on this virtual machine or
 template. These are sorted by bus and unit number so that they can be applied
@@ -16222,7 +16222,7 @@ If true, the teaming policy will notify the broadcast network of a NIC failover,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/hostPortGroup.ts#L336">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#HostPortGroupPorts'>inputs.HostPortGroupPorts</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#HostPortGroupPorts'>HostPortGroupPorts</a>&gt;;</code></pre>
 
 A list of ports that currently exist and are used on this port group.
 
@@ -18625,7 +18625,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L1065">property <b>cdrom</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCdrom'>inputs.VirtualMachineCdrom</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCdrom'>VirtualMachineCdrom</a>&gt;;</code></pre>
 
 A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -18634,7 +18634,7 @@ machine. See CDROM options below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L1072">property <b>clone</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineClone'>inputs.VirtualMachineClone</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineClone'>VirtualMachineClone</a>&gt;;</code></pre>
 
 When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -18741,7 +18741,7 @@ Requried for using a datastore ISO. Conflicts with `clientDevice`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L1133">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineDisk'>inputs.VirtualMachineDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineDisk'>VirtualMachineDisk</a>&gt;[]&gt;;</code></pre>
 
 A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -18966,7 +18966,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L1267">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineNetworkInterface'>inputs.VirtualMachineNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineNetworkInterface'>VirtualMachineNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -19120,7 +19120,7 @@ The IDs of any tags to attach to this resource. See
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L1359">property <b>vapp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vapp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp'>inputs.VirtualMachineVapp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vapp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp'>VirtualMachineVapp</a>&gt;;</code></pre>
 
 Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -19371,7 +19371,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L653">property <b>cdrom</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCdrom'>inputs.VirtualMachineCdrom</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCdrom'>VirtualMachineCdrom</a>&gt;;</code></pre>
 
 A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -19390,7 +19390,7 @@ configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L666">property <b>clone</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineClone'>inputs.VirtualMachineClone</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineClone'>VirtualMachineClone</a>&gt;;</code></pre>
 
 When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -19505,7 +19505,7 @@ The IP address selected by Terraform to be used for the provisioner.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L731">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineDisk'>inputs.VirtualMachineDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineDisk'>VirtualMachineDisk</a>&gt;[]&gt;;</code></pre>
 
 A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -19761,7 +19761,7 @@ Default: `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L884">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineNetworkInterface'>inputs.VirtualMachineNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineNetworkInterface'>VirtualMachineNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -19932,7 +19932,7 @@ virtual disk on the virtual machine.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/virtualMachine.ts#L985">property <b>vapp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vapp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp'>inputs.VirtualMachineVapp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vapp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp'>VirtualMachineVapp</a>&gt;;</code></pre>
 
 Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines

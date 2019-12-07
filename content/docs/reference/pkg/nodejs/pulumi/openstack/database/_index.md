@@ -110,7 +110,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Configuration</code></pre>
 
 
 Returns true if the given object is an instance of Configuration.  This is designed to work even
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L65">property <b>configurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationConfiguration'>outputs.database.ConfigurationConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationConfiguration'>ConfigurationConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 
@@ -128,7 +128,7 @@ An array of configuration parameter name and value. Can be specified multiple ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L70">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationDatastore'>outputs.database.ConfigurationDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationDatastore'>ConfigurationDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -238,7 +238,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Database</code></pre>
 
 
 Returns true if the given object is an instance of Database.  This is designed to work even
@@ -357,7 +357,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -376,7 +376,7 @@ will be rebooted when configuration is detached.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L72">property <b>databases</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatabase'>outputs.database.InstanceDatabase</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatabase'>InstanceDatabase</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of database name, charset and collate. The database
 object structure is documented below.
@@ -385,7 +385,7 @@ object structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L77">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatastore'>outputs.database.InstanceDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatastore'>InstanceDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -420,7 +420,7 @@ A unique name for the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L92">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceNetwork'>outputs.database.InstanceNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceNetwork'>InstanceNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -456,7 +456,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L106">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceUser'>outputs.database.InstanceUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceUser'>InstanceUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An array of username, password, host and databases. The user
 object structure is documented below.
@@ -525,7 +525,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -608,7 +608,7 @@ The set of arguments for constructing a Configuration resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L162">property <b>configurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>inputs.database.ConfigurationConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>ConfigurationConfiguration</a>&gt;[]&gt;;</code></pre>
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 
@@ -616,7 +616,7 @@ An array of configuration parameter name and value. Can be specified multiple ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L167">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>inputs.database.ConfigurationDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>ConfigurationDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -660,7 +660,7 @@ Input properties used for looking up and filtering Configuration resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L134">property <b>configurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>inputs.database.ConfigurationConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>ConfigurationConfiguration</a>&gt;[]&gt;;</code></pre>
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 
@@ -668,7 +668,7 @@ An array of configuration parameter name and value. Can be specified multiple ti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/configuration.ts#L139">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>inputs.database.ConfigurationDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>ConfigurationDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -789,7 +789,7 @@ will be rebooted when configuration is detached.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L221">property <b>databases</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>inputs.database.InstanceDatabase</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>InstanceDatabase</a>&gt;[]&gt;;</code></pre>
 
 An array of database name, charset and collate. The database
 object structure is documented below.
@@ -798,7 +798,7 @@ object structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L226">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>inputs.database.InstanceDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>InstanceDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -824,7 +824,7 @@ A unique name for the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L241">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>inputs.database.InstanceNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
 
 An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -851,7 +851,7 @@ Specifies the volume size in GB. Changing this creates new instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L255">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>inputs.database.InstanceUser</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>InstanceUser</a>&gt;[]&gt;;</code></pre>
 
 An array of username, password, host and databases. The user
 object structure is documented below.
@@ -879,7 +879,7 @@ will be rebooted when configuration is detached.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L171">property <b>databases</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>inputs.database.InstanceDatabase</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>InstanceDatabase</a>&gt;[]&gt;;</code></pre>
 
 An array of database name, charset and collate. The database
 object structure is documented below.
@@ -888,7 +888,7 @@ object structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L176">property <b>datastore</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>inputs.database.InstanceDatastore</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>InstanceDatastore</a>&gt;;</code></pre>
 
 An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -914,7 +914,7 @@ A unique name for the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L191">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>inputs.database.InstanceNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
 
 An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -941,7 +941,7 @@ Specifies the volume size in GB. Changing this creates new instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/database/instance.ts#L205">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>inputs.database.InstanceUser</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>InstanceUser</a>&gt;[]&gt;;</code></pre>
 
 An array of username, password, host and databases. The user
 object structure is documented below.

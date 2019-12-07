@@ -125,7 +125,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of AuthorizationRule.  This is designed to work even
@@ -292,7 +292,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Hub</code></pre>
 
 
 Returns true if the given object is an instance of Hub.  This is designed to work even
@@ -302,7 +302,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L66">property <b>apnsCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>apnsCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubApnsCredential'>outputs.notificationhub.HubApnsCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>apnsCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubApnsCredential'>HubApnsCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `apnsCredential` block as defined below.
 
@@ -310,7 +310,7 @@ A `apnsCredential` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L70">property <b>gcmCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gcmCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubGcmCredential'>outputs.notificationhub.HubGcmCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gcmCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubGcmCredential'>HubGcmCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `gcmCredential` block as defined below.
 
@@ -430,7 +430,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Namespace</code></pre>
 
 
 Returns true if the given object is an instance of Namespace.  This is designed to work even
@@ -497,7 +497,7 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/namespace.ts#L85">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>outputs.notificationhub.NamespaceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>NamespaceSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -775,7 +775,7 @@ A collection of values returned by getHub.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/getHub.ts#L71">property <b>apnsCredentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apnsCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubApnsCredential'>outputs.notificationhub.GetHubApnsCredential</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apnsCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubApnsCredential'>GetHubApnsCredential</a>[];</code></pre>
 
 A `apnsCredential` block as defined below.
 
@@ -783,7 +783,7 @@ A `apnsCredential` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/getHub.ts#L75">property <b>gcmCredentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gcmCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubGcmCredential'>outputs.notificationhub.GetHubGcmCredential</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gcmCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubGcmCredential'>GetHubGcmCredential</a>[];</code></pre>
 
 A `gcmCredential` block as defined below.
 
@@ -908,7 +908,7 @@ The Type of Namespace, such as `Messaging` or `NotificationHub`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/getNamespace.ts#L83">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNamespaceSku'>outputs.notificationhub.GetNamespaceSku</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNamespaceSku'>GetNamespaceSku</a>;</code></pre>
 
 A `sku` block as defined below.
 
@@ -926,7 +926,7 @@ The set of arguments for constructing a Hub resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L169">property <b>apnsCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>HubApnsCredential</a>&gt;;</code></pre>
 
 A `apnsCredential` block as defined below.
 
@@ -934,7 +934,7 @@ A `apnsCredential` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L173">property <b>gcmCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>HubGcmCredential</a>&gt;;</code></pre>
 
 A `gcmCredential` block as defined below.
 
@@ -984,7 +984,7 @@ Input properties used for looking up and filtering Hub resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L139">property <b>apnsCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>HubApnsCredential</a>&gt;;</code></pre>
 
 A `apnsCredential` block as defined below.
 
@@ -992,7 +992,7 @@ A `apnsCredential` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/hub.ts#L143">property <b>gcmCredential</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>HubGcmCredential</a>&gt;;</code></pre>
 
 A `gcmCredential` block as defined below.
 
@@ -1082,7 +1082,7 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/namespace.ts#L204">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>NamespaceSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -1156,7 +1156,7 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/notificationhub/namespace.ts#L170">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>NamespaceSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 

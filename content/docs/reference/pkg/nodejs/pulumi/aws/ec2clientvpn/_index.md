@@ -106,7 +106,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Endpoint</code></pre>
 
 
 Returns true if the given object is an instance of Endpoint.  This is designed to work even
@@ -116,7 +116,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L67">property <b>authenticationOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointAuthenticationOptions'>outputs.ec2clientvpn.EndpointAuthenticationOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointAuthenticationOptions'>EndpointAuthenticationOptions</a>&gt;;</code></pre>
 
 Information about the authentication method to be used to authenticate clients.
 
@@ -132,7 +132,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L75">property <b>connectionLogOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConnectionLogOptions'>outputs.ec2clientvpn.EndpointConnectionLogOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConnectionLogOptions'>EndpointConnectionLogOptions</a>&gt;;</code></pre>
 
 Information about the client connection logging options.
 
@@ -280,7 +280,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkAssociation</code></pre>
 
 
 Returns true if the given object is an instance of NetworkAssociation.  This is designed to work even
@@ -361,7 +361,7 @@ The set of arguments for constructing a Endpoint resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L226">property <b>authenticationOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointAuthenticationOptions'>inputs.ec2clientvpn.EndpointAuthenticationOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointAuthenticationOptions'>EndpointAuthenticationOptions</a>&gt;;</code></pre>
 
 Information about the authentication method to be used to authenticate clients.
 
@@ -377,7 +377,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L234">property <b>connectionLogOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConnectionLogOptions'>inputs.ec2clientvpn.EndpointConnectionLogOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConnectionLogOptions'>EndpointConnectionLogOptions</a>&gt;;</code></pre>
 
 Information about the client connection logging options.
 
@@ -443,7 +443,7 @@ Input properties used for looking up and filtering Endpoint resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L176">property <b>authenticationOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointAuthenticationOptions'>inputs.ec2clientvpn.EndpointAuthenticationOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointAuthenticationOptions'>EndpointAuthenticationOptions</a>&gt;;</code></pre>
 
 Information about the authentication method to be used to authenticate clients.
 
@@ -459,7 +459,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2clientvpn/endpoint.ts#L184">property <b>connectionLogOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectionLogOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConnectionLogOptions'>inputs.ec2clientvpn.EndpointConnectionLogOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectionLogOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConnectionLogOptions'>EndpointConnectionLogOptions</a>&gt;;</code></pre>
 
 Information about the client connection logging options.
 

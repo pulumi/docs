@@ -733,7 +733,7 @@ Whether this action is `"on"` or `"off"`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L261">property <b>minifies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>minifies?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#PageRuleActionsMinify'>outputs.PageRuleActionsMinify</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>minifies?: <a href='#PageRuleActionsMinify'>PageRuleActionsMinify</a>[];</code></pre>
 
 The configuration for HTML, CSS and JS minification. See below for full list of options.
 
@@ -983,7 +983,7 @@ If set to 'nat', NAT support will be enabled for rate limiting.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L383">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitMatchRequest'>outputs.RateLimitMatchRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request: <a href='#RateLimitMatchRequest'>RateLimitMatchRequest</a>;</code></pre>
 
 Matches HTTP requests (from the client to Cloudflare). See definition below.
 
@@ -991,7 +991,7 @@ Matches HTTP requests (from the client to Cloudflare). See definition below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L387">property <b>response</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>response: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitMatchResponse'>outputs.RateLimitMatchResponse</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>response: <a href='#RateLimitMatchResponse'>RateLimitMatchResponse</a>;</code></pre>
 
 Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.
 
@@ -1439,7 +1439,7 @@ The value to target. Depends on target's type. IP addresses should just be stand
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L520">property <b>minify</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>minify: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsMinify'>outputs.ZoneSettingsOverrideInitialSettingsMinify</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>minify: <a href='#ZoneSettingsOverrideInitialSettingsMinify'>ZoneSettingsOverrideInitialSettingsMinify</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideInitialSettings-mirage">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L521">property <b>mirage</b></a>
 </h4>
@@ -1449,7 +1449,7 @@ The value to target. Depends on target's type. IP addresses should just be stand
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L522">property <b>mobileRedirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mobileRedirect: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsMobileRedirect'>outputs.ZoneSettingsOverrideInitialSettingsMobileRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mobileRedirect: <a href='#ZoneSettingsOverrideInitialSettingsMobileRedirect'>ZoneSettingsOverrideInitialSettingsMobileRedirect</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideInitialSettings-opportunisticEncryption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L523">property <b>opportunisticEncryption</b></a>
 </h4>
@@ -1499,7 +1499,7 @@ The value to target. Depends on target's type. IP addresses should just be stand
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L532">property <b>securityHeader</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>securityHeader: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsSecurityHeader'>outputs.ZoneSettingsOverrideInitialSettingsSecurityHeader</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>securityHeader: <a href='#ZoneSettingsOverrideInitialSettingsSecurityHeader'>ZoneSettingsOverrideInitialSettingsSecurityHeader</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideInitialSettings-securityLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L533">property <b>securityLevel</b></a>
 </h4>
@@ -1773,7 +1773,7 @@ true/false
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L618">property <b>minify</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>minify: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsMinify'>outputs.ZoneSettingsOverrideSettingsMinify</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>minify: <a href='#ZoneSettingsOverrideSettingsMinify'>ZoneSettingsOverrideSettingsMinify</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideSettings-mirage">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L619">property <b>mirage</b></a>
 </h4>
@@ -1783,7 +1783,7 @@ true/false
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L620">property <b>mobileRedirect</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mobileRedirect: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsMobileRedirect'>outputs.ZoneSettingsOverrideSettingsMobileRedirect</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mobileRedirect: <a href='#ZoneSettingsOverrideSettingsMobileRedirect'>ZoneSettingsOverrideSettingsMobileRedirect</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideSettings-opportunisticEncryption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L621">property <b>opportunisticEncryption</b></a>
 </h4>
@@ -1833,7 +1833,7 @@ true/false
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L630">property <b>securityHeader</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>securityHeader: <a href='/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsSecurityHeader'>outputs.ZoneSettingsOverrideSettingsSecurityHeader</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>securityHeader: <a href='#ZoneSettingsOverrideSettingsSecurityHeader'>ZoneSettingsOverrideSettingsSecurityHeader</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneSettingsOverrideSettings-securityLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d14f12b0b50da74c05e36e2fc33898ca325165bc/sdk/nodejs/types/output.ts#L631">property <b>securityLevel</b></a>
 </h4>

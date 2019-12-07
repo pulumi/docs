@@ -179,7 +179,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ComputeEnvironment</code></pre>
 
 
 Returns true if the given object is an instance of ComputeEnvironment.  This is designed to work even
@@ -205,7 +205,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/computeEnvironment.ts#L136">property <b>computeResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>computeResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ComputeEnvironmentComputeResources'>outputs.batch.ComputeEnvironmentComputeResources</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>computeResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ComputeEnvironmentComputeResources'>ComputeEnvironmentComputeResources</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 
@@ -379,7 +379,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobDefinition</code></pre>
 
 
 Returns true if the given object is an instance of JobDefinition.  This is designed to work even
@@ -431,7 +431,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L117">property <b>retryStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retryStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionRetryStrategy'>outputs.batch.JobDefinitionRetryStrategy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retryStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionRetryStrategy'>JobDefinitionRetryStrategy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retryStrategy` is `1`.  Defined below.
@@ -448,7 +448,7 @@ The revision of the job definition.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L125">property <b>timeout</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionTimeout'>outputs.batch.JobDefinitionTimeout</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionTimeout'>JobDefinitionTimeout</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 
@@ -534,7 +534,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobQueue</code></pre>
 
 
 Returns true if the given object is an instance of JobQueue.  This is designed to work even
@@ -680,7 +680,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/computeEnvironment.ts#L268">property <b>computeResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ComputeEnvironmentComputeResources'>inputs.batch.ComputeEnvironmentComputeResources</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ComputeEnvironmentComputeResources'>ComputeEnvironmentComputeResources</a>&gt;;</code></pre>
 
 Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 
@@ -738,7 +738,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/computeEnvironment.ts#L230">property <b>computeResources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ComputeEnvironmentComputeResources'>inputs.batch.ComputeEnvironmentComputeResources</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ComputeEnvironmentComputeResources'>ComputeEnvironmentComputeResources</a>&gt;;</code></pre>
 
 Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 
@@ -927,7 +927,7 @@ The ARN of the job queue.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/getJobQueue.ts#L65">property <b>computeEnvironmentOrders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>computeEnvironmentOrders: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetJobQueueComputeEnvironmentOrder'>outputs.batch.GetJobQueueComputeEnvironmentOrder</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeEnvironmentOrders: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetJobQueueComputeEnvironmentOrder'>GetJobQueueComputeEnvironmentOrder</a>[];</code></pre>
 
 The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.
@@ -1020,7 +1020,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L237">property <b>retryStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionRetryStrategy'>inputs.batch.JobDefinitionRetryStrategy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionRetryStrategy'>JobDefinitionRetryStrategy</a>&gt;;</code></pre>
 
 Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retryStrategy` is `1`.  Defined below.
@@ -1029,7 +1029,7 @@ Maximum number of `retryStrategy` is `1`.  Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L241">property <b>timeout</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionTimeout'>inputs.batch.JobDefinitionTimeout</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionTimeout'>JobDefinitionTimeout</a>&gt;;</code></pre>
 
 Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 
@@ -1088,7 +1088,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L201">property <b>retryStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionRetryStrategy'>inputs.batch.JobDefinitionRetryStrategy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionRetryStrategy'>JobDefinitionRetryStrategy</a>&gt;;</code></pre>
 
 Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retryStrategy` is `1`.  Defined below.
@@ -1105,7 +1105,7 @@ The revision of the job definition.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/batch/jobDefinition.ts#L209">property <b>timeout</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionTimeout'>inputs.batch.JobDefinitionTimeout</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionTimeout'>JobDefinitionTimeout</a>&gt;;</code></pre>
 
 Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 

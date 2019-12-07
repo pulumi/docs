@@ -136,7 +136,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dashboard</code></pre>
 
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
@@ -146,7 +146,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L42">property <b>charts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>charts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardChart'>outputs.DashboardChart</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>charts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardChart'>DashboardChart</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Chart ID and layout information for the charts in the dashboard.
 
@@ -162,7 +162,7 @@ Specifies the chart data display resolution for charts in this dashboard. Value 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L50">property <b>columns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>columns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardColumn'>outputs.DashboardColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>columns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardColumn'>DashboardColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Column number for the layout.
 
@@ -194,7 +194,7 @@ Seconds since epoch. Used for visualization. You must specify timeSpanType = `"a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L66">property <b>eventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventOverlays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardEventOverlay'>outputs.DashboardEventOverlay</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventOverlays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardEventOverlay'>DashboardEventOverlay</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selectedEventOverlay` property instead.
 
@@ -202,7 +202,7 @@ Specify a list of event overlays to include in the dashboard. Note: These overla
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L70">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardFilter'>outputs.DashboardFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardFilter'>DashboardFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Filter to apply to the charts when displaying the dashboard.
 
@@ -210,7 +210,7 @@ Filter to apply to the charts when displaying the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L74">property <b>grids</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>grids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGrid'>outputs.DashboardGrid</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>grids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGrid'>DashboardGrid</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 
@@ -235,7 +235,7 @@ Name of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L82">property <b>selectedEventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>selectedEventOverlays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardSelectedEventOverlay'>outputs.DashboardSelectedEventOverlay</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>selectedEventOverlays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardSelectedEventOverlay'>DashboardSelectedEventOverlay</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `eventOverlay`, which are similar to the properties here.
 
@@ -276,7 +276,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L98">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardVariable'>outputs.DashboardVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardVariable'>DashboardVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Dashboard variable to apply to each chart in the dashboard.
 
@@ -373,7 +373,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DashboardGroup</code></pre>
 
 
 Returns true if the given object is an instance of DashboardGroup.  This is designed to work even
@@ -383,7 +383,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboardGroup.ts#L88">property <b>dashboards</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dashboards: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGroupDashboard'>outputs.DashboardGroupDashboard</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dashboards: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGroupDashboard'>DashboardGroupDashboard</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 [Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 
@@ -577,7 +577,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Detector</code></pre>
 
 
 Returns true if the given object is an instance of Detector.  This is designed to work even
@@ -644,7 +644,7 @@ Signalflow program text for the detector. More info at <https://developers.signa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/detector.ts#L167">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DetectorRule'>outputs.DetectorRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DetectorRule'>DetectorRule</a>[]&gt;;</code></pre>
 
 Set of rules used for alerting.
 
@@ -770,7 +770,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventFeedChart</code></pre>
 
 
 Returns true if the given object is an instance of EventFeedChart.  This is designed to work even
@@ -926,7 +926,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HeatmapChart</code></pre>
 
 
 Returns true if the given object is an instance of HeatmapChart.  This is designed to work even
@@ -936,7 +936,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L71">property <b>colorRange</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>colorRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#HeatmapChartColorRange'>outputs.HeatmapChartColorRange</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>colorRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#HeatmapChartColorRange'>HeatmapChartColorRange</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Values and color for the color range. Example: `colorRange : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -944,7 +944,7 @@ Values and color for the color range. Example: `colorRange : { min : 0, max : 10
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L75">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#HeatmapChartColorScale'>outputs.HeatmapChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#HeatmapChartColorScale'>HeatmapChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -1156,7 +1156,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ListChart</code></pre>
 
 
 Returns true if the given object is an instance of ListChart.  This is designed to work even
@@ -1174,7 +1174,7 @@ Must be one of `"Scale"`, `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L93">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartColorScale'>outputs.ListChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartColorScale'>ListChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -1223,7 +1223,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L115">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>legendOptionsFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartLegendOptionsField'>outputs.ListChartLegendOptionsField</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>legendOptionsFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartLegendOptionsField'>ListChartLegendOptionsField</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -1314,7 +1314,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L155">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartVizOption'>outputs.ListChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#ListChartVizOption'>ListChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -1389,7 +1389,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrgToken</code></pre>
 
 
 Returns true if the given object is an instance of OrgToken.  This is designed to work even
@@ -1415,7 +1415,7 @@ Flag that controls enabling the token. If set to `true`, the token is disabled, 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L74">property <b>dpmLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dpmLimits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#OrgTokenDpmLimits'>outputs.OrgTokenDpmLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dpmLimits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#OrgTokenDpmLimits'>OrgTokenDpmLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specify DPM-based limits for this token.
 
@@ -1423,7 +1423,7 @@ Specify DPM-based limits for this token.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L78">property <b>hostOrUsageLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hostOrUsageLimits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#OrgTokenHostOrUsageLimits'>outputs.OrgTokenHostOrUsageLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hostOrUsageLimits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#OrgTokenHostOrUsageLimits'>OrgTokenHostOrUsageLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specify Usage-based limits for this token.
 
@@ -1503,7 +1503,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -1604,7 +1604,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SingleValueChart</code></pre>
 
 
 Returns true if the given object is an instance of SingleValueChart.  This is designed to work even
@@ -1622,7 +1622,7 @@ Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L69">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#SingleValueChartColorScale'>outputs.SingleValueChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>colorScales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#SingleValueChartColorScale'>SingleValueChartColorScale</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -1736,7 +1736,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L117">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#SingleValueChartVizOption'>outputs.SingleValueChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#SingleValueChartVizOption'>SingleValueChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -1804,7 +1804,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Team</code></pre>
 
 
 Returns true if the given object is an instance of Team.  This is designed to work even
@@ -1985,7 +1985,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TextChart</code></pre>
 
 
 Returns true if the given object is an instance of TextChart.  This is designed to work even
@@ -2139,7 +2139,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TimeChart</code></pre>
 
 
 Returns true if the given object is an instance of TimeChart.  This is designed to work even
@@ -2165,7 +2165,7 @@ Specifies the digits SignalFx displays for values plotted on the chart. Defaults
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L101">property <b>axisLeft</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>axisLeft: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisLeft'>outputs.TimeChartAxisLeft</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>axisLeft: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisLeft'>TimeChartAxisLeft</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -2173,7 +2173,7 @@ Set of axis options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L105">property <b>axisRight</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>axisRight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisRight'>outputs.TimeChartAxisRight</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>axisRight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisRight'>TimeChartAxisRight</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -2213,7 +2213,7 @@ Seconds since epoch. Used for visualization. Conflicts with `timeRange`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L125">property <b>eventOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartEventOption'>outputs.TimeChartEventOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartEventOption'>TimeChartEventOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 
@@ -2221,7 +2221,7 @@ Event customization options, associated with a publish statement. You will need 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L129">property <b>histogramOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>histogramOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartHistogramOption'>outputs.TimeChartHistogramOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>histogramOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartHistogramOption'>TimeChartHistogramOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Only used when `plotType` is `"Histogram"`. Histogram specific options.
 
@@ -2246,7 +2246,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L139">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>legendOptionsFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartLegendOptionsField'>outputs.TimeChartLegendOptionsField</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>legendOptionsFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartLegendOptionsField'>TimeChartLegendOptionsField</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -2385,7 +2385,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L203">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartVizOption'>outputs.TimeChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vizOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartVizOption'>TimeChartVizOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -2406,7 +2406,7 @@ The set of arguments for constructing a Dashboard resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L232">property <b>charts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>charts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardChart'>inputs.DashboardChart</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>charts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardChart'>DashboardChart</a>&gt;[]&gt;;</code></pre>
 
 Chart ID and layout information for the charts in the dashboard.
 
@@ -2422,7 +2422,7 @@ Specifies the chart data display resolution for charts in this dashboard. Value 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L240">property <b>columns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>columns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardColumn'>inputs.DashboardColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>columns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardColumn'>DashboardColumn</a>&gt;[]&gt;;</code></pre>
 
 Column number for the layout.
 
@@ -2454,7 +2454,7 @@ Seconds since epoch. Used for visualization. You must specify timeSpanType = `"a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L256">property <b>eventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlay'>inputs.DashboardEventOverlay</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlay'>DashboardEventOverlay</a>&gt;[]&gt;;</code></pre>
 
 Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selectedEventOverlay` property instead.
 
@@ -2462,7 +2462,7 @@ Specify a list of event overlays to include in the dashboard. Note: These overla
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L260">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardFilter'>DashboardFilter</a>&gt;[]&gt;;</code></pre>
 
 Filter to apply to the charts when displaying the dashboard.
 
@@ -2470,7 +2470,7 @@ Filter to apply to the charts when displaying the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L264">property <b>grids</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGrid'>inputs.DashboardGrid</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGrid'>DashboardGrid</a>&gt;[]&gt;;</code></pre>
 
 Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 
@@ -2486,7 +2486,7 @@ Name of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L272">property <b>selectedEventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectedEventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlay'>inputs.DashboardSelectedEventOverlay</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectedEventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlay'>DashboardSelectedEventOverlay</a>&gt;[]&gt;;</code></pre>
 
 Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `eventOverlay`, which are similar to the properties here.
 
@@ -2510,7 +2510,7 @@ The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L284">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardVariable'>inputs.DashboardVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardVariable'>DashboardVariable</a>&gt;[]&gt;;</code></pre>
 
 Dashboard variable to apply to each chart in the dashboard.
 
@@ -2528,7 +2528,7 @@ The set of arguments for constructing a DashboardGroup resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboardGroup.ts#L165">property <b>dashboards</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dashboards?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboard'>inputs.DashboardGroupDashboard</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dashboards?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboard'>DashboardGroupDashboard</a>&gt;[]&gt;;</code></pre>
 
 [Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 
@@ -2570,7 +2570,7 @@ Input properties used for looking up and filtering DashboardGroup resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboardGroup.ts#L143">property <b>dashboards</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dashboards?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboard'>inputs.DashboardGroupDashboard</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dashboards?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboard'>DashboardGroupDashboard</a>&gt;[]&gt;;</code></pre>
 
 [Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 
@@ -2612,7 +2612,7 @@ Input properties used for looking up and filtering Dashboard resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L166">property <b>charts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>charts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardChart'>inputs.DashboardChart</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>charts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardChart'>DashboardChart</a>&gt;[]&gt;;</code></pre>
 
 Chart ID and layout information for the charts in the dashboard.
 
@@ -2628,7 +2628,7 @@ Specifies the chart data display resolution for charts in this dashboard. Value 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L174">property <b>columns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>columns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardColumn'>inputs.DashboardColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>columns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardColumn'>DashboardColumn</a>&gt;[]&gt;;</code></pre>
 
 Column number for the layout.
 
@@ -2660,7 +2660,7 @@ Seconds since epoch. Used for visualization. You must specify timeSpanType = `"a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L190">property <b>eventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlay'>inputs.DashboardEventOverlay</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlay'>DashboardEventOverlay</a>&gt;[]&gt;;</code></pre>
 
 Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selectedEventOverlay` property instead.
 
@@ -2668,7 +2668,7 @@ Specify a list of event overlays to include in the dashboard. Note: These overla
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L194">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardFilter'>DashboardFilter</a>&gt;[]&gt;;</code></pre>
 
 Filter to apply to the charts when displaying the dashboard.
 
@@ -2676,7 +2676,7 @@ Filter to apply to the charts when displaying the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L198">property <b>grids</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>grids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGrid'>inputs.DashboardGrid</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>grids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGrid'>DashboardGrid</a>&gt;[]&gt;;</code></pre>
 
 Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 
@@ -2692,7 +2692,7 @@ Name of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L206">property <b>selectedEventOverlays</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectedEventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlay'>inputs.DashboardSelectedEventOverlay</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectedEventOverlays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlay'>DashboardSelectedEventOverlay</a>&gt;[]&gt;;</code></pre>
 
 Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `eventOverlay`, which are similar to the properties here.
 
@@ -2724,7 +2724,7 @@ URL of the dashboard
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/dashboard.ts#L222">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardVariable'>inputs.DashboardVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardVariable'>DashboardVariable</a>&gt;[]&gt;;</code></pre>
 
 Dashboard variable to apply to each chart in the dashboard.
 
@@ -2790,7 +2790,7 @@ Signalflow program text for the detector. More info at <https://developers.signa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/detector.ts#L340">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DetectorRule'>inputs.DetectorRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DetectorRule'>DetectorRule</a>&gt;[]&gt;;</code></pre>
 
 Set of rules used for alerting.
 
@@ -2896,7 +2896,7 @@ Signalflow program text for the detector. More info at <https://developers.signa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/detector.ts#L282">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DetectorRule'>inputs.DetectorRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DetectorRule'>DetectorRule</a>&gt;[]&gt;;</code></pre>
 
 Set of rules used for alerting.
 
@@ -3122,7 +3122,7 @@ The set of arguments for constructing a HeatmapChart resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L251">property <b>colorRange</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorRange'>inputs.HeatmapChartColorRange</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorRange'>HeatmapChartColorRange</a>&gt;;</code></pre>
 
 Values and color for the color range. Example: `colorRange : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3130,7 +3130,7 @@ Values and color for the color range. Example: `colorRange : { min : 0, max : 10
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L255">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorScale'>inputs.HeatmapChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorScale'>HeatmapChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3236,7 +3236,7 @@ Input properties used for looking up and filtering HeatmapChart resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L189">property <b>colorRange</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorRange'>inputs.HeatmapChartColorRange</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorRange'>HeatmapChartColorRange</a>&gt;;</code></pre>
 
 Values and color for the color range. Example: `colorRange : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3244,7 +3244,7 @@ Values and color for the color range. Example: `colorRange : { min : 0, max : 10
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/heatmapChart.ts#L193">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorScale'>inputs.HeatmapChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorScale'>HeatmapChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3366,7 +3366,7 @@ Must be one of `"Scale"`, `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L307">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartColorScale'>inputs.ListChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartColorScale'>ListChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3398,7 +3398,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L325">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartLegendOptionsField'>inputs.ListChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartLegendOptionsField'>ListChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -3472,7 +3472,7 @@ Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L361">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartVizOption'>inputs.ListChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartVizOption'>ListChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -3498,7 +3498,7 @@ Must be one of `"Scale"`, `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L231">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartColorScale'>inputs.ListChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartColorScale'>ListChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3538,7 +3538,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L253">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartLegendOptionsField'>inputs.ListChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartLegendOptionsField'>ListChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -3620,7 +3620,7 @@ URL of the chart
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/listChart.ts#L293">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartVizOption'>inputs.ListChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#ListChartVizOption'>ListChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -3654,7 +3654,7 @@ Flag that controls enabling the token. If set to `true`, the token is disabled, 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L173">property <b>dpmLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dpmLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenDpmLimits'>inputs.OrgTokenDpmLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dpmLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenDpmLimits'>OrgTokenDpmLimits</a>&gt;;</code></pre>
 
 Specify DPM-based limits for this token.
 
@@ -3662,7 +3662,7 @@ Specify DPM-based limits for this token.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L177">property <b>hostOrUsageLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostOrUsageLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenHostOrUsageLimits'>inputs.OrgTokenHostOrUsageLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostOrUsageLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenHostOrUsageLimits'>OrgTokenHostOrUsageLimits</a>&gt;;</code></pre>
 
 Specify Usage-based limits for this token.
 
@@ -3713,7 +3713,7 @@ Flag that controls enabling the token. If set to `true`, the token is disabled, 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L142">property <b>dpmLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dpmLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenDpmLimits'>inputs.OrgTokenDpmLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dpmLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenDpmLimits'>OrgTokenDpmLimits</a>&gt;;</code></pre>
 
 Specify DPM-based limits for this token.
 
@@ -3721,7 +3721,7 @@ Specify DPM-based limits for this token.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/orgToken.ts#L146">property <b>hostOrUsageLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostOrUsageLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenHostOrUsageLimits'>inputs.OrgTokenHostOrUsageLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostOrUsageLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#OrgTokenHostOrUsageLimits'>OrgTokenHostOrUsageLimits</a>&gt;;</code></pre>
 
 Specify Usage-based limits for this token.
 
@@ -3798,7 +3798,7 @@ Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L249">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartColorScale'>inputs.SingleValueChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartColorScale'>SingleValueChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -3886,7 +3886,7 @@ Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L293">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartVizOption'>inputs.SingleValueChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartVizOption'>SingleValueChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -3912,7 +3912,7 @@ Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L187">property <b>colorScales</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartColorScale'>inputs.SingleValueChartColorScale</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>colorScales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartColorScale'>SingleValueChartColorScale</a>&gt;[]&gt;;</code></pre>
 
 Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 
@@ -4008,7 +4008,7 @@ URL of the chart
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/singleValueChart.ts#L235">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartVizOption'>inputs.SingleValueChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartVizOption'>SingleValueChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -4290,7 +4290,7 @@ Specifies the digits SignalFx displays for values plotted on the chart. Defaults
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L425">property <b>axisLeft</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>axisLeft?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeft'>inputs.TimeChartAxisLeft</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>axisLeft?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeft'>TimeChartAxisLeft</a>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -4298,7 +4298,7 @@ Set of axis options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L429">property <b>axisRight</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>axisRight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRight'>inputs.TimeChartAxisRight</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>axisRight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRight'>TimeChartAxisRight</a>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -4338,7 +4338,7 @@ Seconds since epoch. Used for visualization. Conflicts with `timeRange`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L449">property <b>eventOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartEventOption'>inputs.TimeChartEventOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartEventOption'>TimeChartEventOption</a>&gt;[]&gt;;</code></pre>
 
 Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 
@@ -4346,7 +4346,7 @@ Event customization options, associated with a publish statement. You will need 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L453">property <b>histogramOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>histogramOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartHistogramOption'>inputs.TimeChartHistogramOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>histogramOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartHistogramOption'>TimeChartHistogramOption</a>&gt;[]&gt;;</code></pre>
 
 Only used when `plotType` is `"Histogram"`. Histogram specific options.
 
@@ -4362,7 +4362,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L463">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartLegendOptionsField'>inputs.TimeChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartLegendOptionsField'>TimeChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -4484,7 +4484,7 @@ Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L523">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartVizOption'>inputs.TimeChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartVizOption'>TimeChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 
@@ -4518,7 +4518,7 @@ Specifies the digits SignalFx displays for values plotted on the chart. Defaults
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L305">property <b>axisLeft</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>axisLeft?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeft'>inputs.TimeChartAxisLeft</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>axisLeft?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeft'>TimeChartAxisLeft</a>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -4526,7 +4526,7 @@ Set of axis options.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L309">property <b>axisRight</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>axisRight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRight'>inputs.TimeChartAxisRight</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>axisRight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRight'>TimeChartAxisRight</a>&gt;;</code></pre>
 
 Set of axis options.
 
@@ -4566,7 +4566,7 @@ Seconds since epoch. Used for visualization. Conflicts with `timeRange`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L329">property <b>eventOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartEventOption'>inputs.TimeChartEventOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartEventOption'>TimeChartEventOption</a>&gt;[]&gt;;</code></pre>
 
 Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 
@@ -4574,7 +4574,7 @@ Event customization options, associated with a publish statement. You will need 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L333">property <b>histogramOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>histogramOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartHistogramOption'>inputs.TimeChartHistogramOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>histogramOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartHistogramOption'>TimeChartHistogramOption</a>&gt;[]&gt;;</code></pre>
 
 Only used when `plotType` is `"Histogram"`. Histogram specific options.
 
@@ -4590,7 +4590,7 @@ List of properties that should not be displayed in the chart legend (i.e. dimens
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L343">property <b>legendOptionsFields</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartLegendOptionsField'>inputs.TimeChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>legendOptionsFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartLegendOptionsField'>TimeChartLegendOptionsField</a>&gt;[]&gt;;</code></pre>
 
 List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legendFieldsToHide`.
 * `property` The name of the property to display. Note the special values of `plotLabel` (corresponding with the API's `sfMetric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
@@ -4720,7 +4720,7 @@ URL of the chart
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/timeChart.ts#L407">property <b>vizOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartVizOption'>inputs.TimeChartVizOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vizOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartVizOption'>TimeChartVizOption</a>&gt;[]&gt;;</code></pre>
 
 Plot-level customization options, associated with a publish statement.
 

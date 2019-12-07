@@ -113,7 +113,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Application</code></pre>
 
 
 Returns true if the given object is an instance of Application.  This is designed to work even
@@ -163,7 +163,7 @@ The default hostname for this app.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/application.ts#L85">property <b>featureSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationFeatureSettings'>outputs.appengine.ApplicationFeatureSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
 
 A block of optional settings to configure specific App Engine features:
 
@@ -223,7 +223,7 @@ The serving status of the app.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/application.ts#L112">property <b>urlDispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRule'>outputs.appengine.ApplicationUrlDispatchRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRule'>ApplicationUrlDispatchRule</a>[]&gt;;</code></pre>
 
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 
@@ -283,7 +283,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationUrlDispatchRules</code></pre>
 
 
 Returns true if the given object is an instance of ApplicationUrlDispatchRules.  This is designed to work even
@@ -293,7 +293,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L42">property <b>dispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRulesDispatchRule'>outputs.appengine.ApplicationUrlDispatchRulesDispatchRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>[]&gt;;</code></pre>
 
 Rules to match an HTTP request and dispatch that request to a service.
 
@@ -367,7 +367,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainMapping</code></pre>
 
 
 Returns true if the given object is an instance of DomainMapping.  This is designed to work even
@@ -420,7 +420,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/domainMapping.ts#L61">property <b>resourceRecords</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingResourceRecord'>outputs.appengine.DomainMappingResourceRecord</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingResourceRecord'>DomainMappingResourceRecord</a>[]&gt;;</code></pre>
 
 The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
@@ -429,7 +429,7 @@ configuration in order to serve the application via this domain mapping.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/domainMapping.ts#L65">property <b>sslSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSslSettings'>outputs.appengine.DomainMappingSslSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSslSettings'>DomainMappingSslSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 
@@ -489,7 +489,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallRule</code></pre>
 
 
 Returns true if the given object is an instance of FirewallRule.  This is designed to work even
@@ -603,7 +603,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StandardAppVersion</code></pre>
 
 
 Returns true if the given object is an instance of StandardAppVersion.  This is designed to work even
@@ -621,7 +621,7 @@ If set to `true`, the service will be deleted if it is the last version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L46">property <b>deployment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionDeployment'>outputs.appengine.StandardAppVersionDeployment</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Code and application artifacts that make up this version.
 
@@ -629,7 +629,7 @@ Code and application artifacts that make up this version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L50">property <b>entrypoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>entrypoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionEntrypoint'>outputs.appengine.StandardAppVersionEntrypoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>entrypoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The entrypoint for the application.
 
@@ -645,7 +645,7 @@ Environment variables available to the application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L59">property <b>handlers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>handlers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionHandler'>outputs.appengine.StandardAppVersionHandler</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>handlers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionHandler'>StandardAppVersionHandler</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles
 the request and other request handlers are not attempted.
@@ -672,7 +672,7 @@ AutomaticScaling is supported at the moment)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L68">property <b>libraries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>libraries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionLibrary'>outputs.appengine.StandardAppVersionLibrary</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>libraries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration for third-party Python runtime libraries that are required by the application.
 
@@ -777,7 +777,7 @@ The domain to authenticate users with when using App Engine's User API.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/application.ts#L235">property <b>featureSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>inputs.appengine.ApplicationFeatureSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
 
 A block of optional settings to configure specific App Engine features:
 
@@ -862,7 +862,7 @@ The default hostname for this app.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/application.ts#L194">property <b>featureSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>inputs.appengine.ApplicationFeatureSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
 
 A block of optional settings to configure specific App Engine features:
 
@@ -913,7 +913,7 @@ The serving status of the app.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/application.ts#L221">property <b>urlDispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlDispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRule'>inputs.appengine.ApplicationUrlDispatchRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlDispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRule'>ApplicationUrlDispatchRule</a>&gt;[]&gt;;</code></pre>
 
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 
@@ -931,7 +931,7 @@ The set of arguments for constructing a ApplicationUrlDispatchRules resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L96">property <b>dispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>inputs.appengine.ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
 
 Rules to match an HTTP request and dispatch that request to a service.
 
@@ -954,7 +954,7 @@ Input properties used for looking up and filtering ApplicationUrlDispatchRules r
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L85">property <b>dispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>inputs.appengine.ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
 
 Rules to match an HTTP request and dispatch that request to a service.
 
@@ -1003,7 +1003,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/domainMapping.ts#L162">property <b>sslSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>inputs.appengine.DomainMappingSslSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>DomainMappingSslSettings</a>&gt;;</code></pre>
 
 SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 
@@ -1055,7 +1055,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/domainMapping.ts#L134">property <b>resourceRecords</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingResourceRecord'>inputs.appengine.DomainMappingResourceRecord</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingResourceRecord'>DomainMappingResourceRecord</a>&gt;[]&gt;;</code></pre>
 
 The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
@@ -1064,7 +1064,7 @@ configuration in order to serve the application via this domain mapping.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/domainMapping.ts#L138">property <b>sslSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>inputs.appengine.DomainMappingSslSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>DomainMappingSslSettings</a>&gt;;</code></pre>
 
 SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 
@@ -1196,7 +1196,7 @@ If set to `true`, the service will be deleted if it is the last version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L246">property <b>deployment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>inputs.appengine.StandardAppVersionDeployment</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a>&gt;;</code></pre>
 
 Code and application artifacts that make up this version.
 
@@ -1204,7 +1204,7 @@ Code and application artifacts that make up this version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L250">property <b>entrypoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>inputs.appengine.StandardAppVersionEntrypoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a>&gt;;</code></pre>
 
 The entrypoint for the application.
 
@@ -1220,7 +1220,7 @@ Environment variables available to the application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L259">property <b>handlers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>inputs.appengine.StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
 
 An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles
 the request and other request handlers are not attempted.
@@ -1238,7 +1238,7 @@ AutomaticScaling is supported at the moment)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L268">property <b>libraries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>inputs.appengine.StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
 
 Configuration for third-party Python runtime libraries that are required by the application.
 
@@ -1323,7 +1323,7 @@ If set to `true`, the service will be deleted if it is the last version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L175">property <b>deployment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>inputs.appengine.StandardAppVersionDeployment</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a>&gt;;</code></pre>
 
 Code and application artifacts that make up this version.
 
@@ -1331,7 +1331,7 @@ Code and application artifacts that make up this version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L179">property <b>entrypoint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>inputs.appengine.StandardAppVersionEntrypoint</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a>&gt;;</code></pre>
 
 The entrypoint for the application.
 
@@ -1347,7 +1347,7 @@ Environment variables available to the application.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L188">property <b>handlers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>inputs.appengine.StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
 
 An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles
 the request and other request handlers are not attempted.
@@ -1365,7 +1365,7 @@ AutomaticScaling is supported at the moment)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/appengine/standardAppVersion.ts#L197">property <b>libraries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>inputs.appengine.StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
 
 Configuration for third-party Python runtime libraries that are required by the application.
 

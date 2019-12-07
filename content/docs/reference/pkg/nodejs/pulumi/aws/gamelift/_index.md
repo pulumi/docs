@@ -104,7 +104,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Alias</code></pre>
 
 
 Returns true if the given object is an instance of Alias.  This is designed to work even
@@ -147,7 +147,7 @@ Name of the alias.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/alias.ts#L71">property <b>routingStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AliasRoutingStrategy'>outputs.gamelift.AliasRoutingStrategy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</code></pre>
 
 Specifies the fleet and/or routing type to use for the alias.
 
@@ -209,7 +209,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Build</code></pre>
 
 
 Returns true if the given object is an instance of Build.  This is designed to work even
@@ -244,7 +244,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/build.ts#L52">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BuildStorageLocation'>outputs.gamelift.BuildStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</code></pre>
 
 Information indicating where your game build files are stored. See below.
 
@@ -332,7 +332,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Fleet</code></pre>
 
 
 Returns true if the given object is an instance of Fleet.  This is designed to work even
@@ -366,7 +366,7 @@ Human-readable description of the fleet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L74">property <b>ec2InboundPermissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ec2InboundPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetEc2InboundPermission'>outputs.gamelift.FleetEc2InboundPermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ec2InboundPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 
@@ -428,7 +428,7 @@ Operating system of the fleet's computing resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L99">property <b>resourceCreationLimitPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceCreationLimitPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetResourceCreationLimitPolicy'>outputs.gamelift.FleetResourceCreationLimitPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceCreationLimitPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 
@@ -436,7 +436,7 @@ Policy that limits the number of game sessions an individual player can create o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L103">property <b>runtimeConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>runtimeConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetRuntimeConfiguration'>outputs.gamelift.FleetRuntimeConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>runtimeConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Instructions for launching server processes on each instance in the fleet. See below.
 
@@ -522,7 +522,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GameSessionQueue</code></pre>
 
 
 Returns true if the given object is an instance of GameSessionQueue.  This is designed to work even
@@ -565,7 +565,7 @@ Name of the session queue.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/gameSessionQueue.ts#L80">property <b>playerLatencyPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>playerLatencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GameSessionQueuePlayerLatencyPolicy'>outputs.gamelift.GameSessionQueuePlayerLatencyPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>playerLatencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more policies used to choose fleet based on player latency. See below.
 
@@ -619,7 +619,7 @@ Name of the alias.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/alias.ts#L147">property <b>routingStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingStrategy'>inputs.gamelift.AliasRoutingStrategy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</code></pre>
 
 Specifies the fleet and/or routing type to use for the alias.
 
@@ -661,7 +661,7 @@ Name of the alias.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/alias.ts#L129">property <b>routingStrategy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingStrategy'>inputs.gamelift.AliasRoutingStrategy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</code></pre>
 
 Specifies the fleet and/or routing type to use for the alias.
 
@@ -695,7 +695,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/build.ts#L135">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BuildStorageLocation'>inputs.gamelift.BuildStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</code></pre>
 
 Information indicating where your game build files are stored. See below.
 
@@ -737,7 +737,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/build.ts#L113">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BuildStorageLocation'>inputs.gamelift.BuildStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</code></pre>
 
 Information indicating where your game build files are stored. See below.
 
@@ -779,7 +779,7 @@ Human-readable description of the fleet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L227">property <b>ec2InboundPermissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetEc2InboundPermission'>inputs.gamelift.FleetEc2InboundPermission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>&gt;[]&gt;;</code></pre>
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 
@@ -819,7 +819,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L247">property <b>resourceCreationLimitPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetResourceCreationLimitPolicy'>inputs.gamelift.FleetResourceCreationLimitPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a>&gt;;</code></pre>
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 
@@ -827,7 +827,7 @@ Policy that limits the number of game sessions an individual player can create o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L251">property <b>runtimeConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetRuntimeConfiguration'>inputs.gamelift.FleetRuntimeConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a>&gt;;</code></pre>
 
 Instructions for launching server processes on each instance in the fleet. See below.
 
@@ -869,7 +869,7 @@ Human-readable description of the fleet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L180">property <b>ec2InboundPermissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetEc2InboundPermission'>inputs.gamelift.FleetEc2InboundPermission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>&gt;[]&gt;;</code></pre>
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 
@@ -922,7 +922,7 @@ Operating system of the fleet's computing resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L205">property <b>resourceCreationLimitPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetResourceCreationLimitPolicy'>inputs.gamelift.FleetResourceCreationLimitPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a>&gt;;</code></pre>
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 
@@ -930,7 +930,7 @@ Policy that limits the number of game sessions an individual player can create o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/fleet.ts#L209">property <b>runtimeConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetRuntimeConfiguration'>inputs.gamelift.FleetRuntimeConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a>&gt;;</code></pre>
 
 Instructions for launching server processes on each instance in the fleet. See below.
 
@@ -964,7 +964,7 @@ Name of the session queue.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/gameSessionQueue.ts#L163">property <b>playerLatencyPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GameSessionQueuePlayerLatencyPolicy'>inputs.gamelift.GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</code></pre>
 
 One or more policies used to choose fleet based on player latency. See below.
 
@@ -1014,7 +1014,7 @@ Name of the session queue.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/gamelift/gameSessionQueue.ts#L141">property <b>playerLatencyPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GameSessionQueuePlayerLatencyPolicy'>inputs.gamelift.GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</code></pre>
 
 One or more policies used to choose fleet based on player latency. See below.
 

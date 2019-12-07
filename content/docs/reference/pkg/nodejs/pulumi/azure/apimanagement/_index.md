@@ -188,7 +188,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Api</code></pre>
 
 
 Returns true if the given object is an instance of Api.  This is designed to work even
@@ -231,7 +231,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L86">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiImport'>outputs.apimanagement.ApiImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiImport'>ApiImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `import` block as documented below.
 
@@ -311,7 +311,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L126">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiSubscriptionKeyParameterNames'>outputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
 
 A `subscriptionKeyParameterNames` block as documented below.
 
@@ -416,7 +416,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiOperation</code></pre>
 
 
 Returns true if the given object is an instance of ApiOperation.  This is designed to work even
@@ -483,7 +483,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L95">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequest'>outputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</code></pre>
 
 A `request` block as defined below.
 
@@ -499,7 +499,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L103">property <b>responses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>responses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponse'>outputs.apimanagement.ApiOperationResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>responses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponse'>ApiOperationResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `response` blocks as defined below.
 
@@ -507,7 +507,7 @@ One or more `response` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L107">property <b>templateParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>templateParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationTemplateParameter'>outputs.apimanagement.ApiOperationTemplateParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>templateParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `templateParameter` blocks as defined below.
 
@@ -598,7 +598,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiOperationPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ApiOperationPolicy.  This is designed to work even
@@ -740,7 +740,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ApiPolicy.  This is designed to work even
@@ -873,7 +873,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiSchema</code></pre>
 
 
 Returns true if the given object is an instance of ApiSchema.  This is designed to work even
@@ -1018,7 +1018,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiVersionSet</code></pre>
 
 
 Returns true if the given object is an instance of ApiVersionSet.  This is designed to work even
@@ -1178,7 +1178,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AuthorizationServer</code></pre>
 
 
 Returns true if the given object is an instance of AuthorizationServer.  This is designed to work even
@@ -1333,7 +1333,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L133">property <b>tokenBodyParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tokenBodyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AuthorizationServerTokenBodyParameter'>outputs.apimanagement.AuthorizationServerTokenBodyParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tokenBodyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServer-tokenEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L137">property <b>tokenEndpoint</b></a>
 </h4>
@@ -1400,7 +1400,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Backend</code></pre>
 
 
 Returns true if the given object is an instance of Backend.  This is designed to work even
@@ -1418,7 +1418,7 @@ The Name of the API Management Service where this backend should be created. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L48">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentials'>outputs.apimanagement.BackendCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentials'>BackendCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `credentials` block as documented below.
 
@@ -1459,7 +1459,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L64">property <b>proxy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>proxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendProxy'>outputs.apimanagement.BackendProxy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>proxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendProxy'>BackendProxy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `proxy` block as documented below.
 
@@ -1483,7 +1483,7 @@ The management URI of the backend host in an external system. This URI can be th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L76">property <b>serviceFabricCluster</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serviceFabricCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricCluster'>outputs.apimanagement.BackendServiceFabricCluster</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serviceFabricCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricCluster'>BackendServiceFabricCluster</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `serviceFabricCluster` block as documented below.
 
@@ -1499,7 +1499,7 @@ The title of the backend.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L84">property <b>tls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendTls'>outputs.apimanagement.BackendTls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendTls'>BackendTls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `tls` block as documented below.
 
@@ -1569,7 +1569,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Certificate</code></pre>
 
 
 Returns true if the given object is an instance of Certificate.  This is designed to work even
@@ -1730,7 +1730,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -1878,7 +1878,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GroupUser</code></pre>
 
 
 Returns true if the given object is an instance of GroupUser.  This is designed to work even
@@ -2013,7 +2013,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Logger</code></pre>
 
 
 Returns true if the given object is an instance of Logger.  This is designed to work even
@@ -2031,7 +2031,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L79">property <b>applicationInsights</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>applicationInsights: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerApplicationInsights'>outputs.apimanagement.LoggerApplicationInsights</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>applicationInsights: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerApplicationInsights'>LoggerApplicationInsights</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `applicationInsights` block as documented below.
 
@@ -2055,7 +2055,7 @@ A description of this Logger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L91">property <b>eventhub</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventhub: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerEventhub'>outputs.apimanagement.LoggerEventhub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventhub: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerEventhub'>LoggerEventhub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `eventhub` block as documented below.
 
@@ -2167,7 +2167,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OpenIdConnectProvider</code></pre>
 
 
 Returns true if the given object is an instance of OpenIdConnectProvider.  This is designed to work even
@@ -2331,7 +2331,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Product</code></pre>
 
 
 Returns true if the given object is an instance of Product.  This is designed to work even
@@ -2513,7 +2513,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProductApi</code></pre>
 
 
 Returns true if the given object is an instance of ProductApi.  This is designed to work even
@@ -2646,7 +2646,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProductGroup</code></pre>
 
 
 Returns true if the given object is an instance of ProductGroup.  This is designed to work even
@@ -2775,7 +2775,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProductPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ProductPolicy.  This is designed to work even
@@ -2912,7 +2912,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Property</code></pre>
 
 
 Returns true if the given object is an instance of Property.  This is designed to work even
@@ -3068,7 +3068,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -3078,7 +3078,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L71">property <b>additionalLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocation'>outputs.apimanagement.ServiceAdditionalLocation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocation'>ServiceAdditionalLocation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `additionalLocation` blocks as defined below.
 
@@ -3086,7 +3086,7 @@ One or more `additionalLocation` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L75">property <b>certificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCertificate'>outputs.apimanagement.ServiceCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCertificate'>ServiceCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more (up to 10) `certificate` blocks as defined below.
 
@@ -3110,7 +3110,7 @@ The URL of the Gateway for the API Management Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L87">property <b>hostnameConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hostnameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfiguration'>outputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hostnameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</code></pre>
 
 A `hostnameConfiguration` block as defined below.
 
@@ -3127,7 +3127,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L91">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceIdentity'>outputs.apimanagement.ServiceIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceIdentity'>ServiceIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `identity` block is documented below.
 
@@ -3167,7 +3167,7 @@ Email address from which the notification will be sent.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L111">property <b>policy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServicePolicy'>outputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServicePolicy'>ServicePolicy</a>&gt;;</code></pre>
 
 A `policy` block as defined below.
 
@@ -3223,7 +3223,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L139">property <b>security</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>security: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSecurity'>outputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>security: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSecurity'>ServiceSecurity</a>&gt;;</code></pre>
 
 A `security` block as defined below.
 
@@ -3231,7 +3231,7 @@ A `security` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L143">property <b>signIn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>signIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignIn'>outputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>signIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignIn'>ServiceSignIn</a>&gt;;</code></pre>
 
 A `signIn` block as defined below.
 
@@ -3239,7 +3239,7 @@ A `signIn` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L147">property <b>signUp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>signUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUp'>outputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>signUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUp'>ServiceSignUp</a>&gt;;</code></pre>
 
 A `signUp` block as defined below.
 
@@ -3247,7 +3247,7 @@ A `signUp` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L151">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSku'>outputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSku'>ServiceSku</a>&gt;;</code></pre>
 
 A `sku` block as documented below
 
@@ -3354,7 +3354,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subscription</code></pre>
 
 
 Returns true if the given object is an instance of Subscription.  This is designed to work even
@@ -3520,7 +3520,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -3811,7 +3811,7 @@ The display name of the API.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L301">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>ApiImport</a>&gt;;</code></pre>
 
 A `import` block as documented below.
 
@@ -3875,7 +3875,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L333">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
 
 A `subscriptionKeyParameterNames` block as documented below.
 
@@ -3957,7 +3957,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L263">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</code></pre>
 
 A `request` block as defined below.
 
@@ -3973,7 +3973,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L271">property <b>responses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
 
 One or more `response` blocks as defined below.
 
@@ -3981,7 +3981,7 @@ One or more `response` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L275">property <b>templateParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
 
 One or more `templateParameter` blocks as defined below.
 
@@ -4165,7 +4165,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L213">property <b>request</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</code></pre>
 
 A `request` block as defined below.
 
@@ -4181,7 +4181,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L221">property <b>responses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
 
 One or more `response` blocks as defined below.
 
@@ -4189,7 +4189,7 @@ One or more `response` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/apiOperation.ts#L225">property <b>templateParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
 
 One or more `templateParameter` blocks as defined below.
 
@@ -4449,7 +4449,7 @@ The display name of the API.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L231">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>ApiImport</a>&gt;;</code></pre>
 
 A `import` block as documented below.
 
@@ -4529,7 +4529,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/api.ts#L271">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
 
 A `subscriptionKeyParameterNames` block as documented below.
 
@@ -4847,7 +4847,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L378">property <b>tokenBodyParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-tokenEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L382">property <b>tokenEndpoint</b></a>
 </h4>
@@ -5006,7 +5006,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L299">property <b>tokenBodyParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServerState-tokenEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/authorizationServer.ts#L303">property <b>tokenEndpoint</b></a>
 </h4>
@@ -5037,7 +5037,7 @@ The Name of the API Management Service where this backend should be created. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L217">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>BackendCredentials</a>&gt;;</code></pre>
 
 A `credentials` block as documented below.
 
@@ -5069,7 +5069,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L233">property <b>proxy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>BackendProxy</a>&gt;;</code></pre>
 
 A `proxy` block as documented below.
 
@@ -5093,7 +5093,7 @@ The management URI of the backend host in an external system. This URI can be th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L245">property <b>serviceFabricCluster</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>BackendServiceFabricCluster</a>&gt;;</code></pre>
 
 A `serviceFabricCluster` block as documented below.
 
@@ -5109,7 +5109,7 @@ The title of the backend.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L253">property <b>tls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>BackendTls</a>&gt;;</code></pre>
 
 A `tls` block as documented below.
 
@@ -5143,7 +5143,7 @@ The Name of the API Management Service where this backend should be created. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L163">property <b>credentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>BackendCredentials</a>&gt;;</code></pre>
 
 A `credentials` block as documented below.
 
@@ -5175,7 +5175,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L179">property <b>proxy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>BackendProxy</a>&gt;;</code></pre>
 
 A `proxy` block as documented below.
 
@@ -5199,7 +5199,7 @@ The management URI of the backend host in an external system. This URI can be th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L191">property <b>serviceFabricCluster</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>BackendServiceFabricCluster</a>&gt;;</code></pre>
 
 A `serviceFabricCluster` block as documented below.
 
@@ -5215,7 +5215,7 @@ The title of the backend.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/backend.ts#L199">property <b>tls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>BackendTls</a>&gt;;</code></pre>
 
 A `tls` block as documented below.
 
@@ -5499,7 +5499,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend?
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/getApi.ts#L113">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetApiSubscriptionKeyParameterName'>outputs.apimanagement.GetApiSubscriptionKeyParameterName</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetApiSubscriptionKeyParameterName'>GetApiSubscriptionKeyParameterName</a>[];</code></pre>
 
 A `subscriptionKeyParameterNames` block as documented below.
 
@@ -5781,7 +5781,7 @@ A collection of values returned by getService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/getService.ts#L65">property <b>additionalLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation'>outputs.apimanagement.GetServiceAdditionalLocation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation'>GetServiceAdditionalLocation</a>[];</code></pre>
 
 One or more `additionalLocation` blocks as defined below
 
@@ -5805,7 +5805,7 @@ The URL for the API Management Service's Gateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/getService.ts#L77">property <b>hostnameConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostnameConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration'>outputs.apimanagement.GetServiceHostnameConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostnameConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration'>GetServiceHostnameConfiguration</a>[];</code></pre>
 
 A `hostnameConfiguration` block as defined below.
 
@@ -5898,7 +5898,7 @@ The SCM (Source Code Management) endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/getService.ts#L118">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceSku'>outputs.apimanagement.GetServiceSku</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceSku'>GetServiceSku</a>;</code></pre>
 
 A `sku` block as documented below.
 
@@ -6260,7 +6260,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L192">property <b>applicationInsights</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>LoggerApplicationInsights</a>&gt;;</code></pre>
 
 An `applicationInsights` block as documented below.
 
@@ -6284,7 +6284,7 @@ A description of this Logger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L204">property <b>eventhub</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>LoggerEventhub</a>&gt;;</code></pre>
 
 An `eventhub` block as documented below.
 
@@ -6326,7 +6326,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L158">property <b>applicationInsights</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>LoggerApplicationInsights</a>&gt;;</code></pre>
 
 An `applicationInsights` block as documented below.
 
@@ -6350,7 +6350,7 @@ A description of this Logger.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/logger.ts#L170">property <b>eventhub</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>LoggerEventhub</a>&gt;;</code></pre>
 
 An `eventhub` block as documented below.
 
@@ -7112,7 +7112,7 @@ The set of arguments for constructing a Service resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L347">property <b>additionalLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
 
 One or more `additionalLocation` blocks as defined below.
 
@@ -7120,7 +7120,7 @@ One or more `additionalLocation` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L351">property <b>certificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>ServiceCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more (up to 10) `certificate` blocks as defined below.
 
@@ -7128,7 +7128,7 @@ One or more (up to 10) `certificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L355">property <b>hostnameConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</code></pre>
 
 A `hostnameConfiguration` block as defined below.
 
@@ -7136,7 +7136,7 @@ A `hostnameConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L359">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>ServiceIdentity</a>&gt;;</code></pre>
 
 An `identity` block is documented below.
 
@@ -7168,7 +7168,7 @@ Email address from which the notification will be sent.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L375">property <b>policy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>ServicePolicy</a>&gt;;</code></pre>
 
 A `policy` block as defined below.
 
@@ -7200,7 +7200,7 @@ The name of the Resource Group in which the API Management Service should be exi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L391">property <b>security</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>ServiceSecurity</a>&gt;;</code></pre>
 
 A `security` block as defined below.
 
@@ -7208,7 +7208,7 @@ A `security` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L395">property <b>signIn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>ServiceSignIn</a>&gt;;</code></pre>
 
 A `signIn` block as defined below.
 
@@ -7216,7 +7216,7 @@ A `signIn` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L399">property <b>signUp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>ServiceSignUp</a>&gt;;</code></pre>
 
 A `signUp` block as defined below.
 
@@ -7224,7 +7224,7 @@ A `signUp` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L403">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>ServiceSku</a>&gt;;</code></pre>
 
 A `sku` block as documented below
 
@@ -7258,7 +7258,7 @@ Input properties used for looking up and filtering Service resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L249">property <b>additionalLocations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
 
 One or more `additionalLocation` blocks as defined below.
 
@@ -7266,7 +7266,7 @@ One or more `additionalLocation` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L253">property <b>certificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>ServiceCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more (up to 10) `certificate` blocks as defined below.
 
@@ -7290,7 +7290,7 @@ The URL of the Gateway for the API Management Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L265">property <b>hostnameConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</code></pre>
 
 A `hostnameConfiguration` block as defined below.
 
@@ -7298,7 +7298,7 @@ A `hostnameConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L269">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>ServiceIdentity</a>&gt;;</code></pre>
 
 An `identity` block is documented below.
 
@@ -7338,7 +7338,7 @@ Email address from which the notification will be sent.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L289">property <b>policy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>ServicePolicy</a>&gt;;</code></pre>
 
 A `policy` block as defined below.
 
@@ -7394,7 +7394,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L317">property <b>security</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>ServiceSecurity</a>&gt;;</code></pre>
 
 A `security` block as defined below.
 
@@ -7402,7 +7402,7 @@ A `security` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L321">property <b>signIn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>ServiceSignIn</a>&gt;;</code></pre>
 
 A `signIn` block as defined below.
 
@@ -7410,7 +7410,7 @@ A `signIn` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L325">property <b>signUp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>ServiceSignUp</a>&gt;;</code></pre>
 
 A `signUp` block as defined below.
 
@@ -7418,7 +7418,7 @@ A `signUp` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/apimanagement/service.ts#L329">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>ServiceSku</a>&gt;;</code></pre>
 
 A `sku` block as documented below
 

@@ -216,7 +216,7 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/lb/).
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CoreMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CoreMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="CoreMetricChange-availabilityZone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L43">property <b>availabilityZone</b></a>
 </h4>
@@ -271,7 +271,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L31">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a> | <a href='#LoadBalancer'>LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a> | <a href='#LoadBalancer'>LoadBalancer</a>;</code></pre>
 
 Filters the metric data by load balancer.
 
@@ -289,7 +289,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -299,7 +299,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L38">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a> | <a href='#TargetGroup'>TargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a> | <a href='#TargetGroup'>TargetGroup</a>;</code></pre>
 
 Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 [loadBalancer] does not have to be provided.  If this is an
@@ -309,7 +309,7 @@ Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -353,7 +353,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>activeConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>activeConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of concurrent TCP connections active from clients to the load balancer
@@ -377,7 +377,7 @@ Dimensions LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of TLS connections initiated by the client that did not establish a session
@@ -395,7 +395,7 @@ Dimensions: AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of load balancer capacity units (LCU) used by your load balancer. You pay for
@@ -412,7 +412,7 @@ Dimensions: LoadBalancer
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticLoadBalancingV2MetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticLoadBalancingV2MetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="ElasticLoadBalancingV2MetricChange-availabilityZone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L130">property <b>availabilityZone</b></a>
 </h4>
@@ -467,7 +467,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L118">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a> | <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a> | <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</code></pre>
 
 Filters the metric data by load balancer.
 
@@ -485,7 +485,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -495,7 +495,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L125">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a> | <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a> | <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a>;</code></pre>
 
 Filters the metric data by target group.  If this is an [ApplicationTargetGroup] then
 [loadBalancer] does not have to be provided.  If this is an
@@ -505,7 +505,7 @@ Filters the metric data by target group.  If this is an [ApplicationTargetGroup]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -539,7 +539,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of targets that are considered healthy. Reporting criteria: Reported if health
@@ -557,7 +557,7 @@ LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 3XX redirection codes that originate from the load balancer. Reporting
@@ -574,7 +574,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 4XX client error codes that originate from the load balancer. Client
@@ -594,7 +594,7 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB500Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB500Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 500 error codes that originate from the load balancer.
@@ -610,7 +610,7 @@ Statistics: The only meaningful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB502Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB502Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 502 error codes that originate from the load balancer. Reporting
@@ -625,7 +625,7 @@ Statistics: The only meaningful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB503Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB503Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 503 error codes that originate from the load balancer. Reporting
@@ -640,7 +640,7 @@ Statistics: The only meaningful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB504Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB504Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 504 error codes that originate from the load balancer. Reporting
@@ -655,7 +655,7 @@ Statistics: The only meaningful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeELB5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeELB5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP 5XX server error codes that originate from the load balancer. This
@@ -674,7 +674,7 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeTarget2XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeTarget2XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP response codes generated by the targets. This does not include any
@@ -694,7 +694,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeTarget3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeTarget3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP response codes generated by the targets. This does not include any
@@ -714,7 +714,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeTarget4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeTarget4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP response codes generated by the targets. This does not include any
@@ -734,7 +734,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpCodeTarget5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCodeTarget5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of HTTP response codes generated by the targets. This does not include any
@@ -754,7 +754,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpFixedResponseCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpFixedResponseCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of fixed-response actions that were successful. Reporting criteria: There is a
@@ -771,7 +771,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpRedirectCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpRedirectCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of redirect actions that were successful. Reporting criteria: There is a
@@ -788,7 +788,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>httpRedirectUrlLimitExceededCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpRedirectUrlLimitExceededCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of redirect actions that couldn't be completed because the URL in the response
@@ -805,7 +805,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ipv6ProcessedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipv6ProcessedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of bytes processed by the load balancer over IPv6. Reporting criteria:
@@ -822,7 +822,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ipv6RequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipv6RequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of IPv6 requests received by the load balancer. Reporting criteria: There is a
@@ -841,7 +841,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#ApplicationMetricName'>ApplicationMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#ApplicationMetricName'>ApplicationMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/ApplicationELB metric with the requested [metricName]. See
@@ -881,7 +881,7 @@ To filter the metrics for your Application Load Balancer, use the following dime
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>newConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>newConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of new TCP connections established from clients to the load balancer and
@@ -898,7 +898,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>nonStickyRequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>nonStickyRequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of requests where the load balancer chose a new target because it couldn't use
@@ -918,7 +918,7 @@ Statistics: The only meaningful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of bytes processed by the load balancer over IPv4 and IPv6. Reporting
@@ -935,7 +935,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>rejectedConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>rejectedConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of connections that were rejected because the load balancer had reached its
@@ -952,7 +952,7 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>requestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>requestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of requests processed over IPv4 and IPv6. This count includes only the
@@ -971,7 +971,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>requestCountPerTarget(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>requestCountPerTarget(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of requests received by each target in a target group. You must
@@ -990,7 +990,7 @@ Dimensions: TargetGroup TargetGroup, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ruleEvaluations(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ruleEvaluations(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of rules processed by the load balancer given a request rate averaged over an
@@ -1007,7 +1007,7 @@ Dimensions: LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>targetConnectionErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetConnectionErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of connections that were not successfully established between the load
@@ -1026,7 +1026,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>targetResponseTime(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetResponseTime(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The time elapsed, in seconds, after the request leaves the load balancer until a response
@@ -1045,7 +1045,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of TLS connections initiated by the load balancer that did not establish a
@@ -1065,7 +1065,7 @@ TargetGroup, AvailabilityZone, LoadBalancer
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>unHealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>unHealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of targets that are considered unhealthy. Reporting criteria: Reported if
@@ -1083,7 +1083,7 @@ Dimensions: TargetGroup, LoadBalancer TargetGroup, AvailabilityZone, LoadBalance
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>activeFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>activeFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of concurrent flows (or connections) from clients to targets. This
@@ -1100,7 +1100,7 @@ Statistics: The most useful statistics are Average, Maximum, and Minimum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>activeFlowCount_TLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>activeFlowCount_TLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of concurrent TLS flows (or connections) from clients to targets. This
@@ -1115,7 +1115,7 @@ Statistics: The most useful statistics are Average, Maximum, and Minimum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of TLS handshakes that failed during negotiation between a client and a
@@ -1130,7 +1130,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of load balancer capacity units (LCU) used by your load balancer. You pay for
@@ -1143,7 +1143,7 @@ Balancing Pricing.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticLoadBalancingV2MetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticLoadBalancingV2MetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="ElasticLoadBalancingV2MetricChange-availabilityZone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L609">property <b>availabilityZone</b></a>
 </h4>
@@ -1198,7 +1198,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L597">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a> | <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a> | <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</code></pre>
 
 Filters the metric data by load balancer.
 
@@ -1216,7 +1216,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -1226,7 +1226,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/metrics.ts#L604">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a> | <a href='#NetworkTargetGroup'>NetworkTargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a> | <a href='#NetworkTargetGroup'>NetworkTargetGroup</a>;</code></pre>
 
 Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 [loadBalancer] does not have to be provided.  If this is an
@@ -1236,7 +1236,7 @@ Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -1270,7 +1270,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of targets that are considered healthy.
@@ -1284,7 +1284,7 @@ Statistics: The most useful statistics are Maximum and Minimum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#NetworkMetricName'>NetworkMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#NetworkMetricName'>NetworkMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/NetworkELB metric with the requested [metricName]. See
@@ -1331,7 +1331,7 @@ To filter the metrics for your Application Load Balancer, use the following dime
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>newFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>newFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of new flows (or connections) established from clients to targets in the
@@ -1346,7 +1346,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>newFlowCountTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>newFlowCountTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of new TLS flows (or connections) established from clients to targets in
@@ -1361,7 +1361,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of bytes processed by the load balancer, including TCP/IP headers.
@@ -1375,7 +1375,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>processedBytesTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>processedBytesTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of bytes processed by TLS listeners.
@@ -1389,7 +1389,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of TLS handshakes that failed during negotiation between a TLS listener
@@ -1404,7 +1404,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>tcpClientResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpClientResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of reset (RST) packets sent from a client to a target. These resets are
@@ -1419,7 +1419,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>tcpELBResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpELBResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of reset (RST) packets generated by the load balancer.
@@ -1433,7 +1433,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>tcpTargetResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpTargetResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total number of reset (RST) packets sent from a target to a client. These resets are
@@ -1448,7 +1448,7 @@ Statistics: The most useful statistic is Sum.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>unhealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>unhealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of targets that are considered unhealthy.
@@ -1463,27 +1463,27 @@ Statistics: The most useful statistics are Maximum and Minimum.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></code></pre>
 <h4 class="pdoc-member-header" id="Listener-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Listener(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, defaultListenerAction: <a href='#ListenerDefaultAction'>ListenerDefaultAction</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, args: <a href='#ListenerArgs'>ListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Listener(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, defaultListenerAction: <a href='#ListenerDefaultAction'>ListenerDefaultAction</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, args: <a href='#ListenerArgs'>ListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-addListenerRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L110">method <b>addListenerRule</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerRuleArgs'>x.lb.ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L117">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
@@ -1493,14 +1493,14 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L94">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;PortMapping&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L29">method <b>getProvider</b></a>
@@ -1514,7 +1514,7 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1541,12 +1541,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L33">property <b>listener</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>aws.lb.Listener</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>Listener</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L34">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancer'>x.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L29">property <b>urn</b></a>
 </h4>
@@ -1576,7 +1576,7 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-upd
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, listener: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, listener: <a href='#Listener'>Listener</a>, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ListenerRule-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listenerRule.ts#L31">method <b>getProvider</b></a>
@@ -1590,7 +1590,7 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-upd
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1607,7 +1607,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listenerRule.ts#L32">property <b>listenerRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listenerRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#ListenerRule'>aws.lb.ListenerRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listenerRule: ListenerRule;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerRule-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listenerRule.ts#L31">property <b>urn</b></a>
 </h4>
@@ -1636,7 +1636,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
@@ -1655,7 +1655,7 @@ on it.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1672,22 +1672,22 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L27">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>mod.Listener</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='#Listener'>Listener</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L23">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-securityGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L25">property <b>securityGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>SecurityGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-targetGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L28">property <b>targetGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#TargetGroup'>mod.TargetGroup</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetGroups: <a href='#TargetGroup'>TargetGroup</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L22">property <b>urn</b></a>
 </h4>
@@ -1701,27 +1701,27 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L24">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="TargetGroup" data-link-title="TargetGroup">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L24">
         Resource <strong>TargetGroup</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
 <h4 class="pdoc-member-header" id="TargetGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L34"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TargetGroup(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancer'>mod.LoadBalancer</a>, args: <a href='#TargetGroupArgs'>TargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TargetGroup(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, loadBalancer: <a href='#LoadBalancer'>LoadBalancer</a>, args: <a href='#TargetGroupArgs'>TargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TargetGroup-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L108">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to this target group.  See
@@ -1733,14 +1733,14 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>x.ecs.ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="TargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L78">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>aws.ecs.PortMapping</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="TargetGroup-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L24">method <b>getProvider</b></a>
@@ -1754,7 +1754,7 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1765,14 +1765,14 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="TargetGroup-registerListener">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L99">method <b>registerListener</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='#Listener'>Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
@@ -1788,17 +1788,17 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L34">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='#Listener'>Listener</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="TargetGroup-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L30">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancer'>mod.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TargetGroup-targetGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L31">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TargetGroup-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L24">property <b>urn</b></a>
 </h4>
@@ -1812,7 +1812,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L32">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="TargetGroupAttachment" data-link-title="TargetGroupAttachment">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroupAttachment.ts#L22">
         Resource <strong>TargetGroupAttachment</strong>
@@ -1825,7 +1825,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TargetGroupAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#TargetGroup'>mod.TargetGroup</a>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TargetGroupAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, targetGroup: <a href='#TargetGroup'>TargetGroup</a>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TargetGroupAttachment-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroupAttachment.ts#L22">method <b>getProvider</b></a>
@@ -1839,7 +1839,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1866,7 +1866,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroupAttachment.ts#L23">property <b>targetGroupAttachment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetGroupAttachment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroupAttachment'>aws.lb.TargetGroupAttachment</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetGroupAttachment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroupAttachment'>TargetGroupAttachment</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TargetGroupAttachment-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroupAttachment.ts#L22">property <b>urn</b></a>
 </h4>
@@ -1885,27 +1885,27 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></code></pre>
 <h4 class="pdoc-member-header" id="ApplicationListener-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L187"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationListener-addListenerRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L110">method <b>addListenerRule</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerRuleArgs'>x.lb.ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationListener-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L117">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
@@ -1915,14 +1915,14 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationListener-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L94">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;PortMapping&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationListener-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L182">method <b>getProvider</b></a>
@@ -1936,7 +1936,7 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1963,7 +1963,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L33">property <b>listener</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>aws.lb.Listener</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>Listener</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationListener-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L183">property <b>loadBalancer</b></a>
 </h4>
@@ -2000,7 +2000,7 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L528">property <b>defaultAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultAction'>x.lb.ListenerDefaultAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt; | <a href='#ListenerDefaultAction'>ListenerDefaultAction</a>;</code></pre>
 
 An Action block. If neither this nor [defaultActions] is provided, a suitable defaultAction
 will be chosen that forwards to a new [ApplicationTargetGroup] created from [port].
@@ -2011,7 +2011,7 @@ Only provide one of [defaultAction], [defaultActions] or [targetGroup]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L537">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;[]&gt;;</code></pre>
 
 An list of Action blocks. If neither this nor [defaultActions] is provided, a suitable
 defaultAction will be chosen that forwards to a new [ApplicationTargetGroup] created from
@@ -2085,7 +2085,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L545">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationTargetGroup'>x.lb.ApplicationTargetGroup</a> | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationTargetGroupArgs'>x.lb.ApplicationTargetGroupArgs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a> | <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>;</code></pre>
 
 Target group this listener is associated with.  This is used to determine the [defaultAction]
 for the listener.
@@ -2122,14 +2122,14 @@ more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationLoadBalancerArgs'>ApplicationLoadBalancerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationLoadBalancerArgs'>ApplicationLoadBalancerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationLoadBalancer-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L59">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
@@ -2141,7 +2141,7 @@ on it.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></code></pre>
 
 
 Creates a new listener for this [ApplicationLoadBalancer] see ApplicationListener for more
@@ -2152,7 +2152,7 @@ details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a></code></pre>
 
 
 Creates a target group for this [ApplicationLoadBalancer] see ApplicationTargetGroup for more
@@ -2170,7 +2170,7 @@ details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -2192,12 +2192,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L23">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationLoadBalancer-securityGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L25">property <b>securityGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>SecurityGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationLoadBalancer-targetGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L38">property <b>targetGroups</b></a>
 </h4>
@@ -2216,7 +2216,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L24">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ApplicationLoadBalancerArgs" data-link-title="ApplicationLoadBalancerArgs">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L305">
         interface <strong>ApplicationLoadBalancerArgs</strong>
@@ -2308,7 +2308,7 @@ A subnet mapping block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L350">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerSubnets'>x.lb.LoadBalancerSubnets</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='#LoadBalancerSubnets'>LoadBalancerSubnets</a>;</code></pre>
 
 A list of subnet IDs to attach to the LB. Subnets cannot be updated for Load Balancers of
 type `network`. Changing this value for load balancers of type `network` will force a
@@ -2318,7 +2318,7 @@ recreation of the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L355">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -2344,7 +2344,7 @@ unspecified.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
 
 Each target group routes requests to one or more registered targets, such as EC2 instances, using
 the protocol and port number that you specify. You can register a target with multiple target
@@ -2357,14 +2357,14 @@ balancer.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ApplicationTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L108">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to this target group.  See
@@ -2376,21 +2376,21 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>x.ecs.ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L78">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>aws.ecs.PortMapping</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-createListener">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L126">method <b>createListener</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L93">method <b>getProvider</b></a>
@@ -2404,21 +2404,21 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationTargetGroup</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-listenerDefaultAction">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L91">method <b>listenerDefaultAction</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-registerListener">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L99">method <b>registerListener</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='#Listener'>Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
@@ -2434,7 +2434,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L96">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='#ApplicationListener'>ApplicationListener</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L94">property <b>loadBalancer</b></a>
 </h4>
@@ -2444,7 +2444,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L31">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationTargetGroup-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L93">property <b>urn</b></a>
 </h4>
@@ -2458,7 +2458,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L32">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ApplicationTargetGroupArgs" data-link-title="ApplicationTargetGroupArgs">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L409">
         interface <strong>ApplicationTargetGroupArgs</strong>
@@ -2552,7 +2552,7 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/application.ts#L465">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -2674,7 +2674,7 @@ unhealthy. Defaults to 3.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>isLoadBalancerTargetInfoProvider(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isLoadBalancerTargetInfoProvider(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancerTargetInfoProvider</code></pre>
 
 <h3 class="pdoc-module-header" id="ListenerActions" data-link-title="ListenerActions">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L290">
@@ -2727,7 +2727,7 @@ An list of Action blocks. See [ListenerDefaultActionArgs] for more information.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L320">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancer'>x.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer: <a href='#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerArgs-port">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L338">property <b>port</b></a>
 </h4>
@@ -2892,7 +2892,7 @@ The type of routing action. Valid values are "forward", "redirect", "fixed-respo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listenerRule.ts#L75">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerActions'>x.lb.ListenerActions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ListenerRuleAction&gt;[]&gt; | <a href='#ListenerActions'>ListenerActions</a>;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -2994,7 +2994,7 @@ internal subnets of the [network] will be used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L146">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -3027,7 +3027,7 @@ unspecified.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> LoadBalancerTarget = <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerTargetInfo'>LoadBalancerTargetInfo</a>&gt; | <a href='#LoadBalancerTargetInfoProvider'>LoadBalancerTargetInfoProvider</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Instance'>aws.ec2.Instance</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventHandler'>aws.lambda.EventHandler</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#Request'>x.apigateway.Request</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#Response'>x.apigateway.Response</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> LoadBalancerTarget = <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerTargetInfo'>LoadBalancerTargetInfo</a>&gt; | <a href='#LoadBalancerTargetInfoProvider'>LoadBalancerTargetInfoProvider</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Instance'>Instance</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventHandler'>aws.lambda.EventHandler</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#Request'>x.apigateway.Request</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#Response'>x.apigateway.Response</a>&gt;;</code></pre>
 
 The types of things that can be the target of a load balancer.
 
@@ -3086,7 +3086,7 @@ ECS container. If the target type is `ip`, specify an IP address. If the target 
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#IntegrationRouteTargetProvider'>IntegrationRouteTargetProvider</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#IntegrationRouteTargetProvider'>IntegrationRouteTargetProvider</a></code></pre>
 
 A listener is a process that checks for connection requests, using the protocol and port that you
 configure. The rules that you define for a listener determine how the load balancer routes
@@ -3100,21 +3100,21 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> NetworkListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> NetworkListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkListener-addListenerRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L110">method <b>addListenerRule</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerRuleArgs'>x.lb.ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkListener-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L117">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
@@ -3124,14 +3124,14 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkListener-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L94">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;PortMapping&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkListener-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L122">method <b>getProvider</b></a>
@@ -3145,7 +3145,7 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -3163,7 +3163,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#IntegrationTarget'>x.apigateway.IntegrationTarget</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#IntegrationTarget'>IntegrationTarget</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkListener-defaultTargetGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L127">property <b>defaultTargetGroup</b></a>
@@ -3179,7 +3179,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/listener.ts#L33">property <b>listener</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>aws.lb.Listener</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listener: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#Listener'>Listener</a>;</code></pre>
 <h4 class="pdoc-member-header" id="NetworkListener-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L126">property <b>loadBalancer</b></a>
 </h4>
@@ -3216,7 +3216,7 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L448">property <b>defaultAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultAction'>x.lb.ListenerDefaultAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt; | <a href='#ListenerDefaultAction'>ListenerDefaultAction</a>;</code></pre>
 
 An Action block. If neither this nor [defaultActions] is provided, a suitable defaultAction
 will be chosen that forwards to a new [NetworkTargetGroup] created from [port].
@@ -3227,7 +3227,7 @@ Only provide one of [defaultAction], [defaultActions] or [targetGroup]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L457">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;[]&gt;;</code></pre>
 
 An list of Action blocks. If neither this nor [defaultAction] is provided, a suitable
 defaultAction will be chosen that forwards to a new [NetworkTargetGroup] created from
@@ -3282,7 +3282,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L465">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkTargetGroup'>x.lb.NetworkTargetGroup</a> | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkTargetGroupArgs'>x.lb.NetworkTargetGroupArgs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetGroup?: <a href='#NetworkTargetGroup'>NetworkTargetGroup</a> | <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>;</code></pre>
 
 Target group this listener is associated with.  This is used to determine the [defaultAction]
 for the listener.
@@ -3317,7 +3317,7 @@ unspecified.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
@@ -3329,14 +3329,14 @@ on it.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkLoadBalancer-createTargetGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L53">method <b>createTargetGroup</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkTargetGroup'>NetworkTargetGroup</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#NetworkTargetGroup'>NetworkTargetGroup</a></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkLoadBalancer-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L27">method <b>getProvider</b></a>
@@ -3350,7 +3350,7 @@ on it.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -3372,12 +3372,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L23">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="NetworkLoadBalancer-securityGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L25">property <b>securityGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>SecurityGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="NetworkLoadBalancer-targetGroups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L29">property <b>targetGroups</b></a>
 </h4>
@@ -3396,7 +3396,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/loadBalancer.ts#L24">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="NetworkLoadBalancerArgs" data-link-title="NetworkLoadBalancerArgs">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L234">
         interface <strong>NetworkLoadBalancerArgs</strong>
@@ -3462,7 +3462,7 @@ A subnet mapping block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L279">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerSubnets'>x.lb.LoadBalancerSubnets</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='#LoadBalancerSubnets'>LoadBalancerSubnets</a>;</code></pre>
 
 A list of subnet IDs to attach to the LB. Subnets cannot be updated for Load Balancers of
 type `network`. Changing this value for load balancers of type `network` will force a
@@ -3472,7 +3472,7 @@ recreation of the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L284">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -3498,7 +3498,7 @@ unspecified.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></code></pre>
 
 Each target group is used to route requests to one or more registered targets. When you create
 each listener rule, you specify a target group and conditions. When a rule condition is met,
@@ -3521,14 +3521,14 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> NetworkTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> NetworkTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-attachTarget">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L108">method <b>attachTarget</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#LoadBalancerTarget'>mod.LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></code></pre>
 
 
 Attaches a target to this target group.  See
@@ -3540,21 +3540,21 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>x.ecs.ContainerLoadBalancer</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L78">method <b>containerPortMapping</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>aws.ecs.PortMapping</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>PortMapping</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-createListener">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L104">method <b>createListener</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L78">method <b>getProvider</b></a>
@@ -3568,7 +3568,7 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -3579,14 +3579,14 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ListenerDefaultActionArgs'>mod.ListenerDefaultActionArgs</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-registerListener">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L99">method <b>registerListener</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>registerListener(listener: <a href='#Listener'>Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
@@ -3602,7 +3602,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L81">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='#NetworkListener'>NetworkListener</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-loadBalancer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L79">property <b>loadBalancer</b></a>
 </h4>
@@ -3612,7 +3612,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L31">property <b>targetGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>aws.lb.TargetGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#TargetGroup'>TargetGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="NetworkTargetGroup-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L78">property <b>urn</b></a>
 </h4>
@@ -3626,7 +3626,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L32">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="NetworkTargetGroupArgs" data-link-title="NetworkTargetGroupArgs">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L328">
         interface <strong>NetworkTargetGroupArgs</strong>
@@ -3721,7 +3721,7 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/network.ts#L396">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -3921,7 +3921,7 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L233">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -3944,7 +3944,7 @@ publicly routable IP addresses.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/lb/targetGroup.ts#L180">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>Vpc</a>;</code></pre>
 
 The vpc for this target group.
 

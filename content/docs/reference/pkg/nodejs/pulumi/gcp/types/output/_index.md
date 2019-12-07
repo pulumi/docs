@@ -711,7 +711,7 @@ meta_desc: "Explore members of the output module in the @pulumi/gcp package."
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L11">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelBasicCondition'>outputs.accesscontextmanager.AccessLevelBasicCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='#AccessLevelBasicCondition'>AccessLevelBasicCondition</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="AccessLevelBasicCondition" data-link-title="AccessLevelBasicCondition">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L14">
         interface <strong>AccessLevelBasicCondition</strong>
@@ -765,7 +765,7 @@ meta_desc: "Explore members of the output module in the @pulumi/gcp package."
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L25">property <b>osConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelBasicConditionDevicePolicyOsConstraint'>outputs.accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osConstraints?: <a href='#AccessLevelBasicConditionDevicePolicyOsConstraint'>AccessLevelBasicConditionDevicePolicyOsConstraint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AccessLevelBasicConditionDevicePolicy-requireScreenLock">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L26">property <b>requireScreenLock</b></a>
 </h4>
@@ -926,7 +926,7 @@ and liveness checks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L75">property <b>files</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>files?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionDeploymentFile'>outputs.appengine.StandardAppVersionDeploymentFile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>files?: <a href='#StandardAppVersionDeploymentFile'>StandardAppVersionDeploymentFile</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="StandardAppVersionDeployment-zip">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L76">property <b>zip</b></a>
 </h4>
@@ -1517,7 +1517,7 @@ The name of the column family.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L250">property <b>publicKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>publicKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNotePublicKey'>outputs.binaryauthorization.AttestorAttestationAuthorityNotePublicKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>publicKeys?: <a href='#AttestorAttestationAuthorityNotePublicKey'>AttestorAttestationAuthorityNotePublicKey</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="AttestorAttestationAuthorityNotePublicKey" data-link-title="AttestorAttestationAuthorityNotePublicKey">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L253">
         interface <strong>AttestorAttestationAuthorityNotePublicKey</strong>
@@ -1684,7 +1684,7 @@ The name of the column family.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L298">property <b>steps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>steps?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildStep'>outputs.cloudbuild.TriggerBuildStep</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>steps?: <a href='#TriggerBuildStep'>TriggerBuildStep</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="TriggerBuild-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L299">property <b>tags</b></a>
 </h4>
@@ -1746,7 +1746,7 @@ The name of the column family.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L312">property <b>volumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildStepVolume'>outputs.cloudbuild.TriggerBuildStepVolume</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='#TriggerBuildStepVolume'>TriggerBuildStepVolume</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="TriggerBuildStep-waitFors">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L313">property <b>waitFors</b></a>
 </h4>
@@ -1884,7 +1884,7 @@ The name of the column family.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L351">property <b>failurePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failurePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FunctionEventTriggerFailurePolicy'>outputs.cloudfunctions.FunctionEventTriggerFailurePolicy</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failurePolicy: <a href='#FunctionEventTriggerFailurePolicy'>FunctionEventTriggerFailurePolicy</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionEventTrigger-resource">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L352">property <b>resource</b></a>
 </h4>
@@ -1984,7 +1984,7 @@ for a full reference.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L386">property <b>failurePolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failurePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTriggerFailurePolicy'>outputs.cloudfunctions.GetFunctionEventTriggerFailurePolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failurePolicies: <a href='#GetFunctionEventTriggerFailurePolicy'>GetFunctionEventTriggerFailurePolicy</a>[];</code></pre>
 
 Policy for failed executions. Structure is documented below.
 
@@ -2104,7 +2104,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L424">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusCondition'>outputs.cloudrun.DomainMappingStatusCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='#DomainMappingStatusCondition'>DomainMappingStatusCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DomainMappingStatus-mappedRouteName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L425">property <b>mappedRouteName</b></a>
 </h4>
@@ -2119,7 +2119,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L427">property <b>resourceRecords</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusResourceRecord'>outputs.cloudrun.DomainMappingStatusResourceRecord</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceRecords?: <a href='#DomainMappingStatusResourceRecord'>DomainMappingStatusResourceRecord</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="DomainMappingStatusCondition" data-link-title="DomainMappingStatusCondition">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L430">
         interface <strong>DomainMappingStatusCondition</strong>
@@ -2227,7 +2227,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L455">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceSpecContainer'>outputs.cloudrun.ServiceSpecContainer</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containers: <a href='#ServiceSpecContainer'>ServiceSpecContainer</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceSpec-servingState">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L456">property <b>servingState</b></a>
 </h4>
@@ -2254,12 +2254,12 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L463">property <b>envFroms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>envFroms?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceSpecContainerEnvFrom'>outputs.cloudrun.ServiceSpecContainerEnvFrom</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>envFroms?: <a href='#ServiceSpecContainerEnvFrom'>ServiceSpecContainerEnvFrom</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceSpecContainer-envs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L462">property <b>envs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>envs?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceSpecContainerEnv'>outputs.cloudrun.ServiceSpecContainerEnv</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>envs?: <a href='#ServiceSpecContainerEnv'>ServiceSpecContainerEnv</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceSpecContainer-image">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L464">property <b>image</b></a>
 </h4>
@@ -2400,7 +2400,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L504">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceStatusCondition'>outputs.cloudrun.ServiceStatusCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='#ServiceStatusCondition'>ServiceStatusCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceStatus-latestCreatedRevisionName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L505">property <b>latestCreatedRevisionName</b></a>
 </h4>
@@ -2655,7 +2655,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L573">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigNodeConfig'>outputs.composer.EnvironmentConfigNodeConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig: <a href='#EnvironmentConfigNodeConfig'>EnvironmentConfigNodeConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EnvironmentConfig-nodeCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L574">property <b>nodeCount</b></a>
 </h4>
@@ -2665,12 +2665,12 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L575">property <b>privateEnvironmentConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateEnvironmentConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigPrivateEnvironmentConfig'>outputs.composer.EnvironmentConfigPrivateEnvironmentConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateEnvironmentConfig: <a href='#EnvironmentConfigPrivateEnvironmentConfig'>EnvironmentConfigPrivateEnvironmentConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EnvironmentConfig-softwareConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L576">property <b>softwareConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>softwareConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigSoftwareConfig'>outputs.composer.EnvironmentConfigSoftwareConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>softwareConfig: <a href='#EnvironmentConfigSoftwareConfig'>EnvironmentConfigSoftwareConfig</a>;</code></pre>
 <h3 class="pdoc-module-header" id="EnvironmentConfigNodeConfig" data-link-title="EnvironmentConfigNodeConfig">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L579">
         interface <strong>EnvironmentConfigNodeConfig</strong>
@@ -2687,7 +2687,7 @@ Whether the function should be retried on failure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L581">property <b>ipAllocationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigNodeConfigIpAllocationPolicy'>outputs.composer.EnvironmentConfigNodeConfigIpAllocationPolicy</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy: <a href='#EnvironmentConfigNodeConfigIpAllocationPolicy'>EnvironmentConfigNodeConfigIpAllocationPolicy</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EnvironmentConfigNodeConfig-machineType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L582">property <b>machineType</b></a>
 </h4>
@@ -2844,7 +2844,7 @@ Supported python versions for this image version
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L627">property <b>cpuUtilization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cpuUtilization: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyCpuUtilization'>outputs.compute.AutoscalarAutoscalingPolicyCpuUtilization</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuUtilization: <a href='#AutoscalarAutoscalingPolicyCpuUtilization'>AutoscalarAutoscalingPolicyCpuUtilization</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AutoscalarAutoscalingPolicy-loadBalancingUtilization">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L628">property <b>loadBalancingUtilization</b></a>
 </h4>
@@ -2859,7 +2859,7 @@ Supported python versions for this image version
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L630">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyMetric'>outputs.compute.AutoscalarAutoscalingPolicyMetric</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='#AutoscalarAutoscalingPolicyMetric'>AutoscalarAutoscalingPolicyMetric</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AutoscalarAutoscalingPolicy-minReplicas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L631">property <b>minReplicas</b></a>
 </h4>
@@ -3487,7 +3487,7 @@ Textual description for the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L798">property <b>cacheKeyPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cacheKeyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicyCacheKeyPolicy'>outputs.compute.GetBackendServiceCdnPolicyCacheKeyPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cacheKeyPolicies: <a href='#GetBackendServiceCdnPolicyCacheKeyPolicy'>GetBackendServiceCdnPolicyCacheKeyPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceCdnPolicy-signedUrlCacheMaxAgeSec">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L799">property <b>signedUrlCacheMaxAgeSec</b></a>
 </h4>
@@ -3536,7 +3536,7 @@ Textual description for the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L811">property <b>connectTimeouts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectTimeouts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreakerConnectTimeout'>outputs.compute.GetBackendServiceCircuitBreakerConnectTimeout</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectTimeouts: <a href='#GetBackendServiceCircuitBreakerConnectTimeout'>GetBackendServiceCircuitBreakerConnectTimeout</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceCircuitBreaker-maxConnections">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L812">property <b>maxConnections</b></a>
 </h4>
@@ -3590,7 +3590,7 @@ Textual description for the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L825">property <b>httpCookies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpCookies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCooky'>outputs.compute.GetBackendServiceConsistentHashHttpCooky</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCookies: <a href='#GetBackendServiceConsistentHashHttpCooky'>GetBackendServiceConsistentHashHttpCooky</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceConsistentHash-httpHeaderName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L826">property <b>httpHeaderName</b></a>
 </h4>
@@ -3625,7 +3625,7 @@ The name of the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L836">property <b>ttls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ttls: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCookyTtl'>outputs.compute.GetBackendServiceConsistentHashHttpCookyTtl</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ttls: <a href='#GetBackendServiceConsistentHashHttpCookyTtl'>GetBackendServiceConsistentHashHttpCookyTtl</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetBackendServiceConsistentHashHttpCookyTtl" data-link-title="GetBackendServiceConsistentHashHttpCookyTtl">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L839">
         interface <strong>GetBackendServiceConsistentHashHttpCookyTtl</strong>
@@ -3693,7 +3693,7 @@ The name of the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L856">property <b>baseEjectionTimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>baseEjectionTimes: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionBaseEjectionTime'>outputs.compute.GetBackendServiceOutlierDetectionBaseEjectionTime</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>baseEjectionTimes: <a href='#GetBackendServiceOutlierDetectionBaseEjectionTime'>GetBackendServiceOutlierDetectionBaseEjectionTime</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceOutlierDetection-consecutiveErrors">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L857">property <b>consecutiveErrors</b></a>
 </h4>
@@ -3723,7 +3723,7 @@ The name of the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L862">property <b>intervals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>intervals: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionInterval'>outputs.compute.GetBackendServiceOutlierDetectionInterval</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>intervals: <a href='#GetBackendServiceOutlierDetectionInterval'>GetBackendServiceOutlierDetectionInterval</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceOutlierDetection-maxEjectionPercent">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L863">property <b>maxEjectionPercent</b></a>
 </h4>
@@ -3863,7 +3863,7 @@ under `/dev/disk/by-id/`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L914">property <b>initializeParams</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDiskInitializeParam'>outputs.compute.GetInstanceBootDiskInitializeParam</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='#GetInstanceBootDiskInitializeParam'>GetInstanceBootDiskInitializeParam</a>[];</code></pre>
 
 Parameters with which a disk was created alongside the instance.
 Structure is documented below.
@@ -4050,7 +4050,7 @@ The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L997">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAccessConfig'>outputs.compute.GetInstanceNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs: <a href='#GetInstanceNetworkInterfaceAccessConfig'>GetInstanceNetworkInterfaceAccessConfig</a>[];</code></pre>
 
 Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
@@ -4064,7 +4064,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1002">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAliasIpRange'>outputs.compute.GetInstanceNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges: <a href='#GetInstanceNetworkInterfaceAliasIpRange'>GetInstanceNetworkInterfaceAliasIpRange</a>[];</code></pre>
 
 An array of alias IP ranges for this network interface. Structure documented below.
 
@@ -4190,7 +4190,7 @@ restarted if it was terminated by Compute Engine (not a user).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1061">property <b>nodeAffinities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeAffinities: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceSchedulingNodeAffinity'>outputs.compute.GetInstanceSchedulingNodeAffinity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeAffinities: <a href='#GetInstanceSchedulingNodeAffinity'>GetInstanceSchedulingNodeAffinity</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceScheduling-onHostMaintenance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1067">property <b>onHostMaintenance</b></a>
 </h4>
@@ -4310,7 +4310,7 @@ URL to the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1112">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRegionInstanceGroupInstanceNamedPort'>outputs.compute.GetRegionInstanceGroupInstanceNamedPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts: <a href='#GetRegionInstanceGroupInstanceNamedPort'>GetRegionInstanceGroupInstanceNamedPort</a>[];</code></pre>
 
 List of named ports in the group, as a list of resources, each containing:
 
@@ -4366,7 +4366,7 @@ Integer port number
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1133">property <b>advertisedIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRouterBgpAdvertisedIpRange'>outputs.compute.GetRouterBgpAdvertisedIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges: <a href='#GetRouterBgpAdvertisedIpRange'>GetRouterBgpAdvertisedIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouterBgp-asn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1134">property <b>asn</b></a>
 </h4>
@@ -4425,7 +4425,7 @@ when adding an alias IP range to a VM instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1156">property <b>filterLabels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filterLabels: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GlobalForwardingRuleMetadataFilterFilterLabel'>outputs.compute.GlobalForwardingRuleMetadataFilterFilterLabel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filterLabels: <a href='#GlobalForwardingRuleMetadataFilterFilterLabel'>GlobalForwardingRuleMetadataFilterFilterLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GlobalForwardingRuleMetadataFilter-filterMatchCriteria">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1157">property <b>filterMatchCriteria</b></a>
 </h4>
@@ -4767,7 +4767,7 @@ when adding an alias IP range to a VM instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1242">property <b>initializeParams</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceBootDiskInitializeParams'>outputs.compute.InstanceBootDiskInitializeParams</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='#InstanceBootDiskInitializeParams'>InstanceBootDiskInitializeParams</a>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBootDisk-kmsKeySelfLink">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1243">property <b>kmsKeySelfLink</b></a>
 </h4>
@@ -4881,7 +4881,7 @@ A map of key/value label pairs to assign to the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1272">property <b>initializeParams</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateBootDiskInitializeParams'>outputs.compute.InstanceFromTemplateBootDiskInitializeParams</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializeParams: <a href='#InstanceFromTemplateBootDiskInitializeParams'>InstanceFromTemplateBootDiskInitializeParams</a>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateBootDisk-kmsKeySelfLink">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1273">property <b>kmsKeySelfLink</b></a>
 </h4>
@@ -4952,12 +4952,12 @@ A map of key/value label pairs to assign to the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1291">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterfaceAccessConfig'>outputs.compute.InstanceFromTemplateNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs: <a href='#InstanceFromTemplateNetworkInterfaceAccessConfig'>InstanceFromTemplateNetworkInterfaceAccessConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateNetworkInterface-aliasIpRanges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1292">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterfaceAliasIpRange'>outputs.compute.InstanceFromTemplateNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges: <a href='#InstanceFromTemplateNetworkInterfaceAliasIpRange'>InstanceFromTemplateNetworkInterfaceAliasIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateNetworkInterface-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1297">property <b>name</b></a>
 </h4>
@@ -5042,7 +5042,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1317">property <b>nodeAffinities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeAffinities: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateSchedulingNodeAffinity'>outputs.compute.InstanceFromTemplateSchedulingNodeAffinity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeAffinities: <a href='#InstanceFromTemplateSchedulingNodeAffinity'>InstanceFromTemplateSchedulingNodeAffinity</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateScheduling-onHostMaintenance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1318">property <b>onHostMaintenance</b></a>
 </h4>
@@ -5359,12 +5359,12 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1426">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterfaceAccessConfig'>outputs.compute.InstanceNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='#InstanceNetworkInterfaceAccessConfig'>InstanceNetworkInterfaceAccessConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetworkInterface-aliasIpRanges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1427">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterfaceAliasIpRange'>outputs.compute.InstanceNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='#InstanceNetworkInterfaceAliasIpRange'>InstanceNetworkInterfaceAliasIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetworkInterface-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1432">property <b>name</b></a>
 </h4>
@@ -5449,7 +5449,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1452">property <b>nodeAffinities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeAffinities?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceSchedulingNodeAffinity'>outputs.compute.InstanceSchedulingNodeAffinity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeAffinities?: <a href='#InstanceSchedulingNodeAffinity'>InstanceSchedulingNodeAffinity</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceScheduling-onHostMaintenance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1453">property <b>onHostMaintenance</b></a>
 </h4>
@@ -5649,12 +5649,12 @@ created from this template,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1508">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterfaceAccessConfig'>outputs.compute.InstanceTemplateNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='#InstanceTemplateNetworkInterfaceAccessConfig'>InstanceTemplateNetworkInterfaceAccessConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceTemplateNetworkInterface-aliasIpRanges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1509">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterfaceAliasIpRange'>outputs.compute.InstanceTemplateNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='#InstanceTemplateNetworkInterfaceAliasIpRange'>InstanceTemplateNetworkInterfaceAliasIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceTemplateNetworkInterface-network">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1510">property <b>network</b></a>
 </h4>
@@ -5725,7 +5725,7 @@ created from this template,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1528">property <b>nodeAffinities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeAffinities?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateSchedulingNodeAffinity'>outputs.compute.InstanceTemplateSchedulingNodeAffinity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeAffinities?: <a href='#InstanceTemplateSchedulingNodeAffinity'>InstanceTemplateSchedulingNodeAffinity</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceTemplateScheduling-onHostMaintenance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1529">property <b>onHostMaintenance</b></a>
 </h4>
@@ -5883,7 +5883,7 @@ created from this template,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1574">property <b>cpuUtilization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cpuUtilization: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyCpuUtilization'>outputs.compute.RegionAutoscalerAutoscalingPolicyCpuUtilization</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuUtilization: <a href='#RegionAutoscalerAutoscalingPolicyCpuUtilization'>RegionAutoscalerAutoscalingPolicyCpuUtilization</a>;</code></pre>
 <h4 class="pdoc-member-header" id="RegionAutoscalerAutoscalingPolicy-loadBalancingUtilization">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1575">property <b>loadBalancingUtilization</b></a>
 </h4>
@@ -5898,7 +5898,7 @@ created from this template,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1577">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyMetric'>outputs.compute.RegionAutoscalerAutoscalingPolicyMetric</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='#RegionAutoscalerAutoscalingPolicyMetric'>RegionAutoscalerAutoscalingPolicyMetric</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="RegionAutoscalerAutoscalingPolicy-minReplicas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1578">property <b>minReplicas</b></a>
 </h4>
@@ -6712,7 +6712,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1803">property <b>pathRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathRules?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapPathMatcherPathRule'>outputs.compute.RegionUrlMapPathMatcherPathRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathRules?: <a href='#RegionUrlMapPathMatcherPathRule'>RegionUrlMapPathMatcherPathRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="RegionUrlMapPathMatcherPathRule" data-link-title="RegionUrlMapPathMatcherPathRule">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1806">
         interface <strong>RegionUrlMapPathMatcherPathRule</strong>
@@ -6778,7 +6778,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1821">property <b>instanceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ReservationSpecificReservationInstanceProperties'>outputs.compute.ReservationSpecificReservationInstanceProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceProperties: <a href='#ReservationSpecificReservationInstanceProperties'>ReservationSpecificReservationInstanceProperties</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ReservationSpecificReservationInstanceProperties" data-link-title="ReservationSpecificReservationInstanceProperties">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1824">
         interface <strong>ReservationSpecificReservationInstanceProperties</strong>
@@ -6790,12 +6790,12 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1825">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ReservationSpecificReservationInstancePropertiesGuestAccelerator'>outputs.compute.ReservationSpecificReservationInstancePropertiesGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='#ReservationSpecificReservationInstancePropertiesGuestAccelerator'>ReservationSpecificReservationInstancePropertiesGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ReservationSpecificReservationInstanceProperties-localSsds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1826">property <b>localSsds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>localSsds?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ReservationSpecificReservationInstancePropertiesLocalSsd'>outputs.compute.ReservationSpecificReservationInstancePropertiesLocalSsd</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>localSsds?: <a href='#ReservationSpecificReservationInstancePropertiesLocalSsd'>ReservationSpecificReservationInstancePropertiesLocalSsd</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ReservationSpecificReservationInstanceProperties-machineType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1827">property <b>machineType</b></a>
 </h4>
@@ -6856,7 +6856,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1843">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicySchedule'>outputs.compute.ResourcePolicySnapshotSchedulePolicySchedule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule: <a href='#ResourcePolicySnapshotSchedulePolicySchedule'>ResourcePolicySnapshotSchedulePolicySchedule</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ResourcePolicySnapshotSchedulePolicy-snapshotProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1844">property <b>snapshotProperties</b></a>
 </h4>
@@ -6946,7 +6946,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1869">property <b>dayOfWeeks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dayOfWeeks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek'>outputs.compute.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dayOfWeeks: <a href='#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek'>ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek" data-link-title="ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1872">
         interface <strong>ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek</strong>
@@ -7007,7 +7007,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1886">property <b>advertisedIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterBgpAdvertisedIpRange'>outputs.compute.RouterBgpAdvertisedIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='#RouterBgpAdvertisedIpRange'>RouterBgpAdvertisedIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="RouterBgp-asn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1887">property <b>asn</b></a>
 </h4>
@@ -7110,7 +7110,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1917">property <b>match</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>match: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityPolicyRuleMatch'>outputs.compute.SecurityPolicyRuleMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>match: <a href='#SecurityPolicyRuleMatch'>SecurityPolicyRuleMatch</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityPolicyRule-preview">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1918">property <b>preview</b></a>
 </h4>
@@ -7132,7 +7132,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1923">property <b>config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityPolicyRuleMatchConfig'>outputs.compute.SecurityPolicyRuleMatchConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>config: <a href='#SecurityPolicyRuleMatchConfig'>SecurityPolicyRuleMatchConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityPolicyRuleMatch-versionedExpr">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1924">property <b>versionedExpr</b></a>
 </h4>
@@ -7383,7 +7383,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1994">property <b>pathRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathRules?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherPathRule'>outputs.compute.URLMapPathMatcherPathRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathRules?: <a href='#URLMapPathMatcherPathRule'>URLMapPathMatcherPathRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="URLMapPathMatcherPathRule" data-link-title="URLMapPathMatcherPathRule">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L1997">
         interface <strong>URLMapPathMatcherPathRule</strong>
@@ -7440,32 +7440,32 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2012">property <b>cloudrunConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudrunConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigCloudrunConfig'>outputs.container.ClusterAddonsConfigCloudrunConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudrunConfig: <a href='#ClusterAddonsConfigCloudrunConfig'>ClusterAddonsConfigCloudrunConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterAddonsConfig-horizontalPodAutoscaling">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2013">property <b>horizontalPodAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>horizontalPodAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigHorizontalPodAutoscaling'>outputs.container.ClusterAddonsConfigHorizontalPodAutoscaling</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>horizontalPodAutoscaling: <a href='#ClusterAddonsConfigHorizontalPodAutoscaling'>ClusterAddonsConfigHorizontalPodAutoscaling</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterAddonsConfig-httpLoadBalancing">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2014">property <b>httpLoadBalancing</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpLoadBalancing: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigHttpLoadBalancing'>outputs.container.ClusterAddonsConfigHttpLoadBalancing</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpLoadBalancing: <a href='#ClusterAddonsConfigHttpLoadBalancing'>ClusterAddonsConfigHttpLoadBalancing</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterAddonsConfig-istioConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2015">property <b>istioConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>istioConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigIstioConfig'>outputs.container.ClusterAddonsConfigIstioConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>istioConfig: <a href='#ClusterAddonsConfigIstioConfig'>ClusterAddonsConfigIstioConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterAddonsConfig-kubernetesDashboard">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2016">property <b>kubernetesDashboard</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubernetesDashboard: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigKubernetesDashboard'>outputs.container.ClusterAddonsConfigKubernetesDashboard</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubernetesDashboard: <a href='#ClusterAddonsConfigKubernetesDashboard'>ClusterAddonsConfigKubernetesDashboard</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterAddonsConfig-networkPolicyConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2017">property <b>networkPolicyConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkPolicyConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigNetworkPolicyConfig'>outputs.container.ClusterAddonsConfigNetworkPolicyConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPolicyConfig: <a href='#ClusterAddonsConfigNetworkPolicyConfig'>ClusterAddonsConfigNetworkPolicyConfig</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterAddonsConfigCloudrunConfig" data-link-title="ClusterAddonsConfigCloudrunConfig">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2020">
         interface <strong>ClusterAddonsConfigCloudrunConfig</strong>
@@ -7571,7 +7571,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2051">property <b>resourceLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscalingResourceLimit'>outputs.container.ClusterClusterAutoscalingResourceLimit</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceLimits?: <a href='#ClusterClusterAutoscalingResourceLimit'>ClusterClusterAutoscalingResourceLimit</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ClusterClusterAutoscalingResourceLimit" data-link-title="ClusterClusterAutoscalingResourceLimit">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2054">
         interface <strong>ClusterClusterAutoscalingResourceLimit</strong>
@@ -7730,7 +7730,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2094">property <b>clientCertificateConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientCertificateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthClientCertificateConfig'>outputs.container.ClusterMasterAuthClientCertificateConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientCertificateConfig: <a href='#ClusterMasterAuthClientCertificateConfig'>ClusterMasterAuthClientCertificateConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterMasterAuth-clientKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2095">property <b>clientKey</b></a>
 </h4>
@@ -7774,7 +7774,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2106">property <b>cidrBlocks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfigCidrBlock'>outputs.container.ClusterMasterAuthorizedNetworksConfigCidrBlock</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cidrBlocks?: <a href='#ClusterMasterAuthorizedNetworksConfigCidrBlock'>ClusterMasterAuthorizedNetworksConfigCidrBlock</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ClusterMasterAuthorizedNetworksConfigCidrBlock" data-link-title="ClusterMasterAuthorizedNetworksConfigCidrBlock">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2109">
         interface <strong>ClusterMasterAuthorizedNetworksConfigCidrBlock</strong>
@@ -7830,7 +7830,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2122">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigGuestAccelerator'>outputs.container.ClusterNodeConfigGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='#ClusterNodeConfigGuestAccelerator'>ClusterNodeConfigGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodeConfig-imageType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2123">property <b>imageType</b></a>
 </h4>
@@ -7885,7 +7885,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2133">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigShieldedInstanceConfig'>outputs.container.ClusterNodeConfigShieldedInstanceConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='#ClusterNodeConfigShieldedInstanceConfig'>ClusterNodeConfigShieldedInstanceConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodeConfig-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2134">property <b>tags</b></a>
 </h4>
@@ -7895,7 +7895,7 @@ An optional description of this security policy. Max size is 2048.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2135">property <b>taints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigTaint'>outputs.container.ClusterNodeConfigTaint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taints: <a href='#ClusterNodeConfigTaint'>ClusterNodeConfigTaint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodeConfig-workloadMetadataConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2136">property <b>workloadMetadataConfig</b></a>
 </h4>
@@ -8019,7 +8019,7 @@ to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2179">property <b>management</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>management: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolManagement'>outputs.container.ClusterNodePoolManagement</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>management: <a href='#ClusterNodePoolManagement'>ClusterNodePoolManagement</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodePool-maxPodsPerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2180">property <b>maxPodsPerNode</b></a>
 </h4>
@@ -8043,7 +8043,7 @@ location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2194">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfig'>outputs.container.ClusterNodePoolNodeConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig: <a href='#ClusterNodePoolNodeConfig'>ClusterNodePoolNodeConfig</a>;</code></pre>
 
 Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -8127,7 +8127,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2219">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigGuestAccelerator'>outputs.container.ClusterNodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='#ClusterNodePoolNodeConfigGuestAccelerator'>ClusterNodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodePoolNodeConfig-imageType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2220">property <b>imageType</b></a>
 </h4>
@@ -8182,7 +8182,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2230">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigShieldedInstanceConfig'>outputs.container.ClusterNodePoolNodeConfigShieldedInstanceConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='#ClusterNodePoolNodeConfigShieldedInstanceConfig'>ClusterNodePoolNodeConfigShieldedInstanceConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodePoolNodeConfig-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2231">property <b>tags</b></a>
 </h4>
@@ -8192,7 +8192,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2232">property <b>taints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigTaint'>outputs.container.ClusterNodePoolNodeConfigTaint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taints: <a href='#ClusterNodePoolNodeConfigTaint'>ClusterNodePoolNodeConfigTaint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodePoolNodeConfig-workloadMetadataConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2233">property <b>workloadMetadataConfig</b></a>
 </h4>
@@ -8345,7 +8345,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2277">property <b>bigqueryDestination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bigqueryDestination: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfigBigqueryDestination'>outputs.container.ClusterResourceUsageExportConfigBigqueryDestination</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bigqueryDestination: <a href='#ClusterResourceUsageExportConfigBigqueryDestination'>ClusterResourceUsageExportConfigBigqueryDestination</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterResourceUsageExportConfig-enableNetworkEgressMetering">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2278">property <b>enableNetworkEgressMetering</b></a>
 </h4>
@@ -8398,32 +8398,32 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2294">property <b>cloudrunConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cloudrunConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigCloudrunConfig'>outputs.container.GetClusterAddonsConfigCloudrunConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cloudrunConfigs: <a href='#GetClusterAddonsConfigCloudrunConfig'>GetClusterAddonsConfigCloudrunConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAddonsConfig-horizontalPodAutoscalings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2295">property <b>horizontalPodAutoscalings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>horizontalPodAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHorizontalPodAutoscaling'>outputs.container.GetClusterAddonsConfigHorizontalPodAutoscaling</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>horizontalPodAutoscalings: <a href='#GetClusterAddonsConfigHorizontalPodAutoscaling'>GetClusterAddonsConfigHorizontalPodAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAddonsConfig-httpLoadBalancings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2296">property <b>httpLoadBalancings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHttpLoadBalancing'>outputs.container.GetClusterAddonsConfigHttpLoadBalancing</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpLoadBalancings: <a href='#GetClusterAddonsConfigHttpLoadBalancing'>GetClusterAddonsConfigHttpLoadBalancing</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAddonsConfig-istioConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2297">property <b>istioConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>istioConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigIstioConfig'>outputs.container.GetClusterAddonsConfigIstioConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>istioConfigs: <a href='#GetClusterAddonsConfigIstioConfig'>GetClusterAddonsConfigIstioConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAddonsConfig-kubernetesDashboards">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2298">property <b>kubernetesDashboards</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubernetesDashboards: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigKubernetesDashboard'>outputs.container.GetClusterAddonsConfigKubernetesDashboard</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubernetesDashboards: <a href='#GetClusterAddonsConfigKubernetesDashboard'>GetClusterAddonsConfigKubernetesDashboard</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAddonsConfig-networkPolicyConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2299">property <b>networkPolicyConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkPolicyConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigNetworkPolicyConfig'>outputs.container.GetClusterAddonsConfigNetworkPolicyConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPolicyConfigs: <a href='#GetClusterAddonsConfigNetworkPolicyConfig'>GetClusterAddonsConfigNetworkPolicyConfig</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterAddonsConfigCloudrunConfig" data-link-title="GetClusterAddonsConfigCloudrunConfig">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2302">
         interface <strong>GetClusterAddonsConfigCloudrunConfig</strong>
@@ -8529,7 +8529,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2333">property <b>resourceLimits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceLimits: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscalingResourceLimit'>outputs.container.GetClusterClusterAutoscalingResourceLimit</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceLimits: <a href='#GetClusterClusterAutoscalingResourceLimit'>GetClusterClusterAutoscalingResourceLimit</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterClusterAutoscalingResourceLimit" data-link-title="GetClusterClusterAutoscalingResourceLimit">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2336">
         interface <strong>GetClusterClusterAutoscalingResourceLimit</strong>
@@ -8627,12 +8627,12 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2359">property <b>dailyMaintenanceWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dailyMaintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyDailyMaintenanceWindow'>outputs.container.GetClusterMaintenancePolicyDailyMaintenanceWindow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dailyMaintenanceWindows: <a href='#GetClusterMaintenancePolicyDailyMaintenanceWindow'>GetClusterMaintenancePolicyDailyMaintenanceWindow</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterMaintenancePolicy-recurringWindows">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2360">property <b>recurringWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recurringWindows: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyRecurringWindow'>outputs.container.GetClusterMaintenancePolicyRecurringWindow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recurringWindows: <a href='#GetClusterMaintenancePolicyRecurringWindow'>GetClusterMaintenancePolicyRecurringWindow</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterMaintenancePolicyDailyMaintenanceWindow" data-link-title="GetClusterMaintenancePolicyDailyMaintenanceWindow">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2363">
         interface <strong>GetClusterMaintenancePolicyDailyMaintenanceWindow</strong>
@@ -8688,7 +8688,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2376">property <b>clientCertificateConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientCertificateConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthClientCertificateConfig'>outputs.container.GetClusterMasterAuthClientCertificateConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientCertificateConfigs: <a href='#GetClusterMasterAuthClientCertificateConfig'>GetClusterMasterAuthClientCertificateConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterMasterAuth-clientKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2377">property <b>clientKey</b></a>
 </h4>
@@ -8732,7 +8732,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2388">property <b>cidrBlocks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cidrBlocks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfigCidrBlock'>outputs.container.GetClusterMasterAuthorizedNetworksConfigCidrBlock</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cidrBlocks: <a href='#GetClusterMasterAuthorizedNetworksConfigCidrBlock'>GetClusterMasterAuthorizedNetworksConfigCidrBlock</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterMasterAuthorizedNetworksConfigCidrBlock" data-link-title="GetClusterMasterAuthorizedNetworksConfigCidrBlock">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2391">
         interface <strong>GetClusterMasterAuthorizedNetworksConfigCidrBlock</strong>
@@ -8788,7 +8788,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2404">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigGuestAccelerator'>outputs.container.GetClusterNodeConfigGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='#GetClusterNodeConfigGuestAccelerator'>GetClusterNodeConfigGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodeConfig-imageType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2405">property <b>imageType</b></a>
 </h4>
@@ -8833,7 +8833,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2413">property <b>sandboxConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sandboxConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigSandboxConfig'>outputs.container.GetClusterNodeConfigSandboxConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sandboxConfigs: <a href='#GetClusterNodeConfigSandboxConfig'>GetClusterNodeConfigSandboxConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodeConfig-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2414">property <b>serviceAccount</b></a>
 </h4>
@@ -8843,7 +8843,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2415">property <b>shieldedInstanceConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigShieldedInstanceConfig'>outputs.container.GetClusterNodeConfigShieldedInstanceConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='#GetClusterNodeConfigShieldedInstanceConfig'>GetClusterNodeConfigShieldedInstanceConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodeConfig-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2416">property <b>tags</b></a>
 </h4>
@@ -8853,12 +8853,12 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2417">property <b>taints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigTaint'>outputs.container.GetClusterNodeConfigTaint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taints: <a href='#GetClusterNodeConfigTaint'>GetClusterNodeConfigTaint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodeConfig-workloadMetadataConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2418">property <b>workloadMetadataConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workloadMetadataConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigWorkloadMetadataConfig'>outputs.container.GetClusterNodeConfigWorkloadMetadataConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workloadMetadataConfigs: <a href='#GetClusterNodeConfigWorkloadMetadataConfig'>GetClusterNodeConfigWorkloadMetadataConfig</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterNodeConfigGuestAccelerator" data-link-title="GetClusterNodeConfigGuestAccelerator">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2421">
         interface <strong>GetClusterNodeConfigGuestAccelerator</strong>
@@ -8950,7 +8950,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2446">property <b>autoscalings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolAutoscaling'>outputs.container.GetClusterNodePoolAutoscaling</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalings: <a href='#GetClusterNodePoolAutoscaling'>GetClusterNodePoolAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePool-initialNodeCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2447">property <b>initialNodeCount</b></a>
 </h4>
@@ -8965,7 +8965,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2449">property <b>managements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managements: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolManagement'>outputs.container.GetClusterNodePoolManagement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managements: <a href='#GetClusterNodePoolManagement'>GetClusterNodePoolManagement</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePool-maxPodsPerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2450">property <b>maxPodsPerNode</b></a>
 </h4>
@@ -8988,7 +8988,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2456">property <b>nodeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfig'>outputs.container.GetClusterNodePoolNodeConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfigs: <a href='#GetClusterNodePoolNodeConfig'>GetClusterNodePoolNodeConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePool-nodeCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2457">property <b>nodeCount</b></a>
 </h4>
@@ -9059,7 +9059,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2475">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigGuestAccelerator'>outputs.container.GetClusterNodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='#GetClusterNodePoolNodeConfigGuestAccelerator'>GetClusterNodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolNodeConfig-imageType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2476">property <b>imageType</b></a>
 </h4>
@@ -9104,7 +9104,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2484">property <b>sandboxConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sandboxConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigSandboxConfig'>outputs.container.GetClusterNodePoolNodeConfigSandboxConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sandboxConfigs: <a href='#GetClusterNodePoolNodeConfigSandboxConfig'>GetClusterNodePoolNodeConfigSandboxConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolNodeConfig-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2485">property <b>serviceAccount</b></a>
 </h4>
@@ -9114,7 +9114,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2486">property <b>shieldedInstanceConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigShieldedInstanceConfig'>outputs.container.GetClusterNodePoolNodeConfigShieldedInstanceConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='#GetClusterNodePoolNodeConfigShieldedInstanceConfig'>GetClusterNodePoolNodeConfigShieldedInstanceConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolNodeConfig-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2487">property <b>tags</b></a>
 </h4>
@@ -9124,12 +9124,12 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2488">property <b>taints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigTaint'>outputs.container.GetClusterNodePoolNodeConfigTaint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taints: <a href='#GetClusterNodePoolNodeConfigTaint'>GetClusterNodePoolNodeConfigTaint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolNodeConfig-workloadMetadataConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2489">property <b>workloadMetadataConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workloadMetadataConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigWorkloadMetadataConfig'>outputs.container.GetClusterNodePoolNodeConfigWorkloadMetadataConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workloadMetadataConfigs: <a href='#GetClusterNodePoolNodeConfigWorkloadMetadataConfig'>GetClusterNodePoolNodeConfigWorkloadMetadataConfig</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterNodePoolNodeConfigGuestAccelerator" data-link-title="GetClusterNodePoolNodeConfigGuestAccelerator">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2492">
         interface <strong>GetClusterNodePoolNodeConfigGuestAccelerator</strong>
@@ -9277,7 +9277,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2533">property <b>bigqueryDestinations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bigqueryDestinations: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfigBigqueryDestination'>outputs.container.GetClusterResourceUsageExportConfigBigqueryDestination</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bigqueryDestinations: <a href='#GetClusterResourceUsageExportConfigBigqueryDestination'>GetClusterResourceUsageExportConfigBigqueryDestination</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResourceUsageExportConfig-enableNetworkEgressMetering">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2534">property <b>enableNetworkEgressMetering</b></a>
 </h4>
@@ -9374,7 +9374,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2562">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigGuestAccelerator'>outputs.container.NodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='#NodePoolNodeConfigGuestAccelerator'>NodePoolNodeConfigGuestAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="NodePoolNodeConfig-imageType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2563">property <b>imageType</b></a>
 </h4>
@@ -9429,7 +9429,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2573">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigShieldedInstanceConfig'>outputs.container.NodePoolNodeConfigShieldedInstanceConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig: <a href='#NodePoolNodeConfigShieldedInstanceConfig'>NodePoolNodeConfigShieldedInstanceConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="NodePoolNodeConfig-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2574">property <b>tags</b></a>
 </h4>
@@ -9439,7 +9439,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2575">property <b>taints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigTaint'>outputs.container.NodePoolNodeConfigTaint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>taints: <a href='#NodePoolNodeConfigTaint'>NodePoolNodeConfigTaint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="NodePoolNodeConfig-workloadMetadataConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2576">property <b>workloadMetadataConfig</b></a>
 </h4>
@@ -9537,7 +9537,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2606">property <b>hint</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hint: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthorityHint'>outputs.containeranalysis.NoteAttestationAuthorityHint</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hint: <a href='#NoteAttestationAuthorityHint'>NoteAttestationAuthorityHint</a>;</code></pre>
 <h3 class="pdoc-module-header" id="NoteAttestationAuthorityHint" data-link-title="NoteAttestationAuthorityHint">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2609">
         interface <strong>NoteAttestationAuthorityHint</strong>
@@ -9567,7 +9567,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2617">property <b>yarnConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>yarnConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyBasicAlgorithmYarnConfig'>outputs.dataproc.AutoscalingPolicyBasicAlgorithmYarnConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>yarnConfig: <a href='#AutoscalingPolicyBasicAlgorithmYarnConfig'>AutoscalingPolicyBasicAlgorithmYarnConfig</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoscalingPolicyBasicAlgorithmYarnConfig" data-link-title="AutoscalingPolicyBasicAlgorithmYarnConfig">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2620">
         interface <strong>AutoscalingPolicyBasicAlgorithmYarnConfig</strong>
@@ -9670,27 +9670,27 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2644">property <b>gceClusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gceClusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigGceClusterConfig'>outputs.dataproc.ClusterClusterConfigGceClusterConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gceClusterConfig: <a href='#ClusterClusterConfigGceClusterConfig'>ClusterClusterConfigGceClusterConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfig-initializationActions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2645">property <b>initializationActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializationActions?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigInitializationAction'>outputs.dataproc.ClusterClusterConfigInitializationAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializationActions?: <a href='#ClusterClusterConfigInitializationAction'>ClusterClusterConfigInitializationAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfig-masterConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2646">property <b>masterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfig'>outputs.dataproc.ClusterClusterConfigMasterConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterConfig: <a href='#ClusterClusterConfigMasterConfig'>ClusterClusterConfigMasterConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfig-preemptibleWorkerConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2647">property <b>preemptibleWorkerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>preemptibleWorkerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfig'>outputs.dataproc.ClusterClusterConfigPreemptibleWorkerConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>preemptibleWorkerConfig: <a href='#ClusterClusterConfigPreemptibleWorkerConfig'>ClusterClusterConfigPreemptibleWorkerConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfig-softwareConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2648">property <b>softwareConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>softwareConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSoftwareConfig'>outputs.dataproc.ClusterClusterConfigSoftwareConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>softwareConfig: <a href='#ClusterClusterConfigSoftwareConfig'>ClusterClusterConfigSoftwareConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfig-stagingBucket">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2649">property <b>stagingBucket</b></a>
 </h4>
@@ -9700,7 +9700,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2650">property <b>workerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfig'>outputs.dataproc.ClusterClusterConfigWorkerConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerConfig: <a href='#ClusterClusterConfigWorkerConfig'>ClusterClusterConfigWorkerConfig</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterClusterConfigAutoscalingConfig" data-link-title="ClusterClusterConfigAutoscalingConfig">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2653">
         interface <strong>ClusterClusterConfigAutoscalingConfig</strong>
@@ -9800,12 +9800,12 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2678">property <b>accelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigAccelerator'>outputs.dataproc.ClusterClusterConfigMasterConfigAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accelerators?: <a href='#ClusterClusterConfigMasterConfigAccelerator'>ClusterClusterConfigMasterConfigAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfigMasterConfig-diskConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2679">property <b>diskConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigDiskConfig'>outputs.dataproc.ClusterClusterConfigMasterConfigDiskConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='#ClusterClusterConfigMasterConfigDiskConfig'>ClusterClusterConfigMasterConfigDiskConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfigMasterConfig-imageUri">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2680">property <b>imageUri</b></a>
 </h4>
@@ -9881,7 +9881,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2699">property <b>diskConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig'>outputs.dataproc.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig'>ClusterClusterConfigPreemptibleWorkerConfigDiskConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfigPreemptibleWorkerConfig-instanceNames">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2700">property <b>instanceNames</b></a>
 </h4>
@@ -9952,12 +9952,12 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2718">property <b>accelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigAccelerator'>outputs.dataproc.ClusterClusterConfigWorkerConfigAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accelerators?: <a href='#ClusterClusterConfigWorkerConfigAccelerator'>ClusterClusterConfigWorkerConfigAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfigWorkerConfig-diskConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2719">property <b>diskConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigDiskConfig'>outputs.dataproc.ClusterClusterConfigWorkerConfigDiskConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskConfig: <a href='#ClusterClusterConfigWorkerConfigDiskConfig'>ClusterClusterConfigWorkerConfigDiskConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterClusterConfigWorkerConfig-imageUri">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2720">property <b>imageUri</b></a>
 </h4>
@@ -10097,7 +10097,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2755">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHadoopConfigLoggingConfig'>outputs.dataproc.JobHadoopConfigLoggingConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='#JobHadoopConfigLoggingConfig'>JobHadoopConfigLoggingConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="JobHadoopConfig-mainClass">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2756">property <b>mainClass</b></a>
 </h4>
@@ -10227,7 +10227,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2789">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPigConfigLoggingConfig'>outputs.dataproc.JobPigConfigLoggingConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='#JobPigConfigLoggingConfig'>JobPigConfigLoggingConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="JobPigConfig-properties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2790">property <b>properties</b></a>
 </h4>
@@ -10308,7 +10308,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2810">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPysparkConfigLoggingConfig'>outputs.dataproc.JobPysparkConfigLoggingConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='#JobPysparkConfigLoggingConfig'>JobPysparkConfigLoggingConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="JobPysparkConfig-mainPythonFileUri">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2811">property <b>mainPythonFileUri</b></a>
 </h4>
@@ -10391,7 +10391,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2833">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparkConfigLoggingConfig'>outputs.dataproc.JobSparkConfigLoggingConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='#JobSparkConfigLoggingConfig'>JobSparkConfigLoggingConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="JobSparkConfig-mainClass">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2834">property <b>mainClass</b></a>
 </h4>
@@ -10435,7 +10435,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2845">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparksqlConfigLoggingConfig'>outputs.dataproc.JobSparksqlConfigLoggingConfig</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig: <a href='#JobSparksqlConfigLoggingConfig'>JobSparksqlConfigLoggingConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="JobSparksqlConfig-properties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2846">property <b>properties</b></a>
 </h4>
@@ -10507,7 +10507,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2866">property <b>defaultKeySpecs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultKeySpecs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfigDefaultKeySpec'>outputs.dns.ManagedZoneDnssecConfigDefaultKeySpec</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultKeySpecs: <a href='#ManagedZoneDnssecConfigDefaultKeySpec'>ManagedZoneDnssecConfigDefaultKeySpec</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ManagedZoneDnssecConfig-kind">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2867">property <b>kind</b></a>
 </h4>
@@ -10561,7 +10561,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2880">property <b>targetNameServers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetNameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfigTargetNameServer'>outputs.dns.ManagedZoneForwardingConfigTargetNameServer</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetNameServers?: <a href='#ManagedZoneForwardingConfigTargetNameServer'>ManagedZoneForwardingConfigTargetNameServer</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ManagedZoneForwardingConfigTargetNameServer" data-link-title="ManagedZoneForwardingConfigTargetNameServer">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2883">
         interface <strong>ManagedZoneForwardingConfigTargetNameServer</strong>
@@ -10609,7 +10609,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2896">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfigNetwork'>outputs.dns.ManagedZonePrivateVisibilityConfigNetwork</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='#ManagedZonePrivateVisibilityConfigNetwork'>ManagedZonePrivateVisibilityConfigNetwork</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ManagedZonePrivateVisibilityConfigNetwork" data-link-title="ManagedZonePrivateVisibilityConfigNetwork">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2899">
         interface <strong>ManagedZonePrivateVisibilityConfigNetwork</strong>
@@ -10633,7 +10633,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2904">property <b>targetNameServers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetNameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAlternativeNameServerConfigTargetNameServer'>outputs.dns.PolicyAlternativeNameServerConfigTargetNameServer</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetNameServers?: <a href='#PolicyAlternativeNameServerConfigTargetNameServer'>PolicyAlternativeNameServerConfigTargetNameServer</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="PolicyAlternativeNameServerConfigTargetNameServer" data-link-title="PolicyAlternativeNameServerConfigTargetNameServer">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2907">
         interface <strong>PolicyAlternativeNameServerConfigTargetNameServer</strong>
@@ -10670,7 +10670,7 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2918">property <b>methods</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>methods: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceApiMethod'>outputs.endpoints.ServiceApiMethod</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>methods: <a href='#ServiceApiMethod'>ServiceApiMethod</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceApi-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2919">property <b>name</b></a>
 </h4>
@@ -10822,12 +10822,12 @@ The name of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2965">property <b>allows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allows: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyAllow'>outputs.folder.GetOrganizationPolicyListPolicyAllow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allows: <a href='#GetOrganizationPolicyListPolicyAllow'>GetOrganizationPolicyListPolicyAllow</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetOrganizationPolicyListPolicy-denies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2966">property <b>denies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>denies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyDeny'>outputs.folder.GetOrganizationPolicyListPolicyDeny</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>denies: <a href='#GetOrganizationPolicyListPolicyDeny'>GetOrganizationPolicyListPolicyDeny</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetOrganizationPolicyListPolicy-inheritFromParent">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L2967">property <b>inheritFromParent</b></a>
 </h4>
@@ -11887,7 +11887,7 @@ The public key, encoded in PEM format. For more information, see the RFC 7468 se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3278">property <b>labels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricMetricDescriptorLabel'>outputs.logging.MetricMetricDescriptorLabel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>labels?: <a href='#MetricMetricDescriptorLabel'>MetricMetricDescriptorLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="MetricMetricDescriptor-metricKind">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3279">property <b>metricKind</b></a>
 </h4>
@@ -11977,7 +11977,7 @@ The public key, encoded in PEM format. For more information, see the RFC 7468 se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3306">property <b>aggregations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aggregations?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyConditionConditionAbsentAggregation'>outputs.monitoring.AlertPolicyConditionConditionAbsentAggregation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aggregations?: <a href='#AlertPolicyConditionConditionAbsentAggregation'>AlertPolicyConditionConditionAbsentAggregation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyConditionConditionAbsent-duration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3307">property <b>duration</b></a>
 </h4>
@@ -12048,7 +12048,7 @@ The public key, encoded in PEM format. For more information, see the RFC 7468 se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3325">property <b>aggregations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aggregations?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyConditionConditionThresholdAggregation'>outputs.monitoring.AlertPolicyConditionConditionThresholdAggregation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aggregations?: <a href='#AlertPolicyConditionConditionThresholdAggregation'>AlertPolicyConditionConditionThresholdAggregation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyConditionConditionThreshold-comparison">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3326">property <b>comparison</b></a>
 </h4>
@@ -12058,7 +12058,7 @@ The public key, encoded in PEM format. For more information, see the RFC 7468 se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3327">property <b>denominatorAggregations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>denominatorAggregations?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyConditionConditionThresholdDenominatorAggregation'>outputs.monitoring.AlertPolicyConditionConditionThresholdDenominatorAggregation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>denominatorAggregations?: <a href='#AlertPolicyConditionConditionThresholdDenominatorAggregation'>AlertPolicyConditionConditionThresholdDenominatorAggregation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyConditionConditionThreshold-denominatorFilter">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3328">property <b>denominatorFilter</b></a>
 </h4>
@@ -12350,7 +12350,7 @@ The public key, encoded in PEM format. For more information, see the RFC 7468 se
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3411">property <b>auditLogConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>auditLogConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyAuditConfigAuditLogConfig'>outputs.organizations.GetIAMPolicyAuditConfigAuditLogConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>auditLogConfigs: <a href='#GetIAMPolicyAuditConfigAuditLogConfig'>GetIAMPolicyAuditConfigAuditLogConfig</a>[];</code></pre>
 
 A nested block that defines the operations you'd like to log.
 
@@ -12475,7 +12475,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3461">property <b>featureSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetProjectAppEngineFeatureSetting'>outputs.organizations.GetProjectAppEngineFeatureSetting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>featureSettings: <a href='#GetProjectAppEngineFeatureSetting'>GetProjectAppEngineFeatureSetting</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectAppEngine-gcrDomain">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3462">property <b>gcrDomain</b></a>
 </h4>
@@ -12500,7 +12500,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3466">property <b>urlDispatchRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetProjectAppEngineUrlDispatchRule'>outputs.organizations.GetProjectAppEngineUrlDispatchRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlDispatchRules: <a href='#GetProjectAppEngineUrlDispatchRule'>GetProjectAppEngineUrlDispatchRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetProjectAppEngineFeatureSetting" data-link-title="GetProjectAppEngineFeatureSetting">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3469">
         interface <strong>GetProjectAppEngineFeatureSetting</strong>
@@ -12688,12 +12688,12 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3523">property <b>allows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allows: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyAllow'>outputs.projects.GetOrganizationPolicyListPolicyAllow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allows: <a href='#GetOrganizationPolicyListPolicyAllow'>GetOrganizationPolicyListPolicyAllow</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetOrganizationPolicyListPolicy-denies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3524">property <b>denies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>denies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyDeny'>outputs.projects.GetOrganizationPolicyListPolicyDeny</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>denies: <a href='#GetOrganizationPolicyListPolicyDeny'>GetOrganizationPolicyListPolicyDeny</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetOrganizationPolicyListPolicy-inheritFromParent">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3525">property <b>inheritFromParent</b></a>
 </h4>
@@ -13430,7 +13430,7 @@ The project id of the project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3739">property <b>backupConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backupConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsBackupConfiguration'>outputs.sql.DatabaseInstanceSettingsBackupConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backupConfiguration: <a href='#DatabaseInstanceSettingsBackupConfiguration'>DatabaseInstanceSettingsBackupConfiguration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceSettings-crashSafeReplication">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3740">property <b>crashSafeReplication</b></a>
 </h4>
@@ -13440,7 +13440,7 @@ The project id of the project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3741">property <b>databaseFlags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databaseFlags?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsDatabaseFlag'>outputs.sql.DatabaseInstanceSettingsDatabaseFlag</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databaseFlags?: <a href='#DatabaseInstanceSettingsDatabaseFlag'>DatabaseInstanceSettingsDatabaseFlag</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceSettings-diskAutoresize">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3742">property <b>diskAutoresize</b></a>
 </h4>
@@ -13460,12 +13460,12 @@ The project id of the project.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3745">property <b>ipConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsIpConfiguration'>outputs.sql.DatabaseInstanceSettingsIpConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfiguration: <a href='#DatabaseInstanceSettingsIpConfiguration'>DatabaseInstanceSettingsIpConfiguration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceSettings-locationPreference">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3746">property <b>locationPreference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>locationPreference: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsLocationPreference'>outputs.sql.DatabaseInstanceSettingsLocationPreference</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>locationPreference: <a href='#DatabaseInstanceSettingsLocationPreference'>DatabaseInstanceSettingsLocationPreference</a>;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceSettings-maintenanceWindow">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3747">property <b>maintenanceWindow</b></a>
 </h4>
@@ -13557,7 +13557,7 @@ up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3774">property <b>authorizedNetworks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authorizedNetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork'>outputs.sql.DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authorizedNetworks?: <a href='#DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork'>DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceSettingsIpConfiguration-ipv4Enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3775">property <b>ipv4Enabled</b></a>
 </h4>
@@ -13735,12 +13735,12 @@ up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3829">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleAction'>outputs.storage.BucketLifecycleRuleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#BucketLifecycleRuleAction'>BucketLifecycleRuleAction</a>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketLifecycleRule-condition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3830">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleCondition'>outputs.storage.BucketLifecycleRuleCondition</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition: <a href='#BucketLifecycleRuleCondition'>BucketLifecycleRuleCondition</a>;</code></pre>
 <h3 class="pdoc-module-header" id="BucketLifecycleRuleAction" data-link-title="BucketLifecycleRuleAction">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3833">
         interface <strong>BucketLifecycleRuleAction</strong>
@@ -13911,7 +13911,7 @@ The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3881">property <b>scheduleStartDate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduleStartDate: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobScheduleScheduleStartDate'>outputs.storage.TransferJobScheduleScheduleStartDate</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduleStartDate: <a href='#TransferJobScheduleScheduleStartDate'>TransferJobScheduleScheduleStartDate</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TransferJobSchedule-startTimeOfDay">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3882">property <b>startTimeOfDay</b></a>
 </h4>
@@ -14036,7 +14036,7 @@ The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3914">property <b>awsAccessKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>awsAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobTransferSpecAwsS3DataSourceAwsAccessKey'>outputs.storage.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>awsAccessKey: <a href='#TransferJobTransferSpecAwsS3DataSourceAwsAccessKey'>TransferJobTransferSpecAwsS3DataSourceAwsAccessKey</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TransferJobTransferSpecAwsS3DataSource-bucketName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/types/output.ts#L3915">property <b>bucketName</b></a>
 </h4>

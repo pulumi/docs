@@ -285,7 +285,7 @@ Search term used to choose the events shown in the overlay.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L69">property <b>sources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardEventOverlaySource'>outputs.DashboardEventOverlaySource</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sources?: <a href='#DashboardEventOverlaySource'>DashboardEventOverlaySource</a>[];</code></pre>
 
 Each element specifies a filter to use against the signal specified in the `signal`.
 
@@ -425,7 +425,7 @@ The description that will override the original dashboards's description.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L137">property <b>filterOverrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGroupDashboardFilterOverride'>outputs.DashboardGroupDashboardFilterOverride</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filterOverrides?: <a href='#DashboardGroupDashboardFilterOverride'>DashboardGroupDashboardFilterOverride</a>[];</code></pre>
 
 The description that will override the original dashboards's description.
 
@@ -441,7 +441,7 @@ The name that will override the original dashboards's name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L142">property <b>variableOverrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variableOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGroupDashboardVariableOverride'>outputs.DashboardGroupDashboardVariableOverride</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variableOverrides?: <a href='#DashboardGroupDashboardVariableOverride'>DashboardGroupDashboardVariableOverride</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="DashboardGroupDashboardFilterOverride" data-link-title="DashboardGroupDashboardFilterOverride">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L145">
         interface <strong>DashboardGroupDashboardFilterOverride</strong>
@@ -523,7 +523,7 @@ Search term used to choose the events shown in the overlay.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L183">property <b>sources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardSelectedEventOverlaySource'>outputs.DashboardSelectedEventOverlaySource</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sources?: <a href='#DashboardSelectedEventOverlaySource'>DashboardSelectedEventOverlaySource</a>[];</code></pre>
 
 Each element specifies a filter to use against the signal specified in the `signal`.
 
@@ -1174,7 +1174,7 @@ The minimum value for the right axis.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L491">property <b>watermarks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisLeftWatermark'>outputs.TimeChartAxisLeftWatermark</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='#TimeChartAxisLeftWatermark'>TimeChartAxisLeftWatermark</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisLeftWatermark" data-link-title="TimeChartAxisLeftWatermark">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L494">
         interface <strong>TimeChartAxisLeftWatermark</strong>
@@ -1262,7 +1262,7 @@ The minimum value for the right axis.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L531">property <b>watermarks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisRightWatermark'>outputs.TimeChartAxisRightWatermark</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='#TimeChartAxisRightWatermark'>TimeChartAxisRightWatermark</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisRightWatermark" data-link-title="TimeChartAxisRightWatermark">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/output.ts#L534">
         interface <strong>TimeChartAxisRightWatermark</strong>

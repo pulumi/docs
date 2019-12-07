@@ -166,7 +166,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallPolicy</code></pre>
 
 
 Returns true if the given object is an instance of FirewallPolicy.  This is designed to work even
@@ -192,7 +192,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L135">property <b>customRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRule'>outputs.frontdoor.FirewallPolicyCustomRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `customRule` blocks as defined below.
 
@@ -233,7 +233,7 @@ Resource location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L151">property <b>managedRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>managedRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRule'>outputs.frontdoor.FirewallPolicyManagedRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>managedRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `managedRule` blocks as defined below.
 
@@ -390,7 +390,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Frontdoor</code></pre>
 
 
 Returns true if the given object is an instance of Frontdoor.  This is designed to work even
@@ -400,7 +400,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L103">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolHealthProbe'>outputs.frontdoor.FrontdoorBackendPoolHealthProbe</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>[]&gt;;</code></pre>
 
 A `backendPoolHealthProbe` block as defined below.
 
@@ -408,7 +408,7 @@ A `backendPoolHealthProbe` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L107">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolLoadBalancing'>outputs.frontdoor.FrontdoorBackendPoolLoadBalancing</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>[]&gt;;</code></pre>
 
 A `backendPoolLoadBalancing` block as defined below.
 
@@ -416,7 +416,7 @@ A `backendPoolLoadBalancing` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L99">property <b>backendPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPool'>outputs.frontdoor.FrontdoorBackendPool</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPool'>FrontdoorBackendPool</a>[]&gt;;</code></pre>
 
 A `backendPool` block as defined below.
 
@@ -448,7 +448,7 @@ A friendly name for the Front Door service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L123">property <b>frontendEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpoint'>outputs.frontdoor.FrontdoorFrontendEndpoint</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>[]&gt;;</code></pre>
 
 A `frontendEndpoint` block as defined below.
 
@@ -497,7 +497,7 @@ Name of the Resource group within the Azure subscription. Changing this forces a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L143">property <b>routingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRule'>outputs.frontdoor.FrontdoorRoutingRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>[]&gt;;</code></pre>
 
 A `routingRule` block as defined below.
 
@@ -551,7 +551,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L295">property <b>customRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>inputs.frontdoor.FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `customRule` blocks as defined below.
 
@@ -567,7 +567,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L303">property <b>managedRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>inputs.frontdoor.FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `managedRule` blocks as defined below.
 
@@ -641,7 +641,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L241">property <b>customRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>inputs.frontdoor.FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `customRule` blocks as defined below.
 
@@ -673,7 +673,7 @@ Resource location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/firewallPolicy.ts#L257">property <b>managedRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>inputs.frontdoor.FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `managedRule` blocks as defined below.
 
@@ -731,7 +731,7 @@ The set of arguments for constructing a Frontdoor resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L291">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>inputs.frontdoor.FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
 
 A `backendPoolHealthProbe` block as defined below.
 
@@ -739,7 +739,7 @@ A `backendPoolHealthProbe` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L295">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>inputs.frontdoor.FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
 
 A `backendPoolLoadBalancing` block as defined below.
 
@@ -747,7 +747,7 @@ A `backendPoolLoadBalancing` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L287">property <b>backendPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>inputs.frontdoor.FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
 
 A `backendPool` block as defined below.
 
@@ -771,7 +771,7 @@ A friendly name for the Front Door service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L307">property <b>frontendEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>inputs.frontdoor.FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
 
 A `frontendEndpoint` block as defined below.
 
@@ -811,7 +811,7 @@ Name of the Resource group within the Azure subscription. Changing this forces a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L327">property <b>routingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>inputs.frontdoor.FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
 
 A `routingRule` block as defined below.
 
@@ -837,7 +837,7 @@ Input properties used for looking up and filtering Frontdoor resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L233">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>inputs.frontdoor.FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
 
 A `backendPoolHealthProbe` block as defined below.
 
@@ -845,7 +845,7 @@ A `backendPoolHealthProbe` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L237">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>inputs.frontdoor.FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
 
 A `backendPoolLoadBalancing` block as defined below.
 
@@ -853,7 +853,7 @@ A `backendPoolLoadBalancing` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L229">property <b>backendPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>inputs.frontdoor.FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
 
 A `backendPool` block as defined below.
 
@@ -885,7 +885,7 @@ A friendly name for the Front Door service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L253">property <b>frontendEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>inputs.frontdoor.FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
 
 A `frontendEndpoint` block as defined below.
 
@@ -925,7 +925,7 @@ Name of the Resource group within the Azure subscription. Changing this forces a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/frontdoor/frontdoor.ts#L273">property <b>routingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>inputs.frontdoor.FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
 
 A `routingRule` block as defined below.
 

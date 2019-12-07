@@ -148,7 +148,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertChannel</code></pre>
 
 
 Returns true if the given object is an instance of AlertChannel.  This is designed to work even
@@ -280,7 +280,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertCondition</code></pre>
 
 
 Returns true if the given object is an instance of AlertCondition.  This is designed to work even
@@ -360,7 +360,7 @@ Runbook URL to display in notifications.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L108">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#AlertConditionTerm'>outputs.AlertConditionTerm</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#AlertConditionTerm'>AlertConditionTerm</a>[]&gt;;</code></pre>
 
 A list of terms for this condition. See Terms below for details.
 
@@ -461,7 +461,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AlertPolicy.  This is designed to work even
@@ -584,7 +584,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertPolicyChannel</code></pre>
 
 
 Returns true if the given object is an instance of AlertPolicyChannel.  This is designed to work even
@@ -671,7 +671,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dashboard</code></pre>
 
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
@@ -694,7 +694,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L47">property <b>filter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardFilter'>outputs.DashboardFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardFilter'>DashboardFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
@@ -744,7 +744,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L63">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidget'>outputs.DashboardWidget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidget'>DashboardWidget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
@@ -825,7 +825,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InfraAlertCondition</code></pre>
 
 
 Returns true if the given object is an instance of InfraAlertCondition.  This is designed to work even
@@ -848,7 +848,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L77">property <b>critical</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>critical: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionCritical'>outputs.InfraAlertConditionCritical</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>critical: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionCritical'>InfraAlertConditionCritical</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
@@ -951,7 +951,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L118">property <b>warning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>warning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionWarning'>outputs.InfraAlertConditionWarning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>warning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionWarning'>InfraAlertConditionWarning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Identifies the warning threshold parameters. See Thresholds below for details.
 
@@ -1054,7 +1054,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NrqlAlertCondition</code></pre>
 
 
 Returns true if the given object is an instance of NrqlAlertCondition.  This is designed to work even
@@ -1093,7 +1093,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L87">property <b>nrql</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionNrql'>outputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionNrql'>NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-policyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L88">property <b>policyId</b></a>
 </h4>
@@ -1108,7 +1108,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L90">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionTerm'>outputs.NrqlAlertConditionTerm</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionTerm'>NrqlAlertConditionTerm</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L91">property <b>type</b></a>
 </h4>
@@ -1169,7 +1169,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -1489,7 +1489,7 @@ Runbook URL to display in notifications.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L284">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>inputs.AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 
 A list of terms for this condition. See Terms below for details.
 
@@ -1600,7 +1600,7 @@ Runbook URL to display in notifications.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L229">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>inputs.AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 
 A list of terms for this condition. See Terms below for details.
 
@@ -1778,7 +1778,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L150">property <b>filter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>DashboardFilter</a>&gt;;</code></pre>
 
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
@@ -1810,7 +1810,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L166">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
 
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
@@ -1841,7 +1841,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L120">property <b>filter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>DashboardFilter</a>&gt;;</code></pre>
 
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
@@ -1873,7 +1873,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L136">property <b>widgets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
 
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
@@ -2160,7 +2160,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L257">property <b>critical</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>inputs.InfraAlertConditionCritical</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>InfraAlertConditionCritical</a>&gt;;</code></pre>
 
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
@@ -2240,7 +2240,7 @@ The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric"
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L297">property <b>warning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>inputs.InfraAlertConditionWarning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>InfraAlertConditionWarning</a>&gt;;</code></pre>
 
 Identifies the warning threshold parameters. See Thresholds below for details.
 
@@ -2279,7 +2279,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L198">property <b>critical</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>inputs.InfraAlertConditionCritical</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>InfraAlertConditionCritical</a>&gt;;</code></pre>
 
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
@@ -2364,7 +2364,7 @@ The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric"
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L239">property <b>warning</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>inputs.InfraAlertConditionWarning</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>InfraAlertConditionWarning</a>&gt;;</code></pre>
 
 Identifies the warning threshold parameters. See Thresholds below for details.
 
@@ -2410,7 +2410,7 @@ The set of arguments for constructing a NrqlAlertCondition resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L173">property <b>nrql</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>inputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-policyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L174">property <b>policyId</b></a>
 </h4>
@@ -2425,7 +2425,7 @@ The set of arguments for constructing a NrqlAlertCondition resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L176">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>inputs.NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L177">property <b>type</b></a>
 </h4>
@@ -2470,7 +2470,7 @@ Input properties used for looking up and filtering NrqlAlertCondition resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L157">property <b>nrql</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nrql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>inputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nrql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-policyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L158">property <b>policyId</b></a>
 </h4>
@@ -2485,7 +2485,7 @@ Input properties used for looking up and filtering NrqlAlertCondition resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L160">property <b>terms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>inputs.NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L161">property <b>type</b></a>
 </h4>

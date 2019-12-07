@@ -243,7 +243,7 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/).
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of earned CPU credits that an instance has accrued since it was launched or started.
@@ -272,7 +272,7 @@ CPU credit metrics are available at a five-minute frequency only.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuCreditUsage(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuCreditUsage(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of CPU credits spent by the instance for CPU utilization. One CPU credit equals one
@@ -290,7 +290,7 @@ than five minutes, use the Sum statistic instead of the Average statistic.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuSurplusCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuSurplusCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of surplus credits that have been spent by an unlimited instance when its
@@ -307,7 +307,7 @@ spent surplus credits above the maximum incur an additional charge.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuSurplusCreditsCharged(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuSurplusCreditsCharged(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of spent surplus credits that are not paid down by earned CPU credits, and which thus
@@ -327,7 +327,7 @@ Spent surplus credits are charged when any of the following occurs:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuUtilization(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuUtilization(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percentage of allocated EC2 compute units that are currently in use on the instance. This
@@ -346,7 +346,7 @@ Units: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>diskReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Bytes read from all instance store volumes available to the instance.
@@ -369,7 +369,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>diskReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Completed read operations from all instance store volumes available to the instance in a
@@ -389,7 +389,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>diskWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Bytes written to all instance store volumes available to the instance.
@@ -412,7 +412,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>diskWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Completed write operations to all instance store volumes available to the instance in a
@@ -432,7 +432,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsByteBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsByteBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Available only for the smaller instance sizes. Provides information about the percentage of
@@ -448,7 +448,7 @@ Unit: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsIOBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsIOBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Available only for the smaller instance sizes. Provides information about the percentage of
@@ -464,7 +464,7 @@ Unit: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Bytes read from all EBS volumes attached to the instance in a specified period of time.
@@ -482,7 +482,7 @@ Unit: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Completed read operations from all Amazon EBS volumes attached to the instance in a specified
@@ -502,7 +502,7 @@ Unit: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Bytes written to all EBS volumes attached to the instance in a specified period of time.
@@ -520,7 +520,7 @@ Unit: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ebsWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Completed write operations to all EBS volumes attached to the instance in a specified period
@@ -539,7 +539,7 @@ Unit: Count
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Ec2MetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Ec2MetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="Ec2MetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -625,7 +625,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -635,7 +635,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -676,7 +676,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#Ec2MetricName'>Ec2MetricName</a>, change: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#Ec2MetricName'>Ec2MetricName</a>, change: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/EC2 metric with the requested [metricName]. See
@@ -716,7 +716,7 @@ You can use the following dimensions to refine the metrics returned for your ins
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes received on all network interfaces by the instance. This metric
@@ -735,7 +735,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes sent out on all network interfaces by the instance. This metric
@@ -754,7 +754,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkPacketsIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPacketsIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of packets received on all network interfaces by the instance. This metric
@@ -772,7 +772,7 @@ Statistics: Minimum, Maximum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkPacketsOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPacketsOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of packets sent out on all network interfaces by the instance. This metric
@@ -790,7 +790,7 @@ Statistics: Minimum, Maximum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>statusCheckFailed(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>statusCheckFailed(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Reports whether the instance has passed both the instance status check and the system status
@@ -809,7 +809,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>statusCheckFailed_Instance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>statusCheckFailed_Instance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Reports whether the instance has passed the instance status check in the last minute.
@@ -827,7 +827,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>statusCheckFailed_System(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>statusCheckFailed_System(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Reports whether the instance has passed the system status check in the last minute.
@@ -852,34 +852,34 @@ Units: Count
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SecurityGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SecurityGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-createEgressRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L89">method <b>createEgressRule</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SimpleSecurityGroupRuleArgs'>x.ec2.SimpleSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#EgressSecurityGroupRule'>x.ec2.EgressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#EgressSecurityGroupRuleArgs'>x.ec2.EgressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#EgressSecurityGroupRule'>x.ec2.EgressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-createIngressRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L95">method <b>createIngressRule</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SimpleSecurityGroupRuleArgs'>x.ec2.SimpleSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRule'>x.ec2.IngressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRuleArgs'>x.ec2.IngressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRule'>x.ec2.IngressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-fromExistingId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L79">method <b>fromExistingId</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>fromExistingId(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#SecurityGroup'>SecurityGroup</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>fromExistingId(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#SecurityGroup'>SecurityGroup</a></code></pre>
 
 
 Get an existing SecurityGroup resource's state with the given name and ID. This will not
@@ -898,7 +898,7 @@ application will not cause the existing cloud resource to be destroyed.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -915,7 +915,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L26">property <b>egressRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>egressRules: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRule'>x.ec2.IngressSecurityGroupRule</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>egressRules: <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroup-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L23">property <b>id</b></a>
 </h4>
@@ -925,12 +925,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L27">property <b>ingressRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ingressRules: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRule'>x.ec2.IngressSecurityGroupRule</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ingressRules: <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroup-securityGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L22">property <b>securityGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroup'>aws.ec2.SecurityGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroup'>SecurityGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroup-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L21">property <b>urn</b></a>
 </h4>
@@ -944,7 +944,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L24">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="SecurityGroupRule" data-link-title="SecurityGroupRule">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L108">
         Resource <strong>SecurityGroupRule</strong>
@@ -957,14 +957,14 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SecurityGroupRule(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, args: <a href='#SecurityGroupRuleArgs'>SecurityGroupRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SecurityGroupRule(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, args: <a href='#SecurityGroupRuleArgs'>SecurityGroupRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroupRule-egress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L152">method <b>egress</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroupRule-egressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L126">method <b>egressArgs</b></a>
@@ -985,7 +985,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroupRule-ingressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L133">method <b>ingressArgs</b></a>
@@ -999,7 +999,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1016,12 +1016,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L110">property <b>securityGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroupRule-securityGroupRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L109">property <b>securityGroupRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>aws.ec2.SecurityGroupRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>SecurityGroupRule</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroupRule-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L108">property <b>urn</b></a>
 </h4>
@@ -1043,10 +1043,10 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>, args: <a href='#SubnetArgs'>SubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: <a href='#Vpc'>Vpc</a>, args: <a href='#SubnetArgs'>SubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>, args: <a href='#ExistingSubnetArgs'>ExistingSubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: <a href='#Vpc'>Vpc</a>, args: <a href='#ExistingSubnetArgs'>ExistingSubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Subnet-createRoute">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L89">method <b>createRoute</b></a>
@@ -1070,7 +1070,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1096,22 +1096,22 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L34">property <b>routeTable</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routeTable: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteTable'>aws.ec2.RouteTable</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routeTable: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteTable'>RouteTable</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Subnet-routeTableAssociation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L35">property <b>routeTableAssociation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routeTableAssociation: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteTableAssociation'>aws.ec2.RouteTableAssociation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routeTableAssociation: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteTableAssociation'>RouteTableAssociation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Subnet-routes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L37">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route'>aws.ec2.Route</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route'>Route</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="Subnet-subnet">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L33">property <b>subnet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet'>aws.ec2.Subnet</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet'>Subnet</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Subnet-subnetName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L26">property <b>subnetName</b></a>
 </h4>
@@ -1130,7 +1130,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L25">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='#Vpc'>Vpc</a>;</code></pre>
 <h3 class="pdoc-module-header" id="Vpc" data-link-title="Vpc">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L26">
         Resource <strong>Vpc</strong>
@@ -1153,7 +1153,7 @@ deployments.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addInternetGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Subnet'>x.ec2.Subnet</a>[], args: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#InternetGatewayArgs'>aws.ec2.InternetGatewayArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): InternetGateway</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addInternetGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, subnets?: <a href='#Subnet'>Subnet</a>[], args: InternetGatewayArgs, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): InternetGateway</code></pre>
 
 
 Adds an [awsx.ec2.InternetGateway] to this VPC.  Will fail if this Vpc already has an
@@ -1164,7 +1164,7 @@ InternetGateway.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addNatGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#NatGatewayArgs'>x.ec2.NatGatewayArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): NatGateway</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addNatGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: NatGatewayArgs, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): NatGateway</code></pre>
 
 
 Adds an [awsx.ec2.NatGateway] to this VPC. The NatGateway must be supplied a subnet (normally
@@ -1192,7 +1192,7 @@ sub-resources) to be destroyed.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>getDefault(opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='#Vpc'>Vpc</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>getDefault(opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='#Vpc'>Vpc</a></code></pre>
 
 
 Gets the default vpc for the current aws account and region.
@@ -1229,7 +1229,7 @@ version be used instead.  This version will properly respect providers.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1265,12 +1265,12 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L38">property <b>isolatedSubnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>isolatedSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Subnet'>x.ec2.Subnet</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>isolatedSubnets: <a href='#Subnet'>Subnet</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="Vpc-natGateways">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L50">property <b>natGateways</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>natGateways: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#NatGateway'>x.ec2.NatGateway</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>natGateways: NatGateway[] =  [];</code></pre>
 
 The nat gateways created to allow private subnets access to the internet.
 Only available if this was created using [VpcArgs].
@@ -1284,7 +1284,7 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L37">property <b>privateSubnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>privateSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Subnet'>x.ec2.Subnet</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>privateSubnets: <a href='#Subnet'>Subnet</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="Vpc-publicSubnetIds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L29">property <b>publicSubnetIds</b></a>
 </h4>
@@ -1294,7 +1294,7 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L36">property <b>publicSubnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>publicSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Subnet'>x.ec2.Subnet</a>[] =  [];</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>publicSubnets: <a href='#Subnet'>Subnet</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="Vpc-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L26">property <b>urn</b></a>
 </h4>
@@ -1308,7 +1308,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L33">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc'>aws.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc'>Vpc</a>;</code></pre>
 
 
 <h2 id="apis">Others</h2>
@@ -1489,7 +1489,7 @@ Alias for a cidr block.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>create(resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, vpcName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpcCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, ipv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, availabilityZones: <a href='#AvailabilityZoneDescription'>AvailabilityZoneDescription</a>[], numberOfNatGateways: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, assignGeneratedIpv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;, subnetArgsArray: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#VpcSubnetArgs'>x.ec2.VpcSubnetArgs</a>[]): <a href='#VpcTopologyDescription'>VpcTopologyDescription</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>create(resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, vpcName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpcCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, ipv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, availabilityZones: AvailabilityZoneDescription[], numberOfNatGateways: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, assignGeneratedIpv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;, subnetArgsArray: <a href='#VpcSubnetArgs'>VpcSubnetArgs</a>[]): VpcTopologyDescription</code></pre>
 
 <h3 class="pdoc-module-header" id="EgressSecurityGroupRule" data-link-title="EgressSecurityGroupRule">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L179">
@@ -1503,14 +1503,14 @@ Alias for a cidr block.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EgressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EgressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EgressSecurityGroupRule-egress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L152">method <b>egress</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="EgressSecurityGroupRule-egressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L126">method <b>egressArgs</b></a>
@@ -1531,7 +1531,7 @@ Alias for a cidr block.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="EgressSecurityGroupRule-ingressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L133">method <b>ingressArgs</b></a>
@@ -1545,7 +1545,7 @@ Alias for a cidr block.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1562,12 +1562,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L110">property <b>securityGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EgressSecurityGroupRule-securityGroupRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L109">property <b>securityGroupRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>aws.ec2.SecurityGroupRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>SecurityGroupRule</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EgressSecurityGroupRule-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L179">property <b>urn</b></a>
 </h4>
@@ -1670,7 +1670,7 @@ The end port (or ICMP code if protocol is "icmp").
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L126">property <b>subnet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet'>aws.ec2.Subnet</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet'>Subnet</a>;</code></pre>
 
 Optional existing instance to use to make the awsx Subnet out of.  If this is provided No
 RouteTable or RouteTableAssociation will be automatically be created.
@@ -1686,7 +1686,7 @@ RouteTable or RouteTableAssociation will be automatically be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L468">property <b>vpc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc'>aws.ec2.Vpc</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc'>Vpc</a>;</code></pre>
 
 The id of the VPC.
 
@@ -1795,14 +1795,14 @@ The id of the VPC.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IngressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IngressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="IngressSecurityGroupRule-egress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L152">method <b>egress</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="IngressSecurityGroupRule-egressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L126">method <b>egressArgs</b></a>
@@ -1823,7 +1823,7 @@ The id of the VPC.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></code></pre>
 
 <h4 class="pdoc-member-header" id="IngressSecurityGroupRule-ingressArgs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L133">method <b>ingressArgs</b></a>
@@ -1837,7 +1837,7 @@ The id of the VPC.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1854,12 +1854,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L110">property <b>securityGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='#SecurityGroup'>SecurityGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="IngressSecurityGroupRule-securityGroupRule">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L109">property <b>securityGroupRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>aws.ec2.SecurityGroupRule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityGroupRule: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule'>SecurityGroupRule</a>;</code></pre>
 <h4 class="pdoc-member-header" id="IngressSecurityGroupRule-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L197">property <b>urn</b></a>
 </h4>
@@ -2046,7 +2046,7 @@ you'd like to classify your security groups in a way that can be updated, use `t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L162">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#EgressSecurityGroupRuleArgs'>x.ec2.EgressSecurityGroupRuleArgs</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a>[];</code></pre>
 
 Can be specified multiple times for each egress rule. Each egress block supports fields
 documented below.
@@ -2055,7 +2055,7 @@ documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L168">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#IngressSecurityGroupRuleArgs'>x.ec2.IngressSecurityGroupRuleArgs</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a>[];</code></pre>
 
 Can be specified multiple times for each ingress rule. Each ingress block supports fields
 documented below.
@@ -2085,7 +2085,7 @@ one will be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L179">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-vpc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroup.ts#L149">property <b>vpc</b></a>
 </h4>
@@ -2372,7 +2372,7 @@ IP address. Default is `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/subnet.ts#L215">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -2395,7 +2395,7 @@ A mapping of tags to assign to the resource.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>route(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#RouteArgs'>RouteArgs</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>route(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>): <a href='#RouteArgs'>RouteArgs</a></code></pre>
 
 <h3 class="pdoc-module-header" id="TcpPorts" data-link-title="TcpPorts">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/securityGroupRule.ts#L67">
@@ -2569,7 +2569,7 @@ one private subnet if unspecified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L550">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
@@ -2666,7 +2666,7 @@ multiple subnets with the same type.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L414">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>Tags</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VpcSubnetArgs-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ec2/vpc.ts#L364">property <b>type</b></a>
 </h4>

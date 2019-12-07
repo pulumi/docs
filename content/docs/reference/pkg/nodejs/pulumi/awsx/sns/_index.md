@@ -35,7 +35,7 @@ meta_desc: "Explore members of the sns module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#SnsMetricName'>SnsMetricName</a>, change: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#SnsMetricName'>SnsMetricName</a>, change: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/SNS metric with the requested [metricName]. See
@@ -77,7 +77,7 @@ Amazon Simple Notification Service sends the following dimensions to CloudWatch:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfMessagesPublished(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfMessagesPublished(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages published to your Amazon SNS topics.
@@ -93,7 +93,7 @@ Valid Statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsDelivered(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsDelivered(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages successfully delivered from your Amazon SNS topics to subscribing
@@ -115,7 +115,7 @@ Valid Statistics: Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFailed(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFailed(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages that Amazon SNS failed to deliver.
@@ -139,7 +139,7 @@ Valid Statistics: Sum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFilteredOut_InvalidAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFilteredOut_InvalidAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages that were rejected by subscription filter policies because the
@@ -157,7 +157,7 @@ Valid Statistics: Sum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFilteredOut_NoMessageAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfNotificationsFilteredOut_NoMessageAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages that were rejected by subscription filter policies because the
@@ -174,7 +174,7 @@ Valid Statistics: Sum, Average
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>publishSize(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>publishSize(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of database connections in use.
@@ -190,7 +190,7 @@ Valid Statistics: Minimum, Maximum, Average and Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>smsMonthToDateSpentUSD(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsMonthToDateSpentUSD(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The charges you have accrued since the start of the current calendar month for sending SMS
@@ -210,7 +210,7 @@ Valid Statistics: Maximum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>smsSuccessRate(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsSuccessRate(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The rate of successful SMS message deliveries.
@@ -225,7 +225,7 @@ Valid Statistics: Sum, Average, Data Samples
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SnsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SnsMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="SnsMetricChange-application">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/sns/metrics.ts#L38">property <b>application</b></a>
 </h4>
@@ -316,7 +316,7 @@ Filters on the message type of SMS message.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -334,7 +334,7 @@ Optional topic to filter down to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
