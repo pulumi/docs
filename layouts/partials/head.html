@@ -114,7 +114,8 @@
     {{ if and (not .IsHome) (.Section) (in "docs blog authors tags" .Section) }}
         <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", function(event) {
+            // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
+            window.addEventListener("load", function(event) {
                 anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
             });
         </script>
