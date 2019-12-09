@@ -1,7 +1,6 @@
 ---
 title: "KubeCon NA 2019: Are you about to break Prod?"
 date: 2019-11-26
-draft: true
 meta_desc: "In this post, we recap and add more details to our KubeCon talk on setting up ephemeral environments. We will highlight how to acceptance test your application and infrastructure using ephemeral environments."
 meta_image: demo-arch.jpg
 authors: ["erin-krengel"]
