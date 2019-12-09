@@ -1,5 +1,6 @@
 ---
 title: Module rds
+title_tag: Module rds | Package pulumi_aws | Python SDK
 linktitle: rds
 notitle: true
 ---

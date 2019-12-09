@@ -1,5 +1,6 @@
 ---
 title: Module synthetics
+title_tag: Module synthetics | Package pulumi_newrelic | Python SDK
 linktitle: synthetics
 notitle: true
 ---

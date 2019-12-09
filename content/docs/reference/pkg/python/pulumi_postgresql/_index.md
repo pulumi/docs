@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_postgresql
+title_tag: Package pulumi_postgresql | Python SDK
 linktitle: pulumi_postgresql
 notitle: true
 ---

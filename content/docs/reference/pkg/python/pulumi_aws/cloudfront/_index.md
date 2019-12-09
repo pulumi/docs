@@ -1,5 +1,6 @@
 ---
 title: Module cloudfront
+title_tag: Module cloudfront | Package pulumi_aws | Python SDK
 linktitle: cloudfront
 notitle: true
 ---

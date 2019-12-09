@@ -1,5 +1,6 @@
 ---
 title: Module networking
+title_tag: Module networking | Package pulumi_openstack | Python SDK
 linktitle: networking
 notitle: true
 ---

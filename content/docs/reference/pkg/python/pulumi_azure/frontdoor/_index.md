@@ -1,5 +1,6 @@
 ---
 title: Module frontdoor
+title_tag: Module frontdoor | Package pulumi_azure | Python SDK
 linktitle: frontdoor
 notitle: true
 ---

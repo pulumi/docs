@@ -1,5 +1,6 @@
 ---
 title: Module projects
+title_tag: Module projects | Package pulumi_gcp | Python SDK
 linktitle: projects
 notitle: true
 ---

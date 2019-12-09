@@ -1,5 +1,6 @@
 ---
 title: Module docdb
+title_tag: Module docdb | Package pulumi_aws | Python SDK
 linktitle: docdb
 notitle: true
 ---

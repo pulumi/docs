@@ -1,5 +1,6 @@
 ---
 title: Module github
+title_tag: Module github | Package pulumi_vault | Python SDK
 linktitle: github
 notitle: true
 ---

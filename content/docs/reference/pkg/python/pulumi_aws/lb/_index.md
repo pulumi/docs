@@ -1,5 +1,6 @@
 ---
 title: Module lb
+title_tag: Module lb | Package pulumi_aws | Python SDK
 linktitle: lb
 notitle: true
 ---

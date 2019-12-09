@@ -1,5 +1,6 @@
 ---
 title: Module gcp
+title_tag: Module gcp | Package pulumi_vault | Python SDK
 linktitle: gcp
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module mssql
+title_tag: Module mssql | Package pulumi_azure | Python SDK
 linktitle: mssql
 notitle: true
 ---

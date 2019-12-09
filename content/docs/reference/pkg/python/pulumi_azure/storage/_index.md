@@ -1,5 +1,6 @@
 ---
 title: Module storage
+title_tag: Module storage | Package pulumi_azure | Python SDK
 linktitle: storage
 notitle: true
 ---

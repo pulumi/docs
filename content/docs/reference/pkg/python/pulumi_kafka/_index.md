@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_kafka
+title_tag: Package pulumi_kafka | Python SDK
 linktitle: pulumi_kafka
 notitle: true
 ---

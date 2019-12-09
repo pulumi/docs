@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_datadog
+title_tag: Package pulumi_datadog | Python SDK
 linktitle: pulumi_datadog
 notitle: true
 ---

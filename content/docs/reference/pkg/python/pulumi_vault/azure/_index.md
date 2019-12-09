@@ -1,5 +1,6 @@
 ---
 title: Module azure
+title_tag: Module azure | Package pulumi_vault | Python SDK
 linktitle: azure
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module kms
+title_tag: Module kms | Package pulumi_gcp | Python SDK
 linktitle: kms
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module autoscale
+title_tag: Module autoscale | Package pulumi_azure | Python SDK
 linktitle: autoscale
 notitle: true
 ---

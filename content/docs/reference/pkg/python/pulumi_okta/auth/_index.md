@@ -1,5 +1,6 @@
 ---
 title: Module auth
+title_tag: Module auth | Package pulumi_okta | Python SDK
 linktitle: auth
 notitle: true
 ---

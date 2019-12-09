@@ -1,5 +1,6 @@
 ---
 title: Module privatedns
+title_tag: Module privatedns | Package pulumi_azure | Python SDK
 linktitle: privatedns
 notitle: true
 ---

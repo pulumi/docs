@@ -1,5 +1,6 @@
 ---
 title: Module ses
+title_tag: Module ses | Package pulumi_aws | Python SDK
 linktitle: ses
 notitle: true
 ---

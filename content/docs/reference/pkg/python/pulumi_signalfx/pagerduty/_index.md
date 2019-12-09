@@ -1,5 +1,6 @@
 ---
 title: Module pagerduty
+title_tag: Module pagerduty | Package pulumi_signalfx | Python SDK
 linktitle: pagerduty
 notitle: true
 ---

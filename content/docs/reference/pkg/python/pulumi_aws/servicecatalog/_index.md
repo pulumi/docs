@@ -1,5 +1,6 @@
 ---
 title: Module servicecatalog
+title_tag: Module servicecatalog | Package pulumi_aws | Python SDK
 linktitle: servicecatalog
 notitle: true
 ---

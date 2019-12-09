@@ -1,5 +1,6 @@
 ---
 title: Module bot
+title_tag: Module bot | Package pulumi_azure | Python SDK
 linktitle: bot
 notitle: true
 ---

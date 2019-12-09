@@ -1,5 +1,6 @@
 ---
 title: Module appsync
+title_tag: Module appsync | Package pulumi_aws | Python SDK
 linktitle: appsync
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_cloudflare
+title_tag: Package pulumi_cloudflare | Python SDK
 linktitle: pulumi_cloudflare
 notitle: true
 ---

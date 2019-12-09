@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_aws
+title_tag: Package pulumi_aws | Python SDK
 linktitle: pulumi_aws
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module trustedorigin
+title_tag: Module trustedorigin | Package pulumi_okta | Python SDK
 linktitle: trustedorigin
 notitle: true
 ---

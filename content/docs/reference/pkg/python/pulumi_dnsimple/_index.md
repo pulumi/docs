@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_dnsimple
+title_tag: Package pulumi_dnsimple | Python SDK
 linktitle: pulumi_dnsimple
 notitle: true
 ---

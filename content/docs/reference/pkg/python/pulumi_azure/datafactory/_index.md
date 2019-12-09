@@ -1,5 +1,6 @@
 ---
 title: Module datafactory
+title_tag: Module datafactory | Package pulumi_azure | Python SDK
 linktitle: datafactory
 notitle: true
 ---

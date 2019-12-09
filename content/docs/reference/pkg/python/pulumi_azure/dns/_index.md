@@ -1,5 +1,6 @@
 ---
 title: Module dns
+title_tag: Module dns | Package pulumi_azure | Python SDK
 linktitle: dns
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module privatelink
+title_tag: Module privatelink | Package pulumi_azure | Python SDK
 linktitle: privatelink
 notitle: true
 ---

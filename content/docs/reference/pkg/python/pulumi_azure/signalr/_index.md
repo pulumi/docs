@@ -1,5 +1,6 @@
 ---
 title: Module signalr
+title_tag: Module signalr | Package pulumi_azure | Python SDK
 linktitle: signalr
 notitle: true
 ---

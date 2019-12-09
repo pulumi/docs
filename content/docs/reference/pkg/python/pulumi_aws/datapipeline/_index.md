@@ -1,5 +1,6 @@
 ---
 title: Module datapipeline
+title_tag: Module datapipeline | Package pulumi_aws | Python SDK
 linktitle: datapipeline
 notitle: true
 ---

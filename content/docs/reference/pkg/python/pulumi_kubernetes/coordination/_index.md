@@ -1,5 +1,6 @@
 ---
 title: Module coordination
+title_tag: Module coordination | Package pulumi_kubernetes | Python SDK
 linktitle: coordination
 notitle: true
 ---

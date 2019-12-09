@@ -1,5 +1,6 @@
 ---
 title: Module ec2clientvpn
+title_tag: Module ec2clientvpn | Package pulumi_aws | Python SDK
 linktitle: ec2clientvpn
 notitle: true
 ---

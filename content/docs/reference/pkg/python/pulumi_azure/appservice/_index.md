@@ -1,5 +1,6 @@
 ---
 title: Module appservice
+title_tag: Module appservice | Package pulumi_azure | Python SDK
 linktitle: appservice
 notitle: true
 ---

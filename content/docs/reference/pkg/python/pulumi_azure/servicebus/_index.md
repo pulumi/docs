@@ -1,5 +1,6 @@
 ---
 title: Module servicebus
+title_tag: Module servicebus | Package pulumi_azure | Python SDK
 linktitle: servicebus
 notitle: true
 ---

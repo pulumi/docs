@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_azure
+title_tag: Package pulumi_azure | Python SDK
 linktitle: pulumi_azure
 notitle: true
 ---

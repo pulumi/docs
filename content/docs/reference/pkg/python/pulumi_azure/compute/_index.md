@@ -1,5 +1,6 @@
 ---
 title: Module compute
+title_tag: Module compute | Package pulumi_azure | Python SDK
 linktitle: compute
 notitle: true
 ---

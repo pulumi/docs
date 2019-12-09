@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_consul
+title_tag: Package pulumi_consul | Python SDK
 linktitle: pulumi_consul
 notitle: true
 ---

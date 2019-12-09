@@ -1,5 +1,6 @@
 ---
 title: Module healthcare
+title_tag: Module healthcare | Package pulumi_azure | Python SDK
 linktitle: healthcare
 notitle: true
 ---

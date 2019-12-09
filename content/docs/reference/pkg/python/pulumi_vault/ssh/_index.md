@@ -1,5 +1,6 @@
 ---
 title: Module ssh
+title_tag: Module ssh | Package pulumi_vault | Python SDK
 linktitle: ssh
 notitle: true
 ---

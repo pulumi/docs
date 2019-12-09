@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_digitalocean
+title_tag: Package pulumi_digitalocean | Python SDK
 linktitle: pulumi_digitalocean
 notitle: true
 ---

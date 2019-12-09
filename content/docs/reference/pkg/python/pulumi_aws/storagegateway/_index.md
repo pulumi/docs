@@ -1,5 +1,6 @@
 ---
 title: Module storagegateway
+title_tag: Module storagegateway | Package pulumi_aws | Python SDK
 linktitle: storagegateway
 notitle: true
 ---

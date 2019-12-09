@@ -1,5 +1,6 @@
 ---
 title: Module cloud9
+title_tag: Module cloud9 | Package pulumi_aws | Python SDK
 linktitle: cloud9
 notitle: true
 ---

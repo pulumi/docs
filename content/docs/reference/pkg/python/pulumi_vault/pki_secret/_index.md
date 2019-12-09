@@ -1,5 +1,6 @@
 ---
 title: Module pki_secret
+title_tag: Module pki_secret | Package pulumi_vault | Python SDK
 linktitle: pki_secret
 notitle: true
 ---

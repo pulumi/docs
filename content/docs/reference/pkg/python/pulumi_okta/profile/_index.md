@@ -1,5 +1,6 @@
 ---
 title: Module profile
+title_tag: Module profile | Package pulumi_okta | Python SDK
 linktitle: profile
 notitle: true
 ---

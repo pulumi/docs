@@ -1,5 +1,6 @@
 ---
 title: Module containerservice
+title_tag: Module containerservice | Package pulumi_azure | Python SDK
 linktitle: containerservice
 notitle: true
 ---

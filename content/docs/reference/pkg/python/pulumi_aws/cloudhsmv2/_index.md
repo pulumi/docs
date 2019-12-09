@@ -1,5 +1,6 @@
 ---
 title: Module cloudhsmv2
+title_tag: Module cloudhsmv2 | Package pulumi_aws | Python SDK
 linktitle: cloudhsmv2
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module lightsail
+title_tag: Module lightsail | Package pulumi_aws | Python SDK
 linktitle: lightsail
 notitle: true
 ---

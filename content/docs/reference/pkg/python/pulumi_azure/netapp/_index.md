@@ -1,5 +1,6 @@
 ---
 title: Module netapp
+title_tag: Module netapp | Package pulumi_azure | Python SDK
 linktitle: netapp
 notitle: true
 ---

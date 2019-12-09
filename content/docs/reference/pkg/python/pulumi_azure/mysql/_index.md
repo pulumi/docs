@@ -1,5 +1,6 @@
 ---
 title: Module mysql
+title_tag: Module mysql | Package pulumi_azure | Python SDK
 linktitle: mysql
 notitle: true
 ---

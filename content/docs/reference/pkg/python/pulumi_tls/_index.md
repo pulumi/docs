@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_tls
+title_tag: Package pulumi_tls | Python SDK
 linktitle: pulumi_tls
 notitle: true
 ---

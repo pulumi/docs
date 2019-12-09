@@ -1,5 +1,6 @@
 ---
 title: Module secretsmanager
+title_tag: Module secretsmanager | Package pulumi_aws | Python SDK
 linktitle: secretsmanager
 notitle: true
 ---
