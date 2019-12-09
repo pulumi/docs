@@ -55,6 +55,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
     * [**Kubernetes Extensions** (`@pulumi/kubernetesx`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/kubernetesx" >}}) - simpler interface for working with Kubernetes
 
 * [**Aiven** (`@pulumi/aiven`)]({{< relref "nodejs/pulumi/aiven" >}})
+* [**CloudAMQP** (`@pulumi/cloudamqp`)]({{< relref "nodejs/pulumi/cloudamqp" >}})
 * [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
 * [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
 * [**Datadog** (`@pulumi/datadog`)]({{< relref "nodejs/pulumi/datadog" >}})
@@ -87,6 +88,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Kubernetes** (`pulumi_kubernetes`)]({{< relref "python/pulumi_kubernetes" >}})
 
 * [**Aiven** (`pulumi_aiven`)]({{< relref "python/pulumi_aiven" >}})
+* [**CloudAMQP** (`pulumi_cloudamqp`)]({{< relref "python/pulumi_cloudamqp" >}})
 * [**Cloudflare** (`pulumi_cloudflare`)]({{< relref "python/pulumi_cloudflare" >}})
 * [**HashiCorp Consul** (`pulumi_consul`)]({{< relref "python/pulumi_consul" >}})
 * [**Datadog** (`pulumi_datadog`)]({{< relref "python/pulumi_datadog" >}})

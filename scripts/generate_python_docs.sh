@@ -9,6 +9,7 @@ PACKAGES=(
   "pulumi_aws"
   "pulumi_azure"
   "pulumi_azuread"
+  "pulumi_cloudamqp"
   "pulumi_cloudflare"
   "pulumi_consul"
   "pulumi_datadog"
