@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_f5bigip
+title_tag: Package pulumi_f5bigip | Python SDK
 linktitle: pulumi_f5bigip
 notitle: true
 ---

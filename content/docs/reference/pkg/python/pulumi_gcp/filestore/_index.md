@@ -1,5 +1,6 @@
 ---
 title: Module filestore
+title_tag: Module filestore | Package pulumi_gcp | Python SDK
 linktitle: filestore
 notitle: true
 ---

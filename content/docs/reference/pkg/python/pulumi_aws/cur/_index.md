@@ -1,5 +1,6 @@
 ---
 title: Module cur
+title_tag: Module cur | Package pulumi_aws | Python SDK
 linktitle: cur
 notitle: true
 ---

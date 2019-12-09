@@ -1,5 +1,6 @@
 ---
 title: Module token
+title_tag: Module token | Package pulumi_vault | Python SDK
 linktitle: token
 notitle: true
 ---

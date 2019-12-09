@@ -1,5 +1,6 @@
 ---
 title: Module vpnaas
+title_tag: Module vpnaas | Package pulumi_openstack | Python SDK
 linktitle: vpnaas
 notitle: true
 ---

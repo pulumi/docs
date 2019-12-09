@@ -1,5 +1,6 @@
 ---
 title: Module policy
+title_tag: Module policy | Package pulumi_azure | Python SDK
 linktitle: policy
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module inline
+title_tag: Module inline | Package pulumi_okta | Python SDK
 linktitle: inline
 notitle: true
 ---

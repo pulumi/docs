@@ -1,5 +1,6 @@
 ---
 title: Module recoveryservices
+title_tag: Module recoveryservices | Package pulumi_azure | Python SDK
 linktitle: recoveryservices
 notitle: true
 ---

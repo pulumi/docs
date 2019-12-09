@@ -1,5 +1,6 @@
 ---
 title: Module datalake
+title_tag: Module datalake | Package pulumi_azure | Python SDK
 linktitle: datalake
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module network
+title_tag: Module network | Package pulumi_okta | Python SDK
 linktitle: network
 notitle: true
 ---

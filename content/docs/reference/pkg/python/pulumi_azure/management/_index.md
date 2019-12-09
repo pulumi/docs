@@ -1,5 +1,6 @@
 ---
 title: Module management
+title_tag: Module management | Package pulumi_azure | Python SDK
 linktitle: management
 notitle: true
 ---

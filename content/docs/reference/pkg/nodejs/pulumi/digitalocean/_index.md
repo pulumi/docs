@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/digitalocean"
+title_tag: "Package @pulumi/digitalocean | Node.js SDK"
 linktitle: "@pulumi/digitalocean"
 meta_desc: "Explore members of the @pulumi/digitalocean package."
 ---
@@ -281,14 +282,14 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 <h2 id="CertificateTypes" data-link-title="CertificateTypes">namespace <strong>CertificateTypes</strong></h2>
 <h3 class="pdoc-module-header" id="Custom" data-link-title="Custom">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificateType.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificateType.ts#L16">
         const <strong>Custom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Custom: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;custom&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="LetsEncrypt" data-link-title="LetsEncrypt">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificateType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificateType.ts#L17">
         const <strong>LetsEncrypt</strong>
     </a>
 </h3>
@@ -296,49 +297,49 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> LetsEncrypt: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;lets_encrypt&#34;</span>;</code></pre>
 <h2 id="DatabaseSlugs" data-link-title="DatabaseSlugs">namespace <strong>DatabaseSlugs</strong></h2>
 <h3 class="pdoc-module-header" id="DB_16VPCU64GB" data-link-title="DB_16VPCU64GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L22">
         const <strong>DB_16VPCU64GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_16VPCU64GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-16vcpu-64gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_1VPCU1GB" data-link-title="DB_1VPCU1GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L16">
         const <strong>DB_1VPCU1GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_1VPCU1GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-1gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_1VPCU2GB" data-link-title="DB_1VPCU2GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L17">
         const <strong>DB_1VPCU2GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_1VPCU2GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-2gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_2VPCU4GB" data-link-title="DB_2VPCU4GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L18">
         const <strong>DB_2VPCU4GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_2VPCU4GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-2vcpu-4gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_4VPCU8GB" data-link-title="DB_4VPCU8GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L19">
         const <strong>DB_4VPCU8GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_4VPCU8GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-4vcpu-8gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_6VPCU16GB" data-link-title="DB_6VPCU16GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L20">
         const <strong>DB_6VPCU16GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DB_6VPCU16GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-6vcpu-16gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DB_8VPCU32GB" data-link-title="DB_8VPCU32GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L21">
         const <strong>DB_8VPCU32GB</strong>
     </a>
 </h3>
@@ -346,280 +347,280 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> DB_8VPCU32GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-8vcpu-32gb&#34;</span>;</code></pre>
 <h2 id="DropletSlugs" data-link-title="DropletSlugs">namespace <strong>DropletSlugs</strong></h2>
 <h3 class="pdoc-module-header" id="Droplet16GB" data-link-title="Droplet16GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L21">
         const <strong>Droplet16GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;16gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet1GB" data-link-title="Droplet1GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L17">
         const <strong>Droplet1GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;1gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet2GB" data-link-title="Droplet2GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L18">
         const <strong>Droplet2GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;2gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet32GB" data-link-title="Droplet32GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L22">
         const <strong>Droplet32GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;32gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet48GB" data-link-title="Droplet48GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L23">
         const <strong>Droplet48GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;48gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet4GB" data-link-title="Droplet4GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L19">
         const <strong>Droplet4GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;4gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet512mb" data-link-title="Droplet512mb">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L16">
         const <strong>Droplet512mb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet512mb: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;512mb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet64GB" data-link-title="Droplet64GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L24">
         const <strong>Droplet64GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;64gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Droplet8GB" data-link-title="Droplet8GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L20">
         const <strong>Droplet8GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Droplet8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;8gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletC16" data-link-title="DropletC16">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L28">
         const <strong>DropletC16</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletC16: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-16&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletC2" data-link-title="DropletC2">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L25">
         const <strong>DropletC2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletC2: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletC32" data-link-title="DropletC32">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L29">
         const <strong>DropletC32</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletC32: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-32&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletC4" data-link-title="DropletC4">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L26">
         const <strong>DropletC4</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletC4: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-4&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletC8" data-link-title="DropletC8">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L27">
         const <strong>DropletC8</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletC8: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-8&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG16VCPU64GB" data-link-title="DropletG16VCPU64GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L47">
         const <strong>DropletG16VCPU64GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG16VCPU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-16vcpu-64gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG2VCPU8GB" data-link-title="DropletG2VCPU8GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L44">
         const <strong>DropletG2VCPU8GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG2VCPU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-2vcpu-8gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG32VCPU128GB" data-link-title="DropletG32VCPU128GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L48">
         const <strong>DropletG32VCPU128GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG32VCPU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-32vcpu-128gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG40VCPU160GB" data-link-title="DropletG40VCPU160GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L49">
         const <strong>DropletG40VCPU160GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG40VCPU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-40vcpu-160gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG4VCPU16GB" data-link-title="DropletG4VCPU16GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L45">
         const <strong>DropletG4VCPU16GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG4VCPU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-4vcpu-16gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletG8VCPU32GB" data-link-title="DropletG8VCPU32GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L46">
         const <strong>DropletG8VCPU32GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletG8VCPU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-8vcpu-32gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD16VCPU64GB" data-link-title="DropletGD16VCPU64GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L53">
         const <strong>DropletGD16VCPU64GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD16VCPU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-16vcpu-64gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD2VCPU8GB" data-link-title="DropletGD2VCPU8GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L50">
         const <strong>DropletGD2VCPU8GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD2VCPU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-2vcpu-8gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD32VCPU128GB" data-link-title="DropletGD32VCPU128GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L54">
         const <strong>DropletGD32VCPU128GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD32VCPU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-32vcpu-128gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD40VCPU160GB" data-link-title="DropletGD40VCPU160GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L55">
         const <strong>DropletGD40VCPU160GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD40VCPU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-40vcpu-160gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD4VCPU16GB" data-link-title="DropletGD4VCPU16GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L51">
         const <strong>DropletGD4VCPU16GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD4VCPU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-4vcpu-16gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletGD8VCPU32GB" data-link-title="DropletGD8VCPU32GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L52">
         const <strong>DropletGD8VCPU32GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletGD8VCPU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-8vcpu-32gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS12VCPU48GB" data-link-title="DropletS12VCPU48GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L39">
         const <strong>DropletS12VCPU48GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS12VCPU48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-12vcpu-48gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS16VCPU64GB" data-link-title="DropletS16VCPU64GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L40">
         const <strong>DropletS16VCPU64GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS16VCPU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-16vcpu-64gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS1VCPU1GB" data-link-title="DropletS1VCPU1GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L30">
         const <strong>DropletS1VCPU1GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS1VCPU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-1gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS1VCPU2GB" data-link-title="DropletS1VCPU2GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L31">
         const <strong>DropletS1VCPU2GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS1VCPU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-2gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS1VCPU3GB" data-link-title="DropletS1VCPU3GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L32">
         const <strong>DropletS1VCPU3GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS1VCPU3GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-3gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS20VCPU96GB" data-link-title="DropletS20VCPU96GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L41">
         const <strong>DropletS20VCPU96GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS20VCPU96GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-20vcpu-96gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS24VCPU128GB" data-link-title="DropletS24VCPU128GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L42">
         const <strong>DropletS24VCPU128GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS24VCPU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-24vcpu-128gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS2VCPU2GB" data-link-title="DropletS2VCPU2GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L33">
         const <strong>DropletS2VCPU2GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS2VCPU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-2gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS2VCPU4GB" data-link-title="DropletS2VCPU4GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L34">
         const <strong>DropletS2VCPU4GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS2VCPU4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-4gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS32VCPU192GB" data-link-title="DropletS32VCPU192GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L43">
         const <strong>DropletS32VCPU192GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS32VCPU192GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-32vcpu-192gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS3VCPU1GB" data-link-title="DropletS3VCPU1GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L35">
         const <strong>DropletS3VCPU1GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS3VCPU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-3vcpu-1gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS4VCPU8GB" data-link-title="DropletS4VCPU8GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L36">
         const <strong>DropletS4VCPU8GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS4VCPU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-4vcpu-8gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS6VCPU16GB" data-link-title="DropletS6VCPU16GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L37">
         const <strong>DropletS6VCPU16GB</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> DropletS6VCPU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-6vcpu-16gb&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DropletS8VCPU32GB" data-link-title="DropletS8VCPU32GB">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L38">
         const <strong>DropletS8VCPU32GB</strong>
     </a>
 </h3>
@@ -627,14 +628,14 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> DropletS8VCPU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-8vcpu-32gb&#34;</span>;</code></pre>
 <h2 id="FilesystemTypes" data-link-title="FilesystemTypes">namespace <strong>FilesystemTypes</strong></h2>
 <h3 class="pdoc-module-header" id="EXT4" data-link-title="EXT4">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/filesystemType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/filesystemType.ts#L17">
         const <strong>EXT4</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> EXT4: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;ext4&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="XFS" data-link-title="XFS">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/filesystemType.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/filesystemType.ts#L16">
         const <strong>XFS</strong>
     </a>
 </h3>
@@ -642,14 +643,14 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> XFS: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;xfs&#34;</span>;</code></pre>
 <h2 id="LoadBalancerAlgorithms" data-link-title="LoadBalancerAlgorithms">namespace <strong>LoadBalancerAlgorithms</strong></h2>
 <h3 class="pdoc-module-header" id="LeastConnections" data-link-title="LeastConnections">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadbalancerAlgorithm.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadbalancerAlgorithm.ts#L17">
         const <strong>LeastConnections</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> LeastConnections: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;least_connections&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RoundRobin" data-link-title="RoundRobin">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadbalancerAlgorithm.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadbalancerAlgorithm.ts#L16">
         const <strong>RoundRobin</strong>
     </a>
 </h3>
@@ -657,35 +658,35 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> RoundRobin: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;round_robin&#34;</span>;</code></pre>
 <h2 id="Protocols" data-link-title="Protocols">namespace <strong>Protocols</strong></h2>
 <h3 class="pdoc-module-header" id="HTTP" data-link-title="HTTP">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L19">
         const <strong>HTTP</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> HTTP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;http&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="HTTPS" data-link-title="HTTPS">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L20">
         const <strong>HTTPS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> HTTPS: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;https&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ICMP" data-link-title="ICMP">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L18">
         const <strong>ICMP</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> ICMP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;icmp&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="TCP" data-link-title="TCP">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L16">
         const <strong>TCP</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> TCP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;tcp&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UDP" data-link-title="UDP">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L17">
         const <strong>UDP</strong>
     </a>
 </h3>
@@ -693,56 +694,56 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> UDP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;udp&#34;</span>;</code></pre>
 <h2 id="RecordTypes" data-link-title="RecordTypes">namespace <strong>RecordTypes</strong></h2>
 <h3 class="pdoc-module-header" id="A" data-link-title="A">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L16">
         const <strong>A</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AAAA" data-link-title="AAAA">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L17">
         const <strong>AAAA</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CAA" data-link-title="CAA">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L18">
         const <strong>CAA</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CNAME" data-link-title="CNAME">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L19">
         const <strong>CNAME</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="MX" data-link-title="MX">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L20">
         const <strong>MX</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NS" data-link-title="NS">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L21">
         const <strong>NS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SRV" data-link-title="SRV">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L23">
         const <strong>SRV</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="TXT" data-link-title="TXT">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L22">
         const <strong>TXT</strong>
     </a>
 </h3>
@@ -750,84 +751,84 @@ import * as digitalocean from "@pulumi/digitalocean";
 <pre class="highlight"><code><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</code></pre>
 <h2 id="Regions" data-link-title="Regions">namespace <strong>Regions</strong></h2>
 <h3 class="pdoc-module-header" id="AMS2" data-link-title="AMS2">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L21">
         const <strong>AMS2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AMS2: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AMS3" data-link-title="AMS3">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L22">
         const <strong>AMS3</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AMS3: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams3&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="BLR1" data-link-title="BLR1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L27">
         const <strong>BLR1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> BLR1: <a href='#Region'>Region</a> = <span class='s2'>&#34;blr1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="FRA1" data-link-title="FRA1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L23">
         const <strong>FRA1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> FRA1: <a href='#Region'>Region</a> = <span class='s2'>&#34;fra1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="LON1" data-link-title="LON1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L20">
         const <strong>LON1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> LON1: <a href='#Region'>Region</a> = <span class='s2'>&#34;lon1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NYC1" data-link-title="NYC1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L16">
         const <strong>NYC1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NYC1: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NYC2" data-link-title="NYC2">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L17">
         const <strong>NYC2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NYC2: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NYC3" data-link-title="NYC3">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L18">
         const <strong>NYC3</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NYC3: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc3&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SFO1" data-link-title="SFO1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L25">
         const <strong>SFO1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SFO1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SFO2" data-link-title="SFO2">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L26">
         const <strong>SFO2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SFO2: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SGP1" data-link-title="SGP1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L19">
         const <strong>SGP1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SGP1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sgp1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="TOR1" data-link-title="TOR1">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L24">
         const <strong>TOR1</strong>
     </a>
 </h3>
@@ -836,7 +837,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cdn" data-link-title="Cdn">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L12">
         Resource <strong>Cdn</strong>
     </a>
 </h3>
@@ -848,7 +849,7 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown.
 
 <h4 class="pdoc-member-header" id="Cdn-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -862,7 +863,7 @@ Create a Cdn resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cdn-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -873,14 +874,14 @@ Get an existing Cdn resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cdn-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cdn-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -891,7 +892,7 @@ Returns true if the given object is an instance of Cdn.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cdn-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L42">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L42">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -899,7 +900,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 ID of a DigitalOcean managed TLS certificate for use with custom domains
 
 <h4 class="pdoc-member-header" id="Cdn-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L46">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L46">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -907,7 +908,7 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 The date and time when the CDN Endpoint was created.
 
 <h4 class="pdoc-member-header" id="Cdn-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L50">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L50">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -915,7 +916,7 @@ The date and time when the CDN Endpoint was created.
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="Cdn-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L54">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L54">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -923,7 +924,7 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 
 <h4 class="pdoc-member-header" id="Cdn-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -932,7 +933,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cdn-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L58">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L58">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -940,7 +941,7 @@ deployments and may be missing (undefined) during planning phases.
 The fully qualified domain name, (FQDN) for a Space.
 
 <h4 class="pdoc-member-header" id="Cdn-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L63">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L63">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -949,7 +950,7 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificateId`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 
 <h4 class="pdoc-member-header" id="Cdn-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -958,7 +959,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L19">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -975,7 +976,7 @@ Let's Encrypt.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown.
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -989,7 +990,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -1000,14 +1001,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1018,7 +1019,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L51">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L51">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1028,7 +1029,7 @@ between the certificate authority's certificate and your domain's TLS
 certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="Certificate-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L57">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L57">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1038,7 +1039,7 @@ which the certificate will be issued. The domains must be managed using
 DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1047,7 +1048,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-leafCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L62">property <b>leafCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L62">property <b>leafCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>leafCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1056,7 +1057,7 @@ The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1065,7 @@ TLS certificate. Only valid when type is `custom`.
 The name of the certificate for identification.
 
 <h4 class="pdoc-member-header" id="Certificate-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L70">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L70">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1073,7 @@ The name of the certificate for identification.
 The expiration date of the certificate
 
 <h4 class="pdoc-member-header" id="Certificate-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L75">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L75">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1081,7 +1082,7 @@ The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="Certificate-sha1Fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L79">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L79">property <b>sha1Fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sha1Fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,12 +1090,12 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 The SHA-1 fingerprint of the certificate
 
 <h4 class="pdoc-member-header" id="Certificate-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L80">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L80">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L85">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L85">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateType'>CertificateType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1103,7 +1104,7 @@ The type of certificate to provision. Can be either
 `custom` or `letsEncrypt`. Defaults to `custom`.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1112,7 +1113,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatabaseCluster" data-link-title="DatabaseCluster">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L58">
         Resource <strong>DatabaseCluster</strong>
     </a>
 </h3>
@@ -1166,7 +1167,7 @@ const redisExample = new digitalocean.DatabaseCluster("redis-example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L152"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L152"> <b>constructor</b></a>
 </h4>
 
 
@@ -1180,7 +1181,7 @@ Create a DatabaseCluster resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -1191,14 +1192,14 @@ Get an existing DatabaseCluster resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1209,7 +1210,7 @@ Returns true if the given object is an instance of DatabaseCluster.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L88">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L88">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1217,7 +1218,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the cluster's default database.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L92">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L92">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1226,7 @@ Name of the cluster's default database.
 Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L96">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L96">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1234,7 @@ Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, 
 Database cluster's hostname.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1242,7 +1243,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-maintenanceWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L100">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L100">property <b>maintenanceWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#DatabaseClusterMaintenanceWindow'>outputs.DatabaseClusterMaintenanceWindow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1250,7 +1251,7 @@ deployments and may be missing (undefined) during planning phases.
 Defines when the automatic maintenance should be performed for the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1258,7 +1259,7 @@ Defines when the automatic maintenance should be performed for the database clus
 The name of the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L108">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L108">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1266,7 +1267,7 @@ The name of the database cluster.
 Number of nodes that will be included in the cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L112">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L112">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1275,7 @@ Number of nodes that will be included in the cluster.
 Password for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L116">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L116">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1282,7 +1283,7 @@ Password for the cluster's default user.
 Network port that the database cluster is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L120">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L120">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1290,7 +1291,7 @@ Network port that the database cluster is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L124">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L124">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1299,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L128">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L128">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -1306,7 +1307,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 DigitalOcean region where the cluster will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L132">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L132">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</code></pre>
@@ -1314,7 +1315,7 @@ DigitalOcean region where the cluster will reside.
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L136">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L136">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1322,7 +1323,7 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 A list of tag names to be applied to the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L140">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L140">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,7 +1331,7 @@ A list of tag names to be applied to the database cluster.
 The full URI for connecting to the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L144">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L144">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1338,7 +1339,7 @@ The full URI for connecting to the database cluster.
 The uniform resource name of the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L148">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L148">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,7 +1347,7 @@ The uniform resource name of the database cluster.
 Username for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseCluster-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L152">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L152">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1354,7 +1355,7 @@ Username for the cluster's default user.
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 
 <h3 class="pdoc-module-header" id="DatabaseConnectionPool" data-link-title="DatabaseConnectionPool">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L14">
         Resource <strong>DatabaseConnectionPool</strong>
     </a>
 </h3>
@@ -1366,7 +1367,7 @@ Provides a DigitalOcean database connection pool resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1380,7 +1381,7 @@ Create a DatabaseConnectionPool resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -1391,14 +1392,14 @@ Get an existing DatabaseConnectionPool resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1409,7 +1410,7 @@ Returns true if the given object is an instance of DatabaseConnectionPool.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L44">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L44">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1417,7 +1418,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L48">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L48">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1425,7 +1426,7 @@ The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 The database for use with the connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L52">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L52">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1433,7 +1434,7 @@ The database for use with the connection pool.
 The hostname used to connect to the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1442,7 +1443,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L56">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L56">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,7 +1451,7 @@ deployments and may be missing (undefined) during planning phases.
 The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1459,7 @@ The PGBouncer transaction mode for the connection pool. The allowed values are s
 The name for the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L64">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L64">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,7 +1467,7 @@ The name for the database connection pool.
 Password for the connection pool's user.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L68">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L68">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1474,7 +1475,7 @@ Password for the connection pool's user.
 Network port that the database connection pool is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L72">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L72">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1483,7 @@ Network port that the database connection pool is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L76">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L76">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1491,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L80">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L80">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1498,7 +1499,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 The desired size of the PGBouncer connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L84">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L84">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1507,7 @@ The desired size of the PGBouncer connection pool.
 The full URI for connecting to the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1515,7 +1516,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPool-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L88">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L88">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1523,7 +1524,7 @@ deployments.
 The name of the database user for use with the connection pool.
 
 <h3 class="pdoc-module-header" id="DatabaseDb" data-link-title="DatabaseDb">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L14">
         Resource <strong>DatabaseDb</strong>
     </a>
 </h3>
@@ -1535,7 +1536,7 @@ Provides a DigitalOcean database resource. When creating a new database cluster,
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -1549,7 +1550,7 @@ Create a DatabaseDb resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -1560,14 +1561,14 @@ Get an existing DatabaseDb resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseDb-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1578,7 +1579,7 @@ Returns true if the given object is an instance of DatabaseDb.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L44">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L44">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1586,7 +1587,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1595,7 +1596,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1604,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the database.
 
 <h4 class="pdoc-member-header" id="DatabaseDb-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1612,7 +1613,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatabaseReplica" data-link-title="DatabaseReplica">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L16">
         Resource <strong>DatabaseReplica</strong>
     </a>
 </h3>
@@ -1624,7 +1625,7 @@ Provides a DigitalOcean database replica resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_replica.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1638,7 +1639,7 @@ Create a DatabaseReplica resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -1649,14 +1650,14 @@ Get an existing DatabaseReplica resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1667,7 +1668,7 @@ Returns true if the given object is an instance of DatabaseReplica.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L46">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L46">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1676,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L50">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L50">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +1684,7 @@ The ID of the original source database cluster.
 Name of the replica's default database.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L54">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L54">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1691,7 +1692,7 @@ Name of the replica's default database.
 Database replica's hostname.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1700,7 +1701,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1708,7 +1709,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the database replica.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L62">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L62">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1716,7 +1717,7 @@ The name for the database replica.
 Password for the replica's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L66">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L66">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1724,7 +1725,7 @@ Password for the replica's default user.
 Network port that the database replica is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L70">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L70">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1732,7 +1733,7 @@ Network port that the database replica is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L74">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L74">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1740,7 +1741,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L78">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L78">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1748,7 +1749,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 DigitalOcean region where the replica will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L82">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L82">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1756,12 +1757,12 @@ DigitalOcean region where the replica will reside.
 Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseReplica-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L87">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L87">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1770,7 @@ Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 The full URI for connecting to the database replica.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1778,7 +1779,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DatabaseReplica-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L91">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L91">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1786,7 +1787,7 @@ deployments.
 Username for the replica's default user.
 
 <h3 class="pdoc-module-header" id="DatabaseUser" data-link-title="DatabaseUser">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L16">
         Resource <strong>DatabaseUser</strong>
     </a>
 </h3>
@@ -1800,7 +1801,7 @@ Provides a DigitalOcean database user resource. When creating a new database clu
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1814,7 +1815,7 @@ Create a DatabaseUser resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -1825,14 +1826,14 @@ Get an existing DatabaseUser resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1843,7 +1844,7 @@ Returns true if the given object is an instance of DatabaseUser.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L46">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L46">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1851,7 +1852,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1860,7 +1861,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1868,7 +1869,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the database user.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L54">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L54">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1877,7 @@ The name for the database user.
 Password for the database user.
 
 <h4 class="pdoc-member-header" id="DatabaseUser-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L58">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L58">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1884,7 +1885,7 @@ Password for the database user.
 Role for the database user. The value will be either "primary" or "normal".
 
 <h4 class="pdoc-member-header" id="DatabaseUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1893,7 +1894,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DnsRecord" data-link-title="DnsRecord">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L16">
         Resource <strong>DnsRecord</strong>
     </a>
 </h3>
@@ -1905,7 +1906,7 @@ Provides a DigitalOcean DNS record resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown.
 
 <h4 class="pdoc-member-header" id="DnsRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -1919,7 +1920,7 @@ Create a DnsRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DnsRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -1930,14 +1931,14 @@ Get an existing DnsRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1948,7 +1949,7 @@ Returns true if the given object is an instance of DnsRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsRecord-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L46">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L46">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1956,7 +1957,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain to add the record to.
 
 <h4 class="pdoc-member-header" id="DnsRecord-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L50">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L50">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1964,7 +1965,7 @@ The domain to add the record to.
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 
 <h4 class="pdoc-member-header" id="DnsRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L54">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L54">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +1973,7 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 The FQDN of the record
 
 <h4 class="pdoc-member-header" id="DnsRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1981,7 +1982,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1989,7 +1990,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecord-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L62">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L62">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1997,7 +1998,7 @@ The name of the record.
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L66">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L66">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2005,7 +2006,7 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecord-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L70">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L70">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2013,7 +2014,7 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 
 <h4 class="pdoc-member-header" id="DnsRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L74">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L74">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2021,7 +2022,7 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 The time to live for the record, in seconds. Must be at least 0.
 
 <h4 class="pdoc-member-header" id="DnsRecord-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L78">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L78">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -2029,7 +2030,7 @@ The time to live for the record, in seconds. Must be at least 0.
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 
 <h4 class="pdoc-member-header" id="DnsRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2038,7 +2039,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DnsRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L82">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L82">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2046,7 +2047,7 @@ deployments.
 The value of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecord-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L86">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L86">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2054,7 +2055,7 @@ The value of the record.
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L14">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -2066,7 +2067,7 @@ Provides a DigitalOcean domain resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown.
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -2080,7 +2081,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -2091,14 +2092,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2109,7 +2110,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2118,7 +2119,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L45">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L45">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2127,7 +2128,7 @@ The IP address of the domain. If specified, this IP
 is used to created an initial A record for the domain.
 
 <h4 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2136,7 @@ is used to created an initial A record for the domain.
 The name of the domain
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2144,7 @@ The name of the domain
 The uniform resource name of the domain
 
 <h3 class="pdoc-module-header" id="Droplet" data-link-title="Droplet">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L32">
         Resource <strong>Droplet</strong>
     </a>
 </h3>
@@ -2171,7 +2172,7 @@ const web = new digitalocean.Droplet("web", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown.
 
 <h4 class="pdoc-member-header" id="Droplet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L162"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L162"> <b>constructor</b></a>
 </h4>
 
 
@@ -2185,7 +2186,7 @@ Create a Droplet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Droplet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -2196,14 +2197,14 @@ Get an existing Droplet resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Droplet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Droplet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2214,7 +2215,7 @@ Returns true if the given object is an instance of Droplet.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Droplet-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L63">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L63">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2223,12 +2224,12 @@ Boolean controlling if backups are made. Defaults to
 false.
 
 <h4 class="pdoc-member-header" id="Droplet-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L64">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L64">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Droplet-disk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L68">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L68">property <b>disk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2236,7 +2237,7 @@ false.
 The size of the instance's disk in GB
 
 <h4 class="pdoc-member-header" id="Droplet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2245,7 +2246,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Droplet-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L72">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L72">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2253,7 +2254,7 @@ deployments and may be missing (undefined) during planning phases.
 The Droplet image ID or slug.
 
 <h4 class="pdoc-member-header" id="Droplet-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L76">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L76">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2261,7 +2262,7 @@ The Droplet image ID or slug.
 The IPv4 address
 
 <h4 class="pdoc-member-header" id="Droplet-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L80">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L80">property <b>ipv4AddressPrivate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4AddressPrivate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2269,7 +2270,7 @@ The IPv4 address
 The private networking IPv4 address
 
 <h4 class="pdoc-member-header" id="Droplet-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L84">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L84">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2277,7 +2278,7 @@ The private networking IPv4 address
 Boolean controlling if IPv6 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Droplet-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L88">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L88">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2285,7 +2286,7 @@ Boolean controlling if IPv6 is enabled. Defaults to false.
 The IPv6 address
 
 <h4 class="pdoc-member-header" id="Droplet-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L92">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L92">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locked: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2293,12 +2294,12 @@ The IPv6 address
 Is the Droplet locked
 
 <h4 class="pdoc-member-header" id="Droplet-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L93">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L93">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Droplet-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L98">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L98">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2307,7 +2308,7 @@ Boolean controlling whether monitoring agent is installed.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="Droplet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2315,7 +2316,7 @@ Defaults to false.
 The Droplet name.
 
 <h4 class="pdoc-member-header" id="Droplet-priceHourly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L106">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L106">property <b>priceHourly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priceHourly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2323,7 +2324,7 @@ The Droplet name.
 Droplet hourly price
 
 <h4 class="pdoc-member-header" id="Droplet-priceMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L110">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L110">property <b>priceMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priceMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2331,7 +2332,7 @@ Droplet hourly price
 Droplet monthly price
 
 <h4 class="pdoc-member-header" id="Droplet-privateNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L115">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L115">property <b>privateNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateNetworking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2340,7 +2341,7 @@ Boolean controlling if private networks are
 enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Droplet-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L119">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L119">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -2348,7 +2349,7 @@ enabled. Defaults to false.
 The region to start in.
 
 <h4 class="pdoc-member-header" id="Droplet-resizeDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L126">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L126">property <b>resizeDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resizeDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2359,7 +2360,7 @@ only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
 
 <h4 class="pdoc-member-header" id="Droplet-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L130">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L130">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -2367,7 +2368,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
 
 <h4 class="pdoc-member-header" id="Droplet-sshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L137">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L137">property <b>sshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2378,7 +2379,7 @@ as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/docume
 to retrieve them.
 
 <h4 class="pdoc-member-header" id="Droplet-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L141">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L141">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2386,7 +2387,7 @@ to retrieve them.
 The status of the Droplet
 
 <h4 class="pdoc-member-header" id="Droplet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L145">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L145">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2394,7 +2395,7 @@ The status of the Droplet
 A list of the tags to be applied to this Droplet.
 
 <h4 class="pdoc-member-header" id="Droplet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L150">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L150">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2403,7 +2404,7 @@ The uniform resource name of the Droplet
 * `name`- The name of the Droplet
 
 <h4 class="pdoc-member-header" id="Droplet-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L154">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L154">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2411,7 +2412,7 @@ The uniform resource name of the Droplet
 A string of the desired User Data for the Droplet.
 
 <h4 class="pdoc-member-header" id="Droplet-vcpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L158">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L158">property <b>vcpus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vcpus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2419,7 +2420,7 @@ A string of the desired User Data for the Droplet.
 The number of the instance's virtual CPUs
 
 <h4 class="pdoc-member-header" id="Droplet-volumeIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L162">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L162">property <b>volumeIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2427,7 +2428,7 @@ The number of the instance's virtual CPUs
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="DropletSnapshot" data-link-title="DropletSnapshot">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L16">
         Resource <strong>DropletSnapshot</strong>
     </a>
 </h3>
@@ -2439,7 +2440,7 @@ Provides a resource which can be used to create a snapshot from an existing Digi
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -2453,7 +2454,7 @@ Create a DropletSnapshot resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -2464,14 +2465,14 @@ Get an existing DropletSnapshot resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2482,7 +2483,7 @@ Returns true if the given object is an instance of DropletSnapshot.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L46">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L46">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2490,7 +2491,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date and time the Droplet snapshot was created.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L50">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L50">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,7 +2499,7 @@ The date and time the Droplet snapshot was created.
 The ID of the Droplet from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2507,7 +2508,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L54">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L54">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2515,7 +2516,7 @@ deployments and may be missing (undefined) during planning phases.
 The minimum size in gigabytes required for a Droplet to be created based on this snapshot.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2523,7 +2524,7 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 A name for the Droplet snapshot.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L62">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L62">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>[]&gt;;</code></pre>
@@ -2531,7 +2532,7 @@ A name for the Droplet snapshot.
 A list of DigitalOcean region "slugs" indicating where the droplet snapshot is available.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L66">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L66">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2539,7 +2540,7 @@ A list of DigitalOcean region "slugs" indicating where the droplet snapshot is a
 The billable size of the Droplet snapshot in gigabytes.
 
 <h4 class="pdoc-member-header" id="DropletSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2548,7 +2549,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Firewall" data-link-title="Firewall">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L15">
         Resource <strong>Firewall</strong>
     </a>
 </h3>
@@ -2561,7 +2562,7 @@ modify, and delete Firewalls.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown.
 
 <h4 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -2575,7 +2576,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L24">method <b>get</b></a>
 </h4>
 
 
@@ -2586,14 +2587,14 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L35">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2604,7 +2605,7 @@ Returns true if the given object is an instance of Firewall.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Firewall-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L46">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L46">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2613,7 +2614,7 @@ A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
 
 <h4 class="pdoc-member-header" id="Firewall-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L51">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L51">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2622,7 +2623,7 @@ The list of the IDs of the Droplets assigned
 to the Firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2631,7 +2632,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Firewall-inboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L56">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L56">property <b>inboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallInboundRule'>outputs.FirewallInboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2640,7 +2641,7 @@ The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2648,7 +2649,7 @@ The `inboundRule` block is documented below.
 The Firewall name
 
 <h4 class="pdoc-member-header" id="Firewall-outboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L65">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L65">property <b>outboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallOutboundRule'>outputs.FirewallOutboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2657,7 +2658,7 @@ The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="Firewall-pendingChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L72">property <b>pendingChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L72">property <b>pendingChanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pendingChanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallPendingChange'>outputs.FirewallPendingChange</a>[]&gt;;</code></pre>
@@ -2668,7 +2669,7 @@ are having their security policies updated.  When empty, all changes
 have been successfully applied.
 
 <h4 class="pdoc-member-header" id="Firewall-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L77">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L77">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2677,7 +2678,7 @@ A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
 
 <h4 class="pdoc-member-header" id="Firewall-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2685,7 +2686,7 @@ This can be "waiting", "succeeded", or "failed".
 The names of the Tags assigned to the Firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2694,7 +2695,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FloatingIp" data-link-title="FloatingIp">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L16">
         Resource <strong>FloatingIp</strong>
     </a>
 </h3>
@@ -2708,7 +2709,7 @@ Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown.
 
 <h4 class="pdoc-member-header" id="FloatingIp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -2722,7 +2723,7 @@ Create a FloatingIp resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FloatingIp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -2733,14 +2734,14 @@ Get an existing FloatingIp resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FloatingIp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FloatingIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2751,7 +2752,7 @@ Returns true if the given object is an instance of FloatingIp.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FloatingIp-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L46">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L46">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2759,7 +2760,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2768,7 +2769,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FloatingIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L50">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L50">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2776,7 +2777,7 @@ deployments and may be missing (undefined) during planning phases.
 The IP Address of the resource
 
 <h4 class="pdoc-member-header" id="FloatingIp-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L54">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L54">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2784,7 +2785,7 @@ The IP Address of the resource
 The region that the Floating IP is reserved to.
 
 <h4 class="pdoc-member-header" id="FloatingIp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2792,7 +2793,7 @@ The region that the Floating IP is reserved to.
 The uniform resource name of the floating ip
 
 <h3 class="pdoc-module-header" id="FloatingIpAssignment" data-link-title="FloatingIpAssignment">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L16">
         Resource <strong>FloatingIpAssignment</strong>
     </a>
 </h3>
@@ -2806,7 +2807,7 @@ Droplet.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -2820,7 +2821,7 @@ Create a FloatingIpAssignment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -2831,14 +2832,14 @@ Get an existing FloatingIpAssignment resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2849,7 +2850,7 @@ Returns true if the given object is an instance of FloatingIpAssignment.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L46">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L46">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2857,7 +2858,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2866,7 +2867,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L50">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L50">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +2875,7 @@ deployments and may be missing (undefined) during planning phases.
 The Floating IP to assign to the Droplet.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2883,7 +2884,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KubernetesCluster" data-link-title="KubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L16">
         Resource <strong>KubernetesCluster</strong>
     </a>
 </h3>
@@ -2895,7 +2896,7 @@ Provides a DigitalOcean Kubernetes cluster resource. This can be used to create,
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -2909,7 +2910,7 @@ Create a KubernetesCluster resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -2920,14 +2921,14 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2938,7 +2939,7 @@ Returns true if the given object is an instance of KubernetesCluster.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-clusterSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L46">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L46">property <b>clusterSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2946,7 +2947,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The range of IP addresses in the overlay network of the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L50">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L50">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2954,7 +2955,7 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 The date and time when the Kubernetes cluster was created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L54">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L54">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +2963,7 @@ The date and time when the Kubernetes cluster was created.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2971,7 +2972,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L58">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L58">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2979,12 +2980,12 @@ deployments and may be missing (undefined) during planning phases.
 The public IPv4 address of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterKubeConfig'>outputs.KubernetesClusterKubeConfig</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2992,7 +2993,7 @@ The public IPv4 address of the Kubernetes master node.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-nodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L74">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L74">property <b>nodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePool'>outputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
@@ -3007,7 +3008,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L78">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L78">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -3015,7 +3016,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 The slug identifier for the region where the Kubernetes cluster will be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-serviceSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L82">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L82">property <b>serviceSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3023,7 +3024,7 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 The range of assignable IP addresses for services running in the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L86">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L86">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3031,7 +3032,7 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L90">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3039,7 +3040,7 @@ A string indicating the current status of the cluster. Potential values include 
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L102">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L102">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3055,7 +3056,7 @@ The date and time when the Kubernetes cluster was last updated.
 - `expiresAt` - The date and time when the credentials will expire and need to be regenerated.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3064,7 +3065,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L106">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L106">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3072,7 +3073,7 @@ deployments.
 The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 
 <h3 class="pdoc-module-header" id="KubernetesNodePool" data-link-title="KubernetesNodePool">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L16">
         Resource <strong>KubernetesNodePool</strong>
     </a>
 </h3>
@@ -3084,7 +3085,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -3098,7 +3099,7 @@ Create a KubernetesNodePool resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -3109,14 +3110,14 @@ Get an existing KubernetesNodePool resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3127,7 +3128,7 @@ Returns true if the given object is an instance of KubernetesNodePool.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-actualNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L46">property <b>actualNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L46">property <b>actualNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actualNodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3135,7 +3136,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L50">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L50">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3143,7 +3144,7 @@ A computed field representing the actual number of nodes in the node pool, which
 Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L54">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L54">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3151,7 +3152,7 @@ Enable auto-scaling of the number of nodes in the node pool within the given min
 The ID of the Kubernetes cluster to which the node pool is associated.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3160,7 +3161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-maxNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L58">property <b>maxNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L58">property <b>maxNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3168,7 +3169,7 @@ deployments and may be missing (undefined) during planning phases.
 If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-minNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L62">property <b>minNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L62">property <b>minNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3176,7 +3177,7 @@ If auto-scaling is enabled, this represents the maximum number of nodes that the
 If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3184,7 +3185,7 @@ If auto-scaling is enabled, this represents the minimum number of nodes that the
 A name for the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L70">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L70">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3192,7 +3193,7 @@ A name for the node pool.
 The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L79">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L79">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesNodePoolNode'>outputs.KubernetesNodePoolNode</a>[]&gt;;</code></pre>
@@ -3205,7 +3206,7 @@ A list of nodes in the pool. Each node exports the following attributes:
 - `updatedAt` - The date and time when the node was last updated.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L83">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L83">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -3213,7 +3214,7 @@ A list of nodes in the pool. Each node exports the following attributes:
 The slug identifier for the type of Droplet to be used as workers in the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3221,7 +3222,7 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3230,7 +3231,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LoadBalancer" data-link-title="LoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L17">
         Resource <strong>LoadBalancer</strong>
     </a>
 </h3>
@@ -3243,7 +3244,7 @@ modify, and delete Load Balancers.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -3257,7 +3258,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -3268,14 +3269,14 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3286,7 +3287,7 @@ Returns true if the given object is an instance of LoadBalancer.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L49">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L49">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Algorithm'>Algorithm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3296,7 +3297,7 @@ which backend Droplet will be selected by a client. It must be either `roundRobi
 or `leastConnections`. The default value is `roundRobin`.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L53">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L53">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -3304,7 +3305,7 @@ or `leastConnections`. The default value is `roundRobin`.
 A list of the IDs of each droplet to be attached to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-dropletTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L57">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L57">property <b>dropletTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3312,7 +3313,7 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-enableProxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L63">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L63">property <b>enableProxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableProxyProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3322,7 +3323,7 @@ Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-forwardingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L68">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L68">property <b>forwardingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerForwardingRule'>outputs.LoadBalancerForwardingRule</a>[]&gt;;</code></pre>
@@ -3331,7 +3332,7 @@ A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L73">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L73">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerHealthcheck'>outputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
@@ -3340,7 +3341,7 @@ A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3349,12 +3350,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L74">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L74">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3362,7 +3363,7 @@ deployments and may be missing (undefined) during planning phases.
 The Load Balancer name
 
 <h4 class="pdoc-member-header" id="LoadBalancer-redirectHttpToHttps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L84">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L84">property <b>redirectHttpToHttps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redirectHttpToHttps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3372,7 +3373,7 @@ HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on por
 Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L88">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L88">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -3380,12 +3381,12 @@ Default value is `false`.
 The region to start in
 
 <h4 class="pdoc-member-header" id="LoadBalancer-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L89">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L89">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L94">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L94">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerStickySessions'>outputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
@@ -3394,7 +3395,7 @@ A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L98">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L98">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3402,7 +3403,7 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 The uniform resource name for the Load Balancer
 
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L29">
         Resource <strong>Project</strong>
     </a>
 </h3>
@@ -3429,7 +3430,7 @@ The following resources can be associated with a project:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown.
 
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -3443,7 +3444,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -3454,14 +3455,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3472,7 +3473,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L59">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L59">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3480,7 +3481,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 the date and time when the project was created, (ISO8601)
 
 <h4 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3488,7 +3489,7 @@ the date and time when the project was created, (ISO8601)
 the description of the project
 
 <h4 class="pdoc-member-header" id="Project-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L67">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L67">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3496,7 +3497,7 @@ the description of the project
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3505,7 +3506,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3513,7 +3514,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Project
 
 <h4 class="pdoc-member-header" id="Project-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L75">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L75">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3521,7 +3522,7 @@ The name of the Project
 the id of the project owner.
 
 <h4 class="pdoc-member-header" id="Project-ownerUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L79">property <b>ownerUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L79">property <b>ownerUuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerUuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3529,7 +3530,7 @@ the id of the project owner.
 the unique universal identifier of the project owner.
 
 <h4 class="pdoc-member-header" id="Project-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L83">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L83">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>purpose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3537,7 +3538,7 @@ the unique universal identifier of the project owner.
 the purpose of the project, (Default: "Web Application")
 
 <h4 class="pdoc-member-header" id="Project-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L87">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L87">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3545,7 +3546,7 @@ the purpose of the project, (Default: "Web Application")
 a list of uniform resource names (URNs) for the resources associated with the project
 
 <h4 class="pdoc-member-header" id="Project-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L91">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L91">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3553,7 +3554,7 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 the date and time when the project was last updated, (ISO8601)
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3562,7 +3563,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L17">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -3577,7 +3578,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
 </h4>
 
 
@@ -3591,14 +3592,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3609,14 +3610,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3625,7 +3626,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3634,7 +3635,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SpacesBucket" data-link-title="SpacesBucket">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L73">
         Resource <strong>SpacesBucket</strong>
     </a>
 </h3>
@@ -3703,7 +3704,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L127"> <b>constructor</b></a>
 </h4>
 
 
@@ -3717,7 +3718,7 @@ Create a SpacesBucket resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L82">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L82">method <b>get</b></a>
 </h4>
 
 
@@ -3728,14 +3729,14 @@ Get an existing SpacesBucket resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpacesBucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L93">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L93">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3746,7 +3747,7 @@ Returns true if the given object is an instance of SpacesBucket.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-acl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L103">property <b>acl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L103">property <b>acl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3754,7 +3755,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Canned ACL applied on bucket creation (`private` or `public-read`)
 
 <h4 class="pdoc-member-header" id="SpacesBucket-bucketDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L107">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L107">property <b>bucketDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3762,7 +3763,7 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 
 <h4 class="pdoc-member-header" id="SpacesBucket-corsRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L111">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L111">property <b>corsRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>corsRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketCorsRule'>outputs.SpacesBucketCorsRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3770,7 +3771,7 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 A container holding a list of elements describing allowed methods for a specific origin.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L115">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L115">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3778,7 +3779,7 @@ A container holding a list of elements describing allowed methods for a specific
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 
 <h4 class="pdoc-member-header" id="SpacesBucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3787,7 +3788,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SpacesBucket-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3795,7 +3796,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the bucket
 
 <h4 class="pdoc-member-header" id="SpacesBucket-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L123">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L123">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3803,7 +3804,7 @@ The name of the bucket
 The region where the bucket resides (Defaults to `nyc3`)
 
 <h4 class="pdoc-member-header" id="SpacesBucket-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L127">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L127">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3811,7 +3812,7 @@ The region where the bucket resides (Defaults to `nyc3`)
 The uniform resource name for the bucket
 
 <h3 class="pdoc-module-header" id="SshKey" data-link-title="SshKey">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L17">
         Resource <strong>SshKey</strong>
     </a>
 </h3>
@@ -3826,7 +3827,7 @@ fingerprint.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown.
 
 <h4 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L56"> <b>constructor</b></a>
 </h4>
 
 
@@ -3840,7 +3841,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -3851,14 +3852,14 @@ Get an existing SshKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3869,7 +3870,7 @@ Returns true if the given object is an instance of SshKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SshKey-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L47">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L47">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3877,7 +3878,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The fingerprint of the SSH key
 
 <h4 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3886,7 +3887,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SshKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3894,7 +3895,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L56">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L56">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3903,7 +3904,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function
 
 <h4 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3912,7 +3913,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Tag" data-link-title="Tag">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L17">
         Resource <strong>Tag</strong>
     </a>
 </h3>
@@ -3927,7 +3928,7 @@ configuration via their ID or name.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown.
 
 <h4 class="pdoc-member-header" id="Tag-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L47"> <b>constructor</b></a>
 </h4>
 
 
@@ -3941,7 +3942,7 @@ Create a Tag resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Tag-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -3952,14 +3953,14 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Tag-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3970,7 +3971,7 @@ Returns true if the given object is an instance of Tag.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3979,7 +3980,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Tag-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3987,7 +3988,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the tag
 
 <h4 class="pdoc-member-header" id="Tag-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3996,7 +3997,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Volume" data-link-title="Volume">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L16">
         Resource <strong>Volume</strong>
     </a>
 </h3>
@@ -4008,7 +4009,7 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown.
 
 <h4 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -4022,7 +4023,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -4033,14 +4034,14 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4051,7 +4052,7 @@ Returns true if the given object is an instance of Volume.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Volume-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L46">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L46">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4059,7 +4060,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 
 <h4 class="pdoc-member-header" id="Volume-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L50">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L50">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -4067,7 +4068,7 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 A list of associated droplet ids.
 
 <h4 class="pdoc-member-header" id="Volume-filesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L54">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L54">property <b>filesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filesystemLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4075,7 +4076,7 @@ A list of associated droplet ids.
 Filesystem label for the block storage volume.
 
 <h4 class="pdoc-member-header" id="Volume-filesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L58">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L58">property <b>filesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filesystemType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4083,7 +4084,7 @@ Filesystem label for the block storage volume.
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4092,7 +4093,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Volume-initialFilesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L62">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L62">property <b>initialFilesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialFilesystemLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4100,7 +4101,7 @@ deployments and may be missing (undefined) during planning phases.
 Initial filesystem label for the block storage volume.
 
 <h4 class="pdoc-member-header" id="Volume-initialFilesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L66">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L66">property <b>initialFilesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialFilesystemType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FilesystemType'>FilesystemType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4108,7 +4109,7 @@ Initial filesystem label for the block storage volume.
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4116,7 +4117,7 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 
 <h4 class="pdoc-member-header" id="Volume-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L74">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L74">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -4124,7 +4125,7 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 The region that the block storage volume will be created in.
 
 <h4 class="pdoc-member-header" id="Volume-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L78">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L78">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4132,7 +4133,7 @@ The region that the block storage volume will be created in.
 The size of the block storage volume in GiB. If updated, can only be expanded.
 
 <h4 class="pdoc-member-header" id="Volume-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L82">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L82">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4140,7 +4141,7 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 
 <h4 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L86">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L86">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4148,7 +4149,7 @@ The ID of an existing volume snapshot from which the new volume will be created.
 the uniform resource name for the volume.
 
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L16">
         Resource <strong>VolumeAttachment</strong>
     </a>
 </h3>
@@ -4162,7 +4163,7 @@ Manages attaching a Volume to a Droplet.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -4176,7 +4177,7 @@ Create a VolumeAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -4187,14 +4188,14 @@ Get an existing VolumeAttachment resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4205,7 +4206,7 @@ Returns true if the given object is an instance of VolumeAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L46">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L46">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4213,7 +4214,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 ID of the Droplet to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4222,7 +4223,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4231,7 +4232,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L50">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L50">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4239,7 +4240,7 @@ deployments.
 ID of the Volume to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="VolumeSnapshot" data-link-title="VolumeSnapshot">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L16">
         Resource <strong>VolumeSnapshot</strong>
     </a>
 </h3>
@@ -4251,7 +4252,7 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -4265,7 +4266,7 @@ Create a VolumeSnapshot resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -4276,14 +4277,14 @@ Get an existing VolumeSnapshot resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4294,7 +4295,7 @@ Returns true if the given object is an instance of VolumeSnapshot.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L46">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L46">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4302,7 +4303,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date and time the volume snapshot was created.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4311,7 +4312,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L50">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L50">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4319,7 +4320,7 @@ deployments and may be missing (undefined) during planning phases.
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4327,7 +4328,7 @@ The minimum size in gigabytes required for a volume to be created based on this 
 A name for the volume snapshot.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L58">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L58">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>[]&gt;;</code></pre>
@@ -4335,7 +4336,7 @@ A name for the volume snapshot.
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L62">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L62">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4343,7 +4344,7 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 The billable size of the volume snapshot in gigabytes.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4352,7 +4353,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshot-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L66">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L66">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4362,7 +4363,7 @@ The ID of the volume from which the volume snapshot originated.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L25">
         Data Source <strong>getAccount</strong>
     </a>
 </h3>
@@ -4387,7 +4388,7 @@ const example = digitalocean.getAccount();
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.markdown.
 
 <h3 class="pdoc-module-header" id="getCertificate" data-link-title="getCertificate">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L12">
         Data Source <strong>getCertificate</strong>
     </a>
 </h3>
@@ -4399,7 +4400,7 @@ const example = digitalocean.getAccount();
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/certificate.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDatabaseCluster" data-link-title="getDatabaseCluster">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L14">
         Data Source <strong>getDatabaseCluster</strong>
     </a>
 </h3>
@@ -4413,7 +4414,7 @@ Provides information on a DigitalOcean database cluster resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDomain" data-link-title="getDomain">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L12">
         Data Source <strong>getDomain</strong>
     </a>
 </h3>
@@ -4425,7 +4426,7 @@ Provides information on a DigitalOcean database cluster resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/domain.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDroplet" data-link-title="getDroplet">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L12">
         Data Source <strong>getDroplet</strong>
     </a>
 </h3>
@@ -4437,7 +4438,7 @@ Provides information on a DigitalOcean database cluster resource.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDropletSnapshot" data-link-title="getDropletSnapshot">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L31">
         Data Source <strong>getDropletSnapshot</strong>
     </a>
 </h3>
@@ -4468,7 +4469,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown.
 
 <h3 class="pdoc-module-header" id="getFloatingIp" data-link-title="getFloatingIp">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L12">
         Data Source <strong>getFloatingIp</strong>
     </a>
 </h3>
@@ -4480,7 +4481,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/floating_ip.html.markdown.
 
 <h3 class="pdoc-module-header" id="getImage" data-link-title="getImage">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L12">
         Data Source <strong>getImage</strong>
     </a>
 </h3>
@@ -4492,7 +4493,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/image.html.markdown.
 
 <h3 class="pdoc-module-header" id="getKubernetesCluster" data-link-title="getKubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L12">
         Data Source <strong>getKubernetesCluster</strong>
     </a>
 </h3>
@@ -4504,7 +4505,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_cluster.html.markdown.
 
 <h3 class="pdoc-module-header" id="getLoadBalancer" data-link-title="getLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L12">
         Data Source <strong>getLoadBalancer</strong>
     </a>
 </h3>
@@ -4516,7 +4517,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/loadbalancer.html.markdown.
 
 <h3 class="pdoc-module-header" id="getRecord" data-link-title="getRecord">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L12">
         Data Source <strong>getRecord</strong>
     </a>
 </h3>
@@ -4528,7 +4529,7 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSizes" data-link-title="getSizes">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L14">
         Data Source <strong>getSizes</strong>
     </a>
 </h3>
@@ -4542,7 +4543,7 @@ Retrieves information about droplet sizes that DigitalOcean supports. This data 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSshKey" data-link-title="getSshKey">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L12">
         Data Source <strong>getSshKey</strong>
     </a>
 </h3>
@@ -4554,7 +4555,7 @@ Retrieves information about droplet sizes that DigitalOcean supports. This data 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/ssh_key.html.markdown.
 
 <h3 class="pdoc-module-header" id="getTag" data-link-title="getTag">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L12">
         Data Source <strong>getTag</strong>
     </a>
 </h3>
@@ -4566,7 +4567,7 @@ Retrieves information about droplet sizes that DigitalOcean supports. This data 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/tag.html.markdown.
 
 <h3 class="pdoc-module-header" id="getVolume" data-link-title="getVolume">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L12">
         Data Source <strong>getVolume</strong>
     </a>
 </h3>
@@ -4578,7 +4579,7 @@ Retrieves information about droplet sizes that DigitalOcean supports. This data 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume.html.markdown.
 
 <h3 class="pdoc-module-header" id="getVolumeSnapshot" data-link-title="getVolumeSnapshot">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L16">
         Data Source <strong>getVolumeSnapshot</strong>
     </a>
 </h3>
@@ -4596,14 +4597,14 @@ resources.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="Algorithm" data-link-title="Algorithm">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadbalancerAlgorithm.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadbalancerAlgorithm.ts#L20">
         type <strong>Algorithm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Algorithm = <span class='s2'>"round_robin"</span> | <span class='s2'>"least_connections"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CdnArgs" data-link-title="CdnArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L140">
         interface <strong>CdnArgs</strong>
     </a>
 </h3>
@@ -4613,7 +4614,7 @@ resources.
 The set of arguments for constructing a Cdn resource.
 
 <h4 class="pdoc-member-header" id="CdnArgs-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L144">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L144">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4621,7 +4622,7 @@ The set of arguments for constructing a Cdn resource.
 ID of a DigitalOcean managed TLS certificate for use with custom domains
 
 <h4 class="pdoc-member-header" id="CdnArgs-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L148">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L148">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4629,7 +4630,7 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="CdnArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L152">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L152">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4637,7 +4638,7 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 The fully qualified domain name, (FQDN) for a Space.
 
 <h4 class="pdoc-member-header" id="CdnArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L157">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L157">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4646,7 +4647,7 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificateId`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 
 <h3 class="pdoc-module-header" id="CdnState" data-link-title="CdnState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L109">
         interface <strong>CdnState</strong>
     </a>
 </h3>
@@ -4656,7 +4657,7 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 Input properties used for looking up and filtering Cdn resources.
 
 <h4 class="pdoc-member-header" id="CdnState-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L113">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L113">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4664,7 +4665,7 @@ Input properties used for looking up and filtering Cdn resources.
 ID of a DigitalOcean managed TLS certificate for use with custom domains
 
 <h4 class="pdoc-member-header" id="CdnState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L117">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L117">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4672,7 +4673,7 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 The date and time when the CDN Endpoint was created.
 
 <h4 class="pdoc-member-header" id="CdnState-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L121">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L121">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4680,7 +4681,7 @@ The date and time when the CDN Endpoint was created.
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="CdnState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L125">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L125">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4688,7 +4689,7 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 
 <h4 class="pdoc-member-header" id="CdnState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L129">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L129">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4696,7 +4697,7 @@ The fully qualified domain name (FQDN) from which the CDN-backed content is serv
 The fully qualified domain name, (FQDN) for a Space.
 
 <h4 class="pdoc-member-header" id="CdnState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/cdn.ts#L134">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/cdn.ts#L134">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4705,7 +4706,7 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificateId`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L180">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -4715,7 +4716,7 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L186">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L186">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4725,7 +4726,7 @@ between the certificate authority's certificate and your domain's TLS
 certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L192">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L192">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4735,7 +4736,7 @@ which the certificate will be issued. The domains must be managed using
 DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-leafCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L197">property <b>leafCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L197">property <b>leafCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leafCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4744,7 +4745,7 @@ The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4752,7 +4753,7 @@ TLS certificate. Only valid when type is `custom`.
 The name of the certificate for identification.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L206">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L206">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4761,7 +4762,7 @@ The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L211">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L211">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateType'>CertificateType</a>&gt;;</code></pre>
@@ -4770,7 +4771,7 @@ The type of certificate to provision. Can be either
 `custom` or `letsEncrypt`. Defaults to `custom`.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L134">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -4780,7 +4781,7 @@ The type of certificate to provision. Can be either
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L140">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L140">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4790,7 +4791,7 @@ between the certificate authority's certificate and your domain's TLS
 certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateState-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L146">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L146">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4800,7 +4801,7 @@ which the certificate will be issued. The domains must be managed using
 DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 
 <h4 class="pdoc-member-header" id="CertificateState-leafCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L151">property <b>leafCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L151">property <b>leafCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leafCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4809,7 +4810,7 @@ The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4817,7 +4818,7 @@ TLS certificate. Only valid when type is `custom`.
 The name of the certificate for identification.
 
 <h4 class="pdoc-member-header" id="CertificateState-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L159">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L159">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4825,7 +4826,7 @@ The name of the certificate for identification.
 The expiration date of the certificate
 
 <h4 class="pdoc-member-header" id="CertificateState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L164">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L164">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4834,7 +4835,7 @@ The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
 
 <h4 class="pdoc-member-header" id="CertificateState-sha1Fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L168">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L168">property <b>sha1Fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sha1Fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4842,12 +4843,12 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 The SHA-1 fingerprint of the certificate
 
 <h4 class="pdoc-member-header" id="CertificateState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L169">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L169">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificate.ts#L174">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificate.ts#L174">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateType'>CertificateType</a>&gt;;</code></pre>
@@ -4856,14 +4857,14 @@ The type of certificate to provision. Can be either
 `custom` or `letsEncrypt`. Defaults to `custom`.
 
 <h3 class="pdoc-module-header" id="CertificateType" data-link-title="CertificateType">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/certificateType.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/certificateType.ts#L20">
         type <strong>CertificateType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> CertificateType = <span class='s2'>"custom"</span> | <span class='s2'>"lets_encrypt"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DatabaseClusterArgs" data-link-title="DatabaseClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L303">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L303">
         interface <strong>DatabaseClusterArgs</strong>
     </a>
 </h3>
@@ -4873,7 +4874,7 @@ The type of certificate to provision. Can be either
 The set of arguments for constructing a DatabaseCluster resource.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L307">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L307">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4881,7 +4882,7 @@ The set of arguments for constructing a DatabaseCluster resource.
 Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-maintenanceWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L311">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L311">property <b>maintenanceWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>inputs.DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
@@ -4889,7 +4890,7 @@ Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, 
 Defines when the automatic maintenance should be performed for the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L315">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L315">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4897,7 +4898,7 @@ Defines when the automatic maintenance should be performed for the database clus
 The name of the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L319">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L319">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4905,7 +4906,7 @@ The name of the database cluster.
 Number of nodes that will be included in the cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L323">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L323">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -4913,7 +4914,7 @@ Number of nodes that will be included in the cluster.
 DigitalOcean region where the cluster will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L327">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L327">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</code></pre>
@@ -4921,7 +4922,7 @@ DigitalOcean region where the cluster will reside.
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L331">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L331">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4929,7 +4930,7 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 A list of tag names to be applied to the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L335">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L335">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4937,7 +4938,7 @@ A list of tag names to be applied to the database cluster.
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 
 <h3 class="pdoc-module-header" id="DatabaseClusterState" data-link-title="DatabaseClusterState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L229">
         interface <strong>DatabaseClusterState</strong>
     </a>
 </h3>
@@ -4947,7 +4948,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 Input properties used for looking up and filtering DatabaseCluster resources.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L233">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L233">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4955,7 +4956,7 @@ Input properties used for looking up and filtering DatabaseCluster resources.
 Name of the cluster's default database.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L237">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L237">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4963,7 +4964,7 @@ Name of the cluster's default database.
 Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L241">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L241">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4971,7 +4972,7 @@ Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, 
 Database cluster's hostname.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-maintenanceWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L245">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L245">property <b>maintenanceWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>inputs.DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
@@ -4979,7 +4980,7 @@ Database cluster's hostname.
 Defines when the automatic maintenance should be performed for the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4987,7 +4988,7 @@ Defines when the automatic maintenance should be performed for the database clus
 The name of the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L253">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L253">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4995,7 +4996,7 @@ The name of the database cluster.
 Number of nodes that will be included in the cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L257">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L257">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5003,7 +5004,7 @@ Number of nodes that will be included in the cluster.
 Password for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L261">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L261">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5011,7 +5012,7 @@ Password for the cluster's default user.
 Network port that the database cluster is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L265">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L265">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5019,7 +5020,7 @@ Network port that the database cluster is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L269">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L269">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5027,7 +5028,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L273">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L273">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -5035,7 +5036,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 DigitalOcean region where the cluster will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L277">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L277">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</code></pre>
@@ -5043,7 +5044,7 @@ DigitalOcean region where the cluster will reside.
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L281">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L281">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5051,7 +5052,7 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 A list of tag names to be applied to the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L285">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L285">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5059,7 +5060,7 @@ A list of tag names to be applied to the database cluster.
 The full URI for connecting to the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L289">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L289">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5067,7 +5068,7 @@ The full URI for connecting to the database cluster.
 The uniform resource name of the database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L293">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L293">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5075,7 +5076,7 @@ The uniform resource name of the database cluster.
 Username for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseCluster.ts#L297">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L297">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5083,7 +5084,7 @@ Username for the cluster's default user.
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 
 <h3 class="pdoc-module-header" id="DatabaseConnectionPoolArgs" data-link-title="DatabaseConnectionPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L212">
         interface <strong>DatabaseConnectionPoolArgs</strong>
     </a>
 </h3>
@@ -5093,7 +5094,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 The set of arguments for constructing a DatabaseConnectionPool resource.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L216">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L216">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5101,7 +5102,7 @@ The set of arguments for constructing a DatabaseConnectionPool resource.
 The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L220">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L220">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5109,7 +5110,7 @@ The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 The database for use with the connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L224">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L224">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5117,7 +5118,7 @@ The database for use with the connection pool.
 The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5125,7 +5126,7 @@ The PGBouncer transaction mode for the connection pool. The allowed values are s
 The name for the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L232">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L232">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5133,7 +5134,7 @@ The name for the database connection pool.
 The desired size of the PGBouncer connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L236">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L236">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5141,7 +5142,7 @@ The desired size of the PGBouncer connection pool.
 The name of the database user for use with the connection pool.
 
 <h3 class="pdoc-module-header" id="DatabaseConnectionPoolState" data-link-title="DatabaseConnectionPoolState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L158">
         interface <strong>DatabaseConnectionPoolState</strong>
     </a>
 </h3>
@@ -5151,7 +5152,7 @@ The name of the database user for use with the connection pool.
 Input properties used for looking up and filtering DatabaseConnectionPool resources.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L162">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L162">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5159,7 +5160,7 @@ Input properties used for looking up and filtering DatabaseConnectionPool resour
 The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L166">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L166">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5167,7 +5168,7 @@ The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 The database for use with the connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L170">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L170">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5175,7 +5176,7 @@ The database for use with the connection pool.
 The hostname used to connect to the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L174">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L174">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5183,7 +5184,7 @@ The hostname used to connect to the database connection pool.
 The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5191,7 +5192,7 @@ The PGBouncer transaction mode for the connection pool. The allowed values are s
 The name for the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L182">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L182">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5199,7 +5200,7 @@ The name for the database connection pool.
 Password for the connection pool's user.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L186">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L186">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5207,7 +5208,7 @@ Password for the connection pool's user.
 Network port that the database connection pool is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L190">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L190">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5215,7 +5216,7 @@ Network port that the database connection pool is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L194">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L194">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5223,7 +5224,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L198">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L198">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5231,7 +5232,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 The desired size of the PGBouncer connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L202">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L202">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5239,7 +5240,7 @@ The desired size of the PGBouncer connection pool.
 The full URI for connecting to the database connection pool.
 
 <h4 class="pdoc-member-header" id="DatabaseConnectionPoolState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseConnectionPool.ts#L206">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseConnectionPool.ts#L206">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5247,7 +5248,7 @@ The full URI for connecting to the database connection pool.
 The name of the database user for use with the connection pool.
 
 <h3 class="pdoc-module-header" id="DatabaseDbArgs" data-link-title="DatabaseDbArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L100">
         interface <strong>DatabaseDbArgs</strong>
     </a>
 </h3>
@@ -5257,7 +5258,7 @@ The name of the database user for use with the connection pool.
 The set of arguments for constructing a DatabaseDb resource.
 
 <h4 class="pdoc-member-header" id="DatabaseDbArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L104">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L104">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5265,7 +5266,7 @@ The set of arguments for constructing a DatabaseDb resource.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseDbArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5273,7 +5274,7 @@ The ID of the original source database cluster.
 The name for the database.
 
 <h3 class="pdoc-module-header" id="DatabaseDbState" data-link-title="DatabaseDbState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L86">
         interface <strong>DatabaseDbState</strong>
     </a>
 </h3>
@@ -5283,7 +5284,7 @@ The name for the database.
 Input properties used for looking up and filtering DatabaseDb resources.
 
 <h4 class="pdoc-member-header" id="DatabaseDbState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L90">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L90">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5291,7 +5292,7 @@ Input properties used for looking up and filtering DatabaseDb resources.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseDbState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseDb.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseDb.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5299,7 +5300,7 @@ The ID of the original source database cluster.
 The name for the database.
 
 <h3 class="pdoc-module-header" id="DatabaseReplicaArgs" data-link-title="DatabaseReplicaArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L206">
         interface <strong>DatabaseReplicaArgs</strong>
     </a>
 </h3>
@@ -5309,7 +5310,7 @@ The name for the database.
 The set of arguments for constructing a DatabaseReplica resource.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L210">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L210">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5317,7 +5318,7 @@ The set of arguments for constructing a DatabaseReplica resource.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5325,7 +5326,7 @@ The ID of the original source database cluster.
 The name for the database replica.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L218">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L218">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -5333,7 +5334,7 @@ The name for the database replica.
 DigitalOcean region where the replica will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L222">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L222">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</code></pre>
@@ -5341,12 +5342,12 @@ DigitalOcean region where the replica will reside.
 Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L223">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L223">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DatabaseReplicaState" data-link-title="DatabaseReplicaState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L151">
         interface <strong>DatabaseReplicaState</strong>
     </a>
 </h3>
@@ -5356,7 +5357,7 @@ Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 Input properties used for looking up and filtering DatabaseReplica resources.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L155">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L155">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5364,7 +5365,7 @@ Input properties used for looking up and filtering DatabaseReplica resources.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L159">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L159">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5372,7 +5373,7 @@ The ID of the original source database cluster.
 Name of the replica's default database.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L163">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L163">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5380,7 +5381,7 @@ Name of the replica's default database.
 Database replica's hostname.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5388,7 +5389,7 @@ Database replica's hostname.
 The name for the database replica.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L171">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L171">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5396,7 +5397,7 @@ The name for the database replica.
 Password for the replica's default user.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L175">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L175">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5404,7 +5405,7 @@ Password for the replica's default user.
 Network port that the database replica is listening on.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L179">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L179">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5412,7 +5413,7 @@ Network port that the database replica is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L183">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L183">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5420,7 +5421,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L187">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L187">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -5428,7 +5429,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 DigitalOcean region where the replica will reside.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L191">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L191">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</code></pre>
@@ -5436,12 +5437,12 @@ DigitalOcean region where the replica will reside.
 Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L192">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L192">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L196">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L196">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5449,7 +5450,7 @@ Database Droplet size associated with the replica (ex. `db-s-1vcpu-1gb`).
 The full URI for connecting to the database replica.
 
 <h4 class="pdoc-member-header" id="DatabaseReplicaState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseReplica.ts#L200">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseReplica.ts#L200">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5457,7 +5458,7 @@ The full URI for connecting to the database replica.
 Username for the replica's default user.
 
 <h3 class="pdoc-module-header" id="DatabaseSlug" data-link-title="DatabaseSlug">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseSlug.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseSlug.ts#L29">
         type <strong>DatabaseSlug</strong>
     </a>
 </h3>
@@ -5467,7 +5468,7 @@ Username for the replica's default user.
 A DatabaseSlug represents any valid DigitalOcean database slug size that may be targeted with database clusters.
 
 <h3 class="pdoc-module-header" id="DatabaseUserArgs" data-link-title="DatabaseUserArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L122">
         interface <strong>DatabaseUserArgs</strong>
     </a>
 </h3>
@@ -5477,7 +5478,7 @@ A DatabaseSlug represents any valid DigitalOcean database slug size that may be 
 The set of arguments for constructing a DatabaseUser resource.
 
 <h4 class="pdoc-member-header" id="DatabaseUserArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L126">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L126">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5485,7 +5486,7 @@ The set of arguments for constructing a DatabaseUser resource.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseUserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5493,7 +5494,7 @@ The ID of the original source database cluster.
 The name for the database user.
 
 <h3 class="pdoc-module-header" id="DatabaseUserState" data-link-title="DatabaseUserState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L100">
         interface <strong>DatabaseUserState</strong>
     </a>
 </h3>
@@ -5503,7 +5504,7 @@ The name for the database user.
 Input properties used for looking up and filtering DatabaseUser resources.
 
 <h4 class="pdoc-member-header" id="DatabaseUserState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L104">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L104">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5511,7 +5512,7 @@ Input properties used for looking up and filtering DatabaseUser resources.
 The ID of the original source database cluster.
 
 <h4 class="pdoc-member-header" id="DatabaseUserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5519,7 +5520,7 @@ The ID of the original source database cluster.
 The name for the database user.
 
 <h4 class="pdoc-member-header" id="DatabaseUserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L112">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L112">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5527,7 +5528,7 @@ The name for the database user.
 Password for the database user.
 
 <h4 class="pdoc-member-header" id="DatabaseUserState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/databaseUser.ts#L116">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseUser.ts#L116">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5535,7 +5536,7 @@ Password for the database user.
 Role for the database user. The value will be either "primary" or "normal".
 
 <h3 class="pdoc-module-header" id="DnsRecordArgs" data-link-title="DnsRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L198">
         interface <strong>DnsRecordArgs</strong>
     </a>
 </h3>
@@ -5545,7 +5546,7 @@ Role for the database user. The value will be either "primary" or "normal".
 The set of arguments for constructing a DnsRecord resource.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L202">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L202">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5553,7 +5554,7 @@ The set of arguments for constructing a DnsRecord resource.
 The domain to add the record to.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L206">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L206">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5561,7 +5562,7 @@ The domain to add the record to.
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L210">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5569,7 +5570,7 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 The name of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L214">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L214">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5577,7 +5578,7 @@ The name of the record.
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L218">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L218">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5585,7 +5586,7 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L222">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L222">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5593,7 +5594,7 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L226">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L226">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5601,7 +5602,7 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 The time to live for the record, in seconds. Must be at least 0.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L230">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L230">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -5609,7 +5610,7 @@ The time to live for the record, in seconds. Must be at least 0.
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L234">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L234">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5617,7 +5618,7 @@ The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT
 The value of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L238">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L238">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5625,7 +5626,7 @@ The value of the record.
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 
 <h3 class="pdoc-module-header" id="DnsRecordState" data-link-title="DnsRecordState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L148">
         interface <strong>DnsRecordState</strong>
     </a>
 </h3>
@@ -5635,7 +5636,7 @@ The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 
 Input properties used for looking up and filtering DnsRecord resources.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L152">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L152">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5643,7 +5644,7 @@ Input properties used for looking up and filtering DnsRecord resources.
 The domain to add the record to.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L156">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L156">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5651,7 +5652,7 @@ The domain to add the record to.
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L160">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L160">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5659,7 +5660,7 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 The FQDN of the record
 
 <h4 class="pdoc-member-header" id="DnsRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5667,7 +5668,7 @@ The FQDN of the record
 The name of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L168">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L168">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5675,7 +5676,7 @@ The name of the record.
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L172">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L172">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5683,7 +5684,7 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L176">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L176">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5691,7 +5692,7 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L180">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L180">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5699,7 +5700,7 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 The time to live for the record, in seconds. Must be at least 0.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L184">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L184">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -5707,7 +5708,7 @@ The time to live for the record, in seconds. Must be at least 0.
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5715,7 +5716,7 @@ The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT
 The value of the record.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dnsRecord.ts#L192">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dnsRecord.ts#L192">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5723,7 +5724,7 @@ The value of the record.
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L112">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -5733,7 +5734,7 @@ The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L117">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L117">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5742,7 +5743,7 @@ The IP address of the domain. If specified, this IP
 is used to created an initial A record for the domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5750,7 +5751,7 @@ is used to created an initial A record for the domain.
 The name of the domain
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L93">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -5760,7 +5761,7 @@ The name of the domain
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L98">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L98">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5769,7 +5770,7 @@ The IP address of the domain. If specified, this IP
 is used to created an initial A record for the domain.
 
 <h4 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5777,7 +5778,7 @@ is used to created an initial A record for the domain.
 The name of the domain
 
 <h4 class="pdoc-member-header" id="DomainState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/domain.ts#L106">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/domain.ts#L106">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5785,7 +5786,7 @@ The name of the domain
 The uniform resource name of the domain
 
 <h3 class="pdoc-module-header" id="DropletArgs" data-link-title="DropletArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L362">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L362">
         interface <strong>DropletArgs</strong>
     </a>
 </h3>
@@ -5795,7 +5796,7 @@ The uniform resource name of the domain
 The set of arguments for constructing a Droplet resource.
 
 <h4 class="pdoc-member-header" id="DropletArgs-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L367">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L367">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5804,7 +5805,7 @@ Boolean controlling if backups are made. Defaults to
 false.
 
 <h4 class="pdoc-member-header" id="DropletArgs-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L371">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L371">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5812,7 +5813,7 @@ false.
 The Droplet image ID or slug.
 
 <h4 class="pdoc-member-header" id="DropletArgs-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L375">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L375">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5820,7 +5821,7 @@ The Droplet image ID or slug.
 Boolean controlling if IPv6 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletArgs-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L380">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L380">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5829,7 +5830,7 @@ Boolean controlling whether monitoring agent is installed.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L384">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L384">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5837,7 +5838,7 @@ Defaults to false.
 The Droplet name.
 
 <h4 class="pdoc-member-header" id="DropletArgs-privateNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L389">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L389">property <b>privateNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateNetworking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5846,7 +5847,7 @@ Boolean controlling if private networks are
 enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L393">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L393">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -5854,7 +5855,7 @@ enabled. Defaults to false.
 The region to start in.
 
 <h4 class="pdoc-member-header" id="DropletArgs-resizeDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L400">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L400">property <b>resizeDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resizeDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5865,7 +5866,7 @@ only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
 
 <h4 class="pdoc-member-header" id="DropletArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L404">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L404">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -5873,7 +5874,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
 
 <h4 class="pdoc-member-header" id="DropletArgs-sshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L411">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L411">property <b>sshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5884,7 +5885,7 @@ as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/docume
 to retrieve them.
 
 <h4 class="pdoc-member-header" id="DropletArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L415">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L415">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5892,7 +5893,7 @@ to retrieve them.
 A list of the tags to be applied to this Droplet.
 
 <h4 class="pdoc-member-header" id="DropletArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L419">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L419">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5900,7 +5901,7 @@ A list of the tags to be applied to this Droplet.
 A string of the desired User Data for the Droplet.
 
 <h4 class="pdoc-member-header" id="DropletArgs-volumeIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L423">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L423">property <b>volumeIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5908,7 +5909,7 @@ A string of the desired User Data for the Droplet.
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="DropletSlug" data-link-title="DropletSlug">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSlug.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSlug.ts#L61">
         type <strong>DropletSlug</strong>
     </a>
 </h3>
@@ -5918,7 +5919,7 @@ A list of the IDs of each [block storage volume](https://www.terraform.io/docs/p
 A DropletSlug represents any valid DigitalOcean dropconst slug size that may be targeted for deployment.
 
 <h3 class="pdoc-module-header" id="DropletSnapshotArgs" data-link-title="DropletSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L142">
         interface <strong>DropletSnapshotArgs</strong>
     </a>
 </h3>
@@ -5928,7 +5929,7 @@ A DropletSlug represents any valid DigitalOcean dropconst slug size that may be 
 The set of arguments for constructing a DropletSnapshot resource.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotArgs-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L146">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L146">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5936,7 +5937,7 @@ The set of arguments for constructing a DropletSnapshot resource.
 The ID of the Droplet from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5944,7 +5945,7 @@ The ID of the Droplet from which the snapshot will be taken.
 A name for the Droplet snapshot.
 
 <h3 class="pdoc-module-header" id="DropletSnapshotState" data-link-title="DropletSnapshotState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L112">
         interface <strong>DropletSnapshotState</strong>
     </a>
 </h3>
@@ -5954,7 +5955,7 @@ A name for the Droplet snapshot.
 Input properties used for looking up and filtering DropletSnapshot resources.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L116">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L116">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5962,7 +5963,7 @@ Input properties used for looking up and filtering DropletSnapshot resources.
 The date and time the Droplet snapshot was created.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L120">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L120">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5970,7 +5971,7 @@ The date and time the Droplet snapshot was created.
 The ID of the Droplet from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L124">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L124">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5978,7 +5979,7 @@ The ID of the Droplet from which the snapshot will be taken.
 The minimum size in gigabytes required for a Droplet to be created based on this snapshot.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5986,7 +5987,7 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 A name for the Droplet snapshot.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L132">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L132">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;[]&gt;;</code></pre>
@@ -5994,7 +5995,7 @@ A name for the Droplet snapshot.
 A list of DigitalOcean region "slugs" indicating where the droplet snapshot is available.
 
 <h4 class="pdoc-member-header" id="DropletSnapshotState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/dropletSnapshot.ts#L136">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/dropletSnapshot.ts#L136">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6002,7 +6003,7 @@ A list of DigitalOcean region "slugs" indicating where the droplet snapshot is a
 The billable size of the Droplet snapshot in gigabytes.
 
 <h3 class="pdoc-module-header" id="DropletState" data-link-title="DropletState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L252">
         interface <strong>DropletState</strong>
     </a>
 </h3>
@@ -6012,7 +6013,7 @@ The billable size of the Droplet snapshot in gigabytes.
 Input properties used for looking up and filtering Droplet resources.
 
 <h4 class="pdoc-member-header" id="DropletState-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L257">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L257">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6021,12 +6022,12 @@ Boolean controlling if backups are made. Defaults to
 false.
 
 <h4 class="pdoc-member-header" id="DropletState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L258">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L258">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DropletState-disk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L262">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L262">property <b>disk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6034,7 +6035,7 @@ false.
 The size of the instance's disk in GB
 
 <h4 class="pdoc-member-header" id="DropletState-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L266">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L266">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6042,7 +6043,7 @@ The size of the instance's disk in GB
 The Droplet image ID or slug.
 
 <h4 class="pdoc-member-header" id="DropletState-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L270">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L270">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6050,7 +6051,7 @@ The Droplet image ID or slug.
 The IPv4 address
 
 <h4 class="pdoc-member-header" id="DropletState-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L274">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L274">property <b>ipv4AddressPrivate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4AddressPrivate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6058,7 +6059,7 @@ The IPv4 address
 The private networking IPv4 address
 
 <h4 class="pdoc-member-header" id="DropletState-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L278">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L278">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6066,7 +6067,7 @@ The private networking IPv4 address
 Boolean controlling if IPv6 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletState-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L282">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L282">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6074,7 +6075,7 @@ Boolean controlling if IPv6 is enabled. Defaults to false.
 The IPv6 address
 
 <h4 class="pdoc-member-header" id="DropletState-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L286">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L286">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6082,12 +6083,12 @@ The IPv6 address
 Is the Droplet locked
 
 <h4 class="pdoc-member-header" id="DropletState-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L287">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L287">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DropletState-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L292">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L292">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6096,7 +6097,7 @@ Boolean controlling whether monitoring agent is installed.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L296">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L296">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6104,7 +6105,7 @@ Defaults to false.
 The Droplet name.
 
 <h4 class="pdoc-member-header" id="DropletState-priceHourly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L300">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L300">property <b>priceHourly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceHourly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6112,7 +6113,7 @@ The Droplet name.
 Droplet hourly price
 
 <h4 class="pdoc-member-header" id="DropletState-priceMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L304">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L304">property <b>priceMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6120,7 +6121,7 @@ Droplet hourly price
 Droplet monthly price
 
 <h4 class="pdoc-member-header" id="DropletState-privateNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L309">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L309">property <b>privateNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateNetworking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6129,7 +6130,7 @@ Boolean controlling if private networks are
 enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="DropletState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L313">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L313">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -6137,7 +6138,7 @@ enabled. Defaults to false.
 The region to start in.
 
 <h4 class="pdoc-member-header" id="DropletState-resizeDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L320">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L320">property <b>resizeDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resizeDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6148,7 +6149,7 @@ only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
 
 <h4 class="pdoc-member-header" id="DropletState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L324">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L324">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -6156,7 +6157,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
 
 <h4 class="pdoc-member-header" id="DropletState-sshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L331">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L331">property <b>sshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6167,7 +6168,7 @@ as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/docume
 to retrieve them.
 
 <h4 class="pdoc-member-header" id="DropletState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L335">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L335">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6175,7 +6176,7 @@ to retrieve them.
 The status of the Droplet
 
 <h4 class="pdoc-member-header" id="DropletState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L339">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L339">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6183,7 +6184,7 @@ The status of the Droplet
 A list of the tags to be applied to this Droplet.
 
 <h4 class="pdoc-member-header" id="DropletState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L344">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L344">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6192,7 +6193,7 @@ The uniform resource name of the Droplet
 * `name`- The name of the Droplet
 
 <h4 class="pdoc-member-header" id="DropletState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L348">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L348">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6200,7 +6201,7 @@ The uniform resource name of the Droplet
 A string of the desired User Data for the Droplet.
 
 <h4 class="pdoc-member-header" id="DropletState-vcpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L352">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L352">property <b>vcpus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6208,7 +6209,7 @@ A string of the desired User Data for the Droplet.
 The number of the instance's virtual CPUs
 
 <h4 class="pdoc-member-header" id="DropletState-volumeIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/droplet.ts#L356">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/droplet.ts#L356">property <b>volumeIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6216,14 +6217,14 @@ The number of the instance's virtual CPUs
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="FilesystemType" data-link-title="FilesystemType">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/filesystemType.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/filesystemType.ts#L20">
         type <strong>FilesystemType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> FilesystemType = <span class='s2'>"xfs"</span> | <span class='s2'>"ext4"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="FirewallArgs" data-link-title="FirewallArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L174">
         interface <strong>FirewallArgs</strong>
     </a>
 </h3>
@@ -6233,7 +6234,7 @@ A list of the IDs of each [block storage volume](https://www.terraform.io/docs/p
 The set of arguments for constructing a Firewall resource.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L179">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L179">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -6242,7 +6243,7 @@ The list of the IDs of the Droplets assigned
 to the Firewall.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-inboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L184">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L184">property <b>inboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>inputs.FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
@@ -6251,7 +6252,7 @@ The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6259,7 +6260,7 @@ The `inboundRule` block is documented below.
 The Firewall name
 
 <h4 class="pdoc-member-header" id="FirewallArgs-outboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L193">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L193">property <b>outboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>inputs.FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
@@ -6268,7 +6269,7 @@ The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L197">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L197">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6276,7 +6277,7 @@ The `outboundRule` block is documented below.
 The names of the Tags assigned to the Firewall.
 
 <h3 class="pdoc-module-header" id="FirewallState" data-link-title="FirewallState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L128">
         interface <strong>FirewallState</strong>
     </a>
 </h3>
@@ -6286,7 +6287,7 @@ The names of the Tags assigned to the Firewall.
 Input properties used for looking up and filtering Firewall resources.
 
 <h4 class="pdoc-member-header" id="FirewallState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L133">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L133">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6295,7 +6296,7 @@ A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
 
 <h4 class="pdoc-member-header" id="FirewallState-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L138">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L138">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -6304,7 +6305,7 @@ The list of the IDs of the Droplets assigned
 to the Firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-inboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L143">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L143">property <b>inboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>inputs.FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
@@ -6313,7 +6314,7 @@ The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6321,7 +6322,7 @@ The `inboundRule` block is documented below.
 The Firewall name
 
 <h4 class="pdoc-member-header" id="FirewallState-outboundRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L152">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L152">property <b>outboundRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>inputs.FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
@@ -6330,7 +6331,7 @@ The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="FirewallState-pendingChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L159">property <b>pendingChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L159">property <b>pendingChanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pendingChanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallPendingChange'>inputs.FirewallPendingChange</a>&gt;[]&gt;;</code></pre>
@@ -6341,7 +6342,7 @@ are having their security policies updated.  When empty, all changes
 have been successfully applied.
 
 <h4 class="pdoc-member-header" id="FirewallState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L164">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L164">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6350,7 +6351,7 @@ A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
 
 <h4 class="pdoc-member-header" id="FirewallState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/firewall.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L168">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6358,7 +6359,7 @@ This can be "waiting", "succeeded", or "failed".
 The names of the Tags assigned to the Firewall.
 
 <h3 class="pdoc-module-header" id="FloatingIpArgs" data-link-title="FloatingIpArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L122">
         interface <strong>FloatingIpArgs</strong>
     </a>
 </h3>
@@ -6368,7 +6369,7 @@ The names of the Tags assigned to the Firewall.
 The set of arguments for constructing a FloatingIp resource.
 
 <h4 class="pdoc-member-header" id="FloatingIpArgs-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L126">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L126">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6376,7 +6377,7 @@ The set of arguments for constructing a FloatingIp resource.
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIpArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L130">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L130">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6384,7 +6385,7 @@ The ID of Droplet that the Floating IP will be assigned to.
 The IP Address of the resource
 
 <h4 class="pdoc-member-header" id="FloatingIpArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L134">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L134">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6392,7 +6393,7 @@ The IP Address of the resource
 The region that the Floating IP is reserved to.
 
 <h3 class="pdoc-module-header" id="FloatingIpAssignmentArgs" data-link-title="FloatingIpAssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L105">
         interface <strong>FloatingIpAssignmentArgs</strong>
     </a>
 </h3>
@@ -6402,7 +6403,7 @@ The region that the Floating IP is reserved to.
 The set of arguments for constructing a FloatingIpAssignment resource.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignmentArgs-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L109">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L109">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6410,7 +6411,7 @@ The set of arguments for constructing a FloatingIpAssignment resource.
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignmentArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L113">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L113">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6418,7 +6419,7 @@ The ID of Droplet that the Floating IP will be assigned to.
 The Floating IP to assign to the Droplet.
 
 <h3 class="pdoc-module-header" id="FloatingIpAssignmentState" data-link-title="FloatingIpAssignmentState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L91">
         interface <strong>FloatingIpAssignmentState</strong>
     </a>
 </h3>
@@ -6428,7 +6429,7 @@ The Floating IP to assign to the Droplet.
 Input properties used for looking up and filtering FloatingIpAssignment resources.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignmentState-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L95">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L95">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6436,7 +6437,7 @@ Input properties used for looking up and filtering FloatingIpAssignment resource
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIpAssignmentState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIpAssignment.ts#L99">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIpAssignment.ts#L99">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6444,7 +6445,7 @@ The ID of Droplet that the Floating IP will be assigned to.
 The Floating IP to assign to the Droplet.
 
 <h3 class="pdoc-module-header" id="FloatingIpState" data-link-title="FloatingIpState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L100">
         interface <strong>FloatingIpState</strong>
     </a>
 </h3>
@@ -6454,7 +6455,7 @@ The Floating IP to assign to the Droplet.
 Input properties used for looking up and filtering FloatingIp resources.
 
 <h4 class="pdoc-member-header" id="FloatingIpState-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L104">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L104">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6462,7 +6463,7 @@ Input properties used for looking up and filtering FloatingIp resources.
 The ID of Droplet that the Floating IP will be assigned to.
 
 <h4 class="pdoc-member-header" id="FloatingIpState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L108">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L108">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6470,7 +6471,7 @@ The ID of Droplet that the Floating IP will be assigned to.
 The IP Address of the resource
 
 <h4 class="pdoc-member-header" id="FloatingIpState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L112">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L112">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6478,7 +6479,7 @@ The IP Address of the resource
 The region that the Floating IP is reserved to.
 
 <h4 class="pdoc-member-header" id="FloatingIpState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/floatingIp.ts#L116">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/floatingIp.ts#L116">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6486,7 +6487,7 @@ The region that the Floating IP is reserved to.
 The uniform resource name of the floating ip
 
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L42">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -6496,27 +6497,27 @@ The uniform resource name of the floating ip
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-dropletLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L43">property <b>dropletLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L43">property <b>dropletLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L44">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L44">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-emailVerified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L45">property <b>emailVerified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L45">property <b>emailVerified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailVerified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-floatingIpLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L46">property <b>floatingIpLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L46">property <b>floatingIpLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6524,22 +6525,22 @@ A collection of values returned by getAccount.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L47">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L47">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-statusMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L48">property <b>statusMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L48">property <b>statusMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getAccount.ts#L49">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getAccount.ts#L49">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCertificateArgs" data-link-title="GetCertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L30">
         interface <strong>GetCertificateArgs</strong>
     </a>
 </h3>
@@ -6549,7 +6550,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6557,7 +6558,7 @@ A collection of arguments for invoking getCertificate.
 The name of certificate.
 
 <h3 class="pdoc-module-header" id="GetCertificateResult" data-link-title="GetCertificateResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L40">
         interface <strong>GetCertificateResult</strong>
     </a>
 </h3>
@@ -6567,12 +6568,12 @@ The name of certificate.
 A collection of values returned by getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L41">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L41">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6580,32 +6581,32 @@ A collection of values returned by getCertificate.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L43">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L43">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-sha1Fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L44">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L44">property <b>sha1Fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sha1Fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L45">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L45">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getCertificate.ts#L46">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getCertificate.ts#L46">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatabaseClusterArgs" data-link-title="GetDatabaseClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L33">
         interface <strong>GetDatabaseClusterArgs</strong>
     </a>
 </h3>
@@ -6615,7 +6616,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDatabaseCluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6623,12 +6624,12 @@ A collection of arguments for invoking getDatabaseCluster.
 The name of the database cluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L38">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L38">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetDatabaseClusterResult" data-link-title="GetDatabaseClusterResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L44">
         interface <strong>GetDatabaseClusterResult</strong>
     </a>
 </h3>
@@ -6638,7 +6639,7 @@ The name of the database cluster.
 A collection of values returned by getDatabaseCluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L48">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L48">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6646,7 +6647,7 @@ A collection of values returned by getDatabaseCluster.
 Name of the cluster's default database.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L52">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L52">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6654,7 +6655,7 @@ Name of the cluster's default database.
 Database engine used by the cluster (ex. `pg` for PostreSQL).
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L56">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L56">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6662,7 +6663,7 @@ Database engine used by the cluster (ex. `pg` for PostreSQL).
 Database cluster's hostname.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6670,7 +6671,7 @@ Database cluster's hostname.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-maintenanceWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L60">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L60">property <b>maintenanceWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetDatabaseClusterMaintenanceWindow'>outputs.GetDatabaseClusterMaintenanceWindow</a>[];</code></pre>
@@ -6678,12 +6679,12 @@ id is the provider-assigned unique ID for this managed resource.
 Defines when the automatic maintenance should be performed for the database cluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L65">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L65">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6691,7 +6692,7 @@ Defines when the automatic maintenance should be performed for the database clus
 Number of nodes that will be included in the cluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L69">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L69">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6699,7 +6700,7 @@ Number of nodes that will be included in the cluster.
 Password for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L73">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L73">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6707,7 +6708,7 @@ Password for the cluster's default user.
 Network port that the database cluster is listening on.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-privateHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L77">property <b>privateHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L77">property <b>privateHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6715,7 +6716,7 @@ Network port that the database cluster is listening on.
 Same as `host`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-privateUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L81">property <b>privateUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L81">property <b>privateUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6723,7 +6724,7 @@ Same as `host`, but only accessible from resources within the account and in the
 Same as `uri`, but only accessible from resources within the account and in the same region.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L85">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L85">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6731,7 +6732,7 @@ Same as `uri`, but only accessible from resources within the account and in the 
 DigitalOcean region where the cluster will reside.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L89">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L89">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6739,12 +6740,12 @@ DigitalOcean region where the cluster will reside.
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L90">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L94">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L94">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6752,7 +6753,7 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 The full URI for connecting to the database cluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L98">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L98">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6760,7 +6761,7 @@ The full URI for connecting to the database cluster.
 The uniform resource name of the database cluster.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L102">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L102">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6768,7 +6769,7 @@ The uniform resource name of the database cluster.
 Username for the cluster's default user.
 
 <h4 class="pdoc-member-header" id="GetDatabaseClusterResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDatabaseCluster.ts#L106">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L106">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6776,7 +6777,7 @@ Username for the cluster's default user.
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 
 <h3 class="pdoc-module-header" id="GetDomainArgs" data-link-title="GetDomainArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L30">
         interface <strong>GetDomainArgs</strong>
     </a>
 </h3>
@@ -6786,7 +6787,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 A collection of arguments for invoking getDomain.
 
 <h4 class="pdoc-member-header" id="GetDomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6794,7 +6795,7 @@ A collection of arguments for invoking getDomain.
 The name of the domain.
 
 <h3 class="pdoc-module-header" id="GetDomainResult" data-link-title="GetDomainResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L40">
         interface <strong>GetDomainResult</strong>
     </a>
 </h3>
@@ -6804,7 +6805,7 @@ The name of the domain.
 A collection of values returned by getDomain.
 
 <h4 class="pdoc-member-header" id="GetDomainResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6812,17 +6813,17 @@ A collection of values returned by getDomain.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L41">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L41">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L42">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L42">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6831,12 +6832,12 @@ The uniform resource name of the domain
 * `zoneFile`: The zone file of the domain.
 
 <h4 class="pdoc-member-header" id="GetDomainResult-zoneFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDomain.ts#L48">property <b>zoneFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDomain.ts#L48">property <b>zoneFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDropletArgs" data-link-title="GetDropletArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L32">
         interface <strong>GetDropletArgs</strong>
     </a>
 </h3>
@@ -6846,7 +6847,7 @@ The uniform resource name of the domain
 A collection of arguments for invoking getDroplet.
 
 <h4 class="pdoc-member-header" id="GetDropletArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L36">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6854,7 +6855,7 @@ A collection of arguments for invoking getDroplet.
 The name of Droplet.
 
 <h4 class="pdoc-member-header" id="GetDropletArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L40">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L40">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6862,7 +6863,7 @@ The name of Droplet.
 A tag applied to the Droplet.
 
 <h3 class="pdoc-module-header" id="GetDropletResult" data-link-title="GetDropletResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L46">
         interface <strong>GetDropletResult</strong>
     </a>
 </h3>
@@ -6872,7 +6873,7 @@ A tag applied to the Droplet.
 A collection of values returned by getDroplet.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L50">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L50">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6880,12 +6881,12 @@ A collection of values returned by getDroplet.
 Whether backups are enabled.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L51">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L51">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletResult-disk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L55">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L55">property <b>disk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disk: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6893,7 +6894,7 @@ Whether backups are enabled.
 The size of the Droplets disk in GB.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L137">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L137">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6901,7 +6902,7 @@ The size of the Droplets disk in GB.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L59">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L59">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6909,7 +6910,7 @@ id is the provider-assigned unique ID for this managed resource.
 The Droplet image ID or slug.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L63">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L63">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6917,7 +6918,7 @@ The Droplet image ID or slug.
 The Droplets public IPv4 address
 
 <h4 class="pdoc-member-header" id="GetDropletResult-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L67">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L67">property <b>ipv4AddressPrivate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4AddressPrivate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6925,7 +6926,7 @@ The Droplets public IPv4 address
 The Droplets private IPv4 address
 
 <h4 class="pdoc-member-header" id="GetDropletResult-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L71">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L71">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6933,7 +6934,7 @@ The Droplets private IPv4 address
 Whether IPv6 is enabled.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L75">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L75">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6941,7 +6942,7 @@ Whether IPv6 is enabled.
 The Droplets public IPv6 address
 
 <h4 class="pdoc-member-header" id="GetDropletResult-ipv6AddressPrivate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L79">property <b>ipv6AddressPrivate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L79">property <b>ipv6AddressPrivate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6AddressPrivate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6949,7 +6950,7 @@ The Droplets public IPv6 address
 The Droplets private IPv6 address
 
 <h4 class="pdoc-member-header" id="GetDropletResult-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L83">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L83">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6957,7 +6958,7 @@ The Droplets private IPv6 address
 Whether the Droplet is locked.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L87">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L87">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6965,7 +6966,7 @@ Whether the Droplet is locked.
 The amount of the Droplets memory in MB.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L91">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L91">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6973,12 +6974,12 @@ The amount of the Droplets memory in MB.
 Whether monitoring agent is installed.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletResult-priceHourly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L96">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L96">property <b>priceHourly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceHourly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6986,7 +6987,7 @@ Whether monitoring agent is installed.
 Droplet hourly price.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-priceMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L100">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L100">property <b>priceMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceMonthly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6994,7 +6995,7 @@ Droplet hourly price.
 Droplet monthly price.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-privateNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L104">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L104">property <b>privateNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -7002,7 +7003,7 @@ Droplet monthly price.
 Whether private networks are enabled.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L108">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L108">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7010,7 +7011,7 @@ Whether private networks are enabled.
 The region the Droplet is running in.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L112">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L112">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7018,7 +7019,7 @@ The region the Droplet is running in.
 The unique slug that indentifies the type of Droplet.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L116">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L116">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7026,12 +7027,12 @@ The unique slug that indentifies the type of Droplet.
 The status of the Droplet.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L117">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L117">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -7039,7 +7040,7 @@ The status of the Droplet.
 A list of the tags associated to the Droplet.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L125">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L125">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7047,7 +7048,7 @@ A list of the tags associated to the Droplet.
 The uniform resource name of the Droplet
 
 <h4 class="pdoc-member-header" id="GetDropletResult-vcpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L129">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L129">property <b>vcpus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -7055,7 +7056,7 @@ The uniform resource name of the Droplet
 The number of the Droplets virtual CPUs.
 
 <h4 class="pdoc-member-header" id="GetDropletResult-volumeIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDroplet.ts#L133">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDroplet.ts#L133">property <b>volumeIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -7063,7 +7064,7 @@ The number of the Droplets virtual CPUs.
 List of the IDs of each volumes attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="GetDropletSnapshotArgs" data-link-title="GetDropletSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L53">
         interface <strong>GetDropletSnapshotArgs</strong>
     </a>
 </h3>
@@ -7073,7 +7074,7 @@ List of the IDs of each volumes attached to the Droplet.
 A collection of arguments for invoking getDropletSnapshot.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L57">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L57">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -7081,7 +7082,7 @@ A collection of arguments for invoking getDropletSnapshot.
 If more than one result is returned, use the most recent Droplet snapshot.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7089,7 +7090,7 @@ If more than one result is returned, use the most recent Droplet snapshot.
 The name of the Droplet snapshot.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L65">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L65">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7097,7 +7098,7 @@ The name of the Droplet snapshot.
 A regex string to apply to the Droplet snapshot list returned by DigitalOcean. This allows more advanced filtering not supported from the DigitalOcean API. This filtering is done locally on what DigitalOcean returns.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L69">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L69">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7105,7 +7106,7 @@ A regex string to apply to the Droplet snapshot list returned by DigitalOcean. T
 A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only Droplet snapshots available in the region will be returned.
 
 <h3 class="pdoc-module-header" id="GetDropletSnapshotResult" data-link-title="GetDropletSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L75">
         interface <strong>GetDropletSnapshotResult</strong>
     </a>
 </h3>
@@ -7115,7 +7116,7 @@ A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only Droplet 
 A collection of values returned by getDropletSnapshot.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L79">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L79">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7123,7 +7124,7 @@ A collection of values returned by getDropletSnapshot.
 The date and time the Droplet snapshot was created.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L83">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L83">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7131,7 +7132,7 @@ The date and time the Droplet snapshot was created.
 The ID of the Droplet from which the Droplet snapshot originated.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L103">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L103">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7139,7 +7140,7 @@ The ID of the Droplet from which the Droplet snapshot originated.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L87">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L87">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -7147,27 +7148,27 @@ id is the provider-assigned unique ID for this managed resource.
 The minimum size in gigabytes required for a Droplet to be created based on this Droplet snapshot.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L88">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L88">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L90">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L90">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L91">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L91">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L95">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L95">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -7175,7 +7176,7 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 A list of DigitalOcean region "slugs" indicating where the Droplet snapshot is available.
 
 <h4 class="pdoc-member-header" id="GetDropletSnapshotResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getDropletSnapshot.ts#L99">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDropletSnapshot.ts#L99">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -7183,7 +7184,7 @@ A list of DigitalOcean region "slugs" indicating where the Droplet snapshot is a
 The billable size of the Droplet snapshot in gigabytes.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -7192,7 +7193,7 @@ The billable size of the Droplet snapshot in gigabytes.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -7201,7 +7202,7 @@ The billable size of the Droplet snapshot in gigabytes.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -7210,7 +7211,7 @@ The billable size of the Droplet snapshot in gigabytes.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetFloatingIpArgs" data-link-title="GetFloatingIpArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L30">
         interface <strong>GetFloatingIpArgs</strong>
     </a>
 </h3>
@@ -7220,7 +7221,7 @@ The billable size of the Droplet snapshot in gigabytes.
 A collection of arguments for invoking getFloatingIp.
 
 <h4 class="pdoc-member-header" id="GetFloatingIpArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L34">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L34">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7228,7 +7229,7 @@ A collection of arguments for invoking getFloatingIp.
 The allocated IP address of the specific floating IP to retrieve.
 
 <h3 class="pdoc-module-header" id="GetFloatingIpResult" data-link-title="GetFloatingIpResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L40">
         interface <strong>GetFloatingIpResult</strong>
     </a>
 </h3>
@@ -7238,12 +7239,12 @@ The allocated IP address of the specific floating IP to retrieve.
 A collection of values returned by getFloatingIp.
 
 <h4 class="pdoc-member-header" id="GetFloatingIpResult-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L41">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L41">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFloatingIpResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7251,22 +7252,22 @@ A collection of values returned by getFloatingIp.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFloatingIpResult-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L42">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L42">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFloatingIpResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L43">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L43">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFloatingIpResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getFloatingIp.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getFloatingIp.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetImageArgs" data-link-title="GetImageArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L32">
         interface <strong>GetImageArgs</strong>
     </a>
 </h3>
@@ -7276,7 +7277,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getImage.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L36">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7284,7 +7285,7 @@ A collection of arguments for invoking getImage.
 The name of the private image.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-slug">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L40">property <b>slug</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L40">property <b>slug</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slug?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7292,7 +7293,7 @@ The name of the private image.
 The slug of the official image.
 
 <h3 class="pdoc-module-header" id="GetImageResult" data-link-title="GetImageResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L46">
         interface <strong>GetImageResult</strong>
     </a>
 </h3>
@@ -7302,7 +7303,7 @@ The slug of the official image.
 A collection of values returned by getImage.
 
 <h4 class="pdoc-member-header" id="GetImageResult-distribution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L51">property <b>distribution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L51">property <b>distribution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distribution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7311,7 +7312,7 @@ The name of the distribution of the OS of the image.
 * `minDiskSize`: The minimum 'disk' required for the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7319,7 +7320,7 @@ The name of the distribution of the OS of the image.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageResult-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L55">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L55">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7327,17 +7328,17 @@ id is the provider-assigned unique ID for this managed resource.
 The id of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L56">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L56">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-private">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L65">property <b>private</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L65">property <b>private</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>private: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -7349,22 +7350,22 @@ snapshots and backups and are only available within your account.
 * `type`: Type of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L66">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L66">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-slug">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L67">property <b>slug</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L67">property <b>slug</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slug?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getImage.ts#L68">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getImage.ts#L68">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKubernetesClusterArgs" data-link-title="GetKubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L31">
         interface <strong>GetKubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -7374,7 +7375,7 @@ snapshots and backups and are only available within your account.
 A collection of arguments for invoking getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7382,12 +7383,12 @@ A collection of arguments for invoking getKubernetesCluster.
 The name of Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L36">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L36">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetKubernetesClusterResult" data-link-title="GetKubernetesClusterResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L42">
         interface <strong>GetKubernetesClusterResult</strong>
     </a>
 </h3>
@@ -7397,7 +7398,7 @@ The name of Kubernetes cluster.
 A collection of values returned by getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-clusterSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L46">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L46">property <b>clusterSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7405,7 +7406,7 @@ A collection of values returned by getKubernetesCluster.
 The range of IP addresses in the overlay network of the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L50">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L50">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7413,7 +7414,7 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 The date and time when the Kubernetes cluster was created.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L54">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L54">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7421,7 +7422,7 @@ The date and time when the Kubernetes cluster was created.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L115">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L115">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7429,7 +7430,7 @@ The base URL of the API server on the Kubernetes master node.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L58">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L58">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7437,17 +7438,17 @@ id is the provider-assigned unique ID for this managed resource.
 The public IPv4 address of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig'>outputs.GetKubernetesClusterKubeConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-nodePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L79">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L79">property <b>nodePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool'>outputs.GetKubernetesClusterNodePool</a>[];</code></pre>
@@ -7470,7 +7471,7 @@ A list of node pools associated with the cluster. Each node pool exports the fol
 + `updatedAt` - The date and time when the node was last updated.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L83">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L83">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7478,7 +7479,7 @@ A list of node pools associated with the cluster. Each node pool exports the fol
 The slug identifier for the region where the Kubernetes cluster is located.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-serviceSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L87">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L87">property <b>serviceSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7486,7 +7487,7 @@ The slug identifier for the region where the Kubernetes cluster is located.
 The range of assignable IP addresses for services running in the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L91">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L91">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7494,7 +7495,7 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -7502,7 +7503,7 @@ A string indicating the current status of the cluster. Potential values include 
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L107">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L107">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7518,7 +7519,7 @@ The date and time when the Kubernetes cluster was last updated.
 - `expiresAt` - The date and time when the credentials will expire and need to be regenerated.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getKubernetesCluster.ts#L111">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L111">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7526,7 +7527,7 @@ The date and time when the Kubernetes cluster was last updated.
 The slug identifier for the version of Kubernetes used for the cluster.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerArgs" data-link-title="GetLoadBalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L30">
         interface <strong>GetLoadBalancerArgs</strong>
     </a>
 </h3>
@@ -7536,7 +7537,7 @@ The slug identifier for the version of Kubernetes used for the cluster.
 A collection of arguments for invoking getLoadBalancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7544,7 +7545,7 @@ A collection of arguments for invoking getLoadBalancer.
 The name of load balancer.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerResult" data-link-title="GetLoadBalancerResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L40">
         interface <strong>GetLoadBalancerResult</strong>
     </a>
 </h3>
@@ -7554,37 +7555,37 @@ The name of load balancer.
 A collection of values returned by getLoadBalancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L41">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L41">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L42">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L42">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-dropletTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L43">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L43">property <b>dropletTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletTag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-enableProxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L44">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L44">property <b>enableProxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableProxyProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-forwardingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L45">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L45">property <b>forwardingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerForwardingRule'>outputs.GetLoadBalancerForwardingRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L46">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L46">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerHealthcheck'>outputs.GetLoadBalancerHealthcheck</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7592,42 +7593,42 @@ A collection of values returned by getLoadBalancer.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L47">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L47">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-redirectHttpToHttps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L49">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L49">property <b>redirectHttpToHttps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectHttpToHttps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L50">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L50">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L51">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L51">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L52">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L52">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerStickySessions'>outputs.GetLoadBalancerStickySessions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getLoadBalancer.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRecordArgs" data-link-title="GetRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L31">
         interface <strong>GetRecordArgs</strong>
     </a>
 </h3>
@@ -7637,7 +7638,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRecord.
 
 <h4 class="pdoc-member-header" id="GetRecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L35">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L35">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7645,7 +7646,7 @@ A collection of arguments for invoking getRecord.
 The domain name of the record.
 
 <h4 class="pdoc-member-header" id="GetRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7653,7 +7654,7 @@ The domain name of the record.
 The name of the record.
 
 <h3 class="pdoc-module-header" id="GetRecordResult" data-link-title="GetRecordResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L45">
         interface <strong>GetRecordResult</strong>
     </a>
 </h3>
@@ -7663,22 +7664,22 @@ The name of the record.
 A collection of values returned by getRecord.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L46">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L46">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L47">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L47">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L48">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L48">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7686,42 +7687,42 @@ A collection of values returned by getRecord.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L50">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L50">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L51">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L51">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L52">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L52">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L53">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L53">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L54">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L54">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getRecord.ts#L55">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getRecord.ts#L55">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSizesArgs" data-link-title="GetSizesArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L34">
         interface <strong>GetSizesArgs</strong>
     </a>
 </h3>
@@ -7731,7 +7732,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSizes.
 
 <h4 class="pdoc-member-header" id="GetSizesArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L39">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L39">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesFilter'>inputs.GetSizesFilter</a>[];</code></pre>
@@ -7740,7 +7741,7 @@ Filter the results.
 The `filter` block is documented below.
 
 <h4 class="pdoc-member-header" id="GetSizesArgs-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L44">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L44">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesSort'>inputs.GetSizesSort</a>[];</code></pre>
@@ -7749,7 +7750,7 @@ Sort the results.
 The `sort` block is documented below.
 
 <h3 class="pdoc-module-header" id="GetSizesResult" data-link-title="GetSizesResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L50">
         interface <strong>GetSizesResult</strong>
     </a>
 </h3>
@@ -7759,12 +7760,12 @@ The `sort` block is documented below.
 A collection of values returned by getSizes.
 
 <h4 class="pdoc-member-header" id="GetSizesResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L51">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L51">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesFilter'>outputs.GetSizesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSizesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7772,17 +7773,17 @@ A collection of values returned by getSizes.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSizesResult-sizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L52">property <b>sizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L52">property <b>sizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizes: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSize'>outputs.GetSizesSize</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSizesResult-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSizes.ts#L53">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L53">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSort'>outputs.GetSizesSort</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSshKeyArgs" data-link-title="GetSshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L30">
         interface <strong>GetSshKeyArgs</strong>
     </a>
 </h3>
@@ -7792,7 +7793,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7800,7 +7801,7 @@ A collection of arguments for invoking getSshKey.
 The name of the ssh key.
 
 <h3 class="pdoc-module-header" id="GetSshKeyResult" data-link-title="GetSshKeyResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L40">
         interface <strong>GetSshKeyResult</strong>
     </a>
 </h3>
@@ -7810,12 +7811,12 @@ The name of the ssh key.
 A collection of values returned by getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyResult-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L41">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L41">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7823,17 +7824,17 @@ A collection of values returned by getSshKey.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSshKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getSshKey.ts#L43">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L43">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTagArgs" data-link-title="GetTagArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L30">
         interface <strong>GetTagArgs</strong>
     </a>
 </h3>
@@ -7843,7 +7844,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getTag.
 
 <h4 class="pdoc-member-header" id="GetTagArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7851,7 +7852,7 @@ A collection of arguments for invoking getTag.
 The name of the tag.
 
 <h3 class="pdoc-module-header" id="GetTagResult" data-link-title="GetTagResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L40">
         interface <strong>GetTagResult</strong>
     </a>
 </h3>
@@ -7861,7 +7862,7 @@ The name of the tag.
 A collection of values returned by getTag.
 
 <h4 class="pdoc-member-header" id="GetTagResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7869,12 +7870,12 @@ A collection of values returned by getTag.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTagResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getTag.ts#L41">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getTag.ts#L41">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -7883,7 +7884,7 @@ id is the provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetVolumeArgs" data-link-title="GetVolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L32">
         interface <strong>GetVolumeArgs</strong>
     </a>
 </h3>
@@ -7893,12 +7894,12 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L33">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L33">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7906,7 +7907,7 @@ A collection of arguments for invoking getVolume.
 The name of block storage volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L41">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L41">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7914,7 +7915,7 @@ The name of block storage volume.
 The region the block storage volume is provisioned in.
 
 <h3 class="pdoc-module-header" id="GetVolumeResult" data-link-title="GetVolumeResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L47">
         interface <strong>GetVolumeResult</strong>
     </a>
 </h3>
@@ -7924,7 +7925,7 @@ The region the block storage volume is provisioned in.
 A collection of values returned by getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7932,7 +7933,7 @@ A collection of values returned by getVolume.
 Text describing a block storage volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L55">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L55">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -7940,7 +7941,7 @@ Text describing a block storage volume.
 A list of associated Droplet ids.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-filesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L59">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L59">property <b>filesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7948,7 +7949,7 @@ A list of associated Droplet ids.
 Filesystem label currently in-use on the block storage volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-filesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L63">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L63">property <b>filesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7956,7 +7957,7 @@ Filesystem label currently in-use on the block storage volume.
 Filesystem type currently in-use on the block storage volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -7964,17 +7965,17 @@ Filesystem type currently in-use on the block storage volume.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L65">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L65">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L69">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L69">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -7982,12 +7983,12 @@ id is the provider-assigned unique ID for this managed resource.
 The size of the block storage volume in GiB.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolume.ts#L70">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolume.ts#L70">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVolumeSnapshotArgs" data-link-title="GetVolumeSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L38">
         interface <strong>GetVolumeSnapshotArgs</strong>
     </a>
 </h3>
@@ -7997,7 +7998,7 @@ The size of the block storage volume in GiB.
 A collection of arguments for invoking getVolumeSnapshot.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L42">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L42">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -8005,7 +8006,7 @@ A collection of arguments for invoking getVolumeSnapshot.
 If more than one result is returned, use the most recent volume snapshot.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8013,7 +8014,7 @@ If more than one result is returned, use the most recent volume snapshot.
 The name of the volume snapshot.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L50">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L50">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8021,7 +8022,7 @@ The name of the volume snapshot.
 A regex string to apply to the volume snapshot list returned by DigitalOcean. This allows more advanced filtering not supported from the DigitalOcean API. This filtering is done locally on what DigitalOcean returns.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L54">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L54">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8029,7 +8030,7 @@ A regex string to apply to the volume snapshot list returned by DigitalOcean. Th
 A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only volume snapshots available in the region will be returned.
 
 <h3 class="pdoc-module-header" id="GetVolumeSnapshotResult" data-link-title="GetVolumeSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L60">
         interface <strong>GetVolumeSnapshotResult</strong>
     </a>
 </h3>
@@ -8039,7 +8040,7 @@ A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only volume s
 A collection of values returned by getVolumeSnapshot.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L64">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L64">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8047,7 +8048,7 @@ A collection of values returned by getVolumeSnapshot.
 The date and time the volume snapshot was created.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8055,7 +8056,7 @@ The date and time the volume snapshot was created.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L68">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L68">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -8063,27 +8064,27 @@ id is the provider-assigned unique ID for this managed resource.
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L69">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L69">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L71">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L71">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L72">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L72">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L76">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L76">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -8091,7 +8092,7 @@ The minimum size in gigabytes required for a volume to be created based on this 
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L80">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L80">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -8099,7 +8100,7 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 The billable size of the volume snapshot in gigabytes.
 
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotResult-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/getVolumeSnapshot.ts#L84">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getVolumeSnapshot.ts#L84">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -8107,7 +8108,7 @@ The billable size of the volume snapshot in gigabytes.
 The ID of the volume from which the volume snapshot originated.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterArgs" data-link-title="KubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L242">
         interface <strong>KubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -8117,7 +8118,7 @@ The ID of the volume from which the volume snapshot originated.
 The set of arguments for constructing a KubernetesCluster resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L246">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L246">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8125,7 +8126,7 @@ The set of arguments for constructing a KubernetesCluster resource.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-nodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L257">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L257">property <b>nodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>inputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
@@ -8140,7 +8141,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L261">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L261">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8148,7 +8149,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 The slug identifier for the region where the Kubernetes cluster will be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L265">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L265">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8156,7 +8157,7 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L269">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L269">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8164,7 +8165,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 
 <h3 class="pdoc-module-header" id="KubernetesClusterState" data-link-title="KubernetesClusterState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L172">
         interface <strong>KubernetesClusterState</strong>
     </a>
 </h3>
@@ -8174,7 +8175,7 @@ The slug identifier for the version of Kubernetes used for the cluster. Use [doc
 Input properties used for looking up and filtering KubernetesCluster resources.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-clusterSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L176">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L176">property <b>clusterSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8182,7 +8183,7 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 The range of IP addresses in the overlay network of the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L180">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L180">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8190,7 +8191,7 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 The date and time when the Kubernetes cluster was created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L184">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L184">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8198,7 +8199,7 @@ The date and time when the Kubernetes cluster was created.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L188">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L188">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8206,12 +8207,12 @@ The base URL of the API server on the Kubernetes master node.
 The public IPv4 address of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L189">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L189">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterKubeConfig'>inputs.KubernetesClusterKubeConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L193">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8219,7 +8220,7 @@ The public IPv4 address of the Kubernetes master node.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-nodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L204">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L204">property <b>nodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>inputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
@@ -8234,7 +8235,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L208">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L208">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8242,7 +8243,7 @@ A block representing the cluster's default node pool. Additional node pools may 
 The slug identifier for the region where the Kubernetes cluster will be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-serviceSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L212">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L212">property <b>serviceSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8250,7 +8251,7 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 The range of assignable IP addresses for services running in the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L216">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L216">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8258,7 +8259,7 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L220">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L220">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8266,7 +8267,7 @@ A string indicating the current status of the cluster. Potential values include 
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L232">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L232">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8282,7 +8283,7 @@ The date and time when the Kubernetes cluster was last updated.
 - `expiresAt` - The date and time when the credentials will expire and need to be regenerated.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesCluster.ts#L236">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L236">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8290,7 +8291,7 @@ The date and time when the Kubernetes cluster was last updated.
 The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 
 <h3 class="pdoc-module-header" id="KubernetesNodePoolArgs" data-link-title="KubernetesNodePoolArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L195">
         interface <strong>KubernetesNodePoolArgs</strong>
     </a>
 </h3>
@@ -8300,7 +8301,7 @@ The slug identifier for the version of Kubernetes used for the cluster. Use [doc
 The set of arguments for constructing a KubernetesNodePool resource.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L199">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L199">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8308,7 +8309,7 @@ The set of arguments for constructing a KubernetesNodePool resource.
 Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L203">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L203">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8316,7 +8317,7 @@ Enable auto-scaling of the number of nodes in the node pool within the given min
 The ID of the Kubernetes cluster to which the node pool is associated.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-maxNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L207">property <b>maxNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L207">property <b>maxNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8324,7 +8325,7 @@ The ID of the Kubernetes cluster to which the node pool is associated.
 If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-minNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L211">property <b>minNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L211">property <b>minNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8332,7 +8333,7 @@ If auto-scaling is enabled, this represents the maximum number of nodes that the
 If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8340,7 +8341,7 @@ If auto-scaling is enabled, this represents the minimum number of nodes that the
 A name for the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L219">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L219">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8348,7 +8349,7 @@ A name for the node pool.
 The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L223">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L223">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -8356,7 +8357,7 @@ The number of Droplet instances in the node pool. If auto-scaling is enabled, th
 The slug identifier for the type of Droplet to be used as workers in the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L227">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L227">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8364,7 +8365,7 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h3 class="pdoc-module-header" id="KubernetesNodePoolState" data-link-title="KubernetesNodePoolState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L144">
         interface <strong>KubernetesNodePoolState</strong>
     </a>
 </h3>
@@ -8374,7 +8375,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 Input properties used for looking up and filtering KubernetesNodePool resources.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-actualNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L148">property <b>actualNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L148">property <b>actualNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actualNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8382,7 +8383,7 @@ Input properties used for looking up and filtering KubernetesNodePool resources.
 A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L152">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L152">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8390,7 +8391,7 @@ A computed field representing the actual number of nodes in the node pool, which
 Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L156">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L156">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8398,7 +8399,7 @@ Enable auto-scaling of the number of nodes in the node pool within the given min
 The ID of the Kubernetes cluster to which the node pool is associated.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-maxNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L160">property <b>maxNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L160">property <b>maxNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8406,7 +8407,7 @@ The ID of the Kubernetes cluster to which the node pool is associated.
 If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-minNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L164">property <b>minNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L164">property <b>minNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8414,7 +8415,7 @@ If auto-scaling is enabled, this represents the maximum number of nodes that the
 If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8422,7 +8423,7 @@ If auto-scaling is enabled, this represents the minimum number of nodes that the
 A name for the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L172">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L172">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8430,7 +8431,7 @@ A name for the node pool.
 The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L181">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L181">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesNodePoolNode'>inputs.KubernetesNodePoolNode</a>&gt;[]&gt;;</code></pre>
@@ -8443,7 +8444,7 @@ A list of nodes in the pool. Each node exports the following attributes:
 - `updatedAt` - The date and time when the node was last updated.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L185">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L185">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</code></pre>
@@ -8451,7 +8452,7 @@ A list of nodes in the pool. Each node exports the following attributes:
 The slug identifier for the type of Droplet to be used as workers in the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/kubernetesNodePool.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8459,7 +8460,7 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h3 class="pdoc-module-header" id="LoadBalancerArgs" data-link-title="LoadBalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L222">
         interface <strong>LoadBalancerArgs</strong>
     </a>
 </h3>
@@ -8469,7 +8470,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 The set of arguments for constructing a LoadBalancer resource.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L228">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L228">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Algorithm'>Algorithm</a>&gt;;</code></pre>
@@ -8479,7 +8480,7 @@ which backend Droplet will be selected by a client. It must be either `roundRobi
 or `leastConnections`. The default value is `roundRobin`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L232">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L232">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -8487,7 +8488,7 @@ or `leastConnections`. The default value is `roundRobin`.
 A list of the IDs of each droplet to be attached to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-dropletTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L236">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L236">property <b>dropletTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8495,7 +8496,7 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-enableProxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L242">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L242">property <b>enableProxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableProxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8505,7 +8506,7 @@ Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-forwardingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L247">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L247">property <b>forwardingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>inputs.LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
@@ -8514,7 +8515,7 @@ A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L252">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L252">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>inputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
@@ -8523,7 +8524,7 @@ A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L256">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8531,7 +8532,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 The Load Balancer name
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-redirectHttpToHttps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L262">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L262">property <b>redirectHttpToHttps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectHttpToHttps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8541,7 +8542,7 @@ HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on por
 Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L266">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L266">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8549,7 +8550,7 @@ Default value is `false`.
 The region to start in
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L271">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L271">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>inputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
@@ -8558,7 +8559,7 @@ A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
 
 <h3 class="pdoc-module-header" id="LoadBalancerState" data-link-title="LoadBalancerState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L161">
         interface <strong>LoadBalancerState</strong>
     </a>
 </h3>
@@ -8568,7 +8569,7 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 Input properties used for looking up and filtering LoadBalancer resources.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L167">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L167">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Algorithm'>Algorithm</a>&gt;;</code></pre>
@@ -8578,7 +8579,7 @@ which backend Droplet will be selected by a client. It must be either `roundRobi
 or `leastConnections`. The default value is `roundRobin`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L171">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L171">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -8586,7 +8587,7 @@ or `leastConnections`. The default value is `roundRobin`.
 A list of the IDs of each droplet to be attached to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-dropletTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L175">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L175">property <b>dropletTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8594,7 +8595,7 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-enableProxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L181">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L181">property <b>enableProxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableProxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8604,7 +8605,7 @@ Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-forwardingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L186">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L186">property <b>forwardingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>inputs.LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
@@ -8613,7 +8614,7 @@ A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L191">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L191">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>inputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
@@ -8622,12 +8623,12 @@ A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L192">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L192">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8635,7 +8636,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 The Load Balancer name
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-redirectHttpToHttps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L202">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L202">property <b>redirectHttpToHttps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectHttpToHttps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8645,7 +8646,7 @@ HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on por
 Default value is `false`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L206">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L206">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8653,12 +8654,12 @@ Default value is `false`.
 The region to start in
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L207">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L207">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerState-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L212">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L212">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>inputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
@@ -8667,7 +8668,7 @@ A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/loadBalancer.ts#L216">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L216">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8675,7 +8676,7 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 The uniform resource name for the Load Balancer
 
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L182">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -8685,7 +8686,7 @@ The uniform resource name for the Load Balancer
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L186">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L186">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8693,7 +8694,7 @@ The set of arguments for constructing a Project resource.
 the description of the project
 
 <h4 class="pdoc-member-header" id="ProjectArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L190">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L190">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8701,7 +8702,7 @@ the description of the project
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8709,7 +8710,7 @@ the environment of the project's resources. The possible values are: `Developmen
 The name of the Project
 
 <h4 class="pdoc-member-header" id="ProjectArgs-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L198">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L198">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8717,7 +8718,7 @@ The name of the Project
 the purpose of the project, (Default: "Web Application")
 
 <h4 class="pdoc-member-header" id="ProjectArgs-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L202">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L202">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8725,7 +8726,7 @@ the purpose of the project, (Default: "Web Application")
 a list of uniform resource names (URNs) for the resources associated with the project
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L140">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -8735,7 +8736,7 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L144">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L144">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8743,7 +8744,7 @@ Input properties used for looking up and filtering Project resources.
 the date and time when the project was created, (ISO8601)
 
 <h4 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L148">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L148">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8751,7 +8752,7 @@ the date and time when the project was created, (ISO8601)
 the description of the project
 
 <h4 class="pdoc-member-header" id="ProjectState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L152">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L152">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8759,7 +8760,7 @@ the description of the project
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8767,7 +8768,7 @@ the environment of the project's resources. The possible values are: `Developmen
 The name of the Project
 
 <h4 class="pdoc-member-header" id="ProjectState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L160">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L160">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8775,7 +8776,7 @@ The name of the Project
 the id of the project owner.
 
 <h4 class="pdoc-member-header" id="ProjectState-ownerUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L164">property <b>ownerUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L164">property <b>ownerUuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerUuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8783,7 +8784,7 @@ the id of the project owner.
 the unique universal identifier of the project owner.
 
 <h4 class="pdoc-member-header" id="ProjectState-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L168">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L168">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8791,7 +8792,7 @@ the unique universal identifier of the project owner.
 the purpose of the project, (Default: "Web Application")
 
 <h4 class="pdoc-member-header" id="ProjectState-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L172">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L172">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8799,7 +8800,7 @@ the purpose of the project, (Default: "Web Application")
 a list of uniform resource names (URNs) for the resources associated with the project
 
 <h4 class="pdoc-member-header" id="ProjectState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/project.ts#L176">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/project.ts#L176">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8807,14 +8808,14 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 the date and time when the project was last updated, (ISO8601)
 
 <h3 class="pdoc-module-header" id="Protocol" data-link-title="Protocol">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/protocol.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/protocol.ts#L23">
         type <strong>Protocol</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Protocol = <span class='s2'>"tcp"</span> | <span class='s2'>"icmp"</span> | <span class='s2'>"udp"</span> | <span class='s2'>"http"</span> | <span class='s2'>"https"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L62">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -8824,7 +8825,7 @@ the date and time when the project was last updated, (ISO8601)
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L66">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L66">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8832,7 +8833,7 @@ The set of arguments for constructing a Provider resource.
 The URL to use for the DigitalOcean API.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-spacesAccessId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L70">property <b>spacesAccessId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L70">property <b>spacesAccessId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spacesAccessId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8840,7 +8841,7 @@ The URL to use for the DigitalOcean API.
 The access key ID for Spaces API operations.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-spacesSecretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L74">property <b>spacesSecretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L74">property <b>spacesSecretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spacesSecretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8848,7 +8849,7 @@ The access key ID for Spaces API operations.
 The secret access key for Spaces API operations.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/provider.ts#L78">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/provider.ts#L78">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8856,14 +8857,14 @@ The secret access key for Spaces API operations.
 The token key for API operations.
 
 <h3 class="pdoc-module-header" id="RecordType" data-link-title="RecordType">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/recordType.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/recordType.ts#L26">
         type <strong>RecordType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> RecordType = <span class='s2'>"A"</span> | <span class='s2'>"AAAA"</span> | <span class='s2'>"CAA"</span> | <span class='s2'>"CNAME"</span> | <span class='s2'>"MX"</span> | <span class='s2'>"NS"</span> | <span class='s2'>"TXT"</span> | <span class='s2'>"SRV"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Region" data-link-title="Region">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/region.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/region.ts#L33">
         type <strong>Region</strong>
     </a>
 </h3>
@@ -8873,7 +8874,7 @@ The token key for API operations.
 A Region represents any valid DigitalOcean region that may be targeted with deployments.
 
 <h3 class="pdoc-module-header" id="SpacesBucketArgs" data-link-title="SpacesBucketArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L206">
         interface <strong>SpacesBucketArgs</strong>
     </a>
 </h3>
@@ -8883,7 +8884,7 @@ A Region represents any valid DigitalOcean region that may be targeted with depl
 The set of arguments for constructing a SpacesBucket resource.
 
 <h4 class="pdoc-member-header" id="SpacesBucketArgs-acl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L210">property <b>acl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L210">property <b>acl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8891,7 +8892,7 @@ The set of arguments for constructing a SpacesBucket resource.
 Canned ACL applied on bucket creation (`private` or `public-read`)
 
 <h4 class="pdoc-member-header" id="SpacesBucketArgs-corsRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L214">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L214">property <b>corsRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>inputs.SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
@@ -8899,7 +8900,7 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 A container holding a list of elements describing allowed methods for a specific origin.
 
 <h4 class="pdoc-member-header" id="SpacesBucketArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L218">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L218">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8907,7 +8908,7 @@ A container holding a list of elements describing allowed methods for a specific
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 
 <h4 class="pdoc-member-header" id="SpacesBucketArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L222">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8915,7 +8916,7 @@ Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 The name of the bucket
 
 <h4 class="pdoc-member-header" id="SpacesBucketArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L226">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L226">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8923,7 +8924,7 @@ The name of the bucket
 The region where the bucket resides (Defaults to `nyc3`)
 
 <h3 class="pdoc-module-header" id="SpacesBucketState" data-link-title="SpacesBucketState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L172">
         interface <strong>SpacesBucketState</strong>
     </a>
 </h3>
@@ -8933,7 +8934,7 @@ The region where the bucket resides (Defaults to `nyc3`)
 Input properties used for looking up and filtering SpacesBucket resources.
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-acl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L176">property <b>acl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L176">property <b>acl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8941,7 +8942,7 @@ Input properties used for looking up and filtering SpacesBucket resources.
 Canned ACL applied on bucket creation (`private` or `public-read`)
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-bucketDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L180">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L180">property <b>bucketDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8949,7 +8950,7 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-corsRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L184">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L184">property <b>corsRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>inputs.SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
@@ -8957,7 +8958,7 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 A container holding a list of elements describing allowed methods for a specific origin.
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L188">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L188">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8965,7 +8966,7 @@ A container holding a list of elements describing allowed methods for a specific
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8973,7 +8974,7 @@ Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 The name of the bucket
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L196">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L196">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -8981,7 +8982,7 @@ The name of the bucket
 The region where the bucket resides (Defaults to `nyc3`)
 
 <h4 class="pdoc-member-header" id="SpacesBucketState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/spacesBucket.ts#L200">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L200">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8989,7 +8990,7 @@ The region where the bucket resides (Defaults to `nyc3`)
 The uniform resource name for the bucket
 
 <h3 class="pdoc-module-header" id="SshKeyArgs" data-link-title="SshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L115">
         interface <strong>SshKeyArgs</strong>
     </a>
 </h3>
@@ -8999,7 +9000,7 @@ The uniform resource name for the bucket
 The set of arguments for constructing a SshKey resource.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9007,7 +9008,7 @@ The set of arguments for constructing a SshKey resource.
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L124">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L124">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9016,7 +9017,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function
 
 <h3 class="pdoc-module-header" id="SshKeyState" data-link-title="SshKeyState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L96">
         interface <strong>SshKeyState</strong>
     </a>
 </h3>
@@ -9026,7 +9027,7 @@ can be read using the file interpolation function
 Input properties used for looking up and filtering SshKey resources.
 
 <h4 class="pdoc-member-header" id="SshKeyState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L100">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L100">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9034,7 +9035,7 @@ Input properties used for looking up and filtering SshKey resources.
 The fingerprint of the SSH key
 
 <h4 class="pdoc-member-header" id="SshKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9042,7 +9043,7 @@ The fingerprint of the SSH key
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKeyState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/sshKey.ts#L109">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/sshKey.ts#L109">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9051,7 +9052,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function
 
 <h3 class="pdoc-module-header" id="TagArgs" data-link-title="TagArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L90">
         interface <strong>TagArgs</strong>
     </a>
 </h3>
@@ -9061,7 +9062,7 @@ can be read using the file interpolation function
 The set of arguments for constructing a Tag resource.
 
 <h4 class="pdoc-member-header" id="TagArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9069,7 +9070,7 @@ The set of arguments for constructing a Tag resource.
 The name of the tag
 
 <h3 class="pdoc-module-header" id="TagState" data-link-title="TagState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L80">
         interface <strong>TagState</strong>
     </a>
 </h3>
@@ -9079,7 +9080,7 @@ The name of the tag
 Input properties used for looking up and filtering Tag resources.
 
 <h4 class="pdoc-member-header" id="TagState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/tag.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/tag.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9087,7 +9088,7 @@ Input properties used for looking up and filtering Tag resources.
 The name of the tag
 
 <h3 class="pdoc-module-header" id="VolumeArgs" data-link-title="VolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L195">
         interface <strong>VolumeArgs</strong>
     </a>
 </h3>
@@ -9097,7 +9098,7 @@ The name of the tag
 The set of arguments for constructing a Volume resource.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9105,7 +9106,7 @@ The set of arguments for constructing a Volume resource.
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-filesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L203">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L203">property <b>filesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9113,7 +9114,7 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-initialFilesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L207">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L207">property <b>initialFilesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialFilesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9121,7 +9122,7 @@ Filesystem type (`xfs` or `ext4`) for the block storage volume.
 Initial filesystem label for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-initialFilesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L211">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L211">property <b>initialFilesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialFilesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FilesystemType'>FilesystemType</a>&gt;;</code></pre>
@@ -9129,7 +9130,7 @@ Initial filesystem label for the block storage volume.
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9137,7 +9138,7 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L219">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L219">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -9145,7 +9146,7 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 The region that the block storage volume will be created in.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L223">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L223">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9153,7 +9154,7 @@ The region that the block storage volume will be created in.
 The size of the block storage volume in GiB. If updated, can only be expanded.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L227">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L227">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9161,7 +9162,7 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 
 <h3 class="pdoc-module-header" id="VolumeAttachmentArgs" data-link-title="VolumeAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L105">
         interface <strong>VolumeAttachmentArgs</strong>
     </a>
 </h3>
@@ -9171,7 +9172,7 @@ The ID of an existing volume snapshot from which the new volume will be created.
 The set of arguments for constructing a VolumeAttachment resource.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentArgs-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L109">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L109">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9179,7 +9180,7 @@ The set of arguments for constructing a VolumeAttachment resource.
 ID of the Droplet to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentArgs-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L113">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L113">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9187,7 +9188,7 @@ ID of the Droplet to attach the volume to.
 ID of the Volume to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="VolumeAttachmentState" data-link-title="VolumeAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L91">
         interface <strong>VolumeAttachmentState</strong>
     </a>
 </h3>
@@ -9197,7 +9198,7 @@ ID of the Volume to be attached to the Droplet.
 Input properties used for looking up and filtering VolumeAttachment resources.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentState-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L95">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L95">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9205,7 +9206,7 @@ Input properties used for looking up and filtering VolumeAttachment resources.
 ID of the Droplet to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeAttachment.ts#L99">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeAttachment.ts#L99">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9213,7 +9214,7 @@ ID of the Droplet to attach the volume to.
 ID of the Volume to be attached to the Droplet.
 
 <h3 class="pdoc-module-header" id="VolumeSnapshotArgs" data-link-title="VolumeSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L142">
         interface <strong>VolumeSnapshotArgs</strong>
     </a>
 </h3>
@@ -9223,7 +9224,7 @@ ID of the Volume to be attached to the Droplet.
 The set of arguments for constructing a VolumeSnapshot resource.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9231,7 +9232,7 @@ The set of arguments for constructing a VolumeSnapshot resource.
 A name for the volume snapshot.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotArgs-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L150">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L150">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9239,7 +9240,7 @@ A name for the volume snapshot.
 The ID of the volume from which the volume snapshot originated.
 
 <h3 class="pdoc-module-header" id="VolumeSnapshotState" data-link-title="VolumeSnapshotState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L112">
         interface <strong>VolumeSnapshotState</strong>
     </a>
 </h3>
@@ -9249,7 +9250,7 @@ The ID of the volume from which the volume snapshot originated.
 Input properties used for looking up and filtering VolumeSnapshot resources.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L116">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L116">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9257,7 +9258,7 @@ Input properties used for looking up and filtering VolumeSnapshot resources.
 The date and time the volume snapshot was created.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-minDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L120">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L120">property <b>minDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9265,7 +9266,7 @@ The date and time the volume snapshot was created.
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9273,7 +9274,7 @@ The minimum size in gigabytes required for a volume to be created based on this 
 A name for the volume snapshot.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L128">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L128">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;[]&gt;;</code></pre>
@@ -9281,7 +9282,7 @@ A name for the volume snapshot.
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L132">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L132">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9289,7 +9290,7 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 The billable size of the volume snapshot in gigabytes.
 
 <h4 class="pdoc-member-header" id="VolumeSnapshotState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volumeSnapshot.ts#L136">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volumeSnapshot.ts#L136">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9297,7 +9298,7 @@ The billable size of the volume snapshot in gigabytes.
 The ID of the volume from which the volume snapshot originated.
 
 <h3 class="pdoc-module-header" id="VolumeState" data-link-title="VolumeState">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L145">
         interface <strong>VolumeState</strong>
     </a>
 </h3>
@@ -9307,7 +9308,7 @@ The ID of the volume from which the volume snapshot originated.
 Input properties used for looking up and filtering Volume resources.
 
 <h4 class="pdoc-member-header" id="VolumeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9315,7 +9316,7 @@ Input properties used for looking up and filtering Volume resources.
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-dropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L153">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L153">property <b>dropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -9323,7 +9324,7 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 A list of associated droplet ids.
 
 <h4 class="pdoc-member-header" id="VolumeState-filesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L157">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L157">property <b>filesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9331,7 +9332,7 @@ A list of associated droplet ids.
 Filesystem label for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-filesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L161">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L161">property <b>filesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9339,7 +9340,7 @@ Filesystem label for the block storage volume.
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-initialFilesystemLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L165">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L165">property <b>initialFilesystemLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialFilesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9347,7 +9348,7 @@ Filesystem type (`xfs` or `ext4`) for the block storage volume.
 Initial filesystem label for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-initialFilesystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L169">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L169">property <b>initialFilesystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialFilesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FilesystemType'>FilesystemType</a>&gt;;</code></pre>
@@ -9355,7 +9356,7 @@ Initial filesystem label for the block storage volume.
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9363,7 +9364,7 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 
 <h4 class="pdoc-member-header" id="VolumeState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L177">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L177">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</code></pre>
@@ -9371,7 +9372,7 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 The region that the block storage volume will be created in.
 
 <h4 class="pdoc-member-header" id="VolumeState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L181">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L181">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -9379,7 +9380,7 @@ The region that the block storage volume will be created in.
 The size of the block storage volume in GiB. If updated, can only be expanded.
 
 <h4 class="pdoc-member-header" id="VolumeState-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L185">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L185">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9387,7 +9388,7 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 
 <h4 class="pdoc-member-header" id="VolumeState-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/volume.ts#L189">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/volume.ts#L189">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

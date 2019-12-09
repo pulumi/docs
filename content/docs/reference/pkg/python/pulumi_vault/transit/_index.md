@@ -1,5 +1,6 @@
 ---
 title: Module transit
+title_tag: Module transit | Package pulumi_vault | Python SDK
 linktitle: transit
 notitle: true
 ---

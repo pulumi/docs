@@ -1,5 +1,6 @@
 ---
 title: Module consul
+title_tag: Module consul | Package pulumi_vault | Python SDK
 linktitle: consul
 notitle: true
 ---

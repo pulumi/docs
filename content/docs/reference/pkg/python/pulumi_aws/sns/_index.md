@@ -1,5 +1,6 @@
 ---
 title: Module sns
+title_tag: Module sns | Package pulumi_aws | Python SDK
 linktitle: sns
 notitle: true
 ---

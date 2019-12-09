@@ -1,5 +1,6 @@
 ---
 title: Module sfn
+title_tag: Module sfn | Package pulumi_aws | Python SDK
 linktitle: sfn
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module qldb
+title_tag: Module qldb | Package pulumi_aws | Python SDK
 linktitle: qldb
 notitle: true
 ---

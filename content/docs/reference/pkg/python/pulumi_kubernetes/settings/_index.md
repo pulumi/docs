@@ -1,5 +1,6 @@
 ---
 title: Module settings
+title_tag: Module settings | Package pulumi_kubernetes | Python SDK
 linktitle: settings
 notitle: true
 ---

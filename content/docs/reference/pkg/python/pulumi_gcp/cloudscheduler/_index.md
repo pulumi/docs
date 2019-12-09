@@ -1,5 +1,6 @@
 ---
 title: Module cloudscheduler
+title_tag: Module cloudscheduler | Package pulumi_gcp | Python SDK
 linktitle: cloudscheduler
 notitle: true
 ---

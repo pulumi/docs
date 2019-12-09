@@ -1,5 +1,6 @@
 ---
 title: Module sql
+title_tag: Module sql | Package pulumi_azure | Python SDK
 linktitle: sql
 notitle: true
 ---

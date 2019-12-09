@@ -1,5 +1,6 @@
 ---
 title: Module datasync
+title_tag: Module datasync | Package pulumi_aws | Python SDK
 linktitle: datasync
 notitle: true
 ---

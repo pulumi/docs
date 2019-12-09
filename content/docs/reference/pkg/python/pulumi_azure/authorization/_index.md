@@ -1,5 +1,6 @@
 ---
 title: Module authorization
+title_tag: Module authorization | Package pulumi_azure | Python SDK
 linktitle: authorization
 notitle: true
 ---

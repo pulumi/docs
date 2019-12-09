@@ -1,5 +1,6 @@
 ---
 title: Module deprecated
+title_tag: Module deprecated | Package pulumi_okta | Python SDK
 linktitle: deprecated
 notitle: true
 ---

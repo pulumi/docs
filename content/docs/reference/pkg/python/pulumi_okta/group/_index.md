@@ -1,5 +1,6 @@
 ---
 title: Module group
+title_tag: Module group | Package pulumi_okta | Python SDK
 linktitle: group
 notitle: true
 ---

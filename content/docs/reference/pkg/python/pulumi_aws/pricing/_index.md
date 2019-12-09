@@ -1,5 +1,6 @@
 ---
 title: Module pricing
+title_tag: Module pricing | Package pulumi_aws | Python SDK
 linktitle: pricing
 notitle: true
 ---

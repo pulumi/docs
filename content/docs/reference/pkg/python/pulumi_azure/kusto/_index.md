@@ -1,5 +1,6 @@
 ---
 title: Module kusto
+title_tag: Module kusto | Package pulumi_azure | Python SDK
 linktitle: kusto
 notitle: true
 ---

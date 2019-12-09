@@ -1,5 +1,6 @@
 ---
 title: Module sagemaker
+title_tag: Module sagemaker | Package pulumi_aws | Python SDK
 linktitle: sagemaker
 notitle: true
 ---

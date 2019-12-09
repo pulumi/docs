@@ -1,5 +1,6 @@
 ---
 title: Module firewall
+title_tag: Module firewall | Package pulumi_openstack | Python SDK
 linktitle: firewall
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module guardduty
+title_tag: Module guardduty | Package pulumi_aws | Python SDK
 linktitle: guardduty
 notitle: true
 ---

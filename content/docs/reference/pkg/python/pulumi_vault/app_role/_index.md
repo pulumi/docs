@@ -1,5 +1,6 @@
 ---
 title: Module app_role
+title_tag: Module app_role | Package pulumi_vault | Python SDK
 linktitle: app_role
 notitle: true
 ---

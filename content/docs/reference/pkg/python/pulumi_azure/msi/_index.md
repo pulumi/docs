@@ -1,5 +1,6 @@
 ---
 title: Module msi
+title_tag: Module msi | Package pulumi_azure | Python SDK
 linktitle: msi
 notitle: true
 ---

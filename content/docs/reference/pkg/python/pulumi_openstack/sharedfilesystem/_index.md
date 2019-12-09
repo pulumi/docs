@@ -1,5 +1,6 @@
 ---
 title: Module sharedfilesystem
+title_tag: Module sharedfilesystem | Package pulumi_openstack | Python SDK
 linktitle: sharedfilesystem
 notitle: true
 ---

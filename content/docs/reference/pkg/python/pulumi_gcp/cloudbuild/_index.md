@@ -1,5 +1,6 @@
 ---
 title: Module cloudbuild
+title_tag: Module cloudbuild | Package pulumi_gcp | Python SDK
 linktitle: cloudbuild
 notitle: true
 ---

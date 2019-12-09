@@ -1,5 +1,6 @@
 ---
 title: Module transfer
+title_tag: Module transfer | Package pulumi_aws | Python SDK
 linktitle: transfer
 notitle: true
 ---

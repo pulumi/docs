@@ -1,5 +1,6 @@
 ---
 title: Module logicapps
+title_tag: Module logicapps | Package pulumi_azure | Python SDK
 linktitle: logicapps
 notitle: true
 ---

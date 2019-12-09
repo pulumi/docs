@@ -1,5 +1,6 @@
 ---
 title: Module managementresource
+title_tag: Module managementresource | Package pulumi_azure | Python SDK
 linktitle: managementresource
 notitle: true
 ---

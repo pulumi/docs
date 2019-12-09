@@ -1,5 +1,6 @@
 ---
 title: Module kinesis
+title_tag: Module kinesis | Package pulumi_aws | Python SDK
 linktitle: kinesis
 notitle: true
 ---

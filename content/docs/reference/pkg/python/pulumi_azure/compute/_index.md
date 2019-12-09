@@ -1,5 +1,6 @@
 ---
 title: Module compute
+title_tag: Module compute | Package pulumi_azure | Python SDK
 linktitle: compute
 notitle: true
 ---
@@ -1052,7 +1053,7 @@ the image. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching mode as <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the managed disk resource that you want to use to create the image.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">osState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the the virtual machine image. Possible values are: Windows or Linux.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
 <blockquote>
@@ -1094,7 +1095,7 @@ new resource to be created.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the caching mode as <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the managed disk resource that you want to use to create the image.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">osState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of operating system contained in the the virtual machine image. Possible values are: Windows or Linux.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
 </dd></dl>
@@ -1163,7 +1164,7 @@ the image. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching mode as <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the managed disk resource that you want to use to create the image.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">osState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the the virtual machine image. Possible values are: Windows or Linux.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
 <blockquote>

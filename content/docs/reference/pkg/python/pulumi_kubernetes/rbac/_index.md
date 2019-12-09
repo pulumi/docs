@@ -1,5 +1,6 @@
 ---
 title: Module rbac
+title_tag: Module rbac | Package pulumi_kubernetes | Python SDK
 linktitle: rbac
 notitle: true
 ---

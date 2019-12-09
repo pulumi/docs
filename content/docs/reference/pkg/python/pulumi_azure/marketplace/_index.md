@@ -1,5 +1,6 @@
 ---
 title: Module marketplace
+title_tag: Module marketplace | Package pulumi_azure | Python SDK
 linktitle: marketplace
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_gitlab
+title_tag: Package pulumi_gitlab | Python SDK
 linktitle: pulumi_gitlab
 notitle: true
 ---
@@ -19,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gitlab.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">pipelines_enabled=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -409,7 +410,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gitlab.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">pipelines_enabled=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_gitlab.GetProjectResult.archived">
@@ -449,6 +450,12 @@ repository via HTTP.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gitlab.GetProjectResult.lfs_enabled">
+<code class="sig-name descname">lfs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.lfs_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable LFS for the project.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gitlab.GetProjectResult.merge_requests_enabled">
 <code class="sig-name descname">merge_requests_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.merge_requests_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable merge requests for the project.</p>
@@ -465,6 +472,18 @@ See <code class="docutils literal notranslate"><span class="pre">.Group</span></
 <dt id="pulumi_gitlab.GetProjectResult.path">
 <code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.GetProjectResult.pipelines_enabled">
+<code class="sig-name descname">pipelines_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.pipelines_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable pipelines for the project.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.GetProjectResult.request_access_enabled">
+<code class="sig-name descname">request_access_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.request_access_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow users to request member access.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1763,7 +1782,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gitlab.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">pipelines_enabled=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Project resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1777,6 +1796,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</p></li>
 <li><p><strong>initialize_with_readme</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create master branch with first commit containing a README.md file.</p></li>
 <li><p><strong>issues_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable issue tracking for the project.</p></li>
+<li><p><strong>lfs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable LFS for the project.</p></li>
 <li><p><strong>merge_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">ff</span></code> to create fast-forward merges
 Valid values are <code class="docutils literal notranslate"><span class="pre">merge</span></code>, <code class="docutils literal notranslate"><span class="pre">rebase_merge</span></code>, <code class="docutils literal notranslate"><span class="pre">ff</span></code>
 Repositories are created with <code class="docutils literal notranslate"><span class="pre">merge</span></code> by default</p></li>
@@ -1787,6 +1807,8 @@ See <code class="docutils literal notranslate"><span class="pre">.Group</span></
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
+<li><p><strong>pipelines_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable pipelines for the project.</p></li>
+<li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow users to request member access.</p></li>
 <li><p><strong>shared_runners_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable shared runners for this project.</p></li>
 <li><p><strong>shared_with_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Enable sharing the project with a list of groups (maps).</p></li>
 <li><p><strong>snippets_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable snippets for the project.</p></li>
@@ -1858,6 +1880,12 @@ repository via HTTP.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gitlab.Project.lfs_enabled">
+<code class="sig-name descname">lfs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.lfs_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable LFS for the project.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gitlab.Project.merge_method">
 <code class="sig-name descname">merge_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.merge_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to <code class="docutils literal notranslate"><span class="pre">ff</span></code> to create fast-forward merges
@@ -1900,6 +1928,18 @@ See <code class="docutils literal notranslate"><span class="pre">.Group</span></
 <dt id="pulumi_gitlab.Project.path">
 <code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.Project.pipelines_enabled">
+<code class="sig-name descname">pipelines_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.pipelines_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable pipelines for the project.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.Project.request_access_enabled">
+<code class="sig-name descname">request_access_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.request_access_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow users to request member access.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1967,7 +2007,7 @@ Repositories are created as private by default.</p>
 
 <dl class="method">
 <dt id="pulumi_gitlab.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">pipelines_enabled=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1985,6 +2025,7 @@ properties used to qualify the lookup.</p>
 repository via HTTP.</p></li>
 <li><p><strong>initialize_with_readme</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create master branch with first commit containing a README.md file.</p></li>
 <li><p><strong>issues_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable issue tracking for the project.</p></li>
+<li><p><strong>lfs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable LFS for the project.</p></li>
 <li><p><strong>merge_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">ff</span></code> to create fast-forward merges
 Valid values are <code class="docutils literal notranslate"><span class="pre">merge</span></code>, <code class="docutils literal notranslate"><span class="pre">rebase_merge</span></code>, <code class="docutils literal notranslate"><span class="pre">ff</span></code>
 Repositories are created with <code class="docutils literal notranslate"><span class="pre">merge</span></code> by default</p></li>
@@ -1995,6 +2036,8 @@ See <code class="docutils literal notranslate"><span class="pre">.Group</span></
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
+<li><p><strong>pipelines_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable pipelines for the project.</p></li>
+<li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow users to request member access.</p></li>
 <li><p><strong>runners_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Registration token to use during runner setup.</p></li>
 <li><p><strong>shared_runners_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable shared runners for this project.</p></li>
 <li><p><strong>shared_with_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Enable sharing the project with a list of groups (maps).</p></li>
@@ -3576,7 +3619,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gitlab.get_project">
-<code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">archived=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">pipelines_enabled=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

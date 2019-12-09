@@ -1,5 +1,6 @@
 ---
 title: Module ecs
+title_tag: Module ecs | Package pulumi_aws | Python SDK
 linktitle: ecs
 notitle: true
 ---

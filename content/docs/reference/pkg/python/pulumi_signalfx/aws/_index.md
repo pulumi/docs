@@ -1,5 +1,6 @@
 ---
 title: Module aws
+title_tag: Module aws | Package pulumi_signalfx | Python SDK
 linktitle: aws
 notitle: true
 ---

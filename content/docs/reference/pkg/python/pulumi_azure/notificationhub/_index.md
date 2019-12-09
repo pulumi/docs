@@ -1,5 +1,6 @@
 ---
 title: Module notificationhub
+title_tag: Module notificationhub | Package pulumi_azure | Python SDK
 linktitle: notificationhub
 notitle: true
 ---

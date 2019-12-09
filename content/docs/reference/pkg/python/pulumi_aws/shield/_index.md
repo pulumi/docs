@@ -1,5 +1,6 @@
 ---
 title: Module shield
+title_tag: Module shield | Package pulumi_aws | Python SDK
 linktitle: shield
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module apigateway
+title_tag: Module apigateway | Package pulumi_aws | Python SDK
 linktitle: apigateway
 notitle: true
 ---
