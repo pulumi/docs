@@ -81,6 +81,7 @@ REPOS=(
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
     "cloud,pulumi-cloud/api"
+    "cloudamqp,pulumi-cloudamqp,sdk/nodejs"
     "cloudflare,pulumi-cloudflare,sdk/nodejs"
     "consul,pulumi-consul,sdk/nodejs"
     "datadog,pulumi-datadog,sdk/nodejs"

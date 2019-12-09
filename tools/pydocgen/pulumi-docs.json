@@ -44,6 +44,12 @@
       "terraform_provider_name": "cloudflare"
     },
     {
+      "name": "Pulumi CloudAMQP",
+      "package_name": "pulumi_cloudamqp",
+      "pulumi_provider_name": "cloudamqp",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi Consul",
       "package_name": "pulumi_consul",
       "pulumi_provider_name": "consul",
