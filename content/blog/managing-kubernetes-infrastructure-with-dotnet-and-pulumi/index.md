@@ -7,15 +7,15 @@ meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource pro
 meta_image: "todo.png"
 ---
 
-Last month, we announced [.NET support for Pulumi](), including support for AWS, Azure, GCP and many other clouds.  One of the biggest questions we heard was about Kubernetes - can I also use Pulumi to manage my Kubernetes infrastructure in C# and F#, like I can already in TypeScript and Python today?  With last week's release of [`Pulumi.Kubernetes`]() on Nuget, you can now also deploy Kubernetes infrastructure from .NET.
+Last month, we announced [.NET support for Pulumi](), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- "can I use Pulumi to manage Kubernetes infrastructure in C# and F#, as I can already in TypeScript and Python today?"  With last week's release of [`Pulumi.Kubernetes`]() on NuGet, you can now also deploy Kubernetes infrastructure from .NET.
 
-Using .NET to build our Kubernetes infrastruture offers several benefits:
+Using .NET to build our Kubernetes infrastructure offers several benefits:
 * Strong Typing:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
-* Rich IDE Support:  Use the rich features of IDEs like Visual Studio and Visual Studio Code to develop you Kubernetes infrastructure - completion lists, refactorings, intellisense and more.   
-* Familiar Languages and APIs:  Apply all the features of C#, F# and VB.NET to your Kubernetes infrastructure - loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in Nuget.
+* Rich IDE Support:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactorings, IntelliSense, and more.   
+* Familiar Languages and APIs:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
 * Components and Classes:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
 
-Together, these provide an entirely more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
+Together, these benefits provide an entirely more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
 
 # Tour of Kubernetes with .NET
 
@@ -66,7 +66,7 @@ Duration: 11s
 Permalink: https://app.pulumi.com/lukehoban/basic_dotnet_kubernetes/luke-dev/updates/81
 ```
 
-As always, Pulumi programs describe the desired state of our infrasttructure, instead of an imperative process to construct that infrastructure.  This means that if we change our program, Pulumi will compute the minimal delta to apply to our Kubernetes cluster to transition to this new desired state.  This almost feel like using Edit-and-Continue on our deployed Kubernetes resources - modifying our Kubernetes resources in place inside the cluster.
+As always, Pulumi programs describe the desired state of our infrastructure, instead of an imperative process to construct that infrastructure.  If we change our program, Pulumi will compute the minimal delta to apply to our Kubernetes cluster to transition to this new desired state.  This almost feels like using Edit-and-Continue on our deployed Kubernetes resources---modifying our Kubernetes resources in place inside the cluster.
 
 We can add a label to our Pod:
 
@@ -91,7 +91,7 @@ We can add a label to our Pod:
 });
 ```
 
-And then see that this just updates the pod in place with this new label.
+And then see that this updates the pod in place with this new label.
 
 ```
 $ pulumi up
@@ -134,7 +134,7 @@ Duration: 3s
 Permalink: https://app.pulumi.com/lukehoban/basic_dotnet_kubernetes/luke-dev/updates/82
 ```
 
-The real benefits of .NET come when we extract common code into a reusable component.  We can do that to create a new component like a `ServiceDeployment` which includes both a Kubernetes `Service` and `Deployment` using opinionated defaults.  With this, we can describe entire Kubernetes applications (100s of lines of YAML), in a short and semantically meaningful snippet of C#:
+The real benefits of .NET come when we extract common code into a reusable component.  We can do that to create a new component like a `ServiceDeployment`, which includes both a Kubernetes `Service` and `Deployment` using opinionated defaults.  With this, we can describe entire Kubernetes applications (100s of lines of YAML), in a short and semantically meaningful snippet of C#:
 
 ```csharp
 var config = new Config();
@@ -244,8 +244,8 @@ if (!string.IsNullOrWhiteSpace(domainName)) {
 }
 ```
 
-Note that this example deploys resources first into DigitalOcean (a Kubernetes `Cluster`), then into Kubernetes itself (`Deployment` and `Service` via a `Pulumi.Kubernetes.Provider` configured to connect to the Kuberentes cluster in Digital Ocean), then optionally also more resources in DigitalOcean dependent on the Kubernetes `Service` (`Domain` and `DnsRecord`).  This is a fairly complex infrastructure deployment orchestration, all in a few dozen lines of declarative and strongly typed C# code. 
+Note that this example deploys resources first into DigitalOcean (a Kubernetes `Cluster`), then into Kubernetes itself (`Deployment` and `Service` via a `Pulumi.Kubernetes.Provider` configured to connect to the Kubernetes cluster in Digital Ocean), then optionally also more resources in DigitalOcean dependent on the Kubernetes `Service` (`Domain` and `DnsRecord`).  This example is a complex infrastructure deployment, all in a few dozen lines of declarative and strongly typed C# code. 
 
 # Conclusion
 
-Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started](https://www.pulumi.com/docs/get-started/kubernetes/) with Kubernetes and .NET today, and let us know what you think! 
+Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started]({{< relref "/docs/get-started/kubernetes" >}}) with Kubernetes and .NET today, and let us know what you think! 
