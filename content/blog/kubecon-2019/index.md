@@ -8,7 +8,7 @@ authors: ["erin-krengel"]
 tags: ["testing", "ephemeral environments", "KubeCon", "kubernetes"]
 ---
 
-Last week, my colleague Sean and I had the opportunity to present "Are you about to break prod? Acceptance Testing with Ephemeral Environments" at KubeCon NA 2019. In this talk, we covered what is an ephemeral environment, what is required to create one, and then we walked the audience through a concrete example of how to create one. Given our limited time, we had to move quickly through a ton of information. Today, I will recap our presentation and add a few more details we weren't able to cover.
+Last week, my colleague Sean and I had the opportunity to present "Are you about to break prod? Acceptance Testing with Ephemeral Environments" at KubeCon NA 2019. In this talk, we covered what is an ephemeral environment, how to create one, and then we walked the audience through a concrete example. Given our limited time, we had to move quickly through a ton of information. Today, I will recap our presentation and add a few more details we weren't able to cover.
 
 <!--more-->
 
