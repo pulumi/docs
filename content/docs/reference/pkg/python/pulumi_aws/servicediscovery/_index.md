@@ -1,5 +1,6 @@
 ---
 title: Module servicediscovery
+title_tag: Module servicediscovery | Package pulumi_aws | Python SDK
 linktitle: servicediscovery
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_vsphere
+title_tag: Package pulumi_vsphere | Python SDK
 linktitle: pulumi_vsphere
 notitle: true
 ---

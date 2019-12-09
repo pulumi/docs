@@ -1,5 +1,6 @@
 ---
 title: Module directoryservice
+title_tag: Module directoryservice | Package pulumi_aws | Python SDK
 linktitle: directoryservice
 notitle: true
 ---

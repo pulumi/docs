@@ -1,5 +1,6 @@
 ---
 title: Module pubsub
+title_tag: Module pubsub | Package pulumi_gcp | Python SDK
 linktitle: pubsub
 notitle: true
 ---

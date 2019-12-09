@@ -1,5 +1,6 @@
 ---
 title: Module glue
+title_tag: Module glue | Package pulumi_aws | Python SDK
 linktitle: glue
 notitle: true
 ---

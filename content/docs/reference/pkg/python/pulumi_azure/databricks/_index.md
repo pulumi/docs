@@ -1,5 +1,6 @@
 ---
 title: Module databricks
+title_tag: Module databricks | Package pulumi_azure | Python SDK
 linktitle: databricks
 notitle: true
 ---

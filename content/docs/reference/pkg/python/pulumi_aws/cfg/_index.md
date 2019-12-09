@@ -1,5 +1,6 @@
 ---
 title: Module cfg
+title_tag: Module cfg | Package pulumi_aws | Python SDK
 linktitle: cfg
 notitle: true
 ---

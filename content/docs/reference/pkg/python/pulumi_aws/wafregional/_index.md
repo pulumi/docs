@@ -1,5 +1,6 @@
 ---
 title: Module wafregional
+title_tag: Module wafregional | Package pulumi_aws | Python SDK
 linktitle: wafregional
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module loadbalancer
+title_tag: Module loadbalancer | Package pulumi_openstack | Python SDK
 linktitle: loadbalancer
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module dax
+title_tag: Module dax | Package pulumi_aws | Python SDK
 linktitle: dax
 notitle: true
 ---

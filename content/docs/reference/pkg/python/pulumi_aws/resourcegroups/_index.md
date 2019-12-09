@@ -1,5 +1,6 @@
 ---
 title: Module resourcegroups
+title_tag: Module resourcegroups | Package pulumi_aws | Python SDK
 linktitle: resourcegroups
 notitle: true
 ---

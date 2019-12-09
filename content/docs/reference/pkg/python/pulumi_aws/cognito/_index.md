@@ -1,5 +1,6 @@
 ---
 title: Module cognito
+title_tag: Module cognito | Package pulumi_aws | Python SDK
 linktitle: cognito
 notitle: true
 ---

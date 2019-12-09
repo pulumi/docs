@@ -1,5 +1,6 @@
 ---
 title: Module codepipeline
+title_tag: Module codepipeline | Package pulumi_aws | Python SDK
 linktitle: codepipeline
 notitle: true
 ---

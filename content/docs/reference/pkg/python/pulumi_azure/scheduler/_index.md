@@ -1,5 +1,6 @@
 ---
 title: Module scheduler
+title_tag: Module scheduler | Package pulumi_azure | Python SDK
 linktitle: scheduler
 notitle: true
 ---

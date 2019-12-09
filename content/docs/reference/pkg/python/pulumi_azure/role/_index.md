@@ -1,5 +1,6 @@
 ---
 title: Module role
+title_tag: Module role | Package pulumi_azure | Python SDK
 linktitle: role
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module runtimeconfig
+title_tag: Module runtimeconfig | Package pulumi_gcp | Python SDK
 linktitle: runtimeconfig
 notitle: true
 ---

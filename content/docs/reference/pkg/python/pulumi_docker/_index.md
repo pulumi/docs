@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_docker
+title_tag: Package pulumi_docker | Python SDK
 linktitle: pulumi_docker
 notitle: true
 ---

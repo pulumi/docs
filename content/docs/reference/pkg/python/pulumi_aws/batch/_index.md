@@ -1,5 +1,6 @@
 ---
 title: Module batch
+title_tag: Module batch | Package pulumi_aws | Python SDK
 linktitle: batch
 notitle: true
 ---

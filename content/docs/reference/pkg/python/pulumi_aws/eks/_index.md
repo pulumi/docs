@@ -1,5 +1,6 @@
 ---
 title: Module eks
+title_tag: Module eks | Package pulumi_aws | Python SDK
 linktitle: eks
 notitle: true
 ---

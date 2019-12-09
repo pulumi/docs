@@ -1,5 +1,6 @@
 ---
 title: Module apps
+title_tag: Module apps | Package pulumi_kubernetes | Python SDK
 linktitle: apps
 notitle: true
 ---

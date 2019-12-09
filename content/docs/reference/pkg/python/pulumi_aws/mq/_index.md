@@ -1,5 +1,6 @@
 ---
 title: Module mq
+title_tag: Module mq | Package pulumi_aws | Python SDK
 linktitle: mq
 notitle: true
 ---

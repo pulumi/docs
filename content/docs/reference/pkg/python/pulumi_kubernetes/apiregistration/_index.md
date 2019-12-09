@@ -1,5 +1,6 @@
 ---
 title: Module apiregistration
+title_tag: Module apiregistration | Package pulumi_kubernetes | Python SDK
 linktitle: apiregistration
 notitle: true
 ---

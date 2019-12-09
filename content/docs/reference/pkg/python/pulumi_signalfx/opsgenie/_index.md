@@ -1,5 +1,6 @@
 ---
 title: Module opsgenie
+title_tag: Module opsgenie | Package pulumi_signalfx | Python SDK
 linktitle: opsgenie
 notitle: true
 ---

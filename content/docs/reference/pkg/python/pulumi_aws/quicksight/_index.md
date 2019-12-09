@@ -1,5 +1,6 @@
 ---
 title: Module quicksight
+title_tag: Module quicksight | Package pulumi_aws | Python SDK
 linktitle: quicksight
 notitle: true
 ---

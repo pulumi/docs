@@ -1,5 +1,6 @@
 ---
 title: Module service_account
+title_tag: Module service_account | Package pulumi_gcp | Python SDK
 linktitle: service_account
 notitle: true
 ---

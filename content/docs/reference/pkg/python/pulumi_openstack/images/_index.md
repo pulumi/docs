@@ -1,5 +1,6 @@
 ---
 title: Module images
+title_tag: Module images | Package pulumi_openstack | Python SDK
 linktitle: images
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_mysql
+title_tag: Package pulumi_mysql | Python SDK
 linktitle: pulumi_mysql
 notitle: true
 ---

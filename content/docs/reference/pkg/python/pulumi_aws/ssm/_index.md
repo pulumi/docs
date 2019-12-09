@@ -1,5 +1,6 @@
 ---
 title: Module ssm
+title_tag: Module ssm | Package pulumi_aws | Python SDK
 linktitle: ssm
 notitle: true
 ---

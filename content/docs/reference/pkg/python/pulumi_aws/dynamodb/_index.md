@@ -1,5 +1,6 @@
 ---
 title: Module dynamodb
+title_tag: Module dynamodb | Package pulumi_aws | Python SDK
 linktitle: dynamodb
 notitle: true
 ---

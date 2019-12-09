@@ -1,5 +1,6 @@
 ---
 title: Module database
+title_tag: Module database | Package pulumi_openstack | Python SDK
 linktitle: database
 notitle: true
 ---

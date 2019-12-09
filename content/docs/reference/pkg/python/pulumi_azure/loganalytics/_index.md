@@ -1,5 +1,6 @@
 ---
 title: Module loganalytics
+title_tag: Module loganalytics | Package pulumi_azure | Python SDK
 linktitle: loganalytics
 notitle: true
 ---

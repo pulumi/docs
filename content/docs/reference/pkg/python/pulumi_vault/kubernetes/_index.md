@@ -1,5 +1,6 @@
 ---
 title: Module kubernetes
+title_tag: Module kubernetes | Package pulumi_vault | Python SDK
 linktitle: kubernetes
 notitle: true
 ---

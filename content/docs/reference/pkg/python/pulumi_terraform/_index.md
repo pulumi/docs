@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_terraform
+title_tag: Package pulumi_terraform | Python SDK
 linktitle: pulumi_terraform
 notitle: true
 ---
