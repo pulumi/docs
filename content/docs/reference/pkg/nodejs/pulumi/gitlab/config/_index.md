@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/gitlab | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/gitlab package."
 ---
@@ -32,7 +33,7 @@ meta_desc: "Explore members of the config module in the @pulumi/gitlab package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/a4f1fe01fafa79eb9e2dd3b99a61b27b2f3909ba/sdk/nodejs/config/vars.ts#L12">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -42,7 +43,7 @@ meta_desc: "Explore members of the config module in the @pulumi/gitlab package."
 The GitLab Base API URL
 
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/a4f1fe01fafa79eb9e2dd3b99a61b27b2f3909ba/sdk/nodejs/config/vars.ts#L16">
         let <strong>cacertFile</strong>
     </a>
 </h3>
@@ -52,7 +53,7 @@ The GitLab Base API URL
 A file containing the ca certificate to use in case ssl certificate is not from a standard chain
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/a4f1fe01fafa79eb9e2dd3b99a61b27b2f3909ba/sdk/nodejs/config/vars.ts#L20">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -62,7 +63,7 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 Disable SSL verification of API calls
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/a4f1fe01fafa79eb9e2dd3b99a61b27b2f3909ba/sdk/nodejs/config/vars.ts#L24">
         let <strong>token</strong>
     </a>
 </h3>
