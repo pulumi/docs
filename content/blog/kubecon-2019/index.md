@@ -34,7 +34,7 @@ Ephemeral environments also encourage us to lean on automated tests over manual 
 
 ## Our Demo Application
 
-To demonstrate the effectiveness of integrating acceptance testing with ephemeral environments into your deployment process, we created a simple demo application. The service is written in Go and accepts a message on the `/message` endpoint, then places it in a storage bucket and sends a notification about the new object on a PubSub topic. The code for this application lives in our [main.go](https://gitlab.com/rocore/demo-app/blob/master/main.go) file. While you can walk through this code yourself, the most important thing to call out is that our application is configurable. This means we take configuration in at the very beginning of our main function and shut down the application if the values are not present.
+To demonstrate the effectiveness of integrating acceptance testing with ephemeral environments into your deployment process, we created a simple demo application. The service is written in Go and accepts a message on the `/message` endpoint, then places it in a storage bucket and sends a notification about the new object on a PubSub topic. The code for this application lives in our [main.go](https://gitlab.com/rocore/demo-app/blob/master/main.go) file. While you can walk through this code yourself, the most important thing to call out is that our application is *configurable*. This means we take configuration in at the very beginning of our main function and shut down the application if the values are not present.
 
 ```go
 func main() {
@@ -99,7 +99,7 @@ const deployment = new k8s.apps.v1.Deployment(name, {
 
 ### Acceptance Tests
 
-Our acceptance tests are what validate that our service when stood up function as expected. They are run against an ephemeral environment. The test live in the `acceptance/acceptance_test.go` [file](https://gitlab.com/rocore/demo-app/blob/master/acceptance/acceptance_test.go). You'll notice we're once again using that helper function `getConfigurationValue`. Our acceptance test must also be configured to ensure they're validating against the correct resources for that particular ephemeral environment.
+Our acceptance tests are what validate that our service when stood up function as expected. They are run against an ephemeral environment. The tests live in the `acceptance/acceptance_test.go` [file](https://gitlab.com/rocore/demo-app/blob/master/acceptance/acceptance_test.go). You'll notice we're once again using that helper function `getConfigurationValue`. Our acceptance test must also be configured to ensure they're validating against the correct resources for that particular ephemeral environment.
 
 Since our service is only accessible from within the Kubernetes cluster, we will use a Kubernetes Job to run our acceptance tests. This is a good technique to use when your CI is running externally, such as from GitLab, and you do not want to publicly expose your service. Our ephemeral environment plus acceptance test looks like this:
 
@@ -134,7 +134,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
 1. **Test and Build** - This runs our unit tests and builds both our application and acceptance test images. The application image is an immutable image that is used for both running our acceptance tests and deploying to production.
 1. **Acceptance Test** - This is what spins up our ephemeral environments and runs our acceptance tests. This acts as a quality gate catching issues before production.
 
-    Our ephemeral environment and Kubernetes job are all spun up in the `script`.
+    Our ephemeral environment and Kubernetes job are all spun up in the `script` portion of the acceptance test job definition.
 
     ```bash
     ...
