@@ -1,5 +1,6 @@
 ---
 title: Module ebs
+title_tag: Module ebs | Package pulumi_aws | Python SDK
 linktitle: ebs
 notitle: true
 ---

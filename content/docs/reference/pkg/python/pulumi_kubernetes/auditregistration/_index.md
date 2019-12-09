@@ -1,5 +1,6 @@
 ---
 title: Module auditregistration
+title_tag: Module auditregistration | Package pulumi_kubernetes | Python SDK
 linktitle: auditregistration
 notitle: true
 ---

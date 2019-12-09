@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_signalfx
+title_tag: Package pulumi_signalfx | Python SDK
 linktitle: pulumi_signalfx
 notitle: true
 ---

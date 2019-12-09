@@ -1,5 +1,6 @@
 ---
 title: Module ad
+title_tag: Module ad | Package pulumi_azure | Python SDK
 linktitle: ad
 notitle: true
 ---

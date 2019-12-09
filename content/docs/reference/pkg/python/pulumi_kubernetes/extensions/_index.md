@@ -1,5 +1,6 @@
 ---
 title: Module extensions
+title_tag: Module extensions | Package pulumi_kubernetes | Python SDK
 linktitle: extensions
 notitle: true
 ---

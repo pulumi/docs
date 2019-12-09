@@ -1,5 +1,6 @@
 ---
 title: Module bigquery
+title_tag: Module bigquery | Package pulumi_gcp | Python SDK
 linktitle: bigquery
 notitle: true
 ---

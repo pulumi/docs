@@ -1,5 +1,6 @@
 ---
 title: Module containerservice
+title_tag: Module containerservice | Package pulumi_azure | Python SDK
 linktitle: containerservice
 notitle: true
 ---
@@ -1361,7 +1362,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Registry. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_rule_set</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_rule_set</span></code> block as documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
 <li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -1463,7 +1464,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Registry.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU name of the the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p>
+<dd><p>The SKU name of the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1498,7 +1499,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Registry. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_rule_set</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_rule_set</span></code> block as documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
 <li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>

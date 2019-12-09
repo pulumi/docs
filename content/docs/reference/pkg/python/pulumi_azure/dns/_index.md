@@ -1,5 +1,6 @@
 ---
 title: Module dns
+title_tag: Module dns | Package pulumi_azure | Python SDK
 linktitle: dns
 notitle: true
 ---
@@ -33,6 +34,12 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_a_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_a_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.ARecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.ARecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS A Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.ARecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.ARecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS A Record.</p>
@@ -64,7 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.dns.ARecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.ARecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.ARecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ARecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -73,6 +80,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS A Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS A Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv4 Addresses.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
@@ -145,6 +153,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_aaaa_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_aaaa_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.AaaaRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS AAAA Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.AaaaRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS AAAA Record.</p>
@@ -176,7 +190,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.AaaaRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AaaaRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -185,6 +199,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS AAAA Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS AAAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 Addresses.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
@@ -262,6 +277,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_cname_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_cname_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.CNameRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CNameRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS CName Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.CNameRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CNameRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS CNAME Record.</p>
@@ -293,7 +314,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.CNameRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CNameRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CNameRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CNameRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -302,6 +323,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS CName Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CNAME Record.</p></li>
 <li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target of the CNAME.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
@@ -381,6 +403,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_caa_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_caa_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.CaaRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CaaRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS CAA Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.CaaRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CaaRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS CAA Record.</p>
@@ -423,7 +451,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.CaaRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CaaRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CaaRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CaaRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -432,6 +460,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS CAA Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the CAA record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
@@ -571,6 +600,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_mx_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_mx_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.MxRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.MxRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS MX Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.MxRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.MxRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS MX Record.</p>
@@ -612,7 +647,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.MxRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.MxRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.MxRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MxRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -621,6 +656,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS MX Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS MX Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the MX record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -705,6 +741,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ns_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.NsRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.NsRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS NS Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.NsRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.NsRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS NS Record.</p>
@@ -751,7 +793,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.NsRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NsRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -760,6 +802,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS NS Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS NS Record.</p></li>
 <li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below. This field has been deprecated and will be removed in a future release.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the NS record. <em>WARNING</em>: Either <code class="docutils literal notranslate"><span class="pre">records</span></code> or <code class="docutils literal notranslate"><span class="pre">record</span></code> is required.</p></li>
@@ -839,6 +882,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ptr_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_ptr_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.PtrRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.PtrRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS PTR Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.PtrRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.PtrRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS PTR Record.</p>
@@ -876,7 +925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.PtrRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.PtrRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.PtrRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PtrRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -885,6 +934,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS PTR Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS PTR Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Fully Qualified Domain Names.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -966,6 +1016,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_srv_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_srv_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.SrvRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.SrvRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS SRV Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.SrvRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.SrvRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS SRV Record.</p>
@@ -1009,7 +1065,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.SrvRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.SrvRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.SrvRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SrvRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1018,6 +1074,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS SRV Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS SRV Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the SRV record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -1103,6 +1160,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_txt_record.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dns_txt_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_azure.dns.TxtRecord.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.TxtRecord.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the DNS TXT Record.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.dns.TxtRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.TxtRecord.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the DNS TXT Record.</p>
@@ -1143,7 +1206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.dns.TxtRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.TxtRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.TxtRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TxtRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1152,6 +1215,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the DNS TXT Record.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS TXT Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the txt record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>

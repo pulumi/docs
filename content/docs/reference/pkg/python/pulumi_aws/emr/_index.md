@@ -1,5 +1,6 @@
 ---
 title: Module emr
+title_tag: Module emr | Package pulumi_aws | Python SDK
 linktitle: emr
 notitle: true
 ---

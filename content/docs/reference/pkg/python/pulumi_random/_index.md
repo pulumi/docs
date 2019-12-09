@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_random
+title_tag: Package pulumi_random | Python SDK
 linktitle: pulumi_random
 notitle: true
 ---

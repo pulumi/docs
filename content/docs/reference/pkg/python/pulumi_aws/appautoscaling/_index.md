@@ -1,5 +1,6 @@
 ---
 title: Module appautoscaling
+title_tag: Module appautoscaling | Package pulumi_aws | Python SDK
 linktitle: appautoscaling
 notitle: true
 ---

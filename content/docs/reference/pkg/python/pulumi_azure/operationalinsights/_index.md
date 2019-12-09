@@ -1,5 +1,6 @@
 ---
 title: Module operationalinsights
+title_tag: Module operationalinsights | Package pulumi_azure | Python SDK
 linktitle: operationalinsights
 notitle: true
 ---

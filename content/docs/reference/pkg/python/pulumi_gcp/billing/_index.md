@@ -1,5 +1,6 @@
 ---
 title: Module billing
+title_tag: Module billing | Package pulumi_gcp | Python SDK
 linktitle: billing
 notitle: true
 ---

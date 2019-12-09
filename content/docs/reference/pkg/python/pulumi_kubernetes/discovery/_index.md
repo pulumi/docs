@@ -1,5 +1,6 @@
 ---
 title: Module discovery
+title_tag: Module discovery | Package pulumi_kubernetes | Python SDK
 linktitle: discovery
 notitle: true
 ---

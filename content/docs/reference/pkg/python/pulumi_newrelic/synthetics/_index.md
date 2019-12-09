@@ -1,5 +1,6 @@
 ---
 title: Module synthetics
+title_tag: Module synthetics | Package pulumi_newrelic | Python SDK
 linktitle: synthetics
 notitle: true
 ---
@@ -133,6 +134,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.GetMonitorResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">GetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMonitor.</p>
+<dl class="attribute">
+<dt id="pulumi_newrelic.synthetics.GetMonitorResult.monitor_id">
+<code class="sig-name descname">monitor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult.monitor_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the synthetics monitor.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.GetMonitorResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult.id" title="Permalink to this definition">¶</a></dt>

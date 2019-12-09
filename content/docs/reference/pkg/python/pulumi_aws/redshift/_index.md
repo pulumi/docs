@@ -1,5 +1,6 @@
 ---
 title: Module redshift
+title_tag: Module redshift | Package pulumi_aws | Python SDK
 linktitle: redshift
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module gamelift
+title_tag: Module gamelift | Package pulumi_aws | Python SDK
 linktitle: gamelift
 notitle: true
 ---

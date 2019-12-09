@@ -1,5 +1,6 @@
 ---
 title: Module elasticbeanstalk
+title_tag: Module elasticbeanstalk | Package pulumi_aws | Python SDK
 linktitle: elasticbeanstalk
 notitle: true
 ---

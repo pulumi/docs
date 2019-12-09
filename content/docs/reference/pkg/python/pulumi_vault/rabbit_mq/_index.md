@@ -1,5 +1,6 @@
 ---
 title: Module rabbit_mq
+title_tag: Module rabbit_mq | Package pulumi_vault | Python SDK
 linktitle: rabbit_mq
 notitle: true
 ---

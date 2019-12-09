@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_packet
+title_tag: Package pulumi_packet | Python SDK
 linktitle: pulumi_packet
 notitle: true
 ---

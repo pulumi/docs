@@ -1,5 +1,6 @@
 ---
 title: Module lambda_
+title_tag: Module lambda_ | Package pulumi_aws | Python SDK
 linktitle: lambda_
 notitle: true
 ---

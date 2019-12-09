@@ -1,5 +1,6 @@
 ---
 title: Module helm
+title_tag: Module helm | Package pulumi_kubernetes | Python SDK
 linktitle: helm
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module simpledb
+title_tag: Module simpledb | Package pulumi_aws | Python SDK
 linktitle: simpledb
 notitle: true
 ---

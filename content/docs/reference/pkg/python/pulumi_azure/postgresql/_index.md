@@ -1,5 +1,6 @@
 ---
 title: Module postgresql
+title_tag: Module postgresql | Package pulumi_azure | Python SDK
 linktitle: postgresql
 notitle: true
 ---

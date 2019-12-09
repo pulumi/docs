@@ -1,5 +1,6 @@
 ---
 title: Module endpoints
+title_tag: Module endpoints | Package pulumi_gcp | Python SDK
 linktitle: endpoints
 notitle: true
 ---

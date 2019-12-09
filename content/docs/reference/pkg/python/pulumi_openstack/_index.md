@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_openstack
+title_tag: Package pulumi_openstack | Python SDK
 linktitle: pulumi_openstack
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module azure
+title_tag: Module azure | Package pulumi_signalfx | Python SDK
 linktitle: azure
 notitle: true
 ---

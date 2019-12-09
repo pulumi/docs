@@ -1,5 +1,6 @@
 ---
 title: Module keymanager
+title_tag: Module keymanager | Package pulumi_openstack | Python SDK
 linktitle: keymanager
 notitle: true
 ---

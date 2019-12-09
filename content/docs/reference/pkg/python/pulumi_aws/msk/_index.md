@@ -1,5 +1,6 @@
 ---
 title: Module msk
+title_tag: Module msk | Package pulumi_aws | Python SDK
 linktitle: msk
 notitle: true
 ---

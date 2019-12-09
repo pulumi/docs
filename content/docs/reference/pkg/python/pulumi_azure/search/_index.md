@@ -1,5 +1,6 @@
 ---
 title: Module search
+title_tag: Module search | Package pulumi_azure | Python SDK
 linktitle: search
 notitle: true
 ---

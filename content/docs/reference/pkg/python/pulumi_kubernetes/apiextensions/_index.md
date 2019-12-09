@@ -1,5 +1,6 @@
 ---
 title: Module apiextensions
+title_tag: Module apiextensions | Package pulumi_kubernetes | Python SDK
 linktitle: apiextensions
 notitle: true
 ---

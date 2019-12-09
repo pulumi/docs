@@ -1,5 +1,6 @@
 ---
 title: Module admissionregistration
+title_tag: Module admissionregistration | Package pulumi_kubernetes | Python SDK
 linktitle: admissionregistration
 notitle: true
 ---

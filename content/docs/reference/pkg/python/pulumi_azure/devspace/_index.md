@@ -1,5 +1,6 @@
 ---
 title: Module devspace
+title_tag: Module devspace | Package pulumi_azure | Python SDK
 linktitle: devspace
 notitle: true
 ---

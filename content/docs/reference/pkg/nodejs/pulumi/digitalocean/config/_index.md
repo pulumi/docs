@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/digitalocean | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/digitalocean package."
 ---
@@ -32,7 +33,7 @@ meta_desc: "Explore members of the config module in the @pulumi/digitalocean pac
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiEndpoint" data-link-title="apiEndpoint">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiEndpoint</strong>
     </a>
 </h3>
@@ -42,7 +43,7 @@ meta_desc: "Explore members of the config module in the @pulumi/digitalocean pac
 The URL to use for the DigitalOcean API.
 
 <h3 class="pdoc-module-header" id="spacesAccessId" data-link-title="spacesAccessId">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/config/vars.ts#L16">
         let <strong>spacesAccessId</strong>
     </a>
 </h3>
@@ -52,7 +53,7 @@ The URL to use for the DigitalOcean API.
 The access key ID for Spaces API operations.
 
 <h3 class="pdoc-module-header" id="spacesSecretKey" data-link-title="spacesSecretKey">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/config/vars.ts#L20">
         let <strong>spacesSecretKey</strong>
     </a>
 </h3>
@@ -62,7 +63,7 @@ The access key ID for Spaces API operations.
 The secret access key for Spaces API operations.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/config/vars.ts#L24">
         let <strong>token</strong>
     </a>
 </h3>

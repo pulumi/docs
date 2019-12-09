@@ -1,5 +1,6 @@
 ---
 title: Module cloudwatch
+title_tag: Module cloudwatch | Package pulumi_aws | Python SDK
 linktitle: cloudwatch
 notitle: true
 ---

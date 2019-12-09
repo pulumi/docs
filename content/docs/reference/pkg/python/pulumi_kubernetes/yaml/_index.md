@@ -1,5 +1,6 @@
 ---
 title: Module yaml
+title_tag: Module yaml | Package pulumi_kubernetes | Python SDK
 linktitle: yaml
 notitle: true
 ---

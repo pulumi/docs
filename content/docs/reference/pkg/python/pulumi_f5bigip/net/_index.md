@@ -1,5 +1,6 @@
 ---
 title: Module net
+title_tag: Module net | Package pulumi_f5bigip | Python SDK
 linktitle: net
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_gcp
+title_tag: Package pulumi_gcp | Python SDK
 linktitle: pulumi_gcp
 notitle: true
 ---

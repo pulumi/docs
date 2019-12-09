@@ -1,5 +1,6 @@
 ---
 title: Module logging
+title_tag: Module logging | Package pulumi_gcp | Python SDK
 linktitle: logging
 notitle: true
 ---

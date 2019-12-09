@@ -1,5 +1,6 @@
 ---
 title: Module cloudformation
+title_tag: Module cloudformation | Package pulumi_aws | Python SDK
 linktitle: cloudformation
 notitle: true
 ---

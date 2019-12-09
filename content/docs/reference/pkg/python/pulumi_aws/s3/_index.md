@@ -1,5 +1,6 @@
 ---
 title: Module s3
+title_tag: Module s3 | Package pulumi_aws | Python SDK
 linktitle: s3
 notitle: true
 ---

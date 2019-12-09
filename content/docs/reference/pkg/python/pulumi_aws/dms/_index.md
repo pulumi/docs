@@ -1,5 +1,6 @@
 ---
 title: Module dms
+title_tag: Module dms | Package pulumi_aws | Python SDK
 linktitle: dms
 notitle: true
 ---

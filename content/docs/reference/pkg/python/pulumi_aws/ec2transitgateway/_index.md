@@ -1,5 +1,6 @@
 ---
 title: Module ec2transitgateway
+title_tag: Module ec2transitgateway | Package pulumi_aws | Python SDK
 linktitle: ec2transitgateway
 notitle: true
 ---

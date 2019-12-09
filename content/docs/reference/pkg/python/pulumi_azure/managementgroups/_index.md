@@ -1,5 +1,6 @@
 ---
 title: Module managementgroups
+title_tag: Module managementgroups | Package pulumi_azure | Python SDK
 linktitle: managementgroups
 notitle: true
 ---

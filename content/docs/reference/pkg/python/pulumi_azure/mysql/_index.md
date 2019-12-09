@@ -1,5 +1,6 @@
 ---
 title: Module mysql
+title_tag: Module mysql | Package pulumi_azure | Python SDK
 linktitle: mysql
 notitle: true
 ---
@@ -362,7 +363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ssl_enforcement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if SSL should be enforced on connections. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><strong>storage_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code> and <code class="docutils literal notranslate"><span class="pre">5.7</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code>, <code class="docutils literal notranslate"><span class="pre">5.7</span></code>, and <code class="docutils literal notranslate"><span class="pre">8.0</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -458,7 +459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.mysql.Server.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mysql.Server.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code> and <code class="docutils literal notranslate"><span class="pre">5.7</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code>, <code class="docutils literal notranslate"><span class="pre">5.7</span></code>, and <code class="docutils literal notranslate"><span class="pre">8.0</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -483,7 +484,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ssl_enforcement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if SSL should be enforced on connections. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><strong>storage_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code> and <code class="docutils literal notranslate"><span class="pre">5.7</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MySQL to use. Valid values are <code class="docutils literal notranslate"><span class="pre">5.6</span></code>, <code class="docutils literal notranslate"><span class="pre">5.7</span></code>, and <code class="docutils literal notranslate"><span class="pre">8.0</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>

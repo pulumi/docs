@@ -1,5 +1,6 @@
 ---
 title: Module monitoring
+title_tag: Module monitoring | Package pulumi_gcp | Python SDK
 linktitle: monitoring
 notitle: true
 ---

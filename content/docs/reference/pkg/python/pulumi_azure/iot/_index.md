@@ -1,5 +1,6 @@
 ---
 title: Module iot
+title_tag: Module iot | Package pulumi_azure | Python SDK
 linktitle: iot
 notitle: true
 ---
@@ -804,12 +805,128 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.iot.FallbackRoute">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">FallbackRoute</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">endpoint_names=None</em>, <em class="sig-param">iothub_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an IotHub Fallback Route</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Fallback route can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.FallbackRoute</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default. For grammar, see: <a class="reference external" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language</a>.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Used to specify whether the fallback route is enabled.</p></li>
+<li><p><strong>endpoint_names</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.</p></li>
+<li><p><strong>iothub_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IoTHub to which this Fallback Route belongs. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the IotHub Storage Container Endpoint resource has to be created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_fallback_route.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_fallback_route.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.iot.FallbackRoute.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default. For grammar, see: <a class="reference external" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.FallbackRoute.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to specify whether the fallback route is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.FallbackRoute.endpoint_names">
+<code class="sig-name descname">endpoint_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.endpoint_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.FallbackRoute.iothub_name">
+<code class="sig-name descname">iothub_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.iothub_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the IoTHub to which this Fallback Route belongs. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.FallbackRoute.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group under which the IotHub Storage Container Endpoint resource has to be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.FallbackRoute.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">endpoint_names=None</em>, <em class="sig-param">iothub_name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FallbackRoute resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default. For grammar, see: <a class="reference external" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language</a>.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Used to specify whether the fallback route is enabled.</p></li>
+<li><p><strong>endpoint_names</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.</p></li>
+<li><p><strong>iothub_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IoTHub to which this Fallback Route belongs. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the IotHub Storage Container Endpoint resource has to be created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_fallback_route.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_fallback_route.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.FallbackRoute.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.FallbackRoute.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.FallbackRoute.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.iot.IoTHub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">IoTHub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoints=None</em>, <em class="sig-param">fallback_route=None</em>, <em class="sig-param">file_upload=None</em>, <em class="sig-param">ip_filter_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.IoTHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an IotHub</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
 <p><strong>NOTE:</strong> Routes can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.Route</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+<p><strong>NOTE:</strong> Fallback route can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.FallbackRoute</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -1,5 +1,6 @@
 ---
 title: Module elasticsearch
+title_tag: Module elasticsearch | Package pulumi_aws | Python SDK
 linktitle: elasticsearch
 notitle: true
 ---

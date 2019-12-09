@@ -1,5 +1,6 @@
 ---
 title: Module licensemanager
+title_tag: Module licensemanager | Package pulumi_aws | Python SDK
 linktitle: licensemanager
 notitle: true
 ---

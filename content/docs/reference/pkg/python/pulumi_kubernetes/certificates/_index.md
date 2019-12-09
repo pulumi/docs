@@ -1,5 +1,6 @@
 ---
 title: Module certificates
+title_tag: Module certificates | Package pulumi_kubernetes | Python SDK
 linktitle: certificates
 notitle: true
 ---

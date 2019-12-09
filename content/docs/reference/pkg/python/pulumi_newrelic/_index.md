@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_newrelic
+title_tag: Package pulumi_newrelic | Python SDK
 linktitle: pulumi_newrelic
 notitle: true
 ---
@@ -14,6 +15,8 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="insights/">insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/">plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="synthetics/">synthetics</a></li>
 </ul>
 </div>
