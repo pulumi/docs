@@ -252,7 +252,7 @@ While we walked through a lot of code today, the diff between what we would need
 
 1. **Tradeoffs** - There are some resources that take longer to spin up than others. For example, a brand new Kubernetes cluster takes considerably longer to spin up than a new PubSub topic. You will need to balance the speed of your tests with how closely the environment mimics production. We chose to place these longer-lived resources in a separate [GitLab repository](https://gitlab.com/rocore/global-infra) called `global-infra`.
 
-    We reference these longer lived pieces of infrastructure in our `demo-app` by using a [stack reference](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies).
+    We reference these longer-lived pieces of infrastructure in our `demo-app` by using a [stack reference](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies).
 
     ```typescript
     const globalStackRef = new pulumi.StackReference("rocore/global-infra/global-infra");
