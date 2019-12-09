@@ -8,7 +8,7 @@ authors: ["erin-krengel"]
 tags: ["testing", "ephemeral environments", "KubeCon", "kubernetes"]
 ---
 
-Last week, my colleague Sean and I had the opportunity to present "Are you about to break prod? Acceptance Testing with Ephemeral Environments" at KubeCon NA 2019. In this talk, we covered what is an ephemeral environment, how to create one, and then we walked the audience through a concrete example. Given our limited time, we had to move quickly through a ton of information. Today, I will recap our presentation and add a few more details we weren't able to cover.
+A couple of weeks ago, my colleague Sean and I had the opportunity to present "Are you about to break prod? Acceptance Testing with Ephemeral Environments" at KubeCon NA 2019. In this talk, we covered what is an ephemeral environment, how to create one, and then we walked the audience through a concrete example. Given our limited time, we had to move quickly through a ton of information. Today, I will recap our presentation and add a few more details we weren't able to cover.
 
 <!--more-->
 
@@ -131,10 +131,10 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
 
 ![gitlab ci pipeline](gitlab-ci.png)
 
-1. **Test and Build** - This runs our unit tests and builds both our application and acceptance test images. The application image is an immutable image that is used for both running our acceptance tests and deploying to production.
+1. **Test and Build** - This runs our unit tests and builds both our application and acceptance test images. To build our images, we used [Kaniko](https://github.com/GoogleContainerTools/kaniko), a tool for building images within a container or Kubernetes cluster. GitLab has great documentation on [how to incorporate Kaniko](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html) into your pipeline. The application image is an immutable image that is used for both running our acceptance tests and deploying to production.
 1. **Acceptance Test** - This is what spins up our ephemeral environments and runs our acceptance tests. This acts as a quality gate catching issues before production.
 
-    Our ephemeral environment and Kubernetes job are all spun up in the `script` portion of the acceptance test job definition.
+    Our ephemeral environment and Kubernetes job are all spun up in the `script` portion of the acceptance test job definition. We do a bit of setup for our new acceptance test stack and then run `pulumi up`. Here is the print out from our acceptance tests.
 
     ```bash
     ...
@@ -156,7 +156,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
     Permalink: https://app.pulumi.com/rocore/demo-app/test-96425413-app/updates/1
     ```
 
-    The after script destroys our stack as well as prints the logs of both our Kubernetes Job and Deployment, which help with debugging if our tests were to fail.
+    The `after_script` destroys our stack as well as prints the logs of both our Kubernetes Job and Deployment, which help with debugging if our tests were to fail. We use the `after_script` to make sure that we always clean up and print logs even when our acceptance tests fail.
 
     ```bash
     ...
@@ -197,7 +197,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
 
 1. **Prod Pulumi Preview** - This is what preview changes to our production infrastructure. Some teams may choose to start with this stage as a manual gate and then switch to an automatic stage once they've built up confidence.
 
-    We can incorporate this into our Merge Request review process, allowing us to validate our infrastructure changes are as we expect. Here we can see only our Kubernetes Deployment is getting updated meaning only our application was changed. 
+    We can incorporate this into our Merge Request review process, allowing us to validate our infrastructure changes are as we expect. Here we can see only our Kubernetes Deployment is getting updated meaning only our application was changed.
 
     ```bash
     $ pulumi stack select rocore/demo-app/prod
@@ -219,7 +219,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
         gcp:storage:BucketIAMMember prod-demo-app  
      ~  kubernetes:apps:Deployment prod-demo-app update [diff: ~spec]
         pulumi:pulumi:Stack demo-app-prod  
- 
+
     Outputs:
     ...
 
@@ -230,7 +230,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
     Permalink: https://app.pulumi.com/...
     ```
 
-1. **Prod Pulumi Up** - This is what is actually performing our production deployment and only gets run on master.
+1. **Prod Pulumi Up** - This is what is actually performs changes to our production infrastructure and releases our production deployment. This only gets run on master.
 
 For more details on how to set this up, you can view the GitLab configuration for setting up this pipeline in our [.gitlab-ci.yml](https://gitlab.com/rocore/demo-app/blob/master/.gitlab-ci.yml) file.
 
