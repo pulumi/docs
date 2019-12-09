@@ -21,7 +21,7 @@ With this in mind, we will use Pulumi and GitLab to build a pipeline that valida
 
 ## Ephemeral Environments
 
-What is an ephemeral environment? It is a short-lived environment that mimics our production environment. To maintain agility, we typically define the boundaries of this environment to only encompass the first-level dependencies of the particular microservice we are deploying. This means we will not spin up every single microservice or piece of infrastructure that's running in production. Yet we may need to spin up some extra pieces infrastructure to be able to properly test our microservice. For example, we may need to create a subscription to pull from a PubSub topic your microservice writes to.
+What is an ephemeral environment? It is a short-lived environment that mimics our production environment. To maintain agility, we typically define the boundaries of this environment to only encompass the first-level dependencies of the particular microservice we are deploying. This means we will not spin up every single microservice or piece of infrastructure that's running in production. Yet we may need to spin up some extra pieces infrastructure to be able to properly test our microservice. For example, we may need to create a subscription to pull from a PubSub topic your microservice writes to. This subscription would allow your acceptance tests to pull from a topic in order to validate an outbound message is published.
 
 ## Why this is important
 
@@ -194,7 +194,7 @@ We used GitLab to set up our pipeline. We chose GitLab because it's extremely ea
     ...
     ```
 
-1. **Prod Pulumi Preview** - This is what preview changes to our production infrastructure. Some teams may choose to start with this stage as a manual gate and then switch to an automatic stage once they've built up confidence.
+1. **Prod Pulumi Preview** - This is what previews changes to our production infrastructure. Some teams may choose to start with this stage as a manual gate and then switch to an automatic stage once they've built up confidence.
 
     We can incorporate this into our Merge Request review process, allowing us to validate our infrastructure changes are as we expect. Here we can see only our Kubernetes Deployment is getting updated meaning only our application was changed.
 
@@ -249,7 +249,7 @@ While we walked through a lot of code today, the diff between what we would need
 
 1. **Clean up resources** - We needed to be able to cleanly tear down all the resources we created for our ephemeral environment. We used the `pulumi destroy` command to do this.
 
-1. **Tradeoffs** - There are some resources that take longer to spin up than others. For example, a brand new Kubernetes cluster takes considerably longer to spin up than a new PubSub topic. You will need to balance the speed of your tests with how closely the environment mimics production. We chose to place these longer-lived resources in a separate [GitLab repository](https://gitlab.com/rocore/global-infra) called `global-infra`.
+1. **Tradeoffs** - Some resources can take longer to spin up than others. For example, a brand new Kubernetes cluster takes considerably longer to spin up than a new PubSub topic. You will need to balance the speed of your tests with how closely the environment mimics production. We chose to place these longer-lived resources in a separate [GitLab repository](https://gitlab.com/rocore/global-infra) called `global-infra`.
 
     We reference these longer-lived pieces of infrastructure in our `demo-app` by using a [stack reference](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies).
 
