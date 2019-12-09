@@ -1,5 +1,6 @@
 ---
 title: Package pulumi
+title_tag: Package pulumi | Python SDK
 linktitle: pulumi
 notitle: true
 ---
@@ -205,7 +206,7 @@ provided list of resources.</p></li>
 <li><p><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
 If no provider is supplied, the default provider for the resource’s package will be used. The default
 provider is pulled from the parent’s provider bag.</p></li>
-<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_okta/profile/#pulumi_okta.profile.Mapping" title="pulumi_okta.profile.Mapping"><em>Mapping</em></a><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
+<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</p></li>
 <li><p><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</p></li>
 <li><p><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates

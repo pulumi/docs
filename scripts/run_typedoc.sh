@@ -76,6 +76,7 @@ generate_docs() {
 }
 
 REPOS=(
+    "aiven,pulumi-aiven,sdk/nodejs"
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
