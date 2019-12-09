@@ -1,5 +1,6 @@
 ---
 title: Module securitycenter
+title_tag: Module securitycenter | Package pulumi_azure | Python SDK
 linktitle: securitycenter
 notitle: true
 ---

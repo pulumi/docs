@@ -1,5 +1,6 @@
 ---
 title: Module jwt
+title_tag: Module jwt | Package pulumi_vault | Python SDK
 linktitle: jwt
 notitle: true
 ---

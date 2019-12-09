@@ -1,5 +1,6 @@
 ---
 title: Module devicefarm
+title_tag: Module devicefarm | Package pulumi_aws | Python SDK
 linktitle: devicefarm
 notitle: true
 ---

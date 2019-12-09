@@ -1,5 +1,6 @@
 ---
 title: Module core
+title_tag: Module core | Package pulumi_azure | Python SDK
 linktitle: core
 notitle: true
 ---

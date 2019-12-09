@@ -1,5 +1,6 @@
 ---
 title: Module codebuild
+title_tag: Module codebuild | Package pulumi_aws | Python SDK
 linktitle: codebuild
 notitle: true
 ---

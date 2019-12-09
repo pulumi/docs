@@ -1,5 +1,6 @@
 ---
 title: Module proximity
+title_tag: Module proximity | Package pulumi_azure | Python SDK
 linktitle: proximity
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module cosmosdb
+title_tag: Module cosmosdb | Package pulumi_azure | Python SDK
 linktitle: cosmosdb
 notitle: true
 ---

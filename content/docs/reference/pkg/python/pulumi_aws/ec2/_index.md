@@ -1,5 +1,6 @@
 ---
 title: Module ec2
+title_tag: Module ec2 | Package pulumi_aws | Python SDK
 linktitle: ec2
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module folder
+title_tag: Module folder | Package pulumi_gcp | Python SDK
 linktitle: folder
 notitle: true
 ---

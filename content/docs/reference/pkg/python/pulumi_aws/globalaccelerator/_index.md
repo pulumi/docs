@@ -1,5 +1,6 @@
 ---
 title: Module globalaccelerator
+title_tag: Module globalaccelerator | Package pulumi_aws | Python SDK
 linktitle: globalaccelerator
 notitle: true
 ---

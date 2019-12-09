@@ -1,5 +1,6 @@
 ---
 title: Module template
+title_tag: Module template | Package pulumi_okta | Python SDK
 linktitle: template
 notitle: true
 ---

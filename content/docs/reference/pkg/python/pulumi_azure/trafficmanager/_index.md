@@ -1,5 +1,6 @@
 ---
 title: Module trafficmanager
+title_tag: Module trafficmanager | Package pulumi_azure | Python SDK
 linktitle: trafficmanager
 notitle: true
 ---

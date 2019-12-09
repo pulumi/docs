@@ -1,5 +1,6 @@
 ---
 title: Module cdn
+title_tag: Module cdn | Package pulumi_azure | Python SDK
 linktitle: cdn
 notitle: true
 ---

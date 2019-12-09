@@ -1,5 +1,6 @@
 ---
 title: Module maps
+title_tag: Module maps | Package pulumi_azure | Python SDK
 linktitle: maps
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module dashboard
+title_tag: Module dashboard | Package pulumi_azure | Python SDK
 linktitle: dashboard
 notitle: true
 ---

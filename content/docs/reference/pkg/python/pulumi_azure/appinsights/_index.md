@@ -1,5 +1,6 @@
 ---
 title: Module appinsights
+title_tag: Module appinsights | Package pulumi_azure | Python SDK
 linktitle: appinsights
 notitle: true
 ---

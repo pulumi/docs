@@ -1,5 +1,6 @@
 ---
 title: Module mediastore
+title_tag: Module mediastore | Package pulumi_aws | Python SDK
 linktitle: mediastore
 notitle: true
 ---

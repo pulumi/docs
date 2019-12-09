@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_azuread
+title_tag: Package pulumi_azuread | Python SDK
 linktitle: pulumi_azuread
 notitle: true
 ---

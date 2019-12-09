@@ -1,5 +1,6 @@
 ---
 title: Module relay
+title_tag: Module relay | Package pulumi_azure | Python SDK
 linktitle: relay
 notitle: true
 ---

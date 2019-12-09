@@ -1,5 +1,6 @@
 ---
 title: Module workspaces
+title_tag: Module workspaces | Package pulumi_aws | Python SDK
 linktitle: workspaces
 notitle: true
 ---

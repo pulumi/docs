@@ -1,5 +1,6 @@
 ---
 title: Module securityhub
+title_tag: Module securityhub | Package pulumi_aws | Python SDK
 linktitle: securityhub
 notitle: true
 ---

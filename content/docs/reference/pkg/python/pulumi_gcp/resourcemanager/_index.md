@@ -1,5 +1,6 @@
 ---
 title: Module resourcemanager
+title_tag: Module resourcemanager | Package pulumi_gcp | Python SDK
 linktitle: resourcemanager
 notitle: true
 ---

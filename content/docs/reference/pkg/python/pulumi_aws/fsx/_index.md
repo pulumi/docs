@@ -1,5 +1,6 @@
 ---
 title: Module fsx
+title_tag: Module fsx | Package pulumi_aws | Python SDK
 linktitle: fsx
 notitle: true
 ---

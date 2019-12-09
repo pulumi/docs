@@ -1,5 +1,6 @@
 ---
 title: Module ddosprotection
+title_tag: Module ddosprotection | Package pulumi_azure | Python SDK
 linktitle: ddosprotection
 notitle: true
 ---

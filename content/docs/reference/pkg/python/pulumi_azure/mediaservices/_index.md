@@ -1,5 +1,6 @@
 ---
 title: Module mediaservices
+title_tag: Module mediaservices | Package pulumi_azure | Python SDK
 linktitle: mediaservices
 notitle: true
 ---

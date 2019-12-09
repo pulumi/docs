@@ -1,5 +1,6 @@
 ---
 title: Module datafusion
+title_tag: Module datafusion | Package pulumi_gcp | Python SDK
 linktitle: datafusion
 notitle: true
 ---

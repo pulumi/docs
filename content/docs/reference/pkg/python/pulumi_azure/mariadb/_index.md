@@ -1,5 +1,6 @@
 ---
 title: Module mariadb
+title_tag: Module mariadb | Package pulumi_azure | Python SDK
 linktitle: mariadb
 notitle: true
 ---

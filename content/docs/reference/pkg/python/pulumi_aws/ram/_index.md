@@ -1,5 +1,6 @@
 ---
 title: Module ram
+title_tag: Module ram | Package pulumi_aws | Python SDK
 linktitle: ram
 notitle: true
 ---

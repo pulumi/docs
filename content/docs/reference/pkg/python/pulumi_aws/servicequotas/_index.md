@@ -1,5 +1,6 @@
 ---
 title: Module servicequotas
+title_tag: Module servicequotas | Package pulumi_aws | Python SDK
 linktitle: servicequotas
 notitle: true
 ---

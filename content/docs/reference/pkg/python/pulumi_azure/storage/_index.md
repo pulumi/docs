@@ -1,5 +1,6 @@
 ---
 title: Module storage
+title_tag: Module storage | Package pulumi_azure | Python SDK
 linktitle: storage
 notitle: true
 ---
@@ -60,9 +61,9 @@ for more information.</p>
 <p>The <strong>network_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>queue_properties</strong> object supports the following:</p>
 <ul class="simple">
@@ -204,9 +205,9 @@ for more information.</p>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_rules</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -540,9 +541,9 @@ for more information.</p>
 <p>The <strong>network_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>queue_properties</strong> object supports the following:</p>
 <ul class="simple">
@@ -607,6 +608,132 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.storage.Account.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.AccountNetworkRules">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AccountNetworkRules</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypasses=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">ip_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">virtual_network_subnet_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages network rules inside of a Azure Storage Account.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Network Rules can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">storage.AccountNetworkRules</span></code> resource - but the two cannot be used together. Spurious changes will occur if both are used against the same Storage Account.</p>
+<p><strong>NOTE:</strong> Only one <code class="docutils literal notranslate"><span class="pre">storage.AccountNetworkRules</span></code> can be tied to an <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code>. Spurious changes will occur if more than <code class="docutils literal notranslate"><span class="pre">storage.AccountNetworkRules</span></code> is tied to the same <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code>.</p>
+<p><strong>NOTE:</strong> Deleting this resource updates the storage account back to the default values it had when the storage account was created.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bypasses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><strong>ip_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
+<li><p><strong>virtual_network_subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual network subnet ids to to secure the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account_network_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account_network_rules.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.bypasses">
+<code class="sig-name descname">bypasses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.bypasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.default_action">
+<code class="sig-name descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.default_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.ip_rules">
+<code class="sig-name descname">ip_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.ip_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.storage_account_name">
+<code class="sig-name descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.storage_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.AccountNetworkRules.virtual_network_subnet_ids">
+<code class="sig-name descname">virtual_network_subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.virtual_network_subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of virtual network subnet ids to to secure the storage account.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.AccountNetworkRules.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypasses=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">ip_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">virtual_network_subnet_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccountNetworkRules resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bypasses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><strong>ip_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p>
+</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
+<li><p><strong>virtual_network_subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual network subnet ids to to secure the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account_network_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account_network_rules.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.AccountNetworkRules.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.AccountNetworkRules.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AccountNetworkRules.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

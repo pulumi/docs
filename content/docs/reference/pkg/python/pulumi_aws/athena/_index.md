@@ -1,5 +1,6 @@
 ---
 title: Module athena
+title_tag: Module athena | Package pulumi_aws | Python SDK
 linktitle: athena
 notitle: true
 ---

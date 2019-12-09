@@ -1,5 +1,6 @@
 ---
 title: Module eventhub
+title_tag: Module eventhub | Package pulumi_azure | Python SDK
 linktitle: eventhub
 notitle: true
 ---

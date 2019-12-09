@@ -1,5 +1,6 @@
 ---
 title: Module healthcare
+title_tag: Module healthcare | Package pulumi_azure | Python SDK
 linktitle: healthcare
 notitle: true
 ---
@@ -62,7 +63,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_azure.healthcare.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policy_object_ids=None</em>, <em class="sig-param">authentication_configuration=None</em>, <em class="sig-param">cors_configuration=None</em>, <em class="sig-param">cosmosdb_throughput=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Healthcare Service Resource.</p>
+<dd><p>Manages a Healthcare Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -237,7 +238,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.healthcare.get_service">
-<code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.get_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Healthcare Service</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

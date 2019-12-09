@@ -1,5 +1,6 @@
 ---
 title: Module servicefabric
+title_tag: Module servicefabric | Package pulumi_azure | Python SDK
 linktitle: servicefabric
 notitle: true
 ---

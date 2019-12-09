@@ -1,5 +1,6 @@
 ---
 title: Module cognitive
+title_tag: Module cognitive | Package pulumi_azure | Python SDK
 linktitle: cognitive
 notitle: true
 ---

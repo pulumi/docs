@@ -1,5 +1,6 @@
 ---
 title: Module objectstorage
+title_tag: Module objectstorage | Package pulumi_openstack | Python SDK
 linktitle: objectstorage
 notitle: true
 ---

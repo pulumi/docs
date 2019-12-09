@@ -1,5 +1,6 @@
 ---
 title: Module inspector
+title_tag: Module inspector | Package pulumi_aws | Python SDK
 linktitle: inspector
 notitle: true
 ---

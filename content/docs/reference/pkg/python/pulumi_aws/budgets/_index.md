@@ -1,5 +1,6 @@
 ---
 title: Module budgets
+title_tag: Module budgets | Package pulumi_aws | Python SDK
 linktitle: budgets
 notitle: true
 ---

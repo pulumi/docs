@@ -1,5 +1,6 @@
 ---
 title: Module l_dap
+title_tag: Module l_dap | Package pulumi_vault | Python SDK
 linktitle: l_dap
 notitle: true
 ---

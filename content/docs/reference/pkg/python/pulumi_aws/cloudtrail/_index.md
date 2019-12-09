@@ -1,5 +1,6 @@
 ---
 title: Module cloudtrail
+title_tag: Module cloudtrail | Package pulumi_aws | Python SDK
 linktitle: cloudtrail
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module state
+title_tag: Module state | Package pulumi_terraform | Python SDK
 linktitle: state
 notitle: true
 ---
