@@ -1,5 +1,6 @@
 ---
 title: Module generic
+title_tag: Module generic | Package pulumi_vault | Python SDK
 linktitle: generic
 notitle: true
 ---

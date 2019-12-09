@@ -1,5 +1,6 @@
 ---
 title: Module directconnect
+title_tag: Module directconnect | Package pulumi_aws | Python SDK
 linktitle: directconnect
 notitle: true
 ---

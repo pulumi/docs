@@ -1,5 +1,6 @@
 ---
 title: Module xray
+title_tag: Module xray | Package pulumi_aws | Python SDK
 linktitle: xray
 notitle: true
 ---

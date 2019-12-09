@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_okta
+title_tag: Package pulumi_okta | Python SDK
 linktitle: pulumi_okta
 notitle: true
 ---

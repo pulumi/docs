@@ -1,5 +1,6 @@
 ---
 title: Module sqs
+title_tag: Module sqs | Package pulumi_aws | Python SDK
 linktitle: sqs
 notitle: true
 ---

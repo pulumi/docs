@@ -1,5 +1,6 @@
 ---
 title: Module automation
+title_tag: Module automation | Package pulumi_azure | Python SDK
 linktitle: automation
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module victorops
+title_tag: Module victorops | Package pulumi_signalfx | Python SDK
 linktitle: victorops
 notitle: true
 ---

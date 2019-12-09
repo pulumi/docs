@@ -1,5 +1,6 @@
 ---
 title: Module devtest
+title_tag: Module devtest | Package pulumi_azure | Python SDK
 linktitle: devtest
 notitle: true
 ---

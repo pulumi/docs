@@ -1,5 +1,6 @@
 ---
 title: Module opsworks
+title_tag: Module opsworks | Package pulumi_aws | Python SDK
 linktitle: opsworks
 notitle: true
 ---

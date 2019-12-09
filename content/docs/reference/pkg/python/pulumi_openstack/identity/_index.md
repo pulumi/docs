@@ -1,5 +1,6 @@
 ---
 title: Module identity
+title_tag: Module identity | Package pulumi_openstack | Python SDK
 linktitle: identity
 notitle: true
 ---

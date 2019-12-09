@@ -1,5 +1,6 @@
 ---
 title: Module swf
+title_tag: Module swf | Package pulumi_aws | Python SDK
 linktitle: swf
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module glacier
+title_tag: Module glacier | Package pulumi_aws | Python SDK
 linktitle: glacier
 notitle: true
 ---

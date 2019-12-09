@@ -1,5 +1,6 @@
 ---
 title: Module hdinsight
+title_tag: Module hdinsight | Package pulumi_azure | Python SDK
 linktitle: hdinsight
 notitle: true
 ---

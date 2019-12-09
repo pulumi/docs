@@ -1,5 +1,6 @@
 ---
 title: Module elastictranscoder
+title_tag: Module elastictranscoder | Package pulumi_aws | Python SDK
 linktitle: elastictranscoder
 notitle: true
 ---

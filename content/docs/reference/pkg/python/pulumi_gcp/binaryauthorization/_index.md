@@ -1,5 +1,6 @@
 ---
 title: Module binaryauthorization
+title_tag: Module binaryauthorization | Package pulumi_gcp | Python SDK
 linktitle: binaryauthorization
 notitle: true
 ---

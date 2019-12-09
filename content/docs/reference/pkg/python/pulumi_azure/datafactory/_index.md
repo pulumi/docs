@@ -1,5 +1,6 @@
 ---
 title: Module datafactory
+title_tag: Module datafactory | Package pulumi_azure | Python SDK
 linktitle: datafactory
 notitle: true
 ---
@@ -1775,7 +1776,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
 </p></li>
 <li><p><strong>pipeline_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory Pipeline name that the trigger will act on.</p></li>
-<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the the trigger will act upon.</p></li>
+<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the trigger will act upon.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource</p></li>
 <li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.</p></li>
 </ul>
@@ -1829,7 +1830,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datafactory.TriggerSchedule.pipeline_parameters">
 <code class="sig-name descname">pipeline_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.pipeline_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>The pipeline parameters that the the trigger will act upon.</p>
+<dd><p>The pipeline parameters that the trigger will act upon.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1863,7 +1864,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
 </p></li>
 <li><p><strong>pipeline_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory Pipeline name that the trigger will act on.</p></li>
-<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the the trigger will act upon.</p></li>
+<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the trigger will act upon.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource</p></li>
 <li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.</p></li>
 </ul>

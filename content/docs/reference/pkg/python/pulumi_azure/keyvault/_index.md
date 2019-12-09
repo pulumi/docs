@@ -1,5 +1,6 @@
 ---
 title: Module keyvault
+title_tag: Module keyvault | Package pulumi_azure | Python SDK
 linktitle: keyvault
 notitle: true
 ---

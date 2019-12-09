@@ -1,5 +1,6 @@
 ---
 title: Module streamanalytics
+title_tag: Module streamanalytics | Package pulumi_azure | Python SDK
 linktitle: streamanalytics
 notitle: true
 ---

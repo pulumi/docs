@@ -1,5 +1,6 @@
 ---
 title: Module pinpoint
+title_tag: Module pinpoint | Package pulumi_aws | Python SDK
 linktitle: pinpoint
 notitle: true
 ---

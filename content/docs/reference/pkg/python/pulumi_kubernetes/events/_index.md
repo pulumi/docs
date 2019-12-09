@@ -1,5 +1,6 @@
 ---
 title: Module events
+title_tag: Module events | Package pulumi_kubernetes | Python SDK
 linktitle: events
 notitle: true
 ---

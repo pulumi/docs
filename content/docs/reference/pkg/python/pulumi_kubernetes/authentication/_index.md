@@ -1,5 +1,6 @@
 ---
 title: Module authentication
+title_tag: Module authentication | Package pulumi_kubernetes | Python SDK
 linktitle: authentication
 notitle: true
 ---

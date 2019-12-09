@@ -1,5 +1,6 @@
 ---
 title: Module blockstorage
+title_tag: Module blockstorage | Package pulumi_openstack | Python SDK
 linktitle: blockstorage
 notitle: true
 ---

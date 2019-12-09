@@ -1,5 +1,6 @@
 ---
 title: Module waf
+title_tag: Module waf | Package pulumi_aws | Python SDK
 linktitle: waf
 notitle: true
 ---

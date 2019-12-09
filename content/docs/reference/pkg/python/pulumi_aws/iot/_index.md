@@ -1,5 +1,6 @@
 ---
 title: Module iot
+title_tag: Module iot | Package pulumi_aws | Python SDK
 linktitle: iot
 notitle: true
 ---

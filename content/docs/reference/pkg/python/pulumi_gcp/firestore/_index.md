@@ -1,5 +1,6 @@
 ---
 title: Module firestore
+title_tag: Module firestore | Package pulumi_gcp | Python SDK
 linktitle: firestore
 notitle: true
 ---

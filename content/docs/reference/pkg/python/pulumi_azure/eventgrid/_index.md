@@ -1,5 +1,6 @@
 ---
 title: Module eventgrid
+title_tag: Module eventgrid | Package pulumi_azure | Python SDK
 linktitle: eventgrid
 notitle: true
 ---

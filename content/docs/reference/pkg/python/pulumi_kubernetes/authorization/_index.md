@@ -1,5 +1,6 @@
 ---
 title: Module authorization
+title_tag: Module authorization | Package pulumi_kubernetes | Python SDK
 linktitle: authorization
 notitle: true
 ---

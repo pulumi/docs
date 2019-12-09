@@ -1,5 +1,6 @@
 ---
 title: Module gcp
+title_tag: Module gcp | Package pulumi_datadog | Python SDK
 linktitle: gcp
 notitle: true
 ---

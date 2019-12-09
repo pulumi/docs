@@ -1,5 +1,6 @@
 ---
 title: Module redis
+title_tag: Module redis | Package pulumi_azure | Python SDK
 linktitle: redis
 notitle: true
 ---

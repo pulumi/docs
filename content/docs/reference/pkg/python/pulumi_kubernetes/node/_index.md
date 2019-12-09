@@ -1,5 +1,6 @@
 ---
 title: Module node
+title_tag: Module node | Package pulumi_kubernetes | Python SDK
 linktitle: node
 notitle: true
 ---

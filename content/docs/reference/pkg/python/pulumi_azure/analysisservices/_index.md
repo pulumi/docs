@@ -1,5 +1,6 @@
 ---
 title: Module analysisservices
+title_tag: Module analysisservices | Package pulumi_azure | Python SDK
 linktitle: analysisservices
 notitle: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_fastly
+title_tag: Package pulumi_fastly | Python SDK
 linktitle: pulumi_fastly
 notitle: true
 ---

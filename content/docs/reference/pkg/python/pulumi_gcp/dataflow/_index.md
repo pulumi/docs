@@ -1,5 +1,6 @@
 ---
 title: Module dataflow
+title_tag: Module dataflow | Package pulumi_gcp | Python SDK
 linktitle: dataflow
 notitle: true
 ---

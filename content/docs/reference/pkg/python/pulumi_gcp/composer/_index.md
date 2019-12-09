@@ -1,5 +1,6 @@
 ---
 title: Module composer
+title_tag: Module composer | Package pulumi_gcp | Python SDK
 linktitle: composer
 notitle: true
 ---

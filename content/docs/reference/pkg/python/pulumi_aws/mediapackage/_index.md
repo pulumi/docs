@@ -1,5 +1,6 @@
 ---
 title: Module mediapackage
+title_tag: Module mediapackage | Package pulumi_aws | Python SDK
 linktitle: mediapackage
 notitle: true
 ---

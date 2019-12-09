@@ -1,5 +1,6 @@
 ---
 title: Module slack
+title_tag: Module slack | Package pulumi_signalfx | Python SDK
 linktitle: slack
 notitle: true
 ---

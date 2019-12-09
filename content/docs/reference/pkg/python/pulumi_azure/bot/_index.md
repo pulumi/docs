@@ -1,5 +1,6 @@
 ---
 title: Module bot
+title_tag: Module bot | Package pulumi_azure | Python SDK
 linktitle: bot
 notitle: true
 ---
@@ -26,7 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>email_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address that the Bot will authenticate with.</p></li>
-<li><p><strong>email_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email password that the the Bot will authenticate with.</p></li>
+<li><p><strong>email_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email password that the Bot will authenticate with.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -50,7 +51,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.bot.ChannelEmail.email_password">
 <code class="sig-name descname">email_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.bot.ChannelEmail.email_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>The email password that the the Bot will authenticate with.</p>
+<dd><p>The email password that the Bot will authenticate with.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -78,7 +79,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bot Resource this channel will be associated with. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>email_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address that the Bot will authenticate with.</p></li>
-<li><p><strong>email_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email password that the the Bot will authenticate with.</p></li>
+<li><p><strong>email_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email password that the Bot will authenticate with.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Bot Channel. Changing this forces a new resource to be created.</p></li>
 </ul>

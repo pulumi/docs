@@ -1,5 +1,6 @@
 ---
 title: Module ecr
+title_tag: Module ecr | Package pulumi_aws | Python SDK
 linktitle: ecr
 notitle: true
 ---
