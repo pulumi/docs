@@ -229,7 +229,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.storage.v1beta1.CSINode">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.storage.v1beta1.</code><code class="sig-name descname">CSINode</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.storage.v1beta1.CSINode" title="Permalink to this definition">¶</a></dt>
-<dd><p>CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to
+<dd><p>DEPRECATED - storage/v1beta1/CSINode is not supported by Kubernetes 1.16+ clusters. Use
+storage/v1beta1/CSINode instead.</p>
+<p>CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to
 create the CSINode object directly. As long as they use the node-driver-registrar sidecar
 container, the kubelet will automatically populate the CSINode object for the CSI driver as part
 of kubelet plugin registration. CSINode has the same name as a node. If the object is missing,

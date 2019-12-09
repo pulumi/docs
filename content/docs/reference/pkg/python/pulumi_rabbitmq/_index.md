@@ -1,5 +1,6 @@
 ---
 title: Package pulumi_rabbitmq
+title_tag: Package pulumi_rabbitmq | Python SDK
 linktitle: pulumi_rabbitmq
 notitle: true
 ---

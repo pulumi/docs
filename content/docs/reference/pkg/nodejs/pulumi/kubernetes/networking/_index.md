@@ -1,5 +1,6 @@
 ---
 title: "Module networking"
+title_tag: "Module networking | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "networking"
 meta_desc: "Explore members of the networking module in the @pulumi/kubernetes package."
 ---

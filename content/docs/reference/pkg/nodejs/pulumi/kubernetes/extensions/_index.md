@@ -1,5 +1,6 @@
 ---
 title: "Module extensions"
+title_tag: "Module extensions | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "extensions"
 meta_desc: "Explore members of the extensions module in the @pulumi/kubernetes package."
 ---

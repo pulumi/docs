@@ -1,5 +1,6 @@
 ---
 title: "Module discovery"
+title_tag: "Module discovery | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "discovery"
 meta_desc: "Explore members of the discovery module in the @pulumi/kubernetes package."
 ---
@@ -10,7 +11,7 @@ meta_desc: "Explore members of the discovery module in the @pulumi/kubernetes pa
 
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="v1alpha1/"><span class="symbol module"></span>discovery/v1alpha1</a></li>
+    <li><a href="v1beta1/"><span class="symbol module"></span>discovery/v1beta1</a></li>
 </ul>
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Module certificates"
+title_tag: "Module certificates | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "certificates"
 meta_desc: "Explore members of the certificates module in the @pulumi/kubernetes package."
 ---

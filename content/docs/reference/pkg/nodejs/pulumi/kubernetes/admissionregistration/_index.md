@@ -1,5 +1,6 @@
 ---
 title: "Module admissionregistration"
+title_tag: "Module admissionregistration | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "admissionregistration"
 meta_desc: "Explore members of the admissionregistration module in the @pulumi/kubernetes package."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Module policy"
+title_tag: "Module policy | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "policy"
 meta_desc: "Explore members of the policy module in the @pulumi/kubernetes package."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Module authentication"
+title_tag: "Module authentication | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "authentication"
 meta_desc: "Explore members of the authentication module in the @pulumi/kubernetes package."
 ---
