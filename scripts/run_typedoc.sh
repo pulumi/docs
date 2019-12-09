@@ -104,6 +104,7 @@ REPOS=(
     "policy,pulumi-policy,sdk/nodejs/policy"
     "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"
+    "rabbitmq,pulumi-rabbitmq,sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "signalfx,pulumi-signalfx,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"

@@ -28,6 +28,7 @@ PACKAGES=(
   "pulumi_openstack"
   "pulumi_packet"
   "pulumi_postgresql"
+  "pulumi_rabbitmq"
   "pulumi_random"
   "pulumi_signalfx"
   "pulumi_terraform"

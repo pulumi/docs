@@ -33,6 +33,7 @@ TOOLS_REPOS=(
     "pulumi-packet"
     "pulumi-policy"
     "pulumi-postgresql"
+    "pulumi-rabbitmq"
     "pulumi-random"
     "pulumi-signalfx"
     "pulumi-terraform"
