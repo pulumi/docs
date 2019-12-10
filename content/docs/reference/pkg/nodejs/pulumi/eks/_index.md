@@ -1278,9 +1278,9 @@ subnets associated with the cluster.
 
 <pre class="highlight"><code><span class='kd'>type</span> ManagedNodeGroupOptions = Omit&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroupArgs'>NodeGroupArgs</a>, <span class='s2'>"clusterName"</span> | <span class='s2'>"subnetIds"</span> | <span class='s2'>"scalingConfig"</span>&gt; &amp; {
     cluster: <a href='#Cluster'>Cluster</a> | <a href='#CoreData'>CoreData</a>;
-    clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;
-    subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
+    clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
+    scalingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;
+    subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
 };</code></pre>
 
 ManagedNodeGroupOptions describes the configuration options accepted by an
