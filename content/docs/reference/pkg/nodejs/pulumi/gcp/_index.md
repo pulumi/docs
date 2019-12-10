@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/gcp"
+title_tag: "Package @pulumi/gcp | Node.js SDK"
 linktitle: "@pulumi/gcp"
 meta_desc: "Explore members of the @pulumi/gcp package."
 ---
@@ -148,7 +149,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -247,7 +248,7 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L121">property <b>batching</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>batching?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProviderBatching'>inputs.ProviderBatching</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>batching?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProviderBatching'>ProviderBatching</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-bigQueryCustomEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L122">property <b>bigQueryCustomEndpoint</b></a>
 </h4>

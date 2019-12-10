@@ -1,5 +1,6 @@
 ---
 title: "Module serverless"
+title_tag: "Module serverless | Package @pulumi/aws | Node.js SDK"
 linktitle: "serverless"
 meta_desc: "Explore members of the serverless module in the @pulumi/aws package."
 ---
@@ -69,7 +70,7 @@ implemented by a Pulumi lambda expression and with a set of attached policies.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -86,7 +87,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/serverless/function.ts#L96">property <b>lambda</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lambda: lambda.Function;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lambda: Function;</code></pre>
 <h4 class="pdoc-member-header" id="Function-options">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/serverless/function.ts#L95">property <b>options</b></a>
 </h4>
@@ -96,7 +97,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/serverless/function.ts#L97">property <b>role</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>role: <a href='#Role'>Role</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>Role</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Function-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/serverless/function.ts#L94">property <b>urn</b></a>
 </h4>
@@ -119,7 +120,7 @@ deployments.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use [aws.lambda.Context] instead.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> Context = lambda.Context;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Context = <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Context'>Context</a>;</code></pre>
 <h3 class="pdoc-module-header" id="FunctionOptions" data-link-title="FunctionOptions">
     <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/serverless/function.ts#L51">
         type <strong>FunctionOptions</strong>
@@ -130,7 +131,7 @@ Use [aws.lambda.Context] instead.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use [aws.lambda.FunctionOptions] instead.
 </div>
-<pre class="highlight"><code><span class='kd'>type</span> FunctionOptions = utils.Overwrite&lt;lambda.CallbackFunctionArgs&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, {
+<pre class="highlight"><code><span class='kd'>type</span> FunctionOptions = utils.Overwrite&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, {
     excludePackages: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
     factoryFunc: <a href='#HandlerFactory'>HandlerFactory</a>;
     func: <a href='#Handler'>Handler</a>;

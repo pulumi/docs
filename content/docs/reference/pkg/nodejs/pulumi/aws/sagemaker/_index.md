@@ -1,5 +1,6 @@
 ---
 title: "Module sagemaker"
+title_tag: "Module sagemaker | Package @pulumi/aws | Node.js SDK"
 linktitle: "sagemaker"
 meta_desc: "Explore members of the sagemaker module in the @pulumi/aws package."
 ---
@@ -108,7 +109,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Endpoint</code></pre>
 
 
 Returns true if the given object is an instance of Endpoint.  This is designed to work even
@@ -235,7 +236,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EndpointConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of EndpointConfiguration.  This is designed to work even
@@ -278,7 +279,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/endpointConfiguration.ts#L78">property <b>productionVariants</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationProductionVariant'>outputs.sagemaker.EndpointConfigurationProductionVariant</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationProductionVariant'>EndpointConfigurationProductionVariant</a>[]&gt;;</code></pre>
 
 Fields are documented below.
 
@@ -376,7 +377,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Model</code></pre>
 
 
 Returns true if the given object is an instance of Model.  This is designed to work even
@@ -394,7 +395,7 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L76">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelContainer'>outputs.sagemaker.ModelContainer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelContainer'>ModelContainer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
 
@@ -435,7 +436,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L92">property <b>primaryContainer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>primaryContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelPrimaryContainer'>outputs.sagemaker.ModelPrimaryContainer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>primaryContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelPrimaryContainer'>ModelPrimaryContainer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 
@@ -460,7 +461,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L100">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelVpcConfig'>outputs.sagemaker.ModelVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelVpcConfig'>ModelVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 
@@ -530,7 +531,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NotebookInstance</code></pre>
 
 
 Returns true if the given object is an instance of NotebookInstance.  This is designed to work even
@@ -675,7 +676,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NotebookInstanceLifecycleConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of NotebookInstanceLifecycleConfiguration.  This is designed to work even
@@ -798,7 +799,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/endpointConfiguration.ts#L164">property <b>productionVariants</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>inputs.sagemaker.EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</code></pre>
 
 Fields are documented below.
 
@@ -848,7 +849,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/endpointConfiguration.ts#L142">property <b>productionVariants</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>productionVariants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>inputs.sagemaker.EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>productionVariants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</code></pre>
 
 Fields are documented below.
 
@@ -916,7 +917,7 @@ The set of arguments for constructing a Model resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L192">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>inputs.sagemaker.ModelContainer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>ModelContainer</a>&gt;[]&gt;;</code></pre>
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
 
@@ -948,7 +949,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L208">property <b>primaryContainer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>inputs.sagemaker.ModelPrimaryContainer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>ModelPrimaryContainer</a>&gt;;</code></pre>
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 
@@ -964,7 +965,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L216">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>inputs.sagemaker.ModelVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>ModelVpcConfig</a>&gt;;</code></pre>
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 
@@ -990,7 +991,7 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L158">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>inputs.sagemaker.ModelContainer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>ModelContainer</a>&gt;[]&gt;;</code></pre>
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
 
@@ -1022,7 +1023,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L174">property <b>primaryContainer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>inputs.sagemaker.ModelPrimaryContainer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>ModelPrimaryContainer</a>&gt;;</code></pre>
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 
@@ -1038,7 +1039,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sagemaker/model.ts#L182">property <b>vpcConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>inputs.sagemaker.ModelVpcConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>ModelVpcConfig</a>&gt;;</code></pre>
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 

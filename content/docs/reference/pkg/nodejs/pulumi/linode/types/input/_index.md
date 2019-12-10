@@ -88,7 +88,7 @@ meta_desc: "Explore members of the input module in the @pulumi/linode package."
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L17">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceBackupsSchedule'>inputs.InstanceBackupsSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceBackupsSchedule'>InstanceBackupsSchedule</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceBackupsSchedule" data-link-title="InstanceBackupsSchedule">
     <a href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L20">
         interface <strong>InstanceBackupsSchedule</strong>
@@ -125,7 +125,7 @@ meta_desc: "Explore members of the input module in the @pulumi/linode package."
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L33">property <b>devices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>devices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevices'>inputs.InstanceConfigDevices</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>devices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevices'>InstanceConfigDevices</a>&gt;;</code></pre>
 
 A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigLabel` omits a `devices` block, the Linode will not be booted.
 
@@ -133,7 +133,7 @@ A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L37">property <b>helpers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>helpers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigHelpers'>inputs.InstanceConfigHelpers</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>helpers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigHelpers'>InstanceConfigHelpers</a>&gt;;</code></pre>
 
 Helpers enabled when booting to this Linode Config.
 
@@ -196,42 +196,42 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L65">property <b>sda</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSda'>inputs.InstanceConfigDevicesSda</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSda'>InstanceConfigDevicesSda</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdb">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L66">property <b>sdb</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdb'>inputs.InstanceConfigDevicesSdb</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdb'>InstanceConfigDevicesSdb</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdc">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L67">property <b>sdc</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdc'>inputs.InstanceConfigDevicesSdc</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdc'>InstanceConfigDevicesSdc</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdd">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L68">property <b>sdd</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdd'>inputs.InstanceConfigDevicesSdd</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdd'>InstanceConfigDevicesSdd</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sde">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L69">property <b>sde</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sde?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSde'>inputs.InstanceConfigDevicesSde</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sde?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSde'>InstanceConfigDevicesSde</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdf">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L70">property <b>sdf</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdf'>inputs.InstanceConfigDevicesSdf</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdf'>InstanceConfigDevicesSdf</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdg">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L71">property <b>sdg</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdg?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdg'>inputs.InstanceConfigDevicesSdg</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdg?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdg'>InstanceConfigDevicesSdg</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdh">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L72">property <b>sdh</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sdh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdh'>inputs.InstanceConfigDevicesSdh</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sdh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdh'>InstanceConfigDevicesSdh</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSda" data-link-title="InstanceConfigDevicesSda">
     <a href="https://github.com/pulumi/pulumi-linode/blob/8fa270dfb692f91adf4f15a267c0941746a96ebe/sdk/nodejs/types/input.ts#L75">
         interface <strong>InstanceConfigDevicesSda</strong>

@@ -1,5 +1,6 @@
 ---
 title: "Module serverless"
+title_tag: "Module serverless | Package @pulumi/gcp | Node.js SDK"
 linktitle: "serverless"
 meta_desc: "Explore members of the serverless module in the @pulumi/gcp package."
 ---
@@ -61,7 +62,7 @@ Use [gpc.cloudfunctions.CallbackFunction] instead.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -78,17 +79,17 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/serverless/function.ts#L80">property <b>bucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bucket: storage.Bucket;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bucket: Bucket;</code></pre>
 <h4 class="pdoc-member-header" id="Function-bucketObject">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/serverless/function.ts#L81">property <b>bucketObject</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bucketObject: storage.BucketObject;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bucketObject: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketObject'>BucketObject</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Function-function">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/serverless/function.ts#L79">property <b>function</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>function: cloudfunctions.Function;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>function: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Function'>Function</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Function-options">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/serverless/function.ts#L78">property <b>options</b></a>
 </h4>

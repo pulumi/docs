@@ -1,5 +1,6 @@
 ---
 title: "Module compute"
+title_tag: "Module compute | Package @pulumi/gcp | Node.js SDK"
 linktitle: "compute"
 meta_desc: "Explore members of the compute module in the @pulumi/gcp package."
 ---
@@ -368,7 +369,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Address</code></pre>
 
 
 Returns true if the given object is an instance of Address.  This is designed to work even
@@ -559,7 +560,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AttachedDisk</code></pre>
 
 
 Returns true if the given object is an instance of AttachedDisk.  This is designed to work even
@@ -660,7 +661,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Autoscalar</code></pre>
 
 
 Returns true if the given object is an instance of Autoscalar.  This is designed to work even
@@ -670,7 +671,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/autoscalar.ts#L44">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicy'>outputs.compute.AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicy'>AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -796,7 +797,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BackendBucket</code></pre>
 
 
 Returns true if the given object is an instance of BackendBucket.  This is designed to work even
@@ -814,7 +815,7 @@ Cloud Storage bucket name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendBucket.ts#L46">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cdnPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendBucketCdnPolicy'>outputs.compute.BackendBucketCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cdnPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendBucketCdnPolicy'>BackendBucketCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this Backend Bucket.
 
@@ -935,7 +936,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BackendBucketSignedUrlKey</code></pre>
 
 
 Returns true if the given object is an instance of BackendBucketSignedUrlKey.  This is designed to work even
@@ -1040,7 +1041,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BackendService</code></pre>
 
 
 Returns true if the given object is an instance of BackendService.  This is designed to work even
@@ -1060,7 +1061,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L48">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceBackend'>outputs.compute.BackendServiceBackend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceBackend'>BackendServiceBackend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The set of backends that serve this BackendService.
 
@@ -1068,7 +1069,7 @@ The set of backends that serve this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L52">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>cdnPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceCdnPolicy'>outputs.compute.BackendServiceCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>cdnPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceCdnPolicy'>BackendServiceCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this BackendService.
 
@@ -1076,7 +1077,7 @@ Cloud CDN configuration for this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L57">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceCircuitBreakers'>outputs.compute.BackendServiceCircuitBreakers</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceCircuitBreakers'>BackendServiceCircuitBreakers</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -1093,7 +1094,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L69">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceConsistentHash'>outputs.compute.BackendServiceConsistentHash</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceConsistentHash'>BackendServiceConsistentHash</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -1156,7 +1157,7 @@ URL to a HealthCheck resource must be specified instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L100">property <b>iap</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>iap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceIap'>outputs.compute.BackendServiceIap</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>iap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceIap'>BackendServiceIap</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Settings for enabling Cloud Identity Aware Proxy
 
@@ -1201,7 +1202,7 @@ only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L125">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceLogConfig'>outputs.compute.BackendServiceLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceLogConfig'>BackendServiceLogConfig</a>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -1221,7 +1222,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L137">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>outlierDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceOutlierDetection'>outputs.compute.BackendServiceOutlierDetection</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>outlierDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BackendServiceOutlierDetection'>BackendServiceOutlierDetection</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -1343,7 +1344,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BackendServiceSignedUrlKey</code></pre>
 
 
 Returns true if the given object is an instance of BackendServiceSignedUrlKey.  This is designed to work even
@@ -1448,7 +1449,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Disk</code></pre>
 
 
 Returns true if the given object is an instance of Disk.  This is designed to work even
@@ -1474,7 +1475,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L54">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>diskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskDiskEncryptionKey'>outputs.compute.DiskDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>diskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskDiskEncryptionKey'>DiskDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -1608,7 +1609,7 @@ values: * 'https://www.googleapis.com/compute/v1/projects/project/global/snapsho
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L124">property <b>sourceImageEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sourceImageEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskSourceImageEncryptionKey'>outputs.compute.DiskSourceImageEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sourceImageEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskSourceImageEncryptionKey'>DiskSourceImageEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source image. Required if the source image is protected by a
 customer-supplied encryption key.
@@ -1627,7 +1628,7 @@ recreated under the same name, the source image ID would identify the exact vers
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L135">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sourceSnapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskSourceSnapshotEncryptionKey'>outputs.compute.DiskSourceSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sourceSnapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DiskSourceSnapshotEncryptionKey'>DiskSourceSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -1724,7 +1725,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DiskResourcePolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of DiskResourcePolicyAttachment.  This is designed to work even
@@ -1828,7 +1829,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExternalVpnGateway</code></pre>
 
 
 Returns true if the given object is an instance of ExternalVpnGateway.  This is designed to work even
@@ -1855,7 +1856,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/externalVpnGateway.ts#L46">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>interfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ExternalVpnGatewayInterface'>outputs.compute.ExternalVpnGatewayInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>interfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ExternalVpnGatewayInterface'>ExternalVpnGatewayInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of interfaces on this external VPN gateway.
 
@@ -1948,7 +1949,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Firewall</code></pre>
 
 
 Returns true if the given object is an instance of Firewall.  This is designed to work even
@@ -1958,7 +1959,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L43">property <b>allows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>allows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallAllow'>outputs.compute.FirewallAllow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>allows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallAllow'>FirewallAllow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a permitted connection.
@@ -1975,7 +1976,7 @@ Creation timestamp in RFC3339 text format.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L52">property <b>denies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>denies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallDeny'>outputs.compute.FirewallDeny</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>denies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallDeny'>FirewallDeny</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a denied connection.
@@ -2198,7 +2199,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ForwardingRule</code></pre>
 
 
 Returns true if the given object is an instance of ForwardingRule.  This is designed to work even
@@ -2490,7 +2491,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GlobalAddress</code></pre>
 
 
 Returns true if the given object is an instance of GlobalAddress.  This is designed to work even
@@ -2675,7 +2676,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GlobalForwardingRule</code></pre>
 
 
 Returns true if the given object is an instance of GlobalForwardingRule.  This is designed to work even
@@ -2766,7 +2767,7 @@ for INTERNAL load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/globalForwardingRule.ts#L93">property <b>metadataFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadataFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GlobalForwardingRuleMetadataFilter'>outputs.compute.GlobalForwardingRuleMetadataFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadataFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GlobalForwardingRuleMetadataFilter'>GlobalForwardingRuleMetadataFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant
 clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the
@@ -2894,7 +2895,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HaVpnGateway</code></pre>
 
 
 Returns true if the given object is an instance of HaVpnGateway.  This is designed to work even
@@ -2974,7 +2975,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/haVpnGateway.ts#L70">property <b>vpnInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpnInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HaVpnGatewayVpnInterface'>outputs.compute.HaVpnGatewayVpnInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpnInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HaVpnGatewayVpnInterface'>HaVpnGatewayVpnInterface</a>[]&gt;;</code></pre>
 
 A list of interfaces on this VPN gateway.
 
@@ -3025,7 +3026,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HealthCheck</code></pre>
 
 
 Returns true if the given object is an instance of HealthCheck.  This is designed to work even
@@ -3067,7 +3068,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L58">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>http2HealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttp2HealthCheck'>outputs.compute.HealthCheckHttp2HealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>http2HealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttp2HealthCheck'>HealthCheckHttp2HealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -3075,7 +3076,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L62">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpHealthCheck'>outputs.compute.HealthCheckHttpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpHealthCheck'>HealthCheckHttpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -3083,7 +3084,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L66">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpsHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpsHealthCheck'>outputs.compute.HealthCheckHttpsHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpsHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpsHealthCheck'>HealthCheckHttpsHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -3128,7 +3129,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L86">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckSslHealthCheck'>outputs.compute.HealthCheckSslHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckSslHealthCheck'>HealthCheckSslHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -3136,7 +3137,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L90">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tcpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckTcpHealthCheck'>outputs.compute.HealthCheckTcpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tcpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckTcpHealthCheck'>HealthCheckTcpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -3221,7 +3222,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HttpHealthCheck</code></pre>
 
 
 Returns true if the given object is an instance of HttpHealthCheck.  This is designed to work even
@@ -3394,7 +3395,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HttpsHealthCheck</code></pre>
 
 
 Returns true if the given object is an instance of HttpsHealthCheck.  This is designed to work even
@@ -3567,7 +3568,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Image</code></pre>
 
 
 Returns true if the given object is an instance of Image.  This is designed to work even
@@ -3619,7 +3620,7 @@ image family must comply with RFC1035.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L64">property <b>guestOsFeatures</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>guestOsFeatures: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ImageGuestOsFeature'>outputs.compute.ImageGuestOsFeature</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>guestOsFeatures: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ImageGuestOsFeature'>ImageGuestOsFeature</a>[]&gt;;</code></pre>
 
 A list of features to enable on the guest operating system. Applicable only for bootable images.
 
@@ -3680,7 +3681,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L92">property <b>rawDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rawDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ImageRawDisk'>outputs.compute.ImageRawDisk</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rawDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ImageRawDisk'>ImageRawDisk</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The parameters of the raw disk image.
 
@@ -3800,7 +3801,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -3819,7 +3820,7 @@ If you try to update a property that requires stopping the instance without sett
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L91">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceAttachedDisk'>outputs.compute.InstanceAttachedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceAttachedDisk'>InstanceAttachedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
 
@@ -3827,7 +3828,7 @@ Additional disks to attach to the instance. Can be repeated multiple times for m
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L96">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceBootDisk'>outputs.compute.InstanceBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceBootDisk'>InstanceBootDisk</a>&gt;;</code></pre>
 
 The boot disk for the instance.
 Structure is documented below.
@@ -3880,7 +3881,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L125">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGuestAccelerator'>outputs.compute.InstanceGuestAccelerator</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGuestAccelerator'>InstanceGuestAccelerator</a>[]&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 **Note:** GPU accelerators can only be used with `onHostMaintenance` option set to TERMINATE.
@@ -3989,7 +3990,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L181">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterface'>outputs.compute.InstanceNetworkInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterface'>InstanceNetworkInterface</a>[]&gt;;</code></pre>
 
 Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
@@ -4007,7 +4008,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L191">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScheduling'>outputs.compute.InstanceScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScheduling'>InstanceScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -4016,7 +4017,7 @@ this configuration option are detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L196">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScratchDisk'>outputs.compute.InstanceScratchDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScratchDisk'>InstanceScratchDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
@@ -4033,7 +4034,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L206">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceServiceAccount'>outputs.compute.InstanceServiceAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceServiceAccount'>InstanceServiceAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Service account to attach to the instance.
 Structure is documented below.
@@ -4043,7 +4044,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L211">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceShieldedInstanceConfig'>outputs.compute.InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceShieldedInstanceConfig'>InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -4171,7 +4172,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceFromTemplate</code></pre>
 
 
 Returns true if the given object is an instance of InstanceFromTemplate.  This is designed to work even
@@ -4186,12 +4187,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L83">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateAttachedDisk'>outputs.compute.InstanceFromTemplateAttachedDisk</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateAttachedDisk'>InstanceFromTemplateAttachedDisk</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-bootDisk">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L84">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateBootDisk'>outputs.compute.InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateBootDisk'>InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-canIpForward">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L85">property <b>canIpForward</b></a>
 </h4>
@@ -4221,7 +4222,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L90">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateGuestAccelerator'>outputs.compute.InstanceFromTemplateGuestAccelerator</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateGuestAccelerator'>InstanceFromTemplateGuestAccelerator</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-hostname">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L91">property <b>hostname</b></a>
 </h4>
@@ -4289,7 +4290,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L105">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterface'>outputs.compute.InstanceFromTemplateNetworkInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterface'>InstanceFromTemplateNetworkInterface</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L106">property <b>project</b></a>
 </h4>
@@ -4299,12 +4300,12 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L107">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScheduling'>outputs.compute.InstanceFromTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScheduling'>InstanceFromTemplateScheduling</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-scratchDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L108">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScratchDisk'>outputs.compute.InstanceFromTemplateScratchDisk</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScratchDisk'>InstanceFromTemplateScratchDisk</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-selfLink">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L109">property <b>selfLink</b></a>
 </h4>
@@ -4314,12 +4315,12 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L110">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateServiceAccount'>outputs.compute.InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateServiceAccount'>InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-shieldedInstanceConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L111">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateShieldedInstanceConfig'>outputs.compute.InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateShieldedInstanceConfig'>InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplate-sourceInstanceTemplate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L116">property <b>sourceInstanceTemplate</b></a>
 </h4>
@@ -4502,7 +4503,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceGroup</code></pre>
 
 
 Returns true if the given object is an instance of InstanceGroup.  This is designed to work even
@@ -4551,7 +4552,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroup.ts#L159">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupNamedPort'>outputs.compute.InstanceGroupNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupNamedPort'>InstanceGroupNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -4698,7 +4699,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceGroupManager</code></pre>
 
 
 Returns true if the given object is an instance of InstanceGroupManager.  This is designed to work even
@@ -4708,7 +4709,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L85">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoHealingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerAutoHealingPolicies'>outputs.compute.InstanceGroupManagerAutoHealingPolicies</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoHealingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerAutoHealingPolicies'>InstanceGroupManagerAutoHealingPolicies</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -4775,7 +4776,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L119">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerNamedPort'>outputs.compute.InstanceGroupManagerNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerNamedPort'>InstanceGroupManagerNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -4821,7 +4822,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L145">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerUpdatePolicy'>outputs.compute.InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerUpdatePolicy'>InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
 - - -
@@ -4839,7 +4840,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L153">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerVersion'>outputs.compute.InstanceGroupManagerVersion</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerVersion'>InstanceGroupManagerVersion</a>[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -4913,7 +4914,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of InstanceIAMBinding.  This is designed to work even
@@ -4923,7 +4924,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceIAMBindingCondition'>outputs.compute.InstanceIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceIAMBindingCondition'>InstanceIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L43">property <b>etag</b></a>
 </h4>
@@ -5039,7 +5040,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of InstanceIAMMember.  This is designed to work even
@@ -5049,7 +5050,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceIAMMemberCondition'>outputs.compute.InstanceIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceIAMMemberCondition'>InstanceIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L43">property <b>etag</b></a>
 </h4>
@@ -5165,7 +5166,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of InstanceIAMPolicy.  This is designed to work even
@@ -5438,7 +5439,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InstanceTemplate</code></pre>
 
 
 Returns true if the given object is an instance of InstanceTemplate.  This is designed to work even
@@ -5465,7 +5466,7 @@ A brief description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L212">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateDisk'>outputs.compute.InstanceTemplateDisk</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateDisk'>InstanceTemplateDisk</a>[]&gt;;</code></pre>
 
 Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -5484,7 +5485,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L221">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateGuestAccelerator'>outputs.compute.InstanceTemplateGuestAccelerator</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateGuestAccelerator'>InstanceTemplateGuestAccelerator</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 
@@ -5582,7 +5583,7 @@ prefix. Conflicts with `name`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L272">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterface'>outputs.compute.InstanceTemplateNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterface'>InstanceTemplateNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -5614,7 +5615,7 @@ Provider if no value is given.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L291">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateScheduling'>outputs.compute.InstanceTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateScheduling'>InstanceTemplateScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -5631,7 +5632,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L299">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateServiceAccount'>outputs.compute.InstanceTemplateServiceAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateServiceAccount'>InstanceTemplateServiceAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Service account to attach to the instance. Structure is documented below.
 
@@ -5639,7 +5640,7 @@ Service account to attach to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L304">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateShieldedInstanceConfig'>outputs.compute.InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>shieldedInstanceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateShieldedInstanceConfig'>InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -5716,7 +5717,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InterconnectAttachment</code></pre>
 
 
 Returns true if the given object is an instance of InterconnectAttachment.  This is designed to work even
@@ -5856,7 +5857,7 @@ by a layer 3 Partner if they configured BGP on behalf of the customer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/interconnectAttachment.ts#L112">property <b>privateInterconnectInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>privateInterconnectInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InterconnectAttachmentPrivateInterconnectInfo'>outputs.compute.InterconnectAttachmentPrivateInterconnectInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>privateInterconnectInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InterconnectAttachmentPrivateInterconnectInfo'>InterconnectAttachmentPrivateInterconnectInfo</a>&gt;;</code></pre>
 
 Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is
 attached to is of type DEDICATED.
@@ -5977,7 +5978,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ManagedSslCertificate</code></pre>
 
 
 Returns true if the given object is an instance of ManagedSslCertificate.  This is designed to work even
@@ -6028,7 +6029,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/managedSslCertificate.ts#L59">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>managed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedSslCertificateManaged'>outputs.compute.ManagedSslCertificateManaged</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>managed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedSslCertificateManaged'>ManagedSslCertificateManaged</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -6131,7 +6132,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MangedSslCertificate</code></pre>
 
 
 Returns true if the given object is an instance of MangedSslCertificate.  This is designed to work even
@@ -6182,7 +6183,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/mangedSslCertificate.ts#L56">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>managed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MangedSslCertificateManaged'>outputs.compute.MangedSslCertificateManaged</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>managed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MangedSslCertificateManaged'>MangedSslCertificateManaged</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -6281,7 +6282,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Network</code></pre>
 
 
 Returns true if the given object is an instance of Network.  This is designed to work even
@@ -6436,7 +6437,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkEndpoint</code></pre>
 
 
 Returns true if the given object is an instance of NetworkEndpoint.  This is designed to work even
@@ -6558,7 +6559,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkEndpointGroup</code></pre>
 
 
 Returns true if the given object is an instance of NetworkEndpointGroup.  This is designed to work even
@@ -6744,7 +6745,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkPeering</code></pre>
 
 
 Returns true if the given object is an instance of NetworkPeering.  This is designed to work even
@@ -6874,7 +6875,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeGroup</code></pre>
 
 
 Returns true if the given object is an instance of NodeGroup.  This is designed to work even
@@ -7010,7 +7011,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodeTemplate</code></pre>
 
 
 Returns true if the given object is an instance of NodeTemplate.  This is designed to work even
@@ -7070,7 +7071,7 @@ can be specified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L64">property <b>nodeTypeFlexibility</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodeTypeFlexibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeTemplateNodeTypeFlexibility'>outputs.compute.NodeTemplateNodeTypeFlexibility</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodeTypeFlexibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeTemplateNodeTypeFlexibility'>NodeTemplateNodeTypeFlexibility</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type
 that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -7104,7 +7105,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L82">property <b>serverBinding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serverBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeTemplateServerBinding'>outputs.compute.NodeTemplateServerBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serverBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeTemplateServerBinding'>NodeTemplateServerBinding</a>&gt;;</code></pre>
 
 The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -7183,7 +7184,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectDefaultNetworkTier</code></pre>
 
 
 Returns true if the given object is an instance of ProjectDefaultNetworkTier.  This is designed to work even
@@ -7297,7 +7298,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectMetadata</code></pre>
 
 
 Returns true if the given object is an instance of ProjectMetadata.  This is designed to work even
@@ -7402,7 +7403,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectMetadataItem</code></pre>
 
 
 Returns true if the given object is an instance of ProjectMetadataItem.  This is designed to work even
@@ -7498,7 +7499,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionAutoscaler</code></pre>
 
 
 Returns true if the given object is an instance of RegionAutoscaler.  This is designed to work even
@@ -7508,7 +7509,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionAutoscaler.ts#L44">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicy'>outputs.compute.RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicy'>RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -7634,7 +7635,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionBackendService</code></pre>
 
 
 Returns true if the given object is an instance of RegionBackendService.  This is designed to work even
@@ -7654,7 +7655,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L48">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceBackend'>outputs.compute.RegionBackendServiceBackend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceBackend'>RegionBackendServiceBackend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The set of backends that serve this RegionBackendService.
 
@@ -7662,7 +7663,7 @@ The set of backends that serve this RegionBackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L53">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceCircuitBreakers'>outputs.compute.RegionBackendServiceCircuitBreakers</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceCircuitBreakers'>RegionBackendServiceCircuitBreakers</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -7679,7 +7680,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L66">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceConsistentHash'>outputs.compute.RegionBackendServiceConsistentHash</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceConsistentHash'>RegionBackendServiceConsistentHash</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -7708,7 +7709,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L78">property <b>failoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>failoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceFailoverPolicy'>outputs.compute.RegionBackendServiceFailoverPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>failoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceFailoverPolicy'>RegionBackendServiceFailoverPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Policy for failovers.
 
@@ -7771,7 +7772,7 @@ only when the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protoc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L113">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceLogConfig'>outputs.compute.RegionBackendServiceLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceLogConfig'>RegionBackendServiceLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -7791,7 +7792,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L125">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>outlierDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceOutlierDetection'>outputs.compute.RegionBackendServiceOutlierDetection</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>outlierDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceOutlierDetection'>RegionBackendServiceOutlierDetection</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -7904,7 +7905,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionDisk</code></pre>
 
 
 Returns true if the given object is an instance of RegionDisk.  This is designed to work even
@@ -7930,7 +7931,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L54">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>diskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionDiskDiskEncryptionKey'>outputs.compute.RegionDiskDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>diskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionDiskDiskEncryptionKey'>RegionDiskDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -8059,7 +8060,7 @@ example, the following are valid values: *
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L119">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sourceSnapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionDiskSourceSnapshotEncryptionKey'>outputs.compute.RegionDiskSourceSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sourceSnapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionDiskSourceSnapshotEncryptionKey'>RegionDiskSourceSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -8148,7 +8149,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionHealthCheck</code></pre>
 
 
 Returns true if the given object is an instance of RegionHealthCheck.  This is designed to work even
@@ -8190,7 +8191,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L58">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>http2HealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttp2HealthCheck'>outputs.compute.RegionHealthCheckHttp2HealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>http2HealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttp2HealthCheck'>RegionHealthCheckHttp2HealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -8198,7 +8199,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L62">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttpHealthCheck'>outputs.compute.RegionHealthCheckHttpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttpHealthCheck'>RegionHealthCheckHttpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -8206,7 +8207,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L66">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpsHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttpsHealthCheck'>outputs.compute.RegionHealthCheckHttpsHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpsHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckHttpsHealthCheck'>RegionHealthCheckHttpsHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -8259,7 +8260,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L90">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckSslHealthCheck'>outputs.compute.RegionHealthCheckSslHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckSslHealthCheck'>RegionHealthCheckSslHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -8267,7 +8268,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L94">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tcpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckTcpHealthCheck'>outputs.compute.RegionHealthCheckTcpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tcpHealthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionHealthCheckTcpHealthCheck'>RegionHealthCheckTcpHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A nested object resource
 
@@ -8422,7 +8423,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionInstanceGroupManager</code></pre>
 
 
 Returns true if the given object is an instance of RegionInstanceGroupManager.  This is designed to work even
@@ -8432,7 +8433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L113">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoHealingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerAutoHealingPolicies'>outputs.compute.RegionInstanceGroupManagerAutoHealingPolicies</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoHealingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerAutoHealingPolicies'>RegionInstanceGroupManagerAutoHealingPolicies</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -8509,7 +8510,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L153">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerNamedPort'>outputs.compute.RegionInstanceGroupManagerNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerNamedPort'>RegionInstanceGroupManagerNamedPort</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -8563,7 +8564,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L182">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerUpdatePolicy'>outputs.compute.RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerUpdatePolicy'>RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
@@ -8580,7 +8581,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L190">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerVersion'>outputs.compute.RegionInstanceGroupManagerVersion</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerVersion'>RegionInstanceGroupManagerVersion</a>[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -8645,7 +8646,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionSslCertificate</code></pre>
 
 
 Returns true if the given object is an instance of RegionSslCertificate.  This is designed to work even
@@ -8804,7 +8805,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionTargetHttpProxy</code></pre>
 
 
 Returns true if the given object is an instance of RegionTargetHttpProxy.  This is designed to work even
@@ -8944,7 +8945,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionTargetHttpsProxy</code></pre>
 
 
 Returns true if the given object is an instance of RegionTargetHttpsProxy.  This is designed to work even
@@ -9093,7 +9094,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegionUrlMap</code></pre>
 
 
 Returns true if the given object is an instance of RegionUrlMap.  This is designed to work even
@@ -9135,7 +9136,7 @@ Fingerprint of this resource. This field is used internally during updates of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L58">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hostRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapHostRule'>outputs.compute.RegionUrlMapHostRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hostRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapHostRule'>RegionUrlMapHostRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -9171,7 +9172,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L73">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pathMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapPathMatcher'>outputs.compute.RegionUrlMapPathMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pathMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapPathMatcher'>RegionUrlMapPathMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -9204,7 +9205,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L90">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapTest'>outputs.compute.RegionUrlMapTest</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapTest'>RegionUrlMapTest</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 
@@ -9264,7 +9265,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Reservation</code></pre>
 
 
 Returns true if the given object is an instance of Reservation.  This is designed to work even
@@ -9331,7 +9332,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/reservation.ts#L66">property <b>specificReservation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>specificReservation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ReservationSpecificReservation'>outputs.compute.ReservationSpecificReservation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>specificReservation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ReservationSpecificReservation'>ReservationSpecificReservation</a>&gt;;</code></pre>
 
 Reservation for instances with specific machine shapes.
 
@@ -9416,7 +9417,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourcePolicy</code></pre>
 
 
 Returns true if the given object is an instance of ResourcePolicy.  This is designed to work even
@@ -9468,7 +9469,7 @@ Region where resource policy resides.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/resourcePolicy.ts#L59">property <b>snapshotSchedulePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snapshotSchedulePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicy'>outputs.compute.ResourcePolicySnapshotSchedulePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snapshotSchedulePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicy'>ResourcePolicySnapshotSchedulePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Policy for creating snapshots of persistent disks.
 
@@ -9528,7 +9529,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Route</code></pre>
 
 
 Returns true if the given object is an instance of Route.  This is designed to work even
@@ -9739,7 +9740,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Router</code></pre>
 
 
 Returns true if the given object is an instance of Router.  This is designed to work even
@@ -9749,7 +9750,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/router.ts#L42">property <b>bgp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bgp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterBgp'>outputs.compute.RouterBgp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bgp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterBgp'>RouterBgp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 BGP information specific to this router.
 
@@ -9897,7 +9898,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouterInterface</code></pre>
 
 
 Returns true if the given object is an instance of RouterInterface.  This is designed to work even
@@ -10035,7 +10036,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouterNat</code></pre>
 
 
 Returns true if the given object is an instance of RouterNat.  This is designed to work even
@@ -10071,7 +10072,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L51">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterNatLogConfig'>outputs.compute.RouterNatLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterNatLogConfig'>RouterNatLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration for logging on NAT
 
@@ -10150,7 +10151,7 @@ network in this region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L95">property <b>subnetworks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnetworks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterNatSubnetwork'>outputs.compute.RouterNatSubnetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnetworks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterNatSubnetwork'>RouterNatSubnetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
 'LIST_OF_SUBNETWORKS'
@@ -10256,7 +10257,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouterPeer</code></pre>
 
 
 Returns true if the given object is an instance of RouterPeer.  This is designed to work even
@@ -10284,7 +10285,7 @@ which can take one of the following options:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerPeer.ts#L76">property <b>advertisedIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>advertisedIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterPeerAdvertisedIpRange'>outputs.compute.RouterPeerAdvertisedIpRange</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>advertisedIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RouterPeerAdvertisedIpRange'>RouterPeerAdvertisedIpRange</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if `advertiseMode` is `CUSTOM` and overrides
@@ -10437,7 +10438,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityPolicy</code></pre>
 
 
 Returns true if the given object is an instance of SecurityPolicy.  This is designed to work even
@@ -10489,7 +10490,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityPolicy.ts#L61">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityPolicyRule'>outputs.compute.SecurityPolicyRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityPolicyRule'>SecurityPolicyRule</a>[]&gt;;</code></pre>
 
 The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -10559,7 +10560,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityScanConfig</code></pre>
 
 
 Returns true if the given object is an instance of SecurityScanConfig.  This is designed to work even
@@ -10569,7 +10570,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L42">property <b>authentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityScanConfigAuthentication'>outputs.compute.SecurityScanConfigAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityScanConfigAuthentication'>SecurityScanConfigAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The authentication configuration. If specified, service will use the authentication configuration during scanning.
 
@@ -10635,7 +10636,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L71">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityScanConfigSchedule'>outputs.compute.SecurityScanConfigSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecurityScanConfigSchedule'>SecurityScanConfigSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The schedule of the ScanConfig
 
@@ -10749,7 +10750,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SharedVPCHostProject</code></pre>
 
 
 Returns true if the given object is an instance of SharedVPCHostProject.  This is designed to work even
@@ -10852,7 +10853,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SharedVPCServiceProject</code></pre>
 
 
 Returns true if the given object is an instance of SharedVPCServiceProject.  This is designed to work even
@@ -10939,7 +10940,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Snapshot</code></pre>
 
 
 Returns true if the given object is an instance of Snapshot.  This is designed to work even
@@ -11036,7 +11037,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L85">property <b>snapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>snapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SnapshotSnapshotEncryptionKey'>outputs.compute.SnapshotSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>snapshotEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SnapshotSnapshotEncryptionKey'>SnapshotSnapshotEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -11061,7 +11062,7 @@ A reference to the disk used to create this snapshot.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L98">property <b>sourceDiskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sourceDiskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SnapshotSourceDiskEncryptionKey'>outputs.compute.SnapshotSourceDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sourceDiskEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SnapshotSourceDiskEncryptionKey'>SnapshotSourceDiskEncryptionKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -11144,7 +11145,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SSLCertificate</code></pre>
 
 
 Returns true if the given object is an instance of SSLCertificate.  This is designed to work even
@@ -11294,7 +11295,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SSLPolicy</code></pre>
 
 
 Returns true if the given object is an instance of SSLPolicy.  This is designed to work even
@@ -11461,7 +11462,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subnetwork</code></pre>
 
 
 Returns true if the given object is an instance of Subnetwork.  This is designed to work even
@@ -11531,7 +11532,7 @@ Only IPv4 is supported.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L70">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkLogConfig'>outputs.compute.SubnetworkLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkLogConfig'>SubnetworkLogConfig</a>&gt;;</code></pre>
 
 Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to
 Stackdriver.
@@ -11606,7 +11607,7 @@ Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L115">property <b>secondaryIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>secondaryIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkSecondaryIpRange'>outputs.compute.SubnetworkSecondaryIpRange</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>secondaryIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkSecondaryIpRange'>SubnetworkSecondaryIpRange</a>[]&gt;;</code></pre>
 
 An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of
 such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or
@@ -11677,7 +11678,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetworkIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of SubnetworkIAMBinding.  This is designed to work even
@@ -11687,7 +11688,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkIAMBindingCondition'>outputs.compute.SubnetworkIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkIAMBindingCondition'>SubnetworkIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L43">property <b>etag</b></a>
 </h4>
@@ -11804,7 +11805,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetworkIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of SubnetworkIAMMember.  This is designed to work even
@@ -11814,7 +11815,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L39">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkIAMMemberCondition'>outputs.compute.SubnetworkIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkIAMMemberCondition'>SubnetworkIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L43">property <b>etag</b></a>
 </h4>
@@ -11931,7 +11932,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetworkIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of SubnetworkIAMPolicy.  This is designed to work even
@@ -12047,7 +12048,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetHttpProxy</code></pre>
 
 
 Returns true if the given object is an instance of TargetHttpProxy.  This is designed to work even
@@ -12178,7 +12179,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetHttpsProxy</code></pre>
 
 
 Returns true if the given object is an instance of TargetHttpsProxy.  This is designed to work even
@@ -12338,7 +12339,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetInstance</code></pre>
 
 
 Returns true if the given object is an instance of TargetInstance.  This is designed to work even
@@ -12505,7 +12506,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetPool</code></pre>
 
 
 Returns true if the given object is an instance of TargetPool.  This is designed to work even
@@ -12668,7 +12669,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetSSLProxy</code></pre>
 
 
 Returns true if the given object is an instance of TargetSSLProxy.  This is designed to work even
@@ -12826,7 +12827,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetTCPProxy</code></pre>
 
 
 Returns true if the given object is an instance of TargetTCPProxy.  This is designed to work even
@@ -12966,7 +12967,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is URLMap</code></pre>
 
 
 Returns true if the given object is an instance of URLMap.  This is designed to work even
@@ -13008,7 +13009,7 @@ Fingerprint of this resource. This field is used internally during updates of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L58">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hostRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapHostRule'>outputs.compute.URLMapHostRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hostRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapHostRule'>URLMapHostRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -13044,7 +13045,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L73">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pathMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcher'>outputs.compute.URLMapPathMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pathMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcher'>URLMapPathMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -13069,7 +13070,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L86">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapTest'>outputs.compute.URLMapTest</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapTest'>URLMapTest</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 
@@ -13129,7 +13130,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VPNGateway</code></pre>
 
 
 Returns true if the given object is an instance of VPNGateway.  This is designed to work even
@@ -13268,7 +13269,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VPNTunnel</code></pre>
 
 
 Returns true if the given object is an instance of VPNTunnel.  This is designed to work even
@@ -14396,7 +14397,7 @@ The set of arguments for constructing a Autoscalar resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/autoscalar.ts#L169">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicy'>inputs.compute.AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicy'>AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -14455,7 +14456,7 @@ Input properties used for looking up and filtering Autoscalar resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/autoscalar.ts#L130">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicy'>inputs.compute.AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicy'>AutoscalarAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -14538,7 +14539,7 @@ Cloud Storage bucket name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendBucket.ts#L174">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendBucketCdnPolicy'>inputs.compute.BackendBucketCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendBucketCdnPolicy'>BackendBucketCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this Backend Bucket.
 
@@ -14688,7 +14689,7 @@ Cloud Storage bucket name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendBucket.ts#L132">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendBucketCdnPolicy'>inputs.compute.BackendBucketCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendBucketCdnPolicy'>BackendBucketCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this Backend Bucket.
 
@@ -14768,7 +14769,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L402">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceBackend'>inputs.compute.BackendServiceBackend</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceBackend'>BackendServiceBackend</a>&gt;[]&gt;;</code></pre>
 
 The set of backends that serve this BackendService.
 
@@ -14776,7 +14777,7 @@ The set of backends that serve this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L406">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCdnPolicy'>inputs.compute.BackendServiceCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCdnPolicy'>BackendServiceCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this BackendService.
 
@@ -14784,7 +14785,7 @@ Cloud CDN configuration for this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L411">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCircuitBreakers'>inputs.compute.BackendServiceCircuitBreakers</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCircuitBreakers'>BackendServiceCircuitBreakers</a>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -14801,7 +14802,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L423">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceConsistentHash'>inputs.compute.BackendServiceConsistentHash</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceConsistentHash'>BackendServiceConsistentHash</a>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -14847,7 +14848,7 @@ URL to a HealthCheck resource must be specified instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L445">property <b>iap</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceIap'>inputs.compute.BackendServiceIap</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceIap'>BackendServiceIap</a>&gt;;</code></pre>
 
 Settings for enabling Cloud Identity Aware Proxy
 
@@ -14883,7 +14884,7 @@ only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L470">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceLogConfig'>inputs.compute.BackendServiceLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceLogConfig'>BackendServiceLogConfig</a>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -14903,7 +14904,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L482">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceOutlierDetection'>inputs.compute.BackendServiceOutlierDetection</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceOutlierDetection'>BackendServiceOutlierDetection</a>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -15073,7 +15074,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L264">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceBackend'>inputs.compute.BackendServiceBackend</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceBackend'>BackendServiceBackend</a>&gt;[]&gt;;</code></pre>
 
 The set of backends that serve this BackendService.
 
@@ -15081,7 +15082,7 @@ The set of backends that serve this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L268">property <b>cdnPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCdnPolicy'>inputs.compute.BackendServiceCdnPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdnPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCdnPolicy'>BackendServiceCdnPolicy</a>&gt;;</code></pre>
 
 Cloud CDN configuration for this BackendService.
 
@@ -15089,7 +15090,7 @@ Cloud CDN configuration for this BackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L273">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCircuitBreakers'>inputs.compute.BackendServiceCircuitBreakers</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceCircuitBreakers'>BackendServiceCircuitBreakers</a>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -15106,7 +15107,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L285">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceConsistentHash'>inputs.compute.BackendServiceConsistentHash</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceConsistentHash'>BackendServiceConsistentHash</a>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -15169,7 +15170,7 @@ URL to a HealthCheck resource must be specified instead.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L316">property <b>iap</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceIap'>inputs.compute.BackendServiceIap</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceIap'>BackendServiceIap</a>&gt;;</code></pre>
 
 Settings for enabling Cloud Identity Aware Proxy
 
@@ -15205,7 +15206,7 @@ only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L341">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceLogConfig'>inputs.compute.BackendServiceLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceLogConfig'>BackendServiceLogConfig</a>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -15225,7 +15226,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/backendService.ts#L353">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceOutlierDetection'>inputs.compute.BackendServiceOutlierDetection</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BackendServiceOutlierDetection'>BackendServiceOutlierDetection</a>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -15313,7 +15314,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L365">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskDiskEncryptionKey'>inputs.compute.DiskDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskDiskEncryptionKey'>DiskDiskEncryptionKey</a>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -15406,7 +15407,7 @@ values: * 'https://www.googleapis.com/compute/v1/projects/project/global/snapsho
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L419">property <b>sourceImageEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceImageEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceImageEncryptionKey'>inputs.compute.DiskSourceImageEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceImageEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceImageEncryptionKey'>DiskSourceImageEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source image. Required if the source image is protected by a
 customer-supplied encryption key.
@@ -15415,7 +15416,7 @@ customer-supplied encryption key.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L424">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceSnapshotEncryptionKey'>inputs.compute.DiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceSnapshotEncryptionKey'>DiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -15553,7 +15554,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L246">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskDiskEncryptionKey'>inputs.compute.DiskDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskDiskEncryptionKey'>DiskDiskEncryptionKey</a>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -15678,7 +15679,7 @@ values: * 'https://www.googleapis.com/compute/v1/projects/project/global/snapsho
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L316">property <b>sourceImageEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceImageEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceImageEncryptionKey'>inputs.compute.DiskSourceImageEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceImageEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceImageEncryptionKey'>DiskSourceImageEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source image. Required if the source image is protected by a
 customer-supplied encryption key.
@@ -15697,7 +15698,7 @@ recreated under the same name, the source image ID would identify the exact vers
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/disk.ts#L327">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceSnapshotEncryptionKey'>inputs.compute.DiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DiskSourceSnapshotEncryptionKey'>DiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -15760,7 +15761,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/externalVpnGateway.ts#L145">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ExternalVpnGatewayInterface'>inputs.compute.ExternalVpnGatewayInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ExternalVpnGatewayInterface'>ExternalVpnGatewayInterface</a>&gt;[]&gt;;</code></pre>
 
 A list of interfaces on this external VPN gateway.
 
@@ -15814,7 +15815,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/externalVpnGateway.ts#L114">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ExternalVpnGatewayInterface'>inputs.compute.ExternalVpnGatewayInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ExternalVpnGatewayInterface'>ExternalVpnGatewayInterface</a>&gt;[]&gt;;</code></pre>
 
 A list of interfaces on this external VPN gateway.
 
@@ -15865,7 +15866,7 @@ The set of arguments for constructing a Firewall resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L333">property <b>allows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallAllow'>inputs.compute.FirewallAllow</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallAllow'>FirewallAllow</a>&gt;[]&gt;;</code></pre>
 
 The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a permitted connection.
@@ -15874,7 +15875,7 @@ describes a permitted connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L338">property <b>denies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>denies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallDeny'>inputs.compute.FirewallDeny</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>denies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallDeny'>FirewallDeny</a>&gt;[]&gt;;</code></pre>
 
 The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a denied connection.
@@ -16038,7 +16039,7 @@ Input properties used for looking up and filtering Firewall resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L220">property <b>allows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>allows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallAllow'>inputs.compute.FirewallAllow</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>allows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallAllow'>FirewallAllow</a>&gt;[]&gt;;</code></pre>
 
 The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a permitted connection.
@@ -16055,7 +16056,7 @@ Creation timestamp in RFC3339 text format.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/firewall.ts#L229">property <b>denies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>denies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallDeny'>inputs.compute.FirewallDeny</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>denies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallDeny'>FirewallDeny</a>&gt;[]&gt;;</code></pre>
 
 The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
 describes a denied connection.
@@ -16780,7 +16781,7 @@ A collection of values returned by getBackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L54">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceBackend'>outputs.compute.GetBackendServiceBackend</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceBackend'>GetBackendServiceBackend</a>[];</code></pre>
 
 The set of backends that serve this Backend Service.
 
@@ -16788,12 +16789,12 @@ The set of backends that serve this Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L55">property <b>cdnPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cdnPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicy'>outputs.compute.GetBackendServiceCdnPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cdnPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicy'>GetBackendServiceCdnPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-circuitBreakers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L56">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreaker'>outputs.compute.GetBackendServiceCircuitBreaker</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>circuitBreakers: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreaker'>GetBackendServiceCircuitBreaker</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-connectionDrainingTimeoutSec">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L60">property <b>connectionDrainingTimeoutSec</b></a>
 </h4>
@@ -16806,7 +16807,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L61">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHash'>outputs.compute.GetBackendServiceConsistentHash</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistentHash: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHash'>GetBackendServiceConsistentHash</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-creationTimestamp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L62">property <b>creationTimestamp</b></a>
 </h4>
@@ -16853,7 +16854,7 @@ The set of HTTP/HTTPS health checks used by the Backend Service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L80">property <b>iaps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iaps: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceIap'>outputs.compute.GetBackendServiceIap</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iaps: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceIap'>GetBackendServiceIap</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L111">property <b>id</b></a>
 </h4>
@@ -16876,7 +16877,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L83">property <b>logConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceLogConfig'>outputs.compute.GetBackendServiceLogConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceLogConfig'>GetBackendServiceLogConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L84">property <b>name</b></a>
 </h4>
@@ -16886,7 +16887,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L85">property <b>outlierDetections</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outlierDetections: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetection'>outputs.compute.GetBackendServiceOutlierDetection</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outlierDetections: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetection'>GetBackendServiceOutlierDetection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBackendServiceResult-portName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getBackendService.ts#L89">property <b>portName</b></a>
 </h4>
@@ -17665,7 +17666,7 @@ List of instances in the group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstanceGroup.ts#L85">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGroupNamedPort'>outputs.compute.GetInstanceGroupNamedPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGroupNamedPort'>GetInstanceGroupNamedPort</a>[];</code></pre>
 
 List of named ports in the group.
 
@@ -17722,7 +17723,7 @@ A collection of values returned by getInstance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L83">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceAttachedDisk'>outputs.compute.GetInstanceAttachedDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceAttachedDisk'>GetInstanceAttachedDisk</a>[];</code></pre>
 
 List of disks attached to the instance. Structure is documented below.
 
@@ -17730,7 +17731,7 @@ List of disks attached to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L87">property <b>bootDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDisk'>outputs.compute.GetInstanceBootDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDisk'>GetInstanceBootDisk</a>[];</code></pre>
 
 The boot disk for the instance. Structure is documented below.
 
@@ -17770,7 +17771,7 @@ A brief description of the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L104">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceDisk'>outputs.compute.GetInstanceDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceDisk'>GetInstanceDisk</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-enableDisplay">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L105">property <b>enableDisplay</b></a>
 </h4>
@@ -17780,7 +17781,7 @@ A brief description of the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L109">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGuestAccelerator'>outputs.compute.GetInstanceGuestAccelerator</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGuestAccelerator'>GetInstanceGuestAccelerator</a>[];</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 
@@ -17867,7 +17868,7 @@ The minimum CPU platform specified for the VM instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L144">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterface'>outputs.compute.GetInstanceNetworkInterface</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterface'>GetInstanceNetworkInterface</a>[];</code></pre>
 
 The networks attached to the instance. Structure is documented below.
 
@@ -17880,7 +17881,7 @@ The networks attached to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L149">property <b>schedulings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedulings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScheduling'>outputs.compute.GetInstanceScheduling</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedulings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScheduling'>GetInstanceScheduling</a>[];</code></pre>
 
 The scheduling strategy being used by the instance.
 
@@ -17888,7 +17889,7 @@ The scheduling strategy being used by the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L153">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScratchDisk'>outputs.compute.GetInstanceScratchDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scratchDisks: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScratchDisk'>GetInstanceScratchDisk</a>[];</code></pre>
 
 The scratch disks attached to the instance. Structure is documented below.
 
@@ -17904,7 +17905,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L161">property <b>serviceAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceServiceAccount'>outputs.compute.GetInstanceServiceAccount</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceServiceAccount'>GetInstanceServiceAccount</a>[];</code></pre>
 
 The service account to attach to the instance. Structure is documented below.
 
@@ -17912,7 +17913,7 @@ The service account to attach to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getInstance.ts#L165">property <b>shieldedInstanceConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceShieldedInstanceConfig'>outputs.compute.GetInstanceShieldedInstanceConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceShieldedInstanceConfig'>GetInstanceShieldedInstanceConfig</a>[];</code></pre>
 
 The shielded vm config being used by the instance. Structure is documented below.
 
@@ -18349,7 +18350,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getRegionInstanceGroup.ts#L78">property <b>instances</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRegionInstanceGroupInstance'>outputs.compute.GetRegionInstanceGroupInstance</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRegionInstanceGroupInstance'>GetRegionInstanceGroupInstance</a>[];</code></pre>
 
 List of instances in the group, as a list of resources, each containing:
 
@@ -18574,7 +18575,7 @@ A collection of values returned by getRouter.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getRouter.ts#L41">property <b>bgps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgps: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRouterBgp'>outputs.compute.GetRouterBgp</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgps: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRouterBgp'>GetRouterBgp</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouterResult-creationTimestamp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getRouter.ts#L42">property <b>creationTimestamp</b></a>
 </h4>
@@ -18863,7 +18864,7 @@ addresses.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/getSubnetwork.ts#L106">property <b>secondaryIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetSubnetworkSecondaryIpRange'>outputs.compute.GetSubnetworkSecondaryIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetSubnetworkSecondaryIpRange'>GetSubnetworkSecondaryIpRange</a>[];</code></pre>
 
 An array of configurations for secondary IP ranges for
 VM instances contained in this subnetwork. Structure is documented below.
@@ -19347,7 +19348,7 @@ for INTERNAL load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/globalForwardingRule.ts#L341">property <b>metadataFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadataFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilter'>inputs.compute.GlobalForwardingRuleMetadataFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadataFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilter'>GlobalForwardingRuleMetadataFilter</a>&gt;[]&gt;;</code></pre>
 
 Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant
 clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the
@@ -19497,7 +19498,7 @@ for INTERNAL load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/globalForwardingRule.ts#L247">property <b>metadataFilters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadataFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilter'>inputs.compute.GlobalForwardingRuleMetadataFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadataFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilter'>GlobalForwardingRuleMetadataFilter</a>&gt;[]&gt;;</code></pre>
 
 Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant
 clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the
@@ -19689,7 +19690,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/haVpnGateway.ts#L150">property <b>vpnInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpnInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HaVpnGatewayVpnInterface'>inputs.compute.HaVpnGatewayVpnInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpnInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HaVpnGatewayVpnInterface'>HaVpnGatewayVpnInterface</a>&gt;[]&gt;;</code></pre>
 
 A list of interfaces on this VPN gateway.
 
@@ -19731,7 +19732,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L251">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck'>inputs.compute.HealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck'>HealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19739,7 +19740,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L255">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpHealthCheck'>inputs.compute.HealthCheckHttpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpHealthCheck'>HealthCheckHttpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19747,7 +19748,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L259">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpsHealthCheck'>inputs.compute.HealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpsHealthCheck'>HealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19775,7 +19776,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L275">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck'>inputs.compute.HealthCheckSslHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck'>HealthCheckSslHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19783,7 +19784,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L279">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckTcpHealthCheck'>inputs.compute.HealthCheckTcpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckTcpHealthCheck'>HealthCheckTcpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19850,7 +19851,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L184">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck'>inputs.compute.HealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck'>HealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19858,7 +19859,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L188">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpHealthCheck'>inputs.compute.HealthCheckHttpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpHealthCheck'>HealthCheckHttpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19866,7 +19867,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L192">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpsHealthCheck'>inputs.compute.HealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpsHealthCheck'>HealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19902,7 +19903,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L212">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck'>inputs.compute.HealthCheckSslHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck'>HealthCheckSslHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -19910,7 +19911,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/healthCheck.ts#L216">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckTcpHealthCheck'>inputs.compute.HealthCheckTcpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckTcpHealthCheck'>HealthCheckTcpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -20395,7 +20396,7 @@ image family must comply with RFC1035.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L247">property <b>guestOsFeatures</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestOsFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageGuestOsFeature'>inputs.compute.ImageGuestOsFeature</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestOsFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageGuestOsFeature'>ImageGuestOsFeature</a>&gt;[]&gt;;</code></pre>
 
 A list of features to enable on the guest operating system. Applicable only for bootable images.
 
@@ -20439,7 +20440,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L271">property <b>rawDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rawDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageRawDisk'>inputs.compute.ImageRawDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rawDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageRawDisk'>ImageRawDisk</a>&gt;;</code></pre>
 
 The parameters of the raw disk image.
 
@@ -20508,7 +20509,7 @@ image family must comply with RFC1035.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L186">property <b>guestOsFeatures</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestOsFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageGuestOsFeature'>inputs.compute.ImageGuestOsFeature</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestOsFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageGuestOsFeature'>ImageGuestOsFeature</a>&gt;[]&gt;;</code></pre>
 
 A list of features to enable on the guest operating system. Applicable only for bootable images.
 
@@ -20560,7 +20561,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/image.ts#L214">property <b>rawDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rawDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageRawDisk'>inputs.compute.ImageRawDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rawDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ImageRawDisk'>ImageRawDisk</a>&gt;;</code></pre>
 
 The parameters of the raw disk image.
 
@@ -20604,7 +20605,7 @@ If you try to update a property that requires stopping the instance without sett
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L477">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceAttachedDisk'>inputs.compute.InstanceAttachedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceAttachedDisk'>InstanceAttachedDisk</a>&gt;[]&gt;;</code></pre>
 
 Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
 
@@ -20612,7 +20613,7 @@ Additional disks to attach to the instance. Can be repeated multiple times for m
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L482">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDisk'>inputs.compute.InstanceBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDisk'>InstanceBootDisk</a>&gt;;</code></pre>
 
 The boot disk for the instance.
 Structure is documented below.
@@ -20657,7 +20658,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L507">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGuestAccelerator'>inputs.compute.InstanceGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGuestAccelerator'>InstanceGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 **Note:** GPU accelerators can only be used with `onHostMaintenance` option set to TERMINATE.
@@ -20733,7 +20734,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L551">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterface'>inputs.compute.InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterface'>InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
@@ -20751,7 +20752,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L561">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScheduling'>inputs.compute.InstanceScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScheduling'>InstanceScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -20760,7 +20761,7 @@ this configuration option are detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L566">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScratchDisk'>inputs.compute.InstanceScratchDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScratchDisk'>InstanceScratchDisk</a>&gt;[]&gt;;</code></pre>
 
 Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
@@ -20769,7 +20770,7 @@ specified multiple times for multiple scratch disks. Structure is documented bel
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L572">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceServiceAccount'>inputs.compute.InstanceServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceServiceAccount'>InstanceServiceAccount</a>&gt;;</code></pre>
 
 Service account to attach to the instance.
 Structure is documented below.
@@ -20779,7 +20780,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L577">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig'>inputs.compute.InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig'>InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -20819,12 +20820,12 @@ The set of arguments for constructing a InstanceFromTemplate resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L267">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateAttachedDisk'>inputs.compute.InstanceFromTemplateAttachedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateAttachedDisk'>InstanceFromTemplateAttachedDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-bootDisk">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L268">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDisk'>inputs.compute.InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDisk'>InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-canIpForward">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L269">property <b>canIpForward</b></a>
 </h4>
@@ -20849,7 +20850,7 @@ The set of arguments for constructing a InstanceFromTemplate resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L273">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateGuestAccelerator'>inputs.compute.InstanceFromTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateGuestAccelerator'>InstanceFromTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-hostname">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L274">property <b>hostname</b></a>
 </h4>
@@ -20893,7 +20894,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L285">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterface'>inputs.compute.InstanceFromTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterface'>InstanceFromTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L286">property <b>project</b></a>
 </h4>
@@ -20903,22 +20904,22 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L287">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScheduling'>inputs.compute.InstanceFromTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScheduling'>InstanceFromTemplateScheduling</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-scratchDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L288">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScratchDisk'>inputs.compute.InstanceFromTemplateScratchDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScratchDisk'>InstanceFromTemplateScratchDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L289">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateServiceAccount'>inputs.compute.InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateServiceAccount'>InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-shieldedInstanceConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L290">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateShieldedInstanceConfig'>inputs.compute.InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateShieldedInstanceConfig'>InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateArgs-sourceInstanceTemplate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L295">property <b>sourceInstanceTemplate</b></a>
 </h4>
@@ -20961,12 +20962,12 @@ Input properties used for looking up and filtering InstanceFromTemplate resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L219">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateAttachedDisk'>inputs.compute.InstanceFromTemplateAttachedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateAttachedDisk'>InstanceFromTemplateAttachedDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-bootDisk">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L220">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDisk'>inputs.compute.InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDisk'>InstanceFromTemplateBootDisk</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-canIpForward">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L221">property <b>canIpForward</b></a>
 </h4>
@@ -20996,7 +20997,7 @@ Input properties used for looking up and filtering InstanceFromTemplate resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L226">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateGuestAccelerator'>inputs.compute.InstanceFromTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateGuestAccelerator'>InstanceFromTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-hostname">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L227">property <b>hostname</b></a>
 </h4>
@@ -21055,7 +21056,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L241">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterface'>inputs.compute.InstanceFromTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterface'>InstanceFromTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L242">property <b>project</b></a>
 </h4>
@@ -21065,12 +21066,12 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L243">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScheduling'>inputs.compute.InstanceFromTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScheduling'>InstanceFromTemplateScheduling</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-scratchDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L244">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScratchDisk'>inputs.compute.InstanceFromTemplateScratchDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScratchDisk'>InstanceFromTemplateScratchDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-selfLink">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L245">property <b>selfLink</b></a>
 </h4>
@@ -21080,12 +21081,12 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L246">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateServiceAccount'>inputs.compute.InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateServiceAccount'>InstanceFromTemplateServiceAccount</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-shieldedInstanceConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L247">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateShieldedInstanceConfig'>inputs.compute.InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateShieldedInstanceConfig'>InstanceFromTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceFromTemplateState-sourceInstanceTemplate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceFromTemplate.ts#L252">property <b>sourceInstanceTemplate</b></a>
 </h4>
@@ -21158,7 +21159,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroup.ts#L308">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupNamedPort'>inputs.compute.InstanceGroupNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupNamedPort'>InstanceGroupNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -21205,7 +21206,7 @@ The set of arguments for constructing a InstanceGroupManager resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L326">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerAutoHealingPolicies'>inputs.compute.InstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerAutoHealingPolicies'>InstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -21247,7 +21248,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L352">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerNamedPort'>inputs.compute.InstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerNamedPort'>InstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -21285,7 +21286,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L374">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerUpdatePolicy'>inputs.compute.InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerUpdatePolicy'>InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
 - - -
@@ -21294,7 +21295,7 @@ The update policy for this managed instance group. Structure is documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L382">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerVersion'>inputs.compute.InstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerVersion'>InstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -21335,7 +21336,7 @@ Input properties used for looking up and filtering InstanceGroupManager resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L236">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerAutoHealingPolicies'>inputs.compute.InstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerAutoHealingPolicies'>InstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -21393,7 +21394,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L270">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerNamedPort'>inputs.compute.InstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerNamedPort'>InstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -21439,7 +21440,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L296">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerUpdatePolicy'>inputs.compute.InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerUpdatePolicy'>InstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
 - - -
@@ -21448,7 +21449,7 @@ The update policy for this managed instance group. Structure is documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroupManager.ts#L304">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerVersion'>inputs.compute.InstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerVersion'>InstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -21519,7 +21520,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceGroup.ts#L255">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupNamedPort'>inputs.compute.InstanceGroupNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupNamedPort'>InstanceGroupNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -21582,7 +21583,7 @@ The set of arguments for constructing a InstanceIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L153">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMBindingCondition'>inputs.compute.InstanceIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMBindingCondition'>InstanceIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMBindingArgs-instanceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L157">property <b>instanceName</b></a>
 </h4>
@@ -21639,7 +21640,7 @@ Input properties used for looking up and filtering InstanceIAMBinding resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L120">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMBindingCondition'>inputs.compute.InstanceIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMBindingCondition'>InstanceIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMBinding.ts#L124">property <b>etag</b></a>
 </h4>
@@ -21704,7 +21705,7 @@ The set of arguments for constructing a InstanceIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L153">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMMemberCondition'>inputs.compute.InstanceIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMMemberCondition'>InstanceIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMMemberArgs-instanceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L157">property <b>instanceName</b></a>
 </h4>
@@ -21761,7 +21762,7 @@ Input properties used for looking up and filtering InstanceIAMMember resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L120">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMMemberCondition'>inputs.compute.InstanceIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceIAMMemberCondition'>InstanceIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceIAMMember.ts#L124">property <b>etag</b></a>
 </h4>
@@ -21935,7 +21936,7 @@ If you try to update a property that requires stopping the instance without sett
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L330">property <b>attachedDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceAttachedDisk'>inputs.compute.InstanceAttachedDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceAttachedDisk'>InstanceAttachedDisk</a>&gt;[]&gt;;</code></pre>
 
 Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
 
@@ -21943,7 +21944,7 @@ Additional disks to attach to the instance. Can be repeated multiple times for m
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L335">property <b>bootDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDisk'>inputs.compute.InstanceBootDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDisk'>InstanceBootDisk</a>&gt;;</code></pre>
 
 The boot disk for the instance.
 Structure is documented below.
@@ -21996,7 +21997,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L364">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGuestAccelerator'>inputs.compute.InstanceGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGuestAccelerator'>InstanceGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 **Note:** GPU accelerators can only be used with `onHostMaintenance` option set to TERMINATE.
@@ -22096,7 +22097,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L420">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterface'>inputs.compute.InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterface'>InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
@@ -22114,7 +22115,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L430">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScheduling'>inputs.compute.InstanceScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScheduling'>InstanceScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -22123,7 +22124,7 @@ this configuration option are detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L435">property <b>scratchDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScratchDisk'>inputs.compute.InstanceScratchDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scratchDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScratchDisk'>InstanceScratchDisk</a>&gt;[]&gt;;</code></pre>
 
 Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
@@ -22140,7 +22141,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L445">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceServiceAccount'>inputs.compute.InstanceServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceServiceAccount'>InstanceServiceAccount</a>&gt;;</code></pre>
 
 Service account to attach to the instance.
 Structure is documented below.
@@ -22150,7 +22151,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instance.ts#L450">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig'>inputs.compute.InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig'>InstanceShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -22210,7 +22211,7 @@ A brief description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L531">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDisk'>inputs.compute.InstanceTemplateDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDisk'>InstanceTemplateDisk</a>&gt;[]&gt;;</code></pre>
 
 Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -22229,7 +22230,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L540">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateGuestAccelerator'>inputs.compute.InstanceTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateGuestAccelerator'>InstanceTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 
@@ -22310,7 +22311,7 @@ prefix. Conflicts with `name`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L587">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterface'>inputs.compute.InstanceTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterface'>InstanceTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -22342,7 +22343,7 @@ Provider if no value is given.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L606">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateScheduling'>inputs.compute.InstanceTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateScheduling'>InstanceTemplateScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -22351,7 +22352,7 @@ this configuration option are detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L610">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateServiceAccount'>inputs.compute.InstanceTemplateServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateServiceAccount'>InstanceTemplateServiceAccount</a>&gt;;</code></pre>
 
 Service account to attach to the instance. Structure is documented below.
 
@@ -22359,7 +22360,7 @@ Service account to attach to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L615">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateShieldedInstanceConfig'>inputs.compute.InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateShieldedInstanceConfig'>InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -22403,7 +22404,7 @@ A brief description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L410">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDisk'>inputs.compute.InstanceTemplateDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDisk'>InstanceTemplateDisk</a>&gt;[]&gt;;</code></pre>
 
 Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -22422,7 +22423,7 @@ Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L419">property <b>guestAccelerators</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateGuestAccelerator'>inputs.compute.InstanceTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>guestAccelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateGuestAccelerator'>InstanceTemplateGuestAccelerator</a>&gt;[]&gt;;</code></pre>
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 
@@ -22511,7 +22512,7 @@ prefix. Conflicts with `name`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L470">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterface'>inputs.compute.InstanceTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterface'>InstanceTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -22543,7 +22544,7 @@ Provider if no value is given.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L489">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateScheduling'>inputs.compute.InstanceTemplateScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateScheduling'>InstanceTemplateScheduling</a>&gt;;</code></pre>
 
 The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -22560,7 +22561,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L497">property <b>serviceAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateServiceAccount'>inputs.compute.InstanceTemplateServiceAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateServiceAccount'>InstanceTemplateServiceAccount</a>&gt;;</code></pre>
 
 Service account to attach to the instance. Structure is documented below.
 
@@ -22568,7 +22569,7 @@ Service account to attach to the instance. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/instanceTemplate.ts#L502">property <b>shieldedInstanceConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateShieldedInstanceConfig'>inputs.compute.InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>shieldedInstanceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateShieldedInstanceConfig'>InstanceTemplateShieldedInstanceConfig</a>&gt;;</code></pre>
 
 Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shieldedInstanceConfig` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -22848,7 +22849,7 @@ by a layer 3 Partner if they configured BGP on behalf of the customer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/interconnectAttachment.ts#L294">property <b>privateInterconnectInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateInterconnectInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InterconnectAttachmentPrivateInterconnectInfo'>inputs.compute.InterconnectAttachmentPrivateInterconnectInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateInterconnectInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InterconnectAttachmentPrivateInterconnectInfo'>InterconnectAttachmentPrivateInterconnectInfo</a>&gt;;</code></pre>
 
 Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is
 attached to is of type DEDICATED.
@@ -22943,7 +22944,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/managedSslCertificate.ts#L202">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedSslCertificateManaged'>inputs.compute.ManagedSslCertificateManaged</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedSslCertificateManaged'>ManagedSslCertificateManaged</a>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -23023,7 +23024,7 @@ Expire time of the certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/managedSslCertificate.ts#L158">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedSslCertificateManaged'>inputs.compute.ManagedSslCertificateManaged</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedSslCertificateManaged'>ManagedSslCertificateManaged</a>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -23103,7 +23104,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/mangedSslCertificate.ts#L183">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MangedSslCertificateManaged'>inputs.compute.MangedSslCertificateManaged</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MangedSslCertificateManaged'>MangedSslCertificateManaged</a>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -23179,7 +23180,7 @@ Expire time of the certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/mangedSslCertificate.ts#L146">property <b>managed</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MangedSslCertificateManaged'>inputs.compute.MangedSslCertificateManaged</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MangedSslCertificateManaged'>MangedSslCertificateManaged</a>&gt;;</code></pre>
 
 Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a
 value of 'MANAGED' in 'type').
@@ -23991,7 +23992,7 @@ can be specified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L205">property <b>nodeTypeFlexibility</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeTypeFlexibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateNodeTypeFlexibility'>inputs.compute.NodeTemplateNodeTypeFlexibility</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeTypeFlexibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateNodeTypeFlexibility'>NodeTemplateNodeTypeFlexibility</a>&gt;;</code></pre>
 
 Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type
 that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -24017,7 +24018,7 @@ Region where nodes using the node template will be created. If it is not provide
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L219">property <b>serverBinding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateServerBinding'>inputs.compute.NodeTemplateServerBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateServerBinding'>NodeTemplateServerBinding</a>&gt;;</code></pre>
 
 The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -24077,7 +24078,7 @@ can be specified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L159">property <b>nodeTypeFlexibility</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeTypeFlexibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateNodeTypeFlexibility'>inputs.compute.NodeTemplateNodeTypeFlexibility</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeTypeFlexibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateNodeTypeFlexibility'>NodeTemplateNodeTypeFlexibility</a>&gt;;</code></pre>
 
 Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type
 that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -24111,7 +24112,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/nodeTemplate.ts#L177">property <b>serverBinding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateServerBinding'>inputs.compute.NodeTemplateServerBinding</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeTemplateServerBinding'>NodeTemplateServerBinding</a>&gt;;</code></pre>
 
 The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -24310,7 +24311,7 @@ The set of arguments for constructing a RegionAutoscaler resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionAutoscaler.ts#L169">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicy'>inputs.compute.RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicy'>RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -24369,7 +24370,7 @@ Input properties used for looking up and filtering RegionAutoscaler resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionAutoscaler.ts#L130">property <b>autoscalingPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicy'>inputs.compute.RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicy'>RegionAutoscalerAutoscalingPolicy</a>&gt;;</code></pre>
 
 The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
 autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified,
@@ -24454,7 +24455,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L360">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceBackend'>inputs.compute.RegionBackendServiceBackend</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceBackend'>RegionBackendServiceBackend</a>&gt;[]&gt;;</code></pre>
 
 The set of backends that serve this RegionBackendService.
 
@@ -24462,7 +24463,7 @@ The set of backends that serve this RegionBackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L365">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCircuitBreakers'>inputs.compute.RegionBackendServiceCircuitBreakers</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCircuitBreakers'>RegionBackendServiceCircuitBreakers</a>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -24479,7 +24480,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L378">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceConsistentHash'>inputs.compute.RegionBackendServiceConsistentHash</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceConsistentHash'>RegionBackendServiceConsistentHash</a>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -24500,7 +24501,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L386">property <b>failoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceFailoverPolicy'>inputs.compute.RegionBackendServiceFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceFailoverPolicy'>RegionBackendServiceFailoverPolicy</a>&gt;;</code></pre>
 
 Policy for failovers.
 
@@ -24545,7 +24546,7 @@ only when the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protoc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L416">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceLogConfig'>inputs.compute.RegionBackendServiceLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceLogConfig'>RegionBackendServiceLogConfig</a>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -24565,7 +24566,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L428">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceOutlierDetection'>inputs.compute.RegionBackendServiceOutlierDetection</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceOutlierDetection'>RegionBackendServiceOutlierDetection</a>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -24638,7 +24639,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L239">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceBackend'>inputs.compute.RegionBackendServiceBackend</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceBackend'>RegionBackendServiceBackend</a>&gt;[]&gt;;</code></pre>
 
 The set of backends that serve this RegionBackendService.
 
@@ -24646,7 +24647,7 @@ The set of backends that serve this RegionBackendService.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L244">property <b>circuitBreakers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCircuitBreakers'>inputs.compute.RegionBackendServiceCircuitBreakers</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>circuitBreakers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCircuitBreakers'>RegionBackendServiceCircuitBreakers</a>&gt;;</code></pre>
 
 Settings controlling the volume of connections to a backend service. This field is applicable only when the
 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -24663,7 +24664,7 @@ Time for which instance will be drained (not accept new connections, but still w
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L257">property <b>consistentHash</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceConsistentHash'>inputs.compute.RegionBackendServiceConsistentHash</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>consistentHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceConsistentHash'>RegionBackendServiceConsistentHash</a>&gt;;</code></pre>
 
 Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
 other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
@@ -24692,7 +24693,7 @@ An optional description of this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L269">property <b>failoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>failoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceFailoverPolicy'>inputs.compute.RegionBackendServiceFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>failoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceFailoverPolicy'>RegionBackendServiceFailoverPolicy</a>&gt;;</code></pre>
 
 Policy for failovers.
 
@@ -24746,7 +24747,7 @@ only when the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protoc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L304">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceLogConfig'>inputs.compute.RegionBackendServiceLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceLogConfig'>RegionBackendServiceLogConfig</a>&gt;;</code></pre>
 
 This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
 enabled, logs will be exported to Stackdriver.
@@ -24766,7 +24767,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionBackendService.ts#L316">property <b>outlierDetection</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceOutlierDetection'>inputs.compute.RegionBackendServiceOutlierDetection</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outlierDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceOutlierDetection'>RegionBackendServiceOutlierDetection</a>&gt;;</code></pre>
 
 Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when
 the 'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.
@@ -24845,7 +24846,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L322">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskDiskEncryptionKey'>inputs.compute.RegionDiskDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskDiskEncryptionKey'>RegionDiskDiskEncryptionKey</a>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -24933,7 +24934,7 @@ example, the following are valid values: *
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L371">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskSourceSnapshotEncryptionKey'>inputs.compute.RegionDiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskSourceSnapshotEncryptionKey'>RegionDiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -24977,7 +24978,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L223">property <b>diskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskDiskEncryptionKey'>inputs.compute.RegionDiskDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskDiskEncryptionKey'>RegionDiskDiskEncryptionKey</a>&gt;;</code></pre>
 
 Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key,
 you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach
@@ -25097,7 +25098,7 @@ example, the following are valid values: *
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionDisk.ts#L288">property <b>sourceSnapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskSourceSnapshotEncryptionKey'>inputs.compute.RegionDiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceSnapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionDiskSourceSnapshotEncryptionKey'>RegionDiskSourceSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -25168,7 +25169,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L261">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttp2HealthCheck'>inputs.compute.RegionHealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttp2HealthCheck'>RegionHealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25176,7 +25177,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L265">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpHealthCheck'>inputs.compute.RegionHealthCheckHttpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpHealthCheck'>RegionHealthCheckHttpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25184,7 +25185,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L269">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpsHealthCheck'>inputs.compute.RegionHealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpsHealthCheck'>RegionHealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25220,7 +25221,7 @@ The Region in which the created health check should reside. If it is not provide
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L289">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckSslHealthCheck'>inputs.compute.RegionHealthCheckSslHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckSslHealthCheck'>RegionHealthCheckSslHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25228,7 +25229,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L293">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckTcpHealthCheck'>inputs.compute.RegionHealthCheckTcpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckTcpHealthCheck'>RegionHealthCheckTcpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25295,7 +25296,7 @@ A so-far unhealthy instance will be marked healthy after this many consecutive s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L190">property <b>http2HealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttp2HealthCheck'>inputs.compute.RegionHealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>http2HealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttp2HealthCheck'>RegionHealthCheckHttp2HealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25303,7 +25304,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L194">property <b>httpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpHealthCheck'>inputs.compute.RegionHealthCheckHttpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpHealthCheck'>RegionHealthCheckHttpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25311,7 +25312,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L198">property <b>httpsHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpsHealthCheck'>inputs.compute.RegionHealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpsHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckHttpsHealthCheck'>RegionHealthCheckHttpsHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25355,7 +25356,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L222">property <b>sslHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckSslHealthCheck'>inputs.compute.RegionHealthCheckSslHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckSslHealthCheck'>RegionHealthCheckSslHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25363,7 +25364,7 @@ A nested object resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionHealthCheck.ts#L226">property <b>tcpHealthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckTcpHealthCheck'>inputs.compute.RegionHealthCheckTcpHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpHealthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionHealthCheckTcpHealthCheck'>RegionHealthCheckTcpHealthCheck</a>&gt;;</code></pre>
 
 A nested object resource
 
@@ -25406,7 +25407,7 @@ The set of arguments for constructing a RegionInstanceGroupManager resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L367">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerAutoHealingPolicies'>inputs.compute.RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerAutoHealingPolicies'>RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -25458,7 +25459,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L399">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerNamedPort'>inputs.compute.RegionInstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerNamedPort'>RegionInstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -25504,7 +25505,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L424">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerUpdatePolicy'>inputs.compute.RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerUpdatePolicy'>RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
@@ -25512,7 +25513,7 @@ The update policy for this managed instance group. Structure is documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L432">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersion'>inputs.compute.RegionInstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersion'>RegionInstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -25544,7 +25545,7 @@ Input properties used for looking up and filtering RegionInstanceGroupManager re
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L273">property <b>autoHealingPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerAutoHealingPolicies'>inputs.compute.RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoHealingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerAutoHealingPolicies'>RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;;</code></pre>
 
 The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -25612,7 +25613,7 @@ include lowercase letters, numbers, and hyphens.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L313">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerNamedPort'>inputs.compute.RegionInstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerNamedPort'>RegionInstanceGroupManagerNamedPort</a>&gt;[]&gt;;</code></pre>
 
 The named port configuration. See the section below
 for details on configuration.
@@ -25666,7 +25667,7 @@ an autoscaler, in which case it should never be set. Defaults to `0`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L342">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerUpdatePolicy'>inputs.compute.RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerUpdatePolicy'>RegionInstanceGroupManagerUpdatePolicy</a>&gt;;</code></pre>
 
 The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
@@ -25674,7 +25675,7 @@ The update policy for this managed instance group. Structure is documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionInstanceGroupManager.ts#L350">property <b>versions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>versions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersion'>inputs.compute.RegionInstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>versions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersion'>RegionInstanceGroupManagerVersion</a>&gt;[]&gt;;</code></pre>
 
 Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -26180,7 +26181,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L218">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapHostRule'>inputs.compute.RegionUrlMapHostRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapHostRule'>RegionUrlMapHostRule</a>&gt;[]&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -26199,7 +26200,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L229">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapPathMatcher'>inputs.compute.RegionUrlMapPathMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapPathMatcher'>RegionUrlMapPathMatcher</a>&gt;[]&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -26224,7 +26225,7 @@ The Region in which the url map should reside. If it is not provided, the provid
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L242">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapTest'>inputs.compute.RegionUrlMapTest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapTest'>RegionUrlMapTest</a>&gt;[]&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 
@@ -26274,7 +26275,7 @@ Fingerprint of this resource. This field is used internally during updates of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L168">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapHostRule'>inputs.compute.RegionUrlMapHostRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapHostRule'>RegionUrlMapHostRule</a>&gt;[]&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -26301,7 +26302,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L183">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapPathMatcher'>inputs.compute.RegionUrlMapPathMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapPathMatcher'>RegionUrlMapPathMatcher</a>&gt;[]&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -26334,7 +26335,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/regionUrlMap.ts#L200">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapTest'>inputs.compute.RegionUrlMapTest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapTest'>RegionUrlMapTest</a>&gt;[]&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 
@@ -26376,7 +26377,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/reservation.ts#L199">property <b>specificReservation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>specificReservation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ReservationSpecificReservation'>inputs.compute.ReservationSpecificReservation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>specificReservation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ReservationSpecificReservation'>ReservationSpecificReservation</a>&gt;;</code></pre>
 
 Reservation for instances with specific machine shapes.
 
@@ -26459,7 +26460,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/reservation.ts#L164">property <b>specificReservation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>specificReservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ReservationSpecificReservation'>inputs.compute.ReservationSpecificReservation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>specificReservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ReservationSpecificReservation'>ReservationSpecificReservation</a>&gt;;</code></pre>
 
 Reservation for instances with specific machine shapes.
 
@@ -26530,7 +26531,7 @@ Region where resource policy resides.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/resourcePolicy.ts#L147">property <b>snapshotSchedulePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotSchedulePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy'>inputs.compute.ResourcePolicySnapshotSchedulePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotSchedulePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy'>ResourcePolicySnapshotSchedulePolicy</a>&gt;;</code></pre>
 
 Policy for creating snapshots of persistent disks.
 
@@ -26581,7 +26582,7 @@ Region where resource policy resides.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/resourcePolicy.ts#L121">property <b>snapshotSchedulePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotSchedulePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy'>inputs.compute.ResourcePolicySnapshotSchedulePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotSchedulePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy'>ResourcePolicySnapshotSchedulePolicy</a>&gt;;</code></pre>
 
 Policy for creating snapshots of persistent disks.
 
@@ -26733,7 +26734,7 @@ The set of arguments for constructing a Router resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/router.ts#L170">property <b>bgp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterBgp'>inputs.compute.RouterBgp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterBgp'>RouterBgp</a>&gt;;</code></pre>
 
 BGP information specific to this router.
 
@@ -26966,7 +26967,7 @@ Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L265">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatLogConfig'>inputs.compute.RouterNatLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatLogConfig'>RouterNatLogConfig</a>&gt;;</code></pre>
 
 Configuration for logging on NAT
 
@@ -27045,7 +27046,7 @@ network in this region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L309">property <b>subnetworks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatSubnetwork'>inputs.compute.RouterNatSubnetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatSubnetwork'>RouterNatSubnetwork</a>&gt;[]&gt;;</code></pre>
 
 One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
 'LIST_OF_SUBNETWORKS'
@@ -27105,7 +27106,7 @@ Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L190">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatLogConfig'>inputs.compute.RouterNatLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatLogConfig'>RouterNatLogConfig</a>&gt;;</code></pre>
 
 Configuration for logging on NAT
 
@@ -27184,7 +27185,7 @@ network in this region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerNat.ts#L234">property <b>subnetworks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatSubnetwork'>inputs.compute.RouterNatSubnetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterNatSubnetwork'>RouterNatSubnetwork</a>&gt;[]&gt;;</code></pre>
 
 One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
 'LIST_OF_SUBNETWORKS'
@@ -27245,7 +27246,7 @@ which can take one of the following options:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerPeer.ts#L270">property <b>advertisedIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterPeerAdvertisedIpRange'>inputs.compute.RouterPeerAdvertisedIpRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterPeerAdvertisedIpRange'>RouterPeerAdvertisedIpRange</a>&gt;[]&gt;;</code></pre>
 
 User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if `advertiseMode` is `CUSTOM` and overrides
@@ -27357,7 +27358,7 @@ which can take one of the following options:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/routerPeer.ts#L202">property <b>advertisedIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterPeerAdvertisedIpRange'>inputs.compute.RouterPeerAdvertisedIpRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>advertisedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterPeerAdvertisedIpRange'>RouterPeerAdvertisedIpRange</a>&gt;[]&gt;;</code></pre>
 
 User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if `advertiseMode` is `CUSTOM` and overrides
@@ -27459,7 +27460,7 @@ Input properties used for looking up and filtering Router resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/router.ts#L128">property <b>bgp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterBgp'>inputs.compute.RouterBgp</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RouterBgp'>RouterBgp</a>&gt;;</code></pre>
 
 BGP information specific to this router.
 
@@ -27712,7 +27713,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityPolicy.ts#L160">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityPolicyRule'>inputs.compute.SecurityPolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityPolicyRule'>SecurityPolicyRule</a>&gt;[]&gt;;</code></pre>
 
 The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -27765,7 +27766,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityPolicy.ts#L131">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityPolicyRule'>inputs.compute.SecurityPolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityPolicyRule'>SecurityPolicyRule</a>&gt;[]&gt;;</code></pre>
 
 The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -27793,7 +27794,7 @@ The set of arguments for constructing a SecurityScanConfig resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L197">property <b>authentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigAuthentication'>inputs.compute.SecurityScanConfigAuthentication</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigAuthentication'>SecurityScanConfigAuthentication</a>&gt;;</code></pre>
 
 The authentication configuration. If specified, service will use the authentication configuration during scanning.
 
@@ -27842,7 +27843,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L222">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigSchedule'>inputs.compute.SecurityScanConfigSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigSchedule'>SecurityScanConfigSchedule</a>&gt;;</code></pre>
 
 The schedule of the ScanConfig
 
@@ -27884,7 +27885,7 @@ Input properties used for looking up and filtering SecurityScanConfig resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L146">property <b>authentication</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigAuthentication'>inputs.compute.SecurityScanConfigAuthentication</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigAuthentication'>SecurityScanConfigAuthentication</a>&gt;;</code></pre>
 
 The authentication configuration. If specified, service will use the authentication configuration during scanning.
 
@@ -27941,7 +27942,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/securityScanConfig.ts#L175">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigSchedule'>inputs.compute.SecurityScanConfigSchedule</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecurityScanConfigSchedule'>SecurityScanConfigSchedule</a>&gt;;</code></pre>
 
 The schedule of the ScanConfig
 
@@ -28107,7 +28108,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L275">property <b>snapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSnapshotEncryptionKey'>inputs.compute.SnapshotSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSnapshotEncryptionKey'>SnapshotSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -28124,7 +28125,7 @@ A reference to the disk used to create this snapshot.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L284">property <b>sourceDiskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceDiskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSourceDiskEncryptionKey'>inputs.compute.SnapshotSourceDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceDiskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSourceDiskEncryptionKey'>SnapshotSourceDiskEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -28229,7 +28230,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L221">property <b>snapshotEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSnapshotEncryptionKey'>inputs.compute.SnapshotSnapshotEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSnapshotEncryptionKey'>SnapshotSnapshotEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -28254,7 +28255,7 @@ A reference to the disk used to create this snapshot.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/snapshot.ts#L234">property <b>sourceDiskEncryptionKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceDiskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSourceDiskEncryptionKey'>inputs.compute.SnapshotSourceDiskEncryptionKey</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceDiskEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SnapshotSourceDiskEncryptionKey'>SnapshotSourceDiskEncryptionKey</a>&gt;;</code></pre>
 
 The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -28655,7 +28656,7 @@ Only IPv4 is supported.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L295">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkLogConfig'>inputs.compute.SubnetworkLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkLogConfig'>SubnetworkLogConfig</a>&gt;;</code></pre>
 
 Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to
 Stackdriver.
@@ -28730,7 +28731,7 @@ Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L340">property <b>secondaryIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkSecondaryIpRange'>inputs.compute.SubnetworkSecondaryIpRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkSecondaryIpRange'>SubnetworkSecondaryIpRange</a>&gt;[]&gt;;</code></pre>
 
 An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of
 such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or
@@ -28751,7 +28752,7 @@ The set of arguments for constructing a SubnetworkIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L155">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMBindingCondition'>inputs.compute.SubnetworkIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMBindingCondition'>SubnetworkIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L156">property <b>members</b></a>
 </h4>
@@ -28809,7 +28810,7 @@ Input properties used for looking up and filtering SubnetworkIAMBinding resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L121">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMBindingCondition'>inputs.compute.SubnetworkIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMBindingCondition'>SubnetworkIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMBinding.ts#L125">property <b>etag</b></a>
 </h4>
@@ -28875,7 +28876,7 @@ The set of arguments for constructing a SubnetworkIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L155">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMMemberCondition'>inputs.compute.SubnetworkIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMMemberCondition'>SubnetworkIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L156">property <b>member</b></a>
 </h4>
@@ -28933,7 +28934,7 @@ Input properties used for looking up and filtering SubnetworkIAMMember resources
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L121">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMMemberCondition'>inputs.compute.SubnetworkIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkIAMMemberCondition'>SubnetworkIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetworkIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetworkIAMMember.ts#L125">property <b>etag</b></a>
 </h4>
@@ -29152,7 +29153,7 @@ Only IPv4 is supported.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L220">property <b>logConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkLogConfig'>inputs.compute.SubnetworkLogConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkLogConfig'>SubnetworkLogConfig</a>&gt;;</code></pre>
 
 Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to
 Stackdriver.
@@ -29227,7 +29228,7 @@ Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/subnetwork.ts#L265">property <b>secondaryIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkSecondaryIpRange'>inputs.compute.SubnetworkSecondaryIpRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkSecondaryIpRange'>SubnetworkSecondaryIpRange</a>&gt;[]&gt;;</code></pre>
 
 An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of
 such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or
@@ -30206,7 +30207,7 @@ An optional description of this resource. Provide this property when you create 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L208">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapHostRule'>inputs.compute.URLMapHostRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapHostRule'>URLMapHostRule</a>&gt;[]&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -30225,7 +30226,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L219">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcher'>inputs.compute.URLMapPathMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcher'>URLMapPathMatcher</a>&gt;[]&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -30242,7 +30243,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L228">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapTest'>inputs.compute.URLMapTest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapTest'>URLMapTest</a>&gt;[]&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 
@@ -30292,7 +30293,7 @@ Fingerprint of this resource. This field is used internally during updates of th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L162">property <b>hostRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapHostRule'>inputs.compute.URLMapHostRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapHostRule'>URLMapHostRule</a>&gt;[]&gt;;</code></pre>
 
 The list of HostRules to use against the URL.
 
@@ -30319,7 +30320,7 @@ characters must be a dash, lowercase letter, or digit, except the last character
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L177">property <b>pathMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcher'>inputs.compute.URLMapPathMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcher'>URLMapPathMatcher</a>&gt;[]&gt;;</code></pre>
 
 The list of named PathMatchers to use against the URL.
 
@@ -30344,7 +30345,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/compute/uRLMap.ts#L190">property <b>tests</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapTest'>inputs.compute.URLMapTest</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapTest'>URLMapTest</a>&gt;[]&gt;;</code></pre>
 
 The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 

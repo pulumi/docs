@@ -1,5 +1,6 @@
 ---
 title: "Module victorops"
+title_tag: "Module victorops | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "victorops"
 meta_desc: "Explore members of the victorops module in the @pulumi/signalfx package."
 ---
@@ -95,7 +96,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Integration</code></pre>
 
 
 Returns true if the given object is an instance of Integration.  This is designed to work even

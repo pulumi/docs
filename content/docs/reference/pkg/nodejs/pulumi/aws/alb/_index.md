@@ -1,5 +1,6 @@
 ---
 title: "Module alb"
+title_tag: "Module alb | Package @pulumi/aws | Node.js SDK"
 linktitle: "alb"
 meta_desc: "Explore members of the alb module in the @pulumi/aws package."
 ---
@@ -246,7 +247,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Listener</code></pre>
 
 
 Returns true if the given object is an instance of Listener.  This is designed to work even
@@ -272,7 +273,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listener.ts#L185">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultAction'>outputs.alb.ListenerDefaultAction</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultAction'>ListenerDefaultAction</a>[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -394,7 +395,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ListenerCertificate</code></pre>
 
 
 Returns true if the given object is an instance of ListenerCertificate.  This is designed to work even
@@ -572,7 +573,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ListenerRule</code></pre>
 
 
 Returns true if the given object is an instance of ListenerRule.  This is designed to work even
@@ -582,7 +583,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L133">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleAction'>outputs.alb.ListenerRuleAction</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleAction'>ListenerRuleAction</a>[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -598,7 +599,7 @@ The ARN of the rule (matches `id`)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L141">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleCondition'>outputs.alb.ListenerRuleCondition</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleCondition'>ListenerRuleCondition</a>[]&gt;;</code></pre>
 
 A Condition block. Condition blocks are documented below.
 
@@ -750,7 +751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancer</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
@@ -760,7 +761,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L112">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs'>outputs.alb.LoadBalancerAccessLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -885,7 +886,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L172">property <b>subnetMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerSubnetMapping'>outputs.alb.LoadBalancerSubnetMapping</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerSubnetMapping'>LoadBalancerSubnetMapping</a>[]&gt;;</code></pre>
 
 A subnet mapping block as documented below.
 
@@ -1026,7 +1027,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetGroup</code></pre>
 
 
 Returns true if the given object is an instance of TargetGroup.  This is designed to work even
@@ -1060,7 +1061,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L104">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TargetGroupHealthCheck'>outputs.alb.TargetGroupHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TargetGroupHealthCheck'>TargetGroupHealthCheck</a>&gt;;</code></pre>
 
 A Health Check block. Health Check blocks are documented below.
 
@@ -1133,7 +1134,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L136">property <b>stickiness</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stickiness: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TargetGroupStickiness'>outputs.alb.TargetGroupStickiness</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stickiness: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TargetGroupStickiness'>TargetGroupStickiness</a>&gt;;</code></pre>
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
 
@@ -1263,7 +1264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TargetGroupAttachment</code></pre>
 
 
 Returns true if the given object is an instance of TargetGroupAttachment.  This is designed to work even
@@ -1508,7 +1509,7 @@ A collection of values returned by getListener.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getListener.ts#L83">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction'>outputs.alb.GetListenerDefaultAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction'>GetListenerDefaultAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenerResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getListener.ts#L91">property <b>id</b></a>
 </h4>
@@ -1582,7 +1583,7 @@ A collection of values returned by getLoadBalancer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getLoadBalancer.ts#L73">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs'>outputs.alb.GetLoadBalancerAccessLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs'>GetLoadBalancerAccessLogs</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-arn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getLoadBalancer.ts#L74">property <b>arn</b></a>
 </h4>
@@ -1640,7 +1641,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getLoadBalancer.ts#L83">property <b>subnetMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerSubnetMapping'>outputs.alb.GetLoadBalancerSubnetMapping</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerSubnetMapping'>GetLoadBalancerSubnetMapping</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-subnets">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getLoadBalancer.ts#L84">property <b>subnets</b></a>
 </h4>
@@ -1721,7 +1722,7 @@ A collection of values returned by getTargetGroup.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getTargetGroup.ts#L76">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupHealthCheck'>outputs.alb.GetTargetGroupHealthCheck</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupHealthCheck'>GetTargetGroupHealthCheck</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTargetGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getTargetGroup.ts#L90">property <b>id</b></a>
 </h4>
@@ -1764,7 +1765,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getTargetGroup.ts#L83">property <b>stickiness</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickiness: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupStickiness'>outputs.alb.GetTargetGroupStickiness</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickiness: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupStickiness'>GetTargetGroupStickiness</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTargetGroupResult-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/getTargetGroup.ts#L84">property <b>tags</b></a>
 </h4>
@@ -1816,7 +1817,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listener.ts#L299">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultAction'>inputs.alb.ListenerDefaultAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultAction'>ListenerDefaultAction</a>&gt;[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -1918,7 +1919,7 @@ The set of arguments for constructing a ListenerRule resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L231">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleAction'>inputs.alb.ListenerRuleAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleAction'>ListenerRuleAction</a>&gt;[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -1926,7 +1927,7 @@ An Action block. Action blocks are documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L235">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleCondition'>inputs.alb.ListenerRuleCondition</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleCondition'>ListenerRuleCondition</a>&gt;[]&gt;;</code></pre>
 
 A Condition block. Condition blocks are documented below.
 
@@ -1960,7 +1961,7 @@ Input properties used for looking up and filtering ListenerRule resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L205">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleAction'>inputs.alb.ListenerRuleAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleAction'>ListenerRuleAction</a>&gt;[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -1976,7 +1977,7 @@ The ARN of the rule (matches `id`)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listenerRule.ts#L213">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleCondition'>inputs.alb.ListenerRuleCondition</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleCondition'>ListenerRuleCondition</a>&gt;[]&gt;;</code></pre>
 
 A Condition block. Condition blocks are documented below.
 
@@ -2026,7 +2027,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/listener.ts#L269">property <b>defaultActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultAction'>inputs.alb.ListenerDefaultAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultAction'>ListenerDefaultAction</a>&gt;[]&gt;;</code></pre>
 
 An Action block. Action blocks are documented below.
 
@@ -2076,7 +2077,7 @@ The set of arguments for constructing a LoadBalancer resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L347">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>inputs.alb.LoadBalancerAccessLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -2168,7 +2169,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L395">property <b>subnetMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerSubnetMapping'>inputs.alb.LoadBalancerSubnetMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerSubnetMapping'>LoadBalancerSubnetMapping</a>&gt;[]&gt;;</code></pre>
 
 A subnet mapping block as documented below.
 
@@ -2204,7 +2205,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L262">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>inputs.alb.LoadBalancerAccessLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -2320,7 +2321,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/loadBalancer.ts#L322">property <b>subnetMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnetMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerSubnetMapping'>inputs.alb.LoadBalancerSubnetMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnetMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerSubnetMapping'>LoadBalancerSubnetMapping</a>&gt;[]&gt;;</code></pre>
 
 A subnet mapping block as documented below.
 
@@ -2391,7 +2392,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L295">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupHealthCheck'>inputs.alb.TargetGroupHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupHealthCheck'>TargetGroupHealthCheck</a>&gt;;</code></pre>
 
 A Health Check block. Health Check blocks are documented below.
 
@@ -2455,7 +2456,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L327">property <b>stickiness</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupStickiness'>inputs.alb.TargetGroupStickiness</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupStickiness'>TargetGroupStickiness</a>&gt;;</code></pre>
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
 
@@ -2610,7 +2611,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L232">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupHealthCheck'>inputs.alb.TargetGroupHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupHealthCheck'>TargetGroupHealthCheck</a>&gt;;</code></pre>
 
 A Health Check block. Health Check blocks are documented below.
 
@@ -2674,7 +2675,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/alb/targetGroup.ts#L264">property <b>stickiness</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupStickiness'>inputs.alb.TargetGroupStickiness</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TargetGroupStickiness'>TargetGroupStickiness</a>&gt;;</code></pre>
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
 

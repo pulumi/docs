@@ -1,5 +1,6 @@
 ---
 title: "Module runtime/closure"
+title_tag: "Module runtime/closure | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "closure"
 meta_desc: "Explore members of the closure module in the @pulumi/pulumi package."
 ---
@@ -143,7 +144,7 @@ included for a serialized closure.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/closure/codePaths.ts#L55">property <b>logResource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logResource?: <a href='#Resource'>Resource</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>;</code></pre>
 
 The resource to log any errors we encounter against.
 
@@ -154,7 +155,7 @@ The resource to log any errors we encounter against.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>computeCodePaths(options?: <a href='#CodePathOptions'>CodePathOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, asset.Asset | asset.Archive&gt;&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeCodePaths(options?: <a href='#CodePathOptions'>CodePathOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;&gt;</code></pre>
 
 
 computeCodePaths computes the local node_module paths to include in an uploaded cloud 'Lambda'.
@@ -181,7 +182,7 @@ helper.
 <i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
 Use the [computeCodePaths] overload that takes a [CodePathOptions] instead.
 </div>
-<pre class="highlight"><code><span class='kd'></span>computeCodePaths(extraIncludePaths?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraIncludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraExcludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, asset.Asset | asset.Archive&gt;&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeCodePaths(extraIncludePaths?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraIncludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraExcludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="createFunctionInfoAsync" data-link-title="createFunctionInfoAsync">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/closure/createClosure.ts#L219">
@@ -190,7 +191,7 @@ Use the [computeCodePaths] overload that takes a [CodePathOptions] instead.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>createFunctionInfoAsync(func: Function, serialize: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, logResource: resource.Resource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#FunctionInfo'>FunctionInfo</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>createFunctionInfoAsync(func: Function, serialize: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, logResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#FunctionInfo'>FunctionInfo</a>&gt;</code></pre>
 
 
 createFunctionInfo serializes a function and its closure environment into a form that is
@@ -693,7 +694,7 @@ be what is exported.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/runtime/closure/serializeClosure.ts#L49">property <b>logResource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logResource?: <a href='#Resource'>Resource</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>;</code></pre>
 
 The resource to log any errors we encounter against.
 

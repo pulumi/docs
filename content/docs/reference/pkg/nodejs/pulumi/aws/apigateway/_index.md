@@ -1,5 +1,6 @@
 ---
 title: "Module apigateway"
+title_tag: "Module apigateway | Package @pulumi/aws | Node.js SDK"
 linktitle: "apigateway"
 meta_desc: "Explore members of the apigateway module in the @pulumi/aws package."
 ---
@@ -212,7 +213,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Account</code></pre>
 
 
 Returns true if the given object is an instance of Account.  This is designed to work even
@@ -241,7 +242,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/account.ts#L101">property <b>throttleSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AccountThrottleSettings'>outputs.apigateway.AccountThrottleSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AccountThrottleSettings'>AccountThrottleSettings</a>&gt;;</code></pre>
 
 Account-Level throttle settings. See exported fields below.
 
@@ -314,7 +315,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApiKey</code></pre>
 
 
 Returns true if the given object is an instance of ApiKey.  This is designed to work even
@@ -517,7 +518,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Authorizer</code></pre>
 
 
 Returns true if the given object is an instance of Authorizer.  This is designed to work even
@@ -700,7 +701,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BasePathMapping</code></pre>
 
 
 Returns true if the given object is an instance of BasePathMapping.  This is designed to work even
@@ -816,7 +817,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClientCertificate</code></pre>
 
 
 Returns true if the given object is an instance of ClientCertificate.  This is designed to work even
@@ -975,7 +976,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Deployment</code></pre>
 
 
 Returns true if the given object is an instance of Deployment.  This is designed to work even
@@ -1133,7 +1134,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DocumentationPart</code></pre>
 
 
 Returns true if the given object is an instance of DocumentationPart.  This is designed to work even
@@ -1152,7 +1153,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/documentationPart.ts#L62">property <b>location</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentationPartLocation'>outputs.apigateway.DocumentationPartLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentationPartLocation'>DocumentationPartLocation</a>&gt;;</code></pre>
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
@@ -1251,7 +1252,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DocumentationVersion</code></pre>
 
 
 Returns true if the given object is an instance of DocumentationVersion.  This is designed to work even
@@ -1484,7 +1485,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DomainName</code></pre>
 
 
 Returns true if the given object is an instance of DomainName.  This is designed to work even
@@ -1584,7 +1585,7 @@ The fully-qualified domain name to register
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/domainName.ts#L230">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameEndpointConfiguration'>outputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameEndpointConfiguration'>DomainNameEndpointConfiguration</a>&gt;;</code></pre>
 
 Configuration block defining API endpoint information including type. Defined below.
 
@@ -1865,7 +1866,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Integration</code></pre>
 
 
 Returns true if the given object is an instance of Integration.  This is designed to work even
@@ -2126,7 +2127,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IntegrationResponse</code></pre>
 
 
 Returns true if the given object is an instance of IntegrationResponse.  This is designed to work even
@@ -2324,7 +2325,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Method</code></pre>
 
 
 Returns true if the given object is an instance of Method.  This is designed to work even
@@ -2514,7 +2515,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MethodResponse</code></pre>
 
 
 Returns true if the given object is an instance of MethodResponse.  This is designed to work even
@@ -2689,7 +2690,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MethodSettings</code></pre>
 
 
 Returns true if the given object is an instance of MethodSettings.  This is designed to work even
@@ -2724,7 +2725,7 @@ The ID of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/methodSettings.ts#L106">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MethodSettingsSettings'>outputs.apigateway.MethodSettingsSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MethodSettingsSettings'>MethodSettingsSettings</a>&gt;;</code></pre>
 
 The settings block, see below.
 
@@ -2814,7 +2815,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Model</code></pre>
 
 
 Returns true if the given object is an instance of Model.  This is designed to work even
@@ -2940,7 +2941,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RequestValidator</code></pre>
 
 
 Returns true if the given object is an instance of RequestValidator.  This is designed to work even
@@ -3061,7 +3062,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a></code></pre>
 
 
 Returns true if the given object is an instance of Resource.  This is designed to work even
@@ -3186,7 +3187,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Response</code></pre>
 
 
 Returns true if the given object is an instance of Response.  This is designed to work even
@@ -3325,7 +3326,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RestApi</code></pre>
 
 
 Returns true if the given object is an instance of RestApi.  This is designed to work even
@@ -3383,7 +3384,7 @@ The description of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/restApi.ts#L94">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RestApiEndpointConfiguration'>outputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RestApiEndpointConfiguration'>RestApiEndpointConfiguration</a>&gt;;</code></pre>
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
 
@@ -3569,7 +3570,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Stage</code></pre>
 
 
 Returns true if the given object is an instance of Stage.  This is designed to work even
@@ -3579,7 +3580,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/stage.ts#L115">property <b>accessLogSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accessLogSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageAccessLogSettings'>outputs.apigateway.StageAccessLogSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accessLogSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageAccessLogSettings'>StageAccessLogSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Enables access logs for the API stage. Detailed below.
 
@@ -3806,7 +3807,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UsagePlan</code></pre>
 
 
 Returns true if the given object is an instance of UsagePlan.  This is designed to work even
@@ -3816,7 +3817,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L84">property <b>apiStages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>apiStages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanApiStage'>outputs.apigateway.UsagePlanApiStage</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>apiStages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanApiStage'>UsagePlanApiStage</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The associated API stages of the usage plan.
 
@@ -3857,7 +3858,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L100">property <b>quotaSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>quotaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanQuotaSettings'>outputs.apigateway.UsagePlanQuotaSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>quotaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanQuotaSettings'>UsagePlanQuotaSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The quota settings of the usage plan.
 
@@ -3865,7 +3866,7 @@ The quota settings of the usage plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L104">property <b>throttleSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanThrottleSettings'>outputs.apigateway.UsagePlanThrottleSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanThrottleSettings'>UsagePlanThrottleSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The throttling limits of the usage plan.
 
@@ -3948,7 +3949,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UsagePlanKey</code></pre>
 
 
 Returns true if the given object is an instance of UsagePlanKey.  This is designed to work even
@@ -4080,7 +4081,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcLink</code></pre>
 
 
 Returns true if the given object is an instance of VpcLink.  This is designed to work even
@@ -4301,7 +4302,7 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/account.ts#L146">property <b>throttleSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AccountThrottleSettings'>inputs.apigateway.AccountThrottleSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AccountThrottleSettings'>AccountThrottleSettings</a>&gt;;</code></pre>
 
 Account-Level throttle settings. See exported fields below.
 
@@ -4922,7 +4923,7 @@ The set of arguments for constructing a DocumentationPart resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/documentationPart.ts#L138">property <b>location</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>inputs.apigateway.DocumentationPartLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>DocumentationPartLocation</a>&gt;;</code></pre>
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
@@ -4956,7 +4957,7 @@ Input properties used for looking up and filtering DocumentationPart resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/documentationPart.ts#L120">property <b>location</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>inputs.apigateway.DocumentationPartLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>DocumentationPartLocation</a>&gt;;</code></pre>
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
@@ -5114,7 +5115,7 @@ The fully-qualified domain name to register
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/domainName.ts#L444">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>inputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>DomainNameEndpointConfiguration</a>&gt;;</code></pre>
 
 Configuration block defining API endpoint information including type. Defined below.
 
@@ -5255,7 +5256,7 @@ The fully-qualified domain name to register
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/domainName.ts#L377">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>inputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>DomainNameEndpointConfiguration</a>&gt;;</code></pre>
 
 Configuration block defining API endpoint information including type. Defined below.
 
@@ -6213,7 +6214,7 @@ The ID of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/methodSettings.ts#L195">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>inputs.apigateway.MethodSettingsSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>MethodSettingsSettings</a>&gt;;</code></pre>
 
 The settings block, see below.
 
@@ -6255,7 +6256,7 @@ The ID of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/methodSettings.ts#L173">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>inputs.apigateway.MethodSettingsSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>MethodSettingsSettings</a>&gt;;</code></pre>
 
 The settings block, see below.
 
@@ -6766,7 +6767,7 @@ The description of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/restApi.ts#L251">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>inputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>RestApiEndpointConfiguration</a>&gt;;</code></pre>
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
 
@@ -6861,7 +6862,7 @@ The description of the REST API
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/restApi.ts#L202">property <b>endpointConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>inputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>RestApiEndpointConfiguration</a>&gt;;</code></pre>
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
 
@@ -6926,7 +6927,7 @@ The set of arguments for constructing a Stage resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/stage.ts#L319">property <b>accessLogSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>inputs.apigateway.StageAccessLogSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>StageAccessLogSettings</a>&gt;;</code></pre>
 
 Enables access logs for the API stage. Detailed below.
 
@@ -7033,7 +7034,7 @@ Input properties used for looking up and filtering Stage resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/stage.ts#L249">property <b>accessLogSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>inputs.apigateway.StageAccessLogSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>StageAccessLogSettings</a>&gt;;</code></pre>
 
 Enables access logs for the API stage. Detailed below.
 
@@ -7167,7 +7168,7 @@ The set of arguments for constructing a UsagePlan resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L181">property <b>apiStages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>inputs.apigateway.UsagePlanApiStage</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>UsagePlanApiStage</a>&gt;[]&gt;;</code></pre>
 
 The associated API stages of the usage plan.
 
@@ -7199,7 +7200,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L197">property <b>quotaSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>inputs.apigateway.UsagePlanQuotaSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>UsagePlanQuotaSettings</a>&gt;;</code></pre>
 
 The quota settings of the usage plan.
 
@@ -7207,7 +7208,7 @@ The quota settings of the usage plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L201">property <b>throttleSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>inputs.apigateway.UsagePlanThrottleSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>UsagePlanThrottleSettings</a>&gt;;</code></pre>
 
 The throttling limits of the usage plan.
 
@@ -7309,7 +7310,7 @@ Input properties used for looking up and filtering UsagePlan resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L151">property <b>apiStages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>inputs.apigateway.UsagePlanApiStage</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>UsagePlanApiStage</a>&gt;[]&gt;;</code></pre>
 
 The associated API stages of the usage plan.
 
@@ -7341,7 +7342,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L167">property <b>quotaSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>inputs.apigateway.UsagePlanQuotaSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>UsagePlanQuotaSettings</a>&gt;;</code></pre>
 
 The quota settings of the usage plan.
 
@@ -7349,7 +7350,7 @@ The quota settings of the usage plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/apigateway/usagePlan.ts#L171">property <b>throttleSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>inputs.apigateway.UsagePlanThrottleSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>UsagePlanThrottleSettings</a>&gt;;</code></pre>
 
 The throttling limits of the usage plan.
 

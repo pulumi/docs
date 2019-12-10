@@ -1,5 +1,6 @@
 ---
 title: "Module ec2"
+title_tag: "Module ec2 | Package @pulumi/aws | Node.js SDK"
 linktitle: "ec2"
 meta_desc: "Explore members of the ec2 module in the @pulumi/aws package."
 ---
@@ -1896,7 +1897,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Ami</code></pre>
 
 
 Returns true if the given object is an instance of Ami.  This is designed to work even
@@ -1922,7 +1923,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L80">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEbsBlockDevice'>outputs.ec2.AmiEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEbsBlockDevice'>AmiEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1939,7 +1940,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L89">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEphemeralBlockDevice'>outputs.ec2.AmiEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEphemeralBlockDevice'>AmiEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2120,7 +2121,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AmiCopy</code></pre>
 
 
 Returns true if the given object is an instance of AmiCopy.  This is designed to work even
@@ -2146,7 +2147,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L79">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiCopyEbsBlockDevice'>outputs.ec2.AmiCopyEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiCopyEbsBlockDevice'>AmiCopyEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -2171,7 +2172,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L92">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiCopyEphemeralBlockDevice'>outputs.ec2.AmiCopyEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiCopyEphemeralBlockDevice'>AmiCopyEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2376,7 +2377,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AmiFromInstance</code></pre>
 
 
 Returns true if the given object is an instance of AmiFromInstance.  This is designed to work even
@@ -2402,7 +2403,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L80">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiFromInstanceEbsBlockDevice'>outputs.ec2.AmiFromInstanceEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiFromInstanceEbsBlockDevice'>AmiFromInstanceEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -2419,7 +2420,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L89">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiFromInstanceEphemeralBlockDevice'>outputs.ec2.AmiFromInstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiFromInstanceEphemeralBlockDevice'>AmiFromInstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2602,7 +2603,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AmiLaunchPermission</code></pre>
 
 
 Returns true if the given object is an instance of AmiLaunchPermission.  This is designed to work even
@@ -2705,7 +2706,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CapacityReservation</code></pre>
 
 
 Returns true if the given object is an instance of CapacityReservation.  This is designed to work even
@@ -2882,7 +2883,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CustomerGateway</code></pre>
 
 
 Returns true if the given object is an instance of CustomerGateway.  This is designed to work even
@@ -3088,7 +3089,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultNetworkAcl</code></pre>
 
 
 Returns true if the given object is an instance of DefaultNetworkAcl.  This is designed to work even
@@ -3107,7 +3108,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L149">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultNetworkAclEgress'>outputs.ec2.DefaultNetworkAclEgress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultNetworkAclEgress'>DefaultNetworkAclEgress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 
@@ -3124,7 +3125,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L153">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultNetworkAclIngress'>outputs.ec2.DefaultNetworkAclIngress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultNetworkAclIngress'>DefaultNetworkAclIngress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 
@@ -3264,7 +3265,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultRouteTable</code></pre>
 
 
 Returns true if the given object is an instance of DefaultRouteTable.  This is designed to work even
@@ -3307,7 +3308,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultRouteTable.ts#L102">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultRouteTableRoute'>outputs.ec2.DefaultRouteTableRoute</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultRouteTableRoute'>DefaultRouteTableRoute</a>[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -3475,7 +3476,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultSecurityGroup</code></pre>
 
 
 Returns true if the given object is an instance of DefaultSecurityGroup.  This is designed to work even
@@ -3490,7 +3491,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L138">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupEgress'>outputs.ec2.DefaultSecurityGroupEgress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupEgress'>DefaultSecurityGroupEgress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -3508,7 +3509,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L143">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupIngress'>outputs.ec2.DefaultSecurityGroupIngress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupIngress'>DefaultSecurityGroupIngress</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -3631,7 +3632,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultSubnet</code></pre>
 
 
 Returns true if the given object is an instance of DefaultSubnet.  This is designed to work even
@@ -3803,7 +3804,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultVpc</code></pre>
 
 
 Returns true if the given object is an instance of DefaultVpc.  This is designed to work even
@@ -4035,7 +4036,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultVpcDhcpOptions</code></pre>
 
 
 Returns true if the given object is an instance of DefaultVpcDhcpOptions.  This is designed to work even
@@ -4173,7 +4174,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EgressOnlyInternetGateway</code></pre>
 
 
 Returns true if the given object is an instance of EgressOnlyInternetGateway.  This is designed to work even
@@ -4341,7 +4342,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Eip</code></pre>
 
 
 Returns true if the given object is an instance of Eip.  This is designed to work even
@@ -4540,7 +4541,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EipAssociation</code></pre>
 
 
 Returns true if the given object is an instance of EipAssociation.  This is designed to work even
@@ -4690,7 +4691,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Fleet</code></pre>
 
 
 Returns true if the given object is an instance of Fleet.  This is designed to work even
@@ -4717,7 +4718,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L68">property <b>launchTemplateConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>launchTemplateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetLaunchTemplateConfig'>outputs.ec2.FleetLaunchTemplateConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>launchTemplateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetLaunchTemplateConfig'>FleetLaunchTemplateConfig</a>&gt;;</code></pre>
 
 Nested argument containing EC2 Launch Template configurations. Defined below.
 
@@ -4725,7 +4726,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L72">property <b>onDemandOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>onDemandOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetOnDemandOptions'>outputs.ec2.FleetOnDemandOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>onDemandOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetOnDemandOptions'>FleetOnDemandOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing On-Demand configurations. Defined below.
 
@@ -4741,7 +4742,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L80">property <b>spotOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>spotOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetSpotOptions'>outputs.ec2.FleetSpotOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>spotOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetSpotOptions'>FleetSpotOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing Spot configurations. Defined below.
 
@@ -4757,7 +4758,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L88">property <b>targetCapacitySpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetCapacitySpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetTargetCapacitySpecification'>outputs.ec2.FleetTargetCapacitySpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetCapacitySpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FleetTargetCapacitySpecification'>FleetTargetCapacitySpecification</a>&gt;;</code></pre>
 
 Nested argument containing target capacity configurations. Defined below.
 
@@ -4912,7 +4913,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FlowLog</code></pre>
 
 
 Returns true if the given object is an instance of FlowLog.  This is designed to work even
@@ -5087,7 +5088,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -5147,7 +5148,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L103">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceCreditSpecification'>outputs.ec2.InstanceCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceCreditSpecification'>InstanceCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -5164,7 +5165,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L113">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice'>outputs.ec2.InstanceEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -5185,7 +5186,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L126">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice'>outputs.ec2.InstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -5285,7 +5286,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L172">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceNetworkInterface'>outputs.ec2.InstanceNetworkInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceNetworkInterface'>InstanceNetworkInterface</a>[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -5357,7 +5358,7 @@ The public IP address assigned to the instance, if applicable. **NOTE**: If you 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L213">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice'>outputs.ec2.InstanceRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5507,7 +5508,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InternetGateway</code></pre>
 
 
 Returns true if the given object is an instance of InternetGateway.  This is designed to work even
@@ -5623,7 +5624,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyPair</code></pre>
 
 
 Returns true if the given object is an instance of KeyPair.  This is designed to work even
@@ -5891,7 +5892,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LaunchConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of LaunchConfiguration.  This is designed to work even
@@ -5909,7 +5910,7 @@ Associate a public ip address with an instance in a VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L214">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEbsBlockDevice'>outputs.ec2.LaunchConfigurationEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEbsBlockDevice'>LaunchConfigurationEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -5934,7 +5935,7 @@ Enables/disables detailed monitoring. This is enabled by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L227">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEphemeralBlockDevice'>outputs.ec2.LaunchConfigurationEphemeralBlockDevice</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEphemeralBlockDevice'>LaunchConfigurationEphemeralBlockDevice</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -6013,7 +6014,7 @@ for more details
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L265">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationRootBlockDevice'>outputs.ec2.LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationRootBlockDevice'>LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -6124,7 +6125,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LaunchTemplate</code></pre>
 
 
 Returns true if the given object is an instance of LaunchTemplate.  This is designed to work even
@@ -6142,7 +6143,7 @@ Amazon Resource Name (ARN) of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L49">property <b>blockDeviceMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateBlockDeviceMapping'>outputs.ec2.LaunchTemplateBlockDeviceMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateBlockDeviceMapping'>LaunchTemplateBlockDeviceMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -6151,7 +6152,7 @@ See Block Devices below for details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L53">property <b>capacityReservationSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>capacityReservationSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCapacityReservationSpecification'>outputs.ec2.LaunchTemplateCapacityReservationSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>capacityReservationSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCapacityReservationSpecification'>LaunchTemplateCapacityReservationSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 
@@ -6159,7 +6160,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L58">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCreditSpecification'>outputs.ec2.LaunchTemplateCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCreditSpecification'>LaunchTemplateCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -6201,7 +6202,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L80">property <b>elasticGpuSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>elasticGpuSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticGpuSpecification'>outputs.ec2.LaunchTemplateElasticGpuSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>elasticGpuSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticGpuSpecification'>LaunchTemplateElasticGpuSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -6210,7 +6211,7 @@ below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L84">property <b>elasticInferenceAccelerator</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>elasticInferenceAccelerator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticInferenceAccelerator'>outputs.ec2.LaunchTemplateElasticInferenceAccelerator</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>elasticInferenceAccelerator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticInferenceAccelerator'>LaunchTemplateElasticInferenceAccelerator</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 
@@ -6218,7 +6219,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L89">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>iamInstanceProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateIamInstanceProfile'>outputs.ec2.LaunchTemplateIamInstanceProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>iamInstanceProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateIamInstanceProfile'>LaunchTemplateIamInstanceProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -6253,7 +6254,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L103">property <b>instanceMarketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>instanceMarketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateInstanceMarketOptions'>outputs.ec2.LaunchTemplateInstanceMarketOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>instanceMarketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateInstanceMarketOptions'>LaunchTemplateInstanceMarketOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -6294,7 +6295,7 @@ The latest version of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L123">property <b>licenseSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>licenseSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateLicenseSpecification'>outputs.ec2.LaunchTemplateLicenseSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>licenseSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateLicenseSpecification'>LaunchTemplateLicenseSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of license specifications to associate with. See License Specification below for more details.
 
@@ -6302,7 +6303,7 @@ A list of license specifications to associate with. See License Specification be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L127">property <b>monitoring</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>monitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateMonitoring'>outputs.ec2.LaunchTemplateMonitoring</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>monitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateMonitoring'>LaunchTemplateMonitoring</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The monitoring option for the instance. See Monitoring below for more details.
 
@@ -6326,7 +6327,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L140">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateNetworkInterface'>outputs.ec2.LaunchTemplateNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateNetworkInterface'>LaunchTemplateNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -6335,7 +6336,7 @@ Interfaces below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L144">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplatePlacement'>outputs.ec2.LaunchTemplatePlacement</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplatePlacement'>LaunchTemplatePlacement</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The placement of the instance. See Placement below for more details.
 
@@ -6360,7 +6361,7 @@ A list of security group names to associate with. If you are creating Instances 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L157">property <b>tagSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tagSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateTagSpecification'>outputs.ec2.LaunchTemplateTagSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tagSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateTagSpecification'>LaunchTemplateTagSpecification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The tags to apply to the resources during launch. See Tag Specifications below for more details.
 
@@ -6467,7 +6468,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MainRouteTableAssociation</code></pre>
 
 
 Returns true if the given object is an instance of MainRouteTableAssociation.  This is designed to work even
@@ -6592,7 +6593,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NatGateway</code></pre>
 
 
 Returns true if the given object is an instance of NatGateway.  This is designed to work even
@@ -6750,7 +6751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkAcl</code></pre>
 
 
 Returns true if the given object is an instance of NetworkAcl.  This is designed to work even
@@ -6760,7 +6761,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L82">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkAclEgress'>outputs.ec2.NetworkAclEgress</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkAclEgress'>NetworkAclEgress</a>[]&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -6778,7 +6779,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L87">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkAclIngress'>outputs.ec2.NetworkAclIngress</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkAclIngress'>NetworkAclIngress</a>[]&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -6903,7 +6904,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkAclRule</code></pre>
 
 
 Returns true if the given object is an instance of NetworkAclRule.  This is designed to work even
@@ -7081,7 +7082,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterface</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterface.  This is designed to work even
@@ -7091,7 +7092,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkInterface.ts#L61">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkInterfaceAttachment'>outputs.ec2.NetworkInterfaceAttachment</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NetworkInterfaceAttachment'>NetworkInterfaceAttachment</a>[]&gt;;</code></pre>
 
 Block to define the attachment of the ENI. Documented below.
 
@@ -7241,7 +7242,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceAttachment</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceAttachment.  This is designed to work even
@@ -7430,7 +7431,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceSecurityGroupAttachment</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceSecurityGroupAttachment.  This is designed to work even
@@ -7610,7 +7611,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PeeringConnectionOptions</code></pre>
 
 
 Returns true if the given object is an instance of PeeringConnectionOptions.  This is designed to work even
@@ -7620,7 +7621,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L137">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsAccepter'>outputs.ec2.PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsAccepter'>PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -7639,7 +7640,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L143">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsRequester'>outputs.ec2.PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsRequester'>PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -7723,7 +7724,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PlacementGroup</code></pre>
 
 
 Returns true if the given object is an instance of PlacementGroup.  This is designed to work even
@@ -7844,7 +7845,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProxyProtocolPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ProxyProtocolPolicy.  This is designed to work even
@@ -7941,7 +7942,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Route</code></pre>
 
 
 Returns true if the given object is an instance of Route.  This is designed to work even
@@ -8157,7 +8158,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouteTable</code></pre>
 
 
 Returns true if the given object is an instance of RouteTable.  This is designed to work even
@@ -8192,7 +8193,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/routeTable.ts#L95">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteTableRoute'>outputs.ec2.RouteTableRoute</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteTableRoute'>RouteTableRoute</a>[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
 
@@ -8271,7 +8272,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouteTableAssociation</code></pre>
 
 
 Returns true if the given object is an instance of RouteTableAssociation.  This is designed to work even
@@ -8366,7 +8367,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityGroup</code></pre>
 
 
 Returns true if the given object is an instance of SecurityGroup.  This is designed to work even
@@ -8395,7 +8396,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L55">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupEgress'>outputs.ec2.SecurityGroupEgress</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>egress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupEgress'>SecurityGroupEgress</a>[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -8414,7 +8415,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L61">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupIngress'>outputs.ec2.SecurityGroupIngress</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupIngress'>SecurityGroupIngress</a>[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -8588,7 +8589,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SecurityGroupRule</code></pre>
 
 
 Returns true if the given object is an instance of SecurityGroupRule.  This is designed to work even
@@ -8771,7 +8772,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SnapshotCreateVolumePermission</code></pre>
 
 
 Returns true if the given object is an instance of SnapshotCreateVolumePermission.  This is designed to work even
@@ -8876,7 +8877,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpotDatafeedSubscription</code></pre>
 
 
 Returns true if the given object is an instance of SpotDatafeedSubscription.  This is designed to work even
@@ -9037,7 +9038,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpotFleetRequest</code></pre>
 
 
 Returns true if the given object is an instance of SpotFleetRequest.  This is designed to work even
@@ -9122,7 +9123,7 @@ the number of Spot pools that you specify.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotFleetRequest.ts#L157">property <b>launchSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>launchSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecification'>outputs.ec2.SpotFleetRequestLaunchSpecification</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>launchSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecification'>SpotFleetRequestLaunchSpecification</a>[]&gt;;</code></pre>
 
 Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -9310,7 +9311,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpotInstanceRequest</code></pre>
 
 
 Returns true if the given object is an instance of SpotInstanceRequest.  This is designed to work even
@@ -9377,7 +9378,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L112">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestCreditSpecification'>outputs.ec2.SpotInstanceRequestCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestCreditSpecification'>SpotInstanceRequestCreditSpecification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -9394,7 +9395,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L122">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEbsBlockDevice'>outputs.ec2.SpotInstanceRequestEbsBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEbsBlockDevice'>SpotInstanceRequestEbsBlockDevice</a>[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -9415,7 +9416,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L135">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEphemeralBlockDevice'>outputs.ec2.SpotInstanceRequestEphemeralBlockDevice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEphemeralBlockDevice'>SpotInstanceRequestEphemeralBlockDevice</a>[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -9529,7 +9530,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L187">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestNetworkInterface'>outputs.ec2.SpotInstanceRequestNetworkInterface</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestNetworkInterface'>SpotInstanceRequestNetworkInterface</a>[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -9591,7 +9592,7 @@ The public IP address assigned to the instance, if applicable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L218">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestRootBlockDevice'>outputs.ec2.SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rootBlockDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestRootBlockDevice'>SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -9795,7 +9796,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subnet</code></pre>
 
 
 Returns true if the given object is an instance of Subnet.  This is designed to work even
@@ -9989,7 +9990,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VolumeAttachment</code></pre>
 
 
 Returns true if the given object is an instance of VolumeAttachment.  This is designed to work even
@@ -10138,7 +10139,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Vpc</code></pre>
 
 
 Returns true if the given object is an instance of Vpc.  This is designed to work even
@@ -10396,7 +10397,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcDhcpOptions</code></pre>
 
 
 Returns true if the given object is an instance of VpcDhcpOptions.  This is designed to work even
@@ -10542,7 +10543,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcDhcpOptionsAssociation</code></pre>
 
 
 Returns true if the given object is an instance of VpcDhcpOptionsAssociation.  This is designed to work even
@@ -10711,7 +10712,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpoint</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpoint.  This is designed to work even
@@ -10737,7 +10738,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcEndpoint.ts#L132">property <b>dnsEntries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dnsEntries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcEndpointDnsEntry'>outputs.ec2.VpcEndpointDnsEntry</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dnsEntries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcEndpointDnsEntry'>VpcEndpointDnsEntry</a>[]&gt;;</code></pre>
 
 The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 
@@ -10953,7 +10954,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointConnectionNotification</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpointConnectionNotification.  This is designed to work even
@@ -11086,7 +11087,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointRouteTableAssociation</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpointRouteTableAssociation.  This is designed to work even
@@ -11211,7 +11212,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointService</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpointService.  This is designed to work even
@@ -11393,7 +11394,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointServiceAllowedPrinciple</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpointServiceAllowedPrinciple.  This is designed to work even
@@ -11502,7 +11503,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointSubnetAssociation</code></pre>
 
 
 Returns true if the given object is an instance of VpcEndpointSubnetAssociation.  This is designed to work even
@@ -11609,7 +11610,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcIpv4CidrBlockAssociation</code></pre>
 
 
 Returns true if the given object is an instance of VpcIpv4CidrBlockAssociation.  This is designed to work even
@@ -11716,7 +11717,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcPeeringConnection</code></pre>
 
 
 Returns true if the given object is an instance of VpcPeeringConnection.  This is designed to work even
@@ -11734,7 +11735,7 @@ The status of the VPC Peering Connection request.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L68">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepter'>outputs.ec2.VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepter'>VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -11787,7 +11788,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L92">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionRequester'>outputs.ec2.VpcPeeringConnectionRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionRequester'>VpcPeeringConnectionRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -11911,7 +11912,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcPeeringConnectionAccepter</code></pre>
 
 
 Returns true if the given object is an instance of VpcPeeringConnectionAccepter.  This is designed to work even
@@ -11929,7 +11930,7 @@ The status of the VPC Peering Connection request.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L93">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepterAccepter'>outputs.ec2.VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accepter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepterAccepter'>VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -11979,7 +11980,7 @@ The ID of the requester VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L114">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepterRequester'>outputs.ec2.VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requester: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcPeeringConnectionAccepterRequester'>VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -12118,7 +12119,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnConnection</code></pre>
 
 
 Returns true if the given object is an instance of VpnConnection.  This is designed to work even
@@ -12153,7 +12154,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L101">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpnConnectionRoute'>outputs.ec2.VpnConnectionRoute</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpnConnectionRoute'>VpnConnectionRoute</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VpnConnection-staticRoutesOnly">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L105">property <b>staticRoutesOnly</b></a>
 </h4>
@@ -12319,7 +12320,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L178">property <b>vgwTelemetries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vgwTelemetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpnConnectionVgwTelemetry'>outputs.ec2.VpnConnectionVgwTelemetry</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vgwTelemetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpnConnectionVgwTelemetry'>VpnConnectionVgwTelemetry</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VpnConnection-vpnGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L182">property <b>vpnGatewayId</b></a>
 </h4>
@@ -12406,7 +12407,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnConnectionRoute</code></pre>
 
 
 Returns true if the given object is an instance of VpnConnectionRoute.  This is designed to work even
@@ -12509,7 +12510,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnGateway</code></pre>
 
 
 Returns true if the given object is an instance of VpnGateway.  This is designed to work even
@@ -12643,7 +12644,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnGatewayAttachment</code></pre>
 
 
 Returns true if the given object is an instance of VpnGatewayAttachment.  This is designed to work even
@@ -12748,7 +12749,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnGatewayRoutePropagation</code></pre>
 
 
 Returns true if the given object is an instance of VpnGatewayRoutePropagation.  This is designed to work even
@@ -13814,7 +13815,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L277">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEbsBlockDevice'>inputs.ec2.AmiEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEbsBlockDevice'>AmiEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -13831,7 +13832,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L286">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEphemeralBlockDevice'>inputs.ec2.AmiEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEphemeralBlockDevice'>AmiEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -13928,7 +13929,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L316">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEbsBlockDevice'>inputs.ec2.AmiCopyEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEbsBlockDevice'>AmiCopyEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -13945,7 +13946,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L325">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEphemeralBlockDevice'>inputs.ec2.AmiCopyEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEphemeralBlockDevice'>AmiCopyEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -14022,7 +14023,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L234">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEbsBlockDevice'>inputs.ec2.AmiCopyEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEbsBlockDevice'>AmiCopyEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -14047,7 +14048,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiCopy.ts#L247">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEphemeralBlockDevice'>inputs.ec2.AmiCopyEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiCopyEphemeralBlockDevice'>AmiCopyEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -14180,7 +14181,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L296">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEbsBlockDevice'>inputs.ec2.AmiFromInstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEbsBlockDevice'>AmiFromInstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -14189,7 +14190,7 @@ attached to created instances. The structure of this block is described below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L301">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEphemeralBlockDevice'>inputs.ec2.AmiFromInstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEphemeralBlockDevice'>AmiFromInstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -14259,7 +14260,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L221">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEbsBlockDevice'>inputs.ec2.AmiFromInstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEbsBlockDevice'>AmiFromInstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -14276,7 +14277,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/amiFromInstance.ts#L230">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEphemeralBlockDevice'>inputs.ec2.AmiFromInstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiFromInstanceEphemeralBlockDevice'>AmiFromInstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -14462,7 +14463,7 @@ A longer, human-readable description for the AMI.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L206">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEbsBlockDevice'>inputs.ec2.AmiEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEbsBlockDevice'>AmiEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -14479,7 +14480,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/ami.ts#L215">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEphemeralBlockDevice'>inputs.ec2.AmiEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEphemeralBlockDevice'>AmiEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -15246,7 +15247,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L263">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclEgress'>inputs.ec2.DefaultNetworkAclEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclEgress'>DefaultNetworkAclEgress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 
@@ -15254,7 +15255,7 @@ Specifies an egress rule. Parameters defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L267">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclIngress'>inputs.ec2.DefaultNetworkAclIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclIngress'>DefaultNetworkAclIngress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 
@@ -15298,7 +15299,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L227">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclEgress'>inputs.ec2.DefaultNetworkAclEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclEgress'>DefaultNetworkAclEgress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 
@@ -15306,7 +15307,7 @@ Specifies an egress rule. Parameters defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultNetworkAcl.ts#L231">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclIngress'>inputs.ec2.DefaultNetworkAclIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultNetworkAclIngress'>DefaultNetworkAclIngress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 
@@ -15373,7 +15374,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultRouteTable.ts#L194">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultRouteTableRoute'>inputs.ec2.DefaultRouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultRouteTableRoute'>DefaultRouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -15424,7 +15425,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultRouteTable.ts#L170">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultRouteTableRoute'>inputs.ec2.DefaultRouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultRouteTableRoute'>DefaultRouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -15456,7 +15457,7 @@ The set of arguments for constructing a DefaultSecurityGroup resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L250">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupEgress'>inputs.ec2.DefaultSecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupEgress'>DefaultSecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -15465,7 +15466,7 @@ egress rule. Each egress block supports fields documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L255">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupIngress'>inputs.ec2.DefaultSecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupIngress'>DefaultSecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -15512,7 +15513,7 @@ Input properties used for looking up and filtering DefaultSecurityGroup resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L215">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupEgress'>inputs.ec2.DefaultSecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupEgress'>DefaultSecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -15521,7 +15522,7 @@ egress rule. Each egress block supports fields documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/defaultSecurityGroup.ts#L220">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupIngress'>inputs.ec2.DefaultSecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupIngress'>DefaultSecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -16360,7 +16361,7 @@ Whether running instances should be terminated if the total target capacity of t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L211">property <b>launchTemplateConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetLaunchTemplateConfig'>inputs.ec2.FleetLaunchTemplateConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetLaunchTemplateConfig'>FleetLaunchTemplateConfig</a>&gt;;</code></pre>
 
 Nested argument containing EC2 Launch Template configurations. Defined below.
 
@@ -16368,7 +16369,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L215">property <b>onDemandOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>onDemandOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetOnDemandOptions'>inputs.ec2.FleetOnDemandOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onDemandOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetOnDemandOptions'>FleetOnDemandOptions</a>&gt;;</code></pre>
 
 Nested argument containing On-Demand configurations. Defined below.
 
@@ -16384,7 +16385,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L223">property <b>spotOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>spotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetSpotOptions'>inputs.ec2.FleetSpotOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>spotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetSpotOptions'>FleetSpotOptions</a>&gt;;</code></pre>
 
 Nested argument containing Spot configurations. Defined below.
 
@@ -16400,7 +16401,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L231">property <b>targetCapacitySpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetCapacitySpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetTargetCapacitySpecification'>inputs.ec2.FleetTargetCapacitySpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetCapacitySpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetTargetCapacitySpecification'>FleetTargetCapacitySpecification</a>&gt;;</code></pre>
 
 Nested argument containing target capacity configurations. Defined below.
 
@@ -16450,7 +16451,7 @@ Whether running instances should be terminated if the total target capacity of t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L165">property <b>launchTemplateConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetLaunchTemplateConfig'>inputs.ec2.FleetLaunchTemplateConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetLaunchTemplateConfig'>FleetLaunchTemplateConfig</a>&gt;;</code></pre>
 
 Nested argument containing EC2 Launch Template configurations. Defined below.
 
@@ -16458,7 +16459,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L169">property <b>onDemandOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>onDemandOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetOnDemandOptions'>inputs.ec2.FleetOnDemandOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onDemandOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetOnDemandOptions'>FleetOnDemandOptions</a>&gt;;</code></pre>
 
 Nested argument containing On-Demand configurations. Defined below.
 
@@ -16474,7 +16475,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L177">property <b>spotOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>spotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetSpotOptions'>inputs.ec2.FleetSpotOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>spotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetSpotOptions'>FleetSpotOptions</a>&gt;;</code></pre>
 
 Nested argument containing Spot configurations. Defined below.
 
@@ -16490,7 +16491,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/fleet.ts#L185">property <b>targetCapacitySpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetCapacitySpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetTargetCapacitySpecification'>inputs.ec2.FleetTargetCapacitySpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetCapacitySpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FleetTargetCapacitySpecification'>FleetTargetCapacitySpecification</a>&gt;;</code></pre>
 
 Nested argument containing target capacity configurations. Defined below.
 
@@ -16762,7 +16763,7 @@ A collection of arguments for invoking getCustomerGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getCustomerGateway.ts#L63">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCustomerGatewayFilter'>inputs.ec2.GetCustomerGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCustomerGatewayFilter'>GetCustomerGatewayFilter</a>[];</code></pre>
 
 One or more [name-value pairs][dcg-filters] to filter by.
 
@@ -16801,7 +16802,7 @@ A collection of values returned by getCustomerGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getCustomerGateway.ts#L79">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCustomerGatewayFilter'>outputs.ec2.GetCustomerGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCustomerGatewayFilter'>GetCustomerGatewayFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCustomerGatewayResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getCustomerGateway.ts#L80">property <b>id</b></a>
 </h4>
@@ -16845,7 +16846,7 @@ A collection of arguments for invoking getInstance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L66">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceFilter'>inputs.ec2.GetInstanceFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceFilter'>GetInstanceFilter</a>[];</code></pre>
 
 One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -16935,7 +16936,7 @@ The availability zone of the Instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L110">property <b>creditSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceCreditSpecification'>outputs.ec2.GetInstanceCreditSpecification</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceCreditSpecification'>GetInstanceCreditSpecification</a>[];</code></pre>
 
 The credit specification of the Instance.
 
@@ -16948,7 +16949,7 @@ The credit specification of the Instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L115">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEbsBlockDevice'>outputs.ec2.GetInstanceEbsBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEbsBlockDevice'>GetInstanceEbsBlockDevice</a>[];</code></pre>
 
 The EBS block device mappings of the Instance.
 
@@ -16964,7 +16965,7 @@ Whether the Instance is EBS optimized or not (Boolean).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L123">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEphemeralBlockDevice'>outputs.ec2.GetInstanceEphemeralBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEphemeralBlockDevice'>GetInstanceEphemeralBlockDevice</a>[];</code></pre>
 
 The ephemeral block device mappings of the Instance.
 
@@ -16972,7 +16973,7 @@ The ephemeral block device mappings of the Instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L124">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceFilter'>outputs.ec2.GetInstanceFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceFilter'>GetInstanceFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-getPasswordData">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L125">property <b>getPasswordData</b></a>
 </h4>
@@ -17115,7 +17116,7 @@ The public IP address assigned to the Instance, if applicable. **NOTE**: If you 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstance.ts#L190">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceRootBlockDevice'>outputs.ec2.GetInstanceRootBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceRootBlockDevice'>GetInstanceRootBlockDevice</a>[];</code></pre>
 
 The root block device mappings of the Instance
 
@@ -17197,7 +17198,7 @@ A collection of arguments for invoking getInstances.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstances.ts#L39">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstancesFilter'>inputs.ec2.GetInstancesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstancesFilter'>GetInstancesFilter</a>[];</code></pre>
 
 One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -17234,7 +17235,7 @@ A collection of values returned by getInstances.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstances.ts#L55">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstancesFilter'>outputs.ec2.GetInstancesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstancesFilter'>GetInstancesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInstances.ts#L73">property <b>id</b></a>
 </h4>
@@ -17291,7 +17292,7 @@ A collection of arguments for invoking getInternetGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInternetGateway.ts#L56">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInternetGatewayFilter'>inputs.ec2.GetInternetGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInternetGatewayFilter'>GetInternetGatewayFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -17326,12 +17327,12 @@ A collection of values returned by getInternetGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInternetGateway.ts#L72">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayAttachment'>outputs.ec2.GetInternetGatewayAttachment</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayAttachment'>GetInternetGatewayAttachment</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInternetGatewayResult-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInternetGateway.ts#L73">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayFilter'>outputs.ec2.GetInternetGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayFilter'>GetInternetGatewayFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInternetGatewayResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getInternetGateway.ts#L83">property <b>id</b></a>
 </h4>
@@ -17398,7 +17399,7 @@ Whether a Public IP address is associated with the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchConfiguration.ts#L61">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEbsBlockDevice'>outputs.ec2.GetLaunchConfigurationEbsBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEbsBlockDevice'>GetLaunchConfigurationEbsBlockDevice</a>[];</code></pre>
 
 The EBS Block Devices attached to the instance.
 
@@ -17422,7 +17423,7 @@ Whether Detailed Monitoring is Enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchConfiguration.ts#L73">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEphemeralBlockDevice'>outputs.ec2.GetLaunchConfigurationEphemeralBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEphemeralBlockDevice'>GetLaunchConfigurationEphemeralBlockDevice</a>[];</code></pre>
 
 The Ephemeral volumes on the instance.
 
@@ -17486,7 +17487,7 @@ The Tenancy of the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchConfiguration.ts#L101">property <b>rootBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationRootBlockDevice'>outputs.ec2.GetLaunchConfigurationRootBlockDevice</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevices: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationRootBlockDevice'>GetLaunchConfigurationRootBlockDevice</a>[];</code></pre>
 
 The Root Block Device of the instance.
 
@@ -17575,7 +17576,7 @@ Amazon Resource Name (ARN) of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L63">property <b>blockDeviceMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMapping'>outputs.ec2.GetLaunchTemplateBlockDeviceMapping</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMapping'>GetLaunchTemplateBlockDeviceMapping</a>[];</code></pre>
 
 Specify volumes to attach to the instance besides the volumes specified by the AMI.
 
@@ -17583,7 +17584,7 @@ Specify volumes to attach to the instance besides the volumes specified by the A
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L68">property <b>creditSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateCreditSpecification'>outputs.ec2.GetLaunchTemplateCreditSpecification</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateCreditSpecification'>GetLaunchTemplateCreditSpecification</a>[];</code></pre>
 
 Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -17625,7 +17626,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L90">property <b>elasticGpuSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateElasticGpuSpecification'>outputs.ec2.GetLaunchTemplateElasticGpuSpecification</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateElasticGpuSpecification'>GetLaunchTemplateElasticGpuSpecification</a>[];</code></pre>
 
 The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -17634,7 +17635,7 @@ below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L95">property <b>iamInstanceProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateIamInstanceProfile'>outputs.ec2.GetLaunchTemplateIamInstanceProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateIamInstanceProfile'>GetLaunchTemplateIamInstanceProfile</a>[];</code></pre>
 
 The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -17668,7 +17669,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L109">property <b>instanceMarketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOption'>outputs.ec2.GetLaunchTemplateInstanceMarketOption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOption'>GetLaunchTemplateInstanceMarketOption</a>[];</code></pre>
 
 The market (purchasing) option for the instance.
 below for details.
@@ -17709,7 +17710,7 @@ The latest version of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L129">property <b>monitorings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitorings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMonitoring'>outputs.ec2.GetLaunchTemplateMonitoring</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitorings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMonitoring'>GetLaunchTemplateMonitoring</a>[];</code></pre>
 
 The monitoring option for the instance.
 
@@ -17722,7 +17723,7 @@ The monitoring option for the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L135">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateNetworkInterface'>outputs.ec2.GetLaunchTemplateNetworkInterface</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateNetworkInterface'>GetLaunchTemplateNetworkInterface</a>[];</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -17731,7 +17732,7 @@ Interfaces below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L139">property <b>placements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placements: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplatePlacement'>outputs.ec2.GetLaunchTemplatePlacement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placements: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplatePlacement'>GetLaunchTemplatePlacement</a>[];</code></pre>
 
 The placement of the instance.
 
@@ -17756,7 +17757,7 @@ A list of security group names to associate with. If you are creating Instances 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getLaunchTemplate.ts#L152">property <b>tagSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tagSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateTagSpecification'>outputs.ec2.GetLaunchTemplateTagSpecification</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tagSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateTagSpecification'>GetLaunchTemplateTagSpecification</a>[];</code></pre>
 
 The tags to apply to the resources during launch.
 
@@ -17798,7 +17799,7 @@ A collection of arguments for invoking getNatGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNatGateway.ts#L70">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNatGatewayFilter'>inputs.ec2.GetNatGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNatGatewayFilter'>GetNatGatewayFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -17865,7 +17866,7 @@ The Id of the EIP allocated to the selected Nat Gateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNatGateway.ts#L102">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNatGatewayFilter'>outputs.ec2.GetNatGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNatGatewayFilter'>GetNatGatewayFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetNatGatewayResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNatGateway.ts#L103">property <b>id</b></a>
 </h4>
@@ -17929,7 +17930,7 @@ A collection of arguments for invoking getNetworkAcls.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkAcls.ts#L83">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkAclsFilter'>inputs.ec2.GetNetworkAclsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkAclsFilter'>GetNetworkAclsFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -17964,7 +17965,7 @@ A collection of values returned by getNetworkAcls.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkAcls.ts#L99">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkAclsFilter'>outputs.ec2.GetNetworkAclsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkAclsFilter'>GetNetworkAclsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkAclsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkAcls.ts#L109">property <b>id</b></a>
 </h4>
@@ -18005,7 +18006,7 @@ A collection of arguments for invoking getNetworkInterface.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L50">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfaceFilter'>inputs.ec2.GetNetworkInterfaceFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfaceFilter'>GetNetworkInterfaceFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There are several valid keys, for a full reference, check out [describe-network-interfaces](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-network-interfaces.html) in the AWS CLI reference.
 
@@ -18036,7 +18037,7 @@ A collection of values returned by getNetworkInterface.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L65">property <b>associations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>associations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAssociation'>outputs.ec2.GetNetworkInterfaceAssociation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>associations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAssociation'>GetNetworkInterfaceAssociation</a>[];</code></pre>
 
 The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
 
@@ -18044,7 +18045,7 @@ The association information for an Elastic IP address (IPv4) associated with the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L66">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAttachment'>outputs.ec2.GetNetworkInterfaceAttachment</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAttachment'>GetNetworkInterfaceAttachment</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkInterfaceResult-availabilityZone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L70">property <b>availabilityZone</b></a>
 </h4>
@@ -18065,7 +18066,7 @@ Description of the network interface.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L75">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceFilter'>outputs.ec2.GetNetworkInterfaceFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceFilter'>GetNetworkInterfaceFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkInterfaceResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterface.ts#L76">property <b>id</b></a>
 </h4>
@@ -18181,7 +18182,7 @@ A collection of arguments for invoking getNetworkInterfaces.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterfaces.ts#L81">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfacesFilter'>inputs.ec2.GetNetworkInterfacesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfacesFilter'>GetNetworkInterfacesFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18208,7 +18209,7 @@ A collection of values returned by getNetworkInterfaces.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterfaces.ts#L93">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfacesFilter'>outputs.ec2.GetNetworkInterfacesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfacesFilter'>GetNetworkInterfacesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkInterfacesResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getNetworkInterfaces.ts#L102">property <b>id</b></a>
 </h4>
@@ -18402,7 +18403,7 @@ A collection of arguments for invoking getRouteTable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L68">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTableFilter'>inputs.ec2.GetRouteTableFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTableFilter'>GetRouteTableFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18461,12 +18462,12 @@ A collection of values returned by getRouteTable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L96">property <b>associations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>associations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableAssociation'>outputs.ec2.GetRouteTableAssociation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>associations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableAssociation'>GetRouteTableAssociation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteTableResult-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L97">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableFilter'>outputs.ec2.GetRouteTableFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableFilter'>GetRouteTableFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteTableResult-gatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L101">property <b>gatewayId</b></a>
 </h4>
@@ -18503,7 +18504,7 @@ The Route Table ID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L110">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableRoute'>outputs.ec2.GetRouteTableRoute</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableRoute'>GetRouteTableRoute</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteTableResult-subnetId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTable.ts#L114">property <b>subnetId</b></a>
 </h4>
@@ -18536,7 +18537,7 @@ A collection of arguments for invoking getRouteTables.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTables.ts#L66">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTablesFilter'>inputs.ec2.GetRouteTablesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTablesFilter'>GetRouteTablesFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18571,7 +18572,7 @@ A collection of values returned by getRouteTables.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTables.ts#L82">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTablesFilter'>outputs.ec2.GetRouteTablesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTablesFilter'>GetRouteTablesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteTablesResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getRouteTables.ts#L92">property <b>id</b></a>
 </h4>
@@ -18612,7 +18613,7 @@ A collection of arguments for invoking getSecurityGroup.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroup.ts#L66">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupFilter'>inputs.ec2.GetSecurityGroupFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupFilter'>GetSecurityGroupFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18680,7 +18681,7 @@ The description of the security group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroup.ts#L99">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupFilter'>outputs.ec2.GetSecurityGroupFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupFilter'>GetSecurityGroupFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroup.ts#L100">property <b>id</b></a>
 </h4>
@@ -18715,7 +18716,7 @@ A collection of arguments for invoking getSecurityGroups.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroups.ts#L73">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupsFilter'>inputs.ec2.GetSecurityGroupsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupsFilter'>GetSecurityGroupsFilter</a>[];</code></pre>
 
 One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -18744,7 +18745,7 @@ A collection of values returned by getSecurityGroups.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroups.ts#L85">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupsFilter'>outputs.ec2.GetSecurityGroupsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupsFilter'>GetSecurityGroupsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityGroupsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSecurityGroups.ts#L99">property <b>id</b></a>
 </h4>
@@ -18823,7 +18824,7 @@ subnet must be the default subnet for its associated availability zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnet.ts#L95">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetFilter'>inputs.ec2.GetSubnetFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetFilter'>GetSubnetFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18882,7 +18883,7 @@ A collection of arguments for invoking getSubnetIds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnetIds.ts#L85">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetIdsFilter'>inputs.ec2.GetSubnetIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetIdsFilter'>GetSubnetIdsFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -18917,7 +18918,7 @@ A collection of values returned by getSubnetIds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnetIds.ts#L101">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetIdsFilter'>outputs.ec2.GetSubnetIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetIdsFilter'>GetSubnetIdsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetIdsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnetIds.ts#L111">property <b>id</b></a>
 </h4>
@@ -18991,7 +18992,7 @@ The ARN of the subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnet.ts#L132">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetFilter'>outputs.ec2.GetSubnetFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetFilter'>GetSubnetFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getSubnet.ts#L133">property <b>id</b></a>
 </h4>
@@ -19074,7 +19075,7 @@ The DHCP options id of the desired VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpc.ts#L60">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcFilter'>inputs.ec2.GetVpcFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcFilter'>GetVpcFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -19126,7 +19127,7 @@ The EC2 DHCP Options ID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L76">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcDhcpOptionsFilter'>inputs.ec2.GetVpcDhcpOptionsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcDhcpOptionsFilter'>GetVpcDhcpOptionsFilter</a>[];</code></pre>
 
 List of custom filters as described below.
 
@@ -19173,7 +19174,7 @@ List of name servers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L96">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcDhcpOptionsFilter'>outputs.ec2.GetVpcDhcpOptionsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcDhcpOptionsFilter'>GetVpcDhcpOptionsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcDhcpOptionsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L120">property <b>id</b></a>
 </h4>
@@ -19236,7 +19237,7 @@ A collection of arguments for invoking getVpcEndpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcEndpoint.ts#L60">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcEndpointFilter'>inputs.ec2.GetVpcEndpointFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcEndpointFilter'>GetVpcEndpointFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -19303,7 +19304,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcEndpoint.ts#L95">property <b>dnsEntries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsEntries: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointDnsEntry'>outputs.ec2.GetVpcEndpointDnsEntry</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsEntries: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointDnsEntry'>GetVpcEndpointDnsEntry</a>[];</code></pre>
 
 The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 
@@ -19311,7 +19312,7 @@ The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interfac
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcEndpoint.ts#L96">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointFilter'>outputs.ec2.GetVpcEndpointFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointFilter'>GetVpcEndpointFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcEndpoint.ts#L97">property <b>id</b></a>
 </h4>
@@ -19578,7 +19579,7 @@ The CIDR block of the requester VPC of the specific VPC Peering Connection to re
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcPeeringConnection.ts#L76">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcPeeringConnectionFilter'>inputs.ec2.GetVpcPeeringConnectionFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcPeeringConnectionFilter'>GetVpcPeeringConnectionFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -19691,7 +19692,7 @@ A configuration block that describes [VPC Peering Connection]
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcPeeringConnection.ts#L130">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcPeeringConnectionFilter'>outputs.ec2.GetVpcPeeringConnectionFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcPeeringConnectionFilter'>GetVpcPeeringConnectionFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcPeeringConnectionResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcPeeringConnection.ts#L131">property <b>id</b></a>
 </h4>
@@ -19781,7 +19782,7 @@ The CIDR block for the association.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpc.ts#L89">property <b>cidrBlockAssociations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cidrBlockAssociations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcCidrBlockAssociation'>outputs.ec2.GetVpcCidrBlockAssociation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cidrBlockAssociations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcCidrBlockAssociation'>GetVpcCidrBlockAssociation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcResult-default">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpc.ts#L90">property <b>default</b></a>
 </h4>
@@ -19812,7 +19813,7 @@ Whether or not the VPC has DNS support
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpc.ts#L100">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcFilter'>outputs.ec2.GetVpcFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcFilter'>GetVpcFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpc.ts#L101">property <b>id</b></a>
 </h4>
@@ -19886,7 +19887,7 @@ A collection of arguments for invoking getVpcs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcs.ts#L75">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcsFilter'>inputs.ec2.GetVpcsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcsFilter'>GetVpcsFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -19913,7 +19914,7 @@ A collection of values returned by getVpcs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcs.ts#L87">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcsFilter'>outputs.ec2.GetVpcsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcsFilter'>GetVpcsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpcs.ts#L96">property <b>id</b></a>
 </h4>
@@ -19973,7 +19974,7 @@ The Availability Zone of the specific VPN Gateway to retrieve.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpnGateway.ts#L72">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpnGatewayFilter'>inputs.ec2.GetVpnGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpnGatewayFilter'>GetVpnGatewayFilter</a>[];</code></pre>
 
 Custom filter block as described below.
 
@@ -20031,7 +20032,7 @@ A collection of values returned by getVpnGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpnGateway.ts#L95">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpnGatewayFilter'>outputs.ec2.GetVpnGatewayFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpnGatewayFilter'>GetVpnGatewayFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpnGatewayResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/getVpnGateway.ts#L96">property <b>id</b></a>
 </h4>
@@ -20242,7 +20243,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L574">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceCreditSpecification'>inputs.ec2.InstanceCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceCreditSpecification'>InstanceCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -20259,7 +20260,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L584">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>inputs.ec2.InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -20280,7 +20281,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L597">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>inputs.ec2.InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -20305,7 +20306,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L611">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
 
 The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -20363,7 +20364,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L639">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceNetworkInterface'>inputs.ec2.InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceNetworkInterface'>InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -20388,7 +20389,7 @@ instance in a VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L653">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>inputs.ec2.InstanceRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -20537,7 +20538,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L395">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceCreditSpecification'>inputs.ec2.InstanceCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceCreditSpecification'>InstanceCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -20554,7 +20555,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L405">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>inputs.ec2.InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice'>InstanceEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -20575,7 +20576,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L418">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>inputs.ec2.InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice'>InstanceEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -20600,7 +20601,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L432">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
 
 The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -20666,7 +20667,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L464">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceNetworkInterface'>inputs.ec2.InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceNetworkInterface'>InstanceNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -20738,7 +20739,7 @@ The public IP address assigned to the instance, if applicable. **NOTE**: If you 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/instance.ts#L505">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>inputs.ec2.InstanceRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice'>InstanceRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -20981,7 +20982,7 @@ Associate a public ip address with an instance in a VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L463">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEbsBlockDevice'>inputs.ec2.LaunchConfigurationEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEbsBlockDevice'>LaunchConfigurationEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -21006,7 +21007,7 @@ Enables/disables detailed monitoring. This is enabled by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L476">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEphemeralBlockDevice'>inputs.ec2.LaunchConfigurationEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEphemeralBlockDevice'>LaunchConfigurationEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -21015,7 +21016,7 @@ Customize Ephemeral (also known as
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L481">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
 
 The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -21076,7 +21077,7 @@ for more details
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L514">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationRootBlockDevice'>inputs.ec2.LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationRootBlockDevice'>LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -21151,7 +21152,7 @@ Associate a public ip address with an instance in a VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L373">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEbsBlockDevice'>inputs.ec2.LaunchConfigurationEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEbsBlockDevice'>LaunchConfigurationEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -21176,7 +21177,7 @@ Enables/disables detailed monitoring. This is enabled by default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L386">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEphemeralBlockDevice'>inputs.ec2.LaunchConfigurationEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEphemeralBlockDevice'>LaunchConfigurationEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -21185,7 +21186,7 @@ Customize Ephemeral (also known as
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L391">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#InstanceProfile'>InstanceProfile</a>&gt;;</code></pre>
 
 The name attribute of the IAM instance profile to associate
 with launched instances.
@@ -21246,7 +21247,7 @@ for more details
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchConfiguration.ts#L424">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationRootBlockDevice'>inputs.ec2.LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationRootBlockDevice'>LaunchConfigurationRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -21313,7 +21314,7 @@ The set of arguments for constructing a LaunchTemplate resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L400">property <b>blockDeviceMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMapping'>inputs.ec2.LaunchTemplateBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMapping'>LaunchTemplateBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
 
 Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -21322,7 +21323,7 @@ See Block Devices below for details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L404">property <b>capacityReservationSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capacityReservationSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecification'>inputs.ec2.LaunchTemplateCapacityReservationSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capacityReservationSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecification'>LaunchTemplateCapacityReservationSpecification</a>&gt;;</code></pre>
 
 Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 
@@ -21330,7 +21331,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L409">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCreditSpecification'>inputs.ec2.LaunchTemplateCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCreditSpecification'>LaunchTemplateCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -21364,7 +21365,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L427">property <b>elasticGpuSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticGpuSpecification'>inputs.ec2.LaunchTemplateElasticGpuSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticGpuSpecification'>LaunchTemplateElasticGpuSpecification</a>&gt;[]&gt;;</code></pre>
 
 The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -21373,7 +21374,7 @@ below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L431">property <b>elasticInferenceAccelerator</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticInferenceAccelerator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticInferenceAccelerator'>inputs.ec2.LaunchTemplateElasticInferenceAccelerator</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticInferenceAccelerator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticInferenceAccelerator'>LaunchTemplateElasticInferenceAccelerator</a>&gt;;</code></pre>
 
 Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 
@@ -21381,7 +21382,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L436">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateIamInstanceProfile'>inputs.ec2.LaunchTemplateIamInstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateIamInstanceProfile'>LaunchTemplateIamInstanceProfile</a>&gt;;</code></pre>
 
 The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -21407,7 +21408,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L450">property <b>instanceMarketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptions'>inputs.ec2.LaunchTemplateInstanceMarketOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptions'>LaunchTemplateInstanceMarketOptions</a>&gt;;</code></pre>
 
 The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -21440,7 +21441,7 @@ The key name to use for the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L466">property <b>licenseSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>licenseSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateLicenseSpecification'>inputs.ec2.LaunchTemplateLicenseSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>licenseSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateLicenseSpecification'>LaunchTemplateLicenseSpecification</a>&gt;[]&gt;;</code></pre>
 
 A list of license specifications to associate with. See License Specification below for more details.
 
@@ -21448,7 +21449,7 @@ A list of license specifications to associate with. See License Specification be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L470">property <b>monitoring</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMonitoring'>inputs.ec2.LaunchTemplateMonitoring</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMonitoring'>LaunchTemplateMonitoring</a>&gt;;</code></pre>
 
 The monitoring option for the instance. See Monitoring below for more details.
 
@@ -21472,7 +21473,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L483">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateNetworkInterface'>inputs.ec2.LaunchTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateNetworkInterface'>LaunchTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -21481,7 +21482,7 @@ Interfaces below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L487">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplatePlacement'>inputs.ec2.LaunchTemplatePlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplatePlacement'>LaunchTemplatePlacement</a>&gt;;</code></pre>
 
 The placement of the instance. See Placement below for more details.
 
@@ -21506,7 +21507,7 @@ A list of security group names to associate with. If you are creating Instances 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L500">property <b>tagSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tagSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateTagSpecification'>inputs.ec2.LaunchTemplateTagSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tagSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateTagSpecification'>LaunchTemplateTagSpecification</a>&gt;[]&gt;;</code></pre>
 
 The tags to apply to the resources during launch. See Tag Specifications below for more details.
 
@@ -21556,7 +21557,7 @@ Amazon Resource Name (ARN) of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L269">property <b>blockDeviceMappings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMapping'>inputs.ec2.LaunchTemplateBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMapping'>LaunchTemplateBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
 
 Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -21565,7 +21566,7 @@ See Block Devices below for details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L273">property <b>capacityReservationSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capacityReservationSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecification'>inputs.ec2.LaunchTemplateCapacityReservationSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capacityReservationSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecification'>LaunchTemplateCapacityReservationSpecification</a>&gt;;</code></pre>
 
 Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 
@@ -21573,7 +21574,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L278">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCreditSpecification'>inputs.ec2.LaunchTemplateCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCreditSpecification'>LaunchTemplateCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -21615,7 +21616,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L300">property <b>elasticGpuSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticGpuSpecification'>inputs.ec2.LaunchTemplateElasticGpuSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticGpuSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticGpuSpecification'>LaunchTemplateElasticGpuSpecification</a>&gt;[]&gt;;</code></pre>
 
 The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -21624,7 +21625,7 @@ below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L304">property <b>elasticInferenceAccelerator</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>elasticInferenceAccelerator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticInferenceAccelerator'>inputs.ec2.LaunchTemplateElasticInferenceAccelerator</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>elasticInferenceAccelerator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticInferenceAccelerator'>LaunchTemplateElasticInferenceAccelerator</a>&gt;;</code></pre>
 
 Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 
@@ -21632,7 +21633,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L309">property <b>iamInstanceProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateIamInstanceProfile'>inputs.ec2.LaunchTemplateIamInstanceProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateIamInstanceProfile'>LaunchTemplateIamInstanceProfile</a>&gt;;</code></pre>
 
 The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -21658,7 +21659,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L323">property <b>instanceMarketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptions'>inputs.ec2.LaunchTemplateInstanceMarketOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceMarketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptions'>LaunchTemplateInstanceMarketOptions</a>&gt;;</code></pre>
 
 The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -21699,7 +21700,7 @@ The latest version of the launch template.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L343">property <b>licenseSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>licenseSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateLicenseSpecification'>inputs.ec2.LaunchTemplateLicenseSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>licenseSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateLicenseSpecification'>LaunchTemplateLicenseSpecification</a>&gt;[]&gt;;</code></pre>
 
 A list of license specifications to associate with. See License Specification below for more details.
 
@@ -21707,7 +21708,7 @@ A list of license specifications to associate with. See License Specification be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L347">property <b>monitoring</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMonitoring'>inputs.ec2.LaunchTemplateMonitoring</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMonitoring'>LaunchTemplateMonitoring</a>&gt;;</code></pre>
 
 The monitoring option for the instance. See Monitoring below for more details.
 
@@ -21731,7 +21732,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L360">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateNetworkInterface'>inputs.ec2.LaunchTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateNetworkInterface'>LaunchTemplateNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -21740,7 +21741,7 @@ Interfaces below for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L364">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplatePlacement'>inputs.ec2.LaunchTemplatePlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplatePlacement'>LaunchTemplatePlacement</a>&gt;;</code></pre>
 
 The placement of the instance. See Placement below for more details.
 
@@ -21765,7 +21766,7 @@ A list of security group names to associate with. If you are creating Instances 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/launchTemplate.ts#L377">property <b>tagSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tagSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateTagSpecification'>inputs.ec2.LaunchTemplateTagSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tagSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateTagSpecification'>LaunchTemplateTagSpecification</a>&gt;[]&gt;;</code></pre>
 
 The tags to apply to the resources during launch. See Tag Specifications below for more details.
 
@@ -22280,7 +22281,7 @@ The set of arguments for constructing a NetworkAcl resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L186">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclEgress'>inputs.ec2.NetworkAclEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclEgress'>NetworkAclEgress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -22289,7 +22290,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L191">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclIngress'>inputs.ec2.NetworkAclIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclIngress'>NetworkAclIngress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -22528,7 +22529,7 @@ Input properties used for looking up and filtering NetworkAcl resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L154">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclEgress'>inputs.ec2.NetworkAclEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclEgress'>NetworkAclEgress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -22537,7 +22538,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkAcl.ts#L159">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclIngress'>inputs.ec2.NetworkAclIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkAclIngress'>NetworkAclIngress</a>&gt;[]&gt;;</code></pre>
 
 Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -22588,7 +22589,7 @@ The set of arguments for constructing a NetworkInterface resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkInterface.ts#L189">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkInterfaceAttachment'>inputs.ec2.NetworkInterfaceAttachment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkInterfaceAttachment'>NetworkInterfaceAttachment</a>&gt;[]&gt;;</code></pre>
 
 Block to define the attachment of the ENI. Documented below.
 
@@ -22803,7 +22804,7 @@ Input properties used for looking up and filtering NetworkInterface resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/networkInterface.ts#L149">property <b>attachments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkInterfaceAttachment'>inputs.ec2.NetworkInterfaceAttachment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NetworkInterfaceAttachment'>NetworkInterfaceAttachment</a>&gt;[]&gt;;</code></pre>
 
 Block to define the attachment of the ENI. Documented below.
 
@@ -22964,7 +22965,7 @@ The set of arguments for constructing a PeeringConnectionOptions resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L215">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsAccepter'>inputs.ec2.PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsAccepter'>PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -22974,7 +22975,7 @@ the peering connection (a maximum of one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L221">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsRequester'>inputs.ec2.PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsRequester'>PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -23002,7 +23003,7 @@ Input properties used for looking up and filtering PeeringConnectionOptions reso
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L193">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsAccepter'>inputs.ec2.PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsAccepter'>PeeringConnectionOptionsAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -23012,7 +23013,7 @@ the peering connection (a maximum of one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/peeringConnectionOptions.ts#L199">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsRequester'>inputs.ec2.PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsRequester'>PeeringConnectionOptionsRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -23706,7 +23707,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/routeTable.ts#L181">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteTableRoute'>inputs.ec2.RouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteTableRoute'>RouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
 
@@ -23824,7 +23825,7 @@ A list of virtual gateways for propagation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/routeTable.ts#L159">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteTableRoute'>inputs.ec2.RouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteTableRoute'>RouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
 
@@ -23869,7 +23870,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L218">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupEgress'>inputs.ec2.SecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupEgress'>SecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -23879,7 +23880,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L224">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>inputs.ec2.SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -24168,7 +24169,7 @@ to classify your security groups in a way that can be updated, use `tags`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L161">property <b>egress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupEgress'>inputs.ec2.SecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupEgress'>SecurityGroupEgress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -24178,7 +24179,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/securityGroup.ts#L167">property <b>ingress</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>inputs.ec2.SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -24419,7 +24420,7 @@ the number of Spot pools that you specify.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotFleetRequest.ts#L418">property <b>launchSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecification'>inputs.ec2.SpotFleetRequestLaunchSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchSpecifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecification'>SpotFleetRequestLaunchSpecification</a>&gt;[]&gt;;</code></pre>
 
 Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -24582,7 +24583,7 @@ the number of Spot pools that you specify.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotFleetRequest.ts#L323">property <b>launchSpecifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecification'>inputs.ec2.SpotFleetRequestLaunchSpecification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchSpecifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecification'>SpotFleetRequestLaunchSpecification</a>&gt;[]&gt;;</code></pre>
 
 Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -24739,7 +24740,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L682">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestCreditSpecification'>inputs.ec2.SpotInstanceRequestCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestCreditSpecification'>SpotInstanceRequestCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -24756,7 +24757,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L692">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEbsBlockDevice'>inputs.ec2.SpotInstanceRequestEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEbsBlockDevice'>SpotInstanceRequestEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -24777,7 +24778,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L705">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEphemeralBlockDevice'>inputs.ec2.SpotInstanceRequestEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEphemeralBlockDevice'>SpotInstanceRequestEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -24877,7 +24878,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L756">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestNetworkInterface'>inputs.ec2.SpotInstanceRequestNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestNetworkInterface'>SpotInstanceRequestNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -24902,7 +24903,7 @@ instance in a VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L770">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestRootBlockDevice'>inputs.ec2.SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestRootBlockDevice'>SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -25094,7 +25095,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L463">property <b>creditSpecification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestCreditSpecification'>inputs.ec2.SpotInstanceRequestCreditSpecification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestCreditSpecification'>SpotInstanceRequestCreditSpecification</a>&gt;;</code></pre>
 
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
@@ -25111,7 +25112,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L473">property <b>ebsBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEbsBlockDevice'>inputs.ec2.SpotInstanceRequestEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ebsBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEbsBlockDevice'>SpotInstanceRequestEbsBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -25132,7 +25133,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L486">property <b>ephemeralBlockDevices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEphemeralBlockDevice'>inputs.ec2.SpotInstanceRequestEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralBlockDevices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEphemeralBlockDevice'>SpotInstanceRequestEphemeralBlockDevice</a>&gt;[]&gt;;</code></pre>
 
 Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -25237,7 +25238,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L538">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestNetworkInterface'>inputs.ec2.SpotInstanceRequestNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestNetworkInterface'>SpotInstanceRequestNetworkInterface</a>&gt;[]&gt;;</code></pre>
 
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
@@ -25299,7 +25300,7 @@ The public IP address assigned to the instance, if applicable.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/spotInstanceRequest.ts#L569">property <b>rootBlockDevice</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestRootBlockDevice'>inputs.ec2.SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootBlockDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestRootBlockDevice'>SpotInstanceRequestRootBlockDevice</a>&gt;;</code></pre>
 
 Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -26691,7 +26692,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcEndpoint.ts#L269">property <b>dnsEntries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcEndpointDnsEntry'>inputs.ec2.VpcEndpointDnsEntry</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcEndpointDnsEntry'>VpcEndpointDnsEntry</a>&gt;[]&gt;;</code></pre>
 
 The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 
@@ -26923,7 +26924,7 @@ The set of arguments for constructing a VpcPeeringConnectionAccepter resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L233">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterAccepter'>inputs.ec2.VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterAccepter'>VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -26940,7 +26941,7 @@ Whether or not to accept the peering request. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L242">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterRequester'>inputs.ec2.VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterRequester'>VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -26983,7 +26984,7 @@ The status of the VPC Peering Connection request.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L189">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterAccepter'>inputs.ec2.VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterAccepter'>VpcPeeringConnectionAccepterAccepter</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -27024,7 +27025,7 @@ The ID of the requester VPC.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnectionAccepter.ts#L210">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterRequester'>inputs.ec2.VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepterRequester'>VpcPeeringConnectionAccepterRequester</a>&gt;;</code></pre>
 
 A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -27067,7 +27068,7 @@ The set of arguments for constructing a VpcPeeringConnection resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L209">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepter'>inputs.ec2.VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepter'>VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -27111,7 +27112,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L233">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionRequester'>inputs.ec2.VpcPeeringConnectionRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionRequester'>VpcPeeringConnectionRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -27155,7 +27156,7 @@ The status of the VPC Peering Connection request.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L165">property <b>accepter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepter'>inputs.ec2.VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accepter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionAccepter'>VpcPeeringConnectionAccepter</a>&gt;;</code></pre>
 
 An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -27199,7 +27200,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpcPeeringConnection.ts#L189">property <b>requester</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionRequester'>inputs.ec2.VpcPeeringConnectionRequester</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requester?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpcPeeringConnectionRequester'>VpcPeeringConnectionRequester</a>&gt;;</code></pre>
 
 A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -27543,7 +27544,7 @@ The ID of the customer gateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L276">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpnConnectionRoute'>inputs.ec2.VpnConnectionRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpnConnectionRoute'>VpnConnectionRoute</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VpnConnectionState-staticRoutesOnly">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L280">property <b>staticRoutesOnly</b></a>
 </h4>
@@ -27700,7 +27701,7 @@ The type of VPN connection. The only type AWS supports at this time is "ipsec.1"
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L353">property <b>vgwTelemetries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vgwTelemetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpnConnectionVgwTelemetry'>inputs.ec2.VpnConnectionVgwTelemetry</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vgwTelemetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VpnConnectionVgwTelemetry'>VpnConnectionVgwTelemetry</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VpnConnectionState-vpnGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ec2/vpnConnection.ts#L357">property <b>vpnGatewayId</b></a>
 </h4>

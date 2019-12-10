@@ -1,5 +1,6 @@
 ---
 title: "Module workspaces"
+title_tag: "Module workspaces | Package @pulumi/aws | Node.js SDK"
 linktitle: "workspaces"
 meta_desc: "Explore members of the workspaces module in the @pulumi/aws package."
 ---
@@ -96,7 +97,7 @@ A collection of values returned by getBundle.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>computeTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>computeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType'>outputs.workspaces.GetBundleComputeType</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>computeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType'>GetBundleComputeType</a>[];</code></pre>
 
 The compute type. See supported fields below.
 
@@ -136,7 +137,7 @@ The owner of the bundle.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L73">property <b>rootStorages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage'>outputs.workspaces.GetBundleRootStorage</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage'>GetBundleRootStorage</a>[];</code></pre>
 
 The root volume. See supported fields below.
 
@@ -144,7 +145,7 @@ The root volume. See supported fields below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L77">property <b>userStorages</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage'>outputs.workspaces.GetBundleUserStorage</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage'>GetBundleUserStorage</a>[];</code></pre>
 
 The user storage. See supported fields below.
 

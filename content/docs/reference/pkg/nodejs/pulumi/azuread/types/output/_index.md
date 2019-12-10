@@ -1,5 +1,6 @@
 ---
 title: "Module types/output"
+title_tag: "Module types/output | Package @pulumi/azuread | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/azuread package."
 ---
@@ -169,7 +170,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/types/output.ts#L73">property <b>resourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccessResourceAccess'>outputs.ApplicationRequiredResourceAccessResourceAccess</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='#ApplicationRequiredResourceAccessResourceAccess'>ApplicationRequiredResourceAccessResourceAccess</a>[];</code></pre>
 
 A collection of `resourceAccess` blocks as documented below.
 
@@ -341,7 +342,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/types/output.ts#L157">property <b>resourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccessResourceAccess'>outputs.GetApplicationRequiredResourceAccessResourceAccess</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='#GetApplicationRequiredResourceAccessResourceAccess'>GetApplicationRequiredResourceAccessResourceAccess</a>[];</code></pre>
 
 A collection of `resourceAccess` blocks as documented below
 

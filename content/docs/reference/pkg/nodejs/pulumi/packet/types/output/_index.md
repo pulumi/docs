@@ -1,5 +1,6 @@
 ---
 title: "Module types/output"
+title_tag: "Module types/output | Package @pulumi/packet | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/packet package."
 ---

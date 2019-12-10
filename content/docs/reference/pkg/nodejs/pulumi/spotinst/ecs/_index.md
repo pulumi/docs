@@ -82,7 +82,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Ocean</code></pre>
 
 
 Returns true if the given object is an instance of Ocean.  This is designed to work even
@@ -100,7 +100,7 @@ Configure public IP address allocation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L46">property <b>autoscaler</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoscaler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscaler'>outputs.ecs.OceanAutoscaler</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoscaler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscaler'>OceanAutoscaler</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Describes the Ocean ECS autoscaler.
 
@@ -229,7 +229,7 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L106">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanTag'>outputs.ecs.OceanTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanTag'>OceanTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optionally adds tags to instances launched in an Ocean cluster.
 
@@ -237,7 +237,7 @@ Optionally adds tags to instances launched in an Ocean cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L107">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanUpdatePolicy'>outputs.ecs.OceanUpdatePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanUpdatePolicy'>OceanUpdatePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Ocean-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L12">property <b>urn</b></a>
 </h4>
@@ -336,7 +336,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OceanLaunchSpec</code></pre>
 
 
 Returns true if the given object is an instance of OceanLaunchSpec.  This is designed to work even
@@ -346,7 +346,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/oceanLaunchSpec.ts#L63">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecAttribute'>outputs.ecs.OceanLaunchSpecAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optionally adds labels to instances launched in an Ocean cluster.
 
@@ -441,7 +441,7 @@ Configure public IP address allocation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L293">property <b>autoscaler</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>inputs.ecs.OceanAutoscaler</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>OceanAutoscaler</a>&gt;;</code></pre>
 
 Describes the Ocean ECS autoscaler.
 
@@ -561,7 +561,7 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L353">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>inputs.ecs.OceanTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>OceanTag</a>&gt;[]&gt;;</code></pre>
 
 Optionally adds tags to instances launched in an Ocean cluster.
 
@@ -569,7 +569,7 @@ Optionally adds tags to instances launched in an Ocean cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L354">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>inputs.ecs.OceanUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>OceanUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanArgs-userData">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L358">property <b>userData</b></a>
 </h4>
@@ -605,7 +605,7 @@ The set of arguments for constructing a OceanLaunchSpec resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/oceanLaunchSpec.ts#L173">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>inputs.ecs.OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
 
 Optionally adds labels to instances launched in an Ocean cluster.
 
@@ -671,7 +671,7 @@ Input properties used for looking up and filtering OceanLaunchSpec resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/oceanLaunchSpec.ts#L139">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>inputs.ecs.OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
 
 Optionally adds labels to instances launched in an Ocean cluster.
 
@@ -745,7 +745,7 @@ Configure public IP address allocation.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L209">property <b>autoscaler</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>inputs.ecs.OceanAutoscaler</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>OceanAutoscaler</a>&gt;;</code></pre>
 
 Describes the Ocean ECS autoscaler.
 
@@ -865,7 +865,7 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L269">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>inputs.ecs.OceanTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>OceanTag</a>&gt;[]&gt;;</code></pre>
 
 Optionally adds tags to instances launched in an Ocean cluster.
 
@@ -873,7 +873,7 @@ Optionally adds tags to instances launched in an Ocean cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L270">property <b>updatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>inputs.ecs.OceanUpdatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>OceanUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanState-userData">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/ecs/ocean.ts#L274">property <b>userData</b></a>
 </h4>

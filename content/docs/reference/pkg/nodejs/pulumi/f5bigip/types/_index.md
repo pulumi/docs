@@ -1,5 +1,6 @@
 ---
 title: "Module types"
+title_tag: "Module types | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/f5bigip package."
 ---

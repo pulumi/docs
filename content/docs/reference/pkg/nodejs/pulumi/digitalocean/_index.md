@@ -885,7 +885,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cdn</code></pre>
 
 
 Returns true if the given object is an instance of Cdn.  This is designed to work even
@@ -1012,7 +1012,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Certificate</code></pre>
 
 
 Returns true if the given object is an instance of Certificate.  This is designed to work even
@@ -1203,7 +1203,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseCluster</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseCluster.  This is designed to work even
@@ -1246,7 +1246,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L100">property <b>maintenanceWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#DatabaseClusterMaintenanceWindow'>outputs.DatabaseClusterMaintenanceWindow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Defines when the automatic maintenance should be performed for the database cluster.
 
@@ -1403,7 +1403,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseConnectionPool</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseConnectionPool.  This is designed to work even
@@ -1572,7 +1572,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseDb</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseDb.  This is designed to work even
@@ -1661,7 +1661,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseReplica</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseReplica.  This is designed to work even
@@ -1837,7 +1837,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseUser</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseUser.  This is designed to work even
@@ -1942,7 +1942,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DnsRecord</code></pre>
 
 
 Returns true if the given object is an instance of DnsRecord.  This is designed to work even
@@ -2103,7 +2103,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Domain</code></pre>
 
 
 Returns true if the given object is an instance of Domain.  This is designed to work even
@@ -2208,7 +2208,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Droplet</code></pre>
 
 
 Returns true if the given object is an instance of Droplet.  This is designed to work even
@@ -2476,7 +2476,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DropletSnapshot</code></pre>
 
 
 Returns true if the given object is an instance of DropletSnapshot.  This is designed to work even
@@ -2598,7 +2598,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Firewall</code></pre>
 
 
 Returns true if the given object is an instance of Firewall.  This is designed to work even
@@ -2635,7 +2635,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L56">property <b>inboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallInboundRule'>outputs.FirewallInboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallInboundRule'>FirewallInboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
@@ -2652,7 +2652,7 @@ The Firewall name
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L65">property <b>outboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallOutboundRule'>outputs.FirewallOutboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallOutboundRule'>FirewallOutboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
@@ -2661,7 +2661,7 @@ The `outboundRule` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L72">property <b>pendingChanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pendingChanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallPendingChange'>outputs.FirewallPendingChange</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pendingChanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallPendingChange'>FirewallPendingChange</a>[]&gt;;</code></pre>
 
 An list of object containing the fields, "dropletId",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -2745,7 +2745,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FloatingIp</code></pre>
 
 
 Returns true if the given object is an instance of FloatingIp.  This is designed to work even
@@ -2843,7 +2843,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FloatingIpAssignment</code></pre>
 
 
 Returns true if the given object is an instance of FloatingIpAssignment.  This is designed to work even
@@ -2932,7 +2932,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KubernetesCluster</code></pre>
 
 
 Returns true if the given object is an instance of KubernetesCluster.  This is designed to work even
@@ -2983,7 +2983,7 @@ The public IPv4 address of the Kubernetes master node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterKubeConfig'>outputs.KubernetesClusterKubeConfig</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L63">property <b>name</b></a>
 </h4>
@@ -2996,7 +2996,7 @@ A name for the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L74">property <b>nodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePool'>outputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</code></pre>
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
 - `name` - (Required) A name for the node pool.
@@ -3121,7 +3121,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KubernetesNodePool</code></pre>
 
 
 Returns true if the given object is an instance of KubernetesNodePool.  This is designed to work even
@@ -3196,7 +3196,7 @@ The number of Droplet instances in the node pool. If auto-scaling is enabled, th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L79">property <b>nodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesNodePoolNode'>outputs.KubernetesNodePoolNode</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesNodePoolNode'>KubernetesNodePoolNode</a>[]&gt;;</code></pre>
 
 A list of nodes in the pool. Each node exports the following attributes:
 - `id` -  A unique ID that can be used to identify and reference the node.
@@ -3280,7 +3280,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancer</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
@@ -3326,7 +3326,7 @@ the backend service. Default value is `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L68">property <b>forwardingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerForwardingRule'>outputs.LoadBalancerForwardingRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>[]&gt;;</code></pre>
 
 A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
@@ -3335,7 +3335,7 @@ Load Balancer. The `forwardingRule` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L73">property <b>healthcheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerHealthcheck'>outputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</code></pre>
 
 A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -3389,7 +3389,7 @@ The region to start in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L94">property <b>stickySessions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerStickySessions'>outputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</code></pre>
 
 A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
@@ -3466,7 +3466,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Project</code></pre>
 
 
 Returns true if the given object is an instance of Project.  This is designed to work even
@@ -3603,7 +3603,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -3740,7 +3740,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpacesBucket</code></pre>
 
 
 Returns true if the given object is an instance of SpacesBucket.  This is designed to work even
@@ -3766,7 +3766,7 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L111">property <b>corsRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>corsRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketCorsRule'>outputs.SpacesBucketCorsRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>corsRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketCorsRule'>SpacesBucketCorsRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A container holding a list of elements describing allowed methods for a specific origin.
 
@@ -3863,7 +3863,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SshKey</code></pre>
 
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
@@ -3964,7 +3964,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Tag</code></pre>
 
 
 Returns true if the given object is an instance of Tag.  This is designed to work even
@@ -4045,7 +4045,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Volume</code></pre>
 
 
 Returns true if the given object is an instance of Volume.  This is designed to work even
@@ -4199,7 +4199,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VolumeAttachment</code></pre>
 
 
 Returns true if the given object is an instance of VolumeAttachment.  This is designed to work even
@@ -4288,7 +4288,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VolumeSnapshot</code></pre>
 
 
 Returns true if the given object is an instance of VolumeSnapshot.  This is designed to work even
@@ -4885,7 +4885,7 @@ Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L311">property <b>maintenanceWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>inputs.DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
 
 Defines when the automatic maintenance should be performed for the database cluster.
 
@@ -4975,7 +4975,7 @@ Database cluster's hostname.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/databaseCluster.ts#L245">property <b>maintenanceWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>inputs.DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</code></pre>
 
 Defines when the automatic maintenance should be performed for the database cluster.
 
@@ -6246,7 +6246,7 @@ to the Firewall.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L184">property <b>inboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>inputs.FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
 
 The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
@@ -6263,7 +6263,7 @@ The Firewall name
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L193">property <b>outboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>inputs.FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
 
 The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
@@ -6308,7 +6308,7 @@ to the Firewall.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L143">property <b>inboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>inputs.FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule'>FirewallInboundRule</a>&gt;[]&gt;;</code></pre>
 
 The inbound access rule block for the Firewall.
 The `inboundRule` block is documented below.
@@ -6325,7 +6325,7 @@ The Firewall name
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L152">property <b>outboundRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>inputs.FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule'>FirewallOutboundRule</a>&gt;[]&gt;;</code></pre>
 
 The outbound access rule block for the Firewall.
 The `outboundRule` block is documented below.
@@ -6334,7 +6334,7 @@ The `outboundRule` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/firewall.ts#L159">property <b>pendingChanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pendingChanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallPendingChange'>inputs.FirewallPendingChange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pendingChanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallPendingChange'>FirewallPendingChange</a>&gt;[]&gt;;</code></pre>
 
 An list of object containing the fields, "dropletId",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -6674,7 +6674,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getDatabaseCluster.ts#L60">property <b>maintenanceWindows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetDatabaseClusterMaintenanceWindow'>outputs.GetDatabaseClusterMaintenanceWindow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetDatabaseClusterMaintenanceWindow'>GetDatabaseClusterMaintenanceWindow</a>[];</code></pre>
 
 Defines when the automatic maintenance should be performed for the database cluster.
 
@@ -7441,7 +7441,7 @@ The public IPv4 address of the Kubernetes master node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L59">property <b>kubeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig'>outputs.GetKubernetesClusterKubeConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig'>GetKubernetesClusterKubeConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L60">property <b>name</b></a>
 </h4>
@@ -7451,7 +7451,7 @@ The public IPv4 address of the Kubernetes master node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getKubernetesCluster.ts#L79">property <b>nodePools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool'>outputs.GetKubernetesClusterNodePool</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool'>GetKubernetesClusterNodePool</a>[];</code></pre>
 
 A list of node pools associated with the cluster. Each node pool exports the following attributes:
 - `id` -  The unique ID that can be used to identify and reference the node pool.
@@ -7578,12 +7578,12 @@ A collection of values returned by getLoadBalancer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L45">property <b>forwardingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerForwardingRule'>outputs.GetLoadBalancerForwardingRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerForwardingRule'>GetLoadBalancerForwardingRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-healthcheck">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L46">property <b>healthcheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerHealthcheck'>outputs.GetLoadBalancerHealthcheck</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerHealthcheck'>GetLoadBalancerHealthcheck</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L57">property <b>id</b></a>
 </h4>
@@ -7621,7 +7621,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L52">property <b>stickySessions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerStickySessions'>outputs.GetLoadBalancerStickySessions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerStickySessions'>GetLoadBalancerStickySessions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getLoadBalancer.ts#L53">property <b>urn</b></a>
 </h4>
@@ -7735,7 +7735,7 @@ A collection of arguments for invoking getSizes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L39">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesFilter'>inputs.GetSizesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesFilter'>GetSizesFilter</a>[];</code></pre>
 
 Filter the results.
 The `filter` block is documented below.
@@ -7744,7 +7744,7 @@ The `filter` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L44">property <b>sorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesSort'>inputs.GetSizesSort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesSort'>GetSizesSort</a>[];</code></pre>
 
 Sort the results.
 The `sort` block is documented below.
@@ -7763,7 +7763,7 @@ A collection of values returned by getSizes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L51">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesFilter'>outputs.GetSizesFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesFilter'>GetSizesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSizesResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L57">property <b>id</b></a>
 </h4>
@@ -7776,12 +7776,12 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L52">property <b>sizes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sizes: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSize'>outputs.GetSizesSize</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sizes: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSize'>GetSizesSize</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSizesResult-sorts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSizes.ts#L53">property <b>sorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSort'>outputs.GetSizesSort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSort'>GetSizesSort</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSshKeyArgs" data-link-title="GetSshKeyArgs">
     <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/getSshKey.ts#L30">
         interface <strong>GetSshKeyArgs</strong>
@@ -8129,7 +8129,7 @@ A name for the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L257">property <b>nodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>inputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</code></pre>
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
 - `name` - (Required) A name for the node pool.
@@ -8210,7 +8210,7 @@ The public IPv4 address of the Kubernetes master node.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L189">property <b>kubeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterKubeConfig'>inputs.KubernetesClusterKubeConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L193">property <b>name</b></a>
 </h4>
@@ -8223,7 +8223,7 @@ A name for the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesCluster.ts#L204">property <b>nodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>inputs.KubernetesClusterNodePool</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</code></pre>
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
 - `name` - (Required) A name for the node pool.
@@ -8434,7 +8434,7 @@ The number of Droplet instances in the node pool. If auto-scaling is enabled, th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/kubernetesNodePool.ts#L181">property <b>nodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesNodePoolNode'>inputs.KubernetesNodePoolNode</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesNodePoolNode'>KubernetesNodePoolNode</a>&gt;[]&gt;;</code></pre>
 
 A list of nodes in the pool. Each node exports the following attributes:
 - `id` -  A unique ID that can be used to identify and reference the node.
@@ -8509,7 +8509,7 @@ the backend service. Default value is `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L247">property <b>forwardingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>inputs.LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
 
 A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
@@ -8518,7 +8518,7 @@ Load Balancer. The `forwardingRule` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L252">property <b>healthcheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>inputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</code></pre>
 
 A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -8553,7 +8553,7 @@ The region to start in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L271">property <b>stickySessions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>inputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</code></pre>
 
 A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
@@ -8608,7 +8608,7 @@ the backend service. Default value is `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L186">property <b>forwardingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>forwardingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>inputs.LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>forwardingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>&gt;[]&gt;;</code></pre>
 
 A list of `forwardingRule` to be assigned to the
 Load Balancer. The `forwardingRule` block is documented below.
@@ -8617,7 +8617,7 @@ Load Balancer. The `forwardingRule` block is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L191">property <b>healthcheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>inputs.LoadBalancerHealthcheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</code></pre>
 
 A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -8662,7 +8662,7 @@ The region to start in
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/loadBalancer.ts#L212">property <b>stickySessions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>inputs.LoadBalancerStickySessions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</code></pre>
 
 A `stickySessions` block to be assigned to the
 Load Balancer. The `stickySessions` block is documented below. Only 1 stickySessions block is allowed.
@@ -8895,7 +8895,7 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L214">property <b>corsRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>inputs.SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
 
 A container holding a list of elements describing allowed methods for a specific origin.
 
@@ -8953,7 +8953,7 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/spacesBucket.ts#L184">property <b>corsRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>inputs.SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule'>SpacesBucketCorsRule</a>&gt;[]&gt;;</code></pre>
 
 A container holding a list of elements describing allowed methods for a specific origin.
 

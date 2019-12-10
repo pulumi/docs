@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/aws | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/aws package."
 ---
@@ -276,7 +277,7 @@ The profile for API operations. If not set, the default profile created with `aw
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> region: <a href='#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> &lt;any&gt;__config.get(&#34;region&#34;) || utilities.getEnv(&#34;AWS_REGION&#34;, &#34;AWS_DEFAULT_REGION&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> region: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> &lt;any&gt;__config.get(&#34;region&#34;) || utilities.getEnv(&#34;AWS_REGION&#34;, &#34;AWS_DEFAULT_REGION&#34;)</span>;</code></pre>
 
 The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
@@ -287,7 +288,7 @@ The region where AWS operations will take place. Examples are us-east-1, us-west
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>requireRegion(): <a href='#Region'>Region</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>requireRegion(): <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>Region</a></code></pre>
 
 
 requireRegion fetches the AWS region, requiring that it exists; if it has not been configured, an error is thrown.

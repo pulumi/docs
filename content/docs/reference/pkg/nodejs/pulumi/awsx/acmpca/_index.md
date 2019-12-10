@@ -1,5 +1,6 @@
 ---
 title: "Module acmpca"
+title_tag: "Module acmpca | Package @pulumi/awsx | Node.js SDK"
 linktitle: "acmpca"
 meta_desc: "Explore members of the acmpca module in the @pulumi/awsx package."
 ---
@@ -38,7 +39,7 @@ meta_desc: "Explore members of the acmpca module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>crlGenerated(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>crlGenerated(change?: cloudwatch.MetricChange): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 A certificate revocation list (CRL) was generated. This metric applies only to a private CA.
@@ -50,7 +51,7 @@ A certificate revocation list (CRL) was generated. This metric applies only to a
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>failure(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>failure(change?: cloudwatch.MetricChange): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Indicates that an operation failed. This metric applies only to the IssueCertificate operation.
@@ -62,7 +63,7 @@ Indicates that an operation failed. This metric applies only to the IssueCertifi
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/ACMPrivateCA metric with the requested [metricName]. See
@@ -79,7 +80,7 @@ Note, individual metrics can easily be obtained without supplying the name using
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>misconfiguredCRLBucket(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>misconfiguredCRLBucket(change?: cloudwatch.MetricChange): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The S3 bucket specified for the CRL is not correctly configured. Check the bucket policy. This
@@ -92,7 +93,7 @@ metric applies only to a private CA.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>success(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>success(change?: cloudwatch.MetricChange): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Specifies whether a certificate was successfully issued. This metric applies only to the
@@ -105,7 +106,7 @@ IssueCertificate operation.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>time(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>time(change?: cloudwatch.MetricChange): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The time at which the certificate was issued. This metric applies only to the

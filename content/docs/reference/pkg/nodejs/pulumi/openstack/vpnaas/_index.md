@@ -1,5 +1,6 @@
 ---
 title: "Module vpnaas"
+title_tag: "Module vpnaas | Package @pulumi/openstack | Node.js SDK"
 linktitle: "vpnaas"
 meta_desc: "Explore members of the vpnaas module in the @pulumi/openstack package."
 ---
@@ -107,7 +108,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EndpointGroup</code></pre>
 
 
 Returns true if the given object is an instance of EndpointGroup.  This is designed to work even
@@ -253,7 +254,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IkePolicy</code></pre>
 
 
 Returns true if the given object is an instance of IkePolicy.  This is designed to work even
@@ -308,7 +309,7 @@ Changing this updates the existing policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L77">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IkePolicyLifetime'>outputs.vpnaas.IkePolicyLifetime</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IkePolicyLifetime'>IkePolicyLifetime</a>[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -438,7 +439,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IpSecPolicy</code></pre>
 
 
 Returns true if the given object is an instance of IpSecPolicy.  This is designed to work even
@@ -493,7 +494,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L77">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IpSecPolicyLifetime'>outputs.vpnaas.IpSecPolicyLifetime</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IpSecPolicyLifetime'>IpSecPolicyLifetime</a>[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -626,7 +627,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -811,7 +812,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SiteConnection</code></pre>
 
 
 Returns true if the given object is an instance of SiteConnection.  This is designed to work even
@@ -839,7 +840,7 @@ Changing this updates the description of the existing connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L74">property <b>dpds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dpds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SiteConnectionDpd'>outputs.vpnaas.SiteConnectionDpd</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dpds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SiteConnectionDpd'>SiteConnectionDpd</a>[]&gt;;</code></pre>
 
 A dictionary with dead peer detection (DPD) protocol controls.
 - `action` - (Optional) The dead peer detection (DPD) action.
@@ -1208,7 +1209,7 @@ Changing this updates the existing policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L254">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>inputs.vpnaas.IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1321,7 +1322,7 @@ Changing this updates the existing policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L189">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>inputs.vpnaas.IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1434,7 +1435,7 @@ The default value is aes-128. Changing this updates the existing policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L254">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>inputs.vpnaas.IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1547,7 +1548,7 @@ The default value is aes-128. Changing this updates the existing policy.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L189">property <b>lifetimes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>inputs.vpnaas.IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
 
 The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1828,7 +1829,7 @@ Changing this updates the description of the existing connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L359">property <b>dpds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>inputs.vpnaas.SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
 
 A dictionary with dead peer detection (DPD) protocol controls.
 - `action` - (Optional) The dead peer detection (DPD) action.
@@ -2010,7 +2011,7 @@ Changing this updates the description of the existing connection.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L257">property <b>dpds</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>inputs.vpnaas.SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
 
 A dictionary with dead peer detection (DPD) protocol controls.
 - `action` - (Optional) The dead peer detection (DPD) action.

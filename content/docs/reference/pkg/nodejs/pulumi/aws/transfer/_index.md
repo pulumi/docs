@@ -1,5 +1,6 @@
 ---
 title: "Module transfer"
+title_tag: "Module transfer | Package @pulumi/aws | Node.js SDK"
 linktitle: "transfer"
 meta_desc: "Explore members of the transfer module in the @pulumi/aws package."
 ---
@@ -138,7 +139,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Server</code></pre>
 
 
 Returns true if the given object is an instance of Server.  This is designed to work even
@@ -164,7 +165,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/transfer/server.ts#L99">property <b>endpointDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>endpointDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServerEndpointDetails'>outputs.transfer.ServerEndpointDetails</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>endpointDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServerEndpointDetails'>ServerEndpointDetails</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 
@@ -348,7 +349,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SshKey</code></pre>
 
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
@@ -494,7 +495,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -707,7 +708,7 @@ The set of arguments for constructing a Server resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/transfer/server.ts#L228">property <b>endpointDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>inputs.transfer.ServerEndpointDetails</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>ServerEndpointDetails</a>&gt;;</code></pre>
 
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 
@@ -797,7 +798,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/transfer/server.ts#L190">property <b>endpointDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>inputs.transfer.ServerEndpointDetails</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>ServerEndpointDetails</a>&gt;;</code></pre>
 
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 

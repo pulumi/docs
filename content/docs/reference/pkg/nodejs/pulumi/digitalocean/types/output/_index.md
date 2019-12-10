@@ -340,7 +340,7 @@ The name of Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/output.ts#L138">property <b>nodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePoolNode'>outputs.GetKubernetesClusterNodePoolNode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodes: <a href='#GetKubernetesClusterNodePoolNode'>GetKubernetesClusterNodePoolNode</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterNodePool-size">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/output.ts#L139">property <b>size</b></a>
 </h4>
@@ -732,7 +732,7 @@ A name for the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/output.ts#L290">property <b>nodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePoolNode'>outputs.KubernetesClusterNodePoolNode</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodes: <a href='#KubernetesClusterNodePoolNode'>KubernetesClusterNodePoolNode</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-size">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/output.ts#L291">property <b>size</b></a>
 </h4>

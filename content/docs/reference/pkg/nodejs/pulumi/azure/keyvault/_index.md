@@ -115,7 +115,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccessPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AccessPolicy.  This is designed to work even
@@ -394,7 +394,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Certifiate</code></pre>
 
 
 Returns true if the given object is an instance of Certifiate.  This is designed to work even
@@ -404,7 +404,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L157">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate'>outputs.keyvault.CertifiateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate'>CertifiateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -420,7 +420,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L165">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy'>outputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -657,7 +657,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Certificate</code></pre>
 
 
 Returns true if the given object is an instance of Certificate.  This is designed to work even
@@ -667,7 +667,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L157">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificate'>outputs.keyvault.CertificateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificate'>CertificateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -683,7 +683,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L165">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicy'>outputs.keyvault.CertificateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -857,7 +857,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Key</code></pre>
 
 
 Returns true if the given object is an instance of Key.  This is designed to work even
@@ -1065,7 +1065,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KeyVault</code></pre>
 
 
 Returns true if the given object is an instance of KeyVault.  This is designed to work even
@@ -1075,7 +1075,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L78">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultAccessPolicy'>outputs.keyvault.KeyVaultAccessPolicy</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>[]&gt;;</code></pre>
 
 [A list](https://www.terraform.io/docs/configuration/attr-as-blocks.html) of up to 16 objects describing access policies, as described below.
 
@@ -1132,7 +1132,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L102">property <b>networkAcls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultNetworkAcls'>outputs.keyvault.KeyVaultNetworkAcls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `networkAcls` block as defined below.
 
@@ -1148,7 +1148,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L110">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultSku'>outputs.keyvault.KeyVaultSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultSku'>KeyVaultSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -1293,7 +1293,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Secret</code></pre>
 
 
 Returns true if the given object is an instance of Secret.  This is designed to work even
@@ -1714,7 +1714,7 @@ The set of arguments for constructing a Certifiate resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L291">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>inputs.keyvault.CertifiateCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -1722,7 +1722,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L295">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>inputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -1769,7 +1769,7 @@ Input properties used for looking up and filtering Certifiate resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L248">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>inputs.keyvault.CertifiateCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -1785,7 +1785,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certifiate.ts#L256">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>inputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -1856,7 +1856,7 @@ The set of arguments for constructing a Certificate resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L293">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>inputs.keyvault.CertificateCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>CertificateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -1864,7 +1864,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L297">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>inputs.keyvault.CertificateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -1911,7 +1911,7 @@ Input properties used for looking up and filtering Certificate resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L250">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>inputs.keyvault.CertificateCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>CertificateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
@@ -1927,7 +1927,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/certificate.ts#L258">property <b>certificatePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>inputs.keyvault.CertificateCertificatePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
 
 A `certificatePolicy` block as defined below.
 
@@ -2211,7 +2211,7 @@ A collection of values returned by getKeyVault.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/getKeyVault.ts#L65">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultAccessPolicy'>outputs.keyvault.GetKeyVaultAccessPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultAccessPolicy'>GetKeyVaultAccessPolicy</a>[];</code></pre>
 
 One or more `accessPolicy` blocks as defined below.
 
@@ -2267,7 +2267,7 @@ The name of the SKU used for this Key Vault.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/getKeyVault.ts#L86">property <b>networkAcls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultNetworkAcl'>outputs.keyvault.GetKeyVaultNetworkAcl</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultNetworkAcl'>GetKeyVaultNetworkAcl</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/getKeyVault.ts#L87">property <b>resourceGroupName</b></a>
 </h4>
@@ -2277,7 +2277,7 @@ The name of the SKU used for this Key Vault.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/getKeyVault.ts#L91">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultSku'>outputs.keyvault.GetKeyVaultSku</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultSku'>GetKeyVaultSku</a>;</code></pre>
 
 A `sku` block as described below.
 
@@ -2602,7 +2602,7 @@ The set of arguments for constructing a KeyVault resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L251">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>inputs.keyvault.KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
 
 [A list](https://www.terraform.io/docs/configuration/attr-as-blocks.html) of up to 16 objects describing access policies, as described below.
 
@@ -2650,7 +2650,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L275">property <b>networkAcls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>inputs.keyvault.KeyVaultNetworkAcls</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</code></pre>
 
 A `networkAcls` block as defined below.
 
@@ -2666,7 +2666,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L283">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>inputs.keyvault.KeyVaultSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>KeyVaultSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 
@@ -2708,7 +2708,7 @@ Input properties used for looking up and filtering KeyVault resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L193">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>inputs.keyvault.KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
 
 [A list](https://www.terraform.io/docs/configuration/attr-as-blocks.html) of up to 16 objects describing access policies, as described below.
 
@@ -2756,7 +2756,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L217">property <b>networkAcls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>inputs.keyvault.KeyVaultNetworkAcls</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</code></pre>
 
 A `networkAcls` block as defined below.
 
@@ -2772,7 +2772,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/keyvault/keyVault.ts#L225">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>inputs.keyvault.KeyVaultSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>KeyVaultSku</a>&gt;;</code></pre>
 
 ) A `sku` block as described below.
 

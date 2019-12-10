@@ -142,7 +142,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatasetMysql</code></pre>
 
 
 Returns true if the given object is an instance of DatasetMysql.  This is designed to work even
@@ -233,7 +233,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetMysql.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetMysqlSchemaColumn'>outputs.datafactory.DatasetMysqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetMysqlSchemaColumn'>DatasetMysqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -328,7 +328,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatasetPostgresql</code></pre>
 
 
 Returns true if the given object is an instance of DatasetPostgresql.  This is designed to work even
@@ -419,7 +419,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetPostgresql.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetPostgresqlSchemaColumn'>outputs.datafactory.DatasetPostgresqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetPostgresqlSchemaColumn'>DatasetPostgresqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -514,7 +514,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatasetSqlServerTable</code></pre>
 
 
 Returns true if the given object is an instance of DatasetSqlServerTable.  This is designed to work even
@@ -605,7 +605,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetSqlServerTableSchemaColumn'>outputs.datafactory.DatasetSqlServerTableSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetSqlServerTableSchemaColumn'>DatasetSqlServerTableSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -690,7 +690,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Factory</code></pre>
 
 
 Returns true if the given object is an instance of Factory.  This is designed to work even
@@ -700,7 +700,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L59">property <b>githubConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>githubConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryGithubConfiguration'>outputs.datafactory.FactoryGithubConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>githubConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryGithubConfiguration'>FactoryGithubConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `githubConfiguration` block as defined below.
 
@@ -717,7 +717,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L63">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryIdentity'>outputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryIdentity'>FactoryIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -766,7 +766,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L83">property <b>vstsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vstsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryVstsConfiguration'>outputs.datafactory.FactoryVstsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vstsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryVstsConfiguration'>FactoryVstsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `vstsConfiguration` block as defined below.
 
@@ -840,7 +840,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IntegrationRuntimeManaged</code></pre>
 
 
 Returns true if the given object is an instance of IntegrationRuntimeManaged.  This is designed to work even
@@ -850,7 +850,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L65">property <b>catalogInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>catalogInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCatalogInfo'>outputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>catalogInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCatalogInfo'>IntegrationRuntimeManagedCatalogInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `catalogInfo` block as defined below.
 
@@ -858,7 +858,7 @@ A `catalogInfo` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L69">property <b>customSetupScript</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customSetupScript: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCustomSetupScript'>outputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customSetupScript: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCustomSetupScript'>IntegrationRuntimeManagedCustomSetupScript</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `customSetupScript` block as defined below.
 
@@ -961,7 +961,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L110">property <b>vnetIntegration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vnetIntegration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedVnetIntegration'>outputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vnetIntegration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedVnetIntegration'>IntegrationRuntimeManagedVnetIntegration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `vnetIntegration` block as defined below.
 
@@ -1040,7 +1040,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinkedServiceDataLakeStorageGen2</code></pre>
 
 
 Returns true if the given object is an instance of LinkedServiceDataLakeStorageGen2.  This is designed to work even
@@ -1231,7 +1231,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinkedServiceMysql</code></pre>
 
 
 Returns true if the given object is an instance of LinkedServiceMysql.  This is designed to work even
@@ -1398,7 +1398,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinkedServicePostgresql</code></pre>
 
 
 Returns true if the given object is an instance of LinkedServicePostgresql.  This is designed to work even
@@ -1565,7 +1565,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinkedServiceSqlServer</code></pre>
 
 
 Returns true if the given object is an instance of LinkedServiceSqlServer.  This is designed to work even
@@ -1729,7 +1729,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Pipeline</code></pre>
 
 
 Returns true if the given object is an instance of Pipeline.  This is designed to work even
@@ -1884,7 +1884,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TriggerSchedule</code></pre>
 
 
 Returns true if the given object is an instance of TriggerSchedule.  This is designed to work even
@@ -2106,7 +2106,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetMysql.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>inputs.datafactory.DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2204,7 +2204,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetMysql.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>inputs.datafactory.DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2302,7 +2302,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetPostgresql.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>inputs.datafactory.DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2400,7 +2400,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetPostgresql.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>inputs.datafactory.DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2498,7 +2498,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>inputs.datafactory.DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2596,7 +2596,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>inputs.datafactory.DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
 
 A `schemaColumn` block as defined below.
 
@@ -2622,7 +2622,7 @@ The set of arguments for constructing a Factory resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L169">property <b>githubConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>inputs.datafactory.FactoryGithubConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>FactoryGithubConfiguration</a>&gt;;</code></pre>
 
 A `githubConfiguration` block as defined below.
 
@@ -2630,7 +2630,7 @@ A `githubConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L173">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>inputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>FactoryIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -2670,7 +2670,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L193">property <b>vstsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>inputs.datafactory.FactoryVstsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>FactoryVstsConfiguration</a>&gt;;</code></pre>
 
 A `vstsConfiguration` block as defined below.
 
@@ -2688,7 +2688,7 @@ Input properties used for looking up and filtering Factory resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L135">property <b>githubConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>inputs.datafactory.FactoryGithubConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>FactoryGithubConfiguration</a>&gt;;</code></pre>
 
 A `githubConfiguration` block as defined below.
 
@@ -2696,7 +2696,7 @@ A `githubConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L139">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>inputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>FactoryIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -2736,7 +2736,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/factory.ts#L159">property <b>vstsConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>inputs.datafactory.FactoryVstsConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>FactoryVstsConfiguration</a>&gt;;</code></pre>
 
 A `vstsConfiguration` block as defined below.
 
@@ -2780,7 +2780,7 @@ A collection of values returned by getFactory.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/getFactory.ts#L65">property <b>githubConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>githubConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryGithubConfiguration'>outputs.datafactory.GetFactoryGithubConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>githubConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryGithubConfiguration'>GetFactoryGithubConfiguration</a>[];</code></pre>
 
 A `githubConfiguration` block as defined below.
 
@@ -2796,7 +2796,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/getFactory.ts#L69">property <b>identities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryIdentity'>outputs.datafactory.GetFactoryIdentity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryIdentity'>GetFactoryIdentity</a>[];</code></pre>
 
 An `identity` block as defined below.
 
@@ -2831,7 +2831,7 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/getFactory.ts#L84">property <b>vstsConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vstsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryVstsConfiguration'>outputs.datafactory.GetFactoryVstsConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vstsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryVstsConfiguration'>GetFactoryVstsConfiguration</a>[];</code></pre>
 
 A `vstsConfiguration` block as defined below.
 
@@ -2849,7 +2849,7 @@ The set of arguments for constructing a IntegrationRuntimeManaged resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L235">property <b>catalogInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>inputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
 
 A `catalogInfo` block as defined below.
 
@@ -2857,7 +2857,7 @@ A `catalogInfo` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L239">property <b>customSetupScript</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>inputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
 
 A `customSetupScript` block as defined below.
 
@@ -2942,7 +2942,7 @@ The name of the resource group in which to create the Managed Integration Runtim
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L280">property <b>vnetIntegration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>inputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
 
 A `vnetIntegration` block as defined below.
 
@@ -2960,7 +2960,7 @@ Input properties used for looking up and filtering IntegrationRuntimeManaged res
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L180">property <b>catalogInfo</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>inputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
 
 A `catalogInfo` block as defined below.
 
@@ -2968,7 +2968,7 @@ A `catalogInfo` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L184">property <b>customSetupScript</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>inputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
 
 A `customSetupScript` block as defined below.
 
@@ -3053,7 +3053,7 @@ The name of the resource group in which to create the Managed Integration Runtim
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L225">property <b>vnetIntegration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>inputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
 
 A `vnetIntegration` block as defined below.
 

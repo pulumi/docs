@@ -1,5 +1,6 @@
 ---
 title: "Module cloudscheduler"
+title_tag: "Module cloudscheduler | Package @pulumi/gcp | Node.js SDK"
 linktitle: "cloudscheduler"
 meta_desc: "Explore members of the cloudscheduler module in the @pulumi/gcp package."
 ---
@@ -78,7 +79,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
@@ -88,7 +89,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L43">property <b>appEngineHttpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>appEngineHttpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobAppEngineHttpTarget'>outputs.cloudscheduler.JobAppEngineHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>appEngineHttpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -105,7 +106,7 @@ A human-readable description for the job. This string must not contain more than
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L51">property <b>httpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTarget'>outputs.cloudscheduler.JobHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTarget'>JobHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 
@@ -139,7 +140,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L64">property <b>pubsubTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pubsubTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPubsubTarget'>outputs.cloudscheduler.JobPubsubTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pubsubTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPubsubTarget'>JobPubsubTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 
@@ -155,7 +156,7 @@ Region where the scheduler job resides
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L73">property <b>retryConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retryConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobRetryConfig'>outputs.cloudscheduler.JobRetryConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retryConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobRetryConfig'>JobRetryConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the
 handler, then it will be retried with exponential backoff according to the settings
@@ -203,7 +204,7 @@ The set of arguments for constructing a Job resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L188">property <b>appEngineHttpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>inputs.cloudscheduler.JobAppEngineHttpTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a>&gt;;</code></pre>
 
 App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -220,7 +221,7 @@ A human-readable description for the job. This string must not contain more than
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L196">property <b>httpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>inputs.cloudscheduler.JobHttpTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>JobHttpTarget</a>&gt;;</code></pre>
 
 HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 
@@ -245,7 +246,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L209">property <b>pubsubTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>inputs.cloudscheduler.JobPubsubTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>JobPubsubTarget</a>&gt;;</code></pre>
 
 Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 
@@ -261,7 +262,7 @@ Region where the scheduler job resides
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L218">property <b>retryConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>inputs.cloudscheduler.JobRetryConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>JobRetryConfig</a>&gt;;</code></pre>
 
 By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the
 handler, then it will be retried with exponential backoff according to the settings
@@ -297,7 +298,7 @@ Input properties used for looking up and filtering Job resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L138">property <b>appEngineHttpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>inputs.cloudscheduler.JobAppEngineHttpTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a>&gt;;</code></pre>
 
 App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -314,7 +315,7 @@ A human-readable description for the job. This string must not contain more than
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L146">property <b>httpTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>inputs.cloudscheduler.JobHttpTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>JobHttpTarget</a>&gt;;</code></pre>
 
 HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 
@@ -339,7 +340,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L159">property <b>pubsubTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>inputs.cloudscheduler.JobPubsubTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>JobPubsubTarget</a>&gt;;</code></pre>
 
 Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 
@@ -355,7 +356,7 @@ Region where the scheduler job resides
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudscheduler/job.ts#L168">property <b>retryConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>inputs.cloudscheduler.JobRetryConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>JobRetryConfig</a>&gt;;</code></pre>
 
 By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the
 handler, then it will be retried with exponential backoff according to the settings

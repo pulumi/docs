@@ -1,5 +1,6 @@
 ---
 title: "Module budgets"
+title_tag: "Module budgets | Package @pulumi/aws | Node.js SDK"
 linktitle: "budgets"
 meta_desc: "Explore members of the budgets module in the @pulumi/aws package."
 ---
@@ -134,7 +135,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Budget</code></pre>
 
 
 Returns true if the given object is an instance of Budget.  This is designed to work even
@@ -168,7 +169,7 @@ Map of CostFilters key/value pairs to apply to the budget.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L110">property <b>costTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>costTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetCostTypes'>outputs.budgets.BudgetCostTypes</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>costTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetCostTypes'>BudgetCostTypes</a>&gt;;</code></pre>
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 
@@ -217,7 +218,7 @@ The prefix of the name of a budget. Unique within accounts.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L130">property <b>notifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetNotification'>outputs.budgets.BudgetNotification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetNotification'>BudgetNotification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 
@@ -295,7 +296,7 @@ Map of CostFilters key/value pairs to apply to the budget.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L282">property <b>costTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>inputs.budgets.BudgetCostTypes</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>BudgetCostTypes</a>&gt;;</code></pre>
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 
@@ -335,7 +336,7 @@ The prefix of the name of a budget. Unique within accounts.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L302">property <b>notifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>inputs.budgets.BudgetNotification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>BudgetNotification</a>&gt;[]&gt;;</code></pre>
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 
@@ -401,7 +402,7 @@ Map of CostFilters key/value pairs to apply to the budget.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L228">property <b>costTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>inputs.budgets.BudgetCostTypes</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>BudgetCostTypes</a>&gt;;</code></pre>
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 
@@ -441,7 +442,7 @@ The prefix of the name of a budget. Unique within accounts.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/budgets/budget.ts#L248">property <b>notifications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>inputs.budgets.BudgetNotification</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>BudgetNotification</a>&gt;[]&gt;;</code></pre>
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 

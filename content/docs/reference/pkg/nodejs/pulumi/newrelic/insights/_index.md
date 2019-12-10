@@ -46,9 +46,9 @@ meta_desc: "Explore members of the insights module in the @pulumi/newrelic packa
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = new newrelic.insights.Event("foo", {
-    events: [{
-        attributes: [
+const foo = new newrelic.InsightsEvent("foo", {
+    event: [{
+        attribute: [
             {
                 key: "aStringAttribute",
                 value: "a string",
@@ -56,12 +56,12 @@ const foo = new newrelic.insights.Event("foo", {
             {
                 key: "anIntegerAttribute",
                 type: "int",
-                value: "42",
+                value: 42,
             },
             {
                 key: "aFloatAttribute",
                 type: "float",
-                value: "101.1",
+                value: 101.1,
             },
         ],
         timestamp: 1232471100,
@@ -125,7 +125,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Event</code></pre>
 
 
 Returns true if the given object is an instance of Event.  This is designed to work even
@@ -135,7 +135,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/insights/event.ts#L88">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#EventEvent'>outputs.insights.EventEvent</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#EventEvent'>EventEvent</a>[]&gt;;</code></pre>
 
 An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 
@@ -174,7 +174,7 @@ The set of arguments for constructing a Event resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/insights/event.ts#L138">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>inputs.insights.EventEvent</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>EventEvent</a>&gt;[]&gt;;</code></pre>
 
 An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 
@@ -192,7 +192,7 @@ Input properties used for looking up and filtering Event resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/insights/event.ts#L128">property <b>events</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>inputs.insights.EventEvent</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>EventEvent</a>&gt;[]&gt;;</code></pre>
 
 An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 

@@ -1,5 +1,6 @@
 ---
 title: "Module cloudfront"
+title_tag: "Module cloudfront | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudfront"
 meta_desc: "Explore members of the cloudfront module in the @pulumi/aws package."
 ---
@@ -282,7 +283,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Distribution</code></pre>
 
 
 Returns true if the given object is an instance of Distribution.  This is designed to work even
@@ -337,7 +338,7 @@ distribution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L265">property <b>customErrorResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customErrorResponses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionCustomErrorResponse'>outputs.cloudfront.DistributionCustomErrorResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customErrorResponses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more custom error response elements (multiples allowed).
 
@@ -345,7 +346,7 @@ One or more custom error response elements (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L270">property <b>defaultCacheBehavior</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehavior'>outputs.cloudfront.DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
 
 The default cache behavior for this distribution (maximum
 one).
@@ -444,7 +445,7 @@ The date and time the distribution was last modified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L321">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionLoggingConfig'>outputs.cloudfront.DistributionLoggingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionLoggingConfig'>DistributionLoggingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The logging
 configuration that controls how logs are written
@@ -454,7 +455,7 @@ to your distribution (maximum one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L327">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>orderedCacheBehaviors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehavior'>outputs.cloudfront.DistributionOrderedCacheBehavior</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>orderedCacheBehaviors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -464,7 +465,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L337">property <b>originGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>originGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroup'>outputs.cloudfront.DistributionOriginGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>originGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroup'>DistributionOriginGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more originGroup for this
 distribution (multiples allowed).
@@ -473,7 +474,7 @@ distribution (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L332">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrigin'>outputs.cloudfront.DistributionOrigin</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrigin'>DistributionOrigin</a>[]&gt;;</code></pre>
 
 One or more origins for this
 distribution (multiples allowed).
@@ -491,7 +492,7 @@ The price class for this distribution. One of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L347">property <b>restrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictions'>outputs.cloudfront.DistributionRestrictions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
 
 The restriction
 configuration for this distribution (maximum one).
@@ -537,7 +538,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L369">property <b>viewerCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate'>outputs.cloudfront.DistributionViewerCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
 
 The SSL
 configuration for this distribution (maximum
@@ -686,7 +687,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OriginAccessIdentity</code></pre>
 
 
 Returns true if the given object is an instance of OriginAccessIdentity.  This is designed to work even
@@ -827,7 +828,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PublicKey</code></pre>
 
 
 Returns true if the given object is an instance of PublicKey.  This is designed to work even
@@ -934,7 +935,7 @@ distribution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L652">property <b>customErrorResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>inputs.cloudfront.DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
 
 One or more custom error response elements (multiples allowed).
 
@@ -942,7 +943,7 @@ One or more custom error response elements (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L657">property <b>defaultCacheBehavior</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>inputs.cloudfront.DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
 
 The default cache behavior for this distribution (maximum
 one).
@@ -987,7 +988,7 @@ Whether the IPv6 is enabled for the distribution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L683">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>inputs.cloudfront.DistributionLoggingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>DistributionLoggingConfig</a>&gt;;</code></pre>
 
 The logging
 configuration that controls how logs are written
@@ -997,7 +998,7 @@ to your distribution (maximum one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L689">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>inputs.cloudfront.DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
 
 An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1007,7 +1008,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L699">property <b>originGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>inputs.cloudfront.DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
 
 One or more originGroup for this
 distribution (multiples allowed).
@@ -1016,7 +1017,7 @@ distribution (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L694">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>inputs.cloudfront.DistributionOrigin</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>DistributionOrigin</a>&gt;[]&gt;;</code></pre>
 
 One or more origins for this
 distribution (multiples allowed).
@@ -1034,7 +1035,7 @@ The price class for this distribution. One of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L709">property <b>restrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>inputs.cloudfront.DistributionRestrictions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
 
 The restriction
 configuration for this distribution (maximum one).
@@ -1061,7 +1062,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L725">property <b>viewerCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>inputs.cloudfront.DistributionViewerCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
 
 The SSL
 configuration for this distribution (maximum
@@ -1148,7 +1149,7 @@ distribution.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L514">property <b>customErrorResponses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>inputs.cloudfront.DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
 
 One or more custom error response elements (multiples allowed).
 
@@ -1156,7 +1157,7 @@ One or more custom error response elements (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L519">property <b>defaultCacheBehavior</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>inputs.cloudfront.DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
 
 The default cache behavior for this distribution (maximum
 one).
@@ -1246,7 +1247,7 @@ The date and time the distribution was last modified.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L570">property <b>loggingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>inputs.cloudfront.DistributionLoggingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>DistributionLoggingConfig</a>&gt;;</code></pre>
 
 The logging
 configuration that controls how logs are written
@@ -1256,7 +1257,7 @@ to your distribution (maximum one).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L576">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>inputs.cloudfront.DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
 
 An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1266,7 +1267,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L586">property <b>originGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>inputs.cloudfront.DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
 
 One or more originGroup for this
 distribution (multiples allowed).
@@ -1275,7 +1276,7 @@ distribution (multiples allowed).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L581">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>inputs.cloudfront.DistributionOrigin</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>DistributionOrigin</a>&gt;[]&gt;;</code></pre>
 
 One or more origins for this
 distribution (multiples allowed).
@@ -1293,7 +1294,7 @@ The price class for this distribution. One of
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L596">property <b>restrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>restrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>inputs.cloudfront.DistributionRestrictions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>restrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
 
 The restriction
 configuration for this distribution (maximum one).
@@ -1330,7 +1331,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudfront/distribution.ts#L618">property <b>viewerCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>viewerCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>inputs.cloudfront.DistributionViewerCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>viewerCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
 
 The SSL
 configuration for this distribution (maximum

@@ -1,5 +1,6 @@
 ---
 title: "Module sql"
+title_tag: "Module sql | Package @pulumi/gcp | Node.js SDK"
 linktitle: "sql"
 meta_desc: "Explore members of the sql module in the @pulumi/gcp package."
 ---
@@ -87,7 +88,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Database</code></pre>
 
 
 Returns true if the given object is an instance of Database.  This is designed to work even
@@ -258,7 +259,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabaseInstance</code></pre>
 
 
 Returns true if the given object is an instance of DatabaseInstance.  This is designed to work even
@@ -303,7 +304,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L101">property <b>ipAddresses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceIpAddress'>outputs.sql.DatabaseInstanceIpAddress</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstance-masterInstanceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L107">property <b>masterInstanceName</b></a>
 </h4>
@@ -370,7 +371,7 @@ If you choose not to provide the `region` argument for this resource, make sure 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L144">property <b>replicaConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>replicaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceReplicaConfiguration'>outputs.sql.DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>replicaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
 
 The configuration for replication. The
 configuration is detailed below.
@@ -387,7 +388,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L149">property <b>serverCaCert</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceServerCaCert'>outputs.sql.DatabaseInstanceServerCaCert</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstance-serviceAccountEmailAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L154">property <b>serviceAccountEmailAddress</b></a>
 </h4>
@@ -401,7 +402,7 @@ instance. This property is applicable only to Second Generation instances.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L159">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettings'>outputs.sql.DatabaseInstanceSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
 
 The settings to use for the database. The
 configuration is detailed below.
@@ -490,7 +491,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SslCert</code></pre>
 
 
 Returns true if the given object is an instance of SslCert.  This is designed to work even
@@ -675,7 +676,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
@@ -874,7 +875,7 @@ If you choose not to provide the `region` argument for this resource, make sure 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L343">property <b>replicaConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>inputs.sql.DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
 
 The configuration for replication. The
 configuration is detailed below.
@@ -883,7 +884,7 @@ configuration is detailed below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L348">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>inputs.sql.DatabaseInstanceSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
 
 The settings to use for the database. The
 configuration is detailed below.
@@ -928,7 +929,7 @@ for more information.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L238">property <b>ipAddresses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceIpAddress'>inputs.sql.DatabaseInstanceIpAddress</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-masterInstanceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L244">property <b>masterInstanceName</b></a>
 </h4>
@@ -995,7 +996,7 @@ If you choose not to provide the `region` argument for this resource, make sure 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L281">property <b>replicaConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>inputs.sql.DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
 
 The configuration for replication. The
 configuration is detailed below.
@@ -1012,7 +1013,7 @@ The URI of the created resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L286">property <b>serverCaCert</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceServerCaCert'>inputs.sql.DatabaseInstanceServerCaCert</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-serviceAccountEmailAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L291">property <b>serviceAccountEmailAddress</b></a>
 </h4>
@@ -1026,7 +1027,7 @@ instance. This property is applicable only to Second Generation instances.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/sql/databaseInstance.ts#L296">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>inputs.sql.DatabaseInstanceSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
 
 The settings to use for the database. The
 configuration is detailed below.

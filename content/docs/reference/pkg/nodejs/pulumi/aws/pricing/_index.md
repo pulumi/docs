@@ -1,5 +1,6 @@
 ---
 title: "Module pricing"
+title_tag: "Module pricing | Package @pulumi/aws | Node.js SDK"
 linktitle: "pricing"
 meta_desc: "Explore members of the pricing module in the @pulumi/aws package."
 ---
@@ -119,7 +120,7 @@ A collection of arguments for invoking getProduct.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pricing/getProduct.ts#L94">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetProductFilter'>inputs.pricing.GetProductFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetProductFilter'>GetProductFilter</a>[];</code></pre>
 
 A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
 
@@ -145,7 +146,7 @@ A collection of values returned by getProduct.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pricing/getProduct.ts#L105">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetProductFilter'>outputs.pricing.GetProductFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetProductFilter'>GetProductFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pricing/getProduct.ts#L114">property <b>id</b></a>
 </h4>

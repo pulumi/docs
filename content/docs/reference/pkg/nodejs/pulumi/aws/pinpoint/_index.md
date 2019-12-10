@@ -1,5 +1,6 @@
 ---
 title: "Module pinpoint"
+title_tag: "Module pinpoint | Package @pulumi/aws | Node.js SDK"
 linktitle: "pinpoint"
 meta_desc: "Explore members of the pinpoint module in the @pulumi/aws package."
 ---
@@ -129,7 +130,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AdmChannel</code></pre>
 
 
 Returns true if the given object is an instance of AdmChannel.  This is designed to work even
@@ -252,7 +253,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApnsChannel</code></pre>
 
 
 Returns true if the given object is an instance of ApnsChannel.  This is designed to work even
@@ -418,7 +419,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApnsSandboxChannel</code></pre>
 
 
 Returns true if the given object is an instance of ApnsSandboxChannel.  This is designed to work even
@@ -584,7 +585,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApnsVoipChannel</code></pre>
 
 
 Returns true if the given object is an instance of ApnsVoipChannel.  This is designed to work even
@@ -750,7 +751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApnsVoipSandboxChannel</code></pre>
 
 
 Returns true if the given object is an instance of ApnsVoipSandboxChannel.  This is designed to work even
@@ -915,7 +916,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is App</code></pre>
 
 
 Returns true if the given object is an instance of App.  This is designed to work even
@@ -941,7 +942,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L69">property <b>campaignHook</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>campaignHook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppCampaignHook'>outputs.pinpoint.AppCampaignHook</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>campaignHook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppCampaignHook'>AppCampaignHook</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -958,7 +959,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L73">property <b>limits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>limits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppLimits'>outputs.pinpoint.AppLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>limits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppLimits'>AppLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -982,7 +983,7 @@ The name of the Pinpoint application. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L85">property <b>quietTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>quietTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppQuietTime'>outputs.pinpoint.AppQuietTime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>quietTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppQuietTime'>AppQuietTime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 
@@ -1070,7 +1071,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BaiduChannel</code></pre>
 
 
 Returns true if the given object is an instance of BaiduChannel.  This is designed to work even
@@ -1226,7 +1227,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EmailChannel</code></pre>
 
 
 Returns true if the given object is an instance of EmailChannel.  This is designed to work even
@@ -1397,7 +1398,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventStream</code></pre>
 
 
 Returns true if the given object is an instance of EventStream.  This is designed to work even
@@ -1510,7 +1511,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GcmChannel</code></pre>
 
 
 Returns true if the given object is an instance of GcmChannel.  This is designed to work even
@@ -1619,7 +1620,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SmsChannel</code></pre>
 
 
 Returns true if the given object is an instance of SmsChannel.  This is designed to work even
@@ -2472,7 +2473,7 @@ The set of arguments for constructing a App resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L178">property <b>campaignHook</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>inputs.pinpoint.AppCampaignHook</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>AppCampaignHook</a>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -2480,7 +2481,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L182">property <b>limits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>inputs.pinpoint.AppLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>AppLimits</a>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -2504,7 +2505,7 @@ The name of the Pinpoint application. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L194">property <b>quietTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>inputs.pinpoint.AppQuietTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>AppQuietTime</a>&gt;;</code></pre>
 
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 
@@ -2546,7 +2547,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L148">property <b>campaignHook</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>inputs.pinpoint.AppCampaignHook</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>AppCampaignHook</a>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -2554,7 +2555,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L152">property <b>limits</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>inputs.pinpoint.AppLimits</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>AppLimits</a>&gt;;</code></pre>
 
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
@@ -2578,7 +2579,7 @@ The name of the Pinpoint application. Conflicts with `name`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L164">property <b>quietTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>inputs.pinpoint.AppQuietTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>AppQuietTime</a>&gt;;</code></pre>
 
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 

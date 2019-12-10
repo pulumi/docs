@@ -1,5 +1,6 @@
 ---
 title: "Module elb"
+title_tag: "Module elb | Package @pulumi/aws | Node.js SDK"
 linktitle: "elb"
 meta_desc: "Explore members of the elb module in the @pulumi/aws package."
 ---
@@ -135,7 +136,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AppCookieStickinessPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AppCookieStickinessPolicy.  This is designed to work even
@@ -263,7 +264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Attachment</code></pre>
 
 
 Returns true if the given object is an instance of Attachment.  This is designed to work even
@@ -432,7 +433,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ListenerPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ListenerPolicy.  This is designed to work even
@@ -597,7 +598,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancer</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
@@ -607,7 +608,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L112">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs'>outputs.elb.LoadBalancerAccessLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -663,7 +664,7 @@ The DNS name of the ELB
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L140">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerHealthCheck'>outputs.elb.LoadBalancerHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerHealthCheck'>LoadBalancerHealthCheck</a>&gt;;</code></pre>
 
 A healthCheck block. Health Check documented below.
 
@@ -704,7 +705,7 @@ If true, ELB will be an internal ELB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L156">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerListener'>outputs.elb.LoadBalancerListener</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerListener'>LoadBalancerListener</a>[]&gt;;</code></pre>
 
 A list of listener blocks. Listeners documented below.
 
@@ -889,7 +890,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancerBackendServerPolicy</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancerBackendServerPolicy.  This is designed to work even
@@ -1008,7 +1009,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancerCookieStickinessPolicy</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancerCookieStickinessPolicy.  This is designed to work even
@@ -1199,7 +1200,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LoadBalancerPolicy</code></pre>
 
 
 Returns true if the given object is an instance of LoadBalancerPolicy.  This is designed to work even
@@ -1226,7 +1227,7 @@ The load balancer on which the policy is defined.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancerPolicy.ts#L130">property <b>policyAttributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerPolicyPolicyAttribute'>outputs.elb.LoadBalancerPolicyPolicyAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerPolicyPolicyAttribute'>LoadBalancerPolicyPolicyAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Policy attribute to apply to the policy.
 
@@ -1356,7 +1357,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SslNegotiationPolicy</code></pre>
 
 
 Returns true if the given object is an instance of SslNegotiationPolicy.  This is designed to work even
@@ -1366,7 +1367,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/sslNegotiationPolicy.ts#L96">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SslNegotiationPolicyAttribute'>outputs.elb.SslNegotiationPolicyAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SslNegotiationPolicyAttribute'>SslNegotiationPolicyAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An SSL Negotiation policy attribute. Each has two properties:
 
@@ -1766,7 +1767,7 @@ A collection of values returned by getLoadBalancer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L65">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs'>outputs.elb.GetLoadBalancerAccessLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs'>GetLoadBalancerAccessLogs</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-availabilityZones">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L66">property <b>availabilityZones</b></a>
 </h4>
@@ -1796,7 +1797,7 @@ A collection of values returned by getLoadBalancer.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L71">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerHealthCheck'>outputs.elb.GetLoadBalancerHealthCheck</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerHealthCheck'>GetLoadBalancerHealthCheck</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L86">property <b>id</b></a>
 </h4>
@@ -1824,7 +1825,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L75">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerListener'>outputs.elb.GetLoadBalancerListener</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerListener'>GetLoadBalancerListener</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/getLoadBalancer.ts#L76">property <b>name</b></a>
 </h4>
@@ -1992,7 +1993,7 @@ The set of arguments for constructing a LoadBalancer resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L366">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>inputs.elb.LoadBalancerAccessLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -2032,7 +2033,7 @@ Enable cross-zone load balancing. Default: `true`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L386">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck'>inputs.elb.LoadBalancerHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck'>LoadBalancerHealthCheck</a>&gt;;</code></pre>
 
 A healthCheck block. Health Check documented below.
 
@@ -2064,7 +2065,7 @@ If true, ELB will be an internal ELB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L402">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener'>inputs.elb.LoadBalancerListener</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener'>LoadBalancerListener</a>&gt;[]&gt;;</code></pre>
 
 A list of listener blocks. Listeners documented below.
 
@@ -2302,7 +2303,7 @@ The load balancer on which the policy is defined.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancerPolicy.ts#L218">property <b>policyAttributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerPolicyPolicyAttribute'>inputs.elb.LoadBalancerPolicyPolicyAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerPolicyPolicyAttribute'>LoadBalancerPolicyPolicyAttribute</a>&gt;[]&gt;;</code></pre>
 
 Policy attribute to apply to the policy.
 
@@ -2344,7 +2345,7 @@ The load balancer on which the policy is defined.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancerPolicy.ts#L196">property <b>policyAttributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerPolicyPolicyAttribute'>inputs.elb.LoadBalancerPolicyPolicyAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerPolicyPolicyAttribute'>LoadBalancerPolicyPolicyAttribute</a>&gt;[]&gt;;</code></pre>
 
 Policy attribute to apply to the policy.
 
@@ -2378,7 +2379,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L274">property <b>accessLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>inputs.elb.LoadBalancerAccessLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs'>LoadBalancerAccessLogs</a>&gt;;</code></pre>
 
 An Access Logs block. Access Logs documented below.
 
@@ -2434,7 +2435,7 @@ The DNS name of the ELB
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L302">property <b>healthCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck'>inputs.elb.LoadBalancerHealthCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck'>LoadBalancerHealthCheck</a>&gt;;</code></pre>
 
 A healthCheck block. Health Check documented below.
 
@@ -2466,7 +2467,7 @@ If true, ELB will be an internal ELB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/loadBalancer.ts#L318">property <b>listeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>listeners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener'>inputs.elb.LoadBalancerListener</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>listeners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener'>LoadBalancerListener</a>&gt;[]&gt;;</code></pre>
 
 A list of listener blocks. Listeners documented below.
 
@@ -2554,7 +2555,7 @@ The set of arguments for constructing a SslNegotiationPolicy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/sslNegotiationPolicy.ts#L187">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SslNegotiationPolicyAttribute'>inputs.elb.SslNegotiationPolicyAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SslNegotiationPolicyAttribute'>SslNegotiationPolicyAttribute</a>&gt;[]&gt;;</code></pre>
 
 An SSL Negotiation policy attribute. Each has two properties:
 
@@ -2599,7 +2600,7 @@ Input properties used for looking up and filtering SslNegotiationPolicy resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/elb/sslNegotiationPolicy.ts#L162">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SslNegotiationPolicyAttribute'>inputs.elb.SslNegotiationPolicyAttribute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SslNegotiationPolicyAttribute'>SslNegotiationPolicyAttribute</a>&gt;[]&gt;;</code></pre>
 
 An SSL Negotiation policy attribute. Each has two properties:
 

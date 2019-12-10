@@ -1,5 +1,6 @@
 ---
 title: "Module monitoring"
+title_tag: "Module monitoring | Package @pulumi/gcp | Node.js SDK"
 linktitle: "monitoring"
 meta_desc: "Explore members of the monitoring module in the @pulumi/gcp package."
 ---
@@ -87,7 +88,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AlertPolicy.  This is designed to work even
@@ -105,7 +106,7 @@ How to combine the results of multiple conditions to determine if an incident sh
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L47">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCondition'>outputs.monitoring.AlertPolicyCondition</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCondition'>AlertPolicyCondition</a>[]&gt;;</code></pre>
 
 A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
 the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
@@ -114,7 +115,7 @@ the combined conditions evaluate to true, then an incident is created. A policy 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L52">property <b>creationRecord</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>creationRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCreationRecord'>outputs.monitoring.AlertPolicyCreationRecord</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>creationRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCreationRecord'>AlertPolicyCreationRecord</a>&gt;;</code></pre>
 
 A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field
 will be ignored.
@@ -133,7 +134,7 @@ characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L64">property <b>documentation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>documentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyDocumentation'>outputs.monitoring.AlertPolicyDocumentation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>documentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyDocumentation'>AlertPolicyDocumentation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -251,7 +252,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -373,7 +374,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NotificationChannel</code></pre>
 
 
 Returns true if the given object is an instance of NotificationChannel.  This is designed to work even
@@ -542,7 +543,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UptimeCheckConfig</code></pre>
 
 
 Returns true if the given object is an instance of UptimeCheckConfig.  This is designed to work even
@@ -552,7 +553,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L44">property <b>contentMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>contentMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigContentMatcher'>outputs.monitoring.UptimeCheckConfigContentMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>contentMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
 and other entries will be ignored. The server will look for an exact match of the string in the page response's
@@ -571,7 +572,7 @@ Workspace in order to make it easier to identify; however, uniqueness is not enf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L53">property <b>httpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigHttpCheck'>outputs.monitoring.UptimeCheckConfigHttpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Contains information needed to make an HTTP or HTTPS check.
 
@@ -588,7 +589,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L54">property <b>internalCheckers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>internalCheckers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigInternalChecker'>outputs.monitoring.UptimeCheckConfigInternalChecker</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>internalCheckers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-isInternal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L55">property <b>isInternal</b></a>
 </h4>
@@ -598,7 +599,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L61">property <b>monitoredResource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>monitoredResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigMonitoredResource'>outputs.monitoring.UptimeCheckConfigMonitoredResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>monitoredResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
 following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
@@ -635,7 +636,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L80">property <b>resourceGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigResourceGroup'>outputs.monitoring.UptimeCheckConfigResourceGroup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The group resource associated with the configuration.
 
@@ -653,7 +654,7 @@ error message is returned. Not specifying this field will result in uptime check
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L90">property <b>tcpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tcpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigTcpCheck'>outputs.monitoring.UptimeCheckConfigTcpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tcpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Contains information needed to make a TCP check.
 
@@ -708,7 +709,7 @@ How to combine the results of multiple conditions to determine if an incident sh
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L213">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>inputs.monitoring.AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
 
 A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
 the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
@@ -727,7 +728,7 @@ characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L225">property <b>documentation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>inputs.monitoring.AlertPolicyDocumentation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>AlertPolicyDocumentation</a>&gt;;</code></pre>
 
 A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -794,7 +795,7 @@ How to combine the results of multiple conditions to determine if an incident sh
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L158">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>inputs.monitoring.AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
 
 A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
 the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
@@ -803,7 +804,7 @@ the combined conditions evaluate to true, then an incident is created. A policy 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L163">property <b>creationRecord</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>creationRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCreationRecord'>inputs.monitoring.AlertPolicyCreationRecord</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>creationRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCreationRecord'>AlertPolicyCreationRecord</a>&gt;;</code></pre>
 
 A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field
 will be ignored.
@@ -822,7 +823,7 @@ characters.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/alertPolicy.ts#L175">property <b>documentation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>inputs.monitoring.AlertPolicyDocumentation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>AlertPolicyDocumentation</a>&gt;;</code></pre>
 
 A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1196,7 +1197,7 @@ The set of arguments for constructing a UptimeCheckConfig resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L237">property <b>contentMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>inputs.monitoring.UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
 
 The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
 and other entries will be ignored. The server will look for an exact match of the string in the page response's
@@ -1215,7 +1216,7 @@ Workspace in order to make it easier to identify; however, uniqueness is not enf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L246">property <b>httpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>inputs.monitoring.UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
 
 Contains information needed to make an HTTP or HTTPS check.
 
@@ -1223,7 +1224,7 @@ Contains information needed to make an HTTP or HTTPS check.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L247">property <b>internalCheckers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>inputs.monitoring.UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-isInternal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L248">property <b>isInternal</b></a>
 </h4>
@@ -1233,7 +1234,7 @@ Contains information needed to make an HTTP or HTTPS check.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L254">property <b>monitoredResource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>inputs.monitoring.UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
 
 The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
 following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
@@ -1261,7 +1262,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L268">property <b>resourceGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>inputs.monitoring.UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
 
 The group resource associated with the configuration.
 
@@ -1279,7 +1280,7 @@ error message is returned. Not specifying this field will result in uptime check
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L278">property <b>tcpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>inputs.monitoring.UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
 
 Contains information needed to make a TCP check.
 
@@ -1306,7 +1307,7 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L170">property <b>contentMatchers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>inputs.monitoring.UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
 
 The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
 and other entries will be ignored. The server will look for an exact match of the string in the page response's
@@ -1325,7 +1326,7 @@ Workspace in order to make it easier to identify; however, uniqueness is not enf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L179">property <b>httpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>inputs.monitoring.UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
 
 Contains information needed to make an HTTP or HTTPS check.
 
@@ -1333,7 +1334,7 @@ Contains information needed to make an HTTP or HTTPS check.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L180">property <b>internalCheckers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>inputs.monitoring.UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-isInternal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L181">property <b>isInternal</b></a>
 </h4>
@@ -1343,7 +1344,7 @@ Contains information needed to make an HTTP or HTTPS check.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L187">property <b>monitoredResource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>inputs.monitoring.UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
 
 The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
 following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
@@ -1380,7 +1381,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L206">property <b>resourceGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>inputs.monitoring.UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
 
 The group resource associated with the configuration.
 
@@ -1398,7 +1399,7 @@ error message is returned. Not specifying this field will result in uptime check
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L216">property <b>tcpCheck</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>inputs.monitoring.UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
 
 Contains information needed to make a TCP check.
 

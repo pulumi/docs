@@ -973,17 +973,17 @@ A description for this API Operation, which may include HTML formatting tags.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L41">property <b>headers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestHeader'>outputs.apimanagement.ApiOperationRequestHeader</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headers?: <a href='#ApiOperationRequestHeader'>ApiOperationRequestHeader</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationRequest-queryParameters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L42">property <b>queryParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queryParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestQueryParameter'>outputs.apimanagement.ApiOperationRequestQueryParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queryParameters?: <a href='#ApiOperationRequestQueryParameter'>ApiOperationRequestQueryParameter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationRequest-representations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L43">property <b>representations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>representations?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestRepresentation'>outputs.apimanagement.ApiOperationRequestRepresentation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>representations?: <a href='#ApiOperationRequestRepresentation'>ApiOperationRequestRepresentation</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ApiOperationRequestHeader" data-link-title="ApiOperationRequestHeader">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L46">
         interface <strong>ApiOperationRequestHeader</strong>
@@ -1080,7 +1080,7 @@ A description for this API Operation, which may include HTML formatting tags.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L72">property <b>formParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>formParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestRepresentationFormParameter'>outputs.apimanagement.ApiOperationRequestRepresentationFormParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>formParameters?: <a href='#ApiOperationRequestRepresentationFormParameter'>ApiOperationRequestRepresentationFormParameter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationRequestRepresentation-sample">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L73">property <b>sample</b></a>
 </h4>
@@ -1155,12 +1155,12 @@ A description for this API Operation, which may include HTML formatting tags.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L95">property <b>headers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseHeader'>outputs.apimanagement.ApiOperationResponseHeader</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headers?: <a href='#ApiOperationResponseHeader'>ApiOperationResponseHeader</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationResponse-representations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L96">property <b>representations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>representations?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseRepresentation'>outputs.apimanagement.ApiOperationResponseRepresentation</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>representations?: <a href='#ApiOperationResponseRepresentation'>ApiOperationResponseRepresentation</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationResponse-statusCode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L97">property <b>statusCode</b></a>
 </h4>
@@ -1222,7 +1222,7 @@ A description for this API Operation, which may include HTML formatting tags.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L114">property <b>formParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>formParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseRepresentationFormParameter'>outputs.apimanagement.ApiOperationResponseRepresentationFormParameter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>formParameters?: <a href='#ApiOperationResponseRepresentationFormParameter'>ApiOperationResponseRepresentationFormParameter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationResponseRepresentation-sample">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L115">property <b>sample</b></a>
 </h4>
@@ -1455,7 +1455,7 @@ The URL of the backend host.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L183">property <b>serverX509Names</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverX509Names?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricClusterServerX509Name'>outputs.apimanagement.BackendServiceFabricClusterServerX509Name</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverX509Names?: <a href='#BackendServiceFabricClusterServerX509Name'>BackendServiceFabricClusterServerX509Name</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="BackendServiceFabricClusterServerX509Name" data-link-title="BackendServiceFabricClusterServerX509Name">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L186">
         interface <strong>BackendServiceFabricClusterServerX509Name</strong>
@@ -1558,7 +1558,7 @@ Public Static Load Balanced IP addresses of the API Management service in the ad
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L229">property <b>managements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managements: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationManagement'>outputs.apimanagement.GetServiceHostnameConfigurationManagement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managements: <a href='#GetServiceHostnameConfigurationManagement'>GetServiceHostnameConfigurationManagement</a>[];</code></pre>
 
 One or more `management` blocks as documented below.
 
@@ -1566,7 +1566,7 @@ One or more `management` blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L233">property <b>portals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portals: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationPortal'>outputs.apimanagement.GetServiceHostnameConfigurationPortal</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portals: <a href='#GetServiceHostnameConfigurationPortal'>GetServiceHostnameConfigurationPortal</a>[];</code></pre>
 
 One or more `portal` blocks as documented below.
 
@@ -1574,7 +1574,7 @@ One or more `portal` blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L237">property <b>proxies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationProxy'>outputs.apimanagement.GetServiceHostnameConfigurationProxy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxies: <a href='#GetServiceHostnameConfigurationProxy'>GetServiceHostnameConfigurationProxy</a>[];</code></pre>
 
 One or more `proxy` blocks as documented below.
 
@@ -1582,7 +1582,7 @@ One or more `proxy` blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L241">property <b>scms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scms: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationScm'>outputs.apimanagement.GetServiceHostnameConfigurationScm</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scms: <a href='#GetServiceHostnameConfigurationScm'>GetServiceHostnameConfigurationScm</a>[];</code></pre>
 
 One or more `scm` blocks as documented below.
 
@@ -1837,22 +1837,22 @@ Public Static Load Balanced IP addresses of the API Management service in the ad
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L353">property <b>managements</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>managements?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationManagement'>outputs.apimanagement.ServiceHostnameConfigurationManagement</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>managements?: <a href='#ServiceHostnameConfigurationManagement'>ServiceHostnameConfigurationManagement</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceHostnameConfiguration-portals">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L354">property <b>portals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portals?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationPortal'>outputs.apimanagement.ServiceHostnameConfigurationPortal</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portals?: <a href='#ServiceHostnameConfigurationPortal'>ServiceHostnameConfigurationPortal</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceHostnameConfiguration-proxies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L355">property <b>proxies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxies?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationProxy'>outputs.apimanagement.ServiceHostnameConfigurationProxy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxies?: <a href='#ServiceHostnameConfigurationProxy'>ServiceHostnameConfigurationProxy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceHostnameConfiguration-scms">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L356">property <b>scms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scms?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationScm'>outputs.apimanagement.ServiceHostnameConfigurationScm</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scms?: <a href='#ServiceHostnameConfigurationScm'>ServiceHostnameConfigurationScm</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ServiceHostnameConfigurationManagement" data-link-title="ServiceHostnameConfigurationManagement">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L359">
         interface <strong>ServiceHostnameConfigurationManagement</strong>
@@ -2153,7 +2153,7 @@ The Tenant ID associated with this Managed Service Identity.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L445">property <b>termsOfService</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>termsOfService: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUpTermsOfService'>outputs.apimanagement.ServiceSignUpTermsOfService</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>termsOfService: <a href='#ServiceSignUpTermsOfService'>ServiceSignUpTermsOfService</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceSignUpTermsOfService" data-link-title="ServiceSignUpTermsOfService">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L448">
         interface <strong>ServiceSignUpTermsOfService</strong>
@@ -2409,7 +2409,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L522">property <b>schedule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceBackupSchedule'>outputs.appservice.AppServiceBackupSchedule</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedule: <a href='#AppServiceBackupSchedule'>AppServiceBackupSchedule</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AppServiceBackup-storageAccountUrl">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L523">property <b>storageAccountUrl</b></a>
 </h4>
@@ -2516,12 +2516,12 @@ The Tenant ID for the Service Principal associated with the Managed Service Iden
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L557">property <b>applicationLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applicationLogs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsApplicationLogs'>outputs.appservice.AppServiceLogsApplicationLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applicationLogs: <a href='#AppServiceLogsApplicationLogs'>AppServiceLogsApplicationLogs</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AppServiceLogs-httpLogs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L558">property <b>httpLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpLogs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsHttpLogs'>outputs.appservice.AppServiceLogsHttpLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpLogs: <a href='#AppServiceLogsHttpLogs'>AppServiceLogsHttpLogs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AppServiceLogsApplicationLogs" data-link-title="AppServiceLogsApplicationLogs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L561">
         interface <strong>AppServiceLogsApplicationLogs</strong>
@@ -2633,7 +2633,7 @@ The Tenant ID for the Service Principal associated with the Managed Service Iden
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L590">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfigCors'>outputs.appservice.AppServiceSiteConfigCors</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors: <a href='#AppServiceSiteConfigCors'>AppServiceSiteConfigCors</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AppServiceSiteConfig-defaultDocuments">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L591">property <b>defaultDocuments</b></a>
 </h4>
@@ -2658,7 +2658,7 @@ The Tenant ID for the Service Principal associated with the Managed Service Iden
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L595">property <b>ipRestrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfigIpRestriction'>outputs.appservice.AppServiceSiteConfigIpRestriction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='#AppServiceSiteConfigIpRestriction'>AppServiceSiteConfigIpRestriction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AppServiceSiteConfig-javaContainer">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L596">property <b>javaContainer</b></a>
 </h4>
@@ -3169,7 +3169,7 @@ Should the Function App be loaded at all times? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L765">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppSiteConfigCors'>outputs.appservice.FunctionAppSiteConfigCors</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors: <a href='#FunctionAppSiteConfigCors'>FunctionAppSiteConfigCors</a>;</code></pre>
 
 A `cors` block as defined below.
 
@@ -3373,7 +3373,7 @@ App command line to launch.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L861">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigCors'>outputs.appservice.GetAppServiceSiteConfigCors</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors: <a href='#GetAppServiceSiteConfigCors'>GetAppServiceSiteConfigCors</a>;</code></pre>
 
 A `cors` block as defined above.
 
@@ -3413,7 +3413,7 @@ Is HTTP2 Enabled on this App Service?
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L881">property <b>ipRestrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigIpRestriction'>outputs.appservice.GetAppServiceSiteConfigIpRestriction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='#GetAppServiceSiteConfigIpRestriction'>GetAppServiceSiteConfigIpRestriction</a>[];</code></pre>
 
 One or more `ipRestriction` blocks as defined above.
 
@@ -3988,12 +3988,12 @@ The type of the Connection String. Possible values are `APIHub`, `Custom`, `DocD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1105">property <b>applicationLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applicationLogs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsApplicationLogs'>outputs.appservice.SlotLogsApplicationLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applicationLogs: <a href='#SlotLogsApplicationLogs'>SlotLogsApplicationLogs</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SlotLogs-httpLogs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1106">property <b>httpLogs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpLogs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsHttpLogs'>outputs.appservice.SlotLogsHttpLogs</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpLogs: <a href='#SlotLogsHttpLogs'>SlotLogsHttpLogs</a>;</code></pre>
 <h3 class="pdoc-module-header" id="SlotLogsApplicationLogs" data-link-title="SlotLogsApplicationLogs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1109">
         interface <strong>SlotLogsApplicationLogs</strong>
@@ -4114,7 +4114,7 @@ The name of the swap to automatically swap to during deployment
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1150">property <b>cors</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfigCors'>outputs.appservice.SlotSiteConfigCors</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cors: <a href='#SlotSiteConfigCors'>SlotSiteConfigCors</a>;</code></pre>
 
 A `cors` block as defined below.
 
@@ -4151,7 +4151,7 @@ Is HTTP2 Enabled on this App Service? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1167">property <b>ipRestrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfigIpRestriction'>outputs.appservice.SlotSiteConfigIpRestriction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipRestrictions: <a href='#SlotSiteConfigIpRestriction'>SlotSiteConfigIpRestriction</a>[];</code></pre>
 
 A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 
@@ -4568,7 +4568,7 @@ The uri of the runbook content.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1336">property <b>webhooks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingNotificationWebhook'>outputs.autoscale.SettingNotificationWebhook</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='#SettingNotificationWebhook'>SettingNotificationWebhook</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="SettingNotificationEmail" data-link-title="SettingNotificationEmail">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1339">
         interface <strong>SettingNotificationEmail</strong>
@@ -4619,7 +4619,7 @@ The uri of the runbook content.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1351">property <b>capacity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfileCapacity'>outputs.autoscale.SettingProfileCapacity</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capacity: <a href='#SettingProfileCapacity'>SettingProfileCapacity</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SettingProfile-fixedDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1352">property <b>fixedDate</b></a>
 </h4>
@@ -4642,7 +4642,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1358">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfileRule'>outputs.autoscale.SettingProfileRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#SettingProfileRule'>SettingProfileRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="SettingProfileCapacity" data-link-title="SettingProfileCapacity">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1361">
         interface <strong>SettingProfileCapacity</strong>
@@ -4725,12 +4725,12 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1381">property <b>metricTrigger</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfileRuleMetricTrigger'>outputs.autoscale.SettingProfileRuleMetricTrigger</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricTrigger: <a href='#SettingProfileRuleMetricTrigger'>SettingProfileRuleMetricTrigger</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SettingProfileRule-scaleAction">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1382">property <b>scaleAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scaleAction: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfileRuleScaleAction'>outputs.autoscale.SettingProfileRuleScaleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scaleAction: <a href='#SettingProfileRuleScaleAction'>SettingProfileRuleScaleAction</a>;</code></pre>
 <h3 class="pdoc-module-header" id="SettingProfileRuleMetricTrigger" data-link-title="SettingProfileRuleMetricTrigger">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1385">
         interface <strong>SettingProfileRuleMetricTrigger</strong>
@@ -4922,7 +4922,7 @@ Which user accounts on the compute node have access to the private data of the c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1458">property <b>containerRegistries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containerRegistries: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolContainerConfigurationContainerRegistry'>outputs.batch.GetPoolContainerConfigurationContainerRegistry</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containerRegistries: <a href='#GetPoolContainerConfigurationContainerRegistry'>GetPoolContainerConfigurationContainerRegistry</a>[];</code></pre>
 
 Additional container registries from which container images can be pulled by the pool's VMs.
 
@@ -5031,7 +5031,7 @@ The number of retry count.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1511">property <b>resourceFiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceFiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskResourceFile'>outputs.batch.GetPoolStartTaskResourceFile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceFiles: <a href='#GetPoolStartTaskResourceFile'>GetPoolStartTaskResourceFile</a>[];</code></pre>
 
 (Optional) One or more `resourceFile` blocks that describe the files to be downloaded to a compute node.
 
@@ -5039,7 +5039,7 @@ The number of retry count.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1515">property <b>userIdentities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskUserIdentity'>outputs.batch.GetPoolStartTaskUserIdentity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userIdentities: <a href='#GetPoolStartTaskUserIdentity'>GetPoolStartTaskUserIdentity</a>[];</code></pre>
 
 A `userIdentity` block that describes the user identity under which the start task runs.
 
@@ -5117,7 +5117,7 @@ The URL of the blob container within Azure Blob Storage.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1553">property <b>autoUsers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoUsers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskUserIdentityAutoUser'>outputs.batch.GetPoolStartTaskUserIdentityAutoUser</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoUsers: <a href='#GetPoolStartTaskUserIdentityAutoUser'>GetPoolStartTaskUserIdentityAutoUser</a>[];</code></pre>
 
 A `autoUser` block that describes the user identity under which the start task runs.
 
@@ -5245,7 +5245,7 @@ The Batch pool ID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1598">property <b>containerRegistries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containerRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolContainerConfigurationContainerRegistry'>outputs.batch.PoolContainerConfigurationContainerRegistry</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containerRegistries?: <a href='#PoolContainerConfigurationContainerRegistry'>PoolContainerConfigurationContainerRegistry</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PoolContainerConfiguration-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1599">property <b>type</b></a>
 </h4>
@@ -5321,12 +5321,12 @@ The Batch pool ID.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1618">property <b>resourceFiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceFiles?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTaskResourceFile'>outputs.batch.PoolStartTaskResourceFile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceFiles?: <a href='#PoolStartTaskResourceFile'>PoolStartTaskResourceFile</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PoolStartTask-userIdentity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1619">property <b>userIdentity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userIdentity: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTaskUserIdentity'>outputs.batch.PoolStartTaskUserIdentity</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userIdentity: <a href='#PoolStartTaskUserIdentity'>PoolStartTaskUserIdentity</a>;</code></pre>
 <h4 class="pdoc-member-header" id="PoolStartTask-waitForSuccess">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1620">property <b>waitForSuccess</b></a>
 </h4>
@@ -5705,7 +5705,7 @@ The number of replicas of the Image Version to be created per region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1769">property <b>diskEncryptionKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diskEncryptionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingDiskEncryptionKey'>outputs.compute.GetSnapshotEncryptionSettingDiskEncryptionKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskEncryptionKeys: <a href='#GetSnapshotEncryptionSettingDiskEncryptionKey'>GetSnapshotEncryptionSettingDiskEncryptionKey</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotEncryptionSetting-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1770">property <b>enabled</b></a>
 </h4>
@@ -5715,7 +5715,7 @@ The number of replicas of the Image Version to be created per region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1771">property <b>keyEncryptionKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>keyEncryptionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingKeyEncryptionKey'>outputs.compute.GetSnapshotEncryptionSettingKeyEncryptionKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>keyEncryptionKeys: <a href='#GetSnapshotEncryptionSettingKeyEncryptionKey'>GetSnapshotEncryptionSettingKeyEncryptionKey</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSnapshotEncryptionSettingDiskEncryptionKey" data-link-title="GetSnapshotEncryptionSettingDiskEncryptionKey">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1774">
         interface <strong>GetSnapshotEncryptionSettingDiskEncryptionKey</strong>
@@ -6072,7 +6072,7 @@ A dnsSettings block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L1935">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfileIpConfiguration'>outputs.compute.ScaleSetNetworkProfileIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='#ScaleSetNetworkProfileIpConfiguration'>ScaleSetNetworkProfileIpConfiguration</a>[];</code></pre>
 
 An ipConfiguration block as documented below.
 
@@ -6283,7 +6283,7 @@ Specifies whether password authentication should be disabled. Defaults to `false
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2038">property <b>sshKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileLinuxConfigSshKey'>outputs.compute.ScaleSetOsProfileLinuxConfigSshKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='#ScaleSetOsProfileLinuxConfigSshKey'>ScaleSetOsProfileLinuxConfigSshKey</a>[];</code></pre>
 
 Specifies a collection of `path` and `keyData` to be placed on the virtual machine.
 
@@ -6323,7 +6323,7 @@ Specifies the key vault to use.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2054">property <b>vaultCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vaultCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileSecretVaultCertificate'>outputs.compute.ScaleSetOsProfileSecretVaultCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vaultCertificates?: <a href='#ScaleSetOsProfileSecretVaultCertificate'>ScaleSetOsProfileSecretVaultCertificate</a>[];</code></pre>
 
 A collection of Vault Certificates as documented below
 
@@ -6361,7 +6361,7 @@ Specifies URL of the certificate with which new Virtual Machines is provisioned.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2072">property <b>additionalUnattendConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalUnattendConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig'>outputs.compute.ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalUnattendConfigs?: <a href='#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig'>ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig</a>[];</code></pre>
 
 An Additional Unattended Config block as documented below.
 
@@ -6385,7 +6385,7 @@ Indicates whether virtual machine agent should be provisioned on the virtual mac
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2084">property <b>winrms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>winrms?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfigWinrm'>outputs.compute.ScaleSetOsProfileWindowsConfigWinrm</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>winrms?: <a href='#ScaleSetOsProfileWindowsConfigWinrm'>ScaleSetOsProfileWindowsConfigWinrm</a>[];</code></pre>
 
 A collection of WinRM configuration blocks as documented below.
 
@@ -6907,7 +6907,7 @@ The Principal ID for the Service Principal associated with the Managed Service I
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2303">property <b>sshKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileLinuxConfigSshKey'>outputs.compute.VirtualMachineOsProfileLinuxConfigSshKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sshKeys?: <a href='#VirtualMachineOsProfileLinuxConfigSshKey'>VirtualMachineOsProfileLinuxConfigSshKey</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineOsProfileLinuxConfigSshKey" data-link-title="VirtualMachineOsProfileLinuxConfigSshKey">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2306">
         interface <strong>VirtualMachineOsProfileLinuxConfigSshKey</strong>
@@ -6941,7 +6941,7 @@ The Principal ID for the Service Principal associated with the Managed Service I
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2313">property <b>vaultCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vaultCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileSecretVaultCertificate'>outputs.compute.VirtualMachineOsProfileSecretVaultCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vaultCertificates?: <a href='#VirtualMachineOsProfileSecretVaultCertificate'>VirtualMachineOsProfileSecretVaultCertificate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineOsProfileSecretVaultCertificate" data-link-title="VirtualMachineOsProfileSecretVaultCertificate">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2316">
         interface <strong>VirtualMachineOsProfileSecretVaultCertificate</strong>
@@ -6970,7 +6970,7 @@ The Principal ID for the Service Principal associated with the Managed Service I
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2322">property <b>additionalUnattendConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalUnattendConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig'>outputs.compute.VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalUnattendConfigs?: <a href='#VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig'>VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineOsProfileWindowsConfig-enableAutomaticUpgrades">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2323">property <b>enableAutomaticUpgrades</b></a>
 </h4>
@@ -6990,7 +6990,7 @@ The Principal ID for the Service Principal associated with the Managed Service I
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2326">property <b>winrms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>winrms?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfigWinrm'>outputs.compute.VirtualMachineOsProfileWindowsConfigWinrm</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>winrms?: <a href='#VirtualMachineOsProfileWindowsConfigWinrm'>VirtualMachineOsProfileWindowsConfigWinrm</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig" data-link-title="VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2329">
         interface <strong>VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig</strong>
@@ -7222,7 +7222,7 @@ Specifies the name of the Virtual Machine. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2398">property <b>azurePolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azurePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileAzurePolicy'>outputs.containerservice.GetKubernetesClusterAddonProfileAzurePolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azurePolicies: <a href='#GetKubernetesClusterAddonProfileAzurePolicy'>GetKubernetesClusterAddonProfileAzurePolicy</a>[];</code></pre>
 
 A `azurePolicy` block.
 
@@ -7230,7 +7230,7 @@ A `azurePolicy` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2402">property <b>httpApplicationRoutings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpApplicationRoutings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileHttpApplicationRouting'>outputs.containerservice.GetKubernetesClusterAddonProfileHttpApplicationRouting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpApplicationRoutings: <a href='#GetKubernetesClusterAddonProfileHttpApplicationRouting'>GetKubernetesClusterAddonProfileHttpApplicationRouting</a>[];</code></pre>
 
 A `httpApplicationRouting` block.
 
@@ -7238,7 +7238,7 @@ A `httpApplicationRouting` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2406">property <b>kubeDashboards</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeDashboards: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileKubeDashboard'>outputs.containerservice.GetKubernetesClusterAddonProfileKubeDashboard</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeDashboards: <a href='#GetKubernetesClusterAddonProfileKubeDashboard'>GetKubernetesClusterAddonProfileKubeDashboard</a>[];</code></pre>
 
 A `kubeDashboard` block.
 
@@ -7246,7 +7246,7 @@ A `kubeDashboard` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2410">property <b>omsAgents</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>omsAgents: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileOmsAgent'>outputs.containerservice.GetKubernetesClusterAddonProfileOmsAgent</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>omsAgents: <a href='#GetKubernetesClusterAddonProfileOmsAgent'>GetKubernetesClusterAddonProfileOmsAgent</a>[];</code></pre>
 
 A `omsAgent` block.
 
@@ -7579,7 +7579,7 @@ The username associated with the administrator account of the Windows VMs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2571">property <b>sshKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sshKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfileSshKey'>outputs.containerservice.GetKubernetesClusterLinuxProfileSshKey</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sshKeys: <a href='#GetKubernetesClusterLinuxProfileSshKey'>GetKubernetesClusterLinuxProfileSshKey</a>[];</code></pre>
 
 An `sshKey` block as defined below.
 
@@ -7669,7 +7669,7 @@ Network range used by the Kubernetes service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2613">property <b>azureActiveDirectories</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureActiveDirectories: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory'>outputs.containerservice.GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureActiveDirectories: <a href='#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory'>GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory</a>[];</code></pre>
 
 A `azureActiveDirectory` block as documented above.
 
@@ -7806,7 +7806,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2663">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerPort'>outputs.containerservice.GroupContainerPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ports: <a href='#GroupContainerPort'>GroupContainerPort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GroupContainer-protocol">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2664">property <b>protocol</b></a>
 </h4>
@@ -7826,7 +7826,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2667">property <b>volumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerVolume'>outputs.containerservice.GroupContainerVolume</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='#GroupContainerVolume'>GroupContainerVolume</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GroupContainerGpu" data-link-title="GroupContainerGpu">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2670">
         interface <strong>GroupContainerGpu</strong>
@@ -7865,7 +7865,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2678">property <b>httpGets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpGets?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerLivenessProbeHttpGet'>outputs.containerservice.GroupContainerLivenessProbeHttpGet</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpGets?: <a href='#GroupContainerLivenessProbeHttpGet'>GroupContainerLivenessProbeHttpGet</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GroupContainerLivenessProbe-initialDelaySeconds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2679">property <b>initialDelaySeconds</b></a>
 </h4>
@@ -7946,7 +7946,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2699">property <b>httpGets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpGets?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerReadinessProbeHttpGet'>outputs.containerservice.GroupContainerReadinessProbeHttpGet</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpGets?: <a href='#GroupContainerReadinessProbeHttpGet'>GroupContainerReadinessProbeHttpGet</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GroupContainerReadinessProbe-initialDelaySeconds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2700">property <b>initialDelaySeconds</b></a>
 </h4>
@@ -8040,7 +8040,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2725">property <b>logAnalytics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logAnalytics: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnosticsLogAnalytics'>outputs.containerservice.GroupDiagnosticsLogAnalytics</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logAnalytics: <a href='#GroupDiagnosticsLogAnalytics'>GroupDiagnosticsLogAnalytics</a>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupDiagnosticsLogAnalytics" data-link-title="GroupDiagnosticsLogAnalytics">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2728">
         interface <strong>GroupDiagnosticsLogAnalytics</strong>
@@ -8522,7 +8522,7 @@ A username used to authenticate to the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2887">property <b>sshKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sshKey: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfileSshKey'>outputs.containerservice.KubernetesClusterLinuxProfileSshKey</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sshKey: <a href='#KubernetesClusterLinuxProfileSshKey'>KubernetesClusterLinuxProfileSshKey</a>;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesClusterLinuxProfileSshKey" data-link-title="KubernetesClusterLinuxProfileSshKey">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2890">
         interface <strong>KubernetesClusterLinuxProfileSshKey</strong>
@@ -8674,7 +8674,7 @@ The behaviour for requests matching no rules. Either `Allow` or `Deny`. Defaults
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2934">property <b>ipRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipRules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSetIpRule'>outputs.containerservice.RegistryNetworkRuleSetIpRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipRules?: <a href='#RegistryNetworkRuleSetIpRule'>RegistryNetworkRuleSetIpRule</a>[];</code></pre>
 
 One or more `ipRule` blocks as defined below.
 
@@ -8682,7 +8682,7 @@ One or more `ipRule` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L2938">property <b>virtualNetworks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNetworks?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSetVirtualNetwork'>outputs.containerservice.RegistryNetworkRuleSetVirtualNetwork</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNetworks?: <a href='#RegistryNetworkRuleSetVirtualNetwork'>RegistryNetworkRuleSetVirtualNetwork</a>[];</code></pre>
 
 One or more `virtualNetwork` blocks as defined below.
 
@@ -8835,7 +8835,7 @@ The Admin Username for the Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3007">property <b>sshKey</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sshKey: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceLinuxProfileSshKey'>outputs.containerservice.ServiceLinuxProfileSshKey</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sshKey: <a href='#ServiceLinuxProfileSshKey'>ServiceLinuxProfileSshKey</a>;</code></pre>
 
 An SSH Key block as documented below.
 
@@ -10370,7 +10370,7 @@ Specifies the topic of the EventGrid Event to associate with the domain. Changin
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3671">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubCaptureDescriptionDestination'>outputs.eventhub.EventHubCaptureDescriptionDestination</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination: <a href='#EventHubCaptureDescriptionDestination'>EventHubCaptureDescriptionDestination</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventHubCaptureDescription-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3672">property <b>enabled</b></a>
 </h4>
@@ -10447,7 +10447,7 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3692">property <b>virtualNetworkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesetsVirtualNetworkRule'>outputs.eventhub.EventHubNamespaceNetworkRulesetsVirtualNetworkRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkRules?: <a href='#EventHubNamespaceNetworkRulesetsVirtualNetworkRule'>EventHubNamespaceNetworkRulesetsVirtualNetworkRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="EventHubNamespaceNetworkRulesetsIpRule" data-link-title="EventHubNamespaceNetworkRulesetsIpRule">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3695">
         interface <strong>EventHubNamespaceNetworkRulesetsIpRule</strong>
@@ -10723,7 +10723,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3817">property <b>matchConditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>matchConditions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRuleMatchCondition'>outputs.frontdoor.FirewallPolicyCustomRuleMatchCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>matchConditions?: <a href='#FirewallPolicyCustomRuleMatchCondition'>FirewallPolicyCustomRuleMatchCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="FirewallPolicyCustomRule-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3821">property <b>name</b></a>
 </h4>
@@ -10800,7 +10800,7 @@ The name of the policy. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3838">property <b>overrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverride'>outputs.frontdoor.FirewallPolicyManagedRuleOverride</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>overrides?: <a href='#FirewallPolicyManagedRuleOverride'>FirewallPolicyManagedRuleOverride</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="FirewallPolicyManagedRule-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3839">property <b>type</b></a>
 </h4>
@@ -10827,7 +10827,7 @@ The name of the policy. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3844">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverrideRule'>outputs.frontdoor.FirewallPolicyManagedRuleOverrideRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#FirewallPolicyManagedRuleOverrideRule'>FirewallPolicyManagedRuleOverrideRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="FirewallPolicyManagedRuleOverrideRule" data-link-title="FirewallPolicyManagedRuleOverrideRule">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3848">
         interface <strong>FirewallPolicyManagedRuleOverrideRule</strong>
@@ -10864,7 +10864,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3858">property <b>backends</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolBackend'>outputs.frontdoor.FrontdoorBackendPoolBackend</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backends: <a href='#FrontdoorBackendPoolBackend'>FrontdoorBackendPoolBackend</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="FrontdoorBackendPool-healthProbeName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L3859">property <b>healthProbeName</b></a>
 </h4>
@@ -11312,17 +11312,17 @@ The username used for the Ambari Portal.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4065">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRolesHeadNode'>outputs.hdinsight.HadoopClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#HadoopClusterRolesHeadNode'>HadoopClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="HadoopClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4066">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRolesWorkerNode'>outputs.hdinsight.HadoopClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#HadoopClusterRolesWorkerNode'>HadoopClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="HadoopClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4067">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRolesZookeeperNode'>outputs.hdinsight.HadoopClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#HadoopClusterRolesZookeeperNode'>HadoopClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="HadoopClusterRolesEdgeNode" data-link-title="HadoopClusterRolesEdgeNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4070">
         interface <strong>HadoopClusterRolesEdgeNode</strong>
@@ -11334,7 +11334,7 @@ The username used for the Ambari Portal.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4071">property <b>installScriptActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>installScriptActions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRolesEdgeNodeInstallScriptAction'>outputs.hdinsight.HadoopClusterRolesEdgeNodeInstallScriptAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>installScriptActions: <a href='#HadoopClusterRolesEdgeNodeInstallScriptAction'>HadoopClusterRolesEdgeNodeInstallScriptAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="HadoopClusterRolesEdgeNode-targetInstanceCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4072">property <b>targetInstanceCount</b></a>
 </h4>
@@ -11580,17 +11580,17 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4006">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterRolesHeadNode'>outputs.hdinsight.HBaseClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#HBaseClusterRolesHeadNode'>HBaseClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="HBaseClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4007">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterRolesWorkerNode'>outputs.hdinsight.HBaseClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#HBaseClusterRolesWorkerNode'>HBaseClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="HBaseClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4008">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterRolesZookeeperNode'>outputs.hdinsight.HBaseClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#HBaseClusterRolesZookeeperNode'>HBaseClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="HBaseClusterRolesHeadNode" data-link-title="HBaseClusterRolesHeadNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4011">
         interface <strong>HBaseClusterRolesHeadNode</strong>
@@ -11806,17 +11806,17 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4137">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesHeadNode'>outputs.hdinsight.InteractiveQueryClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#InteractiveQueryClusterRolesHeadNode'>InteractiveQueryClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="InteractiveQueryClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4138">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesWorkerNode'>outputs.hdinsight.InteractiveQueryClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#InteractiveQueryClusterRolesWorkerNode'>InteractiveQueryClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="InteractiveQueryClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4139">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesZookeeperNode'>outputs.hdinsight.InteractiveQueryClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#InteractiveQueryClusterRolesZookeeperNode'>InteractiveQueryClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="InteractiveQueryClusterRolesHeadNode" data-link-title="InteractiveQueryClusterRolesHeadNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4142">
         interface <strong>InteractiveQueryClusterRolesHeadNode</strong>
@@ -12032,17 +12032,17 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4195">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRolesHeadNode'>outputs.hdinsight.KafkaClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#KafkaClusterRolesHeadNode'>KafkaClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="KafkaClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4196">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRolesWorkerNode'>outputs.hdinsight.KafkaClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#KafkaClusterRolesWorkerNode'>KafkaClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="KafkaClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4197">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRolesZookeeperNode'>outputs.hdinsight.KafkaClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#KafkaClusterRolesZookeeperNode'>KafkaClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="KafkaClusterRolesHeadNode" data-link-title="KafkaClusterRolesHeadNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4200">
         interface <strong>KafkaClusterRolesHeadNode</strong>
@@ -12251,22 +12251,22 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4250">property <b>edgeNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>edgeNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesEdgeNode'>outputs.hdinsight.MLServicesClusterRolesEdgeNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>edgeNode: <a href='#MLServicesClusterRolesEdgeNode'>MLServicesClusterRolesEdgeNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="MLServicesClusterRoles-headNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4251">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesHeadNode'>outputs.hdinsight.MLServicesClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#MLServicesClusterRolesHeadNode'>MLServicesClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="MLServicesClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4252">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesWorkerNode'>outputs.hdinsight.MLServicesClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#MLServicesClusterRolesWorkerNode'>MLServicesClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="MLServicesClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4253">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesZookeeperNode'>outputs.hdinsight.MLServicesClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#MLServicesClusterRolesZookeeperNode'>MLServicesClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="MLServicesClusterRolesEdgeNode" data-link-title="MLServicesClusterRolesEdgeNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4256">
         interface <strong>MLServicesClusterRolesEdgeNode</strong>
@@ -12480,22 +12480,22 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4307">property <b>edgeNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>edgeNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRolesEdgeNode'>outputs.hdinsight.RServerClusterRolesEdgeNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>edgeNode: <a href='#RServerClusterRolesEdgeNode'>RServerClusterRolesEdgeNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="RServerClusterRoles-headNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4308">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRolesHeadNode'>outputs.hdinsight.RServerClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#RServerClusterRolesHeadNode'>RServerClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="RServerClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4309">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRolesWorkerNode'>outputs.hdinsight.RServerClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#RServerClusterRolesWorkerNode'>RServerClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="RServerClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4310">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRolesZookeeperNode'>outputs.hdinsight.RServerClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#RServerClusterRolesZookeeperNode'>RServerClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="RServerClusterRolesEdgeNode" data-link-title="RServerClusterRolesEdgeNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4313">
         interface <strong>RServerClusterRolesEdgeNode</strong>
@@ -12721,17 +12721,17 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4368">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterRolesHeadNode'>outputs.hdinsight.SparkClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#SparkClusterRolesHeadNode'>SparkClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SparkClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4369">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterRolesWorkerNode'>outputs.hdinsight.SparkClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#SparkClusterRolesWorkerNode'>SparkClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="SparkClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4370">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterRolesZookeeperNode'>outputs.hdinsight.SparkClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#SparkClusterRolesZookeeperNode'>SparkClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="SparkClusterRolesHeadNode" data-link-title="SparkClusterRolesHeadNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4373">
         interface <strong>SparkClusterRolesHeadNode</strong>
@@ -12947,17 +12947,17 @@ Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4426">property <b>headNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>headNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterRolesHeadNode'>outputs.hdinsight.StormClusterRolesHeadNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>headNode: <a href='#StormClusterRolesHeadNode'>StormClusterRolesHeadNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="StormClusterRoles-workerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4427">property <b>workerNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterRolesWorkerNode'>outputs.hdinsight.StormClusterRolesWorkerNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerNode: <a href='#StormClusterRolesWorkerNode'>StormClusterRolesWorkerNode</a>;</code></pre>
 <h4 class="pdoc-member-header" id="StormClusterRoles-zookeeperNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4428">property <b>zookeeperNode</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterRolesZookeeperNode'>outputs.hdinsight.StormClusterRolesZookeeperNode</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>zookeeperNode: <a href='#StormClusterRolesZookeeperNode'>StormClusterRolesZookeeperNode</a>;</code></pre>
 <h3 class="pdoc-module-header" id="StormClusterRolesHeadNode" data-link-title="StormClusterRolesHeadNode">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4431">
         interface <strong>StormClusterRolesHeadNode</strong>
@@ -13642,7 +13642,7 @@ The password associated with the certificate. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4667">property <b>issuerParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>issuerParameters: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyIssuerParameters'>outputs.keyvault.CertifiateCertificatePolicyIssuerParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>issuerParameters: <a href='#CertifiateCertificatePolicyIssuerParameters'>CertifiateCertificatePolicyIssuerParameters</a>;</code></pre>
 
 A `issuerParameters` block as defined below.
 
@@ -13650,7 +13650,7 @@ A `issuerParameters` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4671">property <b>keyProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>keyProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyKeyProperties'>outputs.keyvault.CertifiateCertificatePolicyKeyProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>keyProperties: <a href='#CertifiateCertificatePolicyKeyProperties'>CertifiateCertificatePolicyKeyProperties</a>;</code></pre>
 
 A `keyProperties` block as defined below.
 
@@ -13658,7 +13658,7 @@ A `keyProperties` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4675">property <b>lifetimeActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimeActions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeAction'>outputs.keyvault.CertifiateCertificatePolicyLifetimeAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimeActions?: <a href='#CertifiateCertificatePolicyLifetimeAction'>CertifiateCertificatePolicyLifetimeAction</a>[];</code></pre>
 
 A `lifetimeAction` block as defined below.
 
@@ -13666,7 +13666,7 @@ A `lifetimeAction` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4679">property <b>secretProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secretProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicySecretProperties'>outputs.keyvault.CertifiateCertificatePolicySecretProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secretProperties: <a href='#CertifiateCertificatePolicySecretProperties'>CertifiateCertificatePolicySecretProperties</a>;</code></pre>
 
 A `secretProperties` block as defined below.
 
@@ -13674,7 +13674,7 @@ A `secretProperties` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4683">property <b>x509CertificateProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>x509CertificateProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificateProperties'>outputs.keyvault.CertifiateCertificatePolicyX509CertificateProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>x509CertificateProperties: <a href='#CertifiateCertificatePolicyX509CertificateProperties'>CertifiateCertificatePolicyX509CertificateProperties</a>;</code></pre>
 
 A `x509CertificateProperties` block as defined below.
 
@@ -13743,7 +13743,7 @@ Is the key reusable? Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4716">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionAction'>outputs.keyvault.CertifiateCertificatePolicyLifetimeActionAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#CertifiateCertificatePolicyLifetimeActionAction'>CertifiateCertificatePolicyLifetimeActionAction</a>;</code></pre>
 
 A `action` block as defined below.
 
@@ -13751,7 +13751,7 @@ A `action` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4720">property <b>trigger</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>trigger: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionTrigger'>outputs.keyvault.CertifiateCertificatePolicyLifetimeActionTrigger</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>trigger: <a href='#CertifiateCertificatePolicyLifetimeActionTrigger'>CertifiateCertificatePolicyLifetimeActionTrigger</a>;</code></pre>
 
 A `trigger` block as defined below.
 
@@ -13843,7 +13843,7 @@ The Certificate's Subject. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4764">property <b>subjectAlternativeNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames'>outputs.keyvault.CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames: <a href='#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames'>CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames</a>;</code></pre>
 
 A `subjectAlternativeNames` block as defined below.
 
@@ -13920,7 +13920,7 @@ The password associated with the certificate. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4801">property <b>issuerParameters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>issuerParameters: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyIssuerParameters'>outputs.keyvault.CertificateCertificatePolicyIssuerParameters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>issuerParameters: <a href='#CertificateCertificatePolicyIssuerParameters'>CertificateCertificatePolicyIssuerParameters</a>;</code></pre>
 
 A `issuerParameters` block as defined below.
 
@@ -13928,7 +13928,7 @@ A `issuerParameters` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4805">property <b>keyProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>keyProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyKeyProperties'>outputs.keyvault.CertificateCertificatePolicyKeyProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>keyProperties: <a href='#CertificateCertificatePolicyKeyProperties'>CertificateCertificatePolicyKeyProperties</a>;</code></pre>
 
 A `keyProperties` block as defined below.
 
@@ -13936,7 +13936,7 @@ A `keyProperties` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4809">property <b>lifetimeActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifetimeActions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyLifetimeAction'>outputs.keyvault.CertificateCertificatePolicyLifetimeAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifetimeActions?: <a href='#CertificateCertificatePolicyLifetimeAction'>CertificateCertificatePolicyLifetimeAction</a>[];</code></pre>
 
 A `lifetimeAction` block as defined below.
 
@@ -13944,7 +13944,7 @@ A `lifetimeAction` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4813">property <b>secretProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secretProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicySecretProperties'>outputs.keyvault.CertificateCertificatePolicySecretProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secretProperties: <a href='#CertificateCertificatePolicySecretProperties'>CertificateCertificatePolicySecretProperties</a>;</code></pre>
 
 A `secretProperties` block as defined below.
 
@@ -13952,7 +13952,7 @@ A `secretProperties` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4817">property <b>x509CertificateProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>x509CertificateProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyX509CertificateProperties'>outputs.keyvault.CertificateCertificatePolicyX509CertificateProperties</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>x509CertificateProperties: <a href='#CertificateCertificatePolicyX509CertificateProperties'>CertificateCertificatePolicyX509CertificateProperties</a>;</code></pre>
 
 A `x509CertificateProperties` block as defined below.
 
@@ -14021,7 +14021,7 @@ Is the key reusable? Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4850">property <b>action</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyLifetimeActionAction'>outputs.keyvault.CertificateCertificatePolicyLifetimeActionAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>action: <a href='#CertificateCertificatePolicyLifetimeActionAction'>CertificateCertificatePolicyLifetimeActionAction</a>;</code></pre>
 
 A `action` block as defined below.
 
@@ -14029,7 +14029,7 @@ A `action` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4854">property <b>trigger</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>trigger: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyLifetimeActionTrigger'>outputs.keyvault.CertificateCertificatePolicyLifetimeActionTrigger</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>trigger: <a href='#CertificateCertificatePolicyLifetimeActionTrigger'>CertificateCertificatePolicyLifetimeActionTrigger</a>;</code></pre>
 
 A `trigger` block as defined below.
 
@@ -14121,7 +14121,7 @@ The Certificate's Subject. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L4898">property <b>subjectAlternativeNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames'>outputs.keyvault.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames: <a href='#CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames'>CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames</a>;</code></pre>
 
 A `subjectAlternativeNames` block as defined below.
 
@@ -15168,7 +15168,7 @@ The service uri of the webhook to POST the notification when the alert is trigge
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5352">property <b>webhooks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingNotificationWebhook'>outputs.monitoring.AutoscaleSettingNotificationWebhook</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='#AutoscaleSettingNotificationWebhook'>AutoscaleSettingNotificationWebhook</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="AutoscaleSettingNotificationEmail" data-link-title="AutoscaleSettingNotificationEmail">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5355">
         interface <strong>AutoscaleSettingNotificationEmail</strong>
@@ -15219,7 +15219,7 @@ The service uri of the webhook to POST the notification when the alert is trigge
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5367">property <b>capacity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfileCapacity'>outputs.monitoring.AutoscaleSettingProfileCapacity</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>capacity: <a href='#AutoscaleSettingProfileCapacity'>AutoscaleSettingProfileCapacity</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AutoscaleSettingProfile-fixedDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5368">property <b>fixedDate</b></a>
 </h4>
@@ -15242,7 +15242,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5374">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfileRule'>outputs.monitoring.AutoscaleSettingProfileRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#AutoscaleSettingProfileRule'>AutoscaleSettingProfileRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="AutoscaleSettingProfileCapacity" data-link-title="AutoscaleSettingProfileCapacity">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5377">
         interface <strong>AutoscaleSettingProfileCapacity</strong>
@@ -15325,12 +15325,12 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5397">property <b>metricTrigger</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfileRuleMetricTrigger'>outputs.monitoring.AutoscaleSettingProfileRuleMetricTrigger</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricTrigger: <a href='#AutoscaleSettingProfileRuleMetricTrigger'>AutoscaleSettingProfileRuleMetricTrigger</a>;</code></pre>
 <h4 class="pdoc-member-header" id="AutoscaleSettingProfileRule-scaleAction">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5398">property <b>scaleAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scaleAction: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfileRuleScaleAction'>outputs.monitoring.AutoscaleSettingProfileRuleScaleAction</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scaleAction: <a href='#AutoscaleSettingProfileRuleScaleAction'>AutoscaleSettingProfileRuleScaleAction</a>;</code></pre>
 <h3 class="pdoc-module-header" id="AutoscaleSettingProfileRuleMetricTrigger" data-link-title="AutoscaleSettingProfileRuleMetricTrigger">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5401">
         interface <strong>AutoscaleSettingProfileRuleMetricTrigger</strong>
@@ -15426,7 +15426,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5422">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingLogRetentionPolicy'>outputs.monitoring.DiagnosticSettingLogRetentionPolicy</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='#DiagnosticSettingLogRetentionPolicy'>DiagnosticSettingLogRetentionPolicy</a>;</code></pre>
 <h3 class="pdoc-module-header" id="DiagnosticSettingLogRetentionPolicy" data-link-title="DiagnosticSettingLogRetentionPolicy">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5425">
         interface <strong>DiagnosticSettingLogRetentionPolicy</strong>
@@ -15465,7 +15465,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5433">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingMetricRetentionPolicy'>outputs.monitoring.DiagnosticSettingMetricRetentionPolicy</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='#DiagnosticSettingMetricRetentionPolicy'>DiagnosticSettingMetricRetentionPolicy</a>;</code></pre>
 <h3 class="pdoc-module-header" id="DiagnosticSettingMetricRetentionPolicy" data-link-title="DiagnosticSettingMetricRetentionPolicy">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5436">
         interface <strong>DiagnosticSettingMetricRetentionPolicy</strong>
@@ -15927,7 +15927,7 @@ A boolean value indicating whether the retention policy is enabled.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5643">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertCriteriaDimension'>outputs.monitoring.MetricAlertCriteriaDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#MetricAlertCriteriaDimension'>MetricAlertCriteriaDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="MetricAlertCriteria-metricName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5644">property <b>metricName</b></a>
 </h4>
@@ -16342,7 +16342,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5817">property <b>authenticationCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSettingAuthenticationCertificate'>outputs.network.ApplicationGatewayBackendHttpSettingAuthenticationCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='#ApplicationGatewayBackendHttpSettingAuthenticationCertificate'>ApplicationGatewayBackendHttpSettingAuthenticationCertificate</a>[];</code></pre>
 
 One or more `authenticationCertificate` blocks as defined below.
 
@@ -16590,7 +16590,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5909">property <b>customErrorConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayHttpListenerCustomErrorConfiguration'>outputs.network.ApplicationGatewayHttpListenerCustomErrorConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='#ApplicationGatewayHttpListenerCustomErrorConfiguration'>ApplicationGatewayHttpListenerCustomErrorConfiguration</a>[];</code></pre>
 
 One or more `customErrorConfiguration` blocks as defined below.
 
@@ -16735,7 +16735,7 @@ The ID of the Rewrite Rule Set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5959">property <b>match</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>match: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayProbeMatch'>outputs.network.ApplicationGatewayProbeMatch</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>match: <a href='#ApplicationGatewayProbeMatch'>ApplicationGatewayProbeMatch</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayProbe-minimumServers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L5960">property <b>minimumServers</b></a>
 </h4>
@@ -16977,7 +16977,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6045">property <b>rewriteRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rewriteRules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRule'>outputs.network.ApplicationGatewayRewriteRuleSetRewriteRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rewriteRules?: <a href='#ApplicationGatewayRewriteRuleSetRewriteRule'>ApplicationGatewayRewriteRuleSetRewriteRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ApplicationGatewayRewriteRuleSetRewriteRule" data-link-title="ApplicationGatewayRewriteRuleSetRewriteRule">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6048">
         interface <strong>ApplicationGatewayRewriteRuleSetRewriteRule</strong>
@@ -16989,7 +16989,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6049">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleCondition'>outputs.network.ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='#ApplicationGatewayRewriteRuleSetRewriteRuleCondition'>ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayRewriteRuleSetRewriteRule-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6053">property <b>name</b></a>
 </h4>
@@ -17002,12 +17002,12 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6054">property <b>requestHeaderConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requestHeaderConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration'>outputs.network.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requestHeaderConfigurations?: <a href='#ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration'>ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayRewriteRuleSetRewriteRule-responseHeaderConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6055">property <b>responseHeaderConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>responseHeaderConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration'>outputs.network.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>responseHeaderConfigurations?: <a href='#ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration'>ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayRewriteRuleSetRewriteRule-ruleSequence">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6056">property <b>ruleSequence</b></a>
 </h4>
@@ -17276,7 +17276,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6151">property <b>pathRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pathRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayUrlPathMapPathRule'>outputs.network.ApplicationGatewayUrlPathMapPathRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pathRules: <a href='#ApplicationGatewayUrlPathMapPathRule'>ApplicationGatewayUrlPathMapPathRule</a>[];</code></pre>
 
 A list of `pathRule` blocks as defined above.
 
@@ -17371,7 +17371,7 @@ The ID of the associated Rewrite Rule Set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6187">property <b>disabledRuleGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disabledRuleGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfigurationDisabledRuleGroup'>outputs.network.ApplicationGatewayWafConfigurationDisabledRuleGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disabledRuleGroups?: <a href='#ApplicationGatewayWafConfigurationDisabledRuleGroup'>ApplicationGatewayWafConfigurationDisabledRuleGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayWafConfiguration-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6188">property <b>enabled</b></a>
 </h4>
@@ -17381,7 +17381,7 @@ The ID of the associated Rewrite Rule Set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6189">property <b>exclusions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>exclusions?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfigurationExclusion'>outputs.network.ApplicationGatewayWafConfigurationExclusion</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>exclusions?: <a href='#ApplicationGatewayWafConfigurationExclusion'>ApplicationGatewayWafConfigurationExclusion</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ApplicationGatewayWafConfiguration-fileUploadLimitMb">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6190">property <b>fileUploadLimitMb</b></a>
 </h4>
@@ -17554,7 +17554,7 @@ Specifies the name of the Application Rule Collection which must be unique withi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6242">property <b>protocols</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>protocols?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallApplicationRuleCollectionRuleProtocol'>outputs.network.FirewallApplicationRuleCollectionRuleProtocol</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>protocols?: <a href='#FirewallApplicationRuleCollectionRuleProtocol'>FirewallApplicationRuleCollectionRuleProtocol</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="FirewallApplicationRuleCollectionRule-sourceAddresses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6243">property <b>sourceAddresses</b></a>
 </h4>
@@ -18368,7 +18368,7 @@ This setting is incompatible with the use of `rootCertificate` and `revokedCerti
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6616">property <b>revokedCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revokedCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate'>outputs.network.GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revokedCertificates: <a href='#GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate'>GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate</a>[];</code></pre>
 
 One or more `revokedCertificate` blocks which
 are defined below.
@@ -18377,7 +18377,7 @@ are defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6622">property <b>rootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate'>outputs.network.GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootCertificates: <a href='#GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate'>GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate</a>[];</code></pre>
 
 One or more `rootCertificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -18843,7 +18843,7 @@ Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6803">property <b>vpnClientAddressPool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpnClientAddressPool: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool'>outputs.network.PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpnClientAddressPool: <a href='#PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool'>PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool</a>;</code></pre>
 <h3 class="pdoc-module-header" id="PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool" data-link-title="PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6806">
         interface <strong>PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPool</strong>
@@ -18867,7 +18867,7 @@ Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6811">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProfileContainerNetworkInterfaceIpConfiguration'>outputs.network.ProfileContainerNetworkInterfaceIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='#ProfileContainerNetworkInterfaceIpConfiguration'>ProfileContainerNetworkInterfaceIpConfiguration</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ProfileContainerNetworkInterface-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6815">property <b>name</b></a>
 </h4>
@@ -18954,7 +18954,7 @@ The name of the subnet. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6850">property <b>serviceDelegation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceDelegation: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubnetDelegationServiceDelegation'>outputs.network.SubnetDelegationServiceDelegation</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceDelegation: <a href='#SubnetDelegationServiceDelegation'>SubnetDelegationServiceDelegation</a>;</code></pre>
 <h3 class="pdoc-module-header" id="SubnetDelegationServiceDelegation" data-link-title="SubnetDelegationServiceDelegation">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6853">
         interface <strong>SubnetDelegationServiceDelegation</strong>
@@ -19235,12 +19235,12 @@ forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6935">property <b>revokedCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revokedCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate'>outputs.network.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revokedCertificates?: <a href='#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate'>VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualNetworkGatewayVpnClientConfiguration-rootCertificates">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6936">property <b>rootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayVpnClientConfigurationRootCertificate'>outputs.network.VirtualNetworkGatewayVpnClientConfigurationRootCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rootCertificates?: <a href='#VirtualNetworkGatewayVpnClientConfigurationRootCertificate'>VirtualNetworkGatewayVpnClientConfigurationRootCertificate</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualNetworkGatewayVpnClientConfiguration-vpnClientProtocols">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L6937">property <b>vpnClientProtocols</b></a>
 </h4>
@@ -19472,7 +19472,7 @@ The Name which should be used for this VPN Server Configuration. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7019">property <b>clientRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServerClientRootCertificate'>outputs.network.VpnServerConfigurationRadiusServerClientRootCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='#VpnServerConfigurationRadiusServerClientRootCertificate'>VpnServerConfigurationRadiusServerClientRootCertificate</a>[];</code></pre>
 
 One or more `clientRootCertificate` blocks as defined below.
 
@@ -19485,7 +19485,7 @@ One or more `clientRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7021">property <b>serverRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serverRootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServerServerRootCertificate'>outputs.network.VpnServerConfigurationRadiusServerServerRootCertificate</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serverRootCertificates: <a href='#VpnServerConfigurationRadiusServerServerRootCertificate'>VpnServerConfigurationRadiusServerServerRootCertificate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="VpnServerConfigurationRadiusServerClientRootCertificate" data-link-title="VpnServerConfigurationRadiusServerClientRootCertificate">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7024">
         interface <strong>VpnServerConfigurationRadiusServerClientRootCertificate</strong>
@@ -20991,7 +20991,7 @@ The maximum interval between retries.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7594">property <b>monthlyOccurrences</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRecurrenceMonthlyOccurrence'>outputs.scheduler.JobRecurrenceMonthlyOccurrence</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='#JobRecurrenceMonthlyOccurrence'>JobRecurrenceMonthlyOccurrence</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="JobRecurrence-weekDays">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7595">property <b>weekDays</b></a>
 </h4>
@@ -21159,7 +21159,7 @@ Address to send to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7660">property <b>commonNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>commonNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNamesCommonName'>outputs.servicefabric.ClusterCertificateCommonNamesCommonName</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>commonNames: <a href='#ClusterCertificateCommonNamesCommonName'>ClusterCertificateCommonNamesCommonName</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ClusterCertificateCommonNames-x509StoreName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7661">property <b>x509StoreName</b></a>
 </h4>
@@ -21262,7 +21262,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7691">property <b>applicationPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>applicationPorts: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeTypeApplicationPorts'>outputs.servicefabric.ClusterNodeTypeApplicationPorts</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>applicationPorts: <a href='#ClusterNodeTypeApplicationPorts'>ClusterNodeTypeApplicationPorts</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodeType-capacities">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7692">property <b>capacities</b></a>
 </h4>
@@ -21282,7 +21282,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7695">property <b>ephemeralPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ephemeralPorts: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeTypeEphemeralPorts'>outputs.servicefabric.ClusterNodeTypeEphemeralPorts</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ephemeralPorts: <a href='#ClusterNodeTypeEphemeralPorts'>ClusterNodeTypeEphemeralPorts</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterNodeType-httpEndpointPort">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7696">property <b>httpEndpointPort</b></a>
 </h4>
@@ -21772,7 +21772,7 @@ The Tenant ID for the Service Principal associated with the Identity of this Sto
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7900">property <b>corsRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueuePropertiesCorsRule'>outputs.storage.AccountQueuePropertiesCorsRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>corsRules?: <a href='#AccountQueuePropertiesCorsRule'>AccountQueuePropertiesCorsRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="AccountQueueProperties-hourMetrics">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7901">property <b>hourMetrics</b></a>
 </h4>
@@ -22065,7 +22065,7 @@ Specifies the name of the Storage Account
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7980">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActions'>outputs.storage.GetPolicyRuleActions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: <a href='#GetPolicyRuleActions'>GetPolicyRuleActions</a>;</code></pre>
 
 An `actions` block as documented below.
 
@@ -22081,7 +22081,7 @@ An `actions` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7988">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleFilters'>outputs.storage.GetPolicyRuleFilters</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters: <a href='#GetPolicyRuleFilters'>GetPolicyRuleFilters</a>;</code></pre>
 
 A `filter` block as documented below.
 
@@ -22104,7 +22104,7 @@ A `filter` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L7999">property <b>baseBlob</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>baseBlob: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionsBaseBlob'>outputs.storage.GetPolicyRuleActionsBaseBlob</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>baseBlob: <a href='#GetPolicyRuleActionsBaseBlob'>GetPolicyRuleActionsBaseBlob</a>;</code></pre>
 
 A `baseBlob` block as documented below.
 
@@ -22112,7 +22112,7 @@ A `baseBlob` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8003">property <b>snapshot</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>snapshot: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionsSnapshot'>outputs.storage.GetPolicyRuleActionsSnapshot</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshot: <a href='#GetPolicyRuleActionsSnapshot'>GetPolicyRuleActionsSnapshot</a>;</code></pre>
 
 A `snapshot` block as documented below.
 
@@ -22196,7 +22196,7 @@ An array of strings for prefixes to be matched.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8043">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ManagementPolicyRuleActions'>outputs.storage.ManagementPolicyRuleActions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions: <a href='#ManagementPolicyRuleActions'>ManagementPolicyRuleActions</a>;</code></pre>
 
 An `actions` block as documented below.
 
@@ -22327,7 +22327,7 @@ An array of strings for prefixes to be matched.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8103">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAclAccessPolicy'>outputs.storage.ShareAclAccessPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='#ShareAclAccessPolicy'>ShareAclAccessPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ShareAcl-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8107">property <b>id</b></a>
 </h4>
@@ -22369,7 +22369,7 @@ The ID of the File Share.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8117">property <b>accessPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TableAclAccessPolicy'>outputs.storage.TableAclAccessPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='#TableAclAccessPolicy'>TableAclAccessPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="TableAcl-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8121">property <b>id</b></a>
 </h4>
@@ -22714,7 +22714,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8221">property <b>matchConditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>matchConditions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyCustomRuleMatchCondition'>outputs.waf.PolicyCustomRuleMatchCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>matchConditions: <a href='#PolicyCustomRuleMatchCondition'>PolicyCustomRuleMatchCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PolicyCustomRule-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8225">property <b>name</b></a>
 </h4>
@@ -22749,7 +22749,7 @@ The name of the policy. Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8232">property <b>matchVariables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>matchVariables: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyCustomRuleMatchConditionMatchVariable'>outputs.waf.PolicyCustomRuleMatchConditionMatchVariable</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>matchVariables: <a href='#PolicyCustomRuleMatchConditionMatchVariable'>PolicyCustomRuleMatchConditionMatchVariable</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PolicyCustomRuleMatchCondition-negationCondition">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/types/output.ts#L8233">property <b>negationCondition</b></a>
 </h4>

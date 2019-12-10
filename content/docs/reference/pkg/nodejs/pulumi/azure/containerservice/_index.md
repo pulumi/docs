@@ -106,7 +106,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -116,7 +116,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L42">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainer'>outputs.containerservice.GroupContainer</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainer'>GroupContainer</a>[]&gt;;</code></pre>
 
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
@@ -124,7 +124,7 @@ The definition of a container that is part of the group as documented in the `co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L46">property <b>diagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>diagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnostics'>outputs.containerservice.GroupDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>diagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnostics'>GroupDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `diagnostics` block as documented below.
 
@@ -157,7 +157,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L58">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupIdentity'>outputs.containerservice.GroupIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -165,7 +165,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L62">property <b>imageRegistryCredentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupImageRegistryCredential'>outputs.containerservice.GroupImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
@@ -301,7 +301,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KubernetesCluster</code></pre>
 
 
 Returns true if the given object is an instance of KubernetesCluster.  This is designed to work even
@@ -311,12 +311,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L43">property <b>addonProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>addonProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfile'>outputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addonProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-agentPoolProfiles">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L47">property <b>agentPoolProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAgentPoolProfile'>outputs.containerservice.KubernetesClusterAgentPoolProfile</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>[]&gt;;</code></pre>
 
 One or more `agentPoolProfile` blocks as defined below.
 
@@ -329,7 +329,7 @@ One or more `agentPoolProfile` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L52">property <b>defaultNodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>defaultNodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterDefaultNodePool'>outputs.containerservice.KubernetesClusterDefaultNodePool</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>defaultNodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `defaultNodePool` block as defined below.
 
@@ -367,7 +367,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L65">property <b>kubeAdminConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>kubeAdminConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeAdminConfig'>outputs.containerservice.KubernetesClusterKubeAdminConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>kubeAdminConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>&gt;;</code></pre>
 
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
@@ -383,7 +383,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L73">property <b>kubeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeConfig'>outputs.containerservice.KubernetesClusterKubeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;;</code></pre>
 
 A `kubeConfig` block as defined below.
 
@@ -404,7 +404,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L79">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfile'>outputs.containerservice.KubernetesClusterLinuxProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L83">property <b>location</b></a>
 </h4>
@@ -425,7 +425,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">property <b>networkProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfile'>outputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-nodeResourceGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L92">property <b>nodeResourceGroup</b></a>
 </h4>
@@ -446,12 +446,12 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L97">property <b>roleBasedAccessControl</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roleBasedAccessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControl'>outputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roleBasedAccessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-servicePrincipal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L101">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterServicePrincipal'>outputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
 
 A `servicePrincipal` block as documented below.
 
@@ -473,7 +473,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L103">property <b>windowsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>windowsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterWindowsProfile'>outputs.containerservice.KubernetesClusterWindowsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>windowsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePool" data-link-title="KubernetesClusterNodePool">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L16">
         Resource <strong>KubernetesClusterNodePool</strong>
@@ -525,7 +525,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KubernetesClusterNodePool</code></pre>
 
 
 Returns true if the given object is an instance of KubernetesClusterNodePool.  This is designed to work even
@@ -734,7 +734,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Registry</code></pre>
 
 
 Returns true if the given object is an instance of Registry.  This is designed to work even
@@ -809,7 +809,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L96">property <b>networkRuleSet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkRuleSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSet'>outputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkRuleSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
 
 A `networkRuleSet` block as documented below.
 
@@ -833,7 +833,7 @@ The SKU name of the container registry. Possible values are `Classic` (which was
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L105">property <b>storageAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryStorageAccount'>outputs.containerservice.RegistryStorageAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryStorageAccount'>RegistryStorageAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Registry-storageAccountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L109">property <b>storageAccountId</b></a>
 </h4>
@@ -937,7 +937,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RegistryWebook</code></pre>
 
 
 Returns true if the given object is an instance of RegistryWebook.  This is designed to work even
@@ -1085,7 +1085,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -1095,7 +1095,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L42">property <b>agentPoolProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAgentPoolProfile'>outputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</code></pre>
 
 A Agent Pool Profile's block as documented below.
 
@@ -1103,7 +1103,7 @@ A Agent Pool Profile's block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L46">property <b>diagnosticsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceDiagnosticsProfile'>outputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</code></pre>
 
 A VM Diagnostics Profile block as documented below.
 
@@ -1120,7 +1120,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L50">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceLinuxProfile'>outputs.containerservice.ServiceLinuxProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</code></pre>
 
 A Linux Profile block as documented below.
 
@@ -1136,7 +1136,7 @@ The location where the Container Service instance should be created. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L58">property <b>masterProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceMasterProfile'>outputs.containerservice.ServiceMasterProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</code></pre>
 
 A Master Profile block as documented below.
 
@@ -1168,7 +1168,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L74">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceServicePrincipal'>outputs.containerservice.ServiceServicePrincipal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceServicePrincipal'>ServiceServicePrincipal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A Service Principal block as documented below.
 
@@ -1318,7 +1318,7 @@ A collection of values returned by getKubernetesCluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L66">property <b>addonProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfile'>outputs.containerservice.GetKubernetesClusterAddonProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfile'>GetKubernetesClusterAddonProfile</a>[];</code></pre>
 
 A `addonProfile` block as documented below.
 
@@ -1326,7 +1326,7 @@ A `addonProfile` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L70">property <b>agentPoolProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAgentPoolProfile'>outputs.containerservice.GetKubernetesClusterAgentPoolProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAgentPoolProfile'>GetKubernetesClusterAgentPoolProfile</a>[];</code></pre>
 
 An `agentPoolProfile` block as documented below.
 
@@ -1366,7 +1366,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L82">property <b>kubeAdminConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeAdminConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeAdminConfig'>outputs.containerservice.GetKubernetesClusterKubeAdminConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeAdminConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeAdminConfig'>GetKubernetesClusterKubeAdminConfig</a>[];</code></pre>
 
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
@@ -1382,7 +1382,7 @@ Base64 encoded Kubernetes configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L90">property <b>kubeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeConfig'>outputs.containerservice.GetKubernetesClusterKubeConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeConfig'>GetKubernetesClusterKubeConfig</a>[];</code></pre>
 
 A `kubeConfig` block as defined below.
 
@@ -1398,7 +1398,7 @@ The version of Kubernetes used on the managed Kubernetes Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L102">property <b>linuxProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfile'>outputs.containerservice.GetKubernetesClusterLinuxProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfile'>GetKubernetesClusterLinuxProfile</a>[];</code></pre>
 
 A `linuxProfile` block as documented below.
 
@@ -1422,7 +1422,7 @@ The name assigned to this pool of agents.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L114">property <b>networkProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterNetworkProfile'>outputs.containerservice.GetKubernetesClusterNetworkProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterNetworkProfile'>GetKubernetesClusterNetworkProfile</a>[];</code></pre>
 
 A `networkProfile` block as documented below.
 
@@ -1443,7 +1443,7 @@ Auto-generated Resource Group containing AKS Cluster resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L123">property <b>roleBasedAccessControls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControl'>outputs.containerservice.GetKubernetesClusterRoleBasedAccessControl</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControl'>GetKubernetesClusterRoleBasedAccessControl</a>[];</code></pre>
 
 A `roleBasedAccessControl` block as documented below.
 
@@ -1451,7 +1451,7 @@ A `roleBasedAccessControl` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L127">property <b>servicePrincipals</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>servicePrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterServicePrincipal'>outputs.containerservice.GetKubernetesClusterServicePrincipal</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>servicePrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterServicePrincipal'>GetKubernetesClusterServicePrincipal</a>[];</code></pre>
 
 A `servicePrincipal` block as documented below.
 
@@ -1467,7 +1467,7 @@ A mapping of tags assigned to this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/getKubernetesCluster.ts#L135">property <b>windowsProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>windowsProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterWindowsProfile'>outputs.containerservice.GetKubernetesClusterWindowsProfile</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>windowsProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterWindowsProfile'>GetKubernetesClusterWindowsProfile</a>[];</code></pre>
 
 A `windowsProfile` block as documented below.
 
@@ -1673,7 +1673,7 @@ The set of arguments for constructing a Group resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L238">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>inputs.containerservice.GroupContainer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</code></pre>
 
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
@@ -1681,7 +1681,7 @@ The definition of a container that is part of the group as documented in the `co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L242">property <b>diagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>inputs.containerservice.GroupDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</code></pre>
 
 A `diagnostics` block as documented below.
 
@@ -1697,7 +1697,7 @@ The DNS label/name for the container groups IP. Changing this forces a new resou
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L250">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>inputs.containerservice.GroupIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -1705,7 +1705,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L254">property <b>imageRegistryCredentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>inputs.containerservice.GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
 
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
@@ -1787,7 +1787,7 @@ Input properties used for looking up and filtering Group resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L172">property <b>containers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>inputs.containerservice.GroupContainer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</code></pre>
 
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
@@ -1795,7 +1795,7 @@ The definition of a container that is part of the group as documented in the `co
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L176">property <b>diagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>inputs.containerservice.GroupDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</code></pre>
 
 A `diagnostics` block as documented below.
 
@@ -1819,7 +1819,7 @@ The FQDN of the container group derived from `dnsNameLabel`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L188">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>inputs.containerservice.GroupIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -1827,7 +1827,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/group.ts#L192">property <b>imageRegistryCredentials</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>inputs.containerservice.GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
 
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
@@ -1917,12 +1917,12 @@ The set of arguments for constructing a KubernetesCluster resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L255">property <b>addonProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>inputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-agentPoolProfiles">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L259">property <b>agentPoolProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>inputs.containerservice.KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</code></pre>
 
 One or more `agentPoolProfile` blocks as defined below.
 
@@ -1935,7 +1935,7 @@ One or more `agentPoolProfile` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L264">property <b>defaultNodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>inputs.containerservice.KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
 
 A `defaultNodePool` block as defined below.
 
@@ -1961,7 +1961,7 @@ DNS prefix specified when creating the managed cluster. Changing this forces a n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L271">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>inputs.containerservice.KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L275">property <b>location</b></a>
 </h4>
@@ -1982,7 +1982,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L280">property <b>networkProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>inputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-nodeResourceGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L284">property <b>nodeResourceGroup</b></a>
 </h4>
@@ -2003,12 +2003,12 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L289">property <b>roleBasedAccessControl</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>inputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-servicePrincipal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L293">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>inputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
 
 A `servicePrincipal` block as documented below.
 
@@ -2021,7 +2021,7 @@ A `servicePrincipal` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L295">property <b>windowsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>inputs.containerservice.KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePoolArgs" data-link-title="KubernetesClusterNodePoolArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L225">
         interface <strong>KubernetesClusterNodePoolArgs</strong>
@@ -2280,12 +2280,12 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L188">property <b>addonProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>inputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-agentPoolProfiles">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L192">property <b>agentPoolProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>inputs.containerservice.KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</code></pre>
 
 One or more `agentPoolProfile` blocks as defined below.
 
@@ -2298,7 +2298,7 @@ One or more `agentPoolProfile` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L197">property <b>defaultNodePool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>defaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>inputs.containerservice.KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>defaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
 
 A `defaultNodePool` block as defined below.
 
@@ -2327,7 +2327,7 @@ The FQDN of the Azure Kubernetes Managed Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L210">property <b>kubeAdminConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeAdminConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeAdminConfig'>inputs.containerservice.KubernetesClusterKubeAdminConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeAdminConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>&gt;;</code></pre>
 
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
@@ -2343,7 +2343,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L218">property <b>kubeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeConfig'>inputs.containerservice.KubernetesClusterKubeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;;</code></pre>
 
 A `kubeConfig` block as defined below.
 
@@ -2364,7 +2364,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L224">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>inputs.containerservice.KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L228">property <b>location</b></a>
 </h4>
@@ -2385,7 +2385,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L233">property <b>networkProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>inputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-nodeResourceGroup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L237">property <b>nodeResourceGroup</b></a>
 </h4>
@@ -2406,12 +2406,12 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L242">property <b>roleBasedAccessControl</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>inputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-servicePrincipal">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L246">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>inputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
 
 A `servicePrincipal` block as documented below.
 
@@ -2424,7 +2424,7 @@ A `servicePrincipal` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/kubernetesCluster.ts#L248">property <b>windowsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>inputs.containerservice.KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RegistryArgs" data-link-title="RegistryArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L228">
         interface <strong>RegistryArgs</strong>
@@ -2471,7 +2471,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L248">property <b>networkRuleSet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>inputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
 
 A `networkRuleSet` block as documented below.
 
@@ -2495,7 +2495,7 @@ The SKU name of the container registry. Possible values are `Classic` (which was
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L257">property <b>storageAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>inputs.containerservice.RegistryStorageAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>RegistryStorageAccount</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RegistryArgs-storageAccountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L261">property <b>storageAccountId</b></a>
 </h4>
@@ -2582,7 +2582,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L205">property <b>networkRuleSet</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>inputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
 
 A `networkRuleSet` block as documented below.
 
@@ -2606,7 +2606,7 @@ The SKU name of the container registry. Possible values are `Classic` (which was
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L214">property <b>storageAccount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>inputs.containerservice.RegistryStorageAccount</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>RegistryStorageAccount</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RegistryState-storageAccountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/registry.ts#L218">property <b>storageAccountId</b></a>
 </h4>
@@ -2811,7 +2811,7 @@ The set of arguments for constructing a Service resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L197">property <b>agentPoolProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>inputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</code></pre>
 
 A Agent Pool Profile's block as documented below.
 
@@ -2819,7 +2819,7 @@ A Agent Pool Profile's block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L201">property <b>diagnosticsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>inputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</code></pre>
 
 A VM Diagnostics Profile block as documented below.
 
@@ -2827,7 +2827,7 @@ A VM Diagnostics Profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L205">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>inputs.containerservice.ServiceLinuxProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</code></pre>
 
 A Linux Profile block as documented below.
 
@@ -2843,7 +2843,7 @@ The location where the Container Service instance should be created. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L213">property <b>masterProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>inputs.containerservice.ServiceMasterProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</code></pre>
 
 A Master Profile block as documented below.
 
@@ -2875,7 +2875,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L229">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>inputs.containerservice.ServiceServicePrincipal</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>ServiceServicePrincipal</a>&gt;;</code></pre>
 
 A Service Principal block as documented below.
 
@@ -2901,7 +2901,7 @@ Input properties used for looking up and filtering Service resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L151">property <b>agentPoolProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>agentPoolProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>inputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>agentPoolProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</code></pre>
 
 A Agent Pool Profile's block as documented below.
 
@@ -2909,7 +2909,7 @@ A Agent Pool Profile's block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L155">property <b>diagnosticsProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnosticsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>inputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnosticsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</code></pre>
 
 A VM Diagnostics Profile block as documented below.
 
@@ -2917,7 +2917,7 @@ A VM Diagnostics Profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L159">property <b>linuxProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>inputs.containerservice.ServiceLinuxProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</code></pre>
 
 A Linux Profile block as documented below.
 
@@ -2933,7 +2933,7 @@ The location where the Container Service instance should be created. Changing th
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L167">property <b>masterProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>inputs.containerservice.ServiceMasterProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</code></pre>
 
 A Master Profile block as documented below.
 
@@ -2965,7 +2965,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/containerservice/service.ts#L183">property <b>servicePrincipal</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>inputs.containerservice.ServiceServicePrincipal</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>ServiceServicePrincipal</a>&gt;;</code></pre>
 
 A Service Principal block as documented below.
 

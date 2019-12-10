@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/f5bigip package."
 ---

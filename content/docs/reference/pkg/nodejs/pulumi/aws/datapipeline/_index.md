@@ -1,5 +1,6 @@
 ---
 title: "Module datapipeline"
+title_tag: "Module datapipeline | Package @pulumi/aws | Node.js SDK"
 linktitle: "datapipeline"
 meta_desc: "Explore members of the datapipeline module in the @pulumi/aws package."
 ---
@@ -89,7 +90,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Pipeline</code></pre>
 
 
 Returns true if the given object is an instance of Pipeline.  This is designed to work even

@@ -1,5 +1,6 @@
 ---
 title: "Module types/input"
+title_tag: "Module types/input | Package @pulumi/azuread | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/azuread package."
 ---
@@ -164,7 +165,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/0ea096281a88712f8ad2562721a184d1c2e6a08c/sdk/nodejs/types/input.ts#L73">property <b>resourceAccesses</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccessResourceAccess'>inputs.ApplicationRequiredResourceAccessResourceAccess</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccessResourceAccess'>ApplicationRequiredResourceAccessResourceAccess</a>&gt;[]&gt;;</code></pre>
 
 A collection of `resourceAccess` blocks as documented below.
 

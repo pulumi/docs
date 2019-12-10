@@ -167,7 +167,7 @@ The name of the private linke endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L57">property <b>privateServiceConnections</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateServiceConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPrivateLinkEndpointConnectionPrivateServiceConnection'>outputs.privatelink.GetPrivateLinkEndpointConnectionPrivateServiceConnection</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateServiceConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPrivateLinkEndpointConnectionPrivateServiceConnection'>GetPrivateLinkEndpointConnectionPrivateServiceConnection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L58">property <b>resourceGroupName</b></a>
 </h4>
@@ -252,7 +252,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L50">property <b>privateEndpointConnections</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateEndpointConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceEndpointConnectionsPrivateEndpointConnection'>outputs.privatelink.GetServiceEndpointConnectionsPrivateEndpointConnection</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateEndpointConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceEndpointConnectionsPrivateEndpointConnection'>GetServiceEndpointConnectionsPrivateEndpointConnection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-resourceGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L51">property <b>resourceGroupName</b></a>
 </h4>
@@ -333,7 +333,7 @@ The name of private link service NAT IP configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L86">property <b>natIpConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>natIpConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceNatIpConfiguration'>outputs.privatelink.GetServiceNatIpConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>natIpConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceNatIpConfiguration'>GetServiceNatIpConfiguration</a>;</code></pre>
 
 The `natIpConfiguration` block as defined below.
 

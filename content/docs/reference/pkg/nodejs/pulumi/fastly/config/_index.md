@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/fastly | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/fastly package."
 ---
@@ -30,7 +31,7 @@ meta_desc: "Explore members of the config module in the @pulumi/fastly package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/201687e306d2f9a049deefbc2c8427553e67a170/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/bb0230a427de7ab07b002c4df1cac9f75d84f251/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -40,7 +41,7 @@ meta_desc: "Explore members of the config module in the @pulumi/fastly package."
 Fastly API Key from https://app.fastly.com/#account
 
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/201687e306d2f9a049deefbc2c8427553e67a170/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/bb0230a427de7ab07b002c4df1cac9f75d84f251/sdk/nodejs/config/vars.ts#L16">
         let <strong>baseUrl</strong>
     </a>
 </h3>

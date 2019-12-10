@@ -1,5 +1,6 @@
 ---
 title: "Module autoscaling"
+title_tag: "Module autoscaling | Package @pulumi/aws | Node.js SDK"
 linktitle: "autoscaling"
 meta_desc: "Explore members of the autoscaling module in the @pulumi/aws package."
 ---
@@ -149,7 +150,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Attachment</code></pre>
 
 
 Returns true if the given object is an instance of Attachment.  This is designed to work even
@@ -464,7 +465,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Group</code></pre>
 
 
 Returns true if the given object is an instance of Group.  This is designed to work even
@@ -558,7 +559,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L315">property <b>initialLifecycleHooks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>initialLifecycleHooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupInitialLifecycleHook'>outputs.autoscaling.GroupInitialLifecycleHook</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>initialLifecycleHooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupInitialLifecycleHook'>GroupInitialLifecycleHook</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -580,7 +581,7 @@ The name of the launch configuration to use.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L323">property <b>launchTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupLaunchTemplate'>outputs.autoscaling.GroupLaunchTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupLaunchTemplate'>GroupLaunchTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 
@@ -641,7 +642,7 @@ The minimum size of the auto scale group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L356">property <b>mixedInstancesPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>mixedInstancesPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicy'>outputs.autoscaling.GroupMixedInstancesPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>mixedInstancesPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicy'>GroupMixedInstancesPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 
@@ -701,7 +702,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L388">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupTag'>outputs.autoscaling.GroupTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupTag'>GroupTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of tag blocks. Tags documented below.
 
@@ -854,7 +855,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LifecycleHook</code></pre>
 
 
 Returns true if the given object is an instance of LifecycleHook.  This is designed to work even
@@ -1019,7 +1020,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Notification</code></pre>
 
 
 Returns true if the given object is an instance of Notification.  This is designed to work even
@@ -1146,7 +1147,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -1244,7 +1245,7 @@ up. A negative value scales down.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L113">property <b>stepAdjustments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stepAdjustments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepAdjustment'>outputs.autoscaling.PolicyStepAdjustment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stepAdjustments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepAdjustment'>PolicyStepAdjustment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1253,7 +1254,7 @@ group scaling. These have the following structure:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L117">property <b>targetTrackingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetTrackingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfiguration'>outputs.autoscaling.PolicyTargetTrackingConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetTrackingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfiguration'>PolicyTargetTrackingConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A target tracking policy. These have the following structure:
 
@@ -1341,7 +1342,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Schedule</code></pre>
 
 
 Returns true if the given object is an instance of Schedule.  This is designed to work even
@@ -1793,7 +1794,7 @@ Time (in seconds) after instance comes into service before checking health.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L718">property <b>initialLifecycleHooks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>inputs.autoscaling.GroupInitialLifecycleHook</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>GroupInitialLifecycleHook</a>&gt;[]&gt;;</code></pre>
 
 One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -1807,7 +1808,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L722">property <b>launchConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</code></pre>
 
 The name of the launch configuration to use.
 
@@ -1815,7 +1816,7 @@ The name of the launch configuration to use.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L726">property <b>launchTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>inputs.autoscaling.GroupLaunchTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>GroupLaunchTemplate</a>&gt;;</code></pre>
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 
@@ -1876,7 +1877,7 @@ The minimum size of the auto scale group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L759">property <b>mixedInstancesPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>inputs.autoscaling.GroupMixedInstancesPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>GroupMixedInstancesPolicy</a>&gt;;</code></pre>
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 
@@ -1901,7 +1902,7 @@ prefix. Conflicts with `name`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L772">property <b>placementGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PlacementGroup'>PlacementGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PlacementGroup'>PlacementGroup</a>&gt;;</code></pre>
 
 The name of the placement group into which you'll launch your instances, if any.
 
@@ -1936,7 +1937,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L791">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>inputs.autoscaling.GroupTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>GroupTag</a>&gt;[]&gt;;</code></pre>
 
 A list of tag blocks. Tags documented below.
 
@@ -2120,7 +2121,7 @@ Time (in seconds) after instance comes into service before checking health.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L565">property <b>initialLifecycleHooks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>inputs.autoscaling.GroupInitialLifecycleHook</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>GroupInitialLifecycleHook</a>&gt;[]&gt;;</code></pre>
 
 One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -2134,7 +2135,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L569">property <b>launchConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</code></pre>
 
 The name of the launch configuration to use.
 
@@ -2142,7 +2143,7 @@ The name of the launch configuration to use.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L573">property <b>launchTemplate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>inputs.autoscaling.GroupLaunchTemplate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>GroupLaunchTemplate</a>&gt;;</code></pre>
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 
@@ -2203,7 +2204,7 @@ The minimum size of the auto scale group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L606">property <b>mixedInstancesPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>inputs.autoscaling.GroupMixedInstancesPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>GroupMixedInstancesPolicy</a>&gt;;</code></pre>
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 
@@ -2228,7 +2229,7 @@ prefix. Conflicts with `name`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L619">property <b>placementGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PlacementGroup'>PlacementGroup</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PlacementGroup'>PlacementGroup</a>&gt;;</code></pre>
 
 The name of the placement group into which you'll launch your instances, if any.
 
@@ -2263,7 +2264,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/group.ts#L638">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>inputs.autoscaling.GroupTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>GroupTag</a>&gt;[]&gt;;</code></pre>
 
 A list of tag blocks. Tags documented below.
 
@@ -2689,7 +2690,7 @@ up. A negative value scales down.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L269">property <b>stepAdjustments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>inputs.autoscaling.PolicyStepAdjustment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>PolicyStepAdjustment</a>&gt;[]&gt;;</code></pre>
 
 A set of adjustments that manage
 group scaling. These have the following structure:
@@ -2698,7 +2699,7 @@ group scaling. These have the following structure:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L273">property <b>targetTrackingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>inputs.autoscaling.PolicyTargetTrackingConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>PolicyTargetTrackingConfiguration</a>&gt;;</code></pre>
 
 A target tracking policy. These have the following structure:
 
@@ -2795,7 +2796,7 @@ up. A negative value scales down.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L219">property <b>stepAdjustments</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>inputs.autoscaling.PolicyStepAdjustment</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>PolicyStepAdjustment</a>&gt;[]&gt;;</code></pre>
 
 A set of adjustments that manage
 group scaling. These have the following structure:
@@ -2804,7 +2805,7 @@ group scaling. These have the following structure:
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/autoscaling/policy.ts#L223">property <b>targetTrackingConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>inputs.autoscaling.PolicyTargetTrackingConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>PolicyTargetTrackingConfiguration</a>&gt;;</code></pre>
 
 A target tracking policy. These have the following structure:
 

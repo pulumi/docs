@@ -1,5 +1,6 @@
 ---
 title: "Module types"
+title_tag: "Module types | Package @pulumi/tls | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/tls package."
 ---

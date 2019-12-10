@@ -193,7 +193,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ActionGroup</code></pre>
 
 
 Returns true if the given object is an instance of ActionGroup.  This is designed to work even
@@ -203,7 +203,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L123">property <b>armRoleReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupArmRoleReceiver'>outputs.monitoring.ActionGroupArmRoleReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `armRoleReceiver` blocks as defined below.
 
@@ -211,7 +211,7 @@ One or more `armRoleReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L127">property <b>automationRunbookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAutomationRunbookReceiver'>outputs.monitoring.ActionGroupAutomationRunbookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `automationRunbookReceiver` blocks as defined below.
 
@@ -219,7 +219,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L131">property <b>azureAppPushReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureAppPushReceiver'>outputs.monitoring.ActionGroupAzureAppPushReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `azureAppPushReceiver` blocks as defined below.
 
@@ -227,7 +227,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L135">property <b>azureFunctionReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureFunctionReceiver'>outputs.monitoring.ActionGroupAzureFunctionReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `azureFunctionReceiver` blocks as defined below.
 
@@ -235,7 +235,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L139">property <b>emailReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupEmailReceiver'>outputs.monitoring.ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `emailReceiver` blocks as defined below.
 
@@ -260,7 +260,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L147">property <b>itsmReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupItsmReceiver'>outputs.monitoring.ActionGroupItsmReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `itsmReceiver` blocks as defined below.
 
@@ -268,7 +268,7 @@ One or more `itsmReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L151">property <b>logicAppReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupLogicAppReceiver'>outputs.monitoring.ActionGroupLogicAppReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `logicAppReceiver` blocks as defined below.
 
@@ -300,7 +300,7 @@ The short name of the action group. This will be used in SMS messages.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L167">property <b>smsReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupSmsReceiver'>outputs.monitoring.ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `smsReceiver` blocks as defined below.
 
@@ -325,7 +325,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L175">property <b>voiceReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupVoiceReceiver'>outputs.monitoring.ActionGroupVoiceReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `voiceReceiver` blocks as defined below.
 
@@ -333,7 +333,7 @@ One or more `voiceReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L179">property <b>webhookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupWebhookReceiver'>outputs.monitoring.ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `webhookReceiver` blocks as defined below.
 
@@ -427,7 +427,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ActivityLogAlert</code></pre>
 
 
 Returns true if the given object is an instance of ActivityLogAlert.  This is designed to work even
@@ -437,7 +437,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L85">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertAction'>outputs.monitoring.ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertAction'>ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -445,7 +445,7 @@ One or more `action` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L89">property <b>criteria</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertCriteria'>outputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
 
 A `criteria` block as defined below.
 
@@ -628,7 +628,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AlertRule</code></pre>
 
 
 Returns true if the given object is an instance of AlertRule.  This is designed to work even
@@ -654,7 +654,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L116">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleEmailAction'>outputs.monitoring.AlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -760,7 +760,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L160">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleWebhookAction'>outputs.monitoring.AlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -1039,7 +1039,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AutoscaleSetting</code></pre>
 
 
 Returns true if the given object is an instance of AutoscaleSetting.  This is designed to work even
@@ -1082,7 +1082,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L282">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingNotification'>outputs.monitoring.AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -1090,7 +1090,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L286">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfile'>outputs.monitoring.AutoscaleSettingProfile</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
@@ -1212,7 +1212,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DiagnosticSetting</code></pre>
 
 
 Returns true if the given object is an instance of DiagnosticSetting.  This is designed to work even
@@ -1263,7 +1263,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L88">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingLog'>outputs.monitoring.DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingLog'>DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `log` blocks as defined below.
 
@@ -1271,7 +1271,7 @@ One or more `log` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L100">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingMetric'>outputs.monitoring.DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `metric` blocks as defined below.
 
@@ -1399,7 +1399,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogProfile</code></pre>
 
 
 Returns true if the given object is an instance of LogProfile.  This is designed to work even
@@ -1443,7 +1443,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/logProfile.ts#L99">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LogProfileRetentionPolicy'>outputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
@@ -1566,7 +1566,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MetricAlert</code></pre>
 
 
 Returns true if the given object is an instance of MetricAlert.  This is designed to work even
@@ -1576,7 +1576,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L89">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertAction'>outputs.monitoring.MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertAction'>MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -1592,7 +1592,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L97">property <b>criterias</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertCriteria'>outputs.monitoring.MetricAlertCriteria</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertCriteria'>MetricAlertCriteria</a>[]&gt;;</code></pre>
 
 One or more `criteria` blocks as defined below.
 
@@ -1797,7 +1797,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MetricAlertRule</code></pre>
 
 
 Returns true if the given object is an instance of MetricAlertRule.  This is designed to work even
@@ -1823,7 +1823,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L114">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleEmailAction'>outputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -1929,7 +1929,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L158">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleWebhookAction'>outputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -2035,7 +2035,7 @@ The set of arguments for constructing a ActionGroup resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L316">property <b>armRoleReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>inputs.monitoring.ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `armRoleReceiver` blocks as defined below.
 
@@ -2043,7 +2043,7 @@ One or more `armRoleReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L320">property <b>automationRunbookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>inputs.monitoring.ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `automationRunbookReceiver` blocks as defined below.
 
@@ -2051,7 +2051,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L324">property <b>azureAppPushReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>inputs.monitoring.ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `azureAppPushReceiver` blocks as defined below.
 
@@ -2059,7 +2059,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L328">property <b>azureFunctionReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>inputs.monitoring.ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `azureFunctionReceiver` blocks as defined below.
 
@@ -2067,7 +2067,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L332">property <b>emailReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>inputs.monitoring.ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `emailReceiver` blocks as defined below.
 
@@ -2083,7 +2083,7 @@ Whether this action group is enabled. If an action group is not enabled, then no
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L340">property <b>itsmReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>inputs.monitoring.ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `itsmReceiver` blocks as defined below.
 
@@ -2091,7 +2091,7 @@ One or more `itsmReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L344">property <b>logicAppReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>inputs.monitoring.ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `logicAppReceiver` blocks as defined below.
 
@@ -2123,7 +2123,7 @@ The short name of the action group. This will be used in SMS messages.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L360">property <b>smsReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>inputs.monitoring.ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `smsReceiver` blocks as defined below.
 
@@ -2139,7 +2139,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L368">property <b>voiceReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>inputs.monitoring.ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `voiceReceiver` blocks as defined below.
 
@@ -2147,7 +2147,7 @@ One or more `voiceReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L372">property <b>webhookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>inputs.monitoring.ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `webhookReceiver` blocks as defined below.
 
@@ -2165,7 +2165,7 @@ Input properties used for looking up and filtering ActionGroup resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L250">property <b>armRoleReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>inputs.monitoring.ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `armRoleReceiver` blocks as defined below.
 
@@ -2173,7 +2173,7 @@ One or more `armRoleReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L254">property <b>automationRunbookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>inputs.monitoring.ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `automationRunbookReceiver` blocks as defined below.
 
@@ -2181,7 +2181,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L258">property <b>azureAppPushReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>inputs.monitoring.ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `azureAppPushReceiver` blocks as defined below.
 
@@ -2189,7 +2189,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L262">property <b>azureFunctionReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>inputs.monitoring.ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `azureFunctionReceiver` blocks as defined below.
 
@@ -2197,7 +2197,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L266">property <b>emailReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>inputs.monitoring.ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `emailReceiver` blocks as defined below.
 
@@ -2213,7 +2213,7 @@ Whether this action group is enabled. If an action group is not enabled, then no
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L274">property <b>itsmReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>inputs.monitoring.ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `itsmReceiver` blocks as defined below.
 
@@ -2221,7 +2221,7 @@ One or more `itsmReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L278">property <b>logicAppReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>inputs.monitoring.ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `logicAppReceiver` blocks as defined below.
 
@@ -2253,7 +2253,7 @@ The short name of the action group. This will be used in SMS messages.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L294">property <b>smsReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>inputs.monitoring.ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `smsReceiver` blocks as defined below.
 
@@ -2269,7 +2269,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L302">property <b>voiceReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>inputs.monitoring.ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `voiceReceiver` blocks as defined below.
 
@@ -2277,7 +2277,7 @@ One or more `voiceReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/actionGroup.ts#L306">property <b>webhookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>inputs.monitoring.ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
 
 One or more `webhookReceiver` blocks as defined below.
 
@@ -2295,7 +2295,7 @@ The set of arguments for constructing a ActivityLogAlert resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L211">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>inputs.monitoring.ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -2303,7 +2303,7 @@ One or more `action` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L215">property <b>criteria</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>inputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
 
 A `criteria` block as defined below.
 
@@ -2369,7 +2369,7 @@ Input properties used for looking up and filtering ActivityLogAlert resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L173">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>inputs.monitoring.ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -2377,7 +2377,7 @@ One or more `action` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/activityLogAlert.ts#L177">property <b>criteria</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>inputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
 
 A `criteria` block as defined below.
 
@@ -2459,7 +2459,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L314">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>inputs.monitoring.AlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -2547,7 +2547,7 @@ The threshold value that activates the alert.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L358">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>inputs.monitoring.AlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -2581,7 +2581,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L252">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>inputs.monitoring.AlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -2669,7 +2669,7 @@ The threshold value that activates the alert.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/alertRule.ts#L296">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>inputs.monitoring.AlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -2711,7 +2711,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L408">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>inputs.monitoring.AutoscaleSettingNotification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -2719,7 +2719,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L412">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>inputs.monitoring.AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
@@ -2785,7 +2785,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L370">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>inputs.monitoring.AutoscaleSettingNotification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -2793,7 +2793,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/autoscaleSetting.ts#L374">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>inputs.monitoring.AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
@@ -2867,7 +2867,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L218">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>inputs.monitoring.DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
 
 One or more `log` blocks as defined below.
 
@@ -2875,7 +2875,7 @@ One or more `log` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L230">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>inputs.monitoring.DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
 
 One or more `metric` blocks as defined below.
 
@@ -2949,7 +2949,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L176">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>inputs.monitoring.DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
 
 One or more `log` blocks as defined below.
 
@@ -2957,7 +2957,7 @@ One or more `log` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/diagnosticSetting.ts#L188">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>inputs.monitoring.DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
 
 One or more `metric` blocks as defined below.
 
@@ -3025,7 +3025,7 @@ A collection of values returned by getActionGroup.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L65">property <b>armRoleReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupArmRoleReceiver'>outputs.monitoring.GetActionGroupArmRoleReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupArmRoleReceiver'>GetActionGroupArmRoleReceiver</a>[];</code></pre>
 
 One or more `armRoleReceiver` blocks as defined below.
 
@@ -3033,7 +3033,7 @@ One or more `armRoleReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L69">property <b>automationRunbookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAutomationRunbookReceiver'>outputs.monitoring.GetActionGroupAutomationRunbookReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAutomationRunbookReceiver'>GetActionGroupAutomationRunbookReceiver</a>[];</code></pre>
 
 One or more `automationRunbookReceiver` blocks as defined below.
 
@@ -3041,7 +3041,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L73">property <b>azureAppPushReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureAppPushReceiver'>outputs.monitoring.GetActionGroupAzureAppPushReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureAppPushReceiver'>GetActionGroupAzureAppPushReceiver</a>[];</code></pre>
 
 One or more `azureAppPushReceiver` blocks as defined below.
 
@@ -3049,7 +3049,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L77">property <b>azureFunctionReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureFunctionReceiver'>outputs.monitoring.GetActionGroupAzureFunctionReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureFunctionReceiver'>GetActionGroupAzureFunctionReceiver</a>[];</code></pre>
 
 One or more `azureFunctionReceiver` blocks as defined below.
 
@@ -3057,7 +3057,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L81">property <b>emailReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupEmailReceiver'>outputs.monitoring.GetActionGroupEmailReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupEmailReceiver'>GetActionGroupEmailReceiver</a>[];</code></pre>
 
 One or more `emailReceiver` blocks as defined below.
 
@@ -3081,7 +3081,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L89">property <b>itsmReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupItsmReceiver'>outputs.monitoring.GetActionGroupItsmReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupItsmReceiver'>GetActionGroupItsmReceiver</a>[];</code></pre>
 
 One or more `itsmReceiver` blocks as defined below.
 
@@ -3089,7 +3089,7 @@ One or more `itsmReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L93">property <b>logicAppReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupLogicAppReceiver'>outputs.monitoring.GetActionGroupLogicAppReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupLogicAppReceiver'>GetActionGroupLogicAppReceiver</a>[];</code></pre>
 
 One or more `logicAppReceiver` blocks as defined below.
 
@@ -3118,7 +3118,7 @@ The short name of the action group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L106">property <b>smsReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupSmsReceiver'>outputs.monitoring.GetActionGroupSmsReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupSmsReceiver'>GetActionGroupSmsReceiver</a>[];</code></pre>
 
 One or more `smsReceiver` blocks as defined below.
 
@@ -3126,7 +3126,7 @@ One or more `smsReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L110">property <b>voiceReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupVoiceReceiver'>outputs.monitoring.GetActionGroupVoiceReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupVoiceReceiver'>GetActionGroupVoiceReceiver</a>[];</code></pre>
 
 One or more `voiceReceiver` blocks as defined below.
 
@@ -3134,7 +3134,7 @@ One or more `voiceReceiver` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getActionGroup.ts#L114">property <b>webhookReceivers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupWebhookReceiver'>outputs.monitoring.GetActionGroupWebhookReceiver</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupWebhookReceiver'>GetActionGroupWebhookReceiver</a>[];</code></pre>
 
 One or more `webhookReceiver` blocks as defined below.
 
@@ -3256,7 +3256,7 @@ List of regions for which Activity Log events are stored or streamed.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getLogProfile.ts#L65">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLogProfileRetentionPolicy'>outputs.monitoring.GetLogProfileRetentionPolicy</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLogProfileRetentionPolicy'>GetLogProfileRetentionPolicy</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLogProfileResult-servicebusRuleId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/getLogProfile.ts#L69">property <b>servicebusRuleId</b></a>
 </h4>
@@ -3312,7 +3312,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/logProfile.ts#L207">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>inputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
@@ -3371,7 +3371,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/logProfile.ts#L176">property <b>retentionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>inputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
@@ -3405,7 +3405,7 @@ The set of arguments for constructing a MetricAlert resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L255">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>inputs.monitoring.MetricAlertAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -3421,7 +3421,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L263">property <b>criterias</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>inputs.monitoring.MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
 
 One or more `criteria` blocks as defined below.
 
@@ -3527,7 +3527,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L312">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>inputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -3615,7 +3615,7 @@ The threshold value that activates the alert.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L356">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>inputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -3649,7 +3649,7 @@ A verbose description of the alert rule that will be included in the alert email
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L250">property <b>emailAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>inputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</code></pre>
 
 A `emailAction` block as defined below.
 
@@ -3737,7 +3737,7 @@ The threshold value that activates the alert.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlertRule.ts#L294">property <b>webhookAction</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>inputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</code></pre>
 
 A `webhookAction` block as defined below.
 
@@ -3755,7 +3755,7 @@ Input properties used for looking up and filtering MetricAlert resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L201">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>inputs.monitoring.MetricAlertAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</code></pre>
 
 One or more `action` blocks as defined below.
 
@@ -3771,7 +3771,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/monitoring/metricAlert.ts#L209">property <b>criterias</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>inputs.monitoring.MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
 
 One or more `criteria` blocks as defined below.
 

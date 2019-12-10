@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/terraform"
+title_tag: "Package @pulumi/terraform | Node.js SDK"
 linktitle: "@pulumi/terraform"
 meta_desc: "Explore members of the @pulumi/terraform package."
 ---

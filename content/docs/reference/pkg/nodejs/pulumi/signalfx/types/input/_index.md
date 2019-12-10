@@ -1,5 +1,6 @@
 ---
 title: "Module types/input"
+title_tag: "Module types/input | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/signalfx package."
 ---
@@ -285,7 +286,7 @@ Search term used to choose the events shown in the overlay.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L69">property <b>sources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlaySource'>inputs.DashboardEventOverlaySource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardEventOverlaySource'>DashboardEventOverlaySource</a>&gt;[]&gt;;</code></pre>
 
 Each element specifies a filter to use against the signal specified in the `signal`.
 
@@ -425,7 +426,7 @@ The description that will override the original dashboards's description.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L137">property <b>filterOverrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboardFilterOverride'>inputs.DashboardGroupDashboardFilterOverride</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardGroupDashboardFilterOverride'>DashboardGroupDashboardFilterOverride</a>&gt;[]&gt;;</code></pre>
 
 The description that will override the original dashboards's description.
 
@@ -441,7 +442,7 @@ The name that will override the original dashboards's name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L142">property <b>variableOverrides</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variableOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboardVariableOverride'>inputs.DashboardGroupDashboardVariableOverride</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variableOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardGroupDashboardVariableOverride'>DashboardGroupDashboardVariableOverride</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardGroupDashboardFilterOverride" data-link-title="DashboardGroupDashboardFilterOverride">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L145">
         interface <strong>DashboardGroupDashboardFilterOverride</strong>
@@ -523,7 +524,7 @@ Search term used to choose the events shown in the overlay.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L183">property <b>sources</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlaySource'>inputs.DashboardSelectedEventOverlaySource</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DashboardSelectedEventOverlaySource'>DashboardSelectedEventOverlaySource</a>&gt;[]&gt;;</code></pre>
 
 Each element specifies a filter to use against the signal specified in the `signal`.
 
@@ -1174,7 +1175,7 @@ The minimum value for the right axis.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L491">property <b>watermarks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeftWatermark'>inputs.TimeChartAxisLeftWatermark</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeChartAxisLeftWatermark'>TimeChartAxisLeftWatermark</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisLeftWatermark" data-link-title="TimeChartAxisLeftWatermark">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L494">
         interface <strong>TimeChartAxisLeftWatermark</strong>
@@ -1262,7 +1263,7 @@ The minimum value for the right axis.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L531">property <b>watermarks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRightWatermark'>inputs.TimeChartAxisRightWatermark</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TimeChartAxisRightWatermark'>TimeChartAxisRightWatermark</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisRightWatermark" data-link-title="TimeChartAxisRightWatermark">
     <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L534">
         interface <strong>TimeChartAxisRightWatermark</strong>

@@ -1,5 +1,6 @@
 ---
 title: "Module cmd/dynamic-provider"
+title_tag: "Module cmd/dynamic-provider | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "dynamic-provider"
 meta_desc: "Explore members of the dynamic-provider module in the @pulumi/pulumi package."
 ---

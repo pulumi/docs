@@ -1,5 +1,6 @@
 ---
 title: "Module fsx"
+title_tag: "Module fsx | Package @pulumi/aws | Node.js SDK"
 linktitle: "fsx"
 meta_desc: "Explore members of the fsx module in the @pulumi/aws package."
 ---
@@ -96,7 +97,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LustreFileSystem</code></pre>
 
 
 Returns true if the given object is an instance of LustreFileSystem.  This is designed to work even
@@ -319,7 +320,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is WindowsFileSystem</code></pre>
 
 
 Returns true if the given object is an instance of WindowsFileSystem.  This is designed to work even
@@ -418,7 +419,7 @@ A list of IDs for the security groups that apply to the specified network interf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/fsx/windowsFileSystem.ts#L130">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>selfManagedActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WindowsFileSystemSelfManagedActiveDirectory'>outputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>selfManagedActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WindowsFileSystemSelfManagedActiveDirectory'>WindowsFileSystemSelfManagedActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 
@@ -740,7 +741,7 @@ A list of IDs for the security groups that apply to the specified network interf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/fsx/windowsFileSystem.ts#L340">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>inputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
 
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 
@@ -886,7 +887,7 @@ A list of IDs for the security groups that apply to the specified network interf
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/fsx/windowsFileSystem.ts#L278">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>inputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
 
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 

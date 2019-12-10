@@ -108,7 +108,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -126,7 +126,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L75">property <b>azureActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterAzureActiveDirectory'>outputs.servicefabric.ClusterAzureActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `azureActiveDirectory` block as defined below.
 
@@ -134,7 +134,7 @@ An `azureActiveDirectory` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L79">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificate'>outputs.servicefabric.ClusterCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificate'>ClusterCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
@@ -142,7 +142,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L83">property <b>certificateCommonNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNames'>outputs.servicefabric.ClusterCertificateCommonNames</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
@@ -150,7 +150,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L87">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clientCertificateThumbprints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateThumbprint'>outputs.servicefabric.ClusterClientCertificateThumbprint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clientCertificateThumbprints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or two `clientCertificateThumbprint` blocks as defined below.
 
@@ -174,7 +174,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L99">property <b>diagnosticsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>diagnosticsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterDiagnosticsConfig'>outputs.servicefabric.ClusterDiagnosticsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>diagnosticsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
@@ -182,7 +182,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L103">property <b>fabricSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>fabricSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterFabricSetting'>outputs.servicefabric.ClusterFabricSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>fabricSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterFabricSetting'>ClusterFabricSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `fabricSettings` blocks as defined below.
 
@@ -223,7 +223,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L119">property <b>nodeTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeType'>outputs.servicefabric.ClusterNodeType</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeType'>ClusterNodeType</a>[]&gt;;</code></pre>
 
 One or more `nodeType` blocks as defined below.
 
@@ -247,7 +247,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L131">property <b>reverseProxyCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>reverseProxyCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificate'>outputs.servicefabric.ClusterReverseProxyCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>reverseProxyCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `reverseProxyCertificate` block as defined below.
 
@@ -309,7 +309,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L320">property <b>azureActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>inputs.servicefabric.ClusterAzureActiveDirectory</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a>&gt;;</code></pre>
 
 An `azureActiveDirectory` block as defined below.
 
@@ -317,7 +317,7 @@ An `azureActiveDirectory` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L324">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>inputs.servicefabric.ClusterCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>ClusterCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
@@ -325,7 +325,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L328">property <b>certificateCommonNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>inputs.servicefabric.ClusterCertificateCommonNames</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a>&gt;;</code></pre>
 
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
@@ -333,7 +333,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L332">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>inputs.servicefabric.ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
 
 One or two `clientCertificateThumbprint` blocks as defined below.
 
@@ -349,7 +349,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L340">property <b>diagnosticsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>inputs.servicefabric.ClusterDiagnosticsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a>&gt;;</code></pre>
 
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
@@ -357,7 +357,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L344">property <b>fabricSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>inputs.servicefabric.ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
 
 One or more `fabricSettings` blocks as defined below.
 
@@ -389,7 +389,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L360">property <b>nodeTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>inputs.servicefabric.ClusterNodeType</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>ClusterNodeType</a>&gt;[]&gt;;</code></pre>
 
 One or more `nodeType` blocks as defined below.
 
@@ -413,7 +413,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L372">property <b>reverseProxyCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>inputs.servicefabric.ClusterReverseProxyCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a>&gt;;</code></pre>
 
 A `reverseProxyCertificate` block as defined below.
 
@@ -463,7 +463,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L238">property <b>azureActiveDirectory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>inputs.servicefabric.ClusterAzureActiveDirectory</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a>&gt;;</code></pre>
 
 An `azureActiveDirectory` block as defined below.
 
@@ -471,7 +471,7 @@ An `azureActiveDirectory` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L242">property <b>certificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>inputs.servicefabric.ClusterCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>ClusterCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
@@ -479,7 +479,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L246">property <b>certificateCommonNames</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>inputs.servicefabric.ClusterCertificateCommonNames</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a>&gt;;</code></pre>
 
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
@@ -487,7 +487,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L250">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>inputs.servicefabric.ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
 
 One or two `clientCertificateThumbprint` blocks as defined below.
 
@@ -511,7 +511,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L262">property <b>diagnosticsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>inputs.servicefabric.ClusterDiagnosticsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a>&gt;;</code></pre>
 
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
@@ -519,7 +519,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L266">property <b>fabricSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>inputs.servicefabric.ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
 
 One or more `fabricSettings` blocks as defined below.
 
@@ -551,7 +551,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L282">property <b>nodeTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>inputs.servicefabric.ClusterNodeType</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>ClusterNodeType</a>&gt;[]&gt;;</code></pre>
 
 One or more `nodeType` blocks as defined below.
 
@@ -575,7 +575,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicefabric/cluster.ts#L294">property <b>reverseProxyCertificate</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>inputs.servicefabric.ClusterReverseProxyCertificate</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a>&gt;;</code></pre>
 
 A `reverseProxyCertificate` block as defined below.
 

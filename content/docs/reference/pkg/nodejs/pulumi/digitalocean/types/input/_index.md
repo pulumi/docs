@@ -358,7 +358,7 @@ A name for the Kubernetes cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/input.ts#L152">property <b>nodes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePoolNode'>inputs.KubernetesClusterNodePoolNode</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterNodePoolNode'>KubernetesClusterNodePoolNode</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-size">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ff4c0e2fa8b73ac0442cfae0610a3df2a45ae73f/sdk/nodejs/types/input.ts#L153">property <b>size</b></a>
 </h4>

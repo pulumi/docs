@@ -1,5 +1,6 @@
 ---
 title: "Module composer"
+title_tag: "Module composer | Package @pulumi/gcp | Node.js SDK"
 linktitle: "composer"
 meta_desc: "Explore members of the composer module in the @pulumi/gcp package."
 ---
@@ -184,7 +185,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Environment</code></pre>
 
 
 Returns true if the given object is an instance of Environment.  This is designed to work even
@@ -194,7 +195,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L139">property <b>config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfig'>outputs.composer.EnvironmentConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Environment-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L112">property <b>id</b></a>
 </h4>
@@ -286,7 +287,7 @@ The set of arguments for constructing a Environment resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L204">property <b>config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>inputs.composer.EnvironmentConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EnvironmentArgs-labels">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L205">property <b>labels</b></a>
 </h4>
@@ -325,7 +326,7 @@ Input properties used for looking up and filtering Environment resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L189">property <b>config</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>inputs.composer.EnvironmentConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EnvironmentState-labels">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/environment.ts#L190">property <b>labels</b></a>
 </h4>
@@ -400,7 +401,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/composer/getImageVersions.ts#L71">property <b>imageVersions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageVersions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetImageVersionsImageVersion'>outputs.composer.GetImageVersionsImageVersion</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageVersions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetImageVersionsImageVersion'>GetImageVersionsImageVersion</a>[];</code></pre>
 
 A list of composer image versions available in the given project and location. Each `imageVersion` contains:
 

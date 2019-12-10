@@ -1,5 +1,6 @@
 ---
 title: "Module iterable"
+title_tag: "Module iterable | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "iterable"
 meta_desc: "Explore members of the iterable module in the @pulumi/pulumi package."
 ---
@@ -29,7 +30,7 @@ meta_desc: "Explore members of the iterable module in the @pulumi/pulumi package
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>groupBy&lt;T,V&gt;(iter: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='#Input'>Input</a>&lt;[, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='#Input'>Input</a>&lt;V&gt;]&gt;): <a href='#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V[]}&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>groupBy&lt;T,V&gt;(iter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;[, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;V&gt;]&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V[]}&gt;</code></pre>
 
 
 groupBy takes an array of T values, and a selector that prduces key/value pairs from those inputs,
@@ -52,7 +53,7 @@ and whose selector is roughly `(e) => [e.s, e.n]`, the resulting object will be
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>toObject&lt;T,V&gt;(iter: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='#Input'>Input</a>&lt;[, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='#Input'>Input</a>&lt;V&gt;]&gt;): <a href='#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V}&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>toObject&lt;T,V&gt;(iter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;[, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;V&gt;]&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V}&gt;</code></pre>
 
 
 toObject takes an array of T values, and a selector that produces key/value pairs from those inputs,

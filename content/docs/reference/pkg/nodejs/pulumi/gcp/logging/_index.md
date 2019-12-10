@@ -1,5 +1,6 @@
 ---
 title: "Module logging"
+title_tag: "Module logging | Package @pulumi/gcp | Node.js SDK"
 linktitle: "logging"
 meta_desc: "Explore members of the logging module in the @pulumi/gcp package."
 ---
@@ -123,7 +124,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BillingAccountExclusion</code></pre>
 
 
 Returns true if the given object is an instance of BillingAccountExclusion.  This is designed to work even
@@ -263,7 +264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BillingAccountSink</code></pre>
 
 
 Returns true if the given object is an instance of BillingAccountSink.  This is designed to work even
@@ -407,7 +408,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FolderExclusion</code></pre>
 
 
 Returns true if the given object is an instance of FolderExclusion.  This is designed to work even
@@ -522,7 +523,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FolderSink</code></pre>
 
 
 Returns true if the given object is an instance of FolderSink.  This is designed to work even
@@ -651,7 +652,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Metric</code></pre>
 
 
 Returns true if the given object is an instance of Metric.  This is designed to work even
@@ -661,7 +662,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L43">property <b>bucketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bucketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptions'>outputs.logging.MetricBucketOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bucketOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptions'>MetricBucketOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the
 bucket boundaries used to create a histogram of the extracted values.
@@ -707,7 +708,7 @@ expression in this map. The syntax of the extractor expression is the same as fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L63">property <b>metricDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metricDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricMetricDescriptor'>outputs.logging.MetricMetricDescriptor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metricDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricMetricDescriptor'>MetricMetricDescriptor</a>&gt;;</code></pre>
 
 The metric descriptor associated with the logs-based metric.
 
@@ -817,7 +818,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrganizationExclusion</code></pre>
 
 
 Returns true if the given object is an instance of OrganizationExclusion.  This is designed to work even
@@ -931,7 +932,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrganizationSink</code></pre>
 
 
 Returns true if the given object is an instance of OrganizationSink.  This is designed to work even
@@ -1079,7 +1080,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectExclusion</code></pre>
 
 
 Returns true if the given object is an instance of ProjectExclusion.  This is designed to work even
@@ -1194,7 +1195,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProjectSink</code></pre>
 
 
 Returns true if the given object is an instance of ProjectSink.  This is designed to work even
@@ -1743,7 +1744,7 @@ The set of arguments for constructing a Metric resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L186">property <b>bucketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bucketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptions'>inputs.logging.MetricBucketOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bucketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptions'>MetricBucketOptions</a>&gt;;</code></pre>
 
 The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the
 bucket boundaries used to create a histogram of the extracted values.
@@ -1780,7 +1781,7 @@ expression in this map. The syntax of the extractor expression is the same as fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L206">property <b>metricDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptor'>inputs.logging.MetricMetricDescriptor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptor'>MetricMetricDescriptor</a>&gt;;</code></pre>
 
 The metric descriptor associated with the logs-based metric.
 
@@ -1827,7 +1828,7 @@ Input properties used for looking up and filtering Metric resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L138">property <b>bucketOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bucketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptions'>inputs.logging.MetricBucketOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bucketOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptions'>MetricBucketOptions</a>&gt;;</code></pre>
 
 The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the
 bucket boundaries used to create a histogram of the extracted values.
@@ -1864,7 +1865,7 @@ expression in this map. The syntax of the extractor expression is the same as fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/logging/metric.ts#L158">property <b>metricDescriptor</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptor'>inputs.logging.MetricMetricDescriptor</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptor'>MetricMetricDescriptor</a>&gt;;</code></pre>
 
 The metric descriptor associated with the logs-based metric.
 

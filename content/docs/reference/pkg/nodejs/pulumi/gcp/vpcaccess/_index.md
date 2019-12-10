@@ -1,5 +1,6 @@
 ---
 title: "Module vpcaccess"
+title_tag: "Module vpcaccess | Package @pulumi/gcp | Node.js SDK"
 linktitle: "vpcaccess"
 meta_desc: "Explore members of the vpcaccess module in the @pulumi/gcp package."
 ---
@@ -78,7 +79,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Connector</code></pre>
 
 
 Returns true if the given object is an instance of Connector.  This is designed to work even
