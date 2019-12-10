@@ -5,7 +5,7 @@ tags: ["Kubernetes"]
 date: "2019-05-21"
 meta_desc: "Pulumi makes Kubernetes more accessible using familiar languages and your favorite tools. Create managed Kubernetes clusters, manage Kubernetes resources, including CRDs and related CustomResources, import Helm charts and manifests, and mix and match these resources within your Pulumi program."
 
-meta_image: "helm-deploy-using-pulumi.gif"
+meta_image: "meta_image.gif"
 ---
 
 Kubernetes is a powerful container orchestrator that is being adopted
