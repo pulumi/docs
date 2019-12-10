@@ -139,3 +139,12 @@ If you'd like your post to be published at some future date or time, you have a 
 Since the build process is triggered by (and so requires) a commit to `master`, you can either wait for the post's `date` to pass, remove its `draft` setting (or change it to `false`), and _then_ merge it, or leave its `draft` property `true`, merge, then change the property to `false` once the `date`'s gone by. If a post happens to get merged with `draft: false` and a future date, the resulting build will exclude the post, requiring a commit of some sort to occur _after_ its `date` in order to trigger a build and get the post published.
 
 For this reason, leaving the `draft` property `true` until you're actually ready to publish gives you an easy way to kick off a build when the time comes.
+
+## Publishing Check List
+
+* Spell check.
+* Grammar check.
+* Check for a break `<!--more-->` after the first paragraph. This ensures a correct break on the blog landing page. 
+* Check for meta_image - Avoid using an animated GIF, Twitter summary cards use the first image which may be black in the case of `asciinema` screen captures.
+* Preview locally.
+* Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet.
