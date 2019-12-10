@@ -108,6 +108,7 @@ REPOS=(
     "rabbitmq,pulumi-rabbitmq,sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "signalfx,pulumi-signalfx,sdk/nodejs"
+    "spotinst,pulumi-spotinst,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"

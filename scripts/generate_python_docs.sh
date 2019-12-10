@@ -32,6 +32,7 @@ PACKAGES=(
   "pulumi_rabbitmq"
   "pulumi_random"
   "pulumi_signalfx"
+  "pulumi_spotinst"
   "pulumi_terraform"
   "pulumi_tls"
   "pulumi_vault"
