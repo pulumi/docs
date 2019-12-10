@@ -73,7 +73,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HorizontalPodAutoscaler</code></pre>
 
 
 Returns true if the given object is an instance of HorizontalPodAutoscaler.  This is designed to work even
@@ -114,7 +114,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L36">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 
 metadata is the standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -123,7 +123,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L42">property <b>spec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec'>outputs.autoscaling.v2beta2.HorizontalPodAutoscalerSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>&gt;;</code></pre>
 
 spec is the specification for the behaviour of the autoscaler. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
@@ -132,7 +132,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L47">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus'>outputs.autoscaling.v2beta2.HorizontalPodAutoscalerStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus'>HorizontalPodAutoscalerStatus</a>&gt;;</code></pre>
 
 status is the current information about the autoscaler.
 
@@ -195,7 +195,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HorizontalPodAutoscalerList</code></pre>
 
 
 Returns true if the given object is an instance of HorizontalPodAutoscalerList.  This is designed to work even
@@ -225,7 +225,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L25">property <b>items</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler'>outputs.autoscaling.v2beta2.HorizontalPodAutoscaler</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>[]&gt;;</code></pre>
 
 items is the list of horizontal pod autoscaler objects.
 
@@ -244,7 +244,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L38">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 
 metadata is the standard list metadata.
 

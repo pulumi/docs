@@ -1,5 +1,6 @@
 ---
 title: "Module servicequotas"
+title_tag: "Module servicequotas | Package @pulumi/aws | Node.js SDK"
 linktitle: "servicequotas"
 meta_desc: "Explore members of the servicequotas module in the @pulumi/aws package."
 ---
@@ -102,7 +103,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServiceQuota</code></pre>
 
 
 Returns true if the given object is an instance of ServiceQuota.  This is designed to work even

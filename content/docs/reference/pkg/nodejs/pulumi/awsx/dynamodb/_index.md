@@ -1,5 +1,6 @@
 ---
 title: "Module dynamodb"
+title_tag: "Module dynamodb | Package @pulumi/awsx | Node.js SDK"
 linktitle: "dynamodb"
 meta_desc: "Explore members of the dynamodb module in the @pulumi/awsx package."
 ---
@@ -47,7 +48,7 @@ meta_desc: "Explore members of the dynamodb module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>conditionalCheckFailedRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditionalCheckFailedRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of failed attempts to perform conditional writes. The PutItem, UpdateItem, and
@@ -69,7 +70,7 @@ Valid Statistics: Minimum, Maximum, Average, SampleCount, Sum
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>consumedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of read capacity units consumed over the specified time period, so you can track
@@ -105,7 +106,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>consumedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>consumedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of write capacity units consumed over the specified time period, so you can track
@@ -141,7 +142,7 @@ Valid Statistics:
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DynamodbMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DynamodbMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -224,7 +225,7 @@ originating from replica tables within a DynamoDB global table.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -251,7 +252,7 @@ Optional [Table] this metric should be filtered down to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -292,7 +293,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#DynamodbMetricName'>DynamodbMetricName</a>, change: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#DynamodbMetricName'>DynamodbMetricName</a>, change: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/DynamoDB metric with the requested [metricName]. See
@@ -326,7 +327,7 @@ along any of the dimensions in the table below.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>onlineIndexConsumedWriteCapacity(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>onlineIndexConsumedWriteCapacity(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of write capacity units consumed when adding a new global secondary index to a
@@ -359,7 +360,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>onlineIndexPercentageProgress(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>onlineIndexPercentageProgress(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percentage of completion when a new global secondary index is being added to a table.
@@ -385,7 +386,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>onlineIndexThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>onlineIndexThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of write throttle events that occur when adding a new global secondary index to a
@@ -416,7 +417,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>pendingReplicationCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>pendingReplicationCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 (This metric is for DynamoDB global tables.) The number of item updates that are written to
@@ -438,7 +439,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>provisionedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>provisionedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of provisioned read capacity units for a table or a global secondary index. The
@@ -468,7 +469,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>provisionedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>provisionedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of provisioned write capacity units for a table or a global secondary index
@@ -499,7 +500,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>readThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>readThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Requests to DynamoDB that exceed the provisioned read capacity units for a table or a global
@@ -529,7 +530,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>replicationLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicationLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 (This metric is for DynamoDB global tables.) The elapsed time between an updated item
@@ -552,7 +553,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>returnedBytes(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>returnedBytes(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of bytes returned by GetRecords operations (Amazon DynamoDB Streams) during the
@@ -576,7 +577,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>returnedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>returnedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of items returned by Query or Scan operations during the specified time period.
@@ -605,7 +606,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>returnedRecordsCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>returnedRecordsCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of stream records returned by GetRecords operations (Amazon DynamoDB Streams)
@@ -629,7 +630,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>successfulRequestLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>successfulRequestLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Successful requests to DynamoDB or Amazon DynamoDB Streams during the specified time period.
@@ -658,7 +659,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>systemErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>systemErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during
@@ -679,7 +680,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>throttledRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>throttledRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Requests to DynamoDB that exceed the provisioned throughput limits on a resource (such as a
@@ -720,7 +721,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>timeToLiveDeletedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>timeToLiveDeletedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of items deleted by Time To Live (TTL) during the specified time period. This
@@ -740,7 +741,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>userErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>userErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 400 status code during
@@ -770,7 +771,7 @@ Valid Statistics:
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>writeThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>writeThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Requests to DynamoDB that exceed the provisioned write capacity units for a table or a global

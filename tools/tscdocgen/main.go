@@ -202,37 +202,44 @@ func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatad
 	pkg := doc.Name
 	repoURL := getRepoURL(pkgRepoDir, githash)
 
-	e := newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir)
-
-	// Emit the package data file.
-	if err := e.emitPackageDataFile(pkgRepoDir, githash); err != nil {
-		return err
-	}
-
 	// The kubernetes package requires some special handling since the structure differs from
 	// the tf-generated providers.
 	k8s := false
 	if pkg == "@pulumi/kubernetes" {
 		k8s = true
 	}
-	root, err := e.gatherModules(doc, rootModule, k8s)
+
+	e := newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir, k8s)
+
+	// Gather modules.
+	root, err := e.gatherModules(doc, rootModule)
 	if err != nil {
 		return err
 	}
-	e.augmentNode(doc, nil, k8s)
+	e.root = root
+
+	// Emit the package data file.
+	if err := e.emitPackageDataFile(pkgRepoDir, githash); err != nil {
+		return err
+	}
+
+	// Emit the root module, which will emit its submodules recursively.
 	return e.emitMarkdownModule(rootModule, root, true)
 }
 
 type emitter struct {
-	pkg        string // the NPM package name.
-	pkgname    string // the simple name of the package.
-	srcdir     string // the source directory for docs, etc.
-	repoURL    string // the base repo URL for this package's code.
-	outdir     string // where to store the output files.
-	outdatadir string // where to store output data.
+	pkg        string  // the NPM package name.
+	pkgname    string  // the simple name of the package.
+	srcdir     string  // the source directory for docs, etc.
+	repoURL    string  // the base repo URL for this package's code.
+	outdir     string  // where to store the output files.
+	outdatadir string  // where to store output data.
+	pkgrepodir string  // the package repo directory.
+	root       *module // the root module.
+	k8s        bool    // whether this is the kubernetes module.
 }
 
-func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir string) *emitter {
+func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir string, k8s bool) *emitter {
 	return &emitter{
 		pkg:        pkg,
 		pkgname:    pkgname,
@@ -240,6 +247,20 @@ func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir string) *emitt
 		repoURL:    repoURL,
 		outdir:     outdir,
 		outdatadir: outdatadir,
+		pkgrepodir: pkgRepoDir,
+		k8s:        k8s,
+	}
+}
+
+type moduleEmitter struct {
+	e   *emitter // the current emitter.
+	mod *module  // the current module being emitted.
+}
+
+func newModuleEmitter(e *emitter, mod *module) *moduleEmitter {
+	return &moduleEmitter{
+		e:   e,
+		mod: mod,
 	}
 }
 
@@ -287,7 +308,7 @@ const (
 )
 
 // augmentNode recurses throughout a tree AST, adding information that we'll need when translating it to Markdown.
-func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) {
+func (e *moduleEmitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	// Add some labels.
 	node.AnchorName = node.Name
 	if parent != nil && (parent.Kind == typeDocClassNode || parent.Kind == typeDocInterfaceNode) {
@@ -295,7 +316,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	}
 	node.Label = e.createLabel(node, parent)
 	node.CodeDetails = e.createCodeDetails(node)
-	node.URLPath = getURLPath(node, parent)
+	node.URLPath = e.getURLPath(node, parent)
 
 	if isResource(node) {
 		node.IsResource = true
@@ -319,7 +340,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	//
 	// This is done specifically for K8S because other providers can contain valid use of the
 	// > and < characters, which we don't want to escape.
-	if k8s &&
+	if e.e.k8s &&
 		strings.Contains(node.Comment.ShortText, "<") &&
 		strings.Contains(node.Comment.ShortText, ">") {
 		// To avoid double-encoding strings that are already encoded, we make a targeted replacement
@@ -330,10 +351,10 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 
 	// Augment everything deeply.
 	for _, child := range node.Children {
-		e.augmentNode(child, node, k8s)
+		e.augmentNode(child, node)
 	}
 	for _, sig := range node.Signatures {
-		e.augmentNode(sig, node, k8s)
+		e.augmentNode(sig, node)
 	}
 	if len(node.Signatures) > 20 {
 		// To avoid places where we have 1000+ overloads from becoming unreadable, limit the lists
@@ -344,11 +365,11 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 		})
 	}
 	for _, param := range node.Parameters {
-		e.augmentNode(param, node, k8s)
+		e.augmentNode(param, node)
 	}
 
 	// Reorder children based on their labels.
-	sort.Slice(node.Children, func(i, j int) bool {
+	sort.SliceStable(node.Children, func(i, j int) bool {
 		return node.Children[i].Label < node.Children[j].Label
 	})
 }
@@ -418,6 +439,8 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		return err
 	}
 
+	modEmitter := newModuleEmitter(e, mod)
+
 	// Now build an index of files and members.
 	var files []string
 	filesAdded := make(map[string]bool)
@@ -431,6 +454,8 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 				}
 			}
 		}
+
+		modEmitter.augmentNode(member, nil)
 
 		members = append(members, member)
 	}
@@ -473,7 +498,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 			Link: link,
 		})
 	}
-	sort.Slice(modules, func(i, j int) bool {
+	sort.SliceStable(modules, func(i, j int) bool {
 		return modules[i].Name < modules[j].Name
 	})
 
@@ -566,6 +591,7 @@ func (e *emitter) gatherNamespaces(nodes []*typeDocNode, prefix string) ([]names
 			members = append(members, node)
 		}
 	}
+
 	return namespaces, members
 }
 
@@ -654,7 +680,7 @@ func transitiveSortNodes(nodes []*typeDocNode, sortByLabel bool) {
 }
 
 // gatherModules walks a Typedoc AST and turns it into a proper module structure, to ease Markdown emission.
-func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool) (*module, error) {
+func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module, error) {
 	// First gather up all modules.  Since the AST nodes may appear in arbitrary order, we need to perform this
 	// pass first, before we can build up a proper tree structure with parents/children.
 	mods := make(map[string]*module)
@@ -674,7 +700,7 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 		modname := simplifyModuleName(modnode, parentModule)
 
 		// Skip internal tests module in k8s provider.
-		if k8s && modname == "tests" {
+		if e.k8s && modname == "tests" {
 			continue
 		}
 
@@ -860,6 +886,14 @@ func (m *module) Merge(other *module) error {
 // rootModule is the special name of the root index module.
 const rootModule = "index"
 
+func getModuleURL(m, pkgname string) string {
+	suffix := m + "/"
+	if m == rootModule {
+		suffix = ""
+	}
+	return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/%s/%s", pkgname, suffix)
+}
+
 func getModuleFilename(m string) string {
 	// Each module gets its own subdirectory and _index.md.  The package root gets a bit more metadata at the top.
 	if m == rootModule {
@@ -897,21 +931,23 @@ func simplifyModuleName(modnode *typeDocNode, parentModule string) string {
 // isLocalSource returns true if this source is local to this repo. This filters out references to types or
 // members that might be defined elsewhere, to avoid generating bogus links.
 func isLocalSource(source typeDocSource) bool {
-	return source.FileName != "" && source.FileName[0] != '/' && !strings.HasPrefix(source.FileName, "node_modules/")
+	return source.FileName != "" && source.FileName[0] != '/' && !strings.HasPrefix(source.FileName, "node_modules/") &&
+		!strings.HasPrefix(source.FileName, "docs/node_modules/")
 }
 
 // getURLPath returns a URL path to a given type node that is relative to a given repo.
-func getURLPath(node *typeDocNode, parent *typeDocNode) string {
+func (e *moduleEmitter) getURLPath(node *typeDocNode, parent *typeDocNode) string {
 	for _, source := range node.Sources {
 		if isLocalSource(source) {
-			return fmt.Sprintf("%s#L%d", source.FileName, source.Line)
+			fileName := strings.TrimPrefix(source.FileName, e.e.pkgrepodir+"/")
+			return fmt.Sprintf("%s#L%d", fileName, source.Line)
 		}
 	}
 
 	// If not relative, try returning a link to the parent, if any. This can happen if TypeDoc binds to,
 	// say, something in the standard ES library due to naming overloads (like anything named `name`).
 	if parent != nil {
-		return getURLPath(parent, nil)
+		return e.getURLPath(parent, nil)
 	}
 
 	// If no parent, simply return a link to the repo itself.
@@ -980,7 +1016,7 @@ const (
 	typeDocVariableNode       typeDocNodeKind = "Variable"
 )
 
-func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
+func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	switch node.Kind {
 	// Create node kinds, we simply summarize.
 	case typeDocClassNode:
@@ -1026,7 +1062,7 @@ func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	}
 }
 
-func (e *emitter) createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string {
+func (e *moduleEmitter) createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string {
 	var label string
 
 	// If not an arrow function (anonymous), add the name/type params/etc.
@@ -1087,7 +1123,7 @@ func (e *emitter) createSignature(node *typeDocNode, parent *typeDocNode, arrow 
 	return label
 }
 
-func (e *emitter) createCodeDetails(node *typeDocNode) string {
+func (e *moduleEmitter) createCodeDetails(node *typeDocNode) string {
 	switch node.Kind {
 	case typeDocTypeAliasNode:
 		// For type aliases, we won't have signatures, so we will create a detailed label.
@@ -1151,6 +1187,36 @@ func (e *emitter) createCodeDetails(node *typeDocNode) string {
 	}
 }
 
+func (e *moduleEmitter) typeHyperlinkInModule(mod *module, t *typeDocType) string {
+	// First look in each exported member.
+	for _, member := range mod.Exports {
+		if url := e.typeHyperlinkInNode(mod, member, t); url != "" {
+			return url
+		}
+	}
+	// Next look in each submodule.
+	for _, subMod := range mod.Modules {
+		if url := e.typeHyperlinkInModule(subMod, t); url != "" {
+			return url
+		}
+	}
+	return ""
+}
+
+func (e *moduleEmitter) typeHyperlinkInNode(mod *module, node *typeDocNode, t *typeDocType) string {
+	// If we found the type, return the link.
+	if node.ID == t.ID {
+		return fmt.Sprintf("%s#%s", getModuleURL(mod.Name, e.e.pkgname), t.Name)
+	}
+	// Otherwise, deeply check the node's children.
+	for _, n := range node.Children {
+		if url := e.typeHyperlinkInNode(mod, n, t); url != "" {
+			return url
+		}
+	}
+	return ""
+}
+
 // @pulumi/awsx imports types within the same modules using the following.
 // We'll use this mapping to map the local import to the actual top-level exported module.
 var awsxImportModuleMap = map[string]string{
@@ -1159,7 +1225,7 @@ var awsxImportModuleMap = map[string]string{
 }
 
 // typeHyperlink returns the hyperlink for help text associated with a given type, if available.
-func (e *emitter) typeHyperlink(t *typeDocType) string {
+func (e *moduleEmitter) typeHyperlink(t *typeDocType) string {
 	// Add a hyperlink for the type if possible.
 	if t.Type == typeDocIntrinsicType {
 		// If an intrinsic type, hyperlink to the standard JavaScript docs.
@@ -1185,10 +1251,22 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 			return "https://www.typescriptlang.org/docs/handbook/basic-types.html#void"
 		}
 	} else if t.Type == typeDocReferenceType {
+		// If this is a reference type in this package, link to it.
 		if t.ID != 0 {
-			// If this is a reference type in this package, link to it.
-			// TODO: inter-module linking.
-			return fmt.Sprintf("#%s", t.Name)
+			// First look for it in this module.
+			for _, member := range e.mod.Exports {
+				if member.ID == t.ID {
+					return fmt.Sprintf("#%s", t.Name)
+				}
+			}
+			// Next look in other modules.
+			url := e.typeHyperlinkInModule(e.e.root, t)
+			if url == fmt.Sprintf("%s#%s", getModuleURL(e.mod.Name, e.e.pkgname), t.Name) {
+				// If the URL ends up being the same as for the current module, just return the
+				// anchor link directly.
+				return fmt.Sprintf("#%s", t.Name)
+			}
+			return url
 		}
 
 		// For certain well-known types, we'll hard-code links to them.
@@ -1208,12 +1286,79 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 				"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 		}
 
-		if e.pkgname == "awsx" {
+		if e.e.pkgname == "awsx" {
 			for prefix, module := range awsxImportModuleMap {
 				if strings.HasPrefix(t.Name, prefix) {
 					name := strings.TrimPrefix(t.Name, prefix)
 					return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/awsx/%s/#%s", module, name)
 				}
+			}
+
+			var mod string
+			switch t.Name {
+			case "Tags":
+				return "/docs/reference/pkg/nodejs/pulumi/aws/#Tags"
+			case "RestApiEndpointConfiguration", "StageAccessLogSettings":
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/aws/types/input/#%s", t.Name)
+			case "Deployment", "RestApi", "Stage":
+				mod = "apigateway"
+			case "Group", "Policy":
+				mod = "autoscaling"
+			case "Stack":
+				mod = "cloudformation"
+			case "MetricAlarm":
+				mod = "cloudwatch"
+			case "Instance", "LaunchConfiguration", "Route", "RouteTable", "RouteTableAssociation", "SecurityGroup",
+				"SecurityGroupRule", "Subnet", "Vpc":
+				mod = "ec2"
+			case "LifecyclePolicy", "Repository":
+				mod = "ecr"
+			case "Cluster", "HealthCheck", "HostEntry", "LinuxParameters", "LogConfiguration", "MountPoint",
+				"PortMapping", "RepositoryCredentials", "ResourceRequirements", "Secret", "Service", "SystemControl",
+				"TaskDefinition", "Ulimit", "VolumeFrom":
+				mod = "ecs"
+			case "InstanceProfile", "PolicyDocument", "Role":
+				mod = "iam"
+			case "Function":
+				mod = "lambda"
+			case "Listener", "LoadBalancer", "TargetGroup", "TargetGroupAttachment":
+				mod = "lb"
+			case "Bucket", "BucketArgs":
+				mod = "s3"
+			case "Topic":
+				mod = "sns"
+			}
+			if mod != "" {
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/aws/%s/#%s", mod, t.Name)
+			}
+		} else if e.e.pkgname == "eks" {
+			var mod string
+			switch t.Name {
+			case "FargateProfileSelector", "NodeGroupScalingConfig":
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/aws/types/input/#%s", t.Name)
+			case "Stack":
+				mod = "cloudformation"
+			case "SecurityGroup", "SecurityGroupRule":
+				mod = "ec2"
+			case "Cluster", "NodeGroup", "NodeGroupArgs":
+				mod = "eks"
+			case "Role":
+				mod = "iam"
+			}
+			if mod != "" {
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/aws/%s/#%s", mod, t.Name)
+			}
+
+			switch t.Name {
+			case "ObjectMeta":
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#%s", t.Name)
+			case "Provider":
+				return "/docs/reference/pkg/nodejs/pulumi/kubernetes/#Provider"
+			case "StorageClass":
+				mod = "storage/v1"
+			}
+			if mod != "" {
+				return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/kubernetes/%s/#%s", mod, t.Name)
 			}
 		}
 
@@ -1223,12 +1368,12 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 		if len(elements) > 1 {
 			if elements[0] == "pulumi" {
 				link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
-			} else if e.pkgname == "awsx" && elements[0] == "aws" {
+			} else if e.e.pkgname == "awsx" && elements[0] == "aws" {
 				link = "/docs/reference/pkg/nodejs/pulumi/aws/"
-			} else if e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
+			} else if e.e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
 				link = "/docs/reference/pkg/nodejs/pulumi/awsx/"
 			} else if elements[0] == "inputs" || elements[0] == "inputApi" {
-				link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
+				link = "/docs/reference/pkg/nodejs/pulumi/" + e.e.pkgname + "/types/input/"
 				// Strip out everything except first and last element.  This is necessary given
 				// the current structure of docs, but leads to losing precision on which member
 				// we are really trying to link to, as there may be multiple instances of the
@@ -1237,7 +1382,7 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 				// enrichen the link format to that we can link more precisely.
 				elements = append(elements[:1], elements[len(elements)-1])
 			} else if elements[0] == "outputs" || elements[0] == "outputApi" {
-				link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
+				link = "/docs/reference/pkg/nodejs/pulumi/" + e.e.pkgname + "/types/output/"
 				// Strip out everything except first and last element.  This is necessary given
 				// the current structure of docs, but leads to losing precision on which member
 				// we are really trying to link to, as there may be multiple instances of the
@@ -1258,7 +1403,7 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 	return ""
 }
 
-func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
+func (e *moduleEmitter) createTypeLabel(t *typeDocType, indent int) string {
 	switch t.Type {
 	case typeDocArrayType:
 		return fmt.Sprintf("%s[]", e.createTypeLabel(t.ElementType, indent))
@@ -1360,9 +1505,12 @@ func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
 		targetStr := e.createTypeLabel(t.Target, indent)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	case typeDocPredicateType:
-		// TODO: handle predicate case. ignore for now so that this doesn't fail.
-		log.Println("ignoring predicate case" + t.Type)
-		return ""
+		if t.TargetType != nil && t.TargetType.Type == typeDocReferenceType {
+			targetStr := e.createTypeLabel(t.TargetType, indent)
+			return fmt.Sprintf("%s is %s", t.Name, targetStr)
+		}
+		// Otherwise, fall back to returning boolean.
+		return e.createTypeLabel(&typeDocType{Type: typeDocIntrinsicType, Name: "boolean"}, indent)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -1391,6 +1539,7 @@ func createVisibilityLabel(flags typeDocFlags) string {
 //
 // In particular, passing --mode file will not lead to the correct behavior, due to the way we use module structure.
 type typeDocNode struct {
+	ID int `json:"id,omitempty"`
 	// Name is the package name that this documentation refers to.
 	Name string `json:"name,omitempty"`
 	// KindString is the string-based kind of this node.
@@ -1475,6 +1624,8 @@ type typeDocType struct {
 	Operator string `json:"operator,omitempty"`
 	// Target is the target of the type operator, if this is a type operator reference
 	Target *typeDocType `json:"target,omitempty"`
+	// TargetType is the target type of a predicate, if this is a predicate.
+	TargetType *typeDocType `json:"targetType,omitempty"`
 }
 
 type typeDocTypeType string

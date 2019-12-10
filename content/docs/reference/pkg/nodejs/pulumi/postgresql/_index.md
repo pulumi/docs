@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/postgresql"
+title_tag: "Package @pulumi/postgresql | Node.js SDK"
 linktitle: "@pulumi/postgresql"
 meta_desc: "Explore members of the @pulumi/postgresql package."
 ---
@@ -133,7 +134,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Database</code></pre>
 
 
 Returns true if the given object is an instance of Database.  This is designed to work even
@@ -317,7 +318,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultPrivileg</code></pre>
 
 
 Returns true if the given object is an instance of DefaultPrivileg.  This is designed to work even
@@ -448,7 +449,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Extension</code></pre>
 
 
 Returns true if the given object is an instance of Extension.  This is designed to work even
@@ -570,7 +571,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Grant</code></pre>
 
 
 Returns true if the given object is an instance of Grant.  This is designed to work even
@@ -675,7 +676,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -787,7 +788,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Role</code></pre>
 
 
 Returns true if the given object is an instance of Role.  This is designed to work even
@@ -1065,7 +1066,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Schema</code></pre>
 
 
 Returns true if the given object is an instance of Schema.  This is designed to work even
@@ -1109,7 +1110,7 @@ The ROLE who owns the schema.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ca6bd186282b65202f78d20cef4d86fca085efea/sdk/nodejs/schema.ts#L93">property <b>policies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/output/#SchemaPolicy'>outputs.SchemaPolicy</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/output/#SchemaPolicy'>SchemaPolicy</a>[]&gt;;</code></pre>
 
 Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -2175,7 +2176,7 @@ The ROLE who owns the schema.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ca6bd186282b65202f78d20cef4d86fca085efea/sdk/nodejs/schema.ts#L174">property <b>policies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>inputs.SchemaPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>SchemaPolicy</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -2219,7 +2220,7 @@ The ROLE who owns the schema.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ca6bd186282b65202f78d20cef4d86fca085efea/sdk/nodejs/schema.ts#L150">property <b>policies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>inputs.SchemaPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>SchemaPolicy</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.

@@ -1,5 +1,6 @@
 ---
 title: "Module globalaccelerator"
+title_tag: "Module globalaccelerator | Package @pulumi/aws | Node.js SDK"
 linktitle: "globalaccelerator"
 meta_desc: "Explore members of the globalaccelerator module in the @pulumi/aws package."
 ---
@@ -103,7 +104,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Accelerator</code></pre>
 
 
 Returns true if the given object is an instance of Accelerator.  This is designed to work even
@@ -113,7 +114,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/accelerator.ts#L61">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorAttributes'>outputs.globalaccelerator.AcceleratorAttributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorAttributes'>AcceleratorAttributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The attributes of the accelerator. Fields documented below.
 
@@ -146,7 +147,7 @@ The value for the address type must be `IPV4`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/accelerator.ts#L73">property <b>ipSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorIpSet'>outputs.globalaccelerator.AcceleratorIpSet</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorIpSet'>AcceleratorIpSet</a>[]&gt;;</code></pre>
 
 IP address set associated with the accelerator.
 
@@ -231,7 +232,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EndpointGroup</code></pre>
 
 
 Returns true if the given object is an instance of EndpointGroup.  This is designed to work even
@@ -241,7 +242,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/endpointGroup.ts#L59">property <b>endpointConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointGroupEndpointConfiguration'>outputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The list of endpoint objects. Fields documented below.
 
@@ -399,7 +400,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Listener</code></pre>
 
 
 Returns true if the given object is an instance of Listener.  This is designed to work even
@@ -434,7 +435,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/listener.ts#L78">property <b>portRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerPortRange'>outputs.globalaccelerator.ListenerPortRange</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerPortRange'>ListenerPortRange</a>[]&gt;;</code></pre>
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 
@@ -472,7 +473,7 @@ The set of arguments for constructing a Accelerator resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/accelerator.ts#L148">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>inputs.globalaccelerator.AcceleratorAttributes</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>AcceleratorAttributes</a>&gt;;</code></pre>
 
 The attributes of the accelerator. Fields documented below.
 
@@ -514,7 +515,7 @@ Input properties used for looking up and filtering Accelerator resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/accelerator.ts#L122">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>inputs.globalaccelerator.AcceleratorAttributes</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>AcceleratorAttributes</a>&gt;;</code></pre>
 
 The attributes of the accelerator. Fields documented below.
 
@@ -538,7 +539,7 @@ The value for the address type must be `IPV4`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/accelerator.ts#L134">property <b>ipSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorIpSet'>inputs.globalaccelerator.AcceleratorIpSet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorIpSet'>AcceleratorIpSet</a>&gt;[]&gt;;</code></pre>
 
 IP address set associated with the accelerator.
 
@@ -564,7 +565,7 @@ The set of arguments for constructing a EndpointGroup resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/endpointGroup.ts#L183">property <b>endpointConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>inputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
 
 The list of endpoint objects. Fields documented below.
 
@@ -643,7 +644,7 @@ Input properties used for looking up and filtering EndpointGroup resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/endpointGroup.ts#L144">property <b>endpointConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>inputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
 
 The list of endpoint objects. Fields documented below.
 
@@ -738,7 +739,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/listener.ts#L164">property <b>portRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>inputs.globalaccelerator.ListenerPortRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 
@@ -780,7 +781,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/globalaccelerator/listener.ts#L142">property <b>portRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>inputs.globalaccelerator.ListenerPortRange</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 

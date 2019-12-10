@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/tls"
+title_tag: "Package @pulumi/tls | Node.js SDK"
 linktitle: "@pulumi/tls"
 meta_desc: "Explore members of the @pulumi/tls package."
 ---
@@ -113,7 +114,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CertRequest</code></pre>
 
 
 Returns true if the given object is an instance of CertRequest.  This is designed to work even
@@ -173,7 +174,7 @@ PEM-encoded private key that the certificate will belong to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/certRequest.ts#L64">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/output/#CertRequestSubject'>outputs.CertRequestSubject</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/output/#CertRequestSubject'>CertRequestSubject</a>[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -242,7 +243,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LocallySignedCert</code></pre>
 
 
 Returns true if the given object is an instance of LocallySignedCert.  This is designed to work even
@@ -425,7 +426,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PrivateKey</code></pre>
 
 
 Returns true if the given object is an instance of PrivateKey.  This is designed to work even
@@ -557,7 +558,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -635,7 +636,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SelfSignedCert</code></pre>
 
 
 Returns true if the given object is an instance of SelfSignedCert.  This is designed to work even
@@ -737,7 +738,7 @@ key identifier is not set at all.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/selfSignedCert.ts#L87">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/output/#SelfSignedCertSubject'>outputs.SelfSignedCertSubject</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/output/#SelfSignedCertSubject'>SelfSignedCertSubject</a>[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
@@ -865,7 +866,7 @@ PEM-encoded private key that the certificate will belong to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/certRequest.ts#L180">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#CertRequestSubject'>inputs.CertRequestSubject</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#CertRequestSubject'>CertRequestSubject</a>&gt;[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -933,7 +934,7 @@ PEM-encoded private key that the certificate will belong to
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/certRequest.ts#L148">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#CertRequestSubject'>inputs.CertRequestSubject</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#CertRequestSubject'>CertRequestSubject</a>&gt;[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -1484,7 +1485,7 @@ key identifier is not set at all.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/selfSignedCert.ts#L300">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#SelfSignedCertSubject'>inputs.SelfSignedCertSubject</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#SelfSignedCertSubject'>SelfSignedCertSubject</a>&gt;[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
@@ -1604,7 +1605,7 @@ key identifier is not set at all.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/9f5fbb04937d4f2d824cdf4b7629c35a624e5b34/sdk/nodejs/selfSignedCert.ts#L231">property <b>subjects</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#SelfSignedCertSubject'>inputs.SelfSignedCertSubject</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/tls/types/input/#SelfSignedCertSubject'>SelfSignedCertSubject</a>&gt;[]&gt;;</code></pre>
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the

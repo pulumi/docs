@@ -1,5 +1,6 @@
 ---
 title: "Module cmd/run-policy-pack"
+title_tag: "Module cmd/run-policy-pack | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "run-policy-pack"
 meta_desc: "Explore members of the run-policy-pack module in the @pulumi/pulumi package."
 ---

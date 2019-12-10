@@ -1,5 +1,6 @@
 ---
 title: "Module iam"
+title_tag: "Module iam | Package @pulumi/gcp | Node.js SDK"
 linktitle: "iam"
 meta_desc: "Explore members of the iam module in the @pulumi/gcp package."
 ---

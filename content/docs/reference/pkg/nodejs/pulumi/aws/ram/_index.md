@@ -1,5 +1,6 @@
 ---
 title: "Module ram"
+title_tag: "Module ram | Package @pulumi/aws | Node.js SDK"
 linktitle: "ram"
 meta_desc: "Explore members of the ram module in the @pulumi/aws package."
 ---
@@ -135,7 +136,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PrincipalAssociation</code></pre>
 
 
 Returns true if the given object is an instance of PrincipalAssociation.  This is designed to work even
@@ -238,7 +239,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceAssociation</code></pre>
 
 
 Returns true if the given object is an instance of ResourceAssociation.  This is designed to work even
@@ -341,7 +342,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceShare</code></pre>
 
 
 Returns true if the given object is an instance of ResourceShare.  This is designed to work even
@@ -444,7 +445,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceShareAccepter</code></pre>
 
 
 Returns true if the given object is an instance of ResourceShareAccepter.  This is designed to work even
@@ -592,7 +593,7 @@ A collection of arguments for invoking getResourceShare.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ram/getResourceShare.ts#L66">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetResourceShareFilter'>inputs.ram.GetResourceShareFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetResourceShareFilter'>GetResourceShareFilter</a>[];</code></pre>
 
 A filter used to scope the list e.g. by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
 
@@ -634,7 +635,7 @@ The Amazon Resource Name (ARN) of the resource share.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ram/getResourceShare.ts#L85">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetResourceShareFilter'>outputs.ram.GetResourceShareFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetResourceShareFilter'>GetResourceShareFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceShareResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ram/getResourceShare.ts#L89">property <b>id</b></a>
 </h4>

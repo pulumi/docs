@@ -1,5 +1,6 @@
 ---
 title: "Module tpu"
+title_tag: "Module tpu | Package @pulumi/gcp | Node.js SDK"
 linktitle: "tpu"
 meta_desc: "Explore members of the tpu module in the @pulumi/gcp package."
 ---
@@ -84,7 +85,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Node</code></pre>
 
 
 Returns true if the given object is an instance of Node.  This is designed to work even
@@ -156,7 +157,7 @@ on which this API has been activated. If none is provided, "default" will be use
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/tpu/node.ts#L72">property <b>networkEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeNetworkEndpoint'>outputs.tpu.NodeNetworkEndpoint</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeNetworkEndpoint'>NodeNetworkEndpoint</a>[]&gt;;</code></pre>
 
 The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of
 the node first reach out to the first (index 0) entry.
@@ -174,7 +175,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/tpu/node.ts#L81">property <b>schedulingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>schedulingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeSchedulingConfig'>outputs.tpu.NodeSchedulingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>schedulingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeSchedulingConfig'>NodeSchedulingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Sets the scheduling options for this TPU instance.
 
@@ -354,7 +355,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/tpu/node.ts#L261">property <b>schedulingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>inputs.tpu.NodeSchedulingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>NodeSchedulingConfig</a>&gt;;</code></pre>
 
 Sets the scheduling options for this TPU instance.
 
@@ -441,7 +442,7 @@ on which this API has been activated. If none is provided, "default" will be use
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/tpu/node.ts#L195">property <b>networkEndpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeNetworkEndpoint'>inputs.tpu.NodeNetworkEndpoint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeNetworkEndpoint'>NodeNetworkEndpoint</a>&gt;[]&gt;;</code></pre>
 
 The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of
 the node first reach out to the first (index 0) entry.
@@ -459,7 +460,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/tpu/node.ts#L204">property <b>schedulingConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>inputs.tpu.NodeSchedulingConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>NodeSchedulingConfig</a>&gt;;</code></pre>
 
 Sets the scheduling options for this TPU instance.
 

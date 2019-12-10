@@ -1,5 +1,6 @@
 ---
 title: "Module acmpca"
+title_tag: "Module acmpca | Package @pulumi/aws | Node.js SDK"
 linktitle: "acmpca"
 meta_desc: "Explore members of the acmpca module in the @pulumi/aws package."
 ---
@@ -156,7 +157,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CertificateAuthority</code></pre>
 
 
 Returns true if the given object is an instance of CertificateAuthority.  This is designed to work even
@@ -182,7 +183,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L122">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityCertificateAuthorityConfiguration'>outputs.acmpca.CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
 
 Nested argument containing algorithms and certificate subject information. Defined below.
 
@@ -247,7 +248,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L150">property <b>revocationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>revocationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityRevocationConfiguration'>outputs.acmpca.CertificateAuthorityRevocationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>revocationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument containing revocation configuration. Defined below.
 
@@ -335,7 +336,7 @@ The set of arguments for constructing a CertificateAuthority resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L294">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>inputs.acmpca.CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
 
 Nested argument containing algorithms and certificate subject information. Defined below.
 
@@ -359,7 +360,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L306">property <b>revocationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>inputs.acmpca.CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
 
 Nested argument containing revocation configuration. Defined below.
 
@@ -409,7 +410,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L240">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>inputs.acmpca.CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
 
 Nested argument containing algorithms and certificate subject information. Defined below.
 
@@ -465,7 +466,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/certificateAuthority.ts#L268">property <b>revocationConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>inputs.acmpca.CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
 
 Nested argument containing revocation configuration. Defined below.
 
@@ -523,7 +524,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/getCertificateAuthority.ts#L50">property <b>revocationConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revocationConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfiguration'>inputs.acmpca.GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revocationConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityArgs-tags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/getCertificateAuthority.ts#L51">property <b>tags</b></a>
 </h4>
@@ -596,7 +597,7 @@ Date and time before which the certificate authority is not valid. Only availabl
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acmpca/getCertificateAuthority.ts#L87">property <b>revocationConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>revocationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfiguration'>outputs.acmpca.GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>revocationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
 
 Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.

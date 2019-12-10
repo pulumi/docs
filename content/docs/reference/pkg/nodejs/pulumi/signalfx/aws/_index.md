@@ -1,5 +1,6 @@
 ---
 title: "Module aws"
+title_tag: "Module aws | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "aws"
 meta_desc: "Explore members of the aws module in the @pulumi/signalfx package."
 ---
@@ -125,7 +126,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExternalIntegration</code></pre>
 
 
 Returns true if the given object is an instance of ExternalIntegration.  This is designed to work even
@@ -257,7 +258,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Integration</code></pre>
 
 
 Returns true if the given object is an instance of Integration.  This is designed to work even
@@ -275,7 +276,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L91">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customNamespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespaceSyncRule'>outputs.aws.IntegrationCustomNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customNamespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespaceSyncRule'>IntegrationCustomNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
@@ -340,7 +341,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L119">property <b>namespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>namespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationNamespaceSyncRule'>outputs.aws.IntegrationNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>namespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationNamespaceSyncRule'>IntegrationNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 
@@ -480,7 +481,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TokenIntegration</code></pre>
 
 
 Returns true if the given object is an instance of TokenIntegration.  This is designed to work even
@@ -589,7 +590,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L274">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>inputs.aws.IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
 
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
@@ -645,7 +646,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L302">property <b>namespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>inputs.aws.IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
 
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 
@@ -711,7 +712,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L212">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>inputs.aws.IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
 
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
@@ -767,7 +768,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L240">property <b>namespaceSyncRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>inputs.aws.IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
 
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 

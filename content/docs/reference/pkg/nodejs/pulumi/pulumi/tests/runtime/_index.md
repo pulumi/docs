@@ -1,5 +1,6 @@
 ---
 title: "Module tests/runtime"
+title_tag: "Module tests/runtime | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "runtime"
 meta_desc: "Explore members of the runtime module in the @pulumi/pulumi package."
 ---

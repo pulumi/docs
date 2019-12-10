@@ -1,5 +1,6 @@
 ---
 title: "Module gcp"
+title_tag: "Module gcp | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "gcp"
 meta_desc: "Explore members of the gcp module in the @pulumi/signalfx package."
 ---
@@ -106,7 +107,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Integration</code></pre>
 
 
 Returns true if the given object is an instance of Integration.  This is designed to work even
@@ -149,7 +150,7 @@ GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/gcp/integration.ts#L82">property <b>projectServiceKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>projectServiceKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationProjectServiceKey'>outputs.gcp.IntegrationProjectServiceKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>projectServiceKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 GCP projects to add.
 
@@ -211,7 +212,7 @@ GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/gcp/integration.ts#L172">property <b>projectServiceKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>inputs.gcp.IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
 
 GCP projects to add.
 
@@ -261,7 +262,7 @@ GCP integration poll rate in milliseconds. Can be set to either 60000 or 300000 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/gcp/integration.ts#L146">property <b>projectServiceKeys</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>inputs.gcp.IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
 
 GCP projects to add.
 

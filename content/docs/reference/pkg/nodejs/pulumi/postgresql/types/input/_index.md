@@ -1,5 +1,6 @@
 ---
 title: "Module types/input"
+title_tag: "Module types/input | Package @pulumi/postgresql | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/postgresql package."
 ---

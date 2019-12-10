@@ -1,5 +1,6 @@
 ---
 title: "Module ecr"
+title_tag: "Module ecr | Package @pulumi/aws | Node.js SDK"
 linktitle: "ecr"
 meta_desc: "Explore members of the ecr module in the @pulumi/aws package."
 ---
@@ -168,7 +169,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LifecyclePolicy</code></pre>
 
 
 Returns true if the given object is an instance of LifecyclePolicy.  This is designed to work even
@@ -276,7 +277,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Repository</code></pre>
 
 
 Returns true if the given object is an instance of Repository.  This is designed to work even
@@ -303,7 +304,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repository.ts#L62">property <b>imageScanningConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>imageScanningConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryImageScanningConfiguration'>outputs.ecr.RepositoryImageScanningConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>imageScanningConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryImageScanningConfiguration'>RepositoryImageScanningConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 
@@ -446,7 +447,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RepositoryPolicy</code></pre>
 
 
 Returns true if the given object is an instance of RepositoryPolicy.  This is designed to work even
@@ -934,7 +935,7 @@ The set of arguments for constructing a Repository resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repository.ts#L165">property <b>imageScanningConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageScanningConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryImageScanningConfiguration'>inputs.ecr.RepositoryImageScanningConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageScanningConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryImageScanningConfiguration'>RepositoryImageScanningConfiguration</a>&gt;;</code></pre>
 
 Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 
@@ -976,7 +977,7 @@ The set of arguments for constructing a RepositoryPolicy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repositoryPolicy.ts#L151">property <b>policy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyDocument'>PolicyDocument</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryPolicyArgs-repository">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repositoryPolicy.ts#L155">property <b>repository</b></a>
 </h4>
@@ -999,7 +1000,7 @@ Input properties used for looking up and filtering RepositoryPolicy resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repositoryPolicy.ts#L136">property <b>policy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyDocument'>PolicyDocument</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryPolicyState-registryId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repositoryPolicy.ts#L140">property <b>registryId</b></a>
 </h4>
@@ -1038,7 +1039,7 @@ Full ARN of the repository.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecr/repository.ts#L135">property <b>imageScanningConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>imageScanningConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryImageScanningConfiguration'>inputs.ecr.RepositoryImageScanningConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>imageScanningConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryImageScanningConfiguration'>RepositoryImageScanningConfiguration</a>&gt;;</code></pre>
 
 Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 

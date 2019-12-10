@@ -141,7 +141,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Namespace</code></pre>
 
 
 Returns true if the given object is an instance of Namespace.  This is designed to work even
@@ -332,7 +332,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NamespaceAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of NamespaceAuthorizationRule.  This is designed to work even
@@ -502,7 +502,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
 
 
 Creates a new Function triggered by messages in the given Queue using the callback provided.
@@ -521,7 +521,7 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Queue</code></pre>
 
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
@@ -789,7 +789,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QueueAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of QueueAuthorizationRule.  This is designed to work even
@@ -980,7 +980,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subscription</code></pre>
 
 
 Returns true if the given object is an instance of Subscription.  This is designed to work even
@@ -1264,7 +1264,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubscriptionRule</code></pre>
 
 
 Returns true if the given object is an instance of SubscriptionRule.  This is designed to work even
@@ -1282,7 +1282,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/subscriptionRule.ts#L127">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>outputs.servicebus.SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -1447,7 +1447,7 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Topic</code></pre>
 
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
@@ -1698,7 +1698,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicAuthorizationRule</code></pre>
 
 
 Returns true if the given object is an instance of TopicAuthorizationRule.  This is designed to work even
@@ -2104,12 +2104,12 @@ Whether or not this ServiceBus Namespace is zone redundant.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTopicFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTopicFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -2118,7 +2118,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -2133,7 +2133,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -2141,7 +2141,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -2149,7 +2149,7 @@ Output bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
 
 The ServiceBus Subscription to subscribe the Function to.
 
@@ -2801,13 +2801,13 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L188"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>getProvider</b></a>
@@ -2821,7 +2821,7 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -2838,7 +2838,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-queue">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L188">property <b>queue</b></a>
 </h4>
@@ -2859,7 +2859,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-account">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h4>
@@ -2882,7 +2882,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -2891,7 +2891,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -2988,7 +2988,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -3021,7 +3021,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -3260,7 +3260,7 @@ Signature of the callback that can receive queue and topic notifications.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Data that will be passed along in the context object to the ServiceBusCallback.
 
@@ -3269,7 +3269,7 @@ Data that will be passed along in the context object to the ServiceBusCallback.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: R): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 A callback function that signals to the runtime that your code has completed. If your
@@ -3338,7 +3338,7 @@ at the default trace level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>req</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
 
 HTTP request object. Provided to your function when using HTTP Bindings.
 
@@ -3356,7 +3356,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceBusFunction</span> <span class='kr'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceBusFunction</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Function'>Function</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Azure Function triggered by a ServiceBus Topic.
 
@@ -3387,7 +3387,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 Function callback.
 
@@ -3405,12 +3405,12 @@ Function name.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -3419,7 +3419,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -3434,7 +3434,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -3442,7 +3442,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -3450,7 +3450,7 @@ Output bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L124">property <b>queue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queue?: <a href='#Queue'>Queue</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queue?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#Queue'>Queue</a>;</code></pre>
 
 The ServiceBus Queue to subscribe to.
 
@@ -3458,7 +3458,7 @@ The ServiceBus Queue to subscribe to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L134">property <b>subscription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
 
 The ServiceBus Subscription to subscribe the Function to.
 
@@ -3466,7 +3466,7 @@ The ServiceBus Subscription to subscribe the Function to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L129">property <b>topic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>topic?: <a href='#Topic'>Topic</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#Topic'>Topic</a>;</code></pre>
 
 The ServiceBus Topic to subscribe to.
 
@@ -3476,7 +3476,7 @@ The ServiceBus Topic to subscribe to.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusHostExtensions</span> <span class='kr'>extends</span> <a href='#HostSettings'>HostSettings</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusHostExtensions</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a></code></pre>
 
 Host settings specific to the Service Bus Queue/Topic/Subscription plugin.
 
@@ -3593,7 +3593,7 @@ support.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusHostSettings</span> <span class='kr'>extends</span> <a href='#HostSettings'>HostSettings</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusHostSettings</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-aggregator">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L234">property <b>aggregator</b></a>
 </h4>
@@ -3841,7 +3841,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/subscriptionRule.ts#L271">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.servicebus.SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -3923,7 +3923,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/subscriptionRule.ts#L229">property <b>correlationFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.servicebus.SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
@@ -4439,13 +4439,13 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L256"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>getProvider</b></a>
@@ -4459,7 +4459,7 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -4476,7 +4476,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-subscription">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L256">property <b>subscription</b></a>
 </h4>
@@ -4525,7 +4525,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -4534,7 +4534,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -4631,7 +4631,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -4672,7 +4672,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -4723,7 +4723,7 @@ A `site_config` object as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
 
 The ServiceBus Subscription to subscribe the Function to.
 

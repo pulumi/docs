@@ -1,5 +1,6 @@
 ---
 title: "Module servicediscovery"
+title_tag: "Module servicediscovery | Package @pulumi/aws | Node.js SDK"
 linktitle: "servicediscovery"
 meta_desc: "Explore members of the servicediscovery module in the @pulumi/aws package."
 ---
@@ -98,7 +99,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HttpNamespace</code></pre>
 
 
 Returns true if the given object is an instance of HttpNamespace.  This is designed to work even
@@ -210,7 +211,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PrivateDnsNamespace</code></pre>
 
 
 Returns true if the given object is an instance of PrivateDnsNamespace.  This is designed to work even
@@ -334,7 +335,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PublicDnsNamespace</code></pre>
 
 
 Returns true if the given object is an instance of PublicDnsNamespace.  This is designed to work even
@@ -492,7 +493,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -518,7 +519,7 @@ The description of the service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L105">property <b>dnsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfig'>outputs.servicediscovery.ServiceDnsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfig'>ServiceDnsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
@@ -526,7 +527,7 @@ A complex type that contains information about the resource record sets that you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L109">property <b>healthCheckConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>healthCheckConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckConfig'>outputs.servicediscovery.ServiceHealthCheckConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>healthCheckConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
@@ -534,7 +535,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L113">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>healthCheckCustomConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckCustomConfig'>outputs.servicediscovery.ServiceHealthCheckCustomConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>healthCheckCustomConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A complex type that contains settings for ECS managed health checks.
 
@@ -809,7 +810,7 @@ The description of the service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L208">property <b>dnsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>inputs.servicediscovery.ServiceDnsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>ServiceDnsConfig</a>&gt;;</code></pre>
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
@@ -817,7 +818,7 @@ A complex type that contains information about the resource record sets that you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L212">property <b>healthCheckConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>inputs.servicediscovery.ServiceHealthCheckConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a>&gt;;</code></pre>
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
@@ -825,7 +826,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L216">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>inputs.servicediscovery.ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
 
 A complex type that contains settings for ECS managed health checks.
 
@@ -875,7 +876,7 @@ The description of the service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L178">property <b>dnsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>inputs.servicediscovery.ServiceDnsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>ServiceDnsConfig</a>&gt;;</code></pre>
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
@@ -883,7 +884,7 @@ A complex type that contains information about the resource record sets that you
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L182">property <b>healthCheckConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>inputs.servicediscovery.ServiceHealthCheckConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a>&gt;;</code></pre>
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
@@ -891,7 +892,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L186">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>inputs.servicediscovery.ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
 
 A complex type that contains settings for ECS managed health checks.
 

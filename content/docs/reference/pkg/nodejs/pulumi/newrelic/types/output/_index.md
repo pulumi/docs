@@ -48,7 +48,7 @@ meta_desc: "Explore members of the output module in the @pulumi/newrelic package
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L92">property <b>attributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#EventEventAttribute'>outputs.insights.EventEventAttribute</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>attributes: <a href='#EventEventAttribute'>EventEventAttribute</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="EventEvent-timestamp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L93">property <b>timestamp</b></a>
 </h4>
@@ -183,7 +183,7 @@ meta_desc: "Explore members of the output module in the @pulumi/newrelic package
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L22">property <b>compareWiths</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>compareWiths?: <a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidgetCompareWith'>outputs.DashboardWidgetCompareWith</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>compareWiths?: <a href='#DashboardWidgetCompareWith'>DashboardWidgetCompareWith</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-drilldownDashboardId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L23">property <b>drilldownDashboardId</b></a>
 </h4>
@@ -223,7 +223,7 @@ meta_desc: "Explore members of the output module in the @pulumi/newrelic package
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L30">property <b>metrics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidgetMetric'>outputs.DashboardWidgetMetric</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metrics?: <a href='#DashboardWidgetMetric'>DashboardWidgetMetric</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DashboardWidget-notes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L31">property <b>notes</b></a>
 </h4>
@@ -303,7 +303,7 @@ The title of the dashboard.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L50">property <b>presentation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>presentation: <a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidgetCompareWithPresentation'>outputs.DashboardWidgetCompareWithPresentation</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>presentation: <a href='#DashboardWidgetCompareWithPresentation'>DashboardWidgetCompareWithPresentation</a>;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardWidgetCompareWithPresentation" data-link-title="DashboardWidgetCompareWithPresentation">
     <a href="https://github.com/pulumi/pulumi-newrelic/blob/ae33489d4569fe1ba89fa58c3eeea307c4ca93d6/sdk/nodejs/types/output.ts#L53">
         interface <strong>DashboardWidgetCompareWithPresentation</strong>

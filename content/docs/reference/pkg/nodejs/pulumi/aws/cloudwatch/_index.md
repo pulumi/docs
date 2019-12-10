@@ -1,5 +1,6 @@
 ---
 title: "Module cloudwatch"
+title_tag: "Module cloudwatch | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudwatch"
 meta_desc: "Explore members of the cloudwatch module in the @pulumi/aws package."
 ---
@@ -177,7 +178,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dashboard</code></pre>
 
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
@@ -305,7 +306,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventPermission</code></pre>
 
 
 Returns true if the given object is an instance of EventPermission.  This is designed to work even
@@ -323,7 +324,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventPermission.ts#L79">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventPermissionCondition'>outputs.cloudwatch.EventPermissionCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventPermissionCondition'>EventPermissionCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
@@ -447,7 +448,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventRule</code></pre>
 
 
 Returns true if the given object is an instance of EventRule.  This is designed to work even
@@ -805,7 +806,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventTarget</code></pre>
 
 
 Returns true if the given object is an instance of EventTarget.  This is designed to work even
@@ -823,7 +824,7 @@ The Amazon Resource Name (ARN) associated of the target.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L247">property <b>batchTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>batchTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetBatchTarget'>outputs.cloudwatch.EventTargetBatchTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>batchTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetBatchTarget'>EventTargetBatchTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
@@ -831,7 +832,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L251">property <b>ecsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ecsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTarget'>outputs.cloudwatch.EventTargetEcsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ecsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTarget'>EventTargetEcsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
@@ -865,7 +866,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L264">property <b>inputTransformer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inputTransformer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetInputTransformer'>outputs.cloudwatch.EventTargetInputTransformer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inputTransformer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetInputTransformer'>EventTargetInputTransformer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are providing a custom input to a target based on certain event data.
 
@@ -873,7 +874,7 @@ Parameters used when you are providing a custom input to a target based on certa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L268">property <b>kinesisTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>kinesisTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetKinesisTarget'>outputs.cloudwatch.EventTargetKinesisTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>kinesisTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
@@ -897,7 +898,7 @@ The name of the rule you want to add targets to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L280">property <b>runCommandTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>runCommandTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetRunCommandTarget'>outputs.cloudwatch.EventTargetRunCommandTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>runCommandTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
@@ -905,7 +906,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L284">property <b>sqsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sqsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetSqsTarget'>outputs.cloudwatch.EventTargetSqsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sqsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetSqsTarget'>EventTargetSqsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
@@ -987,7 +988,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogDestination</code></pre>
 
 
 Returns true if the given object is an instance of LogDestination.  This is designed to work even
@@ -1119,7 +1120,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogDestinationPolicy</code></pre>
 
 
 Returns true if the given object is an instance of LogDestinationPolicy.  This is designed to work even
@@ -1222,7 +1223,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogGroup</code></pre>
 
 
 Returns true if the given object is an instance of LogGroup.  This is designed to work even
@@ -1392,7 +1393,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogMetricFilter</code></pre>
 
 
 Returns true if the given object is an instance of LogMetricFilter.  This is designed to work even
@@ -1419,7 +1420,7 @@ The name of the log group to associate the metric filter with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logMetricFilter.ts#L67">property <b>metricTransformation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LogMetricFilterMetricTransformation'>outputs.cloudwatch.LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
 
 A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -1552,7 +1553,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogResourcePolicy</code></pre>
 
 
 Returns true if the given object is an instance of LogResourcePolicy.  This is designed to work even
@@ -1653,7 +1654,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogStream</code></pre>
 
 
 Returns true if the given object is an instance of LogStream.  This is designed to work even
@@ -1765,7 +1766,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogSubscriptionFilter</code></pre>
 
 
 Returns true if the given object is an instance of LogSubscriptionFilter.  This is designed to work even
@@ -2017,7 +2018,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MetricAlarm</code></pre>
 
 
 Returns true if the given object is an instance of MetricAlarm.  This is designed to work even
@@ -2138,7 +2139,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/metricAlarm.ts#L235">property <b>metricQueries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metricQueries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MetricAlarmMetricQuery'>outputs.cloudwatch.MetricAlarmMetricQuery</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metricQueries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
@@ -2381,7 +2382,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventPermission.ts#L162">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>inputs.cloudwatch.EventPermissionCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>EventPermissionCondition</a>&gt;;</code></pre>
 
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
@@ -2423,7 +2424,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventPermission.ts#L140">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>inputs.cloudwatch.EventPermissionCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>EventPermissionCondition</a>&gt;;</code></pre>
 
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
@@ -2536,7 +2537,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L65">property <b>detail</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>detail: <a href='#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>detail: <a href='/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-detail-type">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L41">property <b>detail-type</b></a>
 </h4>
@@ -2585,13 +2586,13 @@ A mapping of tags to assign to the resource.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventRuleEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventRuleEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> EventRuleEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventRuleOrSchedule: eventRule.EventRule | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> EventRuleEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventRuleOrSchedule: EventRule | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>getProvider</b></a>
@@ -2605,7 +2606,7 @@ A mapping of tags to assign to the resource.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -2622,7 +2623,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L71">property <b>eventRule</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventRule: eventRule.EventRule;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventRule: EventRule;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-func">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
@@ -2632,12 +2633,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permission: permission.Permission;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-target">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72">property <b>target</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>target: eventTarget.EventTarget;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>target: <a href='#EventTarget'>EventTarget</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">property <b>urn</b></a>
 </h4>
@@ -2765,7 +2766,7 @@ The Amazon Resource Name (ARN) associated of the target.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L412">property <b>batchTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>inputs.cloudwatch.EventTargetBatchTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>EventTargetBatchTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
@@ -2773,7 +2774,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L416">property <b>ecsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>inputs.cloudwatch.EventTargetEcsTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>EventTargetEcsTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
@@ -2798,7 +2799,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L429">property <b>inputTransformer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>inputs.cloudwatch.EventTargetInputTransformer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>EventTargetInputTransformer</a>&gt;;</code></pre>
 
 Parameters used when you are providing a custom input to a target based on certain event data.
 
@@ -2806,7 +2807,7 @@ Parameters used when you are providing a custom input to a target based on certa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L433">property <b>kinesisTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>inputs.cloudwatch.EventTargetKinesisTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
@@ -2830,7 +2831,7 @@ The name of the rule you want to add targets to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L445">property <b>runCommandTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>inputs.cloudwatch.EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
@@ -2838,7 +2839,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L449">property <b>sqsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>inputs.cloudwatch.EventTargetSqsTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>EventTargetSqsTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
@@ -2872,7 +2873,7 @@ The Amazon Resource Name (ARN) associated of the target.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L357">property <b>batchTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>inputs.cloudwatch.EventTargetBatchTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>EventTargetBatchTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
@@ -2880,7 +2881,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L361">property <b>ecsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>inputs.cloudwatch.EventTargetEcsTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>EventTargetEcsTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
@@ -2905,7 +2906,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L374">property <b>inputTransformer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>inputs.cloudwatch.EventTargetInputTransformer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>EventTargetInputTransformer</a>&gt;;</code></pre>
 
 Parameters used when you are providing a custom input to a target based on certain event data.
 
@@ -2913,7 +2914,7 @@ Parameters used when you are providing a custom input to a target based on certa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L378">property <b>kinesisTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>inputs.cloudwatch.EventTargetKinesisTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
@@ -2937,7 +2938,7 @@ The name of the rule you want to add targets to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L390">property <b>runCommandTargets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>inputs.cloudwatch.EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
@@ -2945,7 +2946,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/eventTarget.ts#L394">property <b>sqsTarget</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>inputs.cloudwatch.EventTargetSqsTarget</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>EventTargetSqsTarget</a>&gt;;</code></pre>
 
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
@@ -3244,13 +3245,13 @@ A mapping of tags to assign to the resource.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>LogGroupEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>LogGroupEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LogGroupEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, logGroup: logGroup.LogGroup, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LogGroupEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, logGroup: LogGroup, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>getProvider</b></a>
@@ -3264,7 +3265,7 @@ A mapping of tags to assign to the resource.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -3286,17 +3287,17 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logGroupMixins.ts#L74">property <b>logGroup</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logGroup: logGroup.LogGroup;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logGroup: LogGroup;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-logSubscriptionFilter">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75">property <b>logSubscriptionFilter</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logSubscriptionFilter: logSubscriptionFilter.LogSubscriptionFilter;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logSubscriptionFilter: <a href='#LogSubscriptionFilter'>LogSubscriptionFilter</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-permission">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permission: permission.Permission;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">property <b>urn</b></a>
 </h4>
@@ -3409,7 +3410,7 @@ The name of the log group to associate the metric filter with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logMetricFilter.ts#L157">property <b>metricTransformation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>inputs.cloudwatch.LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
 
 A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -3453,7 +3454,7 @@ The name of the log group to associate the metric filter with.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/logMetricFilter.ts#L133">property <b>metricTransformation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricTransformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>inputs.cloudwatch.LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricTransformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
 
 A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -3811,7 +3812,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/metricAlarm.ts#L520">property <b>metricQueries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>inputs.cloudwatch.MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
 
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
@@ -4013,7 +4014,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/cloudwatch/metricAlarm.ts#L418">property <b>metricQueries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>inputs.cloudwatch.MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
 
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
@@ -4106,7 +4107,7 @@ The unit for this metric.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>onSchedule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, schedule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: eventRule.EventRuleEventHandler, args?: eventRule.EventRuleEventSubscriptionArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): eventRule.EventRuleEventSubscription</code></pre>
+<pre class="highlight"><code><span class='kd'></span>onSchedule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, schedule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: eventRule.EventRuleEventHandler, args?: eventRule.EventRuleEventSubscriptionArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventRuleEventSubscription'>EventRuleEventSubscription</a></code></pre>
 
 
 Creates a CloudWatch event that will fire based on the specified schedule.  This will create

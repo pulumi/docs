@@ -350,7 +350,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationGateway</code></pre>
 
 
 Returns true if the given object is an instance of ApplicationGateway.  This is designed to work even
@@ -360,7 +360,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L127">property <b>authenticationCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authenticationCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAuthenticationCertificate'>outputs.network.ApplicationGatewayAuthenticationCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authenticationCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAuthenticationCertificate'>ApplicationGatewayAuthenticationCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `authenticationCertificate` blocks as defined below.
 
@@ -368,7 +368,7 @@ One or more `authenticationCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L131">property <b>autoscaleConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoscaleConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAutoscaleConfiguration'>outputs.network.ApplicationGatewayAutoscaleConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoscaleConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAutoscaleConfiguration'>ApplicationGatewayAutoscaleConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `autoscaleConfiguration` block as defined below.
 
@@ -376,7 +376,7 @@ A `autoscaleConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L135">property <b>backendAddressPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendAddressPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendAddressPool'>outputs.network.ApplicationGatewayBackendAddressPool</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendAddressPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendAddressPool'>ApplicationGatewayBackendAddressPool</a>[]&gt;;</code></pre>
 
 One or more `backendAddressPool` blocks as defined below.
 
@@ -384,7 +384,7 @@ One or more `backendAddressPool` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L139">property <b>backendHttpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendHttpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSetting'>outputs.network.ApplicationGatewayBackendHttpSetting</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendHttpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSetting'>ApplicationGatewayBackendHttpSetting</a>[]&gt;;</code></pre>
 
 One or more `backendHttpSettings` blocks as defined below.
 
@@ -392,7 +392,7 @@ One or more `backendHttpSettings` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L143">property <b>customErrorConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customErrorConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayCustomErrorConfiguration'>outputs.network.ApplicationGatewayCustomErrorConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customErrorConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayCustomErrorConfiguration'>ApplicationGatewayCustomErrorConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `customErrorConfiguration` blocks as defined below.
 
@@ -417,7 +417,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L156">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendIpConfiguration'>outputs.network.ApplicationGatewayFrontendIpConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendIpConfiguration'>ApplicationGatewayFrontendIpConfiguration</a>[]&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 
@@ -425,7 +425,7 @@ One or more `frontendIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L160">property <b>frontendPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>frontendPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendPort'>outputs.network.ApplicationGatewayFrontendPort</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>frontendPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendPort'>ApplicationGatewayFrontendPort</a>[]&gt;;</code></pre>
 
 One or more `frontendPort` blocks as defined below.
 
@@ -433,7 +433,7 @@ One or more `frontendPort` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L164">property <b>gatewayIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gatewayIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayGatewayIpConfiguration'>outputs.network.ApplicationGatewayGatewayIpConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gatewayIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayGatewayIpConfiguration'>ApplicationGatewayGatewayIpConfiguration</a>[]&gt;;</code></pre>
 
 One or more `gatewayIpConfiguration` blocks as defined below.
 
@@ -441,7 +441,7 @@ One or more `gatewayIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L168">property <b>httpListeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>httpListeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayHttpListener'>outputs.network.ApplicationGatewayHttpListener</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>httpListeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayHttpListener'>ApplicationGatewayHttpListener</a>[]&gt;;</code></pre>
 
 One or more `httpListener` blocks as defined below.
 
@@ -458,7 +458,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L172">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayIdentity'>outputs.network.ApplicationGatewayIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayIdentity'>ApplicationGatewayIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -482,7 +482,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L184">property <b>probes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>probes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayProbe'>outputs.network.ApplicationGatewayProbe</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>probes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayProbe'>ApplicationGatewayProbe</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `probe` blocks as defined below.
 
@@ -490,7 +490,7 @@ One or more `probe` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L188">property <b>redirectConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>redirectConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRedirectConfiguration'>outputs.network.ApplicationGatewayRedirectConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>redirectConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRedirectConfiguration'>ApplicationGatewayRedirectConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `redirectConfiguration` block as defined below.
 
@@ -498,7 +498,7 @@ A `redirectConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L192">property <b>requestRoutingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>requestRoutingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRequestRoutingRule'>outputs.network.ApplicationGatewayRequestRoutingRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requestRoutingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRequestRoutingRule'>ApplicationGatewayRequestRoutingRule</a>[]&gt;;</code></pre>
 
 One or more `requestRoutingRule` blocks as defined below.
 
@@ -514,7 +514,7 @@ The name of the resource group in which to the Application Gateway should exist.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L200">property <b>rewriteRuleSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rewriteRuleSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSet'>outputs.network.ApplicationGatewayRewriteRuleSet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rewriteRuleSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSet'>ApplicationGatewayRewriteRuleSet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 
@@ -522,7 +522,7 @@ One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L204">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySku'>outputs.network.ApplicationGatewaySku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySku'>ApplicationGatewaySku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 
@@ -530,7 +530,7 @@ A `sku` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L208">property <b>sslCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslCertificate'>outputs.network.ApplicationGatewaySslCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslCertificate'>ApplicationGatewaySslCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `sslCertificate` blocks as defined below.
 
@@ -538,7 +538,7 @@ One or more `sslCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L212">property <b>sslPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslPolicy'>outputs.network.ApplicationGatewaySslPolicy</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslPolicy'>ApplicationGatewaySslPolicy</a>[]&gt;;</code></pre>
 
 a `ssl policy` block as defined below.
 
@@ -554,7 +554,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L220">property <b>trustedRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>trustedRootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayTrustedRootCertificate'>outputs.network.ApplicationGatewayTrustedRootCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>trustedRootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayTrustedRootCertificate'>ApplicationGatewayTrustedRootCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `trustedRootCertificate` blocks as defined below.
 
@@ -562,7 +562,7 @@ One or more `trustedRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L224">property <b>urlPathMaps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>urlPathMaps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayUrlPathMap'>outputs.network.ApplicationGatewayUrlPathMap</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>urlPathMaps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayUrlPathMap'>ApplicationGatewayUrlPathMap</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `urlPathMap` blocks as defined below.
 
@@ -579,7 +579,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L228">property <b>wafConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>wafConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfiguration'>outputs.network.ApplicationGatewayWafConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>wafConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfiguration'>ApplicationGatewayWafConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `wafConfiguration` block as defined below.
 
@@ -658,7 +658,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ApplicationSecurityGroup</code></pre>
 
 
 Returns true if the given object is an instance of ApplicationSecurityGroup.  This is designed to work even
@@ -848,7 +848,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConnectionMonitor</code></pre>
 
 
 Returns true if the given object is an instance of ConnectionMonitor.  This is designed to work even
@@ -866,7 +866,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L133">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConnectionMonitorDestination'>outputs.network.ConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConnectionMonitorDestination'>ConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -923,7 +923,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L157">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConnectionMonitorSource'>outputs.network.ConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConnectionMonitorSource'>ConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -1010,7 +1010,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DdosProtectionPlan</code></pre>
 
 
 Returns true if the given object is an instance of DdosProtectionPlan.  This is designed to work even
@@ -1148,7 +1148,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExpressRouteCircuit</code></pre>
 
 
 Returns true if the given object is an instance of ExpressRouteCircuit.  This is designed to work even
@@ -1239,7 +1239,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuit.ts#L105">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitSku'>outputs.network.ExpressRouteCircuitSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitSku'>ExpressRouteCircuitSku</a>&gt;;</code></pre>
 
 A `sku` block for the ExpressRoute circuit as documented below.
 
@@ -1339,7 +1339,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExpressRouteCircuitAuthorization</code></pre>
 
 
 Returns true if the given object is an instance of ExpressRouteCircuitAuthorization.  This is designed to work even
@@ -1492,7 +1492,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExpressRouteCircuitPeering</code></pre>
 
 
 Returns true if the given object is an instance of ExpressRouteCircuitPeering.  This is designed to work even
@@ -1527,7 +1527,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuitPeering.ts#L90">property <b>microsoftPeeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>microsoftPeeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>outputs.network.ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>microsoftPeeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `microsoftPeeringConfig` block as defined below. Required when `peeringType` is set to `MicrosoftPeering`.
 
@@ -1698,7 +1698,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Firewall</code></pre>
 
 
 Returns true if the given object is an instance of Firewall.  This is designed to work even
@@ -1717,7 +1717,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewall.ts#L80">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallIpConfiguration'>outputs.network.FirewallIpConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallIpConfiguration'>FirewallIpConfiguration</a>[]&gt;;</code></pre>
 
 A `ipConfiguration` block as documented below.
 
@@ -1870,7 +1870,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallApplicationRuleCollection</code></pre>
 
 
 Returns true if the given object is an instance of FirewallApplicationRuleCollection.  This is designed to work even
@@ -1929,7 +1929,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L115">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallApplicationRuleCollectionRule'>outputs.network.FirewallApplicationRuleCollectionRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallApplicationRuleCollectionRule'>FirewallApplicationRuleCollectionRule</a>[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -2046,7 +2046,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallNatRuleCollection</code></pre>
 
 
 Returns true if the given object is an instance of FirewallNatRuleCollection.  This is designed to work even
@@ -2105,7 +2105,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNatRuleCollection.ts#L119">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallNatRuleCollectionRule'>outputs.network.FirewallNatRuleCollectionRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallNatRuleCollectionRule'>FirewallNatRuleCollectionRule</a>[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -2222,7 +2222,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallNetworkRuleCollection</code></pre>
 
 
 Returns true if the given object is an instance of FirewallNetworkRuleCollection.  This is designed to work even
@@ -2281,7 +2281,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L119">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallNetworkRuleCollectionRule'>outputs.network.FirewallNetworkRuleCollectionRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallNetworkRuleCollectionRule'>FirewallNetworkRuleCollectionRule</a>[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -2360,7 +2360,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LocalNetworkGateway</code></pre>
 
 
 Returns true if the given object is an instance of LocalNetworkGateway.  This is designed to work even
@@ -2379,7 +2379,7 @@ address spaces the gateway exposes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/localNetworkGateway.ts#L67">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LocalNetworkGatewayBgpSettings'>outputs.network.LocalNetworkGatewayBgpSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LocalNetworkGatewayBgpSettings'>LocalNetworkGatewayBgpSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `bgpSettings` block as defined below containing the
 Local Network Gateway's BGP speaker settings.
@@ -2447,7 +2447,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NatGateway" data-link-title="NatGateway">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L50">
         Resource <strong>NatGateway</strong>
     </a>
 </h3>
@@ -2480,9 +2480,10 @@ const examplePublicIpPrefix = new azure.network.PublicIpPrefix("example", {
     resourceGroupName: exampleResourceGroup.name,
     zones: "1",
 });
-const exampleNatGateway = new azure.network.NatGateway("example", {
+const exampleNatGateway = new azure.NatGateway("example", {
     idleTimeoutInMinutes: 10,
     location: exampleResourceGroup.location,
+    name: "nat-Gateway",
     publicIpAddressIds: [examplePublicIp.id],
     publicIpPrefixIds: [examplePublicIpPrefix.id],
     resourceGroupName: exampleResourceGroup.name,
@@ -2494,7 +2495,7 @@ const exampleNatGateway = new azure.network.NatGateway("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/nat_gateway.html.markdown.
 
 <h4 class="pdoc-member-header" id="NatGateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -2508,7 +2509,7 @@ Create a NatGateway resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NatGateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -2519,25 +2520,25 @@ Get an existing NatGateway resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NatGateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NatGateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NatGateway</code></pre>
 
 
 Returns true if the given object is an instance of NatGateway.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NatGateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2546,7 +2547,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NatGateway-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L79">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L80">property <b>idleTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idleTimeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2554,7 +2555,7 @@ deployments and may be missing (undefined) during planning phases.
 The idle timeout which should be used in minutes. Defaults to `4`.
 
 <h4 class="pdoc-member-header" id="NatGateway-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L83">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L84">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2562,7 +2563,7 @@ The idle timeout which should be used in minutes. Defaults to `4`.
 Specifies the supported Azure location where the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGateway-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2570,7 +2571,7 @@ Specifies the supported Azure location where the NAT Gateway should exist. Chang
 Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGateway-publicIpAddressIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L91">property <b>publicIpAddressIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L92">property <b>publicIpAddressIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpAddressIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2578,7 +2579,7 @@ Specifies the name of the NAT Gateway. Changing this forces a new resource to be
 A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGateway-publicIpPrefixIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L95">property <b>publicIpPrefixIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L96">property <b>publicIpPrefixIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpPrefixIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2586,7 +2587,7 @@ A list of Public IP Address ID's which should be associated with the NAT Gateway
 A list of Public IP Prefix ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGateway-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L100">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2594,7 +2595,7 @@ A list of Public IP Prefix ID's which should be associated with the NAT Gateway 
 Specifies the name of the Resource Group in which the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGateway-resourceGuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L103">property <b>resourceGuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L104">property <b>resourceGuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2602,7 +2603,7 @@ Specifies the name of the Resource Group in which the NAT Gateway should exist. 
 The resource GUID property of the NAT Gateway.
 
 <h4 class="pdoc-member-header" id="NatGateway-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L107">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L108">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2610,7 +2611,7 @@ The resource GUID property of the NAT Gateway.
 The SKU which should be used. At this time the only supported value is `Standard`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="NatGateway-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L112">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2618,7 +2619,7 @@ The SKU which should be used. At this time the only supported value is `Standard
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2627,7 +2628,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NatGateway-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L115">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L116">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2766,7 +2767,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkConnectionMonitor</code></pre>
 
 
 Returns true if the given object is an instance of NetworkConnectionMonitor.  This is designed to work even
@@ -2784,7 +2785,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L131">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkConnectionMonitorDestination'>outputs.network.NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkConnectionMonitorDestination'>NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -2841,7 +2842,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L155">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkConnectionMonitorSource'>outputs.network.NetworkConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkConnectionMonitorSource'>NetworkConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -2944,7 +2945,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterface</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterface.  This is designed to work even
@@ -3008,7 +3009,7 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkInterface.ts#L98">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkInterfaceIpConfiguration'>outputs.network.NetworkInterfaceIpConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkInterfaceIpConfiguration'>NetworkInterfaceIpConfiguration</a>[]&gt;;</code></pre>
 
 One or more `ipConfiguration` associated with this NIC as documented below.
 
@@ -3237,7 +3238,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.  This is designed to work even
@@ -3374,7 +3375,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceApplicationSecurityGroupAssociation</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceApplicationSecurityGroupAssociation.  This is designed to work even
@@ -3523,7 +3524,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceBackendAddressPoolAssociation</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceBackendAddressPoolAssociation.  This is designed to work even
@@ -3676,7 +3677,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkInterfaceNatRuleAssociation</code></pre>
 
 
 Returns true if the given object is an instance of NetworkInterfaceNatRuleAssociation.  This is designed to work even
@@ -3858,7 +3859,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkPacketCapture</code></pre>
 
 
 Returns true if the given object is an instance of NetworkPacketCapture.  This is designed to work even
@@ -3868,7 +3869,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L129">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkPacketCaptureFilter'>outputs.network.NetworkPacketCaptureFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkPacketCaptureFilter'>NetworkPacketCaptureFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -3933,7 +3934,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L157">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkPacketCaptureStorageLocation'>outputs.network.NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkPacketCaptureStorageLocation'>NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -4036,7 +4037,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkSecurityGroup</code></pre>
 
 
 Returns true if the given object is an instance of NetworkSecurityGroup.  This is designed to work even
@@ -4079,7 +4080,7 @@ The name of the resource group in which to create the network security group. Ch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkSecurityGroup.ts#L89">property <b>securityRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>securityRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkSecurityGroupSecurityRule'>outputs.network.NetworkSecurityGroupSecurityRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>securityRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NetworkSecurityGroupSecurityRule'>NetworkSecurityGroupSecurityRule</a>[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing security rules, as defined below.
 
@@ -4180,7 +4181,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkSecurityRule</code></pre>
 
 
 Returns true if the given object is an instance of NetworkSecurityRule.  This is designed to work even
@@ -4412,7 +4413,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NetworkWatcher</code></pre>
 
 
 Returns true if the given object is an instance of NetworkWatcher.  This is designed to work even
@@ -4604,7 +4605,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PacketCapture</code></pre>
 
 
 Returns true if the given object is an instance of PacketCapture.  This is designed to work even
@@ -4614,7 +4615,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L131">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PacketCaptureFilter'>outputs.network.PacketCaptureFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PacketCaptureFilter'>PacketCaptureFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -4679,7 +4680,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L159">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PacketCaptureStorageLocation'>outputs.network.PacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PacketCaptureStorageLocation'>PacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -4749,7 +4750,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PointToPointVpnGateway</code></pre>
 
 
 Returns true if the given object is an instance of PointToPointVpnGateway.  This is designed to work even
@@ -4759,7 +4760,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/pointToPointVpnGateway.ts#L44">property <b>connectionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>connectionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PointToPointVpnGatewayConnectionConfiguration'>outputs.network.PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>connectionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PointToPointVpnGatewayConnectionConfiguration'>PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
 
 A `connectionConfiguration` block as defined below.
 
@@ -4925,7 +4926,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Profile</code></pre>
 
 
 Returns true if the given object is an instance of Profile.  This is designed to work even
@@ -4935,7 +4936,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/profile.ts#L83">property <b>containerNetworkInterface</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>containerNetworkInterface: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProfileContainerNetworkInterface'>outputs.network.ProfileContainerNetworkInterface</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>containerNetworkInterface: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProfileContainerNetworkInterface'>ProfileContainerNetworkInterface</a>&gt;;</code></pre>
 
 A `containerNetworkInterface` block as documented below.
 
@@ -5065,7 +5066,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PublicIp</code></pre>
 
 
 Returns true if the given object is an instance of PublicIp.  This is designed to work even
@@ -5276,7 +5277,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PublicIpPrefix</code></pre>
 
 
 Returns true if the given object is an instance of PublicIpPrefix.  This is designed to work even
@@ -5438,7 +5439,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Route</code></pre>
 
 
 Returns true if the given object is an instance of Route.  This is designed to work even
@@ -5583,7 +5584,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RouteTable</code></pre>
 
 
 Returns true if the given object is an instance of RouteTable.  This is designed to work even
@@ -5634,7 +5635,7 @@ The name of the resource group in which to create the route table. Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/routeTable.ts#L84">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RouteTableRoute'>outputs.network.RouteTableRoute</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RouteTableRoute'>RouteTableRoute</a>[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing routes. Each object accepts the arguments documented below.
 
@@ -5747,7 +5748,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Subnet</code></pre>
 
 
 Returns true if the given object is an instance of Subnet.  This is designed to work even
@@ -5765,7 +5766,7 @@ The address prefix to use for the subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnet.ts#L83">property <b>delegations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>delegations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubnetDelegation'>outputs.network.SubnetDelegation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>delegations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubnetDelegation'>SubnetDelegation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `delegation` blocks as defined below.
 
@@ -5860,7 +5861,7 @@ deployments.
 The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubnetNatGatewayAssociation" data-link-title="SubnetNatGatewayAssociation">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L44">
         Resource <strong>SubnetNatGatewayAssociation</strong>
     </a>
 </h3>
@@ -5888,11 +5889,12 @@ const exampleSubnet = new azure.network.Subnet("example", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
 });
-const exampleNatGateway = new azure.network.NatGateway("example", {
+const exampleNatGateway = new azure.NatGateway("example", {
     location: exampleResourceGroup.location,
+    name: "example-natgateway",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleSubnetNatGatewayAssociation = new azure.network.SubnetNatGatewayAssociation("example", {
+const exampleSubnetNatGatewayAssociation = new azure.SubnetNatGatewayAssociation("example", {
     natGatewayId: exampleNatGateway.id,
     subnetId: exampleSubnet.id,
 });
@@ -5901,7 +5903,7 @@ const exampleSubnetNatGatewayAssociation = new azure.network.SubnetNatGatewayAss
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet_nat_gateway_association.html.markdown.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -5915,7 +5917,7 @@ Create a SubnetNatGatewayAssociation resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -5926,25 +5928,25 @@ Get an existing SubnetNatGatewayAssociation resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetNatGatewayAssociation</code></pre>
 
 
 Returns true if the given object is an instance of SubnetNatGatewayAssociation.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -5953,7 +5955,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L73">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L74">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>natGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5961,7 +5963,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L77">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L78">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5969,7 +5971,7 @@ The Azure resource ID of the NAT Gateway which should be associated with the Sub
 The Azure resource ID of the Subnet. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -6069,7 +6071,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetNetworkSecurityGroupAssociation</code></pre>
 
 
 Returns true if the given object is an instance of SubnetNetworkSecurityGroupAssociation.  This is designed to work even
@@ -6196,7 +6198,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SubnetRouteTableAssociation</code></pre>
 
 
 Returns true if the given object is an instance of SubnetRouteTableAssociation.  This is designed to work even
@@ -6328,7 +6330,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TrafficManagerEndpoint</code></pre>
 
 
 Returns true if the given object is an instance of TrafficManagerEndpoint.  This is designed to work even
@@ -6338,7 +6340,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L87">property <b>customHeaders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerEndpointCustomHeader'>outputs.network.TrafficManagerEndpointCustomHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerEndpointCustomHeader'>TrafficManagerEndpointCustomHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `customHeader` blocks as defined below
 
@@ -6439,7 +6441,7 @@ create the Traffic Manager endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L139">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerEndpointSubnet'>outputs.network.TrafficManagerEndpointSubnet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerEndpointSubnet'>TrafficManagerEndpointSubnet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `subnet` blocks as defined below
 
@@ -6584,7 +6586,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TrafficManagerProfile</code></pre>
 
 
 Returns true if the given object is an instance of TrafficManagerProfile.  This is designed to work even
@@ -6594,7 +6596,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L87">property <b>dnsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerProfileDnsConfig'>outputs.network.TrafficManagerProfileDnsConfig</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerProfileDnsConfig'>TrafficManagerProfileDnsConfig</a>[]&gt;;</code></pre>
 
 This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
@@ -6620,7 +6622,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L96">property <b>monitorConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerProfileMonitorConfig'>outputs.network.TrafficManagerProfileMonitorConfig</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TrafficManagerProfileMonitorConfig'>TrafficManagerProfileMonitorConfig</a>[]&gt;;</code></pre>
 
 This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
@@ -6732,7 +6734,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualHub</code></pre>
 
 
 Returns true if the given object is an instance of VirtualHub.  This is designed to work even
@@ -6783,7 +6785,7 @@ Specifies the name of the Resource Group where the Virtual Hub should exist. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualHub.ts#L60">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualHubRoute'>outputs.network.VirtualHubRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualHubRoute'>VirtualHubRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `route` blocks as defined below.
 
@@ -6916,7 +6918,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetwork</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetwork.  This is designed to work even
@@ -6936,7 +6938,7 @@ a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L105">property <b>ddosProtectionPlan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ddosProtectionPlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkDdosProtectionPlan'>outputs.network.VirtualNetworkDdosProtectionPlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ddosProtectionPlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkDdosProtectionPlan'>VirtualNetworkDdosProtectionPlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `ddosProtectionPlan` block as documented below.
 
@@ -6988,7 +6990,7 @@ create the virtual network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L129">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkSubnet'>outputs.network.VirtualNetworkSubnet</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>[]&gt;;</code></pre>
 
 Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -7133,7 +7135,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetworkGateway</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetworkGateway.  This is designed to work even
@@ -7154,7 +7156,7 @@ Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L122">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayBgpSettings'>outputs.network.VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayBgpSettings'>VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualNetworkGateway-defaultLocalNetworkGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L130">property <b>defaultLocalNetworkGatewayId</b></a>
 </h4>
@@ -7189,7 +7191,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L141">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayIpConfiguration'>outputs.network.VirtualNetworkGatewayIpConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayIpConfiguration'>VirtualNetworkGatewayIpConfiguration</a>[]&gt;;</code></pre>
 
 One or two `ipConfiguration` blocks documented below.
 An active-standby gateway requires exactly one `ipConfiguration` block whereas
@@ -7266,7 +7268,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L181">property <b>vpnClientConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpnClientConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayVpnClientConfiguration'>outputs.network.VirtualNetworkGatewayVpnClientConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpnClientConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayVpnClientConfiguration'>VirtualNetworkGatewayVpnClientConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `vpnClientConfiguration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -7476,7 +7478,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetworkGatewayConnection</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetworkGatewayConnection.  This is designed to work even
@@ -7532,7 +7534,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L213">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipsecPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayConnectionIpsecPolicy'>outputs.network.VirtualNetworkGatewayConnectionIpsecPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipsecPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkGatewayConnectionIpsecPolicy'>VirtualNetworkGatewayConnectionIpsecPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `ipsecPolicy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -7737,7 +7739,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetworkPeering</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetworkPeering.  This is designed to work even
@@ -7903,7 +7905,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualWan</code></pre>
 
 
 Returns true if the given object is an instance of VirtualWan.  This is designed to work even
@@ -8045,7 +8047,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnGateway</code></pre>
 
 
 Returns true if the given object is an instance of VpnGateway.  This is designed to work even
@@ -8055,7 +8057,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnGateway.ts#L44">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSetting'>outputs.network.VpnGatewayBgpSetting</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSetting'>VpnGatewayBgpSetting</a>[]&gt;;</code></pre>
 
 A `bgpSettings` block as defined below.
 
@@ -8174,7 +8176,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpnServerConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of VpnServerConfiguration.  This is designed to work even
@@ -8184,7 +8186,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L44">property <b>azureActiveDirectoryAuthentications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectoryAuthentications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>outputs.network.VpnServerConfigurationAzureActiveDirectoryAuthentication</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectoryAuthentications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>VpnServerConfigurationAzureActiveDirectoryAuthentication</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `azureActiveDirectoryAuthentication` block as defined below.
 
@@ -8192,7 +8194,7 @@ A `azureActiveDirectoryAuthentication` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L48">property <b>clientRevokedCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clientRevokedCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRevokedCertificate'>outputs.network.VpnServerConfigurationClientRevokedCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clientRevokedCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRevokedCertificate'>VpnServerConfigurationClientRevokedCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `clientRevokedCertificate` blocks as defined below.
 
@@ -8200,7 +8202,7 @@ One or more `clientRevokedCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L52">property <b>clientRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clientRootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRootCertificate'>outputs.network.VpnServerConfigurationClientRootCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clientRootCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRootCertificate'>VpnServerConfigurationClientRootCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `clientRootCertificate` blocks as defined below.
 
@@ -8217,7 +8219,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L56">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipsecPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationIpsecPolicy'>outputs.network.VpnServerConfigurationIpsecPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipsecPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationIpsecPolicy'>VpnServerConfigurationIpsecPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `ipsecPolicy` block as defined below.
 
@@ -8241,7 +8243,7 @@ The Name which should be used for this VPN Server Configuration. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L68">property <b>radiusServer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>radiusServer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServer'>outputs.network.VpnServerConfigurationRadiusServer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>radiusServer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServer'>VpnServerConfigurationRadiusServer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `radiusServer` block as defined below.
 
@@ -8832,7 +8834,7 @@ The set of arguments for constructing a ApplicationGateway resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L463">property <b>authenticationCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAuthenticationCertificate'>inputs.network.ApplicationGatewayAuthenticationCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAuthenticationCertificate'>ApplicationGatewayAuthenticationCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `authenticationCertificate` blocks as defined below.
 
@@ -8840,7 +8842,7 @@ One or more `authenticationCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L467">property <b>autoscaleConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAutoscaleConfiguration'>inputs.network.ApplicationGatewayAutoscaleConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAutoscaleConfiguration'>ApplicationGatewayAutoscaleConfiguration</a>&gt;;</code></pre>
 
 A `autoscaleConfiguration` block as defined below.
 
@@ -8848,7 +8850,7 @@ A `autoscaleConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L471">property <b>backendAddressPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendAddressPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendAddressPool'>inputs.network.ApplicationGatewayBackendAddressPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendAddressPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendAddressPool'>ApplicationGatewayBackendAddressPool</a>&gt;[]&gt;;</code></pre>
 
 One or more `backendAddressPool` blocks as defined below.
 
@@ -8856,7 +8858,7 @@ One or more `backendAddressPool` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L475">property <b>backendHttpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendHttpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSetting'>inputs.network.ApplicationGatewayBackendHttpSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendHttpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSetting'>ApplicationGatewayBackendHttpSetting</a>&gt;[]&gt;;</code></pre>
 
 One or more `backendHttpSettings` blocks as defined below.
 
@@ -8864,7 +8866,7 @@ One or more `backendHttpSettings` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L479">property <b>customErrorConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayCustomErrorConfiguration'>inputs.network.ApplicationGatewayCustomErrorConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayCustomErrorConfiguration'>ApplicationGatewayCustomErrorConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `customErrorConfiguration` blocks as defined below.
 
@@ -8889,7 +8891,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L492">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendIpConfiguration'>inputs.network.ApplicationGatewayFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendIpConfiguration'>ApplicationGatewayFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 
@@ -8897,7 +8899,7 @@ One or more `frontendIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L496">property <b>frontendPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendPort'>inputs.network.ApplicationGatewayFrontendPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendPort'>ApplicationGatewayFrontendPort</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendPort` blocks as defined below.
 
@@ -8905,7 +8907,7 @@ One or more `frontendPort` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L500">property <b>gatewayIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gatewayIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayGatewayIpConfiguration'>inputs.network.ApplicationGatewayGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gatewayIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayGatewayIpConfiguration'>ApplicationGatewayGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `gatewayIpConfiguration` blocks as defined below.
 
@@ -8913,7 +8915,7 @@ One or more `gatewayIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L504">property <b>httpListeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpListeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListener'>inputs.network.ApplicationGatewayHttpListener</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpListeners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListener'>ApplicationGatewayHttpListener</a>&gt;[]&gt;;</code></pre>
 
 One or more `httpListener` blocks as defined below.
 
@@ -8921,7 +8923,7 @@ One or more `httpListener` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L508">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayIdentity'>inputs.network.ApplicationGatewayIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayIdentity'>ApplicationGatewayIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -8945,7 +8947,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L520">property <b>probes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>probes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbe'>inputs.network.ApplicationGatewayProbe</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>probes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbe'>ApplicationGatewayProbe</a>&gt;[]&gt;;</code></pre>
 
 One or more `probe` blocks as defined below.
 
@@ -8953,7 +8955,7 @@ One or more `probe` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L524">property <b>redirectConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirectConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRedirectConfiguration'>inputs.network.ApplicationGatewayRedirectConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirectConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRedirectConfiguration'>ApplicationGatewayRedirectConfiguration</a>&gt;[]&gt;;</code></pre>
 
 A `redirectConfiguration` block as defined below.
 
@@ -8961,7 +8963,7 @@ A `redirectConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L528">property <b>requestRoutingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requestRoutingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRequestRoutingRule'>inputs.network.ApplicationGatewayRequestRoutingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requestRoutingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRequestRoutingRule'>ApplicationGatewayRequestRoutingRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `requestRoutingRule` blocks as defined below.
 
@@ -8977,7 +8979,7 @@ The name of the resource group in which to the Application Gateway should exist.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L536">property <b>rewriteRuleSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rewriteRuleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSet'>inputs.network.ApplicationGatewayRewriteRuleSet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rewriteRuleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSet'>ApplicationGatewayRewriteRuleSet</a>&gt;[]&gt;;</code></pre>
 
 One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 
@@ -8985,7 +8987,7 @@ One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L540">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySku'>inputs.network.ApplicationGatewaySku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySku'>ApplicationGatewaySku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 
@@ -8993,7 +8995,7 @@ A `sku` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L544">property <b>sslCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslCertificate'>inputs.network.ApplicationGatewaySslCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslCertificate'>ApplicationGatewaySslCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `sslCertificate` blocks as defined below.
 
@@ -9001,7 +9003,7 @@ One or more `sslCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L548">property <b>sslPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslPolicy'>inputs.network.ApplicationGatewaySslPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslPolicy'>ApplicationGatewaySslPolicy</a>&gt;[]&gt;;</code></pre>
 
 a `ssl policy` block as defined below.
 
@@ -9017,7 +9019,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L556">property <b>trustedRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>trustedRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayTrustedRootCertificate'>inputs.network.ApplicationGatewayTrustedRootCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>trustedRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayTrustedRootCertificate'>ApplicationGatewayTrustedRootCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `trustedRootCertificate` blocks as defined below.
 
@@ -9025,7 +9027,7 @@ One or more `trustedRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L560">property <b>urlPathMaps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlPathMaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMap'>inputs.network.ApplicationGatewayUrlPathMap</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlPathMaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMap'>ApplicationGatewayUrlPathMap</a>&gt;[]&gt;;</code></pre>
 
 One or more `urlPathMap` blocks as defined below.
 
@@ -9033,7 +9035,7 @@ One or more `urlPathMap` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L564">property <b>wafConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>wafConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfiguration'>inputs.network.ApplicationGatewayWafConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>wafConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfiguration'>ApplicationGatewayWafConfiguration</a>&gt;;</code></pre>
 
 A `wafConfiguration` block as defined below.
 
@@ -9059,7 +9061,7 @@ Input properties used for looking up and filtering ApplicationGateway resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L348">property <b>authenticationCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAuthenticationCertificate'>inputs.network.ApplicationGatewayAuthenticationCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticationCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAuthenticationCertificate'>ApplicationGatewayAuthenticationCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `authenticationCertificate` blocks as defined below.
 
@@ -9067,7 +9069,7 @@ One or more `authenticationCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L352">property <b>autoscaleConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAutoscaleConfiguration'>inputs.network.ApplicationGatewayAutoscaleConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAutoscaleConfiguration'>ApplicationGatewayAutoscaleConfiguration</a>&gt;;</code></pre>
 
 A `autoscaleConfiguration` block as defined below.
 
@@ -9075,7 +9077,7 @@ A `autoscaleConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L356">property <b>backendAddressPools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendAddressPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendAddressPool'>inputs.network.ApplicationGatewayBackendAddressPool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendAddressPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendAddressPool'>ApplicationGatewayBackendAddressPool</a>&gt;[]&gt;;</code></pre>
 
 One or more `backendAddressPool` blocks as defined below.
 
@@ -9083,7 +9085,7 @@ One or more `backendAddressPool` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L360">property <b>backendHttpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendHttpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSetting'>inputs.network.ApplicationGatewayBackendHttpSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendHttpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSetting'>ApplicationGatewayBackendHttpSetting</a>&gt;[]&gt;;</code></pre>
 
 One or more `backendHttpSettings` blocks as defined below.
 
@@ -9091,7 +9093,7 @@ One or more `backendHttpSettings` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L364">property <b>customErrorConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayCustomErrorConfiguration'>inputs.network.ApplicationGatewayCustomErrorConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customErrorConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayCustomErrorConfiguration'>ApplicationGatewayCustomErrorConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `customErrorConfiguration` blocks as defined below.
 
@@ -9116,7 +9118,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L377">property <b>frontendIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendIpConfiguration'>inputs.network.ApplicationGatewayFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendIpConfiguration'>ApplicationGatewayFrontendIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendIpConfiguration` blocks as defined below.
 
@@ -9124,7 +9126,7 @@ One or more `frontendIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L381">property <b>frontendPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>frontendPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendPort'>inputs.network.ApplicationGatewayFrontendPort</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>frontendPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendPort'>ApplicationGatewayFrontendPort</a>&gt;[]&gt;;</code></pre>
 
 One or more `frontendPort` blocks as defined below.
 
@@ -9132,7 +9134,7 @@ One or more `frontendPort` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L385">property <b>gatewayIpConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gatewayIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayGatewayIpConfiguration'>inputs.network.ApplicationGatewayGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gatewayIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayGatewayIpConfiguration'>ApplicationGatewayGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `gatewayIpConfiguration` blocks as defined below.
 
@@ -9140,7 +9142,7 @@ One or more `gatewayIpConfiguration` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L389">property <b>httpListeners</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>httpListeners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListener'>inputs.network.ApplicationGatewayHttpListener</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>httpListeners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListener'>ApplicationGatewayHttpListener</a>&gt;[]&gt;;</code></pre>
 
 One or more `httpListener` blocks as defined below.
 
@@ -9148,7 +9150,7 @@ One or more `httpListener` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L393">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayIdentity'>inputs.network.ApplicationGatewayIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayIdentity'>ApplicationGatewayIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -9172,7 +9174,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L405">property <b>probes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>probes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbe'>inputs.network.ApplicationGatewayProbe</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>probes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbe'>ApplicationGatewayProbe</a>&gt;[]&gt;;</code></pre>
 
 One or more `probe` blocks as defined below.
 
@@ -9180,7 +9182,7 @@ One or more `probe` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L409">property <b>redirectConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redirectConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRedirectConfiguration'>inputs.network.ApplicationGatewayRedirectConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redirectConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRedirectConfiguration'>ApplicationGatewayRedirectConfiguration</a>&gt;[]&gt;;</code></pre>
 
 A `redirectConfiguration` block as defined below.
 
@@ -9188,7 +9190,7 @@ A `redirectConfiguration` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L413">property <b>requestRoutingRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>requestRoutingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRequestRoutingRule'>inputs.network.ApplicationGatewayRequestRoutingRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>requestRoutingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRequestRoutingRule'>ApplicationGatewayRequestRoutingRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `requestRoutingRule` blocks as defined below.
 
@@ -9204,7 +9206,7 @@ The name of the resource group in which to the Application Gateway should exist.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L421">property <b>rewriteRuleSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rewriteRuleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSet'>inputs.network.ApplicationGatewayRewriteRuleSet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rewriteRuleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSet'>ApplicationGatewayRewriteRuleSet</a>&gt;[]&gt;;</code></pre>
 
 One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 
@@ -9212,7 +9214,7 @@ One or more `rewriteRuleSet` blocks as defined below. Only valid for v2 SKUs.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L425">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySku'>inputs.network.ApplicationGatewaySku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySku'>ApplicationGatewaySku</a>&gt;;</code></pre>
 
 A `sku` block as defined below.
 
@@ -9220,7 +9222,7 @@ A `sku` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L429">property <b>sslCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslCertificate'>inputs.network.ApplicationGatewaySslCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslCertificate'>ApplicationGatewaySslCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `sslCertificate` blocks as defined below.
 
@@ -9228,7 +9230,7 @@ One or more `sslCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L433">property <b>sslPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sslPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslPolicy'>inputs.network.ApplicationGatewaySslPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sslPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslPolicy'>ApplicationGatewaySslPolicy</a>&gt;[]&gt;;</code></pre>
 
 a `ssl policy` block as defined below.
 
@@ -9244,7 +9246,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L441">property <b>trustedRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>trustedRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayTrustedRootCertificate'>inputs.network.ApplicationGatewayTrustedRootCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>trustedRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayTrustedRootCertificate'>ApplicationGatewayTrustedRootCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `trustedRootCertificate` blocks as defined below.
 
@@ -9252,7 +9254,7 @@ One or more `trustedRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L445">property <b>urlPathMaps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>urlPathMaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMap'>inputs.network.ApplicationGatewayUrlPathMap</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>urlPathMaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMap'>ApplicationGatewayUrlPathMap</a>&gt;[]&gt;;</code></pre>
 
 One or more `urlPathMap` blocks as defined below.
 
@@ -9260,7 +9262,7 @@ One or more `urlPathMap` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/applicationGateway.ts#L449">property <b>wafConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>wafConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfiguration'>inputs.network.ApplicationGatewayWafConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>wafConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfiguration'>ApplicationGatewayWafConfiguration</a>&gt;;</code></pre>
 
 A `wafConfiguration` block as defined below.
 
@@ -9378,7 +9380,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L272">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorDestination'>inputs.network.ConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorDestination'>ConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -9426,7 +9428,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L296">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorSource'>inputs.network.ConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorSource'>ConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -9460,7 +9462,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L230">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorDestination'>inputs.network.ConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorDestination'>ConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -9508,7 +9510,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/connectionMonitor.ts#L254">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorSource'>inputs.network.ConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConnectionMonitorSource'>ConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -9682,7 +9684,7 @@ The name of the ExpressRoute Service Provider.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuit.ts#L259">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitSku'>inputs.network.ExpressRouteCircuitSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitSku'>ExpressRouteCircuitSku</a>&gt;;</code></pre>
 
 A `sku` block for the ExpressRoute circuit as documented below.
 
@@ -9804,7 +9806,7 @@ The name of the ExpressRoute Circuit in which to create the Peering.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuitPeering.ts#L263">property <b>microsoftPeeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>microsoftPeeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>inputs.network.ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>microsoftPeeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a>&gt;;</code></pre>
 
 A `microsoftPeeringConfig` block as defined below. Required when `peeringType` is set to `MicrosoftPeering`.
 
@@ -9895,7 +9897,7 @@ The name of the ExpressRoute Circuit in which to create the Peering.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuitPeering.ts#L212">property <b>microsoftPeeringConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>microsoftPeeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>inputs.network.ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>microsoftPeeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitPeeringMicrosoftPeeringConfig'>ExpressRouteCircuitPeeringMicrosoftPeeringConfig</a>&gt;;</code></pre>
 
 A `microsoftPeeringConfig` block as defined below. Required when `peeringType` is set to `MicrosoftPeering`.
 
@@ -10058,7 +10060,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/expressRouteCircuit.ts#L217">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitSku'>inputs.network.ExpressRouteCircuitSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ExpressRouteCircuitSku'>ExpressRouteCircuitSku</a>&gt;;</code></pre>
 
 A `sku` block for the ExpressRoute circuit as documented below.
 
@@ -10124,7 +10126,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L227">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallApplicationRuleCollectionRule'>inputs.network.FirewallApplicationRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallApplicationRuleCollectionRule'>FirewallApplicationRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10182,7 +10184,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L197">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallApplicationRuleCollectionRule'>inputs.network.FirewallApplicationRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallApplicationRuleCollectionRule'>FirewallApplicationRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10200,7 +10202,7 @@ The set of arguments for constructing a Firewall resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewall.ts#L183">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallIpConfiguration'>inputs.network.FirewallIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallIpConfiguration'>FirewallIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 A `ipConfiguration` block as documented below.
 
@@ -10298,7 +10300,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNatRuleCollection.ts#L231">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNatRuleCollectionRule'>inputs.network.FirewallNatRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNatRuleCollectionRule'>FirewallNatRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10356,7 +10358,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNatRuleCollection.ts#L201">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNatRuleCollectionRule'>inputs.network.FirewallNatRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNatRuleCollectionRule'>FirewallNatRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10414,7 +10416,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L231">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNetworkRuleCollectionRule'>inputs.network.FirewallNetworkRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNetworkRuleCollectionRule'>FirewallNetworkRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10472,7 +10474,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L201">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNetworkRuleCollectionRule'>inputs.network.FirewallNetworkRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallNetworkRuleCollectionRule'>FirewallNetworkRuleCollectionRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `rule` blocks as defined below.
 
@@ -10490,7 +10492,7 @@ Input properties used for looking up and filtering Firewall resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/firewall.ts#L153">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallIpConfiguration'>inputs.network.FirewallIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallIpConfiguration'>FirewallIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 A `ipConfiguration` block as documented below.
 
@@ -10665,7 +10667,7 @@ The Azure location where the ExpressRoute circuit exists
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getExpressRouteCircuit.ts#L71">property <b>peerings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>peerings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitPeering'>outputs.network.GetExpressRouteCircuitPeering</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>peerings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitPeering'>GetExpressRouteCircuitPeering</a>[];</code></pre>
 
 A `peerings` block for the ExpressRoute circuit as documented below
 
@@ -10686,7 +10688,7 @@ The string needed by the service provider to provision the ExpressRoute circuit.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getExpressRouteCircuit.ts#L80">property <b>serviceProviderProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceProviderProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitServiceProviderProperty'>outputs.network.GetExpressRouteCircuitServiceProviderProperty</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceProviderProperties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitServiceProviderProperty'>GetExpressRouteCircuitServiceProviderProperty</a>[];</code></pre>
 
 A `serviceProviderProperties` block for the ExpressRoute circuit as documented below
 
@@ -10702,7 +10704,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getExpressRouteCircuit.ts#L88">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitSku'>outputs.network.GetExpressRouteCircuitSku</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitSku'>GetExpressRouteCircuitSku</a>;</code></pre>
 
 A `sku` block for the ExpressRoute circuit as documented below.
 
@@ -10754,7 +10756,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getFirewall.ts#L65">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFirewallIpConfiguration'>outputs.network.GetFirewallIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFirewallIpConfiguration'>GetFirewallIpConfiguration</a>[];</code></pre>
 
 A `ipConfiguration` block as defined below.
 
@@ -10877,7 +10879,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getGatewayConnection.ts#L85">property <b>ipsecPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipsecPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetGatewayConnectionIpsecPolicy'>outputs.network.GetGatewayConnectionIpsecPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipsecPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetGatewayConnectionIpsecPolicy'>GetGatewayConnectionIpsecPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetGatewayConnectionResult-localNetworkGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getGatewayConnection.ts#L90">property <b>localNetworkGatewayId</b></a>
 </h4>
@@ -11277,7 +11279,7 @@ The internal dns name label of the specified Network Interface.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getNetworkInterface.ts#L86">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNetworkInterfaceIpConfiguration'>outputs.network.GetNetworkInterfaceIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNetworkInterfaceIpConfiguration'>GetNetworkInterfaceIpConfiguration</a>[];</code></pre>
 
 One or more `ipConfiguration` blocks as defined below.
 
@@ -11419,7 +11421,7 @@ The name of the security rule.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getNetworkSecurityGroup.ts#L74">property <b>securityRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>securityRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNetworkSecurityGroupSecurityRule'>outputs.network.GetNetworkSecurityGroupSecurityRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>securityRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNetworkSecurityGroupSecurityRule'>GetNetworkSecurityGroupSecurityRule</a>[];</code></pre>
 
 One or more `securityRule` blocks as defined below.
 
@@ -11824,7 +11826,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getPublicIPs.ts#L76">property <b>publicIps</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>publicIps: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPublicIPsPublicIp'>outputs.network.GetPublicIPsPublicIp</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>publicIps: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPublicIPsPublicIp'>GetPublicIPsPublicIp</a>[];</code></pre>
 
 A List of `publicIps` blocks as defined below filtered by the criteria above.
 
@@ -11902,7 +11904,7 @@ The name of the Route.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getRouteTable.ts#L72">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRouteTableRoute'>outputs.network.GetRouteTableRoute</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRouteTableRoute'>GetRouteTableRoute</a>[];</code></pre>
 
 One or more `route` blocks as documented below.
 
@@ -12246,7 +12248,7 @@ A collection of values returned by getVirtualNetworkGateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getVirtualNetworkGateway.ts#L66">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayBgpSetting'>outputs.network.GetVirtualNetworkGatewayBgpSetting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayBgpSetting'>GetVirtualNetworkGatewayBgpSetting</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-defaultLocalNetworkGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getVirtualNetworkGateway.ts#L73">property <b>defaultLocalNetworkGatewayId</b></a>
 </h4>
@@ -12279,7 +12281,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getVirtualNetworkGateway.ts#L82">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayIpConfiguration'>outputs.network.GetVirtualNetworkGatewayIpConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayIpConfiguration'>GetVirtualNetworkGatewayIpConfiguration</a>[];</code></pre>
 
 One or two `ipConfiguration` blocks documented below.
 
@@ -12332,7 +12334,7 @@ The type of the Virtual Network Gateway.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/getVirtualNetworkGateway.ts#L107">property <b>vpnClientConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpnClientConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayVpnClientConfiguration'>outputs.network.GetVirtualNetworkGatewayVpnClientConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpnClientConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkGatewayVpnClientConfiguration'>GetVirtualNetworkGatewayVpnClientConfiguration</a>[];</code></pre>
 
 A `vpnClientConfiguration` block which is documented below.
 
@@ -12440,7 +12442,7 @@ address spaces the gateway exposes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/localNetworkGateway.ts#L195">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LocalNetworkGatewayBgpSettings'>inputs.network.LocalNetworkGatewayBgpSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LocalNetworkGatewayBgpSettings'>LocalNetworkGatewayBgpSettings</a>&gt;;</code></pre>
 
 A `bgpSettings` block as defined below containing the
 Local Network Gateway's BGP speaker settings.
@@ -12512,7 +12514,7 @@ address spaces the gateway exposes.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/localNetworkGateway.ts#L155">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LocalNetworkGatewayBgpSettings'>inputs.network.LocalNetworkGatewayBgpSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LocalNetworkGatewayBgpSettings'>LocalNetworkGatewayBgpSettings</a>&gt;;</code></pre>
 
 A `bgpSettings` block as defined below containing the
 Local Network Gateway's BGP speaker settings.
@@ -12562,7 +12564,7 @@ create the local network gateway.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="NatGatewayArgs" data-link-title="NatGatewayArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L216">
         interface <strong>NatGatewayArgs</strong>
     </a>
 </h3>
@@ -12572,7 +12574,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a NatGateway resource.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L219">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L220">property <b>idleTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -12580,7 +12582,7 @@ The set of arguments for constructing a NatGateway resource.
 The idle timeout which should be used in minutes. Defaults to `4`.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L223">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L224">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12588,7 +12590,7 @@ The idle timeout which should be used in minutes. Defaults to `4`.
 Specifies the supported Azure location where the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12596,7 +12598,7 @@ Specifies the supported Azure location where the NAT Gateway should exist. Chang
 Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-publicIpAddressIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L231">property <b>publicIpAddressIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L232">property <b>publicIpAddressIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddressIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12604,7 +12606,7 @@ Specifies the name of the NAT Gateway. Changing this forces a new resource to be
 A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-publicIpPrefixIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L235">property <b>publicIpPrefixIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L236">property <b>publicIpPrefixIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpPrefixIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12612,7 +12614,7 @@ A list of Public IP Address ID's which should be associated with the NAT Gateway
 A list of Public IP Prefix ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L239">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L240">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12620,7 +12622,7 @@ A list of Public IP Prefix ID's which should be associated with the NAT Gateway 
 Specifies the name of the Resource Group in which the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L243">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L244">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12628,7 +12630,7 @@ Specifies the name of the Resource Group in which the NAT Gateway should exist. 
 The SKU which should be used. At this time the only supported value is `Standard`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L247">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L248">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -12636,7 +12638,7 @@ The SKU which should be used. At this time the only supported value is `Standard
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L251">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L252">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12644,7 +12646,7 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 A list of availability zones where the NAT Gateway should be provisioned. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NatGatewayState" data-link-title="NatGatewayState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L170">
         interface <strong>NatGatewayState</strong>
     </a>
 </h3>
@@ -12654,7 +12656,7 @@ A list of availability zones where the NAT Gateway should be provisioned. Changi
 Input properties used for looking up and filtering NatGateway resources.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L173">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L174">property <b>idleTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -12662,7 +12664,7 @@ Input properties used for looking up and filtering NatGateway resources.
 The idle timeout which should be used in minutes. Defaults to `4`.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L177">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L178">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12670,7 +12672,7 @@ The idle timeout which should be used in minutes. Defaults to `4`.
 Specifies the supported Azure location where the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12678,7 +12680,7 @@ Specifies the supported Azure location where the NAT Gateway should exist. Chang
 Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-publicIpAddressIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L185">property <b>publicIpAddressIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L186">property <b>publicIpAddressIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddressIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12686,7 +12688,7 @@ Specifies the name of the NAT Gateway. Changing this forces a new resource to be
 A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-publicIpPrefixIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L189">property <b>publicIpPrefixIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L190">property <b>publicIpPrefixIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpPrefixIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12694,7 +12696,7 @@ A list of Public IP Address ID's which should be associated with the NAT Gateway
 A list of Public IP Prefix ID's which should be associated with the NAT Gateway resource.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L193">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12702,7 +12704,7 @@ A list of Public IP Prefix ID's which should be associated with the NAT Gateway 
 Specifies the name of the Resource Group in which the NAT Gateway should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-resourceGuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L197">property <b>resourceGuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L198">property <b>resourceGuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12710,7 +12712,7 @@ Specifies the name of the Resource Group in which the NAT Gateway should exist. 
 The resource GUID property of the NAT Gateway.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L201">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L202">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -12718,7 +12720,7 @@ The resource GUID property of the NAT Gateway.
 The SKU which should be used. At this time the only supported value is `Standard`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L205">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L206">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -12726,7 +12728,7 @@ The SKU which should be used. At this time the only supported value is `Standard
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NatGatewayState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L209">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/natGateway.ts#L210">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -12755,7 +12757,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L270">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorDestination'>inputs.network.NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorDestination'>NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -12803,7 +12805,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L294">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorSource'>inputs.network.NetworkConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorSource'>NetworkConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -12837,7 +12839,7 @@ Specifies whether the connection monitor will start automatically once created. 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L228">property <b>destination</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorDestination'>inputs.network.NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorDestination'>NetworkConnectionMonitorDestination</a>&gt;;</code></pre>
 
 A `destination` block as defined below.
 
@@ -12885,7 +12887,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkConnectionMonitor.ts#L252">property <b>source</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorSource'>inputs.network.NetworkConnectionMonitorSource</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkConnectionMonitorSource'>NetworkConnectionMonitorSource</a>&gt;;</code></pre>
 
 A `source` block as defined below.
 
@@ -13092,7 +13094,7 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkInterface.ts#L295">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkInterfaceIpConfiguration'>inputs.network.NetworkInterfaceIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkInterfaceIpConfiguration'>NetworkInterfaceIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `ipConfiguration` associated with this NIC as documented below.
 
@@ -13347,7 +13349,7 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkInterface.ts#L228">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkInterfaceIpConfiguration'>inputs.network.NetworkInterfaceIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkInterfaceIpConfiguration'>NetworkInterfaceIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or more `ipConfiguration` associated with this NIC as documented below.
 
@@ -13437,7 +13439,7 @@ The set of arguments for constructing a NetworkPacketCapture resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L268">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureFilter'>inputs.network.NetworkPacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureFilter'>NetworkPacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -13493,7 +13495,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L296">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureStorageLocation'>inputs.network.NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureStorageLocation'>NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -13519,7 +13521,7 @@ Input properties used for looking up and filtering NetworkPacketCapture resource
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L226">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureFilter'>inputs.network.NetworkPacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureFilter'>NetworkPacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -13575,7 +13577,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkPacketCapture.ts#L254">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureStorageLocation'>inputs.network.NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkPacketCaptureStorageLocation'>NetworkPacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -13625,7 +13627,7 @@ The name of the resource group in which to create the network security group. Ch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkSecurityGroup.ts#L179">property <b>securityRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>securityRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkSecurityGroupSecurityRule'>inputs.network.NetworkSecurityGroupSecurityRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>securityRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkSecurityGroupSecurityRule'>NetworkSecurityGroupSecurityRule</a>&gt;[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing security rules, as defined below.
 
@@ -13675,7 +13677,7 @@ The name of the resource group in which to create the network security group. Ch
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/networkSecurityGroup.ts#L153">property <b>securityRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>securityRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkSecurityGroupSecurityRule'>inputs.network.NetworkSecurityGroupSecurityRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>securityRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NetworkSecurityGroupSecurityRule'>NetworkSecurityGroupSecurityRule</a>&gt;[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing security rules, as defined below.
 
@@ -14093,7 +14095,7 @@ The set of arguments for constructing a PacketCapture resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L270">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureFilter'>inputs.network.PacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureFilter'>PacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -14149,7 +14151,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L298">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureStorageLocation'>inputs.network.PacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureStorageLocation'>PacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -14175,7 +14177,7 @@ Input properties used for looking up and filtering PacketCapture resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L228">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureFilter'>inputs.network.PacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureFilter'>PacketCaptureFilter</a>&gt;[]&gt;;</code></pre>
 
 One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 
@@ -14231,7 +14233,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/packetCapture.ts#L256">property <b>storageLocation</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureStorageLocation'>inputs.network.PacketCaptureStorageLocation</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PacketCaptureStorageLocation'>PacketCaptureStorageLocation</a>&gt;;</code></pre>
 
 A `storageLocation` block as defined below. Changing this forces a new resource to be created.
 
@@ -14257,7 +14259,7 @@ The set of arguments for constructing a PointToPointVpnGateway resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/pointToPointVpnGateway.ts#L176">property <b>connectionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfiguration'>inputs.network.PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfiguration'>PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
 
 A `connectionConfiguration` block as defined below.
 
@@ -14331,7 +14333,7 @@ Input properties used for looking up and filtering PointToPointVpnGateway resour
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/pointToPointVpnGateway.ts#L138">property <b>connectionConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfiguration'>inputs.network.PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfiguration'>PointToPointVpnGatewayConnectionConfiguration</a>&gt;;</code></pre>
 
 A `connectionConfiguration` block as defined below.
 
@@ -14405,7 +14407,7 @@ The set of arguments for constructing a Profile resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/profile.ts#L186">property <b>containerNetworkInterface</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containerNetworkInterface: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProfileContainerNetworkInterface'>inputs.network.ProfileContainerNetworkInterface</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containerNetworkInterface: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProfileContainerNetworkInterface'>ProfileContainerNetworkInterface</a>&gt;;</code></pre>
 
 A `containerNetworkInterface` block as documented below.
 
@@ -14455,7 +14457,7 @@ Input properties used for looking up and filtering Profile resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/profile.ts#L156">property <b>containerNetworkInterface</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>containerNetworkInterface?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProfileContainerNetworkInterface'>inputs.network.ProfileContainerNetworkInterface</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>containerNetworkInterface?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProfileContainerNetworkInterface'>ProfileContainerNetworkInterface</a>&gt;;</code></pre>
 
 A `containerNetworkInterface` block as documented below.
 
@@ -15043,7 +15045,7 @@ The name of the resource group in which to create the route table. Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/routeTable.ts#L194">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RouteTableRoute'>inputs.network.RouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RouteTableRoute'>RouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing routes. Each object accepts the arguments documented below.
 
@@ -15101,7 +15103,7 @@ The name of the resource group in which to create the route table. Changing this
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/routeTable.ts#L160">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RouteTableRoute'>inputs.network.RouteTableRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RouteTableRoute'>RouteTableRoute</a>&gt;[]&gt;;</code></pre>
 
 [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing routes. Each object accepts the arguments documented below.
 
@@ -15143,7 +15145,7 @@ The address prefix to use for the subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnet.ts#L239">property <b>delegations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>delegations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubnetDelegation'>inputs.network.SubnetDelegation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>delegations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubnetDelegation'>SubnetDelegation</a>&gt;[]&gt;;</code></pre>
 
 One or more `delegation` blocks as defined below.
 
@@ -15220,7 +15222,7 @@ The list of Service endpoints to associate with the subnet. Possible values incl
 The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubnetNatGatewayAssociationArgs" data-link-title="SubnetNatGatewayAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L133">
         interface <strong>SubnetNatGatewayAssociationArgs</strong>
     </a>
 </h3>
@@ -15230,7 +15232,7 @@ The name of the virtual network to which to attach the subnet. Changing this for
 The set of arguments for constructing a SubnetNatGatewayAssociation resource.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociationArgs-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L136">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L137">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -15238,7 +15240,7 @@ The set of arguments for constructing a SubnetNatGatewayAssociation resource.
 The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociationArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L140">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L141">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -15246,7 +15248,7 @@ The Azure resource ID of the NAT Gateway which should be associated with the Sub
 The Azure resource ID of the Subnet. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubnetNatGatewayAssociationState" data-link-title="SubnetNatGatewayAssociationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L119">
         interface <strong>SubnetNatGatewayAssociationState</strong>
     </a>
 </h3>
@@ -15256,7 +15258,7 @@ The Azure resource ID of the Subnet. Changing this forces a new resource to be c
 Input properties used for looking up and filtering SubnetNatGatewayAssociation resources.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociationState-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L122">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L123">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -15264,7 +15266,7 @@ Input properties used for looking up and filtering SubnetNatGatewayAssociation r
 The Azure resource ID of the NAT Gateway which should be associated with the Subnet. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubnetNatGatewayAssociationState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L126">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnetNatGatewayAssociation.ts#L127">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -15397,7 +15399,7 @@ The address prefix to use for the subnet.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/subnet.ts#L189">property <b>delegations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>delegations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubnetDelegation'>inputs.network.SubnetDelegation</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>delegations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubnetDelegation'>SubnetDelegation</a>&gt;[]&gt;;</code></pre>
 
 One or more `delegation` blocks as defined below.
 
@@ -15487,7 +15489,7 @@ The set of arguments for constructing a TrafficManagerEndpoint resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L327">property <b>customHeaders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointCustomHeader'>inputs.network.TrafficManagerEndpointCustomHeader</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointCustomHeader'>TrafficManagerEndpointCustomHeader</a>&gt;[]&gt;;</code></pre>
 
 One or more `customHeader` blocks as defined below
 
@@ -15574,7 +15576,7 @@ create the Traffic Manager endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L378">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointSubnet'>inputs.network.TrafficManagerEndpointSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointSubnet'>TrafficManagerEndpointSubnet</a>&gt;[]&gt;;</code></pre>
 
 One or more `subnet` blocks as defined below
 
@@ -15633,7 +15635,7 @@ Input properties used for looking up and filtering TrafficManagerEndpoint resour
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L240">property <b>customHeaders</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointCustomHeader'>inputs.network.TrafficManagerEndpointCustomHeader</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointCustomHeader'>TrafficManagerEndpointCustomHeader</a>&gt;[]&gt;;</code></pre>
 
 One or more `customHeader` blocks as defined below
 
@@ -15725,7 +15727,7 @@ create the Traffic Manager endpoint.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerEndpoint.ts#L292">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointSubnet'>inputs.network.TrafficManagerEndpointSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerEndpointSubnet'>TrafficManagerEndpointSubnet</a>&gt;[]&gt;;</code></pre>
 
 One or more `subnet` blocks as defined below
 
@@ -15784,7 +15786,7 @@ The set of arguments for constructing a TrafficManagerProfile resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L240">property <b>dnsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileDnsConfig'>inputs.network.TrafficManagerProfileDnsConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileDnsConfig'>TrafficManagerProfileDnsConfig</a>&gt;[]&gt;;</code></pre>
 
 This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
@@ -15793,7 +15795,7 @@ Profile, it supports the fields documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L245">property <b>monitorConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileMonitorConfig'>inputs.network.TrafficManagerProfileMonitorConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileMonitorConfig'>TrafficManagerProfileMonitorConfig</a>&gt;[]&gt;;</code></pre>
 
 This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
@@ -15861,7 +15863,7 @@ Input properties used for looking up and filtering TrafficManagerProfile resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L191">property <b>dnsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dnsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileDnsConfig'>inputs.network.TrafficManagerProfileDnsConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dnsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileDnsConfig'>TrafficManagerProfileDnsConfig</a>&gt;[]&gt;;</code></pre>
 
 This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
@@ -15878,7 +15880,7 @@ The FQDN of the created Profile.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/trafficManagerProfile.ts#L200">property <b>monitorConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>monitorConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileMonitorConfig'>inputs.network.TrafficManagerProfileMonitorConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>monitorConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TrafficManagerProfileMonitorConfig'>TrafficManagerProfileMonitorConfig</a>&gt;[]&gt;;</code></pre>
 
 This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
@@ -15978,7 +15980,7 @@ Specifies the name of the Resource Group where the Virtual Hub should exist. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualHub.ts#L176">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubRoute'>inputs.network.VirtualHubRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubRoute'>VirtualHubRoute</a>&gt;[]&gt;;</code></pre>
 
 One or more `route` blocks as defined below.
 
@@ -16044,7 +16046,7 @@ Specifies the name of the Resource Group where the Virtual Hub should exist. Cha
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualHub.ts#L142">property <b>routes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubRoute'>inputs.network.VirtualHubRoute</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubRoute'>VirtualHubRoute</a>&gt;[]&gt;;</code></pre>
 
 One or more `route` blocks as defined below.
 
@@ -16088,7 +16090,7 @@ a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L240">property <b>ddosProtectionPlan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ddosProtectionPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkDdosProtectionPlan'>inputs.network.VirtualNetworkDdosProtectionPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ddosProtectionPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkDdosProtectionPlan'>VirtualNetworkDdosProtectionPlan</a>&gt;;</code></pre>
 
 A `ddosProtectionPlan` block as documented below.
 
@@ -16131,7 +16133,7 @@ create the virtual network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L264">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>inputs.network.VirtualNetworkSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -16169,7 +16171,7 @@ Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L341">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayBgpSettings'>inputs.network.VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayBgpSettings'>VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-defaultLocalNetworkGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L349">property <b>defaultLocalNetworkGatewayId</b></a>
 </h4>
@@ -16195,7 +16197,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L360">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayIpConfiguration'>inputs.network.VirtualNetworkGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayIpConfiguration'>VirtualNetworkGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or two `ipConfiguration` blocks documented below.
 An active-standby gateway requires exactly one `ipConfiguration` block whereas
@@ -16263,7 +16265,7 @@ The type of the Virtual Network Gateway. Valid options are
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L400">property <b>vpnClientConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpnClientConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayVpnClientConfiguration'>inputs.network.VirtualNetworkGatewayVpnClientConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpnClientConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayVpnClientConfiguration'>VirtualNetworkGatewayVpnClientConfiguration</a>&gt;;</code></pre>
 
 A `vpnClientConfiguration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -16329,7 +16331,7 @@ If `true`, data packets will bypass ExpressRoute Gateway for data forwarding Thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L467">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayConnectionIpsecPolicy'>inputs.network.VirtualNetworkGatewayConnectionIpsecPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayConnectionIpsecPolicy'>VirtualNetworkGatewayConnectionIpsecPolicy</a>&gt;;</code></pre>
 
 A `ipsecPolicy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -16491,7 +16493,7 @@ If `true`, data packets will bypass ExpressRoute Gateway for data forwarding Thi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L373">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayConnectionIpsecPolicy'>inputs.network.VirtualNetworkGatewayConnectionIpsecPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayConnectionIpsecPolicy'>VirtualNetworkGatewayConnectionIpsecPolicy</a>&gt;;</code></pre>
 
 A `ipsecPolicy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -16627,7 +16629,7 @@ Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L263">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayBgpSettings'>inputs.network.VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayBgpSettings'>VirtualNetworkGatewayBgpSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualNetworkGatewayState-defaultLocalNetworkGatewayId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L271">property <b>defaultLocalNetworkGatewayId</b></a>
 </h4>
@@ -16653,7 +16655,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L282">property <b>ipConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayIpConfiguration'>inputs.network.VirtualNetworkGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayIpConfiguration'>VirtualNetworkGatewayIpConfiguration</a>&gt;[]&gt;;</code></pre>
 
 One or two `ipConfiguration` blocks documented below.
 An active-standby gateway requires exactly one `ipConfiguration` block whereas
@@ -16721,7 +16723,7 @@ The type of the Virtual Network Gateway. Valid options are
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetworkGateway.ts#L322">property <b>vpnClientConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpnClientConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayVpnClientConfiguration'>inputs.network.VirtualNetworkGatewayVpnClientConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpnClientConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkGatewayVpnClientConfiguration'>VirtualNetworkGatewayVpnClientConfiguration</a>&gt;;</code></pre>
 
 A `vpnClientConfiguration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -16936,7 +16938,7 @@ a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L196">property <b>ddosProtectionPlan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ddosProtectionPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkDdosProtectionPlan'>inputs.network.VirtualNetworkDdosProtectionPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ddosProtectionPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkDdosProtectionPlan'>VirtualNetworkDdosProtectionPlan</a>&gt;;</code></pre>
 
 A `ddosProtectionPlan` block as documented below.
 
@@ -16979,7 +16981,7 @@ create the virtual network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/virtualNetwork.ts#L220">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>inputs.network.VirtualNetworkSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -17164,7 +17166,7 @@ The set of arguments for constructing a VpnGateway resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnGateway.ts#L157">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSetting'>inputs.network.VpnGatewayBgpSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSetting'>VpnGatewayBgpSetting</a>&gt;[]&gt;;</code></pre>
 
 A `bgpSettings` block as defined below.
 
@@ -17230,7 +17232,7 @@ Input properties used for looking up and filtering VpnGateway resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnGateway.ts#L123">property <b>bgpSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSetting'>inputs.network.VpnGatewayBgpSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bgpSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSetting'>VpnGatewayBgpSetting</a>&gt;[]&gt;;</code></pre>
 
 A `bgpSettings` block as defined below.
 
@@ -17296,7 +17298,7 @@ The set of arguments for constructing a VpnServerConfiguration resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L197">property <b>azureActiveDirectoryAuthentications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureActiveDirectoryAuthentications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>inputs.network.VpnServerConfigurationAzureActiveDirectoryAuthentication</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureActiveDirectoryAuthentications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>VpnServerConfigurationAzureActiveDirectoryAuthentication</a>&gt;[]&gt;;</code></pre>
 
 A `azureActiveDirectoryAuthentication` block as defined below.
 
@@ -17304,7 +17306,7 @@ A `azureActiveDirectoryAuthentication` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L201">property <b>clientRevokedCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientRevokedCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRevokedCertificate'>inputs.network.VpnServerConfigurationClientRevokedCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientRevokedCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRevokedCertificate'>VpnServerConfigurationClientRevokedCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `clientRevokedCertificate` blocks as defined below.
 
@@ -17312,7 +17314,7 @@ One or more `clientRevokedCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L205">property <b>clientRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRootCertificate'>inputs.network.VpnServerConfigurationClientRootCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRootCertificate'>VpnServerConfigurationClientRootCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `clientRootCertificate` blocks as defined below.
 
@@ -17320,7 +17322,7 @@ One or more `clientRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L209">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationIpsecPolicy'>inputs.network.VpnServerConfigurationIpsecPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationIpsecPolicy'>VpnServerConfigurationIpsecPolicy</a>&gt;;</code></pre>
 
 A `ipsecPolicy` block as defined below.
 
@@ -17344,7 +17346,7 @@ The Name which should be used for this VPN Server Configuration. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L221">property <b>radiusServer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>radiusServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer'>inputs.network.VpnServerConfigurationRadiusServer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>radiusServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer'>VpnServerConfigurationRadiusServer</a>&gt;;</code></pre>
 
 A `radiusServer` block as defined below.
 
@@ -17394,7 +17396,7 @@ Input properties used for looking up and filtering VpnServerConfiguration resour
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L147">property <b>azureActiveDirectoryAuthentications</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>azureActiveDirectoryAuthentications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>inputs.network.VpnServerConfigurationAzureActiveDirectoryAuthentication</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>azureActiveDirectoryAuthentications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationAzureActiveDirectoryAuthentication'>VpnServerConfigurationAzureActiveDirectoryAuthentication</a>&gt;[]&gt;;</code></pre>
 
 A `azureActiveDirectoryAuthentication` block as defined below.
 
@@ -17402,7 +17404,7 @@ A `azureActiveDirectoryAuthentication` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L151">property <b>clientRevokedCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientRevokedCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRevokedCertificate'>inputs.network.VpnServerConfigurationClientRevokedCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientRevokedCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRevokedCertificate'>VpnServerConfigurationClientRevokedCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `clientRevokedCertificate` blocks as defined below.
 
@@ -17410,7 +17412,7 @@ One or more `clientRevokedCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L155">property <b>clientRootCertificates</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRootCertificate'>inputs.network.VpnServerConfigurationClientRootCertificate</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clientRootCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRootCertificate'>VpnServerConfigurationClientRootCertificate</a>&gt;[]&gt;;</code></pre>
 
 One or more `clientRootCertificate` blocks as defined below.
 
@@ -17418,7 +17420,7 @@ One or more `clientRootCertificate` blocks as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L159">property <b>ipsecPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationIpsecPolicy'>inputs.network.VpnServerConfigurationIpsecPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipsecPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationIpsecPolicy'>VpnServerConfigurationIpsecPolicy</a>&gt;;</code></pre>
 
 A `ipsecPolicy` block as defined below.
 
@@ -17442,7 +17444,7 @@ The Name which should be used for this VPN Server Configuration. Changing this f
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/network/vpnServerConfiguration.ts#L171">property <b>radiusServer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>radiusServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer'>inputs.network.VpnServerConfigurationRadiusServer</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>radiusServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer'>VpnServerConfigurationRadiusServer</a>&gt;;</code></pre>
 
 A `radiusServer` block as defined below.
 

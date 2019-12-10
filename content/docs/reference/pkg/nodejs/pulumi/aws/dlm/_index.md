@@ -1,5 +1,6 @@
 ---
 title: "Module dlm"
+title_tag: "Module dlm | Package @pulumi/aws | Node.js SDK"
 linktitle: "dlm"
 meta_desc: "Explore members of the dlm module in the @pulumi/aws package."
 ---
@@ -156,7 +157,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LifecyclePolicy</code></pre>
 
 
 Returns true if the given object is an instance of LifecyclePolicy.  This is designed to work even
@@ -199,7 +200,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/dlm/lifecyclePolicy.ts#L132">property <b>policyDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetails'>outputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
 
 See the `policyDetails` configuration block. Max of 1.
 
@@ -261,7 +262,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/dlm/lifecyclePolicy.ts#L234">property <b>policyDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>inputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
 
 See the `policyDetails` configuration block. Max of 1.
 
@@ -319,7 +320,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/dlm/lifecyclePolicy.ts#L208">property <b>policyDetails</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>policyDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>inputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>policyDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
 
 See the `policyDetails` configuration block. Max of 1.
 

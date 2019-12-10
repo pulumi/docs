@@ -1,5 +1,6 @@
 ---
 title: "Module sns"
+title_tag: "Module sns | Package @pulumi/aws | Node.js SDK"
 linktitle: "sns"
 meta_desc: "Explore members of the sns module in the @pulumi/aws package."
 ---
@@ -132,7 +133,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PlatformApplication</code></pre>
 
 
 Returns true if the given object is an instance of PlatformApplication.  This is designed to work even
@@ -310,7 +311,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SmsPreferences</code></pre>
 
 
 Returns true if the given object is an instance of SmsPreferences.  This is designed to work even
@@ -483,7 +484,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Topic</code></pre>
 
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
@@ -528,7 +529,7 @@ Percentage of success to sample
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/topic.ts#L108">property <b>arn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the SNS topic, as a more obvious property (clone of id)
 
@@ -767,7 +768,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicPolicy</code></pre>
 
 
 Returns true if the given object is an instance of TopicPolicy.  This is designed to work even
@@ -1022,7 +1023,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TopicSubscription</code></pre>
 
 
 Returns true if the given object is an instance of TopicSubscription.  This is designed to work even
@@ -1781,13 +1782,13 @@ Key-value mapping of resource tags
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/snsMixins.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: topic.Topic, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/snsMixins.ts#L60">method <b>getProvider</b></a>
@@ -1801,7 +1802,7 @@ Key-value mapping of resource tags
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -1823,12 +1824,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permission: permission.Permission;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-subscription">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/snsMixins.ts#L66">property <b>subscription</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subscription: topicSubscription.TopicSubscription;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subscription: <a href='#TopicSubscription'>TopicSubscription</a>;</code></pre>
 
 The underlying sns object created for the subscription.
 
@@ -1836,7 +1837,7 @@ The underlying sns object created for the subscription.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/snsMixins.ts#L61">property <b>topic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>topic: topic.Topic;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>topic: Topic;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/snsMixins.ts#L60">property <b>urn</b></a>
 </h4>
@@ -1968,7 +1969,7 @@ Percentage of success to sample
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sns/topic.ts#L256">property <b>arn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
 
 The ARN of the SNS topic, as a more obvious property (clone of id)
 

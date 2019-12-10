@@ -1,5 +1,6 @@
 ---
 title: "Module directoryservice"
+title_tag: "Module directoryservice | Package @pulumi/aws | Node.js SDK"
 linktitle: "directoryservice"
 meta_desc: "Explore members of the directoryservice module in the @pulumi/aws package."
 ---
@@ -102,7 +103,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConditionalForwader</code></pre>
 
 
 Returns true if the given object is an instance of ConditionalForwader.  This is designed to work even
@@ -310,7 +311,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Directory</code></pre>
 
 
 Returns true if the given object is an instance of Directory.  This is designed to work even
@@ -336,7 +337,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L163">property <b>connectSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryConnectSettings'>outputs.directoryservice.DirectoryConnectSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryConnectSettings'>DirectoryConnectSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Connector related information about the directory. Fields documented below.
 
@@ -450,7 +451,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L211">property <b>vpcSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryVpcSettings'>outputs.directoryservice.DirectoryVpcSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryVpcSettings'>DirectoryVpcSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 VPC related information about the directory. Fields documented below.
 
@@ -536,7 +537,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LogService</code></pre>
 
 
 Returns true if the given object is an instance of LogService.  This is designed to work even
@@ -669,7 +670,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L349">property <b>connectSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>inputs.directoryservice.DirectoryConnectSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>DirectoryConnectSettings</a>&gt;;</code></pre>
 
 Connector related information about the directory. Fields documented below.
 
@@ -749,7 +750,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L389">property <b>vpcSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>inputs.directoryservice.DirectoryVpcSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>DirectoryVpcSettings</a>&gt;;</code></pre>
 
 VPC related information about the directory. Fields documented below.
 
@@ -783,7 +784,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L287">property <b>connectSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>inputs.directoryservice.DirectoryConnectSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>DirectoryConnectSettings</a>&gt;;</code></pre>
 
 Connector related information about the directory. Fields documented below.
 
@@ -879,7 +880,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/directoryservice/directory.ts#L335">property <b>vpcSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>inputs.directoryservice.DirectoryVpcSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>DirectoryVpcSettings</a>&gt;;</code></pre>
 
 VPC related information about the directory. Fields documented below.
 

@@ -1,5 +1,6 @@
 ---
 title: "Module sqs"
+title_tag: "Module sqs | Package @pulumi/aws | Node.js SDK"
 linktitle: "sqs"
 meta_desc: "Explore members of the sqs module in the @pulumi/aws package."
 ---
@@ -135,7 +136,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Queue</code></pre>
 
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
@@ -368,7 +369,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is QueuePolicy</code></pre>
 
 
 Returns true if the given object is an instance of QueuePolicy.  This is designed to work even
@@ -637,13 +638,13 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a></code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: queue.Queue, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L59">method <b>getProvider</b></a>
@@ -657,7 +658,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -674,7 +675,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L65">property <b>eventSourceMapping</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>eventSourceMapping: lambda.EventSourceMapping;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>eventSourceMapping: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSourceMapping'>EventSourceMapping</a>;</code></pre>
 
 The underlying sns object created for the subscription.
 
@@ -687,12 +688,12 @@ The underlying sns object created for the subscription.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permission: permission.Permission;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-queue">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L60">property <b>queue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>queue: queue.Queue;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>queue: Queue;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L59">property <b>urn</b></a>
 </h4>
@@ -806,7 +807,7 @@ The URL of the SQS Queue to which to attach the policy
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L36">property <b>messageAttributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>messageAttributes: <a href='#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>messageAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="QueueRecord-messageId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/sqsMixins.ts#L27">property <b>messageId</b></a>
 </h4>
@@ -961,7 +962,7 @@ http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-de
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/sqs/redrive.ts#L31">property <b>deadLetterTargetArn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deadLetterTargetArn: <a href='#ARN'>ARN</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deadLetterTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>;</code></pre>
 
 The Amazon Resource Name (ARN) of the dead-letter queue to which Amazon SQS moves messages after the value of
 `maxReceiveCount` is exceeded.

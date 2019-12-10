@@ -304,7 +304,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Elastigroup</code></pre>
 
 
 Returns true if the given object is an instance of Elastigroup.  This is designed to work even
@@ -327,7 +327,7 @@ List of availability zones for the group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L269">property <b>backendServices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>backendServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendService'>outputs.gcp.ElastigroupBackendService</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>backendServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendService'>ElastigroupBackendService</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L273">property <b>description</b></a>
 </h4>
@@ -348,7 +348,7 @@ The desired number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L278">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDisk'>outputs.gcp.ElastigroupDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDisk'>ElastigroupDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-drainingTimeout">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L282">property <b>drainingTimeout</b></a>
 </h4>
@@ -369,7 +369,7 @@ Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L287">property <b>gpu</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupGpu'>outputs.gcp.ElastigroupGpu</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupGpu'>ElastigroupGpu</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-healthCheckGracePeriod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L288">property <b>healthCheckGracePeriod</b></a>
 </h4>
@@ -393,7 +393,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L293">property <b>instanceTypesCustoms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>instanceTypesCustoms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupInstanceTypesCustom'>outputs.gcp.ElastigroupInstanceTypesCustom</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>instanceTypesCustoms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupInstanceTypesCustom'>ElastigroupInstanceTypesCustom</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Defines a set of custom instance types. Required if instanceTypesPreemptible and instanceTypesOndemand are not set.
 
@@ -417,12 +417,12 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L302">property <b>integrationDockerSwarm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>integrationDockerSwarm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarm'>outputs.gcp.ElastigroupIntegrationDockerSwarm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>integrationDockerSwarm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarm'>ElastigroupIntegrationDockerSwarm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-integrationGke">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L303">property <b>integrationGke</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>integrationGke: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGke'>outputs.gcp.ElastigroupIntegrationGke</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>integrationGke: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGke'>ElastigroupIntegrationGke</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-ipForwarding">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L304">property <b>ipForwarding</b></a>
 </h4>
@@ -432,7 +432,7 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L308">property <b>labels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupLabel'>outputs.gcp.ElastigroupLabel</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupLabel'>ElastigroupLabel</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -448,7 +448,7 @@ The maximum number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L316">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMetadata'>outputs.gcp.ElastigroupMetadata</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMetadata'>ElastigroupMetadata</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -472,7 +472,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L325">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterface'>outputs.gcp.ElastigroupNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterface'>ElastigroupNetworkInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-ondemandCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L326">property <b>ondemandCount</b></a>
 </h4>
@@ -490,17 +490,17 @@ Percentage of Preemptible VMs to spin up from the "desiredCapacity".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L331">property <b>scalingDownPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scalingDownPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy'>outputs.gcp.ElastigroupScalingDownPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scalingDownPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-scalingUpPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L332">property <b>scalingUpPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scalingUpPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy'>outputs.gcp.ElastigroupScalingUpPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scalingUpPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-scheduledTasks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L333">property <b>scheduledTasks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scheduledTasks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask'>outputs.gcp.ElastigroupScheduledTask</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scheduledTasks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L337">property <b>serviceAccount</b></a>
 </h4>
@@ -529,7 +529,7 @@ Create and run your own startup scripts on your virtual machines to perform auto
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L349">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupSubnet'>outputs.gcp.ElastigroupSubnet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupSubnet'>ElastigroupSubnet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of regions and subnets.
 
@@ -585,7 +585,7 @@ List of availability zones for the group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L559">property <b>backendServices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendService'>inputs.gcp.ElastigroupBackendService</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendService'>ElastigroupBackendService</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L563">property <b>description</b></a>
 </h4>
@@ -606,7 +606,7 @@ The desired number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L568">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDisk'>inputs.gcp.ElastigroupDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDisk'>ElastigroupDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-drainingTimeout">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L572">property <b>drainingTimeout</b></a>
 </h4>
@@ -627,7 +627,7 @@ Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L577">property <b>gpu</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupGpu'>inputs.gcp.ElastigroupGpu</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupGpu'>ElastigroupGpu</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-healthCheckGracePeriod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L578">property <b>healthCheckGracePeriod</b></a>
 </h4>
@@ -642,7 +642,7 @@ Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L583">property <b>instanceTypesCustoms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceTypesCustoms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesCustom'>inputs.gcp.ElastigroupInstanceTypesCustom</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceTypesCustoms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesCustom'>ElastigroupInstanceTypesCustom</a>&gt;[]&gt;;</code></pre>
 
 Defines a set of custom instance types. Required if instanceTypesPreemptible and instanceTypesOndemand are not set.
 
@@ -666,12 +666,12 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L592">property <b>integrationDockerSwarm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>integrationDockerSwarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm'>inputs.gcp.ElastigroupIntegrationDockerSwarm</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>integrationDockerSwarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm'>ElastigroupIntegrationDockerSwarm</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-integrationGke">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L593">property <b>integrationGke</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>integrationGke?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGke'>inputs.gcp.ElastigroupIntegrationGke</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>integrationGke?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGke'>ElastigroupIntegrationGke</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-ipForwarding">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L594">property <b>ipForwarding</b></a>
 </h4>
@@ -681,7 +681,7 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L598">property <b>labels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLabel'>inputs.gcp.ElastigroupLabel</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLabel'>ElastigroupLabel</a>&gt;[]&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -697,7 +697,7 @@ The maximum number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L606">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadata'>inputs.gcp.ElastigroupMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadata'>ElastigroupMetadata</a>&gt;[]&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -721,7 +721,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L615">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface'>inputs.gcp.ElastigroupNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface'>ElastigroupNetworkInterface</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-ondemandCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L616">property <b>ondemandCount</b></a>
 </h4>
@@ -739,17 +739,17 @@ Percentage of Preemptible VMs to spin up from the "desiredCapacity".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L621">property <b>scalingDownPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>inputs.gcp.ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-scalingUpPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L622">property <b>scalingUpPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>inputs.gcp.ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-scheduledTasks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L623">property <b>scheduledTasks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>inputs.gcp.ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L627">property <b>serviceAccount</b></a>
 </h4>
@@ -778,7 +778,7 @@ Create and run your own startup scripts on your virtual machines to perform auto
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L639">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSubnet'>inputs.gcp.ElastigroupSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSubnet'>ElastigroupSubnet</a>&gt;[]&gt;;</code></pre>
 
 A list of regions and subnets.
 
@@ -822,7 +822,7 @@ List of availability zones for the group.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L462">property <b>backendServices</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>backendServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendService'>inputs.gcp.ElastigroupBackendService</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>backendServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendService'>ElastigroupBackendService</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L466">property <b>description</b></a>
 </h4>
@@ -843,7 +843,7 @@ The desired number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L471">property <b>disks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDisk'>inputs.gcp.ElastigroupDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDisk'>ElastigroupDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-drainingTimeout">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L475">property <b>drainingTimeout</b></a>
 </h4>
@@ -864,7 +864,7 @@ Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L480">property <b>gpu</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupGpu'>inputs.gcp.ElastigroupGpu</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupGpu'>ElastigroupGpu</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-healthCheckGracePeriod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L481">property <b>healthCheckGracePeriod</b></a>
 </h4>
@@ -879,7 +879,7 @@ Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L486">property <b>instanceTypesCustoms</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instanceTypesCustoms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesCustom'>inputs.gcp.ElastigroupInstanceTypesCustom</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceTypesCustoms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesCustom'>ElastigroupInstanceTypesCustom</a>&gt;[]&gt;;</code></pre>
 
 Defines a set of custom instance types. Required if instanceTypesPreemptible and instanceTypesOndemand are not set.
 
@@ -903,12 +903,12 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L495">property <b>integrationDockerSwarm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>integrationDockerSwarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm'>inputs.gcp.ElastigroupIntegrationDockerSwarm</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>integrationDockerSwarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm'>ElastigroupIntegrationDockerSwarm</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-integrationGke">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L496">property <b>integrationGke</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>integrationGke?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGke'>inputs.gcp.ElastigroupIntegrationGke</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>integrationGke?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGke'>ElastigroupIntegrationGke</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-ipForwarding">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L497">property <b>ipForwarding</b></a>
 </h4>
@@ -918,7 +918,7 @@ The preemptible VMs instance type. To maximize cost savings and market availabil
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L501">property <b>labels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLabel'>inputs.gcp.ElastigroupLabel</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLabel'>ElastigroupLabel</a>&gt;[]&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -934,7 +934,7 @@ The maximum number of instances the group should have at any time.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L509">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadata'>inputs.gcp.ElastigroupMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadata'>ElastigroupMetadata</a>&gt;[]&gt;;</code></pre>
 
 Array of objects with key-value pairs.
 
@@ -958,7 +958,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L518">property <b>networkInterfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface'>inputs.gcp.ElastigroupNetworkInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface'>ElastigroupNetworkInterface</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-ondemandCount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L519">property <b>ondemandCount</b></a>
 </h4>
@@ -976,17 +976,17 @@ Percentage of Preemptible VMs to spin up from the "desiredCapacity".
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L524">property <b>scalingDownPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>inputs.gcp.ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-scalingUpPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L525">property <b>scalingUpPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>inputs.gcp.ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-scheduledTasks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L526">property <b>scheduledTasks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>inputs.gcp.ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-serviceAccount">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L530">property <b>serviceAccount</b></a>
 </h4>
@@ -1015,7 +1015,7 @@ Create and run your own startup scripts on your virtual machines to perform auto
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/gcp/elastigroup.ts#L542">property <b>subnets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSubnet'>inputs.gcp.ElastigroupSubnet</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSubnet'>ElastigroupSubnet</a>&gt;[]&gt;;</code></pre>
 
 A list of regions and subnets.
 

@@ -1,5 +1,6 @@
 ---
 title: "Module storagegateway"
+title_tag: "Module storagegateway | Package @pulumi/aws | Node.js SDK"
 linktitle: "storagegateway"
 meta_desc: "Explore members of the storagegateway module in the @pulumi/aws package."
 ---
@@ -118,7 +119,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cache</code></pre>
 
 
 Returns true if the given object is an instance of Cache.  This is designed to work even
@@ -259,7 +260,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CachesIscsiVolume</code></pre>
 
 
 Returns true if the given object is an instance of CachesIscsiVolume.  This is designed to work even
@@ -506,7 +507,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Gateway</code></pre>
 
 
 Returns true if the given object is an instance of Gateway.  This is designed to work even
@@ -586,7 +587,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/gateway.ts#L135">property <b>smbActiveDirectorySettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>smbActiveDirectorySettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewaySmbActiveDirectorySettings'>outputs.storagegateway.GatewaySmbActiveDirectorySettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>smbActiveDirectorySettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewaySmbActiveDirectorySettings'>GatewaySmbActiveDirectorySettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 
@@ -686,7 +687,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NfsFileShare</code></pre>
 
 
 Returns true if the given object is an instance of NfsFileShare.  This is designed to work even
@@ -777,7 +778,7 @@ The ARN of the backed storage used for storing file data.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/nfsFileShare.ts#L94">property <b>nfsFileShareDefaults</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nfsFileShareDefaults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsFileShareNfsFileShareDefaults'>outputs.storagegateway.NfsFileShareNfsFileShareDefaults</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nfsFileShareDefaults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsFileShareNfsFileShareDefaults'>NfsFileShareNfsFileShareDefaults</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Nested argument with file share default values. More information below.
 
@@ -921,7 +922,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SmbFileShare</code></pre>
 
 
 Returns true if the given object is an instance of SmbFileShare.  This is designed to work even
@@ -1136,7 +1137,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is UploadBuffer</code></pre>
 
 
 Returns true if the given object is an instance of UploadBuffer.  This is designed to work even
@@ -1239,7 +1240,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is WorkingStorage</code></pre>
 
 
 Returns true if the given object is an instance of WorkingStorage.  This is designed to work even
@@ -1608,7 +1609,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/gateway.ts#L284">property <b>smbActiveDirectorySettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewaySmbActiveDirectorySettings'>inputs.storagegateway.GatewaySmbActiveDirectorySettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewaySmbActiveDirectorySettings'>GatewaySmbActiveDirectorySettings</a>&gt;;</code></pre>
 
 Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 
@@ -1711,7 +1712,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/gateway.ts#L241">property <b>smbActiveDirectorySettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewaySmbActiveDirectorySettings'>inputs.storagegateway.GatewaySmbActiveDirectorySettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewaySmbActiveDirectorySettings'>GatewaySmbActiveDirectorySettings</a>&gt;;</code></pre>
 
 Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 
@@ -1884,7 +1885,7 @@ The ARN of the backed storage used for storing file data.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/nfsFileShare.ts#L295">property <b>nfsFileShareDefaults</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsFileShareNfsFileShareDefaults'>inputs.storagegateway.NfsFileShareNfsFileShareDefaults</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsFileShareNfsFileShareDefaults'>NfsFileShareNfsFileShareDefaults</a>&gt;;</code></pre>
 
 Nested argument with file share default values. More information below.
 
@@ -2022,7 +2023,7 @@ The ARN of the backed storage used for storing file data.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/storagegateway/nfsFileShare.ts#L233">property <b>nfsFileShareDefaults</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsFileShareNfsFileShareDefaults'>inputs.storagegateway.NfsFileShareNfsFileShareDefaults</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsFileShareNfsFileShareDefaults'>NfsFileShareNfsFileShareDefaults</a>&gt;;</code></pre>
 
 Nested argument with file share default values. More information below.
 

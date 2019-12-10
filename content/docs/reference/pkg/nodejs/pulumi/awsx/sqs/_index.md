@@ -1,5 +1,6 @@
 ---
 title: "Module sqs"
+title_tag: "Module sqs | Package @pulumi/awsx | Node.js SDK"
 linktitle: "sqs"
 meta_desc: "Explore members of the sqs module in the @pulumi/awsx package."
 ---
@@ -36,7 +37,7 @@ meta_desc: "Explore members of the sqs module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>approximateAgeOfOldestMessage(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>approximateAgeOfOldestMessage(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The approximate age of the oldest non-deleted message in the queue.
@@ -56,7 +57,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesDelayed(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesDelayed(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages in the queue that are delayed and not available for reading
@@ -75,7 +76,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesNotVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesNotVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages that are in flight. Messages are considered to be in flight if they
@@ -94,7 +95,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>approximateNumberOfMessagesVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages available for retrieval from the queue.
@@ -111,7 +112,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#SqsMetricName'>SqsMetricName</a>, change: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#SqsMetricName'>SqsMetricName</a>, change: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/SQS metric with the requested [metricName]. See
@@ -140,7 +141,7 @@ The only dimension that Amazon SQS sends to CloudWatch is "QueueName"
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfEmptyReceives(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfEmptyReceives(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of ReceiveMessage API calls that did not return a message.
@@ -157,7 +158,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfMessagesDeleted(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfMessagesDeleted(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages deleted from the queue.
@@ -187,7 +188,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfMessagesReceived(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfMessagesReceived(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages returned by calls to the ReceiveMessage action.
@@ -199,7 +200,7 @@ The number of messages returned by calls to the ReceiveMessage action.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>numberOfMessagesSent(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>numberOfMessagesSent(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of messages added to a queue.
@@ -216,7 +217,7 @@ the Amazon SQS console)
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>sentMessageSize(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>sentMessageSize(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The size of messages added to a queue.
@@ -232,7 +233,7 @@ the Amazon SQS console)
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SqsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SqsMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="SqsMetricChange-color">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
@@ -297,7 +298,7 @@ Optional [Queue] to filter events down to.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -307,7 +308,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set

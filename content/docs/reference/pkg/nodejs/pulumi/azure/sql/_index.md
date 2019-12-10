@@ -134,7 +134,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ActiveDirectoryAdministrator</code></pre>
 
 
 Returns true if the given object is an instance of ActiveDirectoryAdministrator.  This is designed to work even
@@ -273,7 +273,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Database</code></pre>
 
 
 Returns true if the given object is an instance of Database.  This is designed to work even
@@ -345,7 +345,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L95">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseImport'>outputs.sql.DatabaseImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseImport'>DatabaseImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A Database Import block as documented below. `createMode` must be set to `Default`.
 
@@ -450,7 +450,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L148">property <b>threatDetectionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseThreatDetectionPolicy'>outputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
 
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
@@ -544,7 +544,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ElasticPool</code></pre>
 
 
 Returns true if the given object is an instance of ElasticPool.  This is designed to work even
@@ -747,7 +747,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FailoverGroup</code></pre>
 
 
 Returns true if the given object is an instance of FailoverGroup.  This is designed to work even
@@ -790,7 +790,7 @@ The name of the failover group. Changing this forces a new resource to be create
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L98">property <b>partnerServers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupPartnerServer'>outputs.sql.FailoverGroupPartnerServer</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>[]&gt;;</code></pre>
 
 A list of secondary servers as documented below
 
@@ -798,7 +798,7 @@ A list of secondary servers as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L102">property <b>readWriteEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadWriteEndpointFailoverPolicy'>outputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 A read/write policy as documented below
 
@@ -806,7 +806,7 @@ A read/write policy as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L106">property <b>readonlyEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>readonlyEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadonlyEndpointFailoverPolicy'>outputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>readonlyEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 a read-only policy as documented below
 
@@ -924,7 +924,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallRule</code></pre>
 
 
 Returns true if the given object is an instance of FirewallRule.  This is designed to work even
@@ -1062,7 +1062,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SqlServer</code></pre>
 
 
 Returns true if the given object is an instance of SqlServer.  This is designed to work even
@@ -1105,7 +1105,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/sqlServer.ts#L80">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlServerIdentity'>outputs.sql.SqlServerIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlServerIdentity'>SqlServerIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -1241,7 +1241,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualNetworkRule</code></pre>
 
 
 Returns true if the given object is an instance of VirtualNetworkRule.  This is designed to work even
@@ -1497,7 +1497,7 @@ The name of the elastic database pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L335">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>inputs.sql.DatabaseImport</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>DatabaseImport</a>&gt;;</code></pre>
 
 A Database Import block as documented below. `createMode` must be set to `Default`.
 
@@ -1602,7 +1602,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L388">property <b>threatDetectionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>inputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
 
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
@@ -1673,7 +1673,7 @@ The name of the elastic database pool.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L256">property <b>import</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>inputs.sql.DatabaseImport</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>DatabaseImport</a>&gt;;</code></pre>
 
 A Database Import block as documented below. `createMode` must be set to `Default`.
 
@@ -1778,7 +1778,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/database.ts#L309">property <b>threatDetectionPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>inputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</code></pre>
 
 Threat detection policy configuration. The `threatDetectionPolicy` block supports fields documented below.
 
@@ -2000,7 +2000,7 @@ The name of the failover group. Changing this forces a new resource to be create
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L243">property <b>partnerServers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>inputs.sql.FailoverGroupPartnerServer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>&gt;[]&gt;;</code></pre>
 
 A list of secondary servers as documented below
 
@@ -2008,7 +2008,7 @@ A list of secondary servers as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L247">property <b>readWriteEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 A read/write policy as documented below
 
@@ -2016,7 +2016,7 @@ A read/write policy as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L251">property <b>readonlyEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 a read-only policy as documented below
 
@@ -2082,7 +2082,7 @@ The name of the failover group. Changing this forces a new resource to be create
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L201">property <b>partnerServers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>partnerServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>inputs.sql.FailoverGroupPartnerServer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>partnerServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>&gt;[]&gt;;</code></pre>
 
 A list of secondary servers as documented below
 
@@ -2090,7 +2090,7 @@ A list of secondary servers as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L205">property <b>readWriteEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>readWriteEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>readWriteEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 A read/write policy as documented below
 
@@ -2098,7 +2098,7 @@ A read/write policy as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/failoverGroup.ts#L209">property <b>readonlyEndpointFailoverPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</code></pre>
 
 a read-only policy as documented below
 
@@ -2445,7 +2445,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/getServer.ts#L73">property <b>identities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServerIdentity'>outputs.sql.GetServerIdentity</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServerIdentity'>GetServerIdentity</a>[];</code></pre>
 
 An `identity` block as defined below.
 
@@ -2513,7 +2513,7 @@ The password associated with the `administratorLogin` user. Needs to comply with
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/sqlServer.ts#L215">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlServerIdentity'>inputs.sql.SqlServerIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlServerIdentity'>SqlServerIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 
@@ -2595,7 +2595,7 @@ The fully qualified domain name of the Azure SQL Server (e.g. myServerName.datab
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/sql/sqlServer.ts#L177">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlServerIdentity'>inputs.sql.SqlServerIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlServerIdentity'>SqlServerIdentity</a>&gt;;</code></pre>
 
 An `identity` block as defined below.
 

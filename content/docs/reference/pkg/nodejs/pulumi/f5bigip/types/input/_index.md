@@ -1,5 +1,6 @@
 ---
 title: "Module types/input"
+title_tag: "Module types/input | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/f5bigip package."
 ---
@@ -135,12 +136,12 @@ Name of the node
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/input.ts#L47">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRuleAction'>inputs.ltm.PolicyRuleAction</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PolicyRuleAction'>PolicyRuleAction</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyRule-conditions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/input.ts#L48">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRuleCondition'>inputs.ltm.PolicyRuleCondition</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PolicyRuleCondition'>PolicyRuleCondition</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyRule-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/input.ts#L49">property <b>name</b></a>
 </h4>
@@ -1240,7 +1241,7 @@ Name of the iApp.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/input.ts#L302">property <b>rows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppTableRow'>inputs.sys.IAppTableRow</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IAppTableRow'>IAppTableRow</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="IAppTableRow" data-link-title="IAppTableRow">
     <a href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/input.ts#L305">
         interface <strong>IAppTableRow</strong>

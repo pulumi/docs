@@ -71,7 +71,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is APIService</code></pre>
 
 
 Returns true if the given object is an instance of APIService.  This is designed to work even
@@ -112,12 +112,12 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIService.ts#L31">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="APIService-spec">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIService.ts#L36">property <b>spec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceSpec'>outputs.apiregistration.v1beta1.APIServiceSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceSpec'>APIServiceSpec</a>&gt;;</code></pre>
 
 Spec contains information for locating and communicating with a server
 
@@ -125,7 +125,7 @@ Spec contains information for locating and communicating with a server
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIService.ts#L41">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceStatus'>outputs.apiregistration.v1beta1.APIServiceStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceStatus'>APIServiceStatus</a>&gt;;</code></pre>
 
 Status contains derived information about an API server
 
@@ -188,7 +188,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is APIServiceList</code></pre>
 
 
 Returns true if the given object is an instance of APIServiceList.  This is designed to work even
@@ -218,7 +218,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIServiceList.ts#L23">property <b>items</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIService'>outputs.apiregistration.v1beta1.APIService</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIService'>APIService</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="APIServiceList-kind">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIServiceList.ts#L31">property <b>kind</b></a>
 </h4>
@@ -234,7 +234,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIServiceList.ts#L34">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="APIServiceList-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/apiregistration/v1beta1/APIServiceList.ts#L13">property <b>urn</b></a>
 </h4>

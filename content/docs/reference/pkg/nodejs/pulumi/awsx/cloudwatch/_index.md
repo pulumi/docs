@@ -1,5 +1,6 @@
 ---
 title: "Module cloudwatch"
+title_tag: "Module cloudwatch | Package @pulumi/awsx | Node.js SDK"
 linktitle: "cloudwatch"
 meta_desc: "Explore members of the cloudwatch module in the @pulumi/awsx package."
 ---
@@ -779,7 +780,7 @@ Dashboard.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -804,7 +805,7 @@ Defaults to `true`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L483">property <b>alarmActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>Topic</a>&gt;[]&gt;;</code></pre>
 
 The list of actions to execute when this alarm transitions into an ALARM state from any other
 state. Each action is specified as an Amazon Resource Name (ARN).
@@ -871,7 +872,7 @@ p0.0 and p100.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L526">property <b>insufficientDataActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>Topic</a>&gt;[]&gt;;</code></pre>
 
 The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state
 from any other state. Each action is specified as an Amazon Resource Name (ARN).
@@ -909,7 +910,7 @@ The descriptive name for the alarm. This name must be unique within the user's A
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L535">property <b>okActions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>Topic</a>&gt;[]&gt;;</code></pre>
 
 The list of actions to execute when this alarm transitions into an OK state from any other
 state. Each action is specified as an Amazon Resource Name (ARN).
@@ -981,7 +982,7 @@ For internal use only.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, WidgetRelativePosition&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-height">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
@@ -1023,7 +1024,7 @@ for more details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Dashboard(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DashboardArgs'>DashboardArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Dashboard(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DashboardArgs'>DashboardArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
 
 
 Constructs a [DashboardGrid] out of [Widget]s.  If any of these Widgets are [RowWidget]s.
@@ -1053,7 +1054,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dashboard</code></pre>
 
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
@@ -1260,7 +1261,7 @@ For internal use only.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, WidgetRelativePosition&gt;</code></pre>
 
 
 Determines the relative positions of all the child widgets in this [FlowWidget]. 'Relative
@@ -1311,7 +1312,7 @@ details.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -1531,7 +1532,7 @@ linked annotation lines as part of a single band annotation
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -1651,7 +1652,7 @@ Displays a set of metrics as a line graph.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -1761,7 +1762,7 @@ For internal use only.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>createAlarm(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlarmArgs'>AlarmArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): MetricAlarm</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>createAlarm(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlarmArgs'>AlarmArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#MetricAlarm'>MetricAlarm</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-with">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L153">method <b>with</b></a>
@@ -1919,7 +1920,7 @@ for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L50">property <b>resource</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 
 Optional resource this is a metric for.  Used only for parenting purposes when making new alarms.
 
@@ -2222,7 +2223,7 @@ displaying [Metric]s.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -2458,7 +2459,7 @@ For internal use only.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, WidgetRelativePosition&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-height">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
@@ -2501,7 +2502,7 @@ Base type of all non-flow Widgets to place in a DashboardGrid.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -2569,7 +2570,7 @@ Displays a set of metrics as a single number.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -2648,7 +2649,7 @@ Simple [Widget] that can be used for putting space between other widgets in the 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpaceWidget-height">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L110">method <b>height</b></a>
@@ -2686,7 +2687,7 @@ Displays a set of metrics as a stacked area graph.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -2765,7 +2766,7 @@ Simple widget that displays a piece of text in the dashboard grid.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -2863,7 +2864,7 @@ linked annotation lines as part of a single band annotation
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(annotations: MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only.
@@ -3046,7 +3047,7 @@ this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation], [HorizontalAnn
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>addWidgetJson(annotations: MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 For internal use only. Only intended to be called by [MetricWidget].

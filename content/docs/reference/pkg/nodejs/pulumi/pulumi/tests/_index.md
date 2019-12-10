@@ -1,5 +1,6 @@
 ---
 title: "Module tests"
+title_tag: "Module tests | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "tests"
 meta_desc: "Explore members of the tests module in the @pulumi/pulumi package."
 ---
@@ -11,7 +12,6 @@ meta_desc: "Explore members of the tests module in the @pulumi/pulumi package."
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="runtime/"><span class="symbol module"></span>tests/runtime</a></li>
-    <li><a href="runtime/langhost/"><span class="symbol module"></span>tests/runtime/langhost</a></li>
 </ul>
 
 

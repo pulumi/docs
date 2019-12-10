@@ -184,7 +184,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Assignment</code></pre>
 
 
 Returns true if the given object is an instance of Assignment.  This is designed to work even
@@ -331,7 +331,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Definition</code></pre>
 
 
 Returns true if the given object is an instance of Definition.  This is designed to work even
@@ -374,7 +374,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/role/definition.ts#L74">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DefinitionPermission'>outputs.role.DefinitionPermission</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DefinitionPermission'>DefinitionPermission</a>[]&gt;;</code></pre>
 
 A `permissions` block as defined below.
 
@@ -639,7 +639,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/role/definition.ts#L180">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionPermission'>inputs.role.DefinitionPermission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionPermission'>DefinitionPermission</a>&gt;[]&gt;;</code></pre>
 
 A `permissions` block as defined below.
 
@@ -697,7 +697,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/role/definition.ts#L150">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionPermission'>inputs.role.DefinitionPermission</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionPermission'>DefinitionPermission</a>&gt;[]&gt;;</code></pre>
 
 A `permissions` block as defined below.
 
@@ -778,7 +778,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L70">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBuiltinRoleDefinitionPermission'>outputs.role.GetBuiltinRoleDefinitionPermission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBuiltinRoleDefinitionPermission'>GetBuiltinRoleDefinitionPermission</a>[];</code></pre>
 
 a `permissions` block as documented below.
 
@@ -867,7 +867,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/role/getRoleDefinition.ts#L93">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRoleDefinitionPermission'>outputs.role.GetRoleDefinitionPermission</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRoleDefinitionPermission'>GetRoleDefinitionPermission</a>[];</code></pre>
 
 a `permissions` block as documented below.
 

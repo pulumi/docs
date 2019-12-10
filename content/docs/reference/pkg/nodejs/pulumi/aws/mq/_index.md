@@ -1,5 +1,6 @@
 ---
 title: "Module mq"
+title_tag: "Module mq | Package @pulumi/aws | Node.js SDK"
 linktitle: "mq"
 meta_desc: "Explore members of the mq module in the @pulumi/aws package."
 ---
@@ -127,7 +128,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Broker</code></pre>
 
 
 Returns true if the given object is an instance of Broker.  This is designed to work even
@@ -170,7 +171,7 @@ The name of the broker.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L99">property <b>configuration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerConfiguration'>outputs.mq.BrokerConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerConfiguration'>BrokerConfiguration</a>&gt;;</code></pre>
 
 Configuration of the broker. See below.
 
@@ -186,7 +187,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L107">property <b>encryptionOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryptionOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerEncryptionOptions'>outputs.mq.BrokerEncryptionOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryptionOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerEncryptionOptions'>BrokerEncryptionOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block containing encryption options. See below.
 
@@ -227,7 +228,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L131">property <b>instances</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerInstance'>outputs.mq.BrokerInstance</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerInstance'>BrokerInstance</a>[]&gt;;</code></pre>
 
 A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -243,7 +244,7 @@ A list of information about allocated brokers (both active & standby).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L135">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerLogs'>outputs.mq.BrokerLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerLogs'>BrokerLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Logging configuration of the broker. See below.
 
@@ -251,7 +252,7 @@ Logging configuration of the broker. See below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L139">property <b>maintenanceWindowStartTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>maintenanceWindowStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerMaintenanceWindowStartTime'>outputs.mq.BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>maintenanceWindowStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerMaintenanceWindowStartTime'>BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
 
 Maintenance window start time. See below.
 
@@ -300,7 +301,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L159">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerUser'>outputs.mq.BrokerUser</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BrokerUser'>BrokerUser</a>[]&gt;;</code></pre>
 
 The list of all ActiveMQ usernames for the specified broker. See below.
 
@@ -377,7 +378,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Configuration</code></pre>
 
 
 Returns true if the given object is an instance of Configuration.  This is designed to work even
@@ -542,7 +543,7 @@ The name of the broker.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L348">property <b>configuration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerConfiguration'>inputs.mq.BrokerConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerConfiguration'>BrokerConfiguration</a>&gt;;</code></pre>
 
 Configuration of the broker. See below.
 
@@ -558,7 +559,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L356">property <b>encryptionOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerEncryptionOptions'>inputs.mq.BrokerEncryptionOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerEncryptionOptions'>BrokerEncryptionOptions</a>&gt;;</code></pre>
 
 Configuration block containing encryption options. See below.
 
@@ -590,7 +591,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L372">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerLogs'>inputs.mq.BrokerLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerLogs'>BrokerLogs</a>&gt;;</code></pre>
 
 Logging configuration of the broker. See below.
 
@@ -598,7 +599,7 @@ Logging configuration of the broker. See below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L376">property <b>maintenanceWindowStartTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerMaintenanceWindowStartTime'>inputs.mq.BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerMaintenanceWindowStartTime'>BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
 
 Maintenance window start time. See below.
 
@@ -638,7 +639,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L396">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerUser'>inputs.mq.BrokerUser</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerUser'>BrokerUser</a>&gt;[]&gt;;</code></pre>
 
 The list of all ActiveMQ usernames for the specified broker. See below.
 
@@ -689,7 +690,7 @@ The name of the broker.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L265">property <b>configuration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerConfiguration'>inputs.mq.BrokerConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerConfiguration'>BrokerConfiguration</a>&gt;;</code></pre>
 
 Configuration of the broker. See below.
 
@@ -705,7 +706,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L273">property <b>encryptionOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerEncryptionOptions'>inputs.mq.BrokerEncryptionOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerEncryptionOptions'>BrokerEncryptionOptions</a>&gt;;</code></pre>
 
 Configuration block containing encryption options. See below.
 
@@ -737,7 +738,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L297">property <b>instances</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerInstance'>inputs.mq.BrokerInstance</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerInstance'>BrokerInstance</a>&gt;[]&gt;;</code></pre>
 
 A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -753,7 +754,7 @@ A list of information about allocated brokers (both active & standby).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L301">property <b>logs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerLogs'>inputs.mq.BrokerLogs</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerLogs'>BrokerLogs</a>&gt;;</code></pre>
 
 Logging configuration of the broker. See below.
 
@@ -761,7 +762,7 @@ Logging configuration of the broker. See below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L305">property <b>maintenanceWindowStartTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerMaintenanceWindowStartTime'>inputs.mq.BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerMaintenanceWindowStartTime'>BrokerMaintenanceWindowStartTime</a>&gt;;</code></pre>
 
 Maintenance window start time. See below.
 
@@ -801,7 +802,7 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/broker.ts#L325">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerUser'>inputs.mq.BrokerUser</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BrokerUser'>BrokerUser</a>&gt;[]&gt;;</code></pre>
 
 The list of all ActiveMQ usernames for the specified broker. See below.
 
@@ -1011,7 +1012,7 @@ A collection of values returned by getBroker.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L75">property <b>configuration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerConfiguration'>outputs.mq.GetBrokerConfiguration</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerConfiguration'>GetBrokerConfiguration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBrokerResult-deploymentMode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L76">property <b>deploymentMode</b></a>
 </h4>
@@ -1021,7 +1022,7 @@ A collection of values returned by getBroker.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L77">property <b>encryptionOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerEncryptionOption'>outputs.mq.GetBrokerEncryptionOption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionOptions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerEncryptionOption'>GetBrokerEncryptionOption</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBrokerResult-engineType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L78">property <b>engineType</b></a>
 </h4>
@@ -1049,7 +1050,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L81">property <b>instances</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerInstance'>outputs.mq.GetBrokerInstance</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerInstance'>GetBrokerInstance</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBrokerResult-logs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L82">property <b>logs</b></a>
 </h4>
@@ -1059,7 +1060,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L83">property <b>maintenanceWindowStartTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerMaintenanceWindowStartTime'>outputs.mq.GetBrokerMaintenanceWindowStartTime</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenanceWindowStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerMaintenanceWindowStartTime'>GetBrokerMaintenanceWindowStartTime</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBrokerResult-publiclyAccessible">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L84">property <b>publiclyAccessible</b></a>
 </h4>
@@ -1084,4 +1085,4 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/mq/getBroker.ts#L88">property <b>users</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerUser'>outputs.mq.GetBrokerUser</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerUser'>GetBrokerUser</a>[];</code></pre>

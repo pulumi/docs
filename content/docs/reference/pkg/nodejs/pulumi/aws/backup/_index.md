@@ -1,5 +1,6 @@
 ---
 title: "Module backup"
+title_tag: "Module backup | Package @pulumi/aws | Node.js SDK"
 linktitle: "backup"
 meta_desc: "Explore members of the backup module in the @pulumi/aws package."
 ---
@@ -101,7 +102,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Plan</code></pre>
 
 
 Returns true if the given object is an instance of Plan.  This is designed to work even
@@ -136,7 +137,7 @@ The display name of a backup plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/plan.ts#L67">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PlanRule'>outputs.backup.PlanRule</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PlanRule'>PlanRule</a>[]&gt;;</code></pre>
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
 
@@ -284,7 +285,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Selection</code></pre>
 
 
 Returns true if the given object is an instance of Selection.  This is designed to work even
@@ -335,7 +336,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/selection.ts#L130">property <b>selectionTags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>selectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SelectionSelectionTag'>outputs.backup.SelectionSelectionTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>selectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SelectionSelectionTag'>SelectionSelectionTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
 
@@ -408,7 +409,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Vault</code></pre>
 
 
 Returns true if the given object is an instance of Vault.  This is designed to work even
@@ -497,7 +498,7 @@ The display name of a backup plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/plan.ts#L153">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PlanRule'>inputs.backup.PlanRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PlanRule'>PlanRule</a>&gt;[]&gt;;</code></pre>
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
 
@@ -539,7 +540,7 @@ The display name of a backup plan.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/plan.ts#L131">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PlanRule'>inputs.backup.PlanRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PlanRule'>PlanRule</a>&gt;[]&gt;;</code></pre>
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
 
@@ -605,7 +606,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/selection.ts#L223">property <b>selectionTags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SelectionSelectionTag'>inputs.backup.SelectionSelectionTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SelectionSelectionTag'>SelectionSelectionTag</a>&gt;[]&gt;;</code></pre>
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
 
@@ -655,7 +656,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/backup/selection.ts#L197">property <b>selectionTags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SelectionSelectionTag'>inputs.backup.SelectionSelectionTag</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SelectionSelectionTag'>SelectionSelectionTag</a>&gt;[]&gt;;</code></pre>
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
 

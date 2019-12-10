@@ -1,5 +1,6 @@
 ---
 title: "Module ltm"
+title_tag: "Module ltm | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "ltm"
 meta_desc: "Explore members of the ltm module in the @pulumi/f5bigip package."
 ---
@@ -169,7 +170,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DataGroup</code></pre>
 
 
 Returns true if the given object is an instance of DataGroup.  This is designed to work even
@@ -196,7 +197,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/dataGroup.ts#L74">property <b>records</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#DataGroupRecord'>outputs.ltm.DataGroupRecord</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#DataGroupRecord'>DataGroupRecord</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 
@@ -268,7 +269,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IRule</code></pre>
 
 
 Returns true if the given object is an instance of IRule.  This is designed to work even
@@ -355,7 +356,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Monitor</code></pre>
 
 
 Returns true if the given object is an instance of Monitor.  This is designed to work even
@@ -582,7 +583,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Node</code></pre>
 
 
 Returns true if the given object is an instance of Node.  This is designed to work even
@@ -624,7 +625,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L55">property <b>fqdn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#NodeFqdn'>outputs.ltm.NodeFqdn</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#NodeFqdn'>NodeFqdn</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Node-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L12">property <b>id</b></a>
 </h4>
@@ -723,7 +724,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PersistenceProfileCookie</code></pre>
 
 
 Returns true if the given object is an instance of PersistenceProfileCookie.  This is designed to work even
@@ -928,7 +929,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PersistenceProfileDstAddr</code></pre>
 
 
 Returns true if the given object is an instance of PersistenceProfileDstAddr.  This is designed to work even
@@ -1086,7 +1087,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PersistenceProfileSrcAddr</code></pre>
 
 
 Returns true if the given object is an instance of PersistenceProfileSrcAddr.  This is designed to work even
@@ -1252,7 +1253,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PersistenceProfileSsl</code></pre>
 
 
 Returns true if the given object is an instance of PersistenceProfileSsl.  This is designed to work even
@@ -1397,7 +1398,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -1448,7 +1449,7 @@ Specifies the protocol
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/policy.ts#L62">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRule'>outputs.ltm.PolicyRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRule'>PolicyRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Rules can be applied using the policy
 
@@ -1516,7 +1517,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Pool</code></pre>
 
 
 Returns true if the given object is an instance of Pool.  This is designed to work even
@@ -1659,7 +1660,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PoolAttachment</code></pre>
 
 
 Returns true if the given object is an instance of PoolAttachment.  This is designed to work even
@@ -1772,7 +1773,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileFastHttp</code></pre>
 
 
 Returns true if the given object is an instance of ProfileFastHttp.  This is designed to work even
@@ -1956,7 +1957,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileFastL4</code></pre>
 
 
 Returns true if the given object is an instance of ProfileFastL4.  This is designed to work even
@@ -2131,7 +2132,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileHttp</code></pre>
 
 
 Returns true if the given object is an instance of ProfileHttp.  This is designed to work even
@@ -2435,7 +2436,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileHttp2</code></pre>
 
 
 Returns true if the given object is an instance of ProfileHttp2.  This is designed to work even
@@ -2578,7 +2579,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileHttpCompress</code></pre>
 
 
 Returns true if the given object is an instance of ProfileHttpCompress.  This is designed to work even
@@ -2721,7 +2722,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileOneConnect</code></pre>
 
 
 Returns true if the given object is an instance of ProfileOneConnect.  This is designed to work even
@@ -2887,7 +2888,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ProfileTcp</code></pre>
 
 
 Returns true if the given object is an instance of ProfileTcp.  This is designed to work even
@@ -3060,7 +3061,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Snat</code></pre>
 
 
 Returns true if the given object is an instance of Snat.  This is designed to work even
@@ -3111,7 +3112,7 @@ Name of the snat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/snat.ts#L80">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#SnatOrigin'>outputs.ltm.SnatOrigin</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#SnatOrigin'>SnatOrigin</a>[]&gt;;</code></pre>
 
 IP or hostname of the snat
 
@@ -3240,7 +3241,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SnatPool</code></pre>
 
 
 Returns true if the given object is an instance of SnatPool.  This is designed to work even
@@ -3345,7 +3346,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualAddress</code></pre>
 
 
 Returns true if the given object is an instance of VirtualAddress.  This is designed to work even
@@ -3480,7 +3481,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualServer</code></pre>
 
 
 Returns true if the given object is an instance of VirtualServer.  This is designed to work even
@@ -3691,7 +3692,7 @@ The set of arguments for constructing a DataGroup resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/dataGroup.ts#L147">property <b>records</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#DataGroupRecord'>inputs.ltm.DataGroupRecord</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#DataGroupRecord'>DataGroupRecord</a>&gt;[]&gt;;</code></pre>
 
 a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 
@@ -3725,7 +3726,7 @@ Input properties used for looking up and filtering DataGroup resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/dataGroup.ts#L129">property <b>records</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#DataGroupRecord'>inputs.ltm.DataGroupRecord</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#DataGroupRecord'>DataGroupRecord</a>&gt;[]&gt;;</code></pre>
 
 a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 
@@ -4167,7 +4168,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L184">property <b>fqdn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#NodeFqdn'>inputs.ltm.NodeFqdn</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#NodeFqdn'>NodeFqdn</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeArgs-monitor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L188">property <b>monitor</b></a>
 </h4>
@@ -4247,7 +4248,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L144">property <b>fqdn</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#NodeFqdn'>inputs.ltm.NodeFqdn</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#NodeFqdn'>NodeFqdn</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeState-monitor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/node.ts#L148">property <b>monitor</b></a>
 </h4>
@@ -5179,7 +5180,7 @@ Specifies the protocol
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/policy.ts#L162">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRule'>inputs.ltm.PolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRule'>PolicyRule</a>&gt;[]&gt;;</code></pre>
 
 Rules can be applied using the policy
 
@@ -5237,7 +5238,7 @@ Specifies the protocol
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/policy.ts#L132">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRule'>inputs.ltm.PolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRule'>PolicyRule</a>&gt;[]&gt;;</code></pre>
 
 Rules can be applied using the policy
 
@@ -6903,7 +6904,7 @@ Name of the snat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/snat.ts#L233">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#SnatOrigin'>inputs.ltm.SnatOrigin</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#SnatOrigin'>SnatOrigin</a>&gt;[]&gt;;</code></pre>
 
 IP or hostname of the snat
 
@@ -7053,7 +7054,7 @@ Name of the snat
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/ltm/snat.ts#L183">property <b>origins</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#SnatOrigin'>inputs.ltm.SnatOrigin</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#SnatOrigin'>SnatOrigin</a>&gt;[]&gt;;</code></pre>
 
 IP or hostname of the snat
 

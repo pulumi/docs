@@ -107,7 +107,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Server</code></pre>
 
 
 Returns true if the given object is an instance of Server.  This is designed to work even
@@ -150,7 +150,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/analysisservices/server.ts#L82">property <b>ipv4FirewallRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipv4FirewallRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIpv4FirewallRule'>outputs.analysisservices.ServerIpv4FirewallRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipv4FirewallRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `ipv4FirewallRule` block(s) as defined below.
 
@@ -257,7 +257,7 @@ Indicates if the Power BI service is allowed to access or not.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/analysisservices/server.ts#L229">property <b>ipv4FirewallRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `ipv4FirewallRule` block(s) as defined below.
 
@@ -344,7 +344,7 @@ Indicates if the Power BI service is allowed to access or not.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/analysisservices/server.ts#L182">property <b>ipv4FirewallRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
 
 One or more `ipv4FirewallRule` block(s) as defined below.
 

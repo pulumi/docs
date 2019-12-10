@@ -73,7 +73,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EndpointSlice</code></pre>
 
 
 Returns true if the given object is an instance of EndpointSlice.  This is designed to work even
@@ -105,7 +105,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/discovery/v1beta1/EndpointSlice.ts#L36">property <b>endpoints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Endpoint'>outputs.discovery.v1beta1.Endpoint</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Endpoint'>Endpoint</a>[]&gt;;</code></pre>
 
 endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of
 1000 endpoints.
@@ -134,7 +134,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/discovery/v1beta1/EndpointSlice.ts#L49">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 
 Standard object's metadata.
 
@@ -142,7 +142,7 @@ Standard object's metadata.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/discovery/v1beta1/EndpointSlice.ts#L57">property <b>ports</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointPort'>outputs.discovery.v1beta1.EndpointPort</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointPort'>EndpointPort</a>[]&gt;;</code></pre>
 
 ports specifies the list of network ports exposed by each endpoint in this slice. Each port
 must have a unique name. When ports is empty, it indicates that there are no defined ports.
@@ -208,7 +208,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EndpointSliceList</code></pre>
 
 
 Returns true if the given object is an instance of EndpointSliceList.  This is designed to work even
@@ -238,7 +238,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/discovery/v1beta1/EndpointSliceList.ts#L25">property <b>items</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointSlice'>outputs.discovery.v1beta1.EndpointSlice</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EndpointSlice'>EndpointSlice</a>[]&gt;;</code></pre>
 
 List of endpoint slices
 
@@ -257,7 +257,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/discovery/v1beta1/EndpointSliceList.ts#L38">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 
 Standard list metadata.
 

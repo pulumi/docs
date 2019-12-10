@@ -167,7 +167,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HadoopCluster</code></pre>
 
 
 Returns true if the given object is an instance of HadoopCluster.  This is designed to work even
@@ -185,7 +185,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L107">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterComponentVersion'>outputs.hdinsight.HadoopClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterComponentVersion'>HadoopClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -193,7 +193,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L111">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterGateway'>outputs.hdinsight.HadoopClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterGateway'>HadoopClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -242,7 +242,7 @@ Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L131">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRoles'>outputs.hdinsight.HadoopClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterRoles'>HadoopClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -258,7 +258,7 @@ The SSH Connectivity Endpoint for this HDInsight Hadoop Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L143">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterStorageAccountGen2'>outputs.hdinsight.HadoopClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterStorageAccountGen2'>HadoopClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -266,7 +266,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L139">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterStorageAccount'>outputs.hdinsight.HadoopClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HadoopClusterStorageAccount'>HadoopClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -403,7 +403,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is HBaseCluster</code></pre>
 
 
 Returns true if the given object is an instance of HBaseCluster.  This is designed to work even
@@ -421,7 +421,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L107">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterComponentVersion'>outputs.hdinsight.HBaseClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterComponentVersion'>HBaseClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -429,7 +429,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L111">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterGateway'>outputs.hdinsight.HBaseClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterGateway'>HBaseClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -478,7 +478,7 @@ Specifies the name of the Resource Group in which this HDInsight HBase Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L131">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterRoles'>outputs.hdinsight.HBaseClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterRoles'>HBaseClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -494,7 +494,7 @@ The SSH Connectivity Endpoint for this HDInsight HBase Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L143">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterStorageAccountGen2'>outputs.hdinsight.HBaseClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterStorageAccountGen2'>HBaseClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -502,7 +502,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L139">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterStorageAccount'>outputs.hdinsight.HBaseClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HBaseClusterStorageAccount'>HBaseClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -639,7 +639,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is InteractiveQueryCluster</code></pre>
 
 
 Returns true if the given object is an instance of InteractiveQueryCluster.  This is designed to work even
@@ -657,7 +657,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L107">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterComponentVersion'>outputs.hdinsight.InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterComponentVersion'>InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -665,7 +665,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L111">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterGateway'>outputs.hdinsight.InteractiveQueryClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterGateway'>InteractiveQueryClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -714,7 +714,7 @@ Specifies the name of the Resource Group in which this HDInsight Interactive Que
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L131">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRoles'>outputs.hdinsight.InteractiveQueryClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRoles'>InteractiveQueryClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -730,7 +730,7 @@ The SSH Connectivity Endpoint for this HDInsight Interactive Query Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L143">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccountGen2'>outputs.hdinsight.InteractiveQueryClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccountGen2'>InteractiveQueryClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -738,7 +738,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L139">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccount'>outputs.hdinsight.InteractiveQueryClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccount'>InteractiveQueryClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -876,7 +876,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is KafkaCluster</code></pre>
 
 
 Returns true if the given object is an instance of KafkaCluster.  This is designed to work even
@@ -894,7 +894,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L108">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterComponentVersion'>outputs.hdinsight.KafkaClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterComponentVersion'>KafkaClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -902,7 +902,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L112">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterGateway'>outputs.hdinsight.KafkaClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterGateway'>KafkaClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -951,7 +951,7 @@ Specifies the name of the Resource Group in which this HDInsight Kafka Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L132">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRoles'>outputs.hdinsight.KafkaClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRoles'>KafkaClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -967,7 +967,7 @@ The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L144">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterStorageAccountGen2'>outputs.hdinsight.KafkaClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterStorageAccountGen2'>KafkaClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -975,7 +975,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L140">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterStorageAccount'>outputs.hdinsight.KafkaClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterStorageAccount'>KafkaClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -1115,7 +1115,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MLServicesCluster</code></pre>
 
 
 Returns true if the given object is an instance of MLServicesCluster.  This is designed to work even
@@ -1141,7 +1141,7 @@ The SSH Connectivity Endpoint for the Edge Node of the HDInsight ML Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L114">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterGateway'>outputs.hdinsight.MLServicesClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterGateway'>MLServicesClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -1190,7 +1190,7 @@ Specifies the name of the Resource Group in which this HDInsight ML Services Clu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L134">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRoles'>outputs.hdinsight.MLServicesClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRoles'>MLServicesClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -1214,7 +1214,7 @@ The SSH Connectivity Endpoint for this HDInsight ML Services Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L146">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterStorageAccount'>outputs.hdinsight.MLServicesClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterStorageAccount'>MLServicesClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -1354,7 +1354,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RServerCluster</code></pre>
 
 
 Returns true if the given object is an instance of RServerCluster.  This is designed to work even
@@ -1380,7 +1380,7 @@ The SSH Connectivity Endpoint for the Edge Node of the HDInsight RServer Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L114">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterGateway'>outputs.hdinsight.RServerClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterGateway'>RServerClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -1429,7 +1429,7 @@ Specifies the name of the Resource Group in which this HDInsight RServer Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L134">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRoles'>outputs.hdinsight.RServerClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterRoles'>RServerClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -1453,7 +1453,7 @@ The SSH Connectivity Endpoint for this HDInsight RServer Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L146">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterStorageAccount'>outputs.hdinsight.RServerClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RServerClusterStorageAccount'>RServerClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -1590,7 +1590,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SparkCluster</code></pre>
 
 
 Returns true if the given object is an instance of SparkCluster.  This is designed to work even
@@ -1608,7 +1608,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L107">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterComponentVersion'>outputs.hdinsight.SparkClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterComponentVersion'>SparkClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -1616,7 +1616,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L111">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterGateway'>outputs.hdinsight.SparkClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterGateway'>SparkClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -1665,7 +1665,7 @@ Specifies the name of the Resource Group in which this HDInsight Spark Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L131">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterRoles'>outputs.hdinsight.SparkClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterRoles'>SparkClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -1681,7 +1681,7 @@ The SSH Connectivity Endpoint for this HDInsight Spark Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L143">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterStorageAccountGen2'>outputs.hdinsight.SparkClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccountGen2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterStorageAccountGen2'>SparkClusterStorageAccountGen2</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -1689,7 +1689,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L139">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterStorageAccount'>outputs.hdinsight.SparkClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkClusterStorageAccount'>SparkClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -1826,7 +1826,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StormCluster</code></pre>
 
 
 Returns true if the given object is an instance of StormCluster.  This is designed to work even
@@ -1844,7 +1844,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L107">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterComponentVersion'>outputs.hdinsight.StormClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterComponentVersion'>StormClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -1852,7 +1852,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L111">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterGateway'>outputs.hdinsight.StormClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterGateway'>StormClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -1901,7 +1901,7 @@ Specifies the name of the Resource Group in which this HDInsight Storm Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L131">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterRoles'>outputs.hdinsight.StormClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterRoles'>StormClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -1917,7 +1917,7 @@ The SSH Connectivity Endpoint for this HDInsight Storm Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L139">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterStorageAccount'>outputs.hdinsight.StormClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StormClusterStorageAccount'>StormClusterStorageAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2042,7 +2042,7 @@ The SSH Endpoint of the Edge Node for this HDInsight Cluster, if an Edge Node ex
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/getCluster.ts#L77">property <b>gateways</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateways: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetClusterGateway'>outputs.hdinsight.GetClusterGateway</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateways: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetClusterGateway'>GetClusterGateway</a>[];</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2134,7 +2134,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L292">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterComponentVersion'>inputs.hdinsight.HadoopClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterComponentVersion'>HadoopClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2142,7 +2142,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L296">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterGateway'>inputs.hdinsight.HadoopClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterGateway'>HadoopClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2174,7 +2174,7 @@ Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L312">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterRoles'>inputs.hdinsight.HadoopClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterRoles'>HadoopClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2182,7 +2182,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L320">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccountGen2'>inputs.hdinsight.HadoopClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccountGen2'>HadoopClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2190,7 +2190,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L316">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccount'>inputs.hdinsight.HadoopClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccount'>HadoopClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2232,7 +2232,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L234">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterComponentVersion'>inputs.hdinsight.HadoopClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterComponentVersion'>HadoopClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2240,7 +2240,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L238">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterGateway'>inputs.hdinsight.HadoopClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterGateway'>HadoopClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2280,7 +2280,7 @@ Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L258">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterRoles'>inputs.hdinsight.HadoopClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterRoles'>HadoopClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2296,7 +2296,7 @@ The SSH Connectivity Endpoint for this HDInsight Hadoop Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L270">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccountGen2'>inputs.hdinsight.HadoopClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccountGen2'>HadoopClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2304,7 +2304,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hadoopCluster.ts#L266">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccount'>inputs.hdinsight.HadoopClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HadoopClusterStorageAccount'>HadoopClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2346,7 +2346,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L292">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterComponentVersion'>inputs.hdinsight.HBaseClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterComponentVersion'>HBaseClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2354,7 +2354,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L296">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterGateway'>inputs.hdinsight.HBaseClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterGateway'>HBaseClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2386,7 +2386,7 @@ Specifies the name of the Resource Group in which this HDInsight HBase Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L312">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterRoles'>inputs.hdinsight.HBaseClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterRoles'>HBaseClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2394,7 +2394,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L320">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccountGen2'>inputs.hdinsight.HBaseClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccountGen2'>HBaseClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2402,7 +2402,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L316">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccount'>inputs.hdinsight.HBaseClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccount'>HBaseClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2444,7 +2444,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L234">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterComponentVersion'>inputs.hdinsight.HBaseClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterComponentVersion'>HBaseClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2452,7 +2452,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L238">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterGateway'>inputs.hdinsight.HBaseClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterGateway'>HBaseClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2492,7 +2492,7 @@ Specifies the name of the Resource Group in which this HDInsight HBase Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L258">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterRoles'>inputs.hdinsight.HBaseClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterRoles'>HBaseClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2508,7 +2508,7 @@ The SSH Connectivity Endpoint for this HDInsight HBase Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L270">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccountGen2'>inputs.hdinsight.HBaseClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccountGen2'>HBaseClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2516,7 +2516,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/hBaseCluster.ts#L266">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccount'>inputs.hdinsight.HBaseClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HBaseClusterStorageAccount'>HBaseClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2558,7 +2558,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L292">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterComponentVersion'>inputs.hdinsight.InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterComponentVersion'>InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2566,7 +2566,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L296">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterGateway'>inputs.hdinsight.InteractiveQueryClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterGateway'>InteractiveQueryClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2598,7 +2598,7 @@ Specifies the name of the Resource Group in which this HDInsight Interactive Que
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L312">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRoles'>inputs.hdinsight.InteractiveQueryClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRoles'>InteractiveQueryClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2606,7 +2606,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L320">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccountGen2'>inputs.hdinsight.InteractiveQueryClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccountGen2'>InteractiveQueryClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2614,7 +2614,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L316">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccount'>inputs.hdinsight.InteractiveQueryClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccount'>InteractiveQueryClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2656,7 +2656,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L234">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterComponentVersion'>inputs.hdinsight.InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterComponentVersion'>InteractiveQueryClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2664,7 +2664,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L238">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterGateway'>inputs.hdinsight.InteractiveQueryClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterGateway'>InteractiveQueryClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2704,7 +2704,7 @@ Specifies the name of the Resource Group in which this HDInsight Interactive Que
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L258">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRoles'>inputs.hdinsight.InteractiveQueryClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRoles'>InteractiveQueryClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2720,7 +2720,7 @@ The SSH Connectivity Endpoint for this HDInsight Interactive Query Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L270">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccountGen2'>inputs.hdinsight.InteractiveQueryClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccountGen2'>InteractiveQueryClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2728,7 +2728,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L266">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccount'>inputs.hdinsight.InteractiveQueryClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccount'>InteractiveQueryClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2770,7 +2770,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L293">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterComponentVersion'>inputs.hdinsight.KafkaClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterComponentVersion'>KafkaClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2778,7 +2778,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L297">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterGateway'>inputs.hdinsight.KafkaClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterGateway'>KafkaClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2810,7 +2810,7 @@ Specifies the name of the Resource Group in which this HDInsight Kafka Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L313">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRoles'>inputs.hdinsight.KafkaClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRoles'>KafkaClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2818,7 +2818,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L321">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccountGen2'>inputs.hdinsight.KafkaClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccountGen2'>KafkaClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2826,7 +2826,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L317">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccount'>inputs.hdinsight.KafkaClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccount'>KafkaClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2868,7 +2868,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L235">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterComponentVersion'>inputs.hdinsight.KafkaClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterComponentVersion'>KafkaClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -2876,7 +2876,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L239">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterGateway'>inputs.hdinsight.KafkaClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterGateway'>KafkaClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -2916,7 +2916,7 @@ Specifies the name of the Resource Group in which this HDInsight Kafka Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L259">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRoles'>inputs.hdinsight.KafkaClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRoles'>KafkaClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -2932,7 +2932,7 @@ The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L271">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccountGen2'>inputs.hdinsight.KafkaClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccountGen2'>KafkaClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -2940,7 +2940,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/kafkaCluster.ts#L267">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccount'>inputs.hdinsight.KafkaClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterStorageAccount'>KafkaClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -2982,7 +2982,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L295">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterGateway'>inputs.hdinsight.MLServicesClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterGateway'>MLServicesClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3014,7 +3014,7 @@ Specifies the name of the Resource Group in which this HDInsight ML Services Clu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L311">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRoles'>inputs.hdinsight.MLServicesClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRoles'>MLServicesClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3030,7 +3030,7 @@ Should R Studio community edition for ML Services be installed? Changing this fo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L319">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterStorageAccount'>inputs.hdinsight.MLServicesClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterStorageAccount'>MLServicesClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3080,7 +3080,7 @@ The SSH Connectivity Endpoint for the Edge Node of the HDInsight ML Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L241">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterGateway'>inputs.hdinsight.MLServicesClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterGateway'>MLServicesClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3120,7 +3120,7 @@ Specifies the name of the Resource Group in which this HDInsight ML Services Clu
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L261">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRoles'>inputs.hdinsight.MLServicesClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRoles'>MLServicesClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3144,7 +3144,7 @@ The SSH Connectivity Endpoint for this HDInsight ML Services Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/mLServicesCluster.ts#L273">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterStorageAccount'>inputs.hdinsight.MLServicesClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterStorageAccount'>MLServicesClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3186,7 +3186,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L295">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterGateway'>inputs.hdinsight.RServerClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterGateway'>RServerClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3218,7 +3218,7 @@ Specifies the name of the Resource Group in which this HDInsight RServer Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L311">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterRoles'>inputs.hdinsight.RServerClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterRoles'>RServerClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3234,7 +3234,7 @@ Should R Studio community edition for RServer be installed? Changing this forces
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L319">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterStorageAccount'>inputs.hdinsight.RServerClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterStorageAccount'>RServerClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3284,7 +3284,7 @@ The SSH Connectivity Endpoint for the Edge Node of the HDInsight RServer Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L241">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterGateway'>inputs.hdinsight.RServerClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterGateway'>RServerClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3324,7 +3324,7 @@ Specifies the name of the Resource Group in which this HDInsight RServer Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L261">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterRoles'>inputs.hdinsight.RServerClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterRoles'>RServerClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3348,7 +3348,7 @@ The SSH Connectivity Endpoint for this HDInsight RServer Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/rServerCluster.ts#L273">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterStorageAccount'>inputs.hdinsight.RServerClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RServerClusterStorageAccount'>RServerClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3390,7 +3390,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L292">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterComponentVersion'>inputs.hdinsight.SparkClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterComponentVersion'>SparkClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -3398,7 +3398,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L296">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterGateway'>inputs.hdinsight.SparkClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterGateway'>SparkClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3430,7 +3430,7 @@ Specifies the name of the Resource Group in which this HDInsight Spark Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L312">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterRoles'>inputs.hdinsight.SparkClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterRoles'>SparkClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3438,7 +3438,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L320">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccountGen2'>inputs.hdinsight.SparkClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccountGen2'>SparkClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -3446,7 +3446,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L316">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccount'>inputs.hdinsight.SparkClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccount'>SparkClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3488,7 +3488,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L234">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterComponentVersion'>inputs.hdinsight.SparkClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterComponentVersion'>SparkClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -3496,7 +3496,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L238">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterGateway'>inputs.hdinsight.SparkClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterGateway'>SparkClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3536,7 +3536,7 @@ Specifies the name of the Resource Group in which this HDInsight Spark Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L258">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterRoles'>inputs.hdinsight.SparkClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterRoles'>SparkClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3552,7 +3552,7 @@ The SSH Connectivity Endpoint for this HDInsight Spark Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L270">property <b>storageAccountGen2</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccountGen2'>inputs.hdinsight.SparkClusterStorageAccountGen2</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccountGen2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccountGen2'>SparkClusterStorageAccountGen2</a>&gt;;</code></pre>
 
 A `storageAccountGen2` block as defined below.
 
@@ -3560,7 +3560,7 @@ A `storageAccountGen2` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/sparkCluster.ts#L266">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccount'>inputs.hdinsight.SparkClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkClusterStorageAccount'>SparkClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3602,7 +3602,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L282">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterComponentVersion'>inputs.hdinsight.StormClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterComponentVersion'>StormClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -3610,7 +3610,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L286">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterGateway'>inputs.hdinsight.StormClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterGateway'>StormClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3642,7 +3642,7 @@ Specifies the name of the Resource Group in which this HDInsight Storm Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L302">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterRoles'>inputs.hdinsight.StormClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterRoles'>StormClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3650,7 +3650,7 @@ A `roles` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L306">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterStorageAccount'>inputs.hdinsight.StormClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterStorageAccount'>StormClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 
@@ -3692,7 +3692,7 @@ Specifies the Version of HDInsights which should be used for this Cluster. Chang
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L228">property <b>componentVersion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterComponentVersion'>inputs.hdinsight.StormClusterComponentVersion</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>componentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterComponentVersion'>StormClusterComponentVersion</a>&gt;;</code></pre>
 
 A `componentVersion` block as defined below.
 
@@ -3700,7 +3700,7 @@ A `componentVersion` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L232">property <b>gateway</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterGateway'>inputs.hdinsight.StormClusterGateway</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>gateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterGateway'>StormClusterGateway</a>&gt;;</code></pre>
 
 A `gateway` block as defined below.
 
@@ -3740,7 +3740,7 @@ Specifies the name of the Resource Group in which this HDInsight Storm Cluster s
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L252">property <b>roles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterRoles'>inputs.hdinsight.StormClusterRoles</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterRoles'>StormClusterRoles</a>&gt;;</code></pre>
 
 A `roles` block as defined below.
 
@@ -3756,7 +3756,7 @@ The SSH Connectivity Endpoint for this HDInsight Storm Cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/hdinsight/stormCluster.ts#L260">property <b>storageAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterStorageAccount'>inputs.hdinsight.StormClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StormClusterStorageAccount'>StormClusterStorageAccount</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageAccount` block as defined below.
 

@@ -1,5 +1,6 @@
 ---
 title: "Module ecs"
+title_tag: "Module ecs | Package @pulumi/aws | Node.js SDK"
 linktitle: "ecs"
 meta_desc: "Explore members of the ecs module in the @pulumi/aws package."
 ---
@@ -139,7 +140,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -174,7 +175,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/cluster.ts#L68">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterSetting'>outputs.ecs.ClusterSetting</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterSetting'>ClusterSetting</a>[]&gt;;</code></pre>
 
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
@@ -336,7 +337,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
@@ -354,7 +355,7 @@ ARN of an ECS cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L140">property <b>deploymentController</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>deploymentController: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDeploymentController'>outputs.ecs.ServiceDeploymentController</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>deploymentController: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDeploymentController'>ServiceDeploymentController</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration block containing deployment controller configuration. Defined below.
 
@@ -427,7 +428,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L172">property <b>loadBalancers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceLoadBalancer'>outputs.ecs.ServiceLoadBalancer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceLoadBalancer'>ServiceLoadBalancer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A load balancer block. Load balancers documented below.
 
@@ -443,7 +444,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L180">property <b>networkConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceNetworkConfiguration'>outputs.ecs.ServiceNetworkConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceNetworkConfiguration'>ServiceNetworkConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
@@ -451,7 +452,7 @@ The network configuration for the service. This parameter is required for task d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L184">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>orderedPlacementStrategies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceOrderedPlacementStrategy'>outputs.ecs.ServiceOrderedPlacementStrategy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>orderedPlacementStrategies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceOrderedPlacementStrategy'>ServiceOrderedPlacementStrategy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
@@ -459,7 +460,7 @@ Service level strategy rules that are taken into consideration during task place
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L189">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServicePlacementConstraint'>outputs.ecs.ServicePlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServicePlacementConstraint'>ServicePlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
@@ -492,7 +493,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L205">property <b>serviceRegistries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serviceRegistries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceServiceRegistries'>outputs.ecs.ServiceServiceRegistries</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serviceRegistries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceServiceRegistries'>ServiceServiceRegistries</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
@@ -604,7 +605,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TaskDefinition</code></pre>
 
 
 Returns true if the given object is an instance of TaskDefinition.  This is designed to work even
@@ -700,7 +701,7 @@ The process namespace to use for the containers in the task. The valid values ar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L111">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionPlacementConstraint'>outputs.ecs.TaskDefinitionPlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionPlacementConstraint'>TaskDefinitionPlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
@@ -708,7 +709,7 @@ A set of placement constraints rules that are taken into consideration during ta
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L115">property <b>proxyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>proxyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionProxyConfiguration'>outputs.ecs.TaskDefinitionProxyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>proxyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionProxyConfiguration'>TaskDefinitionProxyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The proxy configuration details for the App Mesh proxy.
 
@@ -757,7 +758,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L135">property <b>volumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>volumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionVolume'>outputs.ecs.TaskDefinitionVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>volumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionVolume'>TaskDefinitionVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A set of volume blocks that containers in your task may use.
 
@@ -882,7 +883,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/cluster.ts#L141">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>inputs.ecs.ClusterSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>ClusterSetting</a>&gt;[]&gt;;</code></pre>
 
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
@@ -924,7 +925,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/cluster.ts#L123">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>inputs.ecs.ClusterSetting</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>ClusterSetting</a>&gt;[]&gt;;</code></pre>
 
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
@@ -1266,7 +1267,7 @@ The number of running tasks for the ECS Cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/getCluster.ts#L75">property <b>settings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterSetting'>outputs.ecs.GetClusterSetting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterSetting'>GetClusterSetting</a>[];</code></pre>
 
 The settings associated with the ECS Cluster.
 
@@ -1908,7 +1909,7 @@ ARN of an ECS cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L392">property <b>deploymentController</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>inputs.ecs.ServiceDeploymentController</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>ServiceDeploymentController</a>&gt;;</code></pre>
 
 Configuration block containing deployment controller configuration. Defined below.
 
@@ -1972,7 +1973,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L424">property <b>loadBalancers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>inputs.ecs.ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
 
 A load balancer block. Load balancers documented below.
 
@@ -1988,7 +1989,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L432">property <b>networkConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>inputs.ecs.ServiceNetworkConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>ServiceNetworkConfiguration</a>&gt;;</code></pre>
 
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
@@ -1996,7 +1997,7 @@ The network configuration for the service. This parameter is required for task d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L436">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>inputs.ecs.ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
 
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
@@ -2004,7 +2005,7 @@ Service level strategy rules that are taken into consideration during task place
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L441">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>inputs.ecs.ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
 
 rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
@@ -2037,7 +2038,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L457">property <b>serviceRegistries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>inputs.ecs.ServiceServiceRegistries</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>ServiceServiceRegistries</a>&gt;;</code></pre>
 
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
@@ -2087,7 +2088,7 @@ ARN of an ECS cluster
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L301">property <b>deploymentController</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>inputs.ecs.ServiceDeploymentController</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>ServiceDeploymentController</a>&gt;;</code></pre>
 
 Configuration block containing deployment controller configuration. Defined below.
 
@@ -2151,7 +2152,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L333">property <b>loadBalancers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>inputs.ecs.ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
 
 A load balancer block. Load balancers documented below.
 
@@ -2167,7 +2168,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L341">property <b>networkConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>inputs.ecs.ServiceNetworkConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>ServiceNetworkConfiguration</a>&gt;;</code></pre>
 
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
@@ -2175,7 +2176,7 @@ The network configuration for the service. This parameter is required for task d
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L345">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>inputs.ecs.ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
 
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
@@ -2183,7 +2184,7 @@ Service level strategy rules that are taken into consideration during task place
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L350">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>inputs.ecs.ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
 
 rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
@@ -2216,7 +2217,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/service.ts#L366">property <b>serviceRegistries</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>inputs.ecs.ServiceServiceRegistries</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>ServiceServiceRegistries</a>&gt;;</code></pre>
 
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
@@ -2369,7 +2370,7 @@ The process namespace to use for the containers in the task. The valid values ar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L320">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>inputs.ecs.TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
 
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
@@ -2377,7 +2378,7 @@ A set of placement constraints rules that are taken into consideration during ta
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L324">property <b>proxyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>inputs.ecs.TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
 
 The proxy configuration details for the App Mesh proxy.
 
@@ -2409,7 +2410,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L340">property <b>volumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>inputs.ecs.TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
 
 A set of volume blocks that containers in your task may use.
 
@@ -2504,7 +2505,7 @@ The process namespace to use for the containers in the task. The valid values ar
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L249">property <b>placementConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>inputs.ecs.TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
 
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
@@ -2512,7 +2513,7 @@ A set of placement constraints rules that are taken into consideration during ta
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L253">property <b>proxyConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>inputs.ecs.TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
 
 The proxy configuration details for the App Mesh proxy.
 
@@ -2552,7 +2553,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ecs/taskDefinition.ts#L273">property <b>volumes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>inputs.ecs.TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
 
 A set of volume blocks that containers in your task may use.
 

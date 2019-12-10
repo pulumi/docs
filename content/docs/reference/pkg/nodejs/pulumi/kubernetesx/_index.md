@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/kubernetesx"
+title_tag: "Package @pulumi/kubernetesx | Node.js SDK"
 linktitle: "@pulumi/kubernetesx"
 meta_desc: "Explore members of the @pulumi/kubernetesx package."
 ---
@@ -60,7 +61,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
 
 <h2 id="types" data-link-title="types">namespace <strong>types</strong></h2>
 <h3 class="pdoc-module-header" id="Container" data-link-title="Container">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L32">
         type <strong>Container</strong>
     </a>
 </h3>
@@ -72,7 +73,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     volumeMounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;VolumeMount | <a href='#VolumeMount'>VolumeMount</a>&gt;[]&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L47">
         type <strong>Deployment</strong>
     </a>
 </h3>
@@ -81,7 +82,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DeploymentSpec'>DeploymentSpec</a> | DeploymentSpec&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="DeploymentSpec" data-link-title="DeploymentSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L44">
         type <strong>DeploymentSpec</strong>
     </a>
 </h3>
@@ -90,14 +91,14 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Pod'>Pod</a>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="EnvMap" data-link-title="EnvMap">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L20">
         type <strong>EnvMap</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EnvMap = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | EnvVarSource&gt;&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L66">
         type <strong>Job</strong>
     </a>
 </h3>
@@ -106,7 +107,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobSpec'>JobSpec</a> | JobSpec&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="JobSpec" data-link-title="JobSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L63">
         type <strong>JobSpec</strong>
     </a>
 </h3>
@@ -115,7 +116,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Pod'>Pod</a>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="Pod" data-link-title="Pod">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L41">
         type <strong>Pod</strong>
     </a>
 </h3>
@@ -124,21 +125,21 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodSpec'>PodSpec</a> | <a href='#PodBuilder'>PodBuilder</a>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="PodBuilderDeploymentSpec" data-link-title="PodBuilderDeploymentSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L70">
         type <strong>PodBuilderDeploymentSpec</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> PodBuilderDeploymentSpec = Omit&lt;DeploymentSpec, <span class='s2'>"selector"</span> | <span class='s2'>"template"</span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PodBuilderJobSpec" data-link-title="PodBuilderJobSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L71">
         type <strong>PodBuilderJobSpec</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> PodBuilderJobSpec = Omit&lt;JobSpec, <span class='s2'>"template"</span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PodSpec" data-link-title="PodSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L38">
         type <strong>PodSpec</strong>
     </a>
 </h3>
@@ -147,14 +148,14 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Container'>Container</a>&gt;[]&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="PortMap" data-link-title="PortMap">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L21">
         type <strong>PortMap</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> PortMap = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L54">
         type <strong>Service</strong>
     </a>
 </h3>
@@ -163,7 +164,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSpec'>ServiceSpec</a>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="ServiceSpec" data-link-title="ServiceSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L50">
         type <strong>ServiceSpec</strong>
     </a>
 </h3>
@@ -173,21 +174,21 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceType'>ServiceType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="ServiceType" data-link-title="ServiceType">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L23">
         enum <strong>ServiceType</strong>
     </a>
 </h3>
 
 <h4 class="pdoc-member-header" id="ClusterIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L24">enum member <b>ClusterIP</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L24">enum member <b>ClusterIP</b></a>
 </h4>
 
 <h4 class="pdoc-member-header" id="LoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L25">enum member <b>LoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L25">enum member <b>LoadBalancer</b></a>
 </h4>
 
 <h3 class="pdoc-module-header" id="StatefulSet" data-link-title="StatefulSet">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L60">
         type <strong>StatefulSet</strong>
     </a>
 </h3>
@@ -196,7 +197,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StatefulSetSpec'>StatefulSetSpec</a> | StatefulSetSpec&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="StatefulSetSpec" data-link-title="StatefulSetSpec">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L57">
         type <strong>StatefulSetSpec</strong>
     </a>
 </h3>
@@ -205,7 +206,7 @@ import * as kubernetesx from "@pulumi/kubernetesx";
     template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Pod'>Pod</a>&gt;;
 };</code></pre>
 <h3 class="pdoc-module-header" id="VolumeMount" data-link-title="VolumeMount">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L27">
         type <strong>VolumeMount</strong>
     </a>
 </h3>
@@ -218,46 +219,46 @@ import * as kubernetesx from "@pulumi/kubernetesx";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="StatefulSet" data-link-title="StatefulSet">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L333">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L323">
         Resource <strong>StatefulSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>StatefulSet</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 <h4 class="pdoc-member-header" id="StatefulSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L335"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L325"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> StatefulSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#types.StatefulSet'>types.StatefulSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="StatefulSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L333">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L323">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StatefulSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L333">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L323">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StatefulSet-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L333">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L323">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StatefulSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L333">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L323">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -269,28 +270,28 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigMap" data-link-title="ConfigMap">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">
         class <strong>ConfigMap</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ConfigMap</span> <span class='kr'>extends</span> ConfigMap</code></pre>
 <h4 class="pdoc-member-header" id="ConfigMap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ConfigMap(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: ConfigMap, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigMap-asEnvValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L455">method <b>asEnvValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L445">method <b>asEnvValue</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>asEnvValue(key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;EnvVarSource&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigMap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">method <b>get</b></a>
 </h4>
 
 
@@ -304,32 +305,32 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ConfigMap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigMap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ConfigMap</code></pre>
 
 
 Returns true if the given object is an instance of ConfigMap.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigMap-mount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L441">method <b>mount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L431">method <b>mount</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>mount(destPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, srcPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#types.VolumeMount'>types.VolumeMount</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigMap-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -340,7 +341,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ConfigMap-binaryData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>binaryData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>binaryData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binaryData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</code></pre>
@@ -351,7 +352,7 @@ stored in BinaryData must not overlap with the ones in the Data field, this is e
 during validation process. Using this field will require 1.10+ apiserver and kubelet.
 
 <h4 class="pdoc-member-header" id="ConfigMap-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -362,7 +363,7 @@ keys stored in Data must not overlap with the keys in the BinaryData field, this
 enforced during validation process.
 
 <h4 class="pdoc-member-header" id="ConfigMap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -371,7 +372,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigMap-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ConfigMap"</span>&gt;;</code></pre>
@@ -382,7 +383,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ConfigMap-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -391,7 +392,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="ConfigMap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L436">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L426">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -400,28 +401,28 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">
         class <strong>Deployment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Deployment</span> <span class='kr'>extends</span> Deployment</code></pre>
 <h4 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L235"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L235"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#types.Deployment'>types.Deployment</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-createService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L260">method <b>createService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L260">method <b>createService</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>createService(args: <a href='#types.ServiceSpec'>types.ServiceSpec</a>): <a href='#Service'>Service</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">method <b>get</b></a>
 </h4>
 
 
@@ -435,25 +436,25 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Deployment</code></pre>
 
 
 Returns true if the given object is an instance of Deployment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Deployment-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apps/v1"</span>&gt;;</code></pre>
@@ -464,7 +465,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -473,7 +474,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Deployment-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Deployment"</span>&gt;;</code></pre>
@@ -484,7 +485,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Deployment-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -492,7 +493,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object metadata.
 
 <h4 class="pdoc-member-header" id="Deployment-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;DeploymentSpec&gt;;</code></pre>
@@ -500,7 +501,7 @@ Standard object metadata.
 Specification of the desired behavior of the Deployment.
 
 <h4 class="pdoc-member-header" id="Deployment-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;DeploymentStatus&gt;;</code></pre>
@@ -508,7 +509,7 @@ Specification of the desired behavior of the Deployment.
 Most recently observed status of the Deployment.
 
 <h4 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L233">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L233">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -517,21 +518,21 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">
         class <strong>Job</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Job</span> <span class='kr'>extends</span> Job</code></pre>
 <h4 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L389"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L379"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Job(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#types.Job'>types.Job</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">method <b>get</b></a>
 </h4>
 
 
@@ -545,25 +546,25 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Job-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v1"</span>&gt;;</code></pre>
@@ -574,7 +575,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -583,7 +584,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Job-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Job"</span>&gt;;</code></pre>
@@ -594,7 +595,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Job-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -603,7 +604,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Job-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;JobSpec&gt;;</code></pre>
@@ -612,7 +613,7 @@ Specification of the desired behavior of a job. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Job-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;JobStatus&gt;;</code></pre>
@@ -621,7 +622,7 @@ Current status of a job. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L387">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L377">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -630,21 +631,21 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PersistentVolumeClaim" data-link-title="PersistentVolumeClaim">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">
         class <strong>PersistentVolumeClaim</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>PersistentVolumeClaim</span> <span class='kr'>extends</span> PersistentVolumeClaim</code></pre>
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PersistentVolumeClaim(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: PersistentVolumeClaim, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">method <b>get</b></a>
 </h4>
 
 
@@ -658,32 +659,32 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PersistentVolumeClaim</code></pre>
 
 
 Returns true if the given object is an instance of PersistentVolumeClaim.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-mount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L422">method <b>mount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L412">method <b>mount</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>mount(destPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, srcPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#types.VolumeMount'>types.VolumeMount</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -694,7 +695,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -703,7 +704,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeClaim"</span>&gt;;</code></pre>
@@ -714,7 +715,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -723,7 +724,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;PersistentVolumeClaimSpec&gt;;</code></pre>
@@ -732,7 +733,7 @@ Spec defines the desired characteristics of a volume requested by a pod author. 
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;PersistentVolumeClaimStatus&gt;;</code></pre>
@@ -742,7 +743,7 @@ More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
 <h4 class="pdoc-member-header" id="PersistentVolumeClaim-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L416">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L406">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -751,21 +752,21 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Pod" data-link-title="Pod">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">
         class <strong>Pod</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Pod</span> <span class='kr'>extends</span> Pod</code></pre>
 <h4 class="pdoc-member-header" id="Pod-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Pod(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#types.Pod'>types.Pod</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Pod-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">method <b>get</b></a>
 </h4>
 
 
@@ -779,25 +780,25 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Pod-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pod-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Pod</code></pre>
 
 
 Returns true if the given object is an instance of Pod.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pod-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -808,7 +809,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Pod-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -817,7 +818,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pod-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Pod"</span>&gt;;</code></pre>
@@ -828,7 +829,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Pod-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -837,7 +838,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Pod-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;PodSpec&gt;;</code></pre>
@@ -846,7 +847,7 @@ Specification of the desired behavior of the pod. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Pod-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;PodStatus&gt;;</code></pre>
@@ -856,7 +857,7 @@ system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Pod-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L212">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L212">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -865,35 +866,35 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodBuilder" data-link-title="PodBuilder">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L156">
         class <strong>PodBuilder</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>PodBuilder</span></code></pre>
 <h4 class="pdoc-member-header" id="PodBuilder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L158"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L158"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PodBuilder(args: <a href='#types.PodSpec'>types.PodSpec</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="PodBuilder-asDeploymentSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L167">method <b>asDeploymentSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L167">method <b>asDeploymentSpec</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>asDeploymentSpec(args?: <a href='#types.PodBuilderDeploymentSpec'>types.PodBuilderDeploymentSpec</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;DeploymentSpec&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="PodBuilder-asJobSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L199">method <b>asJobSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L199">method <b>asJobSpec</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>asJobSpec(args?: <a href='#types.PodBuilderJobSpec'>types.PodBuilderJobSpec</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;JobSpec&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="PodBuilder-asStatefulSetSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L185">method <b>asStatefulSetSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L185">method <b>asStatefulSetSpec</b></a>
 </h4>
 
 
@@ -902,33 +903,33 @@ deployments.
 }): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;StatefulSetSpec&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="PodBuilder-podSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L157">property <b>podSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L157">property <b>podSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;PodSpec&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Secret" data-link-title="Secret">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">
         class <strong>Secret</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Secret</span> <span class='kr'>extends</span> Secret</code></pre>
 <h4 class="pdoc-member-header" id="Secret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Secret(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: Secret, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-asEnvValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L484">method <b>asEnvValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L474">method <b>asEnvValue</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>asEnvValue(key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;EnvVarSource&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">method <b>get</b></a>
 </h4>
 
 
@@ -942,32 +943,32 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Secret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Secret</code></pre>
 
 
 Returns true if the given object is an instance of Secret.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Secret-mount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L470">method <b>mount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L460">method <b>mount</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>mount(destPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, srcPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#types.VolumeMount'>types.VolumeMount</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -978,7 +979,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Secret-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</code></pre>
@@ -989,7 +990,7 @@ arbitrary (possibly non-string) data value here. Described in
 https://tools.ietf.org/html/rfc4648#section-4
 
 <h4 class="pdoc-member-header" id="Secret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -998,7 +999,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Secret-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Secret"</span>&gt;;</code></pre>
@@ -1009,7 +1010,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Secret-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -1018,7 +1019,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Secret-stringData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>stringData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>stringData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stringData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1028,7 +1029,7 @@ write-only convenience method. All keys and values are merged into the data fiel
 overwriting any existing values. It is never output when reading from the API.
 
 <h4 class="pdoc-member-header" id="Secret-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1037,7 @@ overwriting any existing values. It is never output when reading from the API.
 Used to facilitate programmatic handling of secret data.
 
 <h4 class="pdoc-member-header" id="Secret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L465">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L455">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1045,21 +1046,21 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">
+    <a href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">
         class <strong>Service</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Service</span> <span class='kr'>extends</span> Service</code></pre>
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L293"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Service(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#types.Service'>types.Service</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">method <b>get</b></a>
 </h4>
 
 
@@ -1073,25 +1074,25 @@ Kubernetes convention) the ID becomes `default/<name>`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>)</code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Service</code></pre>
 
 
 Returns true if the given object is an instance of Service.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -1101,17 +1102,8 @@ convert recognized schemas to the latest internal value, and may reject unrecogn
 values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
-<h4 class="pdoc-member-header" id="Service-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L293">property <b>endpoint</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-Endpoint of the Service. This can be either an IP address or a hostname,
-depending on the k8s cluster provider.
-
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1120,7 +1112,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Service"</span>&gt;;</code></pre>
@@ -1131,7 +1123,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Service-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ObjectMeta&gt;;</code></pre>
@@ -1140,7 +1132,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Service-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ServiceSpec&gt;;</code></pre>
@@ -1149,7 +1141,7 @@ Spec defines the behavior of a service.
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ServiceStatus&gt;;</code></pre>
@@ -1159,7 +1151,7 @@ info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/111bb9802c959c4560a8b016f000fedbdac8eb80/nodejs/kubernetesx/kx.ts#L288">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetesx/blob/0cfb083680e47e5a35d756bbd5dafdc129d303c8/nodejs/kubernetesx/kx.ts#L288">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>

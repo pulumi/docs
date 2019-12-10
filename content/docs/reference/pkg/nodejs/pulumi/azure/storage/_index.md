@@ -211,7 +211,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Account</code></pre>
 
 
 Returns true if the given object is an instance of Account.  This is designed to work even
@@ -266,7 +266,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L124">property <b>customDomain</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCustomDomain'>outputs.storage.AccountCustomDomain</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCustomDomain'>AccountCustomDomain</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `customDomain` block as documented below.
 
@@ -316,7 +316,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L145">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity'>outputs.storage.AccountIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
 
 A `identity` block as defined below.
 
@@ -348,7 +348,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L161">property <b>networkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountNetworkRules'>outputs.storage.AccountNetworkRules</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</code></pre>
 
 A `networkRules` block as documented below.
 
@@ -484,7 +484,7 @@ The hostname with port if applicable for web storage in the primary location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L229">property <b>queueProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>queueProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueueProperties'>outputs.storage.AccountQueueProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>queueProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</code></pre>
 
 A `queueProperties` block as defined below.
 
@@ -686,8 +686,8 @@ const exampleAccount = new azure.storage.Account("example", {
         environment: "staging",
     },
 });
-const test = new azure.storage.AccountNetworkRules("test", {
-    bypasses: ["Metrics"],
+const test = new azure.StorageAccountNetworkRules("test", {
+    bypass: ["Metrics"],
     defaultAction: "Allow",
     ipRules: ["127.0.0.1"],
     resourceGroupName: azurerm_resource_group_testrg.name,
@@ -735,7 +735,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AccountNetworkRules</code></pre>
 
 
 Returns true if the given object is an instance of AccountNetworkRules.  This is designed to work even
@@ -885,7 +885,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Blob</code></pre>
 
 
 Returns true if the given object is an instance of Blob.  This is designed to work even
@@ -1127,7 +1127,7 @@ Creates an input binding linked to the given Blob Container to be used for an Az
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Container</code></pre>
 
 
 Returns true if the given object is an instance of Container.  This is designed to work even
@@ -1279,7 +1279,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DataLakeGen2Filesystem</code></pre>
 
 
 Returns true if the given object is an instance of DataLakeGen2Filesystem.  This is designed to work even
@@ -1438,7 +1438,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ManagementPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ManagementPolicy.  This is designed to work even
@@ -1457,7 +1457,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/managementPolicy.ts#L106">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ManagementPolicyRule'>outputs.storage.ManagementPolicyRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ManagementPolicyRule'>ManagementPolicyRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `rule` block as documented below.
 
@@ -1541,7 +1541,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></code></pre>
 
 
 Creates a new Function triggered by messages in the given queue using the callback provided.
@@ -1560,7 +1560,7 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Queue</code></pre>
 
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
@@ -1709,7 +1709,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Share</code></pre>
 
 
 Returns true if the given object is an instance of Share.  This is designed to work even
@@ -1719,7 +1719,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/share.ts#L65">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAcl'>outputs.storage.ShareAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAcl'>ShareAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -1865,7 +1865,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ShareDirectory</code></pre>
 
 
 Returns true if the given object is an instance of ShareDirectory.  This is designed to work even
@@ -2001,7 +2001,7 @@ Creates an input binding linked to the given table to be used for an Azure Funct
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Table</code></pre>
 
 
 Returns true if the given object is an instance of Table.  This is designed to work even
@@ -2021,7 +2021,7 @@ Creates an output binding linked to the given table to be used for an Azure Func
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/table.ts#L65">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TableAcl'>outputs.storage.TableAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TableAcl'>TableAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -2147,7 +2147,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is TableEntity</code></pre>
 
 
 Returns true if the given object is an instance of TableEntity.  This is designed to work even
@@ -2257,7 +2257,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ZipBlob</code></pre>
 
 
 Returns true if the given object is an instance of ZipBlob.  This is designed to work even
@@ -2277,7 +2277,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L44">property <b>content</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZipBlob-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L38">property <b>contentType</b></a>
 </h4>
@@ -2605,7 +2605,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L676">property <b>customDomain</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>inputs.storage.AccountCustomDomain</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</code></pre>
 
 A `customDomain` block as documented below.
 
@@ -2646,7 +2646,7 @@ for more information.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L697">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>inputs.storage.AccountIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
 
 A `identity` block as defined below.
 
@@ -2678,7 +2678,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L713">property <b>networkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>inputs.storage.AccountNetworkRules</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</code></pre>
 
 A `networkRules` block as documented below.
 
@@ -2686,7 +2686,7 @@ A `networkRules` block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L717">property <b>queueProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>inputs.storage.AccountQueueProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</code></pre>
 
 A `queueProperties` block as defined below.
 
@@ -2881,7 +2881,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L468">property <b>customDomain</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>inputs.storage.AccountCustomDomain</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</code></pre>
 
 A `customDomain` block as documented below.
 
@@ -2922,7 +2922,7 @@ for more information.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L489">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>inputs.storage.AccountIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
 
 A `identity` block as defined below.
 
@@ -2954,7 +2954,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L505">property <b>networkRules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>inputs.storage.AccountNetworkRules</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</code></pre>
 
 A `networkRules` block as documented below.
 
@@ -3090,7 +3090,7 @@ The hostname with port if applicable for web storage in the primary location.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/account.ts#L573">property <b>queueProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>inputs.storage.AccountQueueProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</code></pre>
 
 A `queueProperties` block as defined below.
 
@@ -3378,7 +3378,7 @@ Signature of the callback that can receive blob notifications.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Data that will be passed along in the context object to the BlobCallback.
 
@@ -3387,7 +3387,7 @@ Data that will be passed along in the context object to the BlobCallback.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: R): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 A callback function that signals to the runtime that your code has completed. If your
@@ -3474,7 +3474,7 @@ at the default trace level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L116">property <b>req</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
 
 HTTP request object. Provided to your function when using HTTP Bindings.
 
@@ -3492,13 +3492,13 @@ HTTP response object. Provided to your function when using HTTP Bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BlobEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BlobEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="BlobEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L231"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: storage.Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="BlobEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L231">method <b>getProvider</b></a>
@@ -3512,7 +3512,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -3529,7 +3529,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BlobEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L231">property <b>urn</b></a>
 </h4>
@@ -3545,7 +3545,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetBlobFunctionArgs'>GetBlobFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetBlobFunctionArgs'>GetBlobFunctionArgs</a>, <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="BlobEventSubscriptionArgs-account">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h4>
@@ -3568,7 +3568,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -3577,7 +3577,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -3660,7 +3660,7 @@ for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
 
 Host configuration options.
 
@@ -3688,7 +3688,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -3721,7 +3721,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -3790,7 +3790,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BlobFunction</span> <span class='kr'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BlobFunction</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Function'>Function</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Azure Function triggered by changes in a Storage Blob Container.
 
@@ -3821,7 +3821,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 Function callback.
 
@@ -3844,7 +3844,7 @@ Function name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -3853,7 +3853,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -3891,7 +3891,7 @@ for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -3899,7 +3899,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -3909,7 +3909,7 @@ Output bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#BindingSettings'>BindingSettings</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#BindingSettings'>BindingSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="BlobInputBinding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L280"> <b>constructor</b></a>
 </h4>
@@ -3948,7 +3948,7 @@ Blob name to retrieve. May contain a binding expression to bind to a value from 
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobInputBindingDefinition</span> <span class='kr'>extends</span> <a href='#BlobBindingDefinition'>BlobBindingDefinition</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BlobInputBindingDefinition</span> <span class='kr'>extends</span> BlobBindingDefinition</code></pre>
 <h4 class="pdoc-member-header" id="BlobInputBindingDefinition-connection">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L78">property <b>connection</b></a>
 </h4>
@@ -4443,7 +4443,7 @@ Single ipv4 address or range (connected with a dash) of ipv4 addresses.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountBlobContainerSAS.ts#L131">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountBlobContainerSASPermissions'>inputs.storage.GetAccountBlobContainerSASPermissions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountBlobContainerSASPermissions'>GetAccountBlobContainerSASPermissions</a>;</code></pre>
 
 A `permissions` block as defined below.
 
@@ -4527,7 +4527,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountBlobContainerSAS.ts#L152">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountBlobContainerSASPermissions'>outputs.storage.GetAccountBlobContainerSASPermissions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountBlobContainerSASPermissions'>GetAccountBlobContainerSASPermissions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountBlobContainerSASResult-sas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountBlobContainerSAS.ts#L156">property <b>sas</b></a>
 </h4>
@@ -4595,7 +4595,7 @@ The Tier of this storage account.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccount.ts#L85">property <b>customDomain</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCustomDomain'>outputs.storage.GetAccountCustomDomain</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCustomDomain'>GetAccountCustomDomain</a>;</code></pre>
 
 A `customDomain` block as documented below.
 
@@ -4965,7 +4965,7 @@ Only permit `https` access. If `false`, both `http` and `https` are permitted. D
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L108">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions'>inputs.storage.GetAccountSASPermissions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</code></pre>
 
 A `permissions` block as defined below.
 
@@ -4973,7 +4973,7 @@ A `permissions` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L112">property <b>resourceTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes'>inputs.storage.GetAccountSASResourceTypes</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</code></pre>
 
 A `resourceTypes` block as defined below.
 
@@ -4981,7 +4981,7 @@ A `resourceTypes` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L116">property <b>services</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices'>inputs.storage.GetAccountSASServices</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices'>GetAccountSASServices</a>;</code></pre>
 
 A `services` block as defined below.
 
@@ -5030,12 +5030,12 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L130">property <b>permissions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions'>outputs.storage.GetAccountSASPermissions</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountSASResult-resourceTypes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L131">property <b>resourceTypes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes'>outputs.storage.GetAccountSASResourceTypes</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountSASResult-sas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L135">property <b>sas</b></a>
 </h4>
@@ -5048,7 +5048,7 @@ The computed Account Shared Access Signature (SAS).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L136">property <b>services</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices'>outputs.storage.GetAccountSASServices</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices'>GetAccountSASServices</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountSASResult-start">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getAccountSAS.ts#L137">property <b>start</b></a>
 </h4>
@@ -5060,12 +5060,12 @@ The computed Account Shared Access Signature (SAS).
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetBlobFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetBlobFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="GetBlobFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -5074,7 +5074,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -5104,7 +5104,7 @@ for more details.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -5112,7 +5112,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -5156,7 +5156,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/getPolicy.ts#L61">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRule'>outputs.storage.GetPolicyRule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRule'>GetPolicyRule</a>[];</code></pre>
 
 A `rule` block as documented below.
 
@@ -5179,7 +5179,7 @@ The set of arguments for constructing a ManagementPolicy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/managementPolicy.ts#L166">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagementPolicyRule'>inputs.storage.ManagementPolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagementPolicyRule'>ManagementPolicyRule</a>&gt;[]&gt;;</code></pre>
 
 A `rule` block as documented below.
 
@@ -5205,7 +5205,7 @@ Input properties used for looking up and filtering ManagementPolicy resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/managementPolicy.ts#L152">property <b>rules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagementPolicyRule'>inputs.storage.ManagementPolicyRule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagementPolicyRule'>ManagementPolicyRule</a>&gt;[]&gt;;</code></pre>
 
 A `rule` block as documented below.
 
@@ -5275,7 +5275,7 @@ Signature of the callback that can receive queue notifications.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueContext</span> <span class='kr'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueContext</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Data that will be passed along in the context object to the QueueContext.
 
@@ -5284,7 +5284,7 @@ Data that will be passed along in the context object to the QueueContext.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: R): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 
 A callback function that signals to the runtime that your code has completed. If your
@@ -5356,7 +5356,7 @@ at the default trace level.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L358">property <b>req</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
 
 HTTP request object. Provided to your function when using HTTP Bindings.
 
@@ -5374,13 +5374,13 @@ HTTP response object. Provided to your function when using HTTP Bindings.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L504"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L504">method <b>getProvider</b></a>
@@ -5394,7 +5394,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -5411,7 +5411,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L737">property <b>functionApp</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L504">property <b>urn</b></a>
 </h4>
@@ -5427,7 +5427,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-account">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h4>
@@ -5450,7 +5450,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -5459,7 +5459,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -5566,7 +5566,7 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -5599,7 +5599,7 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -5669,7 +5669,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueFunction</span> <span class='kr'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueFunction</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Function'>Function</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 
 Azure Function triggered by a Storage Queue.
 
@@ -5700,7 +5700,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 Function callback.
 
@@ -5718,12 +5718,12 @@ Function name.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueFunctionArgs</span> <span class='kr'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueFunctionArgs-callback">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
 [callback] or [callbackFactory] must be provided.
@@ -5732,7 +5732,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 
 The Javascript function instance that will be called to produce the function that is the
 entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
@@ -5757,7 +5757,7 @@ Default is 'string'.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
 
 Input bindings.
 
@@ -5765,7 +5765,7 @@ Input bindings.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
 
 Output bindings.
 
@@ -5837,7 +5837,7 @@ The time interval between retries when processing of a message fails.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueHostSettings</span> <span class='kr'>extends</span> <a href='#HostSettings'>HostSettings</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueHostSettings</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="QueueHostSettings-aggregator">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/appservice/zMixins.ts#L234">property <b>aggregator</b></a>
 </h4>
@@ -5927,7 +5927,7 @@ support.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#BindingSettings'>BindingSettings</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#BindingSettings'>BindingSettings</a></code></pre>
 
 Azure Function's output binding that sends messages to a Storage Queue.
 
@@ -5942,7 +5942,7 @@ Azure Function's output binding that sends messages to a Storage Queue.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L562">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#QueueOutputBindingDefinition'>QueueOutputBindingDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;QueueOutputBindingDefinition&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="QueueOutputBinding-settings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L563">property <b>settings</b></a>
 </h4>
@@ -6004,7 +6004,7 @@ The set of arguments for constructing a Share resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/share.ts#L179">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>inputs.storage.ShareAcl</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>ShareAcl</a>&gt;[]&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -6148,7 +6148,7 @@ Input properties used for looking up and filtering Share resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/share.ts#L143">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>inputs.storage.ShareAcl</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>ShareAcl</a>&gt;[]&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -6228,7 +6228,7 @@ The set of arguments for constructing a Table resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/table.ts#L147">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>inputs.storage.TableAcl</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>TableAcl</a>&gt;[]&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -6367,7 +6367,7 @@ Changing this forces a new resource to be created.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#BindingSettings'>BindingSettings</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#BindingSettings'>BindingSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="TableInputBinding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L659"> <b>constructor</b></a>
 </h4>
@@ -6379,7 +6379,7 @@ Changing this forces a new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L658">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TableInputBindingDefinition'>TableInputBindingDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;TableInputBindingDefinition&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TableInputBinding-settings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L659">property <b>settings</b></a>
 </h4>
@@ -6430,7 +6430,7 @@ The maximum number of entities to read.
     </a>
 </h3>
 
-<pre class="highlight"><code> <span class='kr'>implements</span> <a href='#BindingSettings'>BindingSettings</a></code></pre>
+<pre class="highlight"><code> <span class='kr'>implements</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#BindingSettings'>BindingSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="TableOutputBinding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L678"> <b>constructor</b></a>
 </h4>
@@ -6442,7 +6442,7 @@ The maximum number of entities to read.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L677">property <b>binding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TableOutputBindingDefinition'>TableOutputBindingDefinition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;TableOutputBindingDefinition&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TableOutputBinding-settings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zMixins.ts#L678">property <b>settings</b></a>
 </h4>
@@ -6462,7 +6462,7 @@ Input properties used for looking up and filtering Table resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/table.ts#L124">property <b>acls</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>inputs.storage.TableAcl</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>TableAcl</a>&gt;[]&gt;;</code></pre>
 
 One or more `acl` blocks as defined below.
 
@@ -6515,7 +6515,7 @@ The set of arguments for constructing a ZipBlob resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L150">property <b>content</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZipBlobArgs-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L144">property <b>contentType</b></a>
 </h4>
@@ -6595,7 +6595,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L129">property <b>content</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZipBlobState-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/storage/zipBlob.ts#L123">property <b>contentType</b></a>
 </h4>

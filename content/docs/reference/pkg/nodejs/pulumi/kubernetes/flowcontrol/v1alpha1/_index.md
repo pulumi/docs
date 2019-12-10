@@ -75,7 +75,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FlowSchema</code></pre>
 
 
 Returns true if the given object is an instance of FlowSchema.  This is designed to work even
@@ -116,7 +116,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/FlowSchema.ts#L36">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 
 `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -125,7 +125,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/FlowSchema.ts#L42">property <b>spec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaSpec'>outputs.flowcontrol.v1alpha1.FlowSchemaSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaSpec'>FlowSchemaSpec</a>&gt;;</code></pre>
 
 `spec` is the specification of the desired behavior of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -134,7 +134,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/FlowSchema.ts#L48">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaStatus'>outputs.flowcontrol.v1alpha1.FlowSchemaStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaStatus'>FlowSchemaStatus</a>&gt;;</code></pre>
 
 `status` is the current status of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -198,7 +198,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FlowSchemaList</code></pre>
 
 
 Returns true if the given object is an instance of FlowSchemaList.  This is designed to work even
@@ -228,7 +228,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/FlowSchemaList.ts#L25">property <b>items</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchema'>outputs.flowcontrol.v1alpha1.FlowSchema</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchema'>FlowSchema</a>[]&gt;;</code></pre>
 
 `items` is a list of FlowSchemas.
 
@@ -247,7 +247,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/FlowSchemaList.ts#L39">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 
 `metadata` is the standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -311,7 +311,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PriorityLevelConfiguration</code></pre>
 
 
 Returns true if the given object is an instance of PriorityLevelConfiguration.  This is designed to work even
@@ -352,7 +352,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/PriorityLevelConfiguration.ts#L34">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 
 `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -361,7 +361,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/PriorityLevelConfiguration.ts#L40">property <b>spec</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationSpec'>outputs.flowcontrol.v1alpha1.PriorityLevelConfigurationSpec</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationSpec'>PriorityLevelConfigurationSpec</a>&gt;;</code></pre>
 
 `spec` is the specification of the desired behavior of a "request-priority". More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -370,7 +370,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/PriorityLevelConfiguration.ts#L46">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationStatus'>outputs.flowcontrol.v1alpha1.PriorityLevelConfigurationStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationStatus'>PriorityLevelConfigurationStatus</a>&gt;;</code></pre>
 
 `status` is the current status of a "request-priority". More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -434,7 +434,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PriorityLevelConfigurationList</code></pre>
 
 
 Returns true if the given object is an instance of PriorityLevelConfigurationList.  This is designed to work even
@@ -464,7 +464,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/PriorityLevelConfigurationList.ts#L25">property <b>items</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfiguration'>outputs.flowcontrol.v1alpha1.PriorityLevelConfiguration</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfiguration'>PriorityLevelConfiguration</a>[]&gt;;</code></pre>
 
 `items` is a list of request-priorities.
 
@@ -483,7 +483,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/flowcontrol/v1alpha1/PriorityLevelConfigurationList.ts#L39">property <b>metadata</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 
 `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

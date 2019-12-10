@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/pulumi"
+title_tag: "Package @pulumi/pulumi | Node.js SDK"
 linktitle: "@pulumi/pulumi"
 meta_desc: "Explore members of the @pulumi/pulumi package."
 ---
@@ -115,8 +116,8 @@ import * as pulumi from "@pulumi/pulumi";
     <li><a href="#LiftedObject"><span class="symbol api"></span>LiftedObject</a></li>
     <li><a href="#liftProperties"><span class="symbol api"></span>liftProperties</a></li>
     <li><a href="#mergeOptions"><span class="symbol api"></span>mergeOptions</a></li>
-    <li><a href="#output"><span class="symbol api"></span>output</a></li>
     <li><a href="#Output"><span class="symbol api"></span>Output</a></li>
+    <li><a href="#output"><span class="symbol api"></span>output</a></li>
     <li><a href="#OutputConstructor"><span class="symbol api"></span>OutputConstructor</a></li>
     <li><a href="#OutputInstance"><span class="symbol api"></span>OutputInstance</a></li>
     <li><a href="#ResourceError"><span class="symbol api"></span>ResourceError</a></li>
@@ -181,7 +182,7 @@ perform resource operations.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -248,7 +249,7 @@ upon the diffing of the new goal state compared to the current known resource st
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -310,7 +311,7 @@ Creates and registers a new provider resource for a particular package.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -382,7 +383,7 @@ the order in which we perform resource operations.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Resource-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/resource.ts#L135">property <b>urn</b></a>
@@ -455,7 +456,7 @@ This operation is not supported (and will throw) if the named stack output is a 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
@@ -813,7 +814,7 @@ fully qualified names, such as `pulumi:foo:a`, ..., and `pulumi:bar:a`, respecti
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>get&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): K | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>get&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: StringConfigOptions&lt;K&gt;): K | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 
 get loads an optional configuration value by its key, or undefined if it doesn't exist.
@@ -834,7 +835,7 @@ If the configuration value isn't a legal boolean, this function will throw an er
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>getNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>getNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: NumberConfigOptions): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 
 getNumber loads an optional configuration value, as a number, by its key, or undefined if it doesn't exist.
@@ -856,7 +857,7 @@ This routine simply JSON parses and doesn't validate the shape of the contents.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>getSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>getSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: StringConfigOptions&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 
 getSecret loads an optional configuration value by its key, marking it as a secret, or undefined if it
@@ -879,7 +880,7 @@ throw an error.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>getSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>getSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: NumberConfigOptions): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 
 getSecretNumber loads an optional configuration value, as a number, by its key, marking it as a secret
@@ -903,7 +904,7 @@ This routine simply JSON parses and doesn't validate the shape of the contents.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>require&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): K</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>require&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: StringConfigOptions&lt;K&gt;): K</code></pre>
 
 
 require loads a configuration value by its given key.  If it doesn't exist, an error is thrown.
@@ -924,7 +925,7 @@ configuration value is not a legal boolean, an error is thrown.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>requireNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requireNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: NumberConfigOptions): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 
 requireNumber loads a configuration value, as a number, by its given key.  If it doesn't exist, or the
@@ -946,7 +947,7 @@ it doesn't exist, or the configuration value is not a legal JSON string, an erro
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>requireSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requireSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: StringConfigOptions&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt;</code></pre>
 
 
 require loads a configuration value by its given key, marking it as a secet.  If it doesn't exist, an error
@@ -968,7 +969,7 @@ If it doesn't exist, or the configuration value is not a legal boolean, an error
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>requireSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>requireSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: NumberConfigOptions): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;</code></pre>
 
 
 requireSecretNumber loads a configuration value, as a number, by its given key, marking it as a secret.
@@ -1366,35 +1367,6 @@ Conceptually property merging follows these basic rules:
 
 <pre class="highlight"><code><span class='kd'></span>mergeOptions(opts1: <a href='#ResourceOptions'>ResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts2: <a href='#ResourceOptions'>ResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#ResourceOptions'>ResourceOptions</a></code></pre>
 
-<h3 class="pdoc-module-header" id="output" data-link-title="output">
-    <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L360">
-        function <strong>output</strong>
-    </a>
-</h3>
-
-
-<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</code></pre>
-
-
-[output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
-values as necessary.
-
-The expected way to use this function is like so:
-
-```ts
-     var transformed = pulumi.output(someVal).apply(unwrapped => {
-         // Do whatever you want now.  'unwrapped' will contain no outputs/promises inside
-         // here, so you can easily do whatever sort of transformation is most convenient.
-     });
-
-     // the result can be passed to another Resource.  The dependency information will be
-     // properly maintained.
-     var someResource = new SomeResource(name, { data: transformed ... });
-```
-
-
-<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</code></pre>
-
 <h3 class="pdoc-module-header" id="Output" data-link-title="Output">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L740">
         type <strong>Output</strong>
@@ -1444,6 +1416,35 @@ Instead of having to write:
      const first: Output<Order> = o.apply(v => v.orders[0]);
 ```
 
+<h3 class="pdoc-module-header" id="output" data-link-title="output">
+    <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L360">
+        function <strong>output</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</code></pre>
+
+
+[output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
+values as necessary.
+
+The expected way to use this function is like so:
+
+```ts
+     var transformed = pulumi.output(someVal).apply(unwrapped => {
+         // Do whatever you want now.  'unwrapped' will contain no outputs/promises inside
+         // here, so you can easily do whatever sort of transformation is most convenient.
+     });
+
+     // the result can be passed to another Resource.  The dependency information will be
+     // properly maintained.
+     var someResource = new SomeResource(name, { data: transformed ... });
+```
+
+
+<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</code></pre>
+
 <h3 class="pdoc-module-header" id="OutputConstructor" data-link-title="OutputConstructor">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L685">
         interface <strong>OutputConstructor</strong>
@@ -1470,7 +1471,7 @@ arbitrary values to see if they are [Output]s.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;T&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="OutputInstance" data-link-title="OutputInstance">
     <a href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L633">
@@ -1563,7 +1564,7 @@ no usefulness of presenting that stack to the user.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ResourceError</code></pre>
 
 
 Returns true if the given object is an instance of a ResourceError.  This is designed to work even when
@@ -1837,7 +1838,7 @@ that as many errors as possible can be associated with a Resource.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RunError</code></pre>
 
 
 Returns true if the given object is an instance of a RunError.  This is designed to work even when
@@ -2005,7 +2006,7 @@ Returns an iterable of key, value pairs for every entry in the array
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>every(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>every(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'>unknown</span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 
 Determines whether all the members of an array satisfy the specified test.
@@ -2031,7 +2032,7 @@ Returns the this object after filling the section identified by start and end wi
 Returns the elements of an array that meet the condition specified in a callback function.
 
 
-<pre class="highlight"><code><span class='kd'></span>filter(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filter(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'>unknown</span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</code></pre>
 
 
 Returns the elements of an array that meet the condition specified in a callback function.
@@ -2048,14 +2049,14 @@ Returns the value of the first element in the array where predicate is true, and
 otherwise.
 
 
-<pre class="highlight"><code><span class='kd'></span>find(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>find(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'>unknown</span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UnwrappedArray-findIndex">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/e09cbc708e9e3b489ee0ed120ef0ecf96cc4d90a/sdk/nodejs/output.ts#L623">method <b>findIndex</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>findIndex(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>findIndex(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'>unknown</span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 
 Returns the index of the first element in the array where predicate is true, and -1
@@ -2224,7 +2225,7 @@ Returns a section of an array.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span>some(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'></span>some(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'>unknown</span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 
 Determines whether the specified callback function returns true for any element of an array.

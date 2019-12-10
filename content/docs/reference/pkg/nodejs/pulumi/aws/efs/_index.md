@@ -1,5 +1,6 @@
 ---
 title: "Module efs"
+title_tag: "Module efs | Package @pulumi/aws | Node.js SDK"
 linktitle: "efs"
 meta_desc: "Explore members of the efs module in the @pulumi/aws package."
 ---
@@ -120,7 +121,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FileSystem</code></pre>
 
 
 Returns true if the given object is an instance of FileSystem.  This is designed to work even
@@ -182,7 +183,7 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/efs/fileSystem.ts#L95">property <b>lifecyclePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lifecyclePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FileSystemLifecyclePolicy'>outputs.efs.FileSystemLifecyclePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lifecyclePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FileSystemLifecyclePolicy'>FileSystemLifecyclePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 
@@ -296,7 +297,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is MountTarget</code></pre>
 
 
 Returns true if the given object is an instance of MountTarget.  This is designed to work even
@@ -479,7 +480,7 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/efs/fileSystem.ts#L230">property <b>lifecyclePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>inputs.efs.FileSystemLifecyclePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>FileSystemLifecyclePolicy</a>&gt;;</code></pre>
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 
@@ -572,7 +573,7 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/efs/fileSystem.ts#L189">property <b>lifecyclePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>inputs.efs.FileSystemLifecyclePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>FileSystemLifecyclePolicy</a>&gt;;</code></pre>
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
 

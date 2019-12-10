@@ -1,5 +1,6 @@
 ---
 title: "Module types/output"
+title_tag: "Module types/output | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/f5bigip package."
 ---
@@ -135,12 +136,12 @@ Name of the node
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/output.ts#L47">property <b>actions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRuleAction'>outputs.ltm.PolicyRuleAction</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>actions?: <a href='#PolicyRuleAction'>PolicyRuleAction</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PolicyRule-conditions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/output.ts#L48">property <b>conditions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRuleCondition'>outputs.ltm.PolicyRuleCondition</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>conditions?: <a href='#PolicyRuleCondition'>PolicyRuleCondition</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="PolicyRule-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/output.ts#L49">property <b>name</b></a>
 </h4>
@@ -1240,7 +1241,7 @@ Name of the iApp.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/output.ts#L302">property <b>rows</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rows?: <a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppTableRow'>outputs.sys.IAppTableRow</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rows?: <a href='#IAppTableRow'>IAppTableRow</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="IAppTableRow" data-link-title="IAppTableRow">
     <a href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/types/output.ts#L305">
         interface <strong>IAppTableRow</strong>

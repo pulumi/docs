@@ -1,5 +1,6 @@
 ---
 title: "Module filestore"
+title_tag: "Module filestore | Package @pulumi/gcp | Node.js SDK"
 linktitle: "filestore"
 meta_desc: "Explore members of the filestore module in the @pulumi/gcp package."
 ---
@@ -78,7 +79,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Instance</code></pre>
 
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
@@ -112,7 +113,7 @@ Server-specified ETag for the instance resource to prevent simultaneous updates 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L54">property <b>fileShares</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFileShares'>outputs.filestore.InstanceFileShares</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
 
 File system shares on the instance. For this version, only a single file share is supported.
 
@@ -145,7 +146,7 @@ The resource name of the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L66">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetwork'>outputs.filestore.InstanceNetwork</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetwork'>InstanceNetwork</a>[]&gt;;</code></pre>
 
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 
@@ -204,7 +205,7 @@ A description of the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L189">property <b>fileShares</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>inputs.filestore.InstanceFileShares</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
 
 File system shares on the instance. For this version, only a single file share is supported.
 
@@ -228,7 +229,7 @@ The resource name of the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L201">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>inputs.filestore.InstanceNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
 
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 
@@ -291,7 +292,7 @@ Server-specified ETag for the instance resource to prevent simultaneous updates 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L154">property <b>fileShares</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fileShares?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>inputs.filestore.InstanceFileShares</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fileShares?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
 
 File system shares on the instance. For this version, only a single file share is supported.
 
@@ -315,7 +316,7 @@ The resource name of the instance.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L166">property <b>networks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>inputs.filestore.InstanceNetwork</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
 
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 

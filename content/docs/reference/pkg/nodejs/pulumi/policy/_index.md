@@ -1,5 +1,6 @@
 ---
 title: "Package @pulumi/policy"
+title_tag: "Package @pulumi/policy | Node.js SDK"
 linktitle: "@pulumi/policy"
 meta_desc: "Explore members of the @pulumi/policy package."
 ---

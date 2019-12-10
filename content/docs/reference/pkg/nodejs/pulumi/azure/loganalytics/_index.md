@@ -113,7 +113,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is LinkedService</code></pre>
 
 
 Returns true if the given object is an instance of LinkedService.  This is designed to work even
@@ -140,7 +140,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/loganalytics/linkedService.ts#L80">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinkedServiceLinkedServiceProperties'>outputs.loganalytics.LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinkedServiceLinkedServiceProperties'>LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 
@@ -218,7 +218,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/loganalytics/linkedService.ts#L193">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperties'>inputs.loganalytics.LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperties'>LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 
@@ -276,7 +276,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/loganalytics/linkedService.ts#L159">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperties'>inputs.loganalytics.LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperties'>LinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 

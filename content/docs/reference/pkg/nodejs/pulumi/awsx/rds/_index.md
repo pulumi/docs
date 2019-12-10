@@ -1,5 +1,6 @@
 ---
 title: "Module rds"
+title_tag: "Module rds | Package @pulumi/awsx | Node.js SDK"
 linktitle: "rds"
 meta_desc: "Explore members of the rds module in the @pulumi/awsx package."
 ---
@@ -94,7 +95,7 @@ meta_desc: "Explore members of the rds module in the @pulumi/awsx package."
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>activeTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>activeTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of current transactions executing on an Aurora database instance per
@@ -110,7 +111,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraBinlogReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraBinlogReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of time a replica DB cluster running on Aurora with MySQL compatibility lags
@@ -128,7 +129,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBDataTransferBytes(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBDataTransferBytes(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Units: Bytes
@@ -142,7 +143,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBReplicatedWriteIO(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBReplicatedWriteIO(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Units: Bytes
@@ -156,7 +157,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBReplicationLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraGlobalDBReplicationLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Units: Milliseconds
@@ -170,7 +171,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 For an Aurora Replica, the amount of lag when replicating updates from the primary instance,
@@ -185,7 +186,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraReplicaLagMaximum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraReplicaLagMaximum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The maximum amount of lag between the primary instance and each Aurora DB instance in the DB
@@ -200,7 +201,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>auroraReplicaLagMinimum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>auroraReplicaLagMinimum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The minimum amount of lag between the primary instance and each Aurora DB instance in the DB
@@ -215,7 +216,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>backtrackChangeRecordsCreationRate(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>backtrackChangeRecordsCreationRate(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of backtrack change records created over five minutes for your DB cluster.
@@ -229,7 +230,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>backtrackChangeRecordsStored(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>backtrackChangeRecordsStored(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The actual number of backtrack change records used by your DB cluster.
@@ -243,7 +244,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>backtrackWindowActual(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>backtrackWindowActual(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The difference between the target backtrack window and the actual backtrack window.
@@ -257,7 +258,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>backtrackWindowAlert(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>backtrackWindowAlert(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of times that the actual backtrack window is smaller than the target backtrack
@@ -272,7 +273,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>backupRetentionPeriodStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>backupRetentionPeriodStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total amount of backup storage in GiB used to support the point-in-time restore feature
@@ -289,7 +290,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>binLogDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>binLogDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of disk space occupied by binary logs on the master. Applies to MySQL read
@@ -304,7 +305,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>blockedTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>blockedTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of transactions in the database that are blocked per second.
@@ -318,7 +319,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>bufferCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>bufferCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percentage of requests that are served by the buffer cache.
@@ -332,7 +333,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>burstBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>burstBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.
@@ -346,7 +347,7 @@ Units: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>commitLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>commitLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for commit operations, in milliseconds.
@@ -360,7 +361,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>commitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>commitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of commit operations per second.
@@ -374,7 +375,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuCreditBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuCreditBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 [T2 instances] The number of earned CPU credits that an instance has accrued since it was
@@ -401,7 +402,7 @@ CPU credit metrics are available at a five-minute frequency only.
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuCreditUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuCreditUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 [T2 instances] The number of CPU credits spent by the instance for CPU utilization. One CPU
@@ -419,7 +420,7 @@ greater than five minutes, use the Sum statistic instead of the Average statisti
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>cpuUtilization(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>cpuUtilization(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percentage of CPU utilization.
@@ -433,7 +434,7 @@ Units: Percent
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>databaseConnections(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>databaseConnections(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of database connections in use.
@@ -447,7 +448,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ddlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ddlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for data definition language (DDL) requests, in milliseconds—for
@@ -462,7 +463,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>ddlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>ddlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of DDL requests per second.
@@ -476,7 +477,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>deadlocks(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>deadlocks(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of deadlocks in the database per second.
@@ -490,7 +491,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>deleteLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>deleteLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for delete queries, in milliseconds.
@@ -504,7 +505,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>deleteThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>deleteThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of delete queries per second.
@@ -518,7 +519,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>diskQueueDepth(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>diskQueueDepth(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of outstanding IOs (read/write requests) waiting to access the disk.
@@ -532,7 +533,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>dmlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>dmlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for inserts, updates, and deletes, in milliseconds.
@@ -546,7 +547,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>dmlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>dmlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of inserts, updates, and deletes per second.
@@ -560,7 +561,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>engineUptime(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>engineUptime(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of time that the instance has been running, in seconds.
@@ -574,7 +575,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>failedSQLServerAgentJobsCount(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>failedSQLServerAgentJobsCount(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of failed SQL Server Agent jobs during the last minute.
@@ -588,7 +589,7 @@ Unit: Count/Minute
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>freeableMemory(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>freeableMemory(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of available random access memory.
@@ -602,7 +603,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>freeLocalStorage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>freeLocalStorage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of storage available for temporary tables and logs, in bytes. Unlike for other DB
@@ -620,7 +621,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>freeStorageSpace(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>freeStorageSpace(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of available storage space.
@@ -634,7 +635,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>insertLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>insertLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for insert queries, in milliseconds.
@@ -648,7 +649,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>insertThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>insertThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of insert queries per second.
@@ -662,7 +663,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>loginFailures(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>loginFailures(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of failed login attempts per second.
@@ -676,7 +677,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>maximumUsedTransactionIDs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>maximumUsedTransactionIDs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The maximum transaction ID that has been used. Applies to PostgreSQL.
@@ -690,7 +691,7 @@ Units: Count
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#RdsMetricName'>RdsMetricName</a>, change: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>metric(metricName: <a href='#RdsMetricName'>RdsMetricName</a>, change: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 Creates an AWS/RDS metric with the requested [metricName]. See
@@ -730,7 +731,7 @@ Amazon RDS metrics data can be filtered by using any of the following dimensions
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkReceiveThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkReceiveThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The incoming (Receive) network traffic on the DB instance, including both customer database
@@ -745,7 +746,7 @@ Units: Bytes/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of network throughput both received from and transmitted to clients by each
@@ -761,7 +762,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>networkTransmitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkTransmitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The outgoing (Transmit) network traffic on the DB instance, including both customer database
@@ -776,7 +777,7 @@ Units: Bytes/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>oldestReplicationSlotLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>oldestReplicationSlotLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The lagging size of the replica lagging the most in terms of WAL data received. Applies to
@@ -791,7 +792,7 @@ Units: Megabytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>queries(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>queries(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of queries executed per second.
@@ -804,7 +805,7 @@ Applies to: Aurora MySQL
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RdsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RdsMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="RdsMetricChange-cluster">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/rds/metrics.ts#L102">property <b>cluster</b></a>
 </h4>
@@ -917,7 +918,7 @@ you can aggregate metrics for all instances in the region [us-east-1].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
 property, then no change will be made.  However, if the property is there by set to
@@ -927,7 +928,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
 
 The new unit for this metric.   If this object is missing this property, then no change will
 be made.  However, if the property is there by set to [undefined] then the value will be set
@@ -968,7 +969,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>rdsToAuroraPostgreSQLReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>rdsToAuroraPostgreSQLReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of lag in seconds when replicating updates from the primary RDS PostgreSQL
@@ -983,7 +984,7 @@ Applies to: Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>readIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>readIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of disk read I/O operations per second.
@@ -997,7 +998,7 @@ Units: Count/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>readLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>readLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average amount of time taken per disk I/O operation.
@@ -1011,7 +1012,7 @@ Units: Seconds
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>readThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>readThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of bytes read from disk per second.
@@ -1025,7 +1026,7 @@ Units: Bytes/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>replicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of time a Read Replica DB instance lags behind the source DB instance. Applies to
@@ -1040,7 +1041,7 @@ Units: Seconds
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>replicationSlotDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>replicationSlotDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The disk space used by replication slot files. Applies to PostgreSQL.
@@ -1054,7 +1055,7 @@ Units: Megabytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>resultSetCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>resultSetCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The percentage of requests that are served by the Resultset cache.
@@ -1068,7 +1069,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>selectLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for select queries, in milliseconds.
@@ -1082,7 +1083,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>selectThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>selectThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of select queries per second.
@@ -1096,7 +1097,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>snapshotStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>snapshotStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total amount of backup storage in GiB consumed by all Aurora snapshots for an Aurora DB
@@ -1113,7 +1114,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>swapUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>swapUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of swap space used on the DB instance. This metric is not available for SQL
@@ -1128,7 +1129,7 @@ Units: Bytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>totalBackupStorageBilled(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>totalBackupStorageBilled(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The total amount of backup storage in GiB for which you are billed for a given Aurora DB
@@ -1145,7 +1146,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>transactionLogsDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>transactionLogsDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The disk space used by transaction logs. Applies to PostgreSQL.
@@ -1159,7 +1160,7 @@ Units: Megabytes
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>transactionLogsGeneration(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>transactionLogsGeneration(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The size of transaction logs generated per second. Applies to PostgreSQL.
@@ -1173,7 +1174,7 @@ Units: Megabytes/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>updateLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>updateLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of latency for update queries, in milliseconds.
@@ -1187,7 +1188,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>updateThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>updateThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of update queries per second.
@@ -1201,7 +1202,7 @@ Applies to: Aurora MySQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>volumeBytesUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumeBytesUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The amount of storage used by your Aurora DB instance, in bytes. This value affects the cost
@@ -1216,7 +1217,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>volumeReadIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumeReadIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of billed read I/O operations from a cluster volume, reported at 5-minute
@@ -1239,7 +1240,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>volumeWriteIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>volumeWriteIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The number of write disk I/O operations to the cluster volume, reported at 5-minute
@@ -1255,7 +1256,7 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>writeIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>writeIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of disk write I/O operations per second.
@@ -1269,7 +1270,7 @@ Units: Count/Second
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>writeLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>writeLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average amount of time taken per disk I/O operation.
@@ -1283,7 +1284,7 @@ Units: Seconds
 </h3>
 
 
-<pre class="highlight"><code><span class='kd'></span>writeThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></code></pre>
+<pre class="highlight"><code><span class='kd'></span>writeThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric'>Metric</a></code></pre>
 
 
 The average number of bytes written to disk per second.

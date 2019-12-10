@@ -1,5 +1,6 @@
 ---
 title: "Module cmd/run"
+title_tag: "Module cmd/run | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "run"
 meta_desc: "Explore members of the run module in the @pulumi/pulumi package."
 ---

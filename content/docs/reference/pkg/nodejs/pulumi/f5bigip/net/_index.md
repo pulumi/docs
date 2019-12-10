@@ -1,5 +1,6 @@
 ---
 title: "Module net"
+title_tag: "Module net | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "net"
 meta_desc: "Explore members of the net module in the @pulumi/f5bigip package."
 ---
@@ -103,7 +104,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Route</code></pre>
 
 
 Returns true if the given object is an instance of Route.  This is designed to work even
@@ -202,7 +203,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SelfIp</code></pre>
 
 
 Returns true if the given object is an instance of SelfIp.  This is designed to work even
@@ -327,7 +328,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Vlan</code></pre>
 
 
 Returns true if the given object is an instance of Vlan.  This is designed to work even
@@ -346,7 +347,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/net/vlan.ts#L64">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>interfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#VlanInterface'>outputs.net.VlanInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>interfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#VlanInterface'>VlanInterface</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies which interfaces you want this VLAN to use for traffic management.
 
@@ -544,7 +545,7 @@ The set of arguments for constructing a Vlan resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/net/vlan.ts#L134">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#VlanInterface'>inputs.net.VlanInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#VlanInterface'>VlanInterface</a>&gt;[]&gt;;</code></pre>
 
 Specifies which interfaces you want this VLAN to use for traffic management.
 
@@ -578,7 +579,7 @@ Input properties used for looking up and filtering Vlan resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/net/vlan.ts#L116">property <b>interfaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#VlanInterface'>inputs.net.VlanInterface</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#VlanInterface'>VlanInterface</a>&gt;[]&gt;;</code></pre>
 
 Specifies which interfaces you want this VLAN to use for traffic management.
 

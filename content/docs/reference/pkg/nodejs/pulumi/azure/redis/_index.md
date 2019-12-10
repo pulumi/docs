@@ -88,7 +88,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cache</code></pre>
 
 
 Returns true if the given object is an instance of Cache.  This is designed to work even
@@ -164,7 +164,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L71">property <b>patchSchedules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CachePatchSchedule'>outputs.redis.CachePatchSchedule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CachePatchSchedule'>CachePatchSchedule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
 
@@ -196,7 +196,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L87">property <b>redisConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>redisConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CacheRedisConfiguration'>outputs.redis.CacheRedisConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>redisConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</code></pre>
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
@@ -361,7 +361,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FirewallRule</code></pre>
 
 
 Returns true if the given object is an instance of FirewallRule.  This is designed to work even
@@ -519,7 +519,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L320">property <b>patchSchedules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>CachePatchSchedule</a>&gt;[]&gt;;</code></pre>
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
 
@@ -535,7 +535,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L328">property <b>redisConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</code></pre>
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
@@ -659,7 +659,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L236">property <b>patchSchedules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>CachePatchSchedule</a>&gt;[]&gt;;</code></pre>
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
 
@@ -691,7 +691,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/cache.ts#L252">property <b>redisConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</code></pre>
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
@@ -966,7 +966,7 @@ The minimum TLS version.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/getCache.ts#L91">property <b>patchSchedules</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule'>outputs.redis.GetCachePatchSchedule</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule'>GetCachePatchSchedule</a>[];</code></pre>
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
 
@@ -995,7 +995,7 @@ The Primary Access Key for the Redis Instance
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/redis/getCache.ts#L104">property <b>redisConfigurations</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>redisConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration'>outputs.redis.GetCacheRedisConfiguration</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>redisConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration'>GetCacheRedisConfiguration</a>[];</code></pre>
 
 A `redisConfiguration` block as defined below.
 

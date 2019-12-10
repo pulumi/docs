@@ -1,5 +1,6 @@
 ---
 title: "Module ebs"
+title_tag: "Module ebs | Package @pulumi/aws | Node.js SDK"
 linktitle: "ebs"
 meta_desc: "Explore members of the ebs module in the @pulumi/aws package."
 ---
@@ -126,7 +127,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DefaultKmsKey</code></pre>
 
 
 Returns true if the given object is an instance of DefaultKmsKey.  This is designed to work even
@@ -220,7 +221,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EncryptionByDefault</code></pre>
 
 
 Returns true if the given object is an instance of EncryptionByDefault.  This is designed to work even
@@ -322,7 +323,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Snapshot</code></pre>
 
 
 Returns true if the given object is an instance of Snapshot.  This is designed to work even
@@ -495,7 +496,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SnapshotCopy</code></pre>
 
 
 Returns true if the given object is an instance of SnapshotCopy.  This is designed to work even
@@ -668,7 +669,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Volume</code></pre>
 
 
 Returns true if the given object is an instance of Volume.  This is designed to work even
@@ -1065,7 +1066,7 @@ A collection of arguments for invoking getSnapshot.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshot.ts#L66">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotFilter'>inputs.ebs.GetSnapshotFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotFilter'>GetSnapshotFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -1122,7 +1123,7 @@ A collection of arguments for invoking getSnapshotIds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshotIds.ts#L63">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter'>inputs.ebs.GetSnapshotIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -1158,7 +1159,7 @@ A collection of values returned by getSnapshotIds.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshotIds.ts#L78">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter'>outputs.ebs.GetSnapshotIdsFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshotIds.ts#L85">property <b>id</b></a>
 </h4>
@@ -1220,7 +1221,7 @@ Whether the snapshot is encrypted.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshot.ts#L102">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotFilter'>outputs.ebs.GetSnapshotFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotFilter'>GetSnapshotFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getSnapshot.ts#L142">property <b>id</b></a>
 </h4>
@@ -1327,7 +1328,7 @@ A collection of arguments for invoking getVolume.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getVolume.ts#L63">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVolumeFilter'>inputs.ebs.GetVolumeFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVolumeFilter'>GetVolumeFilter</a>[];</code></pre>
 
 One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -1385,7 +1386,7 @@ Whether the disk is encrypted.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getVolume.ts#L88">property <b>filters</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVolumeFilter'>outputs.ebs.GetVolumeFilter</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVolumeFilter'>GetVolumeFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/ebs/getVolume.ts#L121">property <b>id</b></a>
 </h4>

@@ -229,7 +229,7 @@ Amount of time to wait between batches
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L24">property <b>strategies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>strategies?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkDeploymentPreferencesStrategy'>outputs.aws.BeanstalkDeploymentPreferencesStrategy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>strategies?: <a href='#BeanstalkDeploymentPreferencesStrategy'>BeanstalkDeploymentPreferencesStrategy</a>[];</code></pre>
 
 Strategy parameters
 
@@ -508,7 +508,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L120">property <b>deploymentGroups</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>deploymentGroups: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationCodedeployDeploymentGroup'>outputs.aws.ElastigroupIntegrationCodedeployDeploymentGroup</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>deploymentGroups: <a href='#ElastigroupIntegrationCodedeployDeploymentGroup'>ElastigroupIntegrationCodedeployDeploymentGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeploy-terminateInstanceOnFailure">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L121">property <b>terminateInstanceOnFailure</b></a>
 </h4>
@@ -613,7 +613,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L149">property <b>autoscaleAttributes</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleAttribute'>outputs.aws.ElastigroupIntegrationEcsAutoscaleAttribute</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleAttributes?: <a href='#ElastigroupIntegrationEcsAutoscaleAttribute'>ElastigroupIntegrationEcsAutoscaleAttribute</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleCooldown">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L150">property <b>autoscaleCooldown</b></a>
 </h4>
@@ -770,7 +770,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L190">property <b>autoscaleLabels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleLabel'>outputs.aws.ElastigroupIntegrationKubernetesAutoscaleLabel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='#ElastigroupIntegrationKubernetesAutoscaleLabel'>ElastigroupIntegrationKubernetesAutoscaleLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-clusterIdentifier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L191">property <b>clusterIdentifier</b></a>
 </h4>
@@ -877,7 +877,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L221">property <b>autoscaleConstraints</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleConstraint'>outputs.aws.ElastigroupIntegrationNomadAutoscaleConstraint</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleConstraints?: <a href='#ElastigroupIntegrationNomadAutoscaleConstraint'>ElastigroupIntegrationNomadAutoscaleConstraint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleCooldown">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L222">property <b>autoscaleCooldown</b></a>
 </h4>
@@ -997,7 +997,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L253">property <b>domains</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53Domain'>outputs.aws.ElastigroupIntegrationRoute53Domain</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>domains: <a href='#ElastigroupIntegrationRoute53Domain'>ElastigroupIntegrationRoute53Domain</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationRoute53Domain" data-link-title="ElastigroupIntegrationRoute53Domain">
     <a href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L256">
         interface <strong>ElastigroupIntegrationRoute53Domain</strong>
@@ -1014,7 +1014,7 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L258">property <b>recordSets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>recordSets: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53DomainRecordSet'>outputs.aws.ElastigroupIntegrationRoute53DomainRecordSet</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>recordSets: <a href='#ElastigroupIntegrationRoute53DomainRecordSet'>ElastigroupIntegrationRoute53DomainRecordSet</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53Domain-spotinstAcctId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L259">property <b>spotinstAcctId</b></a>
 </h4>
@@ -1156,7 +1156,7 @@ Specify a list of time windows for to execute revertToSpot strategy. Time window
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L304">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension'>outputs.aws.ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L305">property <b>evaluationPeriods</b></a>
 </h4>
@@ -1296,7 +1296,7 @@ Specify whether to terminate instances at the end of each billing hour.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L344">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingTargetPolicyDimension'>outputs.aws.ElastigroupScalingTargetPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingTargetPolicyDimension'>ElastigroupScalingTargetPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-metricName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L345">property <b>metricName</b></a>
 </h4>
@@ -1383,7 +1383,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L367">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension'>outputs.aws.ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L368">property <b>evaluationPeriods</b></a>
 </h4>
@@ -2660,12 +2660,12 @@ The tag value.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L745">property <b>customs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>customs?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupImageCustom'>outputs.azure.ElastigroupImageCustom</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>customs?: <a href='#ElastigroupImageCustom'>ElastigroupImageCustom</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImage-marketplaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L746">property <b>marketplaces</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>marketplaces?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupImageMarketplace'>outputs.azure.ElastigroupImageMarketplace</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>marketplaces?: <a href='#ElastigroupImageMarketplace'>ElastigroupImageMarketplace</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupImageCustom" data-link-title="ElastigroupImageCustom">
     <a href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L749">
         interface <strong>ElastigroupImageCustom</strong>
@@ -2815,7 +2815,7 @@ The Resource Group that the user-assigned managed identity resides in.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L796">property <b>additionalIpConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalIpConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkAdditionalIpConfig'>outputs.azure.ElastigroupNetworkAdditionalIpConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalIpConfigs?: <a href='#ElastigroupNetworkAdditionalIpConfig'>ElastigroupNetworkAdditionalIpConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-assignPublicIp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L797">property <b>assignPublicIp</b></a>
 </h4>
@@ -2885,7 +2885,7 @@ The name of the managed identity.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L818">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension'>outputs.azure.ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L819">property <b>evaluationPeriods</b></a>
 </h4>
@@ -3002,7 +3002,7 @@ The name of the managed identity.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L847">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension'>outputs.azure.ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L848">property <b>evaluationPeriods</b></a>
 </h4>
@@ -3437,7 +3437,7 @@ The tag value.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1008">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendServiceNamedPort'>outputs.gcp.ElastigroupBackendServiceNamedPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='#ElastigroupBackendServiceNamedPort'>ElastigroupBackendServiceNamedPort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-scheme">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1009">property <b>scheme</b></a>
 </h4>
@@ -3494,7 +3494,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1025">property <b>initializeParams</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDiskInitializeParam'>outputs.gcp.ElastigroupDiskInitializeParam</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='#ElastigroupDiskInitializeParam'>ElastigroupDiskInitializeParam</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-interface">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1026">property <b>interface</b></a>
 </h4>
@@ -3632,7 +3632,7 @@ The memory (in GiB) in the custom instance types. GCP has a number of limitation
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1063">property <b>autoscaleLabels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGkeAutoscaleLabel'>outputs.gcp.ElastigroupIntegrationGkeAutoscaleLabel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='#ElastigroupIntegrationGkeAutoscaleLabel'>ElastigroupIntegrationGkeAutoscaleLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-clusterId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1064">property <b>clusterId</b></a>
 </h4>
@@ -3757,12 +3757,12 @@ Labels value.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1112">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAccessConfig'>outputs.gcp.ElastigroupNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='#ElastigroupNetworkInterfaceAccessConfig'>ElastigroupNetworkInterfaceAccessConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-aliasIpRanges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1113">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAliasIpRange'>outputs.gcp.ElastigroupNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='#ElastigroupNetworkInterfaceAliasIpRange'>ElastigroupNetworkInterfaceAliasIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-network">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1114">property <b>network</b></a>
 </h4>
@@ -3831,7 +3831,7 @@ The group name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1134">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension'>outputs.gcp.ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1135">property <b>evaluationPeriods</b></a>
 </h4>
@@ -3931,7 +3931,7 @@ Labels value.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1162">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension'>outputs.gcp.ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1163">property <b>evaluationPeriods</b></a>
 </h4>
@@ -4082,7 +4082,7 @@ The names of the subnets in the region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1210">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendServiceNamedPort'>outputs.gke.ElastigroupBackendServiceNamedPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='#ElastigroupBackendServiceNamedPort'>ElastigroupBackendServiceNamedPort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-scheme">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1211">property <b>scheme</b></a>
 </h4>
@@ -4136,7 +4136,7 @@ The names of the subnets in the region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1224">property <b>initializeParams</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDiskInitializeParam'>outputs.gke.ElastigroupDiskInitializeParam</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='#ElastigroupDiskInitializeParam'>ElastigroupDiskInitializeParam</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-interface">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1225">property <b>interface</b></a>
 </h4>
@@ -4271,7 +4271,7 @@ The names of the subnets in the region.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1259">property <b>autoscaleLabels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGkeAutoscaleLabel'>outputs.gke.ElastigroupIntegrationGkeAutoscaleLabel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='#ElastigroupIntegrationGkeAutoscaleLabel'>ElastigroupIntegrationGkeAutoscaleLabel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-clusterId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1263">property <b>clusterId</b></a>
 </h4>
@@ -4381,12 +4381,12 @@ The name of the GKE cluster you wish to import.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1293">property <b>accessConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAccessConfig'>outputs.gke.ElastigroupNetworkInterfaceAccessConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='#ElastigroupNetworkInterfaceAccessConfig'>ElastigroupNetworkInterfaceAccessConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-aliasIpRanges">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1294">property <b>aliasIpRanges</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAliasIpRange'>outputs.gke.ElastigroupNetworkInterfaceAliasIpRange</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='#ElastigroupNetworkInterfaceAliasIpRange'>ElastigroupNetworkInterfaceAliasIpRange</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-network">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1295">property <b>network</b></a>
 </h4>
@@ -4452,7 +4452,7 @@ The name of the GKE cluster you wish to import.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1312">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension'>outputs.gke.ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1313">property <b>evaluationPeriods</b></a>
 </h4>
@@ -4546,7 +4546,7 @@ The name of the GKE cluster you wish to import.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1334">property <b>dimensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension'>outputs.gke.ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1335">property <b>evaluationPeriods</b></a>
 </h4>
@@ -4633,7 +4633,7 @@ Sets which location the backend services will be active. Valid values: `regional
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1357">property <b>namedPorts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportBackendServiceNamedPort'>outputs.gke.OceanImportBackendServiceNamedPort</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='#OceanImportBackendServiceNamedPort'>OceanImportBackendServiceNamedPort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportBackendService-scheme">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/1a6abe494d1203b8248d6d50ea0a27a369d2a209/sdk/nodejs/types/output.ts#L1361">property <b>scheme</b></a>
 </h4>

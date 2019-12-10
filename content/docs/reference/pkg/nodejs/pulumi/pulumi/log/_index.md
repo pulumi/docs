@@ -1,5 +1,6 @@
 ---
 title: "Module log"
+title_tag: "Module log | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "log"
 meta_desc: "Explore members of the log module in the @pulumi/pulumi package."
 ---

@@ -162,7 +162,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AvailabilitySet</code></pre>
 
 
 Returns true if the given object is an instance of AvailabilitySet.  This is designed to work even
@@ -339,7 +339,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BastionHost</code></pre>
 
 
 Returns true if the given object is an instance of BastionHost.  This is designed to work even
@@ -366,7 +366,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/bastionHost.ts#L88">property <b>ipConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BastionHostIpConfiguration'>outputs.compute.BastionHostIpConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BastionHostIpConfiguration'>BastionHostIpConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `ipConfiguration` block as defined below.
 
@@ -537,7 +537,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DataDiskAttachment</code></pre>
 
 
 Returns true if the given object is an instance of DataDiskAttachment.  This is designed to work even
@@ -751,7 +751,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Extension</code></pre>
 
 
 Returns true if the given object is an instance of Extension.  This is designed to work even
@@ -960,7 +960,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Image</code></pre>
 
 
 Returns true if the given object is an instance of Image.  This is designed to work even
@@ -970,7 +970,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L81">property <b>dataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ImageDataDisk'>outputs.compute.ImageDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ImageDataDisk'>ImageDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `dataDisk` elements as defined below.
 
@@ -1005,7 +1005,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L95">property <b>osDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ImageOsDisk'>outputs.compute.ImageOsDisk</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ImageOsDisk'>ImageOsDisk</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `osDisk` elements as defined below.
 
@@ -1153,7 +1153,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ManagedDisk</code></pre>
 
 
 Returns true if the given object is an instance of ManagedDisk.  This is designed to work even
@@ -1196,7 +1196,7 @@ If `createOption` is `Copy` or `FromImage`, then the value must be equal to or g
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/managedDisk.ts#L114">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ManagedDiskEncryptionSettings'>outputs.compute.ManagedDiskEncryptionSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ManagedDiskEncryptionSettings'>ManagedDiskEncryptionSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 an `encryptionSettings` block as defined below.
 
@@ -1351,7 +1351,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ScaleSet</code></pre>
 
 
 Returns true if the given object is an instance of ScaleSet.  This is designed to work even
@@ -1369,7 +1369,7 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L46">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bootDiagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetBootDiagnostics'>outputs.compute.ScaleSetBootDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bootDiagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetBootDiagnostics'>ScaleSetBootDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A boot diagnostics profile block as referenced below.
 
@@ -1385,7 +1385,7 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L54">property <b>extensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>extensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetExtension'>outputs.compute.ScaleSetExtension</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>extensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetExtension'>ScaleSetExtension</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
@@ -1410,7 +1410,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L59">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetIdentity'>outputs.compute.ScaleSetIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetIdentity'>ScaleSetIdentity</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScaleSet-licenseType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L63">property <b>licenseType</b></a>
 </h4>
@@ -1439,7 +1439,7 @@ Specifies the name of the image from the marketplace.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L75">property <b>networkProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfile'>outputs.compute.ScaleSetNetworkProfile</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfile'>ScaleSetNetworkProfile</a>[]&gt;;</code></pre>
 
 A collection of network profile block as documented below.
 
@@ -1447,7 +1447,7 @@ A collection of network profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L79">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfile'>outputs.compute.ScaleSetOsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfile'>ScaleSetOsProfile</a>&gt;;</code></pre>
 
 A Virtual Machine OS Profile block as documented below.
 
@@ -1455,7 +1455,7 @@ A Virtual Machine OS Profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L83">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileLinuxConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileLinuxConfig'>outputs.compute.ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileLinuxConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileLinuxConfig'>ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
 
 A Linux config block as documented below.
 
@@ -1463,7 +1463,7 @@ A Linux config block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L87">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileSecret'>outputs.compute.ScaleSetOsProfileSecret</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileSecret'>ScaleSetOsProfileSecret</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A collection of Secret blocks as documented below.
 
@@ -1471,7 +1471,7 @@ A collection of Secret blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L91">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileWindowsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfig'>outputs.compute.ScaleSetOsProfileWindowsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileWindowsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfig'>ScaleSetOsProfileWindowsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A Windows config block as documented below.
 
@@ -1487,7 +1487,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L99">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetPlan'>outputs.compute.ScaleSetPlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetPlan'>ScaleSetPlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A plan block as documented below.
 
@@ -1519,7 +1519,7 @@ The name of the resource group in which to create the virtual machine scale set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L115">property <b>rollingUpgradePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>rollingUpgradePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetRollingUpgradePolicy'>outputs.compute.ScaleSetRollingUpgradePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>rollingUpgradePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetRollingUpgradePolicy'>ScaleSetRollingUpgradePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `rollingUpgradePolicy` block as defined below. This is only applicable when the `upgradePolicyMode` is `Rolling`.
 
@@ -1535,7 +1535,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L123">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetSku'>outputs.compute.ScaleSetSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetSku'>ScaleSetSku</a>&gt;;</code></pre>
 
 Specifies the SKU of the image used to create the virtual machines.
 
@@ -1543,7 +1543,7 @@ Specifies the SKU of the image used to create the virtual machines.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L127">property <b>storageProfileDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageProfileDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileDataDisk'>outputs.compute.ScaleSetStorageProfileDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageProfileDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileDataDisk'>ScaleSetStorageProfileDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A storage profile data disk block as documented below
 
@@ -1551,7 +1551,7 @@ A storage profile data disk block as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L131">property <b>storageProfileImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageProfileImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileImageReference'>outputs.compute.ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageProfileImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileImageReference'>ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
 
 A storage profile image reference block as documented below.
 
@@ -1559,7 +1559,7 @@ A storage profile image reference block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L135">property <b>storageProfileOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageProfileOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileOsDisk'>outputs.compute.ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageProfileOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileOsDisk'>ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
 
 A storage profile os disk block as documented below
 
@@ -1676,7 +1676,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SharedImage</code></pre>
 
 
 Returns true if the given object is an instance of SharedImage.  This is designed to work even
@@ -1719,7 +1719,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImage.ts#L87">property <b>identifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SharedImageIdentifier'>outputs.compute.SharedImageIdentifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SharedImageIdentifier'>SharedImageIdentifier</a>&gt;;</code></pre>
 
 An `identifier` block as defined below.
 
@@ -1857,7 +1857,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SharedImageGallery</code></pre>
 
 
 Returns true if the given object is an instance of SharedImageGallery.  This is designed to work even
@@ -2006,7 +2006,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SharedImageVersion</code></pre>
 
 
 Returns true if the given object is an instance of SharedImageVersion.  This is designed to work even
@@ -2089,7 +2089,7 @@ A collection of tags which should be applied to this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImageVersion.ts#L104">property <b>targetRegions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SharedImageVersionTargetRegion'>outputs.compute.SharedImageVersionTargetRegion</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SharedImageVersionTargetRegion'>SharedImageVersionTargetRegion</a>[]&gt;;</code></pre>
 
 One or more `targetRegion` blocks as documented below.
 
@@ -2175,7 +2175,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Snapshot</code></pre>
 
 
 Returns true if the given object is an instance of Snapshot.  This is designed to work even
@@ -2201,7 +2201,7 @@ The size of the Snapshotted Disk in GB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L73">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SnapshotEncryptionSettings'>outputs.compute.SnapshotEncryptionSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SnapshotEncryptionSettings'>SnapshotEncryptionSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Snapshot-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L38">property <b>id</b></a>
 </h4>
@@ -2323,7 +2323,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualMachine</code></pre>
 
 
 Returns true if the given object is an instance of VirtualMachine.  This is designed to work even
@@ -2333,7 +2333,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L42">property <b>additionalCapabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>additionalCapabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineAdditionalCapabilities'>outputs.compute.VirtualMachineAdditionalCapabilities</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>additionalCapabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineAdditionalCapabilities'>VirtualMachineAdditionalCapabilities</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `additionalCapabilities` block.
 
@@ -2349,7 +2349,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L50">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>bootDiagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineBootDiagnostics'>outputs.compute.VirtualMachineBootDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>bootDiagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineBootDiagnostics'>VirtualMachineBootDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `bootDiagnostics` block.
 
@@ -2382,7 +2382,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L62">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineIdentity'>outputs.compute.VirtualMachineIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineIdentity'>VirtualMachineIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -2422,7 +2422,7 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L82">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfile'>outputs.compute.VirtualMachineOsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfile'>VirtualMachineOsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 An `osProfile` block. Required when `createOption` in the `storageOsDisk` block is set to `FromImage`.
 
@@ -2430,7 +2430,7 @@ An `osProfile` block. Required when `createOption` in the `storageOsDisk` block 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L86">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileLinuxConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileLinuxConfig'>outputs.compute.VirtualMachineOsProfileLinuxConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileLinuxConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileLinuxConfig'>VirtualMachineOsProfileLinuxConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `osProfileLinuxConfig` block.
 
@@ -2438,7 +2438,7 @@ A `osProfileLinuxConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L90">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileSecret'>outputs.compute.VirtualMachineOsProfileSecret</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileSecret'>VirtualMachineOsProfileSecret</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 One or more `osProfileSecrets` blocks.
 
@@ -2446,7 +2446,7 @@ One or more `osProfileSecrets` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L94">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>osProfileWindowsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfig'>outputs.compute.VirtualMachineOsProfileWindowsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>osProfileWindowsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfig'>VirtualMachineOsProfileWindowsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `osProfileWindowsConfig` block.
 
@@ -2454,7 +2454,7 @@ A `osProfileWindowsConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L98">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachinePlan'>outputs.compute.VirtualMachinePlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachinePlan'>VirtualMachinePlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `plan` block.
 
@@ -2486,7 +2486,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L114">property <b>storageDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageDataDisk'>outputs.compute.VirtualMachineStorageDataDisk</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageDataDisk'>VirtualMachineStorageDataDisk</a>[]&gt;;</code></pre>
 
 One or more `storageDataDisk` blocks.
 
@@ -2494,7 +2494,7 @@ One or more `storageDataDisk` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L118">property <b>storageImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageImageReference'>outputs.compute.VirtualMachineStorageImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageImageReference'>VirtualMachineStorageImageReference</a>&gt;;</code></pre>
 
 A `storageImageReference` block.
 
@@ -2502,7 +2502,7 @@ A `storageImageReference` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L122">property <b>storageOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>storageOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageOsDisk'>outputs.compute.VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>storageOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageOsDisk'>VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
 
 A `storageOsDisk` block.
 
@@ -3016,7 +3016,7 @@ The set of arguments for constructing a BastionHost resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/bastionHost.ts#L184">property <b>ipConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BastionHostIpConfiguration'>inputs.compute.BastionHostIpConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BastionHostIpConfiguration'>BastionHostIpConfiguration</a>&gt;;</code></pre>
 
 A `ipConfiguration` block as defined below.
 
@@ -3074,7 +3074,7 @@ The FQDN for the Azure Bastion Host.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/bastionHost.ts#L158">property <b>ipConfiguration</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BastionHostIpConfiguration'>inputs.compute.BastionHostIpConfiguration</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BastionHostIpConfiguration'>BastionHostIpConfiguration</a>&gt;;</code></pre>
 
 A `ipConfiguration` block as defined below.
 
@@ -3594,7 +3594,7 @@ A collection of values returned by getImage.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getImage.ts#L75">property <b>dataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageDataDisk'>outputs.compute.GetImageDataDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageDataDisk'>GetImageDataDisk</a>[];</code></pre>
 
 a collection of `dataDisk` blocks as defined below.
 
@@ -3631,7 +3631,7 @@ the name of the Image.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getImage.ts#L88">property <b>osDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osDisks: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageOsDisk'>outputs.compute.GetImageOsDisk</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osDisks: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageOsDisk'>GetImageOsDisk</a>[];</code></pre>
 
 a `osDisk` block as defined below.
 
@@ -4050,7 +4050,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getSharedImage.ts#L78">property <b>identifiers</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identifiers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageIdentifier'>outputs.compute.GetSharedImageIdentifier</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identifiers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageIdentifier'>GetSharedImageIdentifier</a>[];</code></pre>
 
 An `identifier` block as defined below.
 
@@ -4223,7 +4223,7 @@ A mapping of tags assigned to the Shared Image.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getSharedImageVersion.ts#L98">property <b>targetRegions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageVersionTargetRegion'>outputs.compute.GetSharedImageVersionTargetRegion</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageVersionTargetRegion'>GetSharedImageVersionTargetRegion</a>[];</code></pre>
 
 One or more `targetRegion` blocks as documented below.
 
@@ -4280,7 +4280,7 @@ The size of the Snapshotted Disk in GB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getSnapshot.ts#L65">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSetting'>outputs.compute.GetSnapshotEncryptionSetting</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionSettings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSetting'>GetSnapshotEncryptionSetting</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/getSnapshot.ts#L85">property <b>id</b></a>
 </h4>
@@ -4401,7 +4401,7 @@ The set of arguments for constructing a Image resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L207">property <b>dataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageDataDisk'>inputs.compute.ImageDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageDataDisk'>ImageDataDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `dataDisk` elements as defined below.
 
@@ -4427,7 +4427,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L221">property <b>osDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageOsDisk'>inputs.compute.ImageOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageOsDisk'>ImageOsDisk</a>&gt;;</code></pre>
 
 One or more `osDisk` elements as defined below.
 
@@ -4478,7 +4478,7 @@ Input properties used for looking up and filtering Image resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L166">property <b>dataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageDataDisk'>inputs.compute.ImageDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageDataDisk'>ImageDataDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `dataDisk` elements as defined below.
 
@@ -4504,7 +4504,7 @@ new resource to be created.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/image.ts#L180">property <b>osDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageOsDisk'>inputs.compute.ImageOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ImageOsDisk'>ImageOsDisk</a>&gt;;</code></pre>
 
 One or more `osDisk` elements as defined below.
 
@@ -4588,7 +4588,7 @@ If `createOption` is `Copy` or `FromImage`, then the value must be equal to or g
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/managedDisk.ts#L324">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagedDiskEncryptionSettings'>inputs.compute.ManagedDiskEncryptionSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagedDiskEncryptionSettings'>ManagedDiskEncryptionSettings</a>&gt;;</code></pre>
 
 an `encryptionSettings` block as defined below.
 
@@ -4725,7 +4725,7 @@ If `createOption` is `Copy` or `FromImage`, then the value must be equal to or g
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/managedDisk.ts#L251">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagedDiskEncryptionSettings'>inputs.compute.ManagedDiskEncryptionSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ManagedDiskEncryptionSettings'>ManagedDiskEncryptionSettings</a>&gt;;</code></pre>
 
 an `encryptionSettings` block as defined below.
 
@@ -4837,7 +4837,7 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L375">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetBootDiagnostics'>inputs.compute.ScaleSetBootDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetBootDiagnostics'>ScaleSetBootDiagnostics</a>&gt;;</code></pre>
 
 A boot diagnostics profile block as referenced below.
 
@@ -4853,7 +4853,7 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L383">property <b>extensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>extensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetExtension'>inputs.compute.ScaleSetExtension</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>extensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetExtension'>ScaleSetExtension</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
@@ -4869,7 +4869,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L388">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetIdentity'>inputs.compute.ScaleSetIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetIdentity'>ScaleSetIdentity</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScaleSetArgs-licenseType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L392">property <b>licenseType</b></a>
 </h4>
@@ -4898,7 +4898,7 @@ Specifies the name of the image from the marketplace.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L404">property <b>networkProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfile'>inputs.compute.ScaleSetNetworkProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfile'>ScaleSetNetworkProfile</a>&gt;[]&gt;;</code></pre>
 
 A collection of network profile block as documented below.
 
@@ -4906,7 +4906,7 @@ A collection of network profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L408">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfile'>inputs.compute.ScaleSetOsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfile'>ScaleSetOsProfile</a>&gt;;</code></pre>
 
 A Virtual Machine OS Profile block as documented below.
 
@@ -4914,7 +4914,7 @@ A Virtual Machine OS Profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L412">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfig'>inputs.compute.ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfig'>ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
 
 A Linux config block as documented below.
 
@@ -4922,7 +4922,7 @@ A Linux config block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L416">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecret'>inputs.compute.ScaleSetOsProfileSecret</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecret'>ScaleSetOsProfileSecret</a>&gt;[]&gt;;</code></pre>
 
 A collection of Secret blocks as documented below.
 
@@ -4930,7 +4930,7 @@ A collection of Secret blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L420">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfig'>inputs.compute.ScaleSetOsProfileWindowsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfig'>ScaleSetOsProfileWindowsConfig</a>&gt;;</code></pre>
 
 A Windows config block as documented below.
 
@@ -4946,7 +4946,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L428">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetPlan'>inputs.compute.ScaleSetPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetPlan'>ScaleSetPlan</a>&gt;;</code></pre>
 
 A plan block as documented below.
 
@@ -4978,7 +4978,7 @@ The name of the resource group in which to create the virtual machine scale set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L444">property <b>rollingUpgradePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rollingUpgradePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetRollingUpgradePolicy'>inputs.compute.ScaleSetRollingUpgradePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rollingUpgradePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetRollingUpgradePolicy'>ScaleSetRollingUpgradePolicy</a>&gt;;</code></pre>
 
 A `rollingUpgradePolicy` block as defined below. This is only applicable when the `upgradePolicyMode` is `Rolling`.
 
@@ -4994,7 +4994,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L452">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetSku'>inputs.compute.ScaleSetSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetSku'>ScaleSetSku</a>&gt;;</code></pre>
 
 Specifies the SKU of the image used to create the virtual machines.
 
@@ -5002,7 +5002,7 @@ Specifies the SKU of the image used to create the virtual machines.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L456">property <b>storageProfileDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileDataDisk'>inputs.compute.ScaleSetStorageProfileDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileDataDisk'>ScaleSetStorageProfileDataDisk</a>&gt;[]&gt;;</code></pre>
 
 A storage profile data disk block as documented below
 
@@ -5010,7 +5010,7 @@ A storage profile data disk block as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L460">property <b>storageProfileImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileImageReference'>inputs.compute.ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileImageReference'>ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
 
 A storage profile image reference block as documented below.
 
@@ -5018,7 +5018,7 @@ A storage profile image reference block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L464">property <b>storageProfileOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileOsDisk'>inputs.compute.ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileOsDisk'>ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
 
 A storage profile os disk block as documented below
 
@@ -5068,7 +5068,7 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L260">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetBootDiagnostics'>inputs.compute.ScaleSetBootDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetBootDiagnostics'>ScaleSetBootDiagnostics</a>&gt;;</code></pre>
 
 A boot diagnostics profile block as referenced below.
 
@@ -5084,7 +5084,7 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L268">property <b>extensions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>extensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetExtension'>inputs.compute.ScaleSetExtension</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>extensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetExtension'>ScaleSetExtension</a>&gt;[]&gt;;</code></pre>
 
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
@@ -5100,7 +5100,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L273">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetIdentity'>inputs.compute.ScaleSetIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetIdentity'>ScaleSetIdentity</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScaleSetState-licenseType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L277">property <b>licenseType</b></a>
 </h4>
@@ -5129,7 +5129,7 @@ Specifies the name of the image from the marketplace.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L289">property <b>networkProfiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfile'>inputs.compute.ScaleSetNetworkProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfile'>ScaleSetNetworkProfile</a>&gt;[]&gt;;</code></pre>
 
 A collection of network profile block as documented below.
 
@@ -5137,7 +5137,7 @@ A collection of network profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L293">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfile'>inputs.compute.ScaleSetOsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfile'>ScaleSetOsProfile</a>&gt;;</code></pre>
 
 A Virtual Machine OS Profile block as documented below.
 
@@ -5145,7 +5145,7 @@ A Virtual Machine OS Profile block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L297">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfig'>inputs.compute.ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfig'>ScaleSetOsProfileLinuxConfig</a>&gt;;</code></pre>
 
 A Linux config block as documented below.
 
@@ -5153,7 +5153,7 @@ A Linux config block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L301">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecret'>inputs.compute.ScaleSetOsProfileSecret</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecret'>ScaleSetOsProfileSecret</a>&gt;[]&gt;;</code></pre>
 
 A collection of Secret blocks as documented below.
 
@@ -5161,7 +5161,7 @@ A collection of Secret blocks as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L305">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfig'>inputs.compute.ScaleSetOsProfileWindowsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfig'>ScaleSetOsProfileWindowsConfig</a>&gt;;</code></pre>
 
 A Windows config block as documented below.
 
@@ -5177,7 +5177,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L313">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetPlan'>inputs.compute.ScaleSetPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetPlan'>ScaleSetPlan</a>&gt;;</code></pre>
 
 A plan block as documented below.
 
@@ -5209,7 +5209,7 @@ The name of the resource group in which to create the virtual machine scale set.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L329">property <b>rollingUpgradePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>rollingUpgradePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetRollingUpgradePolicy'>inputs.compute.ScaleSetRollingUpgradePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>rollingUpgradePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetRollingUpgradePolicy'>ScaleSetRollingUpgradePolicy</a>&gt;;</code></pre>
 
 A `rollingUpgradePolicy` block as defined below. This is only applicable when the `upgradePolicyMode` is `Rolling`.
 
@@ -5225,7 +5225,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L337">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetSku'>inputs.compute.ScaleSetSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetSku'>ScaleSetSku</a>&gt;;</code></pre>
 
 Specifies the SKU of the image used to create the virtual machines.
 
@@ -5233,7 +5233,7 @@ Specifies the SKU of the image used to create the virtual machines.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L341">property <b>storageProfileDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileDataDisk'>inputs.compute.ScaleSetStorageProfileDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileDataDisk'>ScaleSetStorageProfileDataDisk</a>&gt;[]&gt;;</code></pre>
 
 A storage profile data disk block as documented below
 
@@ -5241,7 +5241,7 @@ A storage profile data disk block as documented below
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L345">property <b>storageProfileImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileImageReference'>inputs.compute.ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileImageReference'>ScaleSetStorageProfileImageReference</a>&gt;;</code></pre>
 
 A storage profile image reference block as documented below.
 
@@ -5249,7 +5249,7 @@ A storage profile image reference block as documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/scaleSet.ts#L349">property <b>storageProfileOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageProfileOsDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileOsDisk'>inputs.compute.ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageProfileOsDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileOsDisk'>ScaleSetStorageProfileOsDisk</a>&gt;;</code></pre>
 
 A storage profile os disk block as documented below
 
@@ -5315,7 +5315,7 @@ Specifies the name of the Shared Image Gallery in which this Shared Image should
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImage.ts#L246">property <b>identifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageIdentifier'>inputs.compute.SharedImageIdentifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageIdentifier'>SharedImageIdentifier</a>&gt;;</code></pre>
 
 An `identifier` block as defined below.
 
@@ -5521,7 +5521,7 @@ Specifies the name of the Shared Image Gallery in which this Shared Image should
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImage.ts#L196">property <b>identifier</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageIdentifier'>inputs.compute.SharedImageIdentifier</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageIdentifier'>SharedImageIdentifier</a>&gt;;</code></pre>
 
 An `identifier` block as defined below.
 
@@ -5659,7 +5659,7 @@ A collection of tags which should be applied to this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImageVersion.ts#L246">property <b>targetRegions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageVersionTargetRegion'>inputs.compute.SharedImageVersionTargetRegion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageVersionTargetRegion'>SharedImageVersionTargetRegion</a>&gt;[]&gt;;</code></pre>
 
 One or more `targetRegion` blocks as documented below.
 
@@ -5741,7 +5741,7 @@ A collection of tags which should be applied to this resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/sharedImageVersion.ts#L204">property <b>targetRegions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>targetRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageVersionTargetRegion'>inputs.compute.SharedImageVersionTargetRegion</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>targetRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SharedImageVersionTargetRegion'>SharedImageVersionTargetRegion</a>&gt;[]&gt;;</code></pre>
 
 One or more `targetRegion` blocks as documented below.
 
@@ -5775,7 +5775,7 @@ The size of the Snapshotted Disk in GB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L210">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SnapshotEncryptionSettings'>inputs.compute.SnapshotEncryptionSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SnapshotEncryptionSettings'>SnapshotEncryptionSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L214">property <b>location</b></a>
 </h4>
@@ -5862,7 +5862,7 @@ The size of the Snapshotted Disk in GB.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L167">property <b>encryptionSettings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SnapshotEncryptionSettings'>inputs.compute.SnapshotEncryptionSettings</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>encryptionSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SnapshotEncryptionSettings'>SnapshotEncryptionSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/snapshot.ts#L171">property <b>location</b></a>
 </h4>
@@ -5933,7 +5933,7 @@ The set of arguments for constructing a VirtualMachine resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L331">property <b>additionalCapabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAdditionalCapabilities'>inputs.compute.VirtualMachineAdditionalCapabilities</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAdditionalCapabilities'>VirtualMachineAdditionalCapabilities</a>&gt;;</code></pre>
 
 A `additionalCapabilities` block.
 
@@ -5949,7 +5949,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L339">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineBootDiagnostics'>inputs.compute.VirtualMachineBootDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineBootDiagnostics'>VirtualMachineBootDiagnostics</a>&gt;;</code></pre>
 
 A `bootDiagnostics` block.
 
@@ -5973,7 +5973,7 @@ Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virt
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L351">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineIdentity'>inputs.compute.VirtualMachineIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineIdentity'>VirtualMachineIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -6013,7 +6013,7 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L371">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfile'>inputs.compute.VirtualMachineOsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfile'>VirtualMachineOsProfile</a>&gt;;</code></pre>
 
 An `osProfile` block. Required when `createOption` in the `storageOsDisk` block is set to `FromImage`.
 
@@ -6021,7 +6021,7 @@ An `osProfile` block. Required when `createOption` in the `storageOsDisk` block 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L375">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfig'>inputs.compute.VirtualMachineOsProfileLinuxConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfig'>VirtualMachineOsProfileLinuxConfig</a>&gt;;</code></pre>
 
 A `osProfileLinuxConfig` block.
 
@@ -6029,7 +6029,7 @@ A `osProfileLinuxConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L379">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecret'>inputs.compute.VirtualMachineOsProfileSecret</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecret'>VirtualMachineOsProfileSecret</a>&gt;[]&gt;;</code></pre>
 
 One or more `osProfileSecrets` blocks.
 
@@ -6037,7 +6037,7 @@ One or more `osProfileSecrets` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L383">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfig'>inputs.compute.VirtualMachineOsProfileWindowsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfig'>VirtualMachineOsProfileWindowsConfig</a>&gt;;</code></pre>
 
 A `osProfileWindowsConfig` block.
 
@@ -6045,7 +6045,7 @@ A `osProfileWindowsConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L387">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachinePlan'>inputs.compute.VirtualMachinePlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachinePlan'>VirtualMachinePlan</a>&gt;;</code></pre>
 
 A `plan` block.
 
@@ -6077,7 +6077,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L403">property <b>storageDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageDataDisk'>inputs.compute.VirtualMachineStorageDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageDataDisk'>VirtualMachineStorageDataDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageDataDisk` blocks.
 
@@ -6085,7 +6085,7 @@ One or more `storageDataDisk` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L407">property <b>storageImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageImageReference'>inputs.compute.VirtualMachineStorageImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageImageReference'>VirtualMachineStorageImageReference</a>&gt;;</code></pre>
 
 A `storageImageReference` block.
 
@@ -6093,7 +6093,7 @@ A `storageImageReference` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L411">property <b>storageOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageOsDisk'>inputs.compute.VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageOsDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageOsDisk'>VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
 
 A `storageOsDisk` block.
 
@@ -6135,7 +6135,7 @@ Input properties used for looking up and filtering VirtualMachine resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L229">property <b>additionalCapabilities</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>additionalCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAdditionalCapabilities'>inputs.compute.VirtualMachineAdditionalCapabilities</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>additionalCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAdditionalCapabilities'>VirtualMachineAdditionalCapabilities</a>&gt;;</code></pre>
 
 A `additionalCapabilities` block.
 
@@ -6151,7 +6151,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L237">property <b>bootDiagnostics</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineBootDiagnostics'>inputs.compute.VirtualMachineBootDiagnostics</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bootDiagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineBootDiagnostics'>VirtualMachineBootDiagnostics</a>&gt;;</code></pre>
 
 A `bootDiagnostics` block.
 
@@ -6175,7 +6175,7 @@ Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virt
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L249">property <b>identity</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineIdentity'>inputs.compute.VirtualMachineIdentity</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineIdentity'>VirtualMachineIdentity</a>&gt;;</code></pre>
 
 A `identity` block.
 
@@ -6215,7 +6215,7 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L269">property <b>osProfile</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfile'>inputs.compute.VirtualMachineOsProfile</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfile'>VirtualMachineOsProfile</a>&gt;;</code></pre>
 
 An `osProfile` block. Required when `createOption` in the `storageOsDisk` block is set to `FromImage`.
 
@@ -6223,7 +6223,7 @@ An `osProfile` block. Required when `createOption` in the `storageOsDisk` block 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L273">property <b>osProfileLinuxConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfig'>inputs.compute.VirtualMachineOsProfileLinuxConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileLinuxConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfig'>VirtualMachineOsProfileLinuxConfig</a>&gt;;</code></pre>
 
 A `osProfileLinuxConfig` block.
 
@@ -6231,7 +6231,7 @@ A `osProfileLinuxConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L277">property <b>osProfileSecrets</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecret'>inputs.compute.VirtualMachineOsProfileSecret</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecret'>VirtualMachineOsProfileSecret</a>&gt;[]&gt;;</code></pre>
 
 One or more `osProfileSecrets` blocks.
 
@@ -6239,7 +6239,7 @@ One or more `osProfileSecrets` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L281">property <b>osProfileWindowsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfig'>inputs.compute.VirtualMachineOsProfileWindowsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>osProfileWindowsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfig'>VirtualMachineOsProfileWindowsConfig</a>&gt;;</code></pre>
 
 A `osProfileWindowsConfig` block.
 
@@ -6247,7 +6247,7 @@ A `osProfileWindowsConfig` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L285">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachinePlan'>inputs.compute.VirtualMachinePlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachinePlan'>VirtualMachinePlan</a>&gt;;</code></pre>
 
 A `plan` block.
 
@@ -6279,7 +6279,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L301">property <b>storageDataDisks</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageDataDisk'>inputs.compute.VirtualMachineStorageDataDisk</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageDataDisk'>VirtualMachineStorageDataDisk</a>&gt;[]&gt;;</code></pre>
 
 One or more `storageDataDisk` blocks.
 
@@ -6287,7 +6287,7 @@ One or more `storageDataDisk` blocks.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L305">property <b>storageImageReference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageImageReference'>inputs.compute.VirtualMachineStorageImageReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageImageReference'>VirtualMachineStorageImageReference</a>&gt;;</code></pre>
 
 A `storageImageReference` block.
 
@@ -6295,7 +6295,7 @@ A `storageImageReference` block.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/compute/virtualMachine.ts#L309">property <b>storageOsDisk</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>storageOsDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageOsDisk'>inputs.compute.VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>storageOsDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageOsDisk'>VirtualMachineStorageOsDisk</a>&gt;;</code></pre>
 
 A `storageOsDisk` block.
 

@@ -1,5 +1,6 @@
 ---
 title: "Module container"
+title_tag: "Module container | Package @pulumi/gcp | Node.js SDK"
 linktitle: "container"
 meta_desc: "Explore members of the container module in the @pulumi/gcp package."
 ---
@@ -181,7 +182,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -205,7 +206,7 @@ deprecated in favour of `nodeLocations`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L138">property <b>addonsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>addonsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfig'>outputs.container.ClusterAddonsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>addonsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
 
 The configuration for addons supported by GKE.
 Structure is documented below.
@@ -214,7 +215,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L144">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>authenticatorGroupsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAuthenticatorGroupsConfig'>outputs.container.ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>authenticatorGroupsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -224,7 +225,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L153">property <b>clusterAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clusterAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscaling'>outputs.container.ClusterClusterAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clusterAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
 
 )
 Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
@@ -250,7 +251,7 @@ cluster is VPC-native, use `ip_allocation_policy.cluster_ipv4_cidr_block`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L167">property <b>databaseEncryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>databaseEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterDatabaseEncryption'>outputs.container.ClusterDatabaseEncryption</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>databaseEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
 
 ).
 Structure is documented below.
@@ -373,7 +374,7 @@ to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L235">property <b>ipAllocationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>ipAllocationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIpAllocationPolicy'>outputs.container.ClusterIpAllocationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>ipAllocationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a>&gt;;</code></pre>
 
 Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases)
@@ -407,7 +408,7 @@ write logs to. Available options include `logging.googleapis.com`,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L255">property <b>maintenancePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>maintenancePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicy'>outputs.container.ClusterMaintenancePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>maintenancePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -416,7 +417,7 @@ documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L264">property <b>masterAuth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>masterAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuth'>outputs.container.ClusterMasterAuth</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>masterAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
 
 The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -429,7 +430,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L270">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>masterAuthorizedNetworksConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfig'>outputs.container.ClusterMasterAuthorizedNetworksConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>masterAuthorizedNetworksConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The desired configuration options
 for master authorized networks. Omit the nested `cidrBlocks` attribute to disallow
@@ -498,7 +499,7 @@ shared network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L315">property <b>networkPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>networkPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNetworkPolicy'>outputs.container.ClusterNetworkPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>networkPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
 
 Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -508,7 +509,7 @@ feature. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L323">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfig'>outputs.container.ClusterNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
 
 Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -531,7 +532,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L339">property <b>nodePools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePool'>outputs.container.ClusterNodePool</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePool'>ClusterNodePool</a>[]&gt;;</code></pre>
 
 List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -559,7 +560,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L356">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>podSecurityPolicyConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPodSecurityPolicyConfig'>outputs.container.ClusterPodSecurityPolicyConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>podSecurityPolicyConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 ) Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -569,7 +570,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L361">property <b>privateClusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>privateClusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPrivateClusterConfig'>outputs.container.ClusterPrivateClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>privateClusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
 
 Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -592,7 +593,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L373">property <b>releaseChannel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>releaseChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterReleaseChannel'>outputs.container.ClusterReleaseChannel</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>releaseChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
 
 ) Configuration options for the
 [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
@@ -621,7 +622,7 @@ The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L390">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceUsageExportConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfig'>outputs.container.ClusterResourceUsageExportConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceUsageExportConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 ) Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -665,7 +666,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L409">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>verticalPodAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterVerticalPodAutoscaling'>outputs.container.ClusterVerticalPodAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>verticalPodAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 )
 Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
@@ -675,7 +676,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L416">property <b>workloadIdentityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>workloadIdentityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterWorkloadIdentityConfig'>outputs.container.ClusterWorkloadIdentityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>workloadIdentityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 )
 Workload Identity allows Kubernetes service accounts to act as a user-managed
@@ -743,7 +744,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is NodePool</code></pre>
 
 
 Returns true if the given object is an instance of NodePool.  This is designed to work even
@@ -753,7 +754,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L47">property <b>autoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>autoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolAutoscaling'>outputs.container.NodePoolAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>autoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolAutoscaling'>NodePoolAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -802,7 +803,7 @@ The location (region or zone) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L67">property <b>management</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>management: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolManagement'>outputs.container.NodePoolManagement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>management: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
 
 Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -837,7 +838,7 @@ auto-generate a unique name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L86">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfig'>outputs.container.NodePoolNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
 
 The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1074,7 +1075,7 @@ deprecated in favour of `nodeLocations`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L867">property <b>addonsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>inputs.container.ClusterAddonsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
 
 The configuration for addons supported by GKE.
 Structure is documented below.
@@ -1083,7 +1084,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L873">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>inputs.container.ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -1093,7 +1094,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L882">property <b>clusterAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>inputs.container.ClusterClusterAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
 
 )
 Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
@@ -1119,7 +1120,7 @@ cluster is VPC-native, use `ip_allocation_policy.cluster_ipv4_cidr_block`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L896">property <b>databaseEncryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>inputs.container.ClusterDatabaseEncryption</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
 
 ).
 Structure is documented below.
@@ -1216,7 +1217,7 @@ set this to a value of at least `1`, alongside setting
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L955">property <b>ipAllocationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>inputs.container.ClusterIpAllocationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a>&gt;;</code></pre>
 
 Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases)
@@ -1250,7 +1251,7 @@ write logs to. Available options include `logging.googleapis.com`,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L975">property <b>maintenancePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>inputs.container.ClusterMaintenancePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a>&gt;;</code></pre>
 
 The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -1259,7 +1260,7 @@ documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L984">property <b>masterAuth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>inputs.container.ClusterMasterAuth</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
 
 The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -1272,7 +1273,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L990">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>inputs.container.ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
 
 The desired configuration options
 for master authorized networks. Omit the nested `cidrBlocks` attribute to disallow
@@ -1331,7 +1332,7 @@ shared network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1029">property <b>networkPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>inputs.container.ClusterNetworkPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
 
 Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -1341,7 +1342,7 @@ feature. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1037">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>inputs.container.ClusterNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
 
 Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -1364,7 +1365,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1053">property <b>nodePools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>inputs.container.ClusterNodePool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>ClusterNodePool</a>&gt;[]&gt;;</code></pre>
 
 List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -1392,7 +1393,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1070">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>inputs.container.ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -1402,7 +1403,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1075">property <b>privateClusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>inputs.container.ClusterPrivateClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
 
 Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -1425,7 +1426,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1087">property <b>releaseChannel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>inputs.container.ClusterReleaseChannel</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
 
 ) Configuration options for the
 [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
@@ -1454,7 +1455,7 @@ The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1104">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>inputs.container.ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -1473,7 +1474,7 @@ which the cluster's instances are launched.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1115">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>inputs.container.ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
 
 )
 Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
@@ -1483,7 +1484,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L1122">property <b>workloadIdentityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>inputs.container.ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
 
 )
 Workload Identity allows Kubernetes service accounts to act as a user-managed
@@ -1528,7 +1529,7 @@ deprecated in favour of `nodeLocations`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L562">property <b>addonsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>inputs.container.ClusterAddonsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
 
 The configuration for addons supported by GKE.
 Structure is documented below.
@@ -1537,7 +1538,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L568">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>inputs.container.ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -1547,7 +1548,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L577">property <b>clusterAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>inputs.container.ClusterClusterAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
 
 )
 Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
@@ -1573,7 +1574,7 @@ cluster is VPC-native, use `ip_allocation_policy.cluster_ipv4_cidr_block`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L591">property <b>databaseEncryption</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>inputs.container.ClusterDatabaseEncryption</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
 
 ).
 Structure is documented below.
@@ -1687,7 +1688,7 @@ to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L659">property <b>ipAllocationPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>inputs.container.ClusterIpAllocationPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a>&gt;;</code></pre>
 
 Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases)
@@ -1721,7 +1722,7 @@ write logs to. Available options include `logging.googleapis.com`,
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L679">property <b>maintenancePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>inputs.container.ClusterMaintenancePolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a>&gt;;</code></pre>
 
 The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -1730,7 +1731,7 @@ documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L688">property <b>masterAuth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>inputs.container.ClusterMasterAuth</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
 
 The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -1743,7 +1744,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L694">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>inputs.container.ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
 
 The desired configuration options
 for master authorized networks. Omit the nested `cidrBlocks` attribute to disallow
@@ -1812,7 +1813,7 @@ shared network.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L739">property <b>networkPolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>inputs.container.ClusterNetworkPolicy</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
 
 Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -1822,7 +1823,7 @@ feature. Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L747">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>inputs.container.ClusterNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
 
 Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -1845,7 +1846,7 @@ a zonal cluster, omit the cluster's zone.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L763">property <b>nodePools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>inputs.container.ClusterNodePool</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>ClusterNodePool</a>&gt;[]&gt;;</code></pre>
 
 List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -1873,7 +1874,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L780">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>inputs.container.ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -1883,7 +1884,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L785">property <b>privateClusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>inputs.container.ClusterPrivateClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
 
 Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -1906,7 +1907,7 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L797">property <b>releaseChannel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>inputs.container.ClusterReleaseChannel</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
 
 ) Configuration options for the
 [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
@@ -1935,7 +1936,7 @@ The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L814">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>inputs.container.ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
 
 ) Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -1970,7 +1971,7 @@ which the cluster's instances are launched.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L833">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>inputs.container.ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
 
 )
 Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
@@ -1980,7 +1981,7 @@ Structure is documented below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/cluster.ts#L840">property <b>workloadIdentityConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>inputs.container.ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
 
 )
 Workload Identity allows Kubernetes service accounts to act as a user-managed
@@ -2071,17 +2072,17 @@ A collection of values returned by getCluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L88">property <b>addonsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>addonsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfig'>outputs.container.GetClusterAddonsConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>addonsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfig'>GetClusterAddonsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-authenticatorGroupsConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L89">property <b>authenticatorGroupsConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAuthenticatorGroupsConfig'>outputs.container.GetClusterAuthenticatorGroupsConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAuthenticatorGroupsConfig'>GetClusterAuthenticatorGroupsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterAutoscalings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L90">property <b>clusterAutoscalings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscaling'>outputs.container.GetClusterClusterAutoscaling</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscaling'>GetClusterClusterAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterIpv4Cidr">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L91">property <b>clusterIpv4Cidr</b></a>
 </h4>
@@ -2091,7 +2092,7 @@ A collection of values returned by getCluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L92">property <b>databaseEncryptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>databaseEncryptions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDatabaseEncryption'>outputs.container.GetClusterDatabaseEncryption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>databaseEncryptions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDatabaseEncryption'>GetClusterDatabaseEncryption</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-defaultMaxPodsPerNode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L93">property <b>defaultMaxPodsPerNode</b></a>
 </h4>
@@ -2159,7 +2160,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L104">property <b>ipAllocationPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterIpAllocationPolicy'>outputs.container.GetClusterIpAllocationPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>ipAllocationPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterIpAllocationPolicy'>GetClusterIpAllocationPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L105">property <b>location</b></a>
 </h4>
@@ -2174,17 +2175,17 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L107">property <b>maintenancePolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>maintenancePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicy'>outputs.container.GetClusterMaintenancePolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>maintenancePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicy'>GetClusterMaintenancePolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterAuthorizedNetworksConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L109">property <b>masterAuthorizedNetworksConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfig'>outputs.container.GetClusterMasterAuthorizedNetworksConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfig'>GetClusterMasterAuthorizedNetworksConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterAuths">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L108">property <b>masterAuths</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>masterAuths: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuth'>outputs.container.GetClusterMasterAuth</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>masterAuths: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuth'>GetClusterMasterAuth</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L110">property <b>masterVersion</b></a>
 </h4>
@@ -2214,12 +2215,12 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L115">property <b>networkPolicies</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>networkPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNetworkPolicy'>outputs.container.GetClusterNetworkPolicy</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>networkPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNetworkPolicy'>GetClusterNetworkPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L116">property <b>nodeConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfig'>outputs.container.GetClusterNodeConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfig'>GetClusterNodeConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeLocations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L117">property <b>nodeLocations</b></a>
 </h4>
@@ -2229,7 +2230,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L118">property <b>nodePools</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePool'>outputs.container.GetClusterNodePool</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePool'>GetClusterNodePool</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L119">property <b>nodeVersion</b></a>
 </h4>
@@ -2239,12 +2240,12 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L120">property <b>podSecurityPolicyConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPodSecurityPolicyConfig'>outputs.container.GetClusterPodSecurityPolicyConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPodSecurityPolicyConfig'>GetClusterPodSecurityPolicyConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-privateClusterConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L121">property <b>privateClusterConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>privateClusterConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfig'>outputs.container.GetClusterPrivateClusterConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>privateClusterConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfig'>GetClusterPrivateClusterConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L122">property <b>project</b></a>
 </h4>
@@ -2259,7 +2260,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L124">property <b>releaseChannels</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>releaseChannels: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterReleaseChannel'>outputs.container.GetClusterReleaseChannel</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>releaseChannels: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterReleaseChannel'>GetClusterReleaseChannel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-removeDefaultNodePool">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L125">property <b>removeDefaultNodePool</b></a>
 </h4>
@@ -2274,7 +2275,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L127">property <b>resourceUsageExportConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfig'>outputs.container.GetClusterResourceUsageExportConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfig'>GetClusterResourceUsageExportConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-servicesIpv4Cidr">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L128">property <b>servicesIpv4Cidr</b></a>
 </h4>
@@ -2294,12 +2295,12 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L131">property <b>verticalPodAutoscalings</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterVerticalPodAutoscaling'>outputs.container.GetClusterVerticalPodAutoscaling</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>verticalPodAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterVerticalPodAutoscaling'>GetClusterVerticalPodAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-workloadIdentityConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L132">property <b>workloadIdentityConfigs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterWorkloadIdentityConfig'>outputs.container.GetClusterWorkloadIdentityConfig</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workloadIdentityConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterWorkloadIdentityConfig'>GetClusterWorkloadIdentityConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-zone">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/getCluster.ts#L133">property <b>zone</b></a>
 </h4>
@@ -2591,7 +2592,7 @@ The set of arguments for constructing a NodePool resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L281">property <b>autoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>inputs.container.NodePoolAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>NodePoolAutoscaling</a>&gt;;</code></pre>
 
 Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -2626,7 +2627,7 @@ The location (region or zone) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L300">property <b>management</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>inputs.container.NodePoolManagement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
 
 Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -2661,7 +2662,7 @@ auto-generate a unique name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L319">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>inputs.container.NodePoolNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
 
 The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -2741,7 +2742,7 @@ Input properties used for looking up and filtering NodePool resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L194">property <b>autoscaling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>inputs.container.NodePoolAutoscaling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>NodePoolAutoscaling</a>&gt;;</code></pre>
 
 Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -2781,7 +2782,7 @@ The location (region or zone) of the cluster.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L214">property <b>management</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>inputs.container.NodePoolManagement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
 
 Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -2816,7 +2817,7 @@ auto-generate a unique name.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/container/nodePool.ts#L233">property <b>nodeConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>inputs.container.NodePoolNodeConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
 
 The node configuration of the pool. See
 gcp.container.Cluster for schema.

@@ -1,5 +1,6 @@
 ---
 title: "Module config"
+title_tag: "Module config | Package @pulumi/docker | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/docker package."
 ---

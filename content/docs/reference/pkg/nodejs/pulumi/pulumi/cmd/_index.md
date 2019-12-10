@@ -1,5 +1,6 @@
 ---
 title: "Module cmd"
+title_tag: "Module cmd | Package @pulumi/pulumi | Node.js SDK"
 linktitle: "cmd"
 meta_desc: "Explore members of the cmd module in the @pulumi/pulumi package."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Module acm"
+title_tag: "Module acm | Package @pulumi/aws | Node.js SDK"
 linktitle: "acm"
 meta_desc: "Explore members of the acm module in the @pulumi/aws package."
 ---
@@ -158,7 +159,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Certificate</code></pre>
 
 
 Returns true if the given object is an instance of Certificate.  This is designed to work even
@@ -209,7 +210,7 @@ A domain name for which the certificate should be issued
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L134">property <b>domainValidationOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>domainValidationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateDomainValidationOption'>outputs.acm.CertificateDomainValidationOption</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>domainValidationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateDomainValidationOption'>CertificateDomainValidationOption</a>[]&gt;;</code></pre>
 
 A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
@@ -226,7 +227,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L135">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateOptions'>outputs.acm.CertificateOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateOptions'>CertificateOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-privateKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L139">property <b>privateKey</b></a>
 </h4>
@@ -437,7 +438,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CertificateValidation</code></pre>
 
 
 Returns true if the given object is an instance of CertificateValidation.  This is designed to work even
@@ -557,7 +558,7 @@ A domain name for which the certificate should be issued
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L282">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>inputs.acm.CertificateOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>CertificateOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateArgs-privateKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L286">property <b>privateKey</b></a>
 </h4>
@@ -646,7 +647,7 @@ A domain name for which the certificate should be issued
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L236">property <b>domainValidationOptions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>domainValidationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateDomainValidationOption'>inputs.acm.CertificateDomainValidationOption</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>domainValidationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateDomainValidationOption'>CertificateDomainValidationOption</a>&gt;[]&gt;;</code></pre>
 
 A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
@@ -654,7 +655,7 @@ A list of attributes to feed into other resources to complete certificate valida
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L237">property <b>options</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>inputs.acm.CertificateOptions</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>CertificateOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-privateKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/acm/certificate.ts#L241">property <b>privateKey</b></a>
 </h4>

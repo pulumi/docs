@@ -452,7 +452,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provider</code></pre>
 
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
@@ -535,7 +535,7 @@ deployments.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, <a href='#Diff'>Diff</a>&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, Diff&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/provider.ts#L71">
         interface <strong>ProviderArgs</strong>

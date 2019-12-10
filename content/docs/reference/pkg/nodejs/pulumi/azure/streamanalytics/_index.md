@@ -143,7 +143,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is FunctionJavaScriptUDF</code></pre>
 
 
 Returns true if the given object is an instance of FunctionJavaScriptUDF.  This is designed to work even
@@ -162,7 +162,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L73">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFInput'>outputs.streamanalytics.FunctionJavaScriptUDFInput</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>[]&gt;;</code></pre>
 
 One or more `input` blocks as defined below.
 
@@ -178,7 +178,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L81">property <b>output</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFOutput'>outputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
 
 An `output` blocks as defined below.
 
@@ -293,7 +293,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
@@ -511,7 +511,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutputBlob</code></pre>
 
 
 Returns true if the given object is an instance of OutputBlob.  This is designed to work even
@@ -562,7 +562,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputBlob.ts#L101">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputBlobSerialization'>outputs.streamanalytics.OutputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -702,7 +702,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutputEventHub</code></pre>
 
 
 Returns true if the given object is an instance of OutputEventHub.  This is designed to work even
@@ -745,7 +745,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputEventHub.ts#L94">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputEventHubSerialization'>outputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -879,7 +879,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutputMssql</code></pre>
 
 
 Returns true if the given object is an instance of OutputMssql.  This is designed to work even
@@ -1049,7 +1049,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutputServiceBusQueue</code></pre>
 
 
 Returns true if the given object is an instance of OutputServiceBusQueue.  This is designed to work even
@@ -1092,7 +1092,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L92">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServiceBusQueueSerialization'>outputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -1222,7 +1222,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OutputServicebusTopic</code></pre>
 
 
 Returns true if the given object is an instance of OutputServicebusTopic.  This is designed to work even
@@ -1257,7 +1257,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L88">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServicebusTopicSerialization'>outputs.streamanalytics.OutputServicebusTopicSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -1399,7 +1399,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StreamInputBlob</code></pre>
 
 
 Returns true if the given object is an instance of StreamInputBlob.  This is designed to work even
@@ -1450,7 +1450,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputBlob.ts#L100">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputBlobSerialization'>outputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -1597,7 +1597,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StreamInputEventHub</code></pre>
 
 
 Returns true if the given object is an instance of StreamInputEventHub.  This is designed to work even
@@ -1648,7 +1648,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L105">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputEventHubSerialization'>outputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -1779,7 +1779,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is StreamInputIotHub</code></pre>
 
 
 Returns true if the given object is an instance of StreamInputIotHub.  This is designed to work even
@@ -1838,7 +1838,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L101">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputIotHubSerialization'>outputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -1921,7 +1921,7 @@ The set of arguments for constructing a FunctionJavaScriptUDF resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L185">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>inputs.streamanalytics.FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
 
 One or more `input` blocks as defined below.
 
@@ -1937,7 +1937,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L193">property <b>output</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>inputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
 
 An `output` blocks as defined below.
 
@@ -1979,7 +1979,7 @@ Input properties used for looking up and filtering FunctionJavaScriptUDF resourc
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L155">property <b>inputs</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>inputs.streamanalytics.FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
 
 One or more `input` blocks as defined below.
 
@@ -1995,7 +1995,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L163">property <b>output</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>output?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>inputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>output?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
 
 An `output` blocks as defined below.
 
@@ -2423,7 +2423,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputBlob.ts#L265">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>inputs.streamanalytics.OutputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -2513,7 +2513,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputBlob.ts#L219">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>inputs.streamanalytics.OutputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -2595,7 +2595,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputEventHub.ts#L232">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>inputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -2669,7 +2669,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputEventHub.ts#L194">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>inputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -2885,7 +2885,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L230">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>inputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -2959,7 +2959,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L192">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>inputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3025,7 +3025,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L226">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>inputs.streamanalytics.OutputServicebusTopicSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3099,7 +3099,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L188">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>inputs.streamanalytics.OutputServicebusTopicSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3189,7 +3189,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputBlob.ts#L264">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>inputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3279,7 +3279,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputBlob.ts#L218">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>inputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3369,7 +3369,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L256">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>inputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3451,7 +3451,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L214">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>inputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3541,7 +3541,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L252">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>inputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 
@@ -3623,7 +3623,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L210">property <b>serialization</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>inputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
 
 A `serialization` block as defined below.
 

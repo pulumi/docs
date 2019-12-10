@@ -128,7 +128,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AnalyticsSolution</code></pre>
 
 
 Returns true if the given object is an instance of AnalyticsSolution.  This is designed to work even
@@ -155,7 +155,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsSolution.ts#L83">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsSolutionPlan'>outputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</code></pre>
 
 A `plan` block as documented below.
 
@@ -266,7 +266,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AnalyticsWorkspace</code></pre>
 
 
 Returns true if the given object is an instance of AnalyticsWorkspace.  This is designed to work even
@@ -454,7 +454,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AnalyticsWorkspaceLinkedService</code></pre>
 
 
 Returns true if the given object is an instance of AnalyticsWorkspaceLinkedService.  This is designed to work even
@@ -481,7 +481,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L83">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>outputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 
@@ -588,7 +588,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsSolution.ts#L195">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>inputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</code></pre>
 
 A `plan` block as documented below.
 
@@ -646,7 +646,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsSolution.ts#L165">property <b>plan</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>inputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</code></pre>
 
 A `plan` block as documented below.
 
@@ -762,7 +762,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L196">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>inputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 
@@ -820,7 +820,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L162">property <b>linkedServiceProperties</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>inputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperties'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperties</a>&gt;;</code></pre>
 
 A `linkedServiceProperties` block as defined below.
 

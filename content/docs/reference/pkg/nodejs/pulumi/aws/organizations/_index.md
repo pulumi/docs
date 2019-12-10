@@ -1,5 +1,6 @@
 ---
 title: "Module organizations"
+title_tag: "Module organizations | Package @pulumi/aws | Node.js SDK"
 linktitle: "organizations"
 meta_desc: "Explore members of the organizations module in the @pulumi/aws package."
 ---
@@ -112,7 +113,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Account</code></pre>
 
 
 Returns true if the given object is an instance of Account.  This is designed to work even
@@ -271,7 +272,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Organization</code></pre>
 
 
 Returns true if the given object is an instance of Organization.  This is designed to work even
@@ -281,7 +282,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L59">property <b>accounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationAccount'>outputs.organizations.OrganizationAccount</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationAccount'>OrganizationAccount</a>[]&gt;;</code></pre>
 
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
@@ -354,7 +355,7 @@ Identifier of the master account
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L91">property <b>nonMasterAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationNonMasterAccount'>outputs.organizations.OrganizationNonMasterAccount</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationNonMasterAccount'>OrganizationNonMasterAccount</a>[]&gt;;</code></pre>
 
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
@@ -362,7 +363,7 @@ List of organization accounts excluding the master account. For a list including
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L95">property <b>roots</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationRoot'>outputs.organizations.OrganizationRoot</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationRoot'>OrganizationRoot</a>[]&gt;;</code></pre>
 
 List of organization roots. All elements have these attributes:
 
@@ -435,7 +436,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is OrganizationalUnit</code></pre>
 
 
 Returns true if the given object is an instance of OrganizationalUnit.  This is designed to work even
@@ -445,7 +446,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organizationalUnit.ts#L55">property <b>accounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationalUnitAccount'>outputs.organizations.OrganizationalUnitAccount</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationalUnitAccount'>OrganizationalUnitAccount</a>[]&gt;;</code></pre>
 
 List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
 
@@ -559,7 +560,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Policy</code></pre>
 
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
@@ -710,7 +711,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PolicyAttachment</code></pre>
 
 
 Returns true if the given object is an instance of PolicyAttachment.  This is designed to work even
@@ -956,7 +957,7 @@ A collection of values returned by getOrganization.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/getOrganization.ts#L70">property <b>accounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationAccount'>outputs.organizations.GetOrganizationAccount</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationAccount'>GetOrganizationAccount</a>[];</code></pre>
 
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
@@ -1028,7 +1029,7 @@ The unique identifier (ID) of the master account of an organization.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/getOrganization.ts#L102">property <b>nonMasterAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationNonMasterAccount'>outputs.organizations.GetOrganizationNonMasterAccount</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationNonMasterAccount'>GetOrganizationNonMasterAccount</a>[];</code></pre>
 
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
@@ -1036,7 +1037,7 @@ List of organization accounts excluding the master account. For a list including
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/getOrganization.ts#L106">property <b>roots</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRoot'>outputs.organizations.GetOrganizationRoot</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRoot'>GetOrganizationRoot</a>[];</code></pre>
 
 List of organization roots. All elements have these attributes:
 
@@ -1080,7 +1081,7 @@ Input properties used for looking up and filtering OrganizationalUnit resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organizationalUnit.ts#L113">property <b>accounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationalUnitAccount'>inputs.organizations.OrganizationalUnitAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationalUnitAccount'>OrganizationalUnitAccount</a>&gt;[]&gt;;</code></pre>
 
 List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
 
@@ -1156,7 +1157,7 @@ Input properties used for looking up and filtering Organization resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L150">property <b>accounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationAccount'>inputs.organizations.OrganizationAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationAccount'>OrganizationAccount</a>&gt;[]&gt;;</code></pre>
 
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
@@ -1220,7 +1221,7 @@ Identifier of the master account
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L182">property <b>nonMasterAccounts</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nonMasterAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationNonMasterAccount'>inputs.organizations.OrganizationNonMasterAccount</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nonMasterAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationNonMasterAccount'>OrganizationNonMasterAccount</a>&gt;[]&gt;;</code></pre>
 
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
@@ -1228,7 +1229,7 @@ List of organization accounts excluding the master account. For a list including
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/organizations/organization.ts#L186">property <b>roots</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>roots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationRoot'>inputs.organizations.OrganizationRoot</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>roots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationRoot'>OrganizationRoot</a>&gt;[]&gt;;</code></pre>
 
 List of organization roots. All elements have these attributes:
 

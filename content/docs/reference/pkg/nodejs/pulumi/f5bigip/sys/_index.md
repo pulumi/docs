@@ -1,5 +1,6 @@
 ---
 title: "Module sys"
+title_tag: "Module sys | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "sys"
 meta_desc: "Explore members of the sys module in the @pulumi/f5bigip package."
 ---
@@ -93,7 +94,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BigIpLicense</code></pre>
 
 
 Returns true if the given object is an instance of BigIpLicense.  This is designed to work even
@@ -197,7 +198,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Dns</code></pre>
 
 
 Returns true if the given object is an instance of Dns.  This is designed to work even
@@ -338,7 +339,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IApp</code></pre>
 
 
 Returns true if the given object is an instance of IApp.  This is designed to work even
@@ -405,12 +406,12 @@ Refer to the Json file which will be deployed on F5 BIG-IP.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L101">property <b>lists</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppList'>outputs.sys.IAppList</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppList'>IAppList</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IApp-metadatas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L102">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>metadatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppMetadata'>outputs.sys.IAppMetadata</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>metadatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppMetadata'>IAppMetadata</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IApp-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L106">property <b>name</b></a>
 </h4>
@@ -439,7 +440,7 @@ BIG-IP password
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L115">property <b>tables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppTable'>outputs.sys.IAppTable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppTable'>IAppTable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IApp-template">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L119">property <b>template</b></a>
 </h4>
@@ -485,7 +486,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L132">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppVariable'>outputs.sys.IAppVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#IAppVariable'>IAppVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Ntp" data-link-title="Ntp">
     <a href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/ntp.ts#L29">
         Resource <strong>Ntp</strong>
@@ -550,7 +551,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Ntp</code></pre>
 
 
 Returns true if the given object is an instance of Ntp.  This is designed to work even
@@ -662,7 +663,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Provision</code></pre>
 
 
 Returns true if the given object is an instance of Provision.  This is designed to work even
@@ -795,7 +796,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Snmp</code></pre>
 
 
 Returns true if the given object is an instance of Snmp.  This is designed to work even
@@ -906,7 +907,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SnmpTraps</code></pre>
 
 
 Returns true if the given object is an instance of SnmpTraps.  This is designed to work even
@@ -1243,12 +1244,12 @@ Refer to the Json file which will be deployed on F5 BIG-IP.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L284">property <b>lists</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppList'>inputs.sys.IAppList</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppList'>IAppList</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppArgs-metadatas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L285">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppMetadata'>inputs.sys.IAppMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppMetadata'>IAppMetadata</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L289">property <b>name</b></a>
 </h4>
@@ -1277,7 +1278,7 @@ BIG-IP password
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L298">property <b>tables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppTable'>inputs.sys.IAppTable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppTable'>IAppTable</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppArgs-template">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L302">property <b>template</b></a>
 </h4>
@@ -1314,7 +1315,7 @@ BIG-IP password
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L315">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppVariable'>inputs.sys.IAppVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppVariable'>IAppVariable</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="IAppState" data-link-title="IAppState">
     <a href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L197">
         interface <strong>IAppState</strong>
@@ -1377,12 +1378,12 @@ Refer to the Json file which will be deployed on F5 BIG-IP.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L222">property <b>lists</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>lists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppList'>inputs.sys.IAppList</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>lists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppList'>IAppList</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppState-metadatas">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L223">property <b>metadatas</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppMetadata'>inputs.sys.IAppMetadata</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>metadatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppMetadata'>IAppMetadata</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L227">property <b>name</b></a>
 </h4>
@@ -1411,7 +1412,7 @@ BIG-IP password
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L236">property <b>tables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppTable'>inputs.sys.IAppTable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppTable'>IAppTable</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAppState-template">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L240">property <b>template</b></a>
 </h4>
@@ -1448,7 +1449,7 @@ BIG-IP password
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/iApp.ts#L253">property <b>variables</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppVariable'>inputs.sys.IAppVariable</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#IAppVariable'>IAppVariable</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NtpArgs" data-link-title="NtpArgs">
     <a href="https://github.com/pulumi/pulumi-f5bigip/blob/effe62699b202c81de772a6847d43ed59f86f19b/sdk/nodejs/sys/ntp.ts#L125">
         interface <strong>NtpArgs</strong>

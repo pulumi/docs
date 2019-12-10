@@ -1,5 +1,6 @@
 ---
 title: "Module dataproc"
+title_tag: "Module dataproc | Package @pulumi/gcp | Node.js SDK"
 linktitle: "dataproc"
 meta_desc: "Explore members of the dataproc module in the @pulumi/gcp package."
 ---
@@ -102,7 +103,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AutoscalingPolicy</code></pre>
 
 
 Returns true if the given object is an instance of AutoscalingPolicy.  This is designed to work even
@@ -112,7 +113,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L42">property <b>basicAlgorithm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>basicAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyBasicAlgorithm'>outputs.dataproc.AutoscalingPolicyBasicAlgorithm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>basicAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyBasicAlgorithm'>AutoscalingPolicyBasicAlgorithm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Basic algorithm for autoscaling.
 
@@ -163,7 +164,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L64">property <b>secondaryWorkerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>secondaryWorkerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicySecondaryWorkerConfig'>outputs.dataproc.AutoscalingPolicySecondaryWorkerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>secondaryWorkerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicySecondaryWorkerConfig'>AutoscalingPolicySecondaryWorkerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for secondary workers.
 
@@ -180,7 +181,7 @@ deployments.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L68">property <b>workerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>workerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyWorkerConfig'>outputs.dataproc.AutoscalingPolicyWorkerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>workerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyWorkerConfig'>AutoscalingPolicyWorkerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for primary workers.
 
@@ -339,7 +340,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Cluster</code></pre>
 
 
 Returns true if the given object is an instance of Cluster.  This is designed to work even
@@ -349,7 +350,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/cluster.ts#L152">property <b>clusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>clusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfig'>outputs.dataproc.ClusterClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>clusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfig'>ClusterClusterConfig</a>&gt;;</code></pre>
 
 Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -512,7 +513,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClusterIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of ClusterIAMBinding.  This is designed to work even
@@ -530,7 +531,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L99">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIAMBindingCondition'>outputs.dataproc.ClusterIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIAMBindingCondition'>ClusterIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L103">property <b>etag</b></a>
 </h4>
@@ -693,7 +694,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClusterIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of ClusterIAMMember.  This is designed to work even
@@ -711,7 +712,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L99">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIAMMemberCondition'>outputs.dataproc.ClusterIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIAMMemberCondition'>ClusterIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L103">property <b>etag</b></a>
 </h4>
@@ -874,7 +875,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClusterIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of ClusterIAMPolicy.  This is designed to work even
@@ -1042,7 +1043,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Job</code></pre>
 
 
 Returns true if the given object is an instance of Job.  This is designed to work even
@@ -1078,12 +1079,12 @@ job is first cancelled before issuing the delete.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L108">property <b>hadoopConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hadoopConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHadoopConfig'>outputs.dataproc.JobHadoopConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hadoopConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHadoopConfig'>JobHadoopConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-hiveConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L109">property <b>hiveConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>hiveConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHiveConfig'>outputs.dataproc.JobHiveConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>hiveConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHiveConfig'>JobHiveConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L67">property <b>id</b></a>
 </h4>
@@ -1105,12 +1106,12 @@ The list of labels (key/value pairs) to add to the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L114">property <b>pigConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pigConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPigConfig'>outputs.dataproc.JobPigConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pigConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPigConfig'>JobPigConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-placement">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L115">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPlacement'>outputs.dataproc.JobPlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPlacement'>JobPlacement</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L120">property <b>project</b></a>
 </h4>
@@ -1124,12 +1125,12 @@ subsequently run against. If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L121">property <b>pysparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pysparkConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPysparkConfig'>outputs.dataproc.JobPysparkConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>pysparkConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPysparkConfig'>JobPysparkConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-reference">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L122">property <b>reference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>reference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobReference'>outputs.dataproc.JobReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>reference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobReference'>JobReference</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-region">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L127">property <b>region</b></a>
 </h4>
@@ -1143,7 +1144,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L131">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobScheduling'>outputs.dataproc.JobScheduling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>scheduling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobScheduling'>JobScheduling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Optional. Job scheduling configuration.
 
@@ -1151,17 +1152,17 @@ Optional. Job scheduling configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L132">property <b>sparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sparkConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparkConfig'>outputs.dataproc.JobSparkConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sparkConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparkConfig'>JobSparkConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-sparksqlConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L133">property <b>sparksqlConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sparksqlConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparksqlConfig'>outputs.dataproc.JobSparksqlConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sparksqlConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparksqlConfig'>JobSparksqlConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-status">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L134">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobStatus'>outputs.dataproc.JobStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobStatus'>JobStatus</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Job-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L67">property <b>urn</b></a>
 </h4>
@@ -1274,7 +1275,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobIAMBinding</code></pre>
 
 
 Returns true if the given object is an instance of JobIAMBinding.  This is designed to work even
@@ -1284,7 +1285,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L95">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobIAMBindingCondition'>outputs.dataproc.JobIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobIAMBindingCondition'>JobIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMBinding-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L99">property <b>etag</b></a>
 </h4>
@@ -1452,7 +1453,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobIAMMember</code></pre>
 
 
 Returns true if the given object is an instance of JobIAMMember.  This is designed to work even
@@ -1462,7 +1463,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L95">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobIAMMemberCondition'>outputs.dataproc.JobIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobIAMMemberCondition'>JobIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMMember-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L99">property <b>etag</b></a>
 </h4>
@@ -1630,7 +1631,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is JobIAMPolicy</code></pre>
 
 
 Returns true if the given object is an instance of JobIAMPolicy.  This is designed to work even
@@ -1710,7 +1711,7 @@ The set of arguments for constructing a AutoscalingPolicy resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L156">property <b>basicAlgorithm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>basicAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithm'>inputs.dataproc.AutoscalingPolicyBasicAlgorithm</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>basicAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithm'>AutoscalingPolicyBasicAlgorithm</a>&gt;;</code></pre>
 
 Basic algorithm for autoscaling.
 
@@ -1744,7 +1745,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L174">property <b>secondaryWorkerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryWorkerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicySecondaryWorkerConfig'>inputs.dataproc.AutoscalingPolicySecondaryWorkerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryWorkerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicySecondaryWorkerConfig'>AutoscalingPolicySecondaryWorkerConfig</a>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for secondary workers.
 
@@ -1752,7 +1753,7 @@ Describes how the autoscaler will operate for secondary workers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L178">property <b>workerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyWorkerConfig'>inputs.dataproc.AutoscalingPolicyWorkerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyWorkerConfig'>AutoscalingPolicyWorkerConfig</a>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for primary workers.
 
@@ -1770,7 +1771,7 @@ Input properties used for looking up and filtering AutoscalingPolicy resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L120">property <b>basicAlgorithm</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>basicAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithm'>inputs.dataproc.AutoscalingPolicyBasicAlgorithm</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>basicAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithm'>AutoscalingPolicyBasicAlgorithm</a>&gt;;</code></pre>
 
 Basic algorithm for autoscaling.
 
@@ -1812,7 +1813,7 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L142">property <b>secondaryWorkerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>secondaryWorkerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicySecondaryWorkerConfig'>inputs.dataproc.AutoscalingPolicySecondaryWorkerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>secondaryWorkerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicySecondaryWorkerConfig'>AutoscalingPolicySecondaryWorkerConfig</a>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for secondary workers.
 
@@ -1820,7 +1821,7 @@ Describes how the autoscaler will operate for secondary workers.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/autoscalingPolicy.ts#L146">property <b>workerConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>workerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyWorkerConfig'>inputs.dataproc.AutoscalingPolicyWorkerConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>workerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyWorkerConfig'>AutoscalingPolicyWorkerConfig</a>&gt;;</code></pre>
 
 Describes how the autoscaler will operate for primary workers.
 
@@ -1838,7 +1839,7 @@ The set of arguments for constructing a Cluster resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/cluster.ts#L251">property <b>clusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig'>inputs.dataproc.ClusterClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig'>ClusterClusterConfig</a>&gt;;</code></pre>
 
 Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -1902,7 +1903,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L211">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMBindingCondition'>inputs.dataproc.ClusterIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMBindingCondition'>ClusterIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMBindingArgs-members">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L212">property <b>members</b></a>
 </h4>
@@ -1958,7 +1959,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L179">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMBindingCondition'>inputs.dataproc.ClusterIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMBindingCondition'>ClusterIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMBinding.ts#L183">property <b>etag</b></a>
 </h4>
@@ -2022,7 +2023,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L211">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMMemberCondition'>inputs.dataproc.ClusterIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMMemberCondition'>ClusterIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMMemberArgs-member">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L212">property <b>member</b></a>
 </h4>
@@ -2078,7 +2079,7 @@ The name or relative resource id of the cluster to manage IAM policies for.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L179">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMMemberCondition'>inputs.dataproc.ClusterIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIAMMemberCondition'>ClusterIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/clusterIAMMember.ts#L183">property <b>etag</b></a>
 </h4>
@@ -2230,7 +2231,7 @@ Input properties used for looking up and filtering Cluster resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/cluster.ts#L219">property <b>clusterConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig'>inputs.dataproc.ClusterClusterConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig'>ClusterClusterConfig</a>&gt;;</code></pre>
 
 Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -2296,12 +2297,12 @@ job is first cancelled before issuing the delete.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L254">property <b>hadoopConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hadoopConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfig'>inputs.dataproc.JobHadoopConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hadoopConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfig'>JobHadoopConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-hiveConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L255">property <b>hiveConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hiveConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHiveConfig'>inputs.dataproc.JobHiveConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hiveConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHiveConfig'>JobHiveConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-labels">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L259">property <b>labels</b></a>
 </h4>
@@ -2314,12 +2315,12 @@ The list of labels (key/value pairs) to add to the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L260">property <b>pigConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pigConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfig'>inputs.dataproc.JobPigConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pigConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfig'>JobPigConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-placement">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L261">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPlacement'>inputs.dataproc.JobPlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPlacement'>JobPlacement</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L266">property <b>project</b></a>
 </h4>
@@ -2333,12 +2334,12 @@ subsequently run against. If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L267">property <b>pysparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pysparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfig'>inputs.dataproc.JobPysparkConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pysparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfig'>JobPysparkConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-reference">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L268">property <b>reference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>reference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobReference'>inputs.dataproc.JobReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>reference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobReference'>JobReference</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-region">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L273">property <b>region</b></a>
 </h4>
@@ -2352,7 +2353,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L277">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobScheduling'>inputs.dataproc.JobScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobScheduling'>JobScheduling</a>&gt;;</code></pre>
 
 Optional. Job scheduling configuration.
 
@@ -2360,12 +2361,12 @@ Optional. Job scheduling configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L278">property <b>sparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfig'>inputs.dataproc.JobSparkConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfig'>JobSparkConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobArgs-sparksqlConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L279">property <b>sparksqlConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sparksqlConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfig'>inputs.dataproc.JobSparksqlConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sparksqlConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfig'>JobSparksqlConfig</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="JobIAMBindingArgs" data-link-title="JobIAMBindingArgs">
     <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L200">
         interface <strong>JobIAMBindingArgs</strong>
@@ -2380,7 +2381,7 @@ The set of arguments for constructing a JobIAMBinding resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L201">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMBindingCondition'>inputs.dataproc.JobIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMBindingCondition'>JobIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMBindingArgs-jobId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L202">property <b>jobId</b></a>
 </h4>
@@ -2433,7 +2434,7 @@ Input properties used for looking up and filtering JobIAMBinding resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L172">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMBindingCondition'>inputs.dataproc.JobIAMBindingCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMBindingCondition'>JobIAMBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMBindingState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMBinding.ts#L176">property <b>etag</b></a>
 </h4>
@@ -2494,7 +2495,7 @@ The set of arguments for constructing a JobIAMMember resource.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L201">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMMemberCondition'>inputs.dataproc.JobIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMMemberCondition'>JobIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMMemberArgs-jobId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L202">property <b>jobId</b></a>
 </h4>
@@ -2547,7 +2548,7 @@ Input properties used for looking up and filtering JobIAMMember resources.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L172">property <b>condition</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMMemberCondition'>inputs.dataproc.JobIAMMemberCondition</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobIAMMemberCondition'>JobIAMMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobIAMMemberState-etag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/jobIAMMember.ts#L176">property <b>etag</b></a>
 </h4>
@@ -2724,12 +2725,12 @@ job is first cancelled before issuing the delete.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L215">property <b>hadoopConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hadoopConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfig'>inputs.dataproc.JobHadoopConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hadoopConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfig'>JobHadoopConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-hiveConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L216">property <b>hiveConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>hiveConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHiveConfig'>inputs.dataproc.JobHiveConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>hiveConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHiveConfig'>JobHiveConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-labels">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L220">property <b>labels</b></a>
 </h4>
@@ -2742,12 +2743,12 @@ The list of labels (key/value pairs) to add to the job.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L221">property <b>pigConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pigConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfig'>inputs.dataproc.JobPigConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pigConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfig'>JobPigConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-placement">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L222">property <b>placement</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPlacement'>inputs.dataproc.JobPlacement</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPlacement'>JobPlacement</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-project">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L227">property <b>project</b></a>
 </h4>
@@ -2761,12 +2762,12 @@ subsequently run against. If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L228">property <b>pysparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pysparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfig'>inputs.dataproc.JobPysparkConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>pysparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfig'>JobPysparkConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-reference">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L229">property <b>reference</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>reference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobReference'>inputs.dataproc.JobReference</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>reference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobReference'>JobReference</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-region">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L234">property <b>region</b></a>
 </h4>
@@ -2780,7 +2781,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L238">property <b>scheduling</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobScheduling'>inputs.dataproc.JobScheduling</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>scheduling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobScheduling'>JobScheduling</a>&gt;;</code></pre>
 
 Optional. Job scheduling configuration.
 
@@ -2788,14 +2789,14 @@ Optional. Job scheduling configuration.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L239">property <b>sparkConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfig'>inputs.dataproc.JobSparkConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sparkConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfig'>JobSparkConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-sparksqlConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L240">property <b>sparksqlConfig</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sparksqlConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfig'>inputs.dataproc.JobSparksqlConfig</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sparksqlConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfig'>JobSparksqlConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobState-status">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/dataproc/job.ts#L241">property <b>status</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobStatus'>inputs.dataproc.JobStatus</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobStatus'>JobStatus</a>&gt;;</code></pre>

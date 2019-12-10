@@ -309,7 +309,7 @@ properties used to qualify the lookup.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Setting</code></pre>
 
 
 Returns true if the given object is an instance of Setting.  This is designed to work even
@@ -352,7 +352,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L284">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingNotification'>outputs.autoscale.SettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingNotification'>SettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -360,7 +360,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L288">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfile'>outputs.autoscale.SettingProfile</a>[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfile'>SettingProfile</a>[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
@@ -438,7 +438,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L410">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>inputs.autoscale.SettingNotification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>SettingNotification</a>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -446,7 +446,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L414">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>inputs.autoscale.SettingProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>SettingProfile</a>&gt;[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
@@ -512,7 +512,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L372">property <b>notification</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>inputs.autoscale.SettingNotification</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>SettingNotification</a>&gt;;</code></pre>
 
 Specifies a `notification` block as defined below.
 
@@ -520,7 +520,7 @@ Specifies a `notification` block as defined below.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/autoscale/setting.ts#L376">property <b>profiles</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>inputs.autoscale.SettingProfile</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>SettingProfile</a>&gt;[]&gt;;</code></pre>
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
