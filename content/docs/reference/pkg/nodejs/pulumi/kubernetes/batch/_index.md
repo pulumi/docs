@@ -1,5 +1,6 @@
 ---
 title: "Module batch"
+title_tag: "Module batch | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "batch"
 meta_desc: "Explore members of the batch module in the @pulumi/kubernetes package."
 ---

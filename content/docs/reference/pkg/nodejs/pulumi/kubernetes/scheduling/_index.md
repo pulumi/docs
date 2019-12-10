@@ -1,5 +1,6 @@
 ---
 title: "Module scheduling"
+title_tag: "Module scheduling | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "scheduling"
 meta_desc: "Explore members of the scheduling module in the @pulumi/kubernetes package."
 ---

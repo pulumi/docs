@@ -1,5 +1,6 @@
 ---
 title: "Module auditregistration/v1alpha1"
+title_tag: "Module auditregistration/v1alpha1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1alpha1"
 meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes package."
 ---
@@ -21,7 +22,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuditSink" data-link-title="AuditSink">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">
         Resource <strong>AuditSink</strong>
     </a>
 </h3>
@@ -31,7 +32,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 AuditSink represents a cluster level audit sink
 
 <h4 class="pdoc-member-header" id="AuditSink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -45,7 +46,7 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuditSink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -59,14 +60,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="AuditSink-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuditSink-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -77,7 +78,7 @@ Returns true if the given object is an instance of AuditSink.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuditSink-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"auditregistration.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -88,7 +89,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="AuditSink-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -97,7 +98,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuditSink-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L28">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"AuditSink"</span>&gt;;</code></pre>
@@ -108,12 +109,12 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="AuditSink-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L31">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L31">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuditSink-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L36">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L36">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSinkSpec'>outputs.auditregistration.v1alpha1.AuditSinkSpec</a>&gt;;</code></pre>
@@ -121,7 +122,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Spec defines the audit configuration spec
 
 <h4 class="pdoc-member-header" id="AuditSink-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -130,7 +131,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AuditSinkList" data-link-title="AuditSinkList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">
         Resource <strong>AuditSinkList</strong>
     </a>
 </h3>
@@ -140,7 +141,7 @@ deployments.
 AuditSinkList is a list of AuditSink items.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -154,7 +155,7 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -168,14 +169,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuditSinkList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -186,7 +187,7 @@ Returns true if the given object is an instance of AuditSinkList.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"auditregistration.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -197,7 +198,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="AuditSinkList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -206,7 +207,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSink'>outputs.auditregistration.v1alpha1.AuditSink</a>[]&gt;;</code></pre>
@@ -214,7 +215,7 @@ deployments and may be missing (undefined) during planning phases.
 List of audit configurations.
 
 <h4 class="pdoc-member-header" id="AuditSinkList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"AuditSinkList"</span>&gt;;</code></pre>
@@ -225,12 +226,12 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="AuditSinkList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L36">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuditSinkList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4230f901abc21569bcf4071a152f3638a9f1a25b/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>

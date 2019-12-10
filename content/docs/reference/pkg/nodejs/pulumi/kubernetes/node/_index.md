@@ -1,5 +1,6 @@
 ---
 title: "Module node"
+title_tag: "Module node | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "node"
 meta_desc: "Explore members of the node module in the @pulumi/kubernetes package."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Module rbac"
+title_tag: "Module rbac | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "rbac"
 meta_desc: "Explore members of the rbac module in the @pulumi/kubernetes package."
 ---

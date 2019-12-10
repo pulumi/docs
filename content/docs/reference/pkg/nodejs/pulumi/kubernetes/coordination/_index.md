@@ -1,5 +1,6 @@
 ---
 title: "Module coordination"
+title_tag: "Module coordination | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "coordination"
 meta_desc: "Explore members of the coordination module in the @pulumi/kubernetes package."
 ---

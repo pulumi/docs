@@ -1,5 +1,6 @@
 ---
 title: "Module settings"
+title_tag: "Module settings | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "settings"
 meta_desc: "Explore members of the settings module in the @pulumi/kubernetes package."
 ---

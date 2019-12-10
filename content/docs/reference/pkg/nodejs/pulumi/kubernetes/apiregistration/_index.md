@@ -1,5 +1,6 @@
 ---
 title: "Module apiregistration"
+title_tag: "Module apiregistration | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "apiregistration"
 meta_desc: "Explore members of the apiregistration module in the @pulumi/kubernetes package."
 ---

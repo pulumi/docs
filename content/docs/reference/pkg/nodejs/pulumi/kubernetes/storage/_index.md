@@ -1,5 +1,6 @@
 ---
 title: "Module storage"
+title_tag: "Module storage | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "storage"
 meta_desc: "Explore members of the storage module in the @pulumi/kubernetes package."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Module core"
+title_tag: "Module core | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "core"
 meta_desc: "Explore members of the core module in the @pulumi/kubernetes package."
 ---

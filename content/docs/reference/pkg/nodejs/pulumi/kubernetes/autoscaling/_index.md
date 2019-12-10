@@ -1,5 +1,6 @@
 ---
 title: "Module autoscaling"
+title_tag: "Module autoscaling | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "autoscaling"
 meta_desc: "Explore members of the autoscaling module in the @pulumi/kubernetes package."
 ---

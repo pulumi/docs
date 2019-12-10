@@ -1,5 +1,6 @@
 ---
 title: "Module helm"
+title_tag: "Module helm | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "helm"
 meta_desc: "Explore members of the helm module in the @pulumi/kubernetes package."
 ---

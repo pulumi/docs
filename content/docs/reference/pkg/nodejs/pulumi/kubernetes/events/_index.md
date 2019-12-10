@@ -1,5 +1,6 @@
 ---
 title: "Module events"
+title_tag: "Module events | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "events"
 meta_desc: "Explore members of the events module in the @pulumi/kubernetes package."
 ---

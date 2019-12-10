@@ -1,5 +1,6 @@
 ---
 title: "Module auditregistration"
+title_tag: "Module auditregistration | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "auditregistration"
 meta_desc: "Explore members of the auditregistration module in the @pulumi/kubernetes package."
 ---
