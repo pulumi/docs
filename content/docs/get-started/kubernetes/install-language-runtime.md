@@ -12,7 +12,7 @@ aliases: ["/docs/quickstart/kubernetes/install-language-runtime/"]
 
 ## Choose Your Language
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 {{% lang nodejs %}}
 {{< install-node >}}
@@ -20,6 +20,10 @@ aliases: ["/docs/quickstart/kubernetes/install-language-runtime/"]
 
 {{% lang python %}}
 {{< install-python >}}
+{{< /lang >}}
+
+{{% lang dotnet %}}
+{{< install-dotnet >}}
 {{< /lang >}}
 
 Next, we'll configure Kubernetes.

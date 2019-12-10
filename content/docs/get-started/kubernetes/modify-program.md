@@ -13,7 +13,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -133,6 +133,109 @@ if is_minikube:
     pulumi.export("ip", frontend.spec.apply(lambda v: v["cluster_ip"] if "cluster_ip" in v else None))
 else:
     pulumi.export("ip", frontend.status.apply(lambda v: v["load_balancer"]["ingress"][0]["ip"] if "load_balancer" in v else None))
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Apps.V1;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+
+class Program
+{
+    static Task<int> Main()
+    {
+        return Pulumi.Deployment.RunAsync(() =>
+        {
+            var config = new Pulumi.Config();
+            var isMinikube = config.GetBoolean("isMinikube") ?? false;
+
+            var appName = "nginx";
+
+            var appLabels = new InputMap<string>{
+                { "app", appName },
+            };
+
+            var deployment = new Pulumi.Kubernetes.Apps.V1.Deployment(appName, new DeploymentArgs
+            {
+                Spec = new DeploymentSpecArgs
+                {
+                    Selector = new LabelSelectorArgs
+                    {
+                        MatchLabels = appLabels,
+                    },
+                    Replicas = 1,
+                    Template = new PodTemplateSpecArgs
+                    {
+                        Metadata = new ObjectMetaArgs
+                        {
+                            Labels = appLabels,
+                        },
+                        Spec = new PodSpecArgs
+                        {
+                            Containers =
+                            {
+                                new ContainerArgs
+                                {
+                                    Name = appName,
+                                    Image = "nginx",
+                                    Ports =
+                                    {
+                                        new ContainerPortArgs
+                                        {
+                                            ContainerPortValue = 80
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            });
+
+            var frontend = new Service(appName, new ServiceArgs
+            {
+                Metadata = new ObjectMetaArgs
+                {
+                    Labels = deployment.Spec.Apply(spec =>
+                        spec.Template.Metadata.Labels
+                    ),
+                },
+                Spec = new ServiceSpecArgs
+                {
+                    Type = isMinikube
+                        ? "ClusterIP"
+                        : "LoadBalancer",
+                    Selector = appLabels,
+                    Ports = new ServicePortArgs
+                    {
+                        Port = 80,
+                        TargetPort = 80,
+                        Protocol = "TCP",
+                    },
+                }
+            });
+
+            var ip = isMinikube
+                ? frontend.Spec.Apply(spec => spec.ClusterIP)
+                : frontend.Status.Apply(status =>
+                {
+                    var ingress = status.LoadBalancer.Ingress[0];
+                    return ingress.Ip ?? ingress.Hostname;
+                });
+
+            return new Dictionary<string, object?>
+            {
+                { "ip", ip },
+            };
+        });
+    }
+}
 ```
 
 Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config.md" >}}) value to indicate whether the program is being deployed to Minikube or not.
