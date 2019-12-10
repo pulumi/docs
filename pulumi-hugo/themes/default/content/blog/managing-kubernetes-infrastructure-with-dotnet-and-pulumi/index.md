@@ -7,15 +7,16 @@ meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource pro
 meta_image: "k8s-dotnet.png"
 ---
 
-Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.com/dotnet/building-modern-cloud-applications-using-pulumi-and-net-core/), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- "can I use Pulumi to manage Kubernetes infrastructure in C# and F#, as I can already in TypeScript and Python today?"  With last week's release of [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes/1.4.0-preview-alpha.1575927399) on NuGet, you can now also deploy Kubernetes infrastructure from .NET.
+Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.com/dotnet/building-modern-cloud-applications-using-pulumi-and-net-core/), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- "can I use Pulumi to manage Kubernetes infrastructure in C#, F#, and VB.NET as I can already in TypeScript and Python today?"  With last week's release of [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes/) on NuGet, you can now also deploy Kubernetes infrastructure from .NET.
 
 Using .NET to build our Kubernetes infrastructure offers several benefits:
+
 * Strong Typing:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
 * Rich IDE Support:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactorings, IntelliSense, and more.   
 * Familiar Languages and APIs:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
 * Components and Classes:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
 
-Together, these benefits provide an entirely more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
+Together, these benefits provide a more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
 
 # Tour of Kubernetes with .NET
 
