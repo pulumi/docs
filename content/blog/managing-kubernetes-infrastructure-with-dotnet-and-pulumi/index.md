@@ -209,7 +209,7 @@ If we wanted to push to another Docker container registry (like ACR, GCR, ECR or
 
 ## Cloud + Kubernetes with .NET
 
-Because Pulumi lets you work with both Kubernetes and cloud ([AWS](https://www.nuget.org/packages/Pulumi.Aws/), [Azure](https://www.nuget.org/packages/Pulumi.Azue/), [GCP](https://www.nuget.org/packages/Pulumi.Gcp/), and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
+Because Pulumi lets you work with both Kubernetes and cloud ([AWS](https://www.nuget.org/packages/Pulumi.Aws/), [Azure](https://www.nuget.org/packages/Pulumi.Azure/), [GCP](https://www.nuget.org/packages/Pulumi.Gcp/), and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
 
 For example, we can deploy a [managed Kubernetes cluster on DigitalOcean](https://www.digitalocean.com/products/kubernetes/), and then deploy a Pod into it:
 
