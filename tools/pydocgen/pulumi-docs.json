@@ -176,6 +176,12 @@
       "terraform_provider_name": "signalfx"
     },
     {
+      "name": "Pulumi SpotInst",
+      "package_name": "pulumi_spotinst",
+      "pulumi_provider_name": "spotinst",
+      "terraform_provider_name": "spotinst"
+    },
+    {
       "name": "Pulumi RabbitMQ",
       "package_name": "pulumi_rabbitmq",
       "pulumi_provider_name": "rabbitmq",

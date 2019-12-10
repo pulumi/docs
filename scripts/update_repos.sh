@@ -37,6 +37,7 @@ TOOLS_REPOS=(
     "pulumi-rabbitmq"
     "pulumi-random"
     "pulumi-signalfx"
+    "pulumi-spotinst"
     "pulumi-terraform"
     "pulumi-tls"
     "pulumi-vault"
