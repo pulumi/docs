@@ -7,7 +7,7 @@ meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource pro
 meta_image: "k8s-dotnet.png"
 ---
 
-Last month, we announced [.NET support for Pulumi](), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- "can I use Pulumi to manage Kubernetes infrastructure in C# and F#, as I can already in TypeScript and Python today?"  With last week's release of [`Pulumi.Kubernetes`]() on NuGet, you can now also deploy Kubernetes infrastructure from .NET.
+Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.com/dotnet/building-modern-cloud-applications-using-pulumi-and-net-core/), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- "can I use Pulumi to manage Kubernetes infrastructure in C# and F#, as I can already in TypeScript and Python today?"  With last week's release of [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes/1.4.0-preview-alpha.1575927399) on NuGet, you can now also deploy Kubernetes infrastructure from .NET.
 
 Using .NET to build our Kubernetes infrastructure offers several benefits:
 * Strong Typing:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
@@ -21,7 +21,7 @@ Together, these benefits provide an entirely more familiar experience for workin
 
 We can see a simple example in practice - deploying an Nginx pod into a Kubernetes cluster.
 
-```cs
+```csharp
 var pod = new Pod("pod", new PodArgs
 {
     Spec = new PodSpecArgs
@@ -62,8 +62,6 @@ Resources:
     + 2 created
 
 Duration: 11s
-
-Permalink: https://app.pulumi.com/lukehoban/basic_dotnet_kubernetes/luke-dev/updates/81
 ```
 
 As always, Pulumi programs describe the desired state of our infrastructure, instead of an imperative process to construct that infrastructure.  If we change our program, Pulumi will compute the minimal delta to apply to our Kubernetes cluster to transition to this new desired state.  This almost feels like using Edit-and-Continue on our deployed Kubernetes resources---modifying our Kubernetes resources in place inside the cluster.
@@ -111,7 +109,7 @@ Do you want to perform this update? details
     ~ kubernetes:core/v1:Pod: (update)
         [id=default/pod-wyjq31t3]
         [urn=urn:pulumi:luke-dev::basic_dotnet_kubernetes::kubernetes:core/v1:Pod::pod]
-        [provider=urn:pulumi:luke-dev::basic_dotnet_kubernetes::pulumi:providers:kubernetes::default_1_4_0_alpha_1574471668_g18eab106_dirty::127c0c24-8b12-4010-a544-5f5390f91e4e]
+        [provider=urn:pulumi:luke-dev::basic_dotnet_kubernetes::pulumi:providers:kubernetes::default_1_4_0::127c0c24-8b12-4010-a544-5f5390f91e4e]
       ~ metadata: {
           ~ labels: {
               + app: "nginx"
@@ -130,8 +128,6 @@ Resources:
     1 unchanged
 
 Duration: 3s
-
-Permalink: https://app.pulumi.com/lukehoban/basic_dotnet_kubernetes/luke-dev/updates/82
 ```
 
 The real benefits of .NET come when we extract common code into a reusable component.  We can do that to create a new component like a `ServiceDeployment`, which includes both a Kubernetes `Service` and `Deployment` using opinionated defaults.  With this, we can describe entire Kubernetes applications (100s of lines of YAML), in a short and semantically meaningful snippet of C#:
@@ -172,48 +168,59 @@ You can check out the implementation of this `ServiceDeployment` component in th
 
 Because Pulumi lets you work with both Kubernetes and cloud (AWS, Azure, GCP, and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
 
-For example, we can deploy a managed Kubernetes cluster on GKE, and then deploy a Pod into it:
+For example, we can deploy a [managed Kubernetes cluster on DigitalOcean](https://www.digitalocean.com/products/kubernetes/), and then deploy a Pod into it:
 
 ```csharp
-var cluster = new KubernetesCluster("do-cluser", new KubernetesClusterArgs {
+var cluster = new KubernetesCluster("do-cluster", new KubernetesClusterArgs
+{
     Region = "sfo2",
     Version = "latest",
-    NodePool = new KubernetesClusterNodePoolArgs {
+    NodePool = new KubernetesClusterNodePoolArgs
+    {
         Name = "default",
         Size = "s-2vcpu-2gb",
-        NodeCount = nodeCount
+        NodeCount = nodeCount,
     },
 });
 
-var k8sProvider = new Pulumi.Kubernetes.Provider("do-k8s", new Pulumi.Kubernetes.ProviderArgs {
+var k8sProvider = new Pulumi.Kubernetes.Provider("do-k8s", new Pulumi.Kubernetes.ProviderArgs
+{
     KubeConfig = cluster.KubeConfigs.Apply(array => array[0].RawConfig)
 });
 
-var app = new Pulumi.Kubernetes.Apps.V1.Deployment("do-app-dep", new DeploymentArgs {
-    Spec = new DeploymentSpecArgs {
-        Selector = new LabelSelectorArgs {
-            MatchLabels = new InputMap<string>() {
+var app = new Pulumi.Kubernetes.Apps.V1.Deployment("do-app-dep", new DeploymentArgs
+{
+    Spec = new DeploymentSpecArgs
+    {
+        Selector = new LabelSelectorArgs
+        {
+            MatchLabels = new InputMap<string>
+            {
                 {"app", "app-nginx"},
             },
         },
         Replicas = appReplicaCount,
-        Template = new PodTemplateSpecArgs {
-            Metadata = new ObjectMetaArgs() {
-                Labels = new InputMap<string>() {
+        Template = new PodTemplateSpecArgs
+        {
+            Metadata = new ObjectMetaArgs
+            {
+                Labels = new InputMap<string>
+                {
                     {"app", "app-nginx"},
                 },
             },
-            Spec = new PodSpecArgs() {
-                Containers = new ContainerArgs() {
+            Spec = new PodSpecArgs
+            {
+                Containers = new ContainerArgs()
+                {
                     Name = "nginx",
                     Image = "nginx",
-                }
-            }
-        }
+                },
+            },
+        },
     },
-}, new CustomResourceOptions {
-    Provider = k8sProvider
-});
+}, 
+new CustomResourceOptions { Provider = k8sProvider });
 
 var appService = new Pulumi.Kubernetes.Core.V1.Service("do-app-svc", new ServiceArgs {
     Spec = new ServiceSpecArgs() {
