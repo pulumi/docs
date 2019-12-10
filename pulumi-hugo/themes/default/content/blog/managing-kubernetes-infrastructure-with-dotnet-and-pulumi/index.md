@@ -11,10 +11,10 @@ Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.co
 
 Using .NET to build our Kubernetes infrastructure offers several benefits:
 
-* Strong Typing:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
-* Rich IDE Support:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactorings, IntelliSense, and more.   
-* Familiar Languages and APIs:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
-* Components and Classes:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
+* **Strong Typing**:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
+* **Rich IDE Support**:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactorings, IntelliSense, and more.   
+* **Familiar Languages and APIs**:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
+* **Components and Classes**:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
 
 Together, these benefits provide a more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
 
@@ -165,9 +165,47 @@ return new Dictionary<string, object?>{
 
 You can check out the implementation of this `ServiceDeployment` component in the [Guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-cs-guestbook/components) in the Pulumi Examples repo on GitHub.
 
+## Building Docker Images for Kubernetes with .NET
+
+In the examples so far, we have specified the Docker image to deploy as part of our Kuberentes `Deployment`s by referring to an image already in the DockerHub or Google Container Registry.  But what if we wanted to push our own custom Docker image built from our own application's source code, and use that in our Kubernetes `Pod` or `Deployment`?  This is easy to do as well with the [`Pulumi.Docker`](https://www.nuget.org/packages/Pulumi.Docker/) package.  For example, we can deploy a customized Docker image derived from Nginx with the following:
+
+```csharp
+var image = new Image("nginx", new ImageArgs
+{
+    ImageName = "my-username/my-nginx",
+    Build = "./app",
+});
+
+var pod = new Pod("pod", new PodArgs
+{
+    Spec = new PodSpecArgs
+    {
+        Containers =
+        {
+            new ContainerArgs
+            {
+                Name = "nginx",
+                Image = image.ImageName,
+            },
+        },
+    },
+});
+```
+
+Instead of using the default `nginx` image on Dockerhub, we can use our own Dockerfile from the `app` folder in our Pulumi project, for instance, including the following in our `Dockerfile` to deploy some customized files in the `app/content` folder to our Nginx server:
+
+```dockerfile
+FROM nginx
+COPY content /usr/share/nginx/html
+```
+
+When we deploy this with Pulumi, the Docker file will be build locally, pushed to DockerHub, then the image name in DockerHub referenced from the `Pod` in Kuberentes.  All of this happens automatically, allowing you to seamlessly deploy and version both your application code and infrastructure together with a simple `pulumi up`.
+
+If we wanted to push to another Docker container registry (like ACR, GCR, ECR or others), we can easily do that too using additional parameters on the `Pulumi.Docker.ImageArgs` class.
+
 ## Cloud + Kubernetes with .NET
 
-Because Pulumi lets you work with both Kubernetes and cloud (AWS, Azure, GCP, and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
+Because Pulumi lets you work with both Kubernetes and cloud ([AWS](https://www.nuget.org/packages/Pulumi.Aws/), [Azure](https://www.nuget.org/packages/Pulumi.Azue/), [GCP](https://www.nuget.org/packages/Pulumi.Gcp/), and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
 
 For example, we can deploy a [managed Kubernetes cluster on DigitalOcean](https://www.digitalocean.com/products/kubernetes/), and then deploy a Pod into it:
 
