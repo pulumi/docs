@@ -70,7 +70,7 @@ notitle: true
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="discovery/">discovery</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="discovery/v1alpha1/">v1alpha1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discovery/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="events/">events</a><ul>
@@ -79,6 +79,10 @@ notitle: true
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extensions/">extensions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="extensions/v1beta1/">v1beta1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flowcontrol/">flowcontrol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flowcontrol/v1alpha1/">v1alpha1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="meta/">meta</a><ul>

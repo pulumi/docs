@@ -11,7 +11,8 @@ notitle: true
 <dt id="pulumi_kubernetes.rbac.v1alpha1.ClusterRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">ClusterRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aggregation_rule=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.ClusterRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit
-by a RoleBinding or ClusterRoleBinding.</p>
+by a RoleBinding or ClusterRoleBinding. Deprecated in v1.17 in favor of
+rbac.authorization.k8s.io/v1 ClusterRole, and will no longer be served in v1.20.</p>
 <p>Create a ClusterRole resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -124,7 +125,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_kubernetes.rbac.v1alpha1.ClusterRoleBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">ClusterRoleBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">role_ref=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.ClusterRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole
-in the global namespace, and adds who information via Subject.</p>
+in the global namespace, and adds who information via Subject. Deprecated in v1.17 in favor of
+rbac.authorization.k8s.io/v1 ClusterRoleBinding, and will no longer be served in v1.20.</p>
 <p>Create a ClusterRoleBinding resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -234,7 +236,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1alpha1.ClusterRoleBindingList">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">ClusterRoleBindingList</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">items=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.ClusterRoleBindingList" title="Permalink to this definition">¶</a></dt>
-<dd><p>ClusterRoleBindingList is a collection of ClusterRoleBindings</p>
+<dd><p>ClusterRoleBindingList is a collection of ClusterRoleBindings. Deprecated in v1.17 in favor of
+rbac.authorization.k8s.io/v1 ClusterRoleBindings, and will no longer be served in v1.20.</p>
 <p>Create a ClusterRoleBindingList resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -335,7 +338,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1alpha1.ClusterRoleList">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">ClusterRoleList</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">items=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.ClusterRoleList" title="Permalink to this definition">¶</a></dt>
-<dd><p>ClusterRoleList is a collection of ClusterRoles</p>
+<dd><p>ClusterRoleList is a collection of ClusterRoles. Deprecated in v1.17 in favor of
+rbac.authorization.k8s.io/v1 ClusterRoles, and will no longer be served in v1.20.</p>
 <p>Create a ClusterRoleList resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -437,7 +441,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_kubernetes.rbac.v1alpha1.Role">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a
-RoleBinding.</p>
+RoleBinding. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 Role, and will no
+longer be served in v1.20.</p>
 <p>Create a Role resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -541,7 +546,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>RoleBinding references a role, but does not contain it.  It can reference a Role in the same
 namespace or a ClusterRole in the global namespace. It adds who information via Subjects and
 namespace information by which namespace it exists in.  RoleBindings in a given namespace only
-have effect in that namespace.</p>
+have effect in that namespace. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1
+RoleBinding, and will no longer be served in v1.20.</p>
 <p>Create a RoleBinding resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -651,7 +657,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1alpha1.RoleBindingList">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">RoleBindingList</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">items=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.RoleBindingList" title="Permalink to this definition">¶</a></dt>
-<dd><p>RoleBindingList is a collection of RoleBindings</p>
+<dd><p>RoleBindingList is a collection of RoleBindings Deprecated in v1.17 in favor of
+rbac.authorization.k8s.io/v1 RoleBindingList, and will no longer be served in v1.20.</p>
 <p>Create a RoleBindingList resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -752,7 +759,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1alpha1.RoleList">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.rbac.v1alpha1.</code><code class="sig-name descname">RoleList</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">items=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1alpha1.RoleList" title="Permalink to this definition">¶</a></dt>
-<dd><p>RoleList is a collection of Roles</p>
+<dd><p>RoleList is a collection of Roles. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1
+RoleList, and will no longer be served in v1.20.</p>
 <p>Create a RoleList resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
