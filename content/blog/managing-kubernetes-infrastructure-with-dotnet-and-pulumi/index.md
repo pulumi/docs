@@ -165,6 +165,8 @@ return new Dictionary<string, object?>{
 
 You can check out the implementation of this `ServiceDeployment` component in the [Guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-cs-guestbook/components) in the Pulumi Examples repo on GitHub.
 
+![Guestbook Application](./guestbook.png)
+
 ## Building Docker Images for Kubernetes with .NET
 
 In the examples so far, we have specified the Docker image to deploy as part of our Kubernetes `Deployment`s by referring to an image already in the DockerHub or Google Container Registry.  But what if we wanted to push our own custom Docker image built from our own application's source code, and use that in our Kubernetes `Pod` or `Deployment`?  This is easy to do as well with the [`Pulumi.Docker`](https://www.nuget.org/packages/Pulumi.Docker/) package.  For example, we can deploy a customized Docker image derived from Nginx with the following:
@@ -291,6 +293,10 @@ if (!string.IsNullOrWhiteSpace(domainName)) {
 ```
 
 Note that this example deploys resources first into DigitalOcean (a Kubernetes `Cluster`), then into Kubernetes itself (`Deployment` and `Service` via a `Pulumi.Kubernetes.Provider` configured to connect to the Kubernetes cluster in Digital Ocean), then optionally also more resources in DigitalOcean dependent on the Kubernetes `Service` (`Domain` and `DnsRecord`).  This example is a complex infrastructure deployment, all in a few dozen lines of declarative and strongly typed C# code. 
+
+Check out the full [DigitalOcean Kubernetes Cluster in C#](https://github.com/pulumi/examples/blob/master/digitalocean-cs-k8s/Program.cs) example for more details.
+
+![Pulumi Console - Digital Ocean and Kubernetes Resources](./do-kubernetes-resources.png)
 
 # Conclusion
 
