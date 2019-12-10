@@ -12,7 +12,7 @@ Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.co
 Using .NET to build our Kubernetes infrastructure offers several benefits:
 
 * **Strong Typing**:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
-* **Rich IDE Support**:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactorings, IntelliSense, and more.   
+* **Rich IDE Support**:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactoring, IntelliSense, and more.   
 * **Familiar Languages and APIs**:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
 * **Components and Classes**:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
 
@@ -167,7 +167,7 @@ You can check out the implementation of this `ServiceDeployment` component in th
 
 ## Building Docker Images for Kubernetes with .NET
 
-In the examples so far, we have specified the Docker image to deploy as part of our Kuberentes `Deployment`s by referring to an image already in the DockerHub or Google Container Registry.  But what if we wanted to push our own custom Docker image built from our own application's source code, and use that in our Kubernetes `Pod` or `Deployment`?  This is easy to do as well with the [`Pulumi.Docker`](https://www.nuget.org/packages/Pulumi.Docker/) package.  For example, we can deploy a customized Docker image derived from Nginx with the following:
+In the examples so far, we have specified the Docker image to deploy as part of our Kubernetes `Deployment`s by referring to an image already in the DockerHub or Google Container Registry.  But what if we wanted to push our own custom Docker image built from our own application's source code, and use that in our Kubernetes `Pod` or `Deployment`?  This is easy to do as well with the [`Pulumi.Docker`](https://www.nuget.org/packages/Pulumi.Docker/) package.  For example, we can deploy a customized Docker image derived from Nginx with the following:
 
 ```csharp
 var image = new Image("nginx", new ImageArgs
@@ -192,14 +192,14 @@ var pod = new Pod("pod", new PodArgs
 });
 ```
 
-Instead of using the default `nginx` image on Dockerhub, we can use our own Dockerfile from the `app` folder in our Pulumi project, for instance, including the following in our `Dockerfile` to deploy some customized files in the `app/content` folder to our Nginx server:
+Instead of using the default `nginx` image on DockerHub, we can use our own Dockerfile from the `app` folder in our Pulumi project, for instance, including the following in our `Dockerfile` to deploy some customized files in the `app/content` folder to our Nginx server:
 
 ```dockerfile
 FROM nginx
 COPY content /usr/share/nginx/html
 ```
 
-When we deploy this with Pulumi, the Docker file will be build locally, pushed to DockerHub, then the image name in DockerHub referenced from the `Pod` in Kuberentes.  All of this happens automatically, allowing you to seamlessly deploy and version both your application code and infrastructure together with a simple `pulumi up`.
+When we deploy this with Pulumi, the Docker file will be build locally, pushed to DockerHub, then the image name in DockerHub referenced from the `Pod` in Kubernetes.  All of this happens automatically, allowing you to seamlessly deploy and version both your application code and infrastructure together with a simple `pulumi up`.
 
 If we wanted to push to another Docker container registry (like ACR, GCR, ECR or others), we can easily do that too using additional parameters on the `Pulumi.Docker.ImageArgs` class.
 
