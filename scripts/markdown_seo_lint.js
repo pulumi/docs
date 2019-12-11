@@ -1,10 +1,46 @@
 const fs = require("fs");
+const yaml = require("js-yaml");
 const markdownlint = require("markdownlint");
 const path = require("path");
 
+const FRONT_MATTER_REGEX = /((^---\s*$[^]*?^---\s*$)|(^\+\+\+\s*$[^]*?^(\+\+\+|\.\.\.)\s*$))(\r\n|\r|\n|$)/m;
+
+function checkPageTitle(title) {
+    let error = null;
+    if (!title) {
+        error = "Missing page title";
+    }else if (title.trim().length === 0) {
+        error = "Page title is empty";
+    }else if (title.trim().length > 60) {
+        error = "Page title exceeds 60 characters";
+    }
+    return error;
+}
+
+function checkPageMetaDescription(meta) {
+    let error = null;
+    if (!meta) {
+        error = "Missing meta description";
+    }else if (meta.trim().length === 0) {
+        error = "Meta description is empty";
+    }else if (meta.trim().length < 50) {
+        error = "Meta description is too short. Must be at least 50 characters";
+    }else if (meta.trim().length > 160) {
+        error = "Meta descripiton is too long. Must be shorter than 160 characters";
+    }
+    return error;
+}
+
 // Recursively generate a list of markdown files from a given
 // list of paths.
-function searchForMarkdown(paths, result = []) {
+function searchForMarkdown(paths, result) {
+    // If the result arg does not exist we should create it.
+    if (!result) {
+        result = {
+            files: [],
+            frontMatter: {},
+        }
+    }
     // Grab the first file in the list and generate
     // its full path.
     const file = paths[0];
@@ -38,7 +74,23 @@ function searchForMarkdown(paths, result = []) {
     // and add it the resulting file list.
     }else {
         if (fileSuffix === "md") {
-            result.push(fullPath);
+            try {
+                const content = fs.readFileSync(fullPath, "utf8");
+                const frontMatter = content.match(FRONT_MATTER_REGEX);
+                const fContent = frontMatter[0].split("---").join("");
+                const obj = yaml.load(fContent);
+                result.frontMatter[fullPath] = {
+                    error: null,
+                    title: checkPageTitle(obj.title),
+                    metaDescription: checkPageMetaDescription(obj.meta_desc),
+                };
+                result.files.push(fullPath);
+            } catch(e) {
+                result.frontMatter[fullPath] = {
+                    error: e.message,
+                };
+                result.files.push(fullPath);
+            }
         }
 
         // If there are remaining paths in the list, keep going.
@@ -53,17 +105,18 @@ function searchForMarkdown(paths, result = []) {
 
 // Get a list of markdown files.
 function getMarkdownFileList(parentPath) {
-    const dirs = fs.readdirSync(parentPath).map(function(dir) {
+    const fullParentPath = path.resolve(__dirname, parentPath)
+    const dirs = fs.readdirSync(fullParentPath).map(function(dir) {
         return parentPath + "/" + dir;
     });
 
     return searchForMarkdown(dirs);
 }
 
-const filesToLint = getMarkdownFileList("./content");
+const filesToLint = getMarkdownFileList("../content");
 
 const opts = {
-    files: filesToLint,
+    files: filesToLint.files,
     config: {
         // Allow inline HTML.
         MD033: false,
@@ -95,6 +148,28 @@ const result = markdownlint.sync(opts);
 const errorsCount = [].concat.apply([], Object.values(result)).length;
 const errors = Object.keys(result).map(function(key) {
     const lintErrors = result[key];
+    const frontMatterErrors = filesToLint.frontMatter[key];
+
+    if (frontMatterErrors.error) {
+        lintErrors.push({
+            lineNumber: "File Header",
+            ruleDescription: frontMatterErrors.error,
+        });
+    }else {
+        if (frontMatterErrors.title) {
+            lintErrors.push({
+                lineNumber: "File Header",
+                ruleDescription: frontMatterErrors.title,
+            });
+        }
+        if (frontMatterErrors.metaDescription) {
+            lintErrors.push({
+                lineNumber: "File Header",
+                ruleDescription: frontMatterErrors.metaDescription,
+            });
+        }
+    }
+
     if (lintErrors.length > 0) {
         return { path: key, errors: lintErrors };
     }else {
