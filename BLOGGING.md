@@ -142,9 +142,10 @@ For this reason, leaving the `draft` property `true` until you're actually ready
 
 ## Publishing Check List
 
-* Spell check.
-* Grammar check.
-* Check for a break `<!--more-->` after the first paragraph. This ensures a correct break on the blog landing page. 
-* Check for meta_image - Avoid using an animated GIF, Twitter summary cards use the first image which may be black in the case of `asciinema` screen captures.
-* Preview locally.
-* Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet.
+- [ ] Use the template instead of copying another post: ```hugo new --kind blog-post blog/my-new-post```
+- [ ] Set `draft:false` or delete it.
+- [ ] Spell and grammar check: Consider using a service such as [Grammarly](http://grammarly.com)
+- [ ] Check for a break `<!--more-->` after the first paragraph. This ensures a correct break on the blog landing page. 
+- [ ] Check the meta_image - Avoid using an animated GIF, Twitter summary cards use the first image which may be black in the case of `asciinema` screen captures.
+- [ ] Preview locally. Check formatting, links, and images for appearance.
+- [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet (use the preview provided in the PR).
