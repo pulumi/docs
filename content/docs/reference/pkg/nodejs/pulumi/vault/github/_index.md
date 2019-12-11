@@ -39,7 +39,7 @@ meta_desc: "Explore members of the github module in the @pulumi/vault package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthBackend" data-link-title="AuthBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L27">
         Resource <strong>AuthBackend</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ const example = new vault.github.AuthBackend("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown.
 
 <h4 class="pdoc-member-header" id="AuthBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L141"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L141"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a AuthBackend resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -89,25 +89,25 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AuthBackend</code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 
 Returns true if the given object is an instance of AuthBackend.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackend-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L57">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L57">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 
 <h4 class="pdoc-member-header" id="AuthBackend-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L62">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L62">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ The API endpoint to use. Useful if you
 are running GitHub Enterprise or an API-compatible authentication server.
 
 <h4 class="pdoc-member-header" id="AuthBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ Specifies the description of the mount.
 This overrides the current stored value, if any.
 
 <h4 class="pdoc-member-header" id="AuthBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackend-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L72">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L72">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ deployments and may be missing (undefined) during planning phases.
 issued using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackend-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L76">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L76">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ issued using this role. This must be a valid [duration string](https://golang.or
 The organization configured users must be part of.
 
 <h4 class="pdoc-member-header" id="AuthBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L81">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L81">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ Path where the auth backend is mounted. Defaults to `auth/github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L87">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L87">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L94">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L94">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L99">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L99">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L104">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L104">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Its current value will be referenced at renewal time.
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L110">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L110">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L117">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L117">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L122">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L122">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ value of this field. Specified in seconds.
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L127">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L127">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L135">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L135">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ Its current value will be referenced at renewal time.
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L140">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L140">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -267,12 +267,12 @@ requests a different type at generation time.
 using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackend-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L141">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L141">property <b>tune</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tune: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tune: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#AuthBackendTune'>outputs.github.AuthBackendTune</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -281,7 +281,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Team" data-link-title="Team">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L16">
         Resource <strong>Team</strong>
     </a>
 </h3>
@@ -295,7 +295,7 @@ information.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.markdown.
 
 <h4 class="pdoc-member-header" id="Team-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -309,7 +309,7 @@ Create a Team resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Team-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -320,25 +320,25 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Team-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Team-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Team</code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 
 Returns true if the given object is an instance of Team.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Team-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L47">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L47">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="Team-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -356,7 +356,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Team-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L52">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L52">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ An array of strings specifying the policies to be set on tokens
 issued using this role.
 
 <h4 class="pdoc-member-header" id="Team-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L56">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L56">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>team: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ issued using this role.
 GitHub team name in "slugified" format.
 
 <h4 class="pdoc-member-header" id="Team-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L60">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L60">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ GitHub team name in "slugified" format.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="Team-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L64">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L64">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="Team-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L68">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L68">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="Team-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L72">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L72">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="Team-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L76">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L76">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="Team-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L80">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L80">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="Team-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L84">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L84">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="Team-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L88">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L88">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,7 +437,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="Team-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L92">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L92">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -445,7 +445,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h4 class="pdoc-member-header" id="Team-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -454,7 +454,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L16">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -468,7 +468,7 @@ information.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -482,7 +482,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -493,25 +493,25 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is User</code></pre>
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 
 Returns true if the given object is an instance of User.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L47">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L47">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -529,7 +529,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L52">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L52">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -538,7 +538,7 @@ An array of strings specifying the policies to be set on tokens issued
 using this role.
 
 <h4 class="pdoc-member-header" id="User-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L56">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L56">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -546,7 +546,7 @@ using this role.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="User-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L60">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L60">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="User-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L64">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L64">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="User-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L68">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L68">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="User-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L72">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L72">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -578,7 +578,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="User-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L76">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L76">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="User-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L80">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L80">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="User-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L84">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L84">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="User-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L88">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L88">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -619,7 +619,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L92">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L92">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ GitHub user name.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuthBackendArgs" data-link-title="AuthBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L303">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L303">
         interface <strong>AuthBackendArgs</strong>
     </a>
 </h3>
@@ -640,7 +640,7 @@ GitHub user name.
 The set of arguments for constructing a AuthBackend resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L308">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L308">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ The API endpoint to use. Useful if you
 are running GitHub Enterprise or an API-compatible authentication server.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L313">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L313">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ Specifies the description of the mount.
 This overrides the current stored value, if any.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L318">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L318">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ This overrides the current stored value, if any.
 issued using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L322">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L322">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ issued using this role. This must be a valid [duration string](https://golang.or
 The organization configured users must be part of.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L327">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L327">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ Path where the auth backend is mounted. Defaults to `auth/github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L333">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L333">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -694,7 +694,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L340">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L340">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L345">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L345">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L350">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L350">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ Its current value will be referenced at renewal time.
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L356">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L356">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L363">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L363">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -744,7 +744,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L368">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L368">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -753,7 +753,7 @@ value of this field. Specified in seconds.
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L373">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L373">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L381">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L381">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -774,7 +774,7 @@ Its current value will be referenced at renewal time.
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L386">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L386">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -783,12 +783,12 @@ requests a different type at generation time.
 using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L387">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L387">property <b>tune</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>inputs.github.AuthBackendTune</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="AuthBackendState" data-link-title="AuthBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L209">
         interface <strong>AuthBackendState</strong>
     </a>
 </h3>
@@ -798,7 +798,7 @@ using this role. This must be a valid [duration string](https://golang.org/pkg/t
 Input properties used for looking up and filtering AuthBackend resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L213">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L213">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -806,7 +806,7 @@ Input properties used for looking up and filtering AuthBackend resources.
 The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L218">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L218">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ The API endpoint to use. Useful if you
 are running GitHub Enterprise or an API-compatible authentication server.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L223">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L223">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -824,7 +824,7 @@ Specifies the description of the mount.
 This overrides the current stored value, if any.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L228">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L228">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ This overrides the current stored value, if any.
 issued using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L232">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L232">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ issued using this role. This must be a valid [duration string](https://golang.or
 The organization configured users must be part of.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L237">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L237">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ Path where the auth backend is mounted. Defaults to `auth/github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L243">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L243">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -860,7 +860,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L250">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L250">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -871,7 +871,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L255">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L255">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L260">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L260">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ Its current value will be referenced at renewal time.
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L266">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L266">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -899,7 +899,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L273">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L273">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -910,7 +910,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L278">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L278">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -919,7 +919,7 @@ value of this field. Specified in seconds.
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L283">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L283">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -928,7 +928,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L291">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L291">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -940,7 +940,7 @@ Its current value will be referenced at renewal time.
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L296">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L296">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -949,12 +949,12 @@ requests a different type at generation time.
 using this role. This must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/authBackend.ts#L297">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/authBackend.ts#L297">property <b>tune</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>inputs.github.AuthBackendTune</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TeamArgs" data-link-title="TeamArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L206">
         interface <strong>TeamArgs</strong>
     </a>
 </h3>
@@ -964,7 +964,7 @@ using this role. This must be a valid [duration string](https://golang.org/pkg/t
 The set of arguments for constructing a Team resource.
 
 <h4 class="pdoc-member-header" id="TeamArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L211">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L211">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -973,7 +973,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="TeamArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L216">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L216">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -982,7 +982,7 @@ An array of strings specifying the policies to be set on tokens
 issued using this role.
 
 <h4 class="pdoc-member-header" id="TeamArgs-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L220">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L220">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>team: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -990,7 +990,7 @@ issued using this role.
 GitHub team name in "slugified" format.
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L224">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L224">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -998,7 +998,7 @@ GitHub team name in "slugified" format.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L228">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L228">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L232">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L232">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L236">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L236">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L240">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L240">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L244">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L244">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L248">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L248">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1046,7 +1046,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L252">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L252">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="TeamArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L256">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L256">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h3 class="pdoc-module-header" id="TeamState" data-link-title="TeamState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L150">
         interface <strong>TeamState</strong>
     </a>
 </h3>
@@ -1072,7 +1072,7 @@ The type of token to generate, service or batch
 Input properties used for looking up and filtering Team resources.
 
 <h4 class="pdoc-member-header" id="TeamState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L155">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L155">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="TeamState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L160">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L160">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ An array of strings specifying the policies to be set on tokens
 issued using this role.
 
 <h4 class="pdoc-member-header" id="TeamState-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L164">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L164">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>team?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ issued using this role.
 GitHub team name in "slugified" format.
 
 <h4 class="pdoc-member-header" id="TeamState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L168">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L168">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ GitHub team name in "slugified" format.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="TeamState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L172">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L172">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="TeamState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L176">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L176">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="TeamState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L180">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L180">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="TeamState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L184">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L184">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="TeamState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L188">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L188">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1146,7 +1146,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="TeamState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L192">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L192">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="TeamState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L196">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L196">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="TeamState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/team.ts#L200">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/team.ts#L200">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L206">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -1180,7 +1180,7 @@ The type of token to generate, service or batch
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L211">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L211">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="UserArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L216">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L216">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1198,7 +1198,7 @@ An array of strings specifying the policies to be set on tokens issued
 using this role.
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L220">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L220">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1206,7 +1206,7 @@ using this role.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L224">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L224">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1214,7 +1214,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L228">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L228">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1222,7 +1222,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L232">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L232">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1230,7 +1230,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L236">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L236">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1238,7 +1238,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L240">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L240">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L244">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L244">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L248">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L248">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1262,7 +1262,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="UserArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L252">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L252">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1270,7 +1270,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h4 class="pdoc-member-header" id="UserArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L256">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L256">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1278,7 +1278,7 @@ The type of token to generate, service or batch
 GitHub user name.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L150">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -1288,7 +1288,7 @@ GitHub user name.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L155">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L155">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1297,7 @@ Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
 
 <h4 class="pdoc-member-header" id="UserState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L160">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L160">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1306,7 +1306,7 @@ An array of strings specifying the policies to be set on tokens issued
 using this role.
 
 <h4 class="pdoc-member-header" id="UserState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L164">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L164">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1314,7 +1314,7 @@ using this role.
 Specifies the blocks of IP addresses which are allowed to use the generated token
 
 <h4 class="pdoc-member-header" id="UserState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L168">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L168">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1322,7 +1322,7 @@ Specifies the blocks of IP addresses which are allowed to use the generated toke
 Generated Token's Explicit Maximum TTL in seconds
 
 <h4 class="pdoc-member-header" id="UserState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L172">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L172">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ Generated Token's Explicit Maximum TTL in seconds
 The maximum lifetime of the generated token
 
 <h4 class="pdoc-member-header" id="UserState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L176">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L176">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ The maximum lifetime of the generated token
 If true, the 'default' policy will not automatically be added to generated tokens
 
 <h4 class="pdoc-member-header" id="UserState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L180">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L180">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ If true, the 'default' policy will not automatically be added to generated token
 The maximum number of times a token may be used, a value of zero means unlimited
 
 <h4 class="pdoc-member-header" id="UserState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L184">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L184">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1354,7 +1354,7 @@ The maximum number of times a token may be used, a value of zero means unlimited
 Generated Token's Period
 
 <h4 class="pdoc-member-header" id="UserState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L188">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L188">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1362,7 +1362,7 @@ Generated Token's Period
 Generated Token's Policies
 
 <h4 class="pdoc-member-header" id="UserState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L192">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L192">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1370,7 +1370,7 @@ Generated Token's Policies
 The initial ttl of the token to generate in seconds
 
 <h4 class="pdoc-member-header" id="UserState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L196">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L196">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1378,7 +1378,7 @@ The initial ttl of the token to generate in seconds
 The type of token to generate, service or batch
 
 <h4 class="pdoc-member-header" id="UserState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/b1bbea22f760dec157907fb8a69c2a141e32a9b8/sdk/nodejs/github/user.ts#L200">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/657a1ac0cf12b0777fb7541a0c7d57c77af9b64d/sdk/nodejs/github/user.ts#L200">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
