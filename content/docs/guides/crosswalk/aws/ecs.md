@@ -393,13 +393,14 @@ const helloTask = new awsx.ecs.FargateTaskDefinition("hello-world", {
     },
 });
 
-const api = new aws.apigateway.x.API("hello-world-api", {
+const api = new awsx.apigateway.API("hello-world-api", {
     routes: [{
         path: "/hello",
         method: "GET",
         eventHandler: async (req) => {
             // Anytime someone hits the /hello endpoint, schedule our task.
             const result = await helloTask.run({ cluster });
+            return { statusCode: 200, body: "OK" };
         },
     }],
 });

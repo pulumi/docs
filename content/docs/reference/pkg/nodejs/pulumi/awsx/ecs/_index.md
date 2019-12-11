@@ -155,12 +155,13 @@ const helloTask = new awsx.ecs.FargateTaskDefinition("hello-world", {
     },
 });
 
-const api = new aws.apigateway.x.API("examples-containers", {
+const api = new awsx.apigateway.API("examples-containers", {
     routes: [{
         path: "/run",
         method: "GET",
         eventHandler: async (req) => {
             const result = await helloTask.run({ cluster });
+            return { statusCode: 200, body: "OK" };
         },
     }],
 });
