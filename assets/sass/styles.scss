@@ -132,6 +132,26 @@ main {
     @apply text-blue-700;
 }
 
+.tag {
+    @apply text-sm lowercase border border-gray-200 rounded py-1 px-2 mr-1 transition-all;
+
+    &.tag-blog {
+        @apply bg-white text-blue-600;
+
+        &:hover {
+            @apply border-blue-600;
+        }
+
+        &.active {
+            @apply border-blue-600 bg-blue-600 text-white;
+
+            &:hover {
+                @apply text-white;
+            }
+        }
+    }
+}
+
 .transition-all {
     @include transition(all);
 
