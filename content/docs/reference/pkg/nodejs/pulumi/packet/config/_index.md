@@ -30,7 +30,7 @@ meta_desc: "Explore members of the config module in the @pulumi/packet package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/d9bc69da6bd430b9273228785b5202768cce8c31/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/6619ad089e2c88332f44de4d7bb143b79745148a/sdk/nodejs/config/vars.ts#L12">
         let <strong>authToken</strong>
     </a>
 </h3>

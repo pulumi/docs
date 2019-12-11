@@ -157,164 +157,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_packet.Connect">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Connect</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_speed=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">provider_payload=None</em>, <em class="sig-param">vxlan=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource for <a class="reference external" href="https://www.packet.com/cloud/all-features/packet-connect/">Packet Connect</a>, a link between Packet VLANs and VLANs in other cloud providers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to create the VLAN</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the Connect resource</p></li>
-<li><p><strong>port_speed</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port speed in Mbps</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of parent project</p></li>
-<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Connect Provider. Provider IDs are</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Azure</span> <span class="n">ExpressRoute</span> <span class="o">-</span> <span class="s2">&quot;ed5de8e0-77a9-4d3b-9de0-65281d3aa831&quot;</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>provider_payload</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization key for the Connect provider</p></li>
-<li><p><strong>vxlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network identifier of the linked Packet VLAN</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.facility">
-<code class="sig-name descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.facility" title="Permalink to this definition">¶</a></dt>
-<dd><p>Facility where to create the VLAN</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name for the Connect resource</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.port_speed">
-<code class="sig-name descname">port_speed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.port_speed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Port speed in Mbps</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.project_id">
-<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.project_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of parent project</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.provider_id">
-<code class="sig-name descname">provider_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.provider_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of Connect Provider. Provider IDs are</p>
-<ul class="simple">
-<li><p>Azure ExpressRoute - “ed5de8e0-77a9-4d3b-9de0-65281d3aa831”</p></li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.provider_payload">
-<code class="sig-name descname">provider_payload</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.provider_payload" title="Permalink to this definition">¶</a></dt>
-<dd><p>Authorization key for the Connect provider</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Status of the Connect resource, one of PROVISIONING, PROVISIONED, DEPROVISIONING, DEPROVISIONED</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Connect.vxlan">
-<code class="sig-name descname">vxlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.vxlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>VXLAN Network identifier of the linked Packet VLAN</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_packet.Connect.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_speed=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">provider_payload=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vxlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Connect resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to create the VLAN</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the Connect resource</p></li>
-<li><p><strong>port_speed</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port speed in Mbps</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of parent project</p></li>
-<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Connect Provider. Provider IDs are</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Azure</span> <span class="n">ExpressRoute</span> <span class="o">-</span> <span class="s2">&quot;ed5de8e0-77a9-4d3b-9de0-65281d3aa831&quot;</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>provider_payload</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization key for the Connect provider</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the Connect resource, one of PROVISIONING, PROVISIONED, DEPROVISIONING, DEPROVISIONED</p></li>
-<li><p><strong>vxlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network identifier of the linked Packet VLAN</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_packet.Connect.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.translate_output_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
-into a format of their choosing before writing those properties to the resource object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pulumi_packet.Connect.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.translate_input_property" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
-a format of their choosing before sending those properties to the Pulumi engine.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A potentially transformed property name.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address_types=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_ssh_key_ids=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">wait_for_reservation_deprovision=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">force_detach_volumes=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address_types=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_ssh_key_ids=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">wait_for_reservation_deprovision=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
@@ -334,7 +178,7 @@ continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
 <li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
-<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
+<li><p><strong>force_detach_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Delete device even if it has volumes attached. Only applies for destroy action.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
@@ -414,9 +258,9 @@ continue to boot via iPXE on reboots.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_packet.Device.hardware_reservation_id">
-<code class="sig-name descname">hardware_reservation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.hardware_reservation_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p>
+<dt id="pulumi_packet.Device.force_detach_volumes">
+<code class="sig-name descname">force_detach_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.force_detach_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete device even if it has volumes attached. Only applies for destroy action.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -566,7 +410,7 @@ information is in the
 
 <dl class="method">
 <dt id="pulumi_packet.Device.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deployed_facility=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address_types=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_ssh_key_ids=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">wait_for_reservation_deprovision=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deployed_facility=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">force_detach_volumes=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address_types=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_ssh_key_ids=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">wait_for_reservation_deprovision=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Device resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -586,7 +430,7 @@ continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
 <li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
-<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
+<li><p><strong>force_detach_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Delete device even if it has volumes attached. Only applies for destroy action.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>URL pointing to a hosted iPXE script. More

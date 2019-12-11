@@ -26,12 +26,12 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="identity/">identity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jwt/">jwt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kubernetes/">kubernetes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="l_dap/">l_dap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldap/">ldap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="okta/">okta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pki_secret/">pki_secret</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rabbit_mq/">rabbit_mq</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh/">ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="token/">token</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tokenauth/">tokenauth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transit/">transit</a></li>
 </ul>
 </div>
