@@ -71,7 +71,7 @@ Next, you will be asked for the name of a stack. Hit `ENTER` to accept the defau
 
 Next, you will be prompted for some configuration values for the stack.
 
-For Azure projects, you might be prompted for the Azure environment. You can accept the default value of `public` or choose another environment. Next, you might be prompted for the location to use, you can except the default value or choose another location depending on the environment you choose before.
+For Azure projects, you might be prompted for the Azure environment. You can accept the default value of `public` or choose another environment. Next, you might be prompted for the location to use, you can except the default value or choose another location depending on the environment you chose before.
 
 {{% lang nodejs %}}
 After some dependency installations from `npm`, the project and stack will be ready.
