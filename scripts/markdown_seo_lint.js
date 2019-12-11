@@ -75,10 +75,19 @@ function searchForMarkdown(paths, result) {
     }else {
         if (fileSuffix === "md") {
             try {
+                // Read the file contents so we can grab the file header.
                 const content = fs.readFileSync(fullPath, "utf8");
+
+                // Grab the file header.
                 const frontMatter = content.match(FRONT_MATTER_REGEX);
+
+                // Remove the dash blocks around the file header.
                 const fContent = frontMatter[0].split("---").join("");
+
+                // Read the yaml.
                 const obj = yaml.load(fContent);
+
+                // Build the front matter error object and add the file path.
                 result.frontMatter[fullPath] = {
                     error: null,
                     title: checkPageTitle(obj.title),
@@ -86,6 +95,8 @@ function searchForMarkdown(paths, result) {
                 };
                 result.files.push(fullPath);
             } catch(e) {
+                // Include the error message in the front matter error object
+                // so we can display it to the user.
                 result.frontMatter[fullPath] = {
                     error: e.message,
                 };
