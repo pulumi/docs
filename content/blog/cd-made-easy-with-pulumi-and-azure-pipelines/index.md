@@ -12,7 +12,7 @@ manage their development pipelines, Git repositories, builds, releases,
 and test plans. Pulumi's open-source tools are a great choice for
 developers and operators deploying infrastructure as code on Azure. With
 these two tools at hand, adopting CI and CD for your Azure
-infrastructure is just a few steps away for you and your teams. 
+infrastructure is just a few steps away for you and your teams.
 
 To make it easy to use Pulumi with Azure, we are announcing an
 open-source task extension for Azure Pipelines! The task extension will

@@ -212,10 +212,10 @@ sync.
 Pulumi is open source and free to use. For more information on Getting
 Started, check out:
 
-1.  [AWS QuickStart]({{< ref "/docs/get-started/aws" >}})
-2.  [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
-3.  [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-4.  [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/guides/crosswalk/aws" >}})
+1. [AWS QuickStart]({{< ref "/docs/get-started/aws" >}})
+2. [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
+3. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
+4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/guides/crosswalk/aws" >}})
 
 We think there's no easier way to do containers in a tight inner
 development loop, and we hope you agree!

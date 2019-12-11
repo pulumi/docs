@@ -64,8 +64,8 @@ on the subject.
 
 The gif in the introduction shows what happens when:
 
--   We deploy the example application.
--   Then, later, change the image tag to `nginx:1.12-alpine` and deploy
+- We deploy the example application.
+- Then, later, change the image tag to `nginx:1.12-alpine` and deploy
     again.
 
 When `kubespy trace deploy nginx` is run, it will watch for changes to
@@ -127,7 +127,7 @@ Try using `kubectl edit` to delete the labels on one of your `Pods`.
 
 Unlike the "killing a `Pod`" example above, the old `Pod` seems to
 *disappear*, replaced by a new `Pod` that, when booted up, causes the
-`Deployment `to be marked as available again.
+`Deployment` to be marked as available again.
 
 What's happening here? It turns out that if you remove the app labels
 for a `Pod`, the `ReplicaSet` controller notices, removes itself from

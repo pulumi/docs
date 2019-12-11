@@ -491,12 +491,12 @@ This does mean we aren't hidden from the details of whether a preview is running
 By using this function in our tests, we have the following cases to consider:
 
 * The value is known, which could be due to the following cases
-    - It was explicitly supplied in our program
-    - It was a default populated by the underlying resource provider during a preview
-    - We are doing an update and the full outputs are available
+    * It was explicitly supplied in our program
+    * It was a default populated by the underlying resource provider during a preview
+    * We are doing an update and the full outputs are available
 * The value is `undefined`, which could be due to the following cases
-    - We are in a preview and the value hasn't been computed yet
-    - We have done an update and the property was not made available as an output value
+    * We are in a preview and the value hasn't been computed yet
+    * We have done an update and the property was not made available as an output value
 
 In all cases, the `pulumi.runtime.isDryRun` function will return `true` during a preview.
 

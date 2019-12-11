@@ -135,7 +135,7 @@ In this post, we've shown how to use Pulumi to deploy a modern application to Az
 First, we created a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups), a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-lrs), and an [application service plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans) for our application:
 
 ```csharp
-var resourceGroup = new ResourceGroup("appservice-rg"); 
+var resourceGroup = new ResourceGroup("appservice-rg");
 
 var storageAccount = new Account("sa", new AccountArgs
 {
@@ -160,7 +160,7 @@ var appServicePlan = new Plan("asp", new PlanArgs
 });
 ```
 
-The `wwwroot` directory containing the `index.html` page into is added to the storage account we created previously. The `SharedAccessSignature.cs` code is a helper function to generate storage blob access URLs with [SAS tokens](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview). This shows how you can add custom code inside your Pulumi program.  
+The `wwwroot` directory containing the `index.html` page into is added to the storage account we created previously. The `SharedAccessSignature.cs` code is a helper function to generate storage blob access URLs with [SAS tokens](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview). This shows how you can add custom code inside your Pulumi program.
 
 ```csharp
 var container = new Container("zips", new ContainerArgs

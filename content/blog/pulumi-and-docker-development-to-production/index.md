@@ -149,9 +149,9 @@ created still represents Redis, but completely abstracts away where and
 how the Redis instance is running. In this case, it can run in any one
 of three different configurations:
 
-1.  Redis backed by AWS ElastiCache ("amazon")
-2.  Redis running as a Docker container on your machine ("docker")
-3.  Redis running as a Deployment on a Kubernetes cluster ("kubernetes")
+1. Redis backed by AWS ElastiCache ("amazon")
+2. Redis running as a Docker container on your machine ("docker")
+3. Redis running as a Deployment on a Kubernetes cluster ("kubernetes")
 
 Now, you can use this Redis component completely in the abstract, like
 this:

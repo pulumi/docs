@@ -61,7 +61,7 @@ and a SQL database.
 describes how to deploy such application to Azure App Service by means
 of clicking buttons in the Azure portal.
 
-*"Friends don't let friends right-click publish"*
+### *"Friends don't let friends right-click publish"*
 
 Instead, I suggest relying on infrastructure as code. I built a Pulumi
 program and integrated it into a fully automated build and deployment
@@ -108,12 +108,12 @@ application. The code looks like this:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
- 
+
 // Create an Azure Resource Group
 const resourceGroup = new azure.core.ResourceGroup("resourceGroup", {
     location: "WestUS",
 });
- 
+
 // Create an Azure resource (Storage Account)
 const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
@@ -121,7 +121,7 @@ const account = new azure.storage.Account("storage", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
- 
+
 // Export the connection string for the storage account
 export const connectionString = account.primaryConnectionString;
 ```

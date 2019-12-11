@@ -21,6 +21,7 @@ When working with existing resources, there are typically two scenarios:
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
 ## Referencing Existing Resources
+
 For referencing existing resources, Pulumi offers several tools.
 
 * The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on its `id`.
@@ -235,7 +236,6 @@ Since the resources are now being managed by Pulumi, we can use the Pulumi Conso
 ![The Pulumi Console stack resources page](./console.png)
 
 And then navigate to the Virtual Machine in the Azure Portal and see the newly added `managedBy: Pulumi` tag.
-
 
 ![The Azure Portal virtual machine page](./portal.png)
 

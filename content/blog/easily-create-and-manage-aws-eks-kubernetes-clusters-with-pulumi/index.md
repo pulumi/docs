@@ -80,10 +80,10 @@ TypeScript:
 import * as aws from "@pulumi/aws";
 import * as awsinfra from "@pulumi/aws-infra";
 import * as eks from "@pulumi/eks";
- 
+
 // Create a VPC for our cluster.
 const network = new awsinfra.Network("eksNetwork");
- 
+
 // Create the EKS cluster
 const cluster = new eks.Cluster("eksCluster", {
     vpcId: network.vpcId,
@@ -95,7 +95,7 @@ const cluster = new eks.Cluster("eksCluster", {
     storageClasses: "gp2",
     deployDashboard: true,
 });
- 
+
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
 ```

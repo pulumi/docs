@@ -117,4 +117,4 @@ complex architectures.
 
 - Find out more about our [Azure]({{< ref "/azure" >}}) and
   [Kubernetes]({{< relref "/topics/kubernetes" >}}) support
-- Join the Slack community at <https://slack.pulumi.com> 
+- Join the Slack community at <https://slack.pulumi.com>

@@ -9,24 +9,24 @@ tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
 
 Pulumi makes it easy to build cloud applications that use a combination
 of containers, lambdas, and connected data services and infrastructure:
-Colada apps. 
+Colada apps.
 
 An example of a Colada app is extracting a thumbnail from a video. A
 serverless function can only run for 5 minutes, so we'll run a
-container in AWS Fargate to do the video processing. 
+container in AWS Fargate to do the video processing.
 
 In this app, a Lambda function is triggered whenever a new video is
 uploaded to S3. This function launches a task in Fargate that
 uses [FFmpeg](https://www.ffmpeg.org/) to extract a video thumbnail. A
 second Lambda function is triggered when a new thumbnail has been
-created. 
+created.
 <!--more-->
 
 This post was inspired by a blog post from Serverless, Inc that shows
 how to combine [AWS Fargate and Lambda for a long-running
 process](https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/).
 Let's see how a similar app would be implemented in Pulumi entirely in
-code. 
+code.
 
 ![video-thumbnail-diagram](./video-thumbnail-diagram.png)
 
@@ -199,7 +199,7 @@ for your compute, so the logs for the Lambda function **and** the
 Fargate task are all in one place!
 
 ![terminal-logs](./terminal-logs.png)
- 
+
 Once the thumbnail has been generated, either view it in the S3 console,
 or download it with the AWS CLI:
 

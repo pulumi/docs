@@ -117,7 +117,7 @@ exports.handler = function(event, context, callback) {
 
 Azure follows its own [distinct style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
 as well for processing HTTP messages. These approaches end up working,
-but often feel decidedly un-Node.js-like. They're full of cloud-provider-specific values and behaviors, 
+but often feel decidedly un-Node.js-like. They're full of cloud-provider-specific values and behaviors,
 and they end up making it more difficult
 to work with the existing ecosystem of middleware components out there.
 (Note that Google Cloud [HTTP Functions](https://cloud.google.com/functions/docs/writing/http)
@@ -245,4 +245,4 @@ simpler to write and maintain. Happy coding!
 
 You can dig in to [serverless coding with Pulumi here]({{< ref "/docs/tutorials/cloudfx/rest-api" >}}),
 and join us on Wednesday 3rd October at 11am PDT to hear more about
-[serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM). 
+[serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM).

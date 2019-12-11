@@ -29,27 +29,27 @@ one in particular:
 
 [**Infrastructure**](#infrastructure):
 
-1.  [Declare cloud infra using a real language (with loops!)](#real-languages)
-2.  [Make a reusable component out of your cloud infra](#reusable-components)
+1. [Declare cloud infra using a real language (with loops!)](#real-languages)
+2. [Make a reusable component out of your cloud infra](#reusable-components)
 
 [**Serverless**](#serverless):
 
-1.  [Go serverless without the YAML](#no-yaml)
-2.  [Capture state in your serverless funcs, like real lambdas](#real-lambdas)
-3.  [Simple serverless cron jobs](#cron-jobs)
-4.  [Run Express-like serverless SPAs and REST APIs at near zero cost](#rest-apis)
+1. [Go serverless without the YAML](#no-yaml)
+2. [Capture state in your serverless funcs, like real lambdas](#real-lambdas)
+3. [Simple serverless cron jobs](#cron-jobs)
+4. [Run Express-like serverless SPAs and REST APIs at near zero cost](#rest-apis)
 
 [**Containers**](#containers):
 
-1.  [Deploy production containers without the fuss](#easy-deployment)
-2.  [Use containers without Dockerfiles](#no-dockerfiles)
-3.  [Invoke a long-running container as a task](#long-running-containers-as-tasks)
+1. [Deploy production containers without the fuss](#easy-deployment)
+2. [Use containers without Dockerfiles](#no-dockerfiles)
+3. [Invoke a long-running container as a task](#long-running-containers-as-tasks)
 
 [**General Tips and Tricks**](#general-tips-and-tricks):
 
-1.  [Use code to avoid hard-coding config](#avoid-hard-coding-config)
-2.  [Use config to enable multi-instantiation and code reuse](#multi-instantiation-and-code-reuse)
-3.  [Give your components runtime APIs](#give-components-runtime-apis)
+1. [Use code to avoid hard-coding config](#avoid-hard-coding-config)
+2. [Use config to enable multi-instantiation and code reuse](#multi-instantiation-and-code-reuse)
+3. [Give your components runtime APIs](#give-components-runtime-apis)
 
 Even if you're uninterested in low-level infrastructure, it can be fun
 to work through these examples; it's "turtles all the way down" with
@@ -395,7 +395,6 @@ that fetches the Hacker News homepage every hour and stashes it into a
 document database:
 
 **index.ts**:
-
 
 ```javascript
 import * as cloud from "@pulumi/cloud";

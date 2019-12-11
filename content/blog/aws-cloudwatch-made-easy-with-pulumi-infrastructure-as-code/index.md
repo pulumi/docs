@@ -164,6 +164,6 @@ We hope these new Crosswalk for AWS APIs will be just as useful for you!
 For more information on Pulumi Crosswalk for AWS checkout other related
 content:
 
-1.  [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
-2.  [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-3.  [Pulumi Crosswalk for AWS Documentation]({{< ref "/docs/guides/crosswalk/aws" >}})
+1. [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
+2. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
+3. [Pulumi Crosswalk for AWS Documentation]({{< ref "/docs/guides/crosswalk/aws" >}})

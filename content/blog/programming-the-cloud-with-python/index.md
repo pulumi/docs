@@ -18,7 +18,6 @@ of Python in 2017:
 >
 > -- [David Robinson, Stack Overflow](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 
-
 TIOBE, the maintainers of a popular index of programming language
 popularity, crowned Python as "[Programming Language of the Year](https://www.tiobe.com/tiobe-index/)" for 2018, based on its
 meteoric rise in its index. Since Python is not a new language, what
@@ -47,13 +46,12 @@ pervading the industry, wouldn't it make sense to use code, to use
 Python, to automate tasks as critical as the provisioning of our cloud
 infrastructure and delivery of our applications?
 
-
 > Delivery is not a detail, it is our job. Now is the time to apply our
 > core skills to our own work. Now is the time to *engineer* our
 > delivery. We divide our work between ourselves and computers: humans
 > for decisions, and automation for tasks.
 >
->  -- [The Software Defined Delivery Manifesto](https://sdd-manifesto.org/)
+> -- [The Software Defined Delivery Manifesto](https://sdd-manifesto.org/)
 
 ## That sounds great, but what is this "Pulumi" thing?
 
@@ -86,14 +84,14 @@ deploys a static website to S3:
 ```typescript
 import mimetypes
 import os
- 
+
 from pulumi import export, FileAsset
 from pulumi_aws import s3
- 
+
 web_bucket = s3.Bucket('s3-website-bucket', website={
     "index_document": "index.html"
 })
- 
+
 content_dir = "www"
 for file in os.listdir(content_dir):
     filepath = os.path.join(content_dir, file)

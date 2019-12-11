@@ -64,12 +64,12 @@ please refer to our documentation
 - You can assign custom tags to stacks (when logged into the
   [Pulumi Service backend]({{< ref "/docs/intro/concepts/state" >}}) to customize how
   stacks are listed in the [Pulumi Console](https://app.pulumi.com/).
-  - In our example below we have two environments _prod_ and _dev_.
+    - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
-      `environment: prod` and `environment: dev` to the respective
-      stacks
+        `environment: prod` and `environment: dev` to the respective
+        stacks
     - In the Pulumi Console, you'll be able to group stacks by
-      tag: `environment:dev` and tag: `environment:prod`.
+        tag: `environment:dev` and tag: `environment:prod`.
 
 Please read more about managing [stack tags in Pulumi]({{< ref "/docs/intro/concepts/stack#stack-tags" >}}).
 
@@ -82,36 +82,36 @@ Let's now work through our example with GitLab Pipelines.
 
 ## GitLab Pipeline by Environment
 
-1.  We created a GitLab Group called **pulumi-gitlab**.
-2.  We created three GitLab projects called **sample-iam**,
+1. We created a GitLab Group called **pulumi-gitlab**.
+2. We created three GitLab projects called **sample-iam**,
     **sample-eks** and **sample-k8sapp**. These projects match the
     project names in the Pulumi Service.
-3.  We have two pipelines: **environment:dev** and **environment:prod**.
+3. We have two pipelines: **environment:dev** and **environment:prod**.
     In the two pipelines, we have a total of six pulumi stacks:
-    -   `<org-name-in-pulumi>/sample-iam/dev`, and `<org-name-in-pulumi>/sample-iam/prod`.
-    -   `<org-name-in-pulumi>/sample-eks/dev` and `<org-name-in-pulumi>/sample-eks/prod`.
-    -   `<org-name-in-pulumi>/sample-k8sapp/dev` and `<org-name-in-pulumi>/sample-k8sapp/prod`.
+    - `<org-name-in-pulumi>/sample-iam/dev`, and `<org-name-in-pulumi>/sample-iam/prod`.
+    - `<org-name-in-pulumi>/sample-eks/dev` and `<org-name-in-pulumi>/sample-eks/prod`.
+    - `<org-name-in-pulumi>/sample-k8sapp/dev` and `<org-name-in-pulumi>/sample-k8sapp/prod`.
 
-`<org-name-in-pulumi>/sample-iam/dev` stack will trigger the
-downstream stack `<org-name-in-pulumi>/sample-eks/dev`
-provided the cycle of `pulumi preview` and `pulumi deploy` completes
-without any failure.
+    `<org-name-in-pulumi>/sample-iam/dev` stack will trigger the
+    downstream stack `<org-name-in-pulumi>/sample-eks/dev`
+    provided the cycle of `pulumi preview` and `pulumi deploy` completes
+    without any failure.
 
-Similarly, `<org-name-in-pulumi>/sample-eks/dev` will trigger
-the downstream stack `<org-name-in-pulumi>/sample-k8sapp/dev`
-provided the cycle of `pulumi preview` and `pulumi deploy` completes
-without any failure.
+    Similarly, `<org-name-in-pulumi>/sample-eks/dev` will trigger
+    the downstream stack `<org-name-in-pulumi>/sample-k8sapp/dev`
+    provided the cycle of `pulumi preview` and `pulumi deploy` completes
+    without any failure.
 
-![No failures](./image-4.png)
+    ![No failures](./image-4.png)
 
-4.  To use Pulumi within GitLab CI, there are a few environment
+4. To use Pulumi within GitLab CI, there are a few environment
     variables you'll need to set for each build.
-    -   The first is `PULUMI_ACCESS_TOKEN`, which is required to
+    - The first is `PULUMI_ACCESS_TOKEN`, which is required to
         authenticate with [**pulumi.com**](http://pulumi.com) in order
         to perform the preview or update. You can create a new Pulumi
         access token specifically for your CI/CD job on your
         [Pulumi Account page](https://app.pulumi.com/account/tokens).
-    -   Next, you will also need to set environment variables specific
+    - Next, you will also need to set environment variables specific
         to your cloud resource provider. For example, if your stack is
         managing resources on AWS, `AWS_ACCESS_KEY_ID` and
         `AWS_SECRET_ACCESS_KEY`.
@@ -411,11 +411,11 @@ Update EKS:
 
 This file describes a three-stage pipeline for the `sample-iam` project:
 
-1.  First, we run a preview for the requested deployment environment,
+1. First, we run a preview for the requested deployment environment,
     failing the pipeline if the preview fails.
-2.  If the preview was successful, we run `pulumi update`, which deploys
+2. If the preview was successful, we run `pulumi update`, which deploys
     the IAM changes.
-3.  Finally, we trigger the pipeline in `pulumi-gilab/sample-eks`, which
+3. Finally, we trigger the pipeline in `pulumi-gilab/sample-eks`, which
     triggers the next pipeline in our pipeline daisy chain illustrated
     in the above image.
 

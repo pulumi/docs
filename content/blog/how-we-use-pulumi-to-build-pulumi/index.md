@@ -16,8 +16,7 @@ infrastructure using the same software engineering practices we apply to
 our application code. This also allows us to create reusable
 abstractions which accelerate our ability to deliver new features and
 services, and our ability to standardize and refactor infrastructure
-patterns across our services with relative ease. 
-
+patterns across our services with relative ease.
 
 Like other users, we use Pulumi at a variety of levels of abstraction.
 We use Pulumi for raw infrastructure provisioning, defining the core

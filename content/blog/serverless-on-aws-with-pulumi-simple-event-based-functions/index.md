@@ -38,7 +38,7 @@ const bucket = new aws.s3.Bucket("testbucket", {
 // Create a lambda that will post a message to slack when the bucket changes.
 // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
 // See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
-const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
+const lambda = new aws.lambda.CallbackFunction("postToSlack", {
     callback: async (e) => {
       const client = new slack.WebClient(...);
       for (const rec of e.Records) {
@@ -50,8 +50,8 @@ const lambda = new aws.lambda.CallbackFunction("postToSlack", {
 
 // Give the bucket permission to invoke the lambda.
 const permission = new aws.lambda.Permission("invokelambda", {
-    function: lambda, 
-  action: "lambda:InvokeFunction", 
+  function: lambda,
+  action: "lambda:InvokeFunction",
   principal: "s3.amazonaws.com", sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`), }));
 
 // Now hookup a notification that will trigger the lambda when any object is created in the bucket.

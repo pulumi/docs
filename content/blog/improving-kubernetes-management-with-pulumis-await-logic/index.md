@@ -59,7 +59,6 @@ deploying applications to Kubernetes. Pulumi can easily manage multiple
 stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
-
 2) Reliably integrate with
 [**CI/CD systems**]({{< ref "/docs/guides/continuous-delivery" >}}) for infrastructure and
 application deployments without requiring hardcoded timeouts, or

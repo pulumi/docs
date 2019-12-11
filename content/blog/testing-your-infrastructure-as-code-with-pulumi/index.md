@@ -84,24 +84,24 @@ Our running example is loosely based on
 
 ```javascript
 let aws = require("@pulumi/aws");
- 
+
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
     { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
     { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
- 
+
 let userData =
 `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`;
- 
+
 let server = new aws.ec2.Instance("web-server-www", {
     instanceType: "t2.micro",
     securityGroups: [ group.name ], // reference the group object above
     ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
     userData: userData              // start a simple web server
 });
- 
+
 exports.group = group;
 exports.server = server;
 exports.publicIp = server.publicIp;
@@ -117,14 +117,14 @@ the rules stated above -- let's write some tests!
 The overall structure and scaffolding of our tests will look like any
 ordinary Mocha testing:
 
-**ec2tests.js**
+#### **ec2tests.js**
 
 ```javascript
 let assert = require("assert");
 let mocha = require("mocha");
 let pulumi = require("@pulumi/pulumi");
 let infra = require("./index");
- 
+
 describe("Infrastructure", function() {
     let server = infra.server;
     describe("#server", function() {
@@ -268,46 +268,46 @@ hoped!
         #server
      1) must have a name tag      2) must not use userData (use an AMI instead)
         #group
-     3) must not open port 22 (SSH) to the Internet 
+     3) must not open port 22 (SSH) to the Internet
       0 passing (17ms)
       3 failing
-     
+
      1) Infrastructure
            #server
          must have a name tag:
      Error: Missing a name tag on server
-     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
+     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www
      2) Infrastructure
            #server
          must not use userData (use an AMI instead):
      Error: Illegal use of userData on server
-     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
+     urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www
      3) Infrastructure
            #group
          must not open port 22 (SSH) to the Internet:
-     Error: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group   
+     Error: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group  
 ```
 
 Let's fix our program to comply:
 
 ```javascript
 "use strict";
- 
+
 let aws = require("@pulumi/aws");
- 
+
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
     { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
- 
+
 let server = new aws.ec2.Instance("web-server-www", {
     tags: { "Name": "web-server-www" },
     instanceType: "t2.micro",
     securityGroups: [ group.name ], // reference the group object above
     ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
 });
- 
+
 exports.group = group;
 exports.server = server;
 exports.publicIp = server.publicIp;
@@ -323,8 +323,8 @@ And then rerun our tests:
           ✓ must not use userData (use an AMI instead)
         #group
           ✓ must not open port 22 (SSH) to the Internet
-     
-     
+
+
      3 passing (16ms)
 ```
 
@@ -391,10 +391,10 @@ import (
     "os"
     "path"
     "testing"
- 
+
     "github.com/pulumi/pulumi/pkg/testing/integration"
 )
- 
+
 func TestExamples(t *testing.T) {
     awsRegion := os.Getenv("AWS_REGION")
     if awsRegion == "" {

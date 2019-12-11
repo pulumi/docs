@@ -20,17 +20,17 @@ Why isn't my `Pod` getting any traffic?
 An experienced ops team running on GKE might assemble the following
 checklist to help answer this question:
 
-1.  Does a `Service` exist? Does that service have a `.spec.selector`
+1. Does a `Service` exist? Does that service have a `.spec.selector`
     that matches some number of `Pod`s?
-2.  Are the `Pod`s alive and has their readiness probe passed?
-3.  Did the `Service` create an `Endpoints` object that specifies one or
+2. Are the `Pod`s alive and has their readiness probe passed?
+3. Did the `Service` create an `Endpoints` object that specifies one or
     more `Pod`s to direct traffic to?
-4.  Is the `Service` reachable via DNS? When you `kubectl ``exec` into a
+4. Is the `Service` reachable via DNS? When you `kubectl ``exec` into a
     `Pod` and you use `curl` to poke the `Service` hostname, do you get
     a response? (If not, does *any* `Service` have a DNS entry?)
-5.  Is the `Service` reachable via IP? When you SSH into a `Node` and
+5. Is the `Service` reachable via IP? When you SSH into a `Node` and
     you use `curl` to poke the `Service` IP, do you get a response?
-6.  Is `kube-proxy` up? Is it writing iptables rules? Is it proxying to
+6. Is `kube-proxy` up? Is it writing iptables rules? Is it proxying to
     the `Service`?
 
 This question might have the highest complexity-to-sentence-length ratio
@@ -99,7 +99,7 @@ which `kubespy trace` tells us:
 **Second: `Pod`s that match the `Service`'s `.spec.selector` are
 created; their readiness probes immediately pass.** The `Endpoints`
 object is updated to reflect this. As we will see below, if the `Pods`
-failed the readiness probes, `kubespy trace` would note this. 
+failed the readiness probes, `kubespy trace` would note this.
 
 ![trace-success-pods-ready](./trace-success-pods-ready.gif)
 

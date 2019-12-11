@@ -84,11 +84,9 @@ We are continuing to make Pulumi the best tool for the "Continuous
 Deployment" part of CI/CD workflows, and with the release of CircleCIs
 Orbs, it's just that much easier.
 
-
 Having trouble? Questions? Join our [community Slack](https://slack.pulumi.com/)
 or [drop us a line]({{< ref "/contact" >}}).
 
 Links:
 
--   [Get Started with Circle CI Orbs](https://circleci.com/orbs/)
-
+- [Get Started with Circle CI Orbs](https://circleci.com/orbs/)

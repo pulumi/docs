@@ -119,54 +119,54 @@ Enterprise, using the following HCL:
 To consume the outputs of this Terraform state in our Pulumi program we
 can do the following:
 
-1.  Create a new Pulumi program written in TypeScript
+1. Create a new Pulumi program written in TypeScript
 
         $ pulumi new --yes typescript
 
-2.  Install the `@pulumi/terraform` package from NPM:
+2. Install the `@pulumi/terraform` package from NPM:
 
         $ npm install @pulumi/terraform
 
-3.  In the `index.ts` file, create a
+3. In the `index.ts` file, create a
     `terraform.state.RemoteStateReference` resource to access the state.
     Note that we can use [Pulumi
     secrets]({{< relref "managing-secrets-with-pulumi" >}})
     to ensure that our Terraform Enterprise token is encrypted and never
     stored in plaintext by Pulumi:
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as terraform from "@pulumi/terraform";
+    ```typescript
+    import * as pulumi from "@pulumi/pulumi";
+    import * as terraform from "@pulumi/terraform";
 
-const config = new pulumi.Config();
-const tfeToken = config.requireSecret("tfeToken");
+    const config = new pulumi.Config();
+    const tfeToken = config.requireSecret("tfeToken");
 
-const networkState = new terraform.state.RemoteStateReference("network", {
-    backendType: "remote",
-    token: tfeToken,
-    organization: "acme",
-    workspaces: {
-        name: "production-network"
-    },
-});
-```
+    const networkState = new terraform.state.RemoteStateReference("network", {
+        backendType: "remote",
+        token: tfeToken,
+        organization: "acme",
+        workspaces: {
+            name: "production-network"
+        },
+    });
+    ```
 
-4.  We can now use either the `outputs` property or the `getOutput()`
+4. We can now use either the `outputs` property or the `getOutput()`
     function on `networkState` to obtain individual outputs:
 
-```typescript
-const vpcId = networkState.getOutput("vpc_id");
-const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
+    ```typescript
+    const vpcId = networkState.getOutput("vpc_id");
+    const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
 
-// Create our webservers in each subnet
-for (let i = 0; i < 2; i++) {
-    new aws.ec2.Instance(`instance${i}`, {
-        ami: nginxAmi,
-        instanceType: "t2.medium",
-        subnetId: publicSubnetIds[i],
-    })
-}
-```
+    // Create our webservers in each subnet
+    for (let i = 0; i < 2; i++) {
+        new aws.ec2.Instance(`instance${i}`, {
+            ami: nginxAmi,
+            instanceType: "t2.medium",
+            subnetId: publicSubnetIds[i],
+        })
+    }
+    ```
 
 Using Pulumi to read the outputs of other deployment tools provides a
 great deal of flexibility for adopting Pulumi into existing

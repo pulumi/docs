@@ -24,8 +24,8 @@ into your Pulumi development workflow. The `pulumi logs` command
 provides a great first place to start for understanding your Pulumi
 application's behavior. Especially during development, this command
 provides direct insight into the behavior of your application, bringing
-together logs across all of the different forms of compute you are using
-- from code running in serverless functions to containers to VMs.
+together logs across all of the different forms of compute you are using -
+from code running in serverless functions to containers to VMs.
 
 Let's take a quick look at `pulumi logs` and some of the ways it can be
 used as part of the inner loop of your Pulumi development.
@@ -61,7 +61,7 @@ bucket, and then see the logs with the following:
     $ aws s3 cp somefile.txt s3://$(pulumi stack output bucketName)
      
     $ pulumi logs -f
-    Collecting logs for stack dev since 
+    Collecting logs for stack dev since
      
      2019-03-28T21:10:05.667-07:00[                     newObject] {"Records":[{"eventVersion":"2.1","eventSource":"aws:s3","awsRegion":"us-west-2","eventTime":"2019-03-29T04:10:05.318Z","eventName":"ObjectCreated:Put","userIdentity":{"principalId":"AWS:AIDAIB2I7NPKMQ2QAKXZ6"},"requestParameters":{"sourceIPAddress":"24.35.94.249"},"responseElements":{"x-amz-request-id":"F2D7DF26693AEFEE","x-amz-id-2":"o2leqNNwCVXTI8jfvUGk5KE7w6CiKsJYP/Q4nT0fHqZPrqwaVlSP0lNhspv5NiLAAwutCzJwlLc="},"s3":{"s3SchemaVersion":"1.0","configurationId":"tf-s3-lambda-20190328222809603300000002","bucket":{"name":"mybucket-97f10e0","ownerIdentity":{"principalId":"A3FZDZNSWOKQHV"},"arn":"arn:aws:s3:::mybucket-97f10e0"},"object":{"key":"out.txt","size":36000,"eTag":"818ac0cf0273f7e40e673d9892405e31","sequencer":"005C9D9A9D311D5C11"}}}]}
 

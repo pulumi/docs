@@ -49,7 +49,7 @@ A [Bitbucket Team](https://confluence.atlassian.com/bitbucket/teams-321853005.ht
 helps you organize users into user groups and therefore, assign each of
 them a permission to your repositories. By adding a Bitbucket
 Team-backed organization, you can invite the same members to collaborate
-on Pulumi. 
+on Pulumi.
 
 This allows you to set permissions on
 [Stacks]({{< ref "/docs/intro/concepts/stack" >}}) owned by your

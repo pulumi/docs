@@ -119,16 +119,16 @@ an AWS Lambda for us.
 ```typescript
 import * as awsx from "@pulumi/awsx";
 import * as pulumi from '@pulumi/pulumi';
- 
+
 import * as jwksClient from 'jwks-rsa';
 import * as jwt from 'jsonwebtoken';
 import * as util from 'util';
- 
+
 const config = new pulumi.Config();
 const jwksUri = config.require("jwksUri");
 const audience = config.require("audience");
 const issuer = config.require("issuer");
- 
+
 const authorizerLambda = async (event: awsx.apigateway.AuthorizerEvent) => {
     try {
         return await authenticate(event);
@@ -139,39 +139,39 @@ const authorizerLambda = async (event: awsx.apigateway.AuthorizerEvent) => {
         throw new Error("Unauthorized");
     }
 }
- 
+
 /**
      * Below is all code that gets added to the Authorizer Lambda. The code was copied and
      * converted to TypeScript from
      * [Auth0's GitHub Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)
      */
- 
+
 function getToken(event: awsx.apigateway.AuthorizerEvent): string {
     // Stubbed function to extract and return the Bearer Token from the Lambda event parameter
 }
- 
+
 // Check if the Token is valid with Auth0
 async function authenticate(event: awsx.apigateway.AuthorizerEvent): Promise<awsx.apigateway.AuthorizerResponse> {
     const token = getToken(event);
- 
+
     const decoded = jwt.decode(token, { complete: true });
     if (!decoded || typeof decoded === "string" || !decoded.header || !decoded.header.kid) {
         throw new Error('invalid token');
     }
- 
+
     const client = jwksClient({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 10, // Default value
         jwksUri: jwksUri
     });
- 
+
     const key = await util.promisify(client.getSigningKey)(decoded.header.kid);
     const signingKey = key.publicKey || key.rsaPublicKey;
     if (!signingKey) {
         throw new Error('could not get signing key');
     }
- 
+
     const verifiedJWT = await jwt.verify(token, signingKey, { audience, issuer });
     if (!verifiedJWT || typeof verifiedJWT === "string" || !isVerifiedJWT(verifiedJWT)) {
         throw new Error('could not verify JWT');
@@ -187,7 +187,7 @@ Step 1 to include our authorizer.
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
- 
+
 // Create our API and reference the Lambda authorizer
 const api = new awsx.apigateway.API("myapi", {
     routes: [{
@@ -227,13 +227,13 @@ $ pulumi up
  +   ├─ aws:iam:RolePolicyAttachment     jwt-rsa-custom-authorizer-32be53a2           created
  +   ├─ aws:lambda:Function              jwt-rsa-custom-authorizer                    created
  +   └─ aws:iam:RolePolicy               jwt-rsa-custom-authorizer-invocation-policy  created
- 
+
 Outputs:
     url: "https://XXXXX.execute-api.us-west-2.amazonaws.com/stage/"
- 
+
 Resources:
     + 14 created
- 
+
 Duration: 28s
 ```
 

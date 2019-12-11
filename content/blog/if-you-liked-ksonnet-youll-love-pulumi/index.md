@@ -95,7 +95,7 @@ Kubernetes API, so you can do everything that Kubernetes supports - but
 using programming languages that provide completion lists, error
 checking, inline documentation, and basic features like variables and
 control flow.  Here's an example of part of a
-[direct port of the Guestbook example to Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/simple): 
+[direct port of the Guestbook example to Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/simple):
 
 ![Raw access to Kubernetes API](./raw-access.png)
 

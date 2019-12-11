@@ -18,6 +18,10 @@ banner:
 ensure:
 	yarn install
 
+.PHONY: lint_markdown
+lint_markdown:
+	yarn lint-markdown
+
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"

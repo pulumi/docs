@@ -229,7 +229,7 @@ We could just go ahead and convert the program by hand, however
 to take a Terraform HCL program as input and perform the entire
 translation automatically for you. This is a great place to get started
 -- and from there we can then refactor the resulting program gradually
-to leverage languages better. 
+to leverage languages better.
 
 The first step is to create a Pulumi project.
 [Download Pulumi here]({{< ref "/docs/get-started/install" >}}), and then run:
@@ -278,7 +278,7 @@ A Pulumi stack is an environment that can be configured and deployed to
 independently of all other stacks. Here we've
 created `webservers-prod` and set it to deploy into
 the `us-west-2a`, `us-west-2b`, and `us-west-2c` availability zones in
-AWS's `us-west-2` region. `pulumi up `will then show you a plan and then
+AWS's `us-west-2` region. `pulumi up` will then show you a plan and then
 let you confirm it to deploy your resources:
 
 ![tf-pulumi-preview](./tf-pulumi-preview.png)
@@ -410,7 +410,7 @@ you might expect, so that we always see the result of the conditional
 evaluation before we've decided to deploy anything.
 
 Another subtle advantage is that we can just pass
-the `webServerSg.id `property -- Pulumi understands the resource DAG,
+the `webServerSg.id` property -- Pulumi understands the resource DAG,
 and the use of this property automatically forms an edge.
 
 Now let's create our web servers. We might use a for loop for this, and

@@ -88,7 +88,7 @@ const sqsQueue = new aws.sqs.Queue("queue", {
     visibilityTimeoutSeconds: 300,
 });
 
-// Set up a subscription that will fire whenever the queue receives a message. Here we ask 
+// Set up a subscription that will fire whenever the queue receives a message. Here we ask
 // for 'batchSize = 1' so we will only process a single message at a time.
 serverless.queue.subscribe("subscription", sqsQueue, async (event) => {
     // Add whatever code you want here to run in the AWS lambda. 'event' will contain the
