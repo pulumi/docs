@@ -22,9 +22,8 @@
                         <ul class="m-0 p-0">
                             {{ range $tag := .Params.tags }}
                             <li class="mt-0 inline-flex">
-                                {{ $classes := "bg-white border border-gray-200 text-blue-600 text-sm lowercase hover:border-blue-600" }}
-                                <a class="px-2 py-1 mr-1 rounded transition-all {{ $classes }}" href="/blog/tag/{{ $tag | urlize }}/">
-                                    {{ $tag }}
+                                <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
+                                    {{ $tag | urlize }}
                                 </a>
                             </li>
                             {{ end }}
