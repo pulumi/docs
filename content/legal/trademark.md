@@ -1,6 +1,7 @@
 ---
 title: Trademark Usage
 url: /trademark
+meta_desc: Information on the appropriate usage of Pulumi Trademarks.
 menu:
     legal:
         weight: 1

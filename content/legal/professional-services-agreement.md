@@ -1,6 +1,7 @@
 ---
 title: Professional Services Agreement
 url: /professional-services-agreement
+meta_desc: The Professional Services Agreement when working with Pulumi.
 menu:
     legal:
         weight: 5

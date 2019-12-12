@@ -4,7 +4,7 @@ description: Enabling the future of cloud engineering with Pulumi
 type: page
 layout: whitepaper
 
-meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
+meta_desc: In this paper, we present a consistent cloud programming model using general purpose programming languages for interacting with cloud resources.
 
 hero_image: /images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_pdf_large.png
 

@@ -87,13 +87,15 @@ function searchForMarkdown(paths, result) {
                 // Read the yaml.
                 const obj = yaml.load(fContent);
 
-                // Build the front matter error object and add the file path.
-                result.frontMatter[fullPath] = {
-                    error: null,
-                    title: checkPageTitle(obj.title),
-                    metaDescription: checkPageMetaDescription(obj.meta_desc),
-                };
-                result.files.push(fullPath);
+                if (obj.no_edit_this_page !== true) {
+                    // Build the front matter error object and add the file path.
+                    result.frontMatter[fullPath] = {
+                        error: null,
+                        title: checkPageTitle(obj.title),
+                        metaDescription: checkPageMetaDescription(obj.meta_desc),
+                    };
+                    result.files.push(fullPath);
+                }
             } catch(e) {
                 // Include the error message in the front matter error object
                 // so we can display it to the user.
