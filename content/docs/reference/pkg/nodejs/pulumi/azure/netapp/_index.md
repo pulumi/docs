@@ -45,7 +45,7 @@ meta_desc: "Explore members of the netapp module in the @pulumi/azure package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L39">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -82,7 +82,7 @@ const exampleAccount = new azure.netapp.Account("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_account.html.markdown.
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -107,14 +107,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -125,7 +125,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-activeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L69">property <b>activeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L69">property <b>activeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activeDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountActiveDirectory'>AccountActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `activeDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ The name of the NetApp Account. Changing this forces a new resource to be create
 The name of the resource group where the NetApp Account should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Pool" data-link-title="Pool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L14">
         Resource <strong>Pool</strong>
     </a>
 </h3>
@@ -187,7 +187,7 @@ Manages a Pool within a NetApp Account.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_pool.html.markdown.
 
 <h4 class="pdoc-member-header" id="Pool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -201,7 +201,7 @@ Create a Pool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -212,14 +212,14 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -230,7 +230,7 @@ Returns true if the given object is an instance of Pool.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pool-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L44">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L44">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the NetApp account in which the NetApp Pool should be created.
 
 <h4 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -247,7 +247,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pool-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L48">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L48">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Pool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Pool-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L56">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L56">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ The name of the NetApp Pool. Changing this forces a new resource to be created.
 The name of the resource group where the NetApp Pool should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Pool-serviceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L60">property <b>serviceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L60">property <b>serviceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ The name of the resource group where the NetApp Pool should be created. Changing
 The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 
 <h4 class="pdoc-member-header" id="Pool-sizeInTb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L64">property <b>sizeInTb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L64">property <b>sizeInTb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sizeInTb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The service level of the file system. Valid values include `Premium`, `Standard`
 Provisioned size of the pool in TB. Value must be between `4` and `500`.
 
 <h4 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -298,7 +298,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L28">
         Data Source <strong>getAccount</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ export const netappAccountId = example.id;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_account.html.markdown.
 
 <h3 class="pdoc-module-header" id="getPool" data-link-title="getPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L30">
         Data Source <strong>getPool</strong>
     </a>
 </h3>
@@ -357,7 +357,7 @@ export const netappPoolId = example.id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L145">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -367,7 +367,7 @@ export const netappPoolId = example.id;
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-activeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L149">property <b>activeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L149">property <b>activeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountActiveDirectory'>AccountActiveDirectory</a>&gt;;</code></pre>
@@ -375,7 +375,7 @@ The set of arguments for constructing a Account resource.
 A `activeDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L153">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L153">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ A `activeDirectory` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L161">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L161">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ The name of the NetApp Account. Changing this forces a new resource to be create
 The name of the resource group where the NetApp Account should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L123">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -409,7 +409,7 @@ The name of the resource group where the NetApp Account should be created. Chang
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-activeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L127">property <b>activeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L127">property <b>activeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountActiveDirectory'>AccountActiveDirectory</a>&gt;;</code></pre>
@@ -417,7 +417,7 @@ Input properties used for looking up and filtering Account resources.
 A `activeDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L131">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L131">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ A `activeDirectory` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/account.ts#L139">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/account.ts#L139">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ The name of the NetApp Account. Changing this forces a new resource to be create
 The name of the resource group where the NetApp Account should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetAccountArgs" data-link-title="GetAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L47">
         interface <strong>GetAccountArgs</strong>
     </a>
 </h3>
@@ -451,7 +451,7 @@ The name of the resource group where the NetApp Account should be created. Chang
 A collection of arguments for invoking getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -459,7 +459,7 @@ A collection of arguments for invoking getAccount.
 The name of the NetApp Account.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L55">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -467,7 +467,7 @@ The name of the NetApp Account.
 The Name of the Resource Group where the NetApp Account exists.
 
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L61">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -477,7 +477,7 @@ The Name of the Resource Group where the NetApp Account exists.
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -485,7 +485,7 @@ A collection of values returned by getAccount.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L65">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -493,17 +493,17 @@ id is the provider-assigned unique ID for this managed resource.
 The Azure Region where the NetApp Account exists.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getAccount.ts#L67">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getAccount.ts#L67">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPoolArgs" data-link-title="GetPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L50">
         interface <strong>GetPoolArgs</strong>
     </a>
 </h3>
@@ -513,7 +513,7 @@ The Azure Region where the NetApp Account exists.
 A collection of arguments for invoking getPool.
 
 <h4 class="pdoc-member-header" id="GetPoolArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L54">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L54">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -521,7 +521,7 @@ A collection of arguments for invoking getPool.
 The name of the NetApp account where the NetApp pool exists.
 
 <h4 class="pdoc-member-header" id="GetPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -529,7 +529,7 @@ The name of the NetApp account where the NetApp pool exists.
 The name of the NetApp Pool.
 
 <h4 class="pdoc-member-header" id="GetPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L62">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L62">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -537,7 +537,7 @@ The name of the NetApp Pool.
 The Name of the Resource Group where the NetApp Pool exists.
 
 <h3 class="pdoc-module-header" id="GetPoolResult" data-link-title="GetPoolResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L68">
         interface <strong>GetPoolResult</strong>
     </a>
 </h3>
@@ -547,12 +547,12 @@ The Name of the Resource Group where the NetApp Pool exists.
 A collection of values returned by getPool.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L69">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L69">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoolResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -560,7 +560,7 @@ A collection of values returned by getPool.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -568,17 +568,17 @@ id is the provider-assigned unique ID for this managed resource.
 The Azure Region where the NetApp Pool exists.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoolResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoolResult-serviceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L79">property <b>serviceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L79">property <b>serviceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -586,7 +586,7 @@ The Azure Region where the NetApp Pool exists.
 The service level of the file system.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-sizeInTb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/getPool.ts#L83">property <b>sizeInTb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/getPool.ts#L83">property <b>sizeInTb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInTb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -594,7 +594,7 @@ The service level of the file system.
 Provisioned size of the pool in TB.
 
 <h3 class="pdoc-module-header" id="PoolArgs" data-link-title="PoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L149">
         interface <strong>PoolArgs</strong>
     </a>
 </h3>
@@ -604,7 +604,7 @@ Provisioned size of the pool in TB.
 The set of arguments for constructing a Pool resource.
 
 <h4 class="pdoc-member-header" id="PoolArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L153">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L153">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +612,7 @@ The set of arguments for constructing a Pool resource.
 The name of the NetApp account in which the NetApp Pool should be created.
 
 <h4 class="pdoc-member-header" id="PoolArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L157">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -620,7 +620,7 @@ The name of the NetApp account in which the NetApp Pool should be created.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L165">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L165">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The name of the NetApp Pool. Changing this forces a new resource to be created.
 The name of the resource group where the NetApp Pool should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolArgs-serviceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L169">property <b>serviceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L169">property <b>serviceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The name of the resource group where the NetApp Pool should be created. Changing
 The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 
 <h4 class="pdoc-member-header" id="PoolArgs-sizeInTb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L173">property <b>sizeInTb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L173">property <b>sizeInTb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInTb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ The service level of the file system. Valid values include `Premium`, `Standard`
 Provisioned size of the pool in TB. Value must be between `4` and `500`.
 
 <h3 class="pdoc-module-header" id="PoolState" data-link-title="PoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L119">
         interface <strong>PoolState</strong>
     </a>
 </h3>
@@ -662,7 +662,7 @@ Provisioned size of the pool in TB. Value must be between `4` and `500`.
 Input properties used for looking up and filtering Pool resources.
 
 <h4 class="pdoc-member-header" id="PoolState-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L123">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L123">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ Input properties used for looking up and filtering Pool resources.
 The name of the NetApp account in which the NetApp Pool should be created.
 
 <h4 class="pdoc-member-header" id="PoolState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L127">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L127">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ The name of the NetApp account in which the NetApp Pool should be created.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the NetApp Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L135">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L135">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -694,7 +694,7 @@ The name of the NetApp Pool. Changing this forces a new resource to be created.
 The name of the resource group where the NetApp Pool should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PoolState-serviceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L139">property <b>serviceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L139">property <b>serviceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -702,7 +702,7 @@ The name of the resource group where the NetApp Pool should be created. Changing
 The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 
 <h4 class="pdoc-member-header" id="PoolState-sizeInTb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/netapp/pool.ts#L143">property <b>sizeInTb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/netapp/pool.ts#L143">property <b>sizeInTb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInTb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
