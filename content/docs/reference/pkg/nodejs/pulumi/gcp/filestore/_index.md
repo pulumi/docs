@@ -33,7 +33,7 @@ meta_desc: "Explore members of the filestore module in the @pulumi/gcp package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L12">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ meta_desc: "Explore members of the filestore module in the @pulumi/gcp package."
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/filestore_instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -57,7 +57,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -68,14 +68,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L42">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L42">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Creation timestamp in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="Instance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L46">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L46">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -102,7 +102,7 @@ Creation timestamp in RFC3339 text format.
 A description of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L50">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L50">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ A description of the instance.
 Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 
 <h4 class="pdoc-member-header" id="Instance-fileShares">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L54">property <b>fileShares</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L54">property <b>fileShares</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
@@ -118,7 +118,7 @@ Server-specified ETag for the instance resource to prevent simultaneous updates 
 File system shares on the instance. For this version, only a single file share is supported.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -127,7 +127,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L58">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L58">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ Resource labels to represent user-provided metadata.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L66">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L66">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetwork'>InstanceNetwork</a>[]&gt;;</code></pre>
@@ -151,12 +151,12 @@ The resource name of the instance.
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 
 <h4 class="pdoc-member-header" id="Instance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L67">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L67">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L71">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L71">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ VPC networks to which the instance is connected. For this version, only a single
 The service tier of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L75">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L75">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The name of the Filestore zone of the instance.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L181">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -194,7 +194,7 @@ The name of the Filestore zone of the instance.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L185">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L185">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ The set of arguments for constructing a Instance resource.
 A description of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-fileShares">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L189">property <b>fileShares</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L189">property <b>fileShares</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileShares: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
@@ -210,7 +210,7 @@ A description of the instance.
 File system shares on the instance. For this version, only a single file share is supported.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L193">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L193">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -218,7 +218,7 @@ File system shares on the instance. For this version, only a single file share i
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Resource labels to represent user-provided metadata.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L201">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L201">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
@@ -234,12 +234,12 @@ The resource name of the instance.
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L202">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L202">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L206">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L206">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ VPC networks to which the instance is connected. For this version, only a single
 The service tier of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L210">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L210">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The service tier of the instance.
 The name of the Filestore zone of the instance.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L138">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -265,7 +265,7 @@ The name of the Filestore zone of the instance.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L142">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L142">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Input properties used for looking up and filtering Instance resources.
 Creation timestamp in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="InstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Creation timestamp in RFC3339 text format.
 A description of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L150">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L150">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ A description of the instance.
 Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 
 <h4 class="pdoc-member-header" id="InstanceState-fileShares">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L154">property <b>fileShares</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L154">property <b>fileShares</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileShares?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileShares'>InstanceFileShares</a>&gt;;</code></pre>
@@ -297,7 +297,7 @@ Server-specified ETag for the instance resource to prevent simultaneous updates 
 File system shares on the instance. For this version, only a single file share is supported.
 
 <h4 class="pdoc-member-header" id="InstanceState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L158">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L158">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -305,7 +305,7 @@ File system shares on the instance. For this version, only a single file share i
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ Resource labels to represent user-provided metadata.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L166">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L166">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetwork'>InstanceNetwork</a>&gt;[]&gt;;</code></pre>
@@ -321,12 +321,12 @@ The resource name of the instance.
 VPC networks to which the instance is connected. For this version, only a single network is supported.
 
 <h4 class="pdoc-member-header" id="InstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L167">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L167">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L171">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L171">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ VPC networks to which the instance is connected. For this version, only a single
 The service tier of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/filestore/instance.ts#L175">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/filestore/instance.ts#L175">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

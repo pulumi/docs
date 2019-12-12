@@ -109,7 +109,7 @@ import * as gcp from "@pulumi/gcp";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L16">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -124,7 +124,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google-beta/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
 </h4>
 
 
@@ -138,14 +138,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
 </h4>
 
 
@@ -156,14 +156,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -172,7 +172,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -184,7 +184,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -202,7 +202,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -211,7 +211,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -220,7 +220,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L117">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -230,302 +230,302 @@ deployments.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-accessContextManagerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L118">property <b>accessContextManagerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L118">property <b>accessContextManagerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessContextManagerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L119">property <b>accessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L119">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-appEngineCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L120">property <b>appEngineCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L120">property <b>appEngineCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appEngineCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-batching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L121">property <b>batching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L121">property <b>batching</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batching?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProviderBatching'>ProviderBatching</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-bigQueryCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L122">property <b>bigQueryCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L122">property <b>bigQueryCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigQueryCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-bigqueryDataTransferCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L123">property <b>bigqueryDataTransferCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L123">property <b>bigqueryDataTransferCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryDataTransferCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-bigtableCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L124">property <b>bigtableCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L124">property <b>bigtableCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigtableCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-binaryAuthorizationCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L125">property <b>binaryAuthorizationCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L125">property <b>binaryAuthorizationCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binaryAuthorizationCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudBillingCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L126">property <b>cloudBillingCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L126">property <b>cloudBillingCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudBillingCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudBuildCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L127">property <b>cloudBuildCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L127">property <b>cloudBuildCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudBuildCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudFunctionsCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L128">property <b>cloudFunctionsCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L128">property <b>cloudFunctionsCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunctionsCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudIotCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L129">property <b>cloudIotCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L129">property <b>cloudIotCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudIotCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudRunCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L130">property <b>cloudRunCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L130">property <b>cloudRunCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudRunCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cloudSchedulerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L131">property <b>cloudSchedulerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L131">property <b>cloudSchedulerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudSchedulerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-composerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L132">property <b>composerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L132">property <b>composerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>composerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-computeBetaCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L133">property <b>computeBetaCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L133">property <b>computeBetaCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computeBetaCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-computeCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L134">property <b>computeCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L134">property <b>computeCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computeCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-containerAnalysisCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L135">property <b>containerAnalysisCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L135">property <b>containerAnalysisCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerAnalysisCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-containerBetaCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L136">property <b>containerBetaCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L136">property <b>containerBetaCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerBetaCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-containerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L137">property <b>containerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L137">property <b>containerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L138">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L138">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dataFusionCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L139">property <b>dataFusionCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L139">property <b>dataFusionCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFusionCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dataflowCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L140">property <b>dataflowCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L140">property <b>dataflowCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataflowCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dataprocBetaCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L141">property <b>dataprocBetaCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L141">property <b>dataprocBetaCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataprocBetaCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dataprocCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L142">property <b>dataprocCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L142">property <b>dataprocCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataprocCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dnsBetaCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L143">property <b>dnsBetaCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L143">property <b>dnsBetaCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsBetaCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-dnsCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L144">property <b>dnsCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L144">property <b>dnsCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-filestoreCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L145">property <b>filestoreCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L145">property <b>filestoreCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filestoreCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-firestoreCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L146">property <b>firestoreCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L146">property <b>firestoreCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firestoreCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-healthcareCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L147">property <b>healthcareCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L147">property <b>healthcareCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcareCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-iamCredentialsCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L148">property <b>iamCredentialsCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L148">property <b>iamCredentialsCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamCredentialsCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-iamCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L149">property <b>iamCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L149">property <b>iamCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-iapCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L150">property <b>iapCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L150">property <b>iapCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iapCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-kmsCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L151">property <b>kmsCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L151">property <b>kmsCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-loggingCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L152">property <b>loggingCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L152">property <b>loggingCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-mlEngineCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L153">property <b>mlEngineCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L153">property <b>mlEngineCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mlEngineCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-monitoringCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L154">property <b>monitoringCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L154">property <b>monitoringCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L155">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L155">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-pubsubCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L156">property <b>pubsubCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L156">property <b>pubsubCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubsubCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-redisCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L157">property <b>redisCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L157">property <b>redisCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L158">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L158">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-resourceManagerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L159">property <b>resourceManagerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L159">property <b>resourceManagerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceManagerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-resourceManagerV2beta1CustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L160">property <b>resourceManagerV2beta1CustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L160">property <b>resourceManagerV2beta1CustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceManagerV2beta1CustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-runtimeConfigCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L161">property <b>runtimeConfigCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L161">property <b>runtimeConfigCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeConfigCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-runtimeconfigCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L162">property <b>runtimeconfigCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L162">property <b>runtimeconfigCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeconfigCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L163">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L163">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-securityCenterCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L164">property <b>securityCenterCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L164">property <b>securityCenterCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityCenterCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-securityScannerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L165">property <b>securityScannerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L165">property <b>securityScannerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityScannerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-serviceManagementCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L166">property <b>serviceManagementCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L166">property <b>serviceManagementCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceManagementCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-serviceNetworkingCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L167">property <b>serviceNetworkingCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L167">property <b>serviceNetworkingCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceNetworkingCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-serviceUsageCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L168">property <b>serviceUsageCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L168">property <b>serviceUsageCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUsageCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-sourceRepoCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L169">property <b>sourceRepoCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L169">property <b>sourceRepoCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRepoCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-spannerCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L170">property <b>spannerCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L170">property <b>spannerCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spannerCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-sqlCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L171">property <b>sqlCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L171">property <b>sqlCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-storageCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L172">property <b>storageCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L172">property <b>storageCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-storageTransferCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L173">property <b>storageTransferCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L173">property <b>storageTransferCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageTransferCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-tpuCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L174">property <b>tpuCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L174">property <b>tpuCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tpuCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-userProjectOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L175">property <b>userProjectOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L175">property <b>userProjectOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProjectOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-vpcAccessCustomEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L176">property <b>vpcAccessCustomEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L176">property <b>vpcAccessCustomEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAccessCustomEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/provider.ts#L177">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/provider.ts#L177">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
