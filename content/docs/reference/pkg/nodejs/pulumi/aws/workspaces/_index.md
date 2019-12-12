@@ -34,7 +34,7 @@ meta_desc: "Explore members of the workspaces module in the @pulumi/aws package.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getBundle" data-link-title="getBundle">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L24">
         Data Source <strong>getBundle</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ const example = aws.workspaces.getBundle({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetBundleArgs" data-link-title="GetBundleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L42">
         interface <strong>GetBundleArgs</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ const example = aws.workspaces.getBundle({
 A collection of arguments for invoking getBundle.
 
 <h4 class="pdoc-member-header" id="GetBundleArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L46">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L46">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -79,7 +79,7 @@ A collection of arguments for invoking getBundle.
 The ID of the bundle.
 
 <h3 class="pdoc-module-header" id="GetBundleResult" data-link-title="GetBundleResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L52">
         interface <strong>GetBundleResult</strong>
     </a>
 </h3>
@@ -89,12 +89,12 @@ The ID of the bundle.
 A collection of values returned by getBundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L53">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L53">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBundleResult-computeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>computeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>computeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType'>GetBundleComputeType</a>[];</code></pre>
@@ -102,7 +102,7 @@ A collection of values returned by getBundle.
 The compute type. See supported fields below.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -110,7 +110,7 @@ The compute type. See supported fields below.
 The description of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -118,7 +118,7 @@ The description of the bundle.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.
 The name of the compute type.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L69">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L69">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -134,7 +134,7 @@ The name of the compute type.
 The owner of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-rootStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L73">property <b>rootStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L73">property <b>rootStorages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage'>GetBundleRootStorage</a>[];</code></pre>
@@ -142,7 +142,7 @@ The owner of the bundle.
 The root volume. See supported fields below.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-userStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/workspaces/getBundle.ts#L77">property <b>userStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/workspaces/getBundle.ts#L77">property <b>userStorages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage'>GetBundleUserStorage</a>[];</code></pre>
