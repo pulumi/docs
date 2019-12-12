@@ -40,7 +40,7 @@ meta_desc: "Explore members of the privatelink module in the @pulumi/azure packa
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getPrivateLinkEndpointConnection" data-link-title="getPrivateLinkEndpointConnection">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L15">
         Data Source <strong>getPrivateLinkEndpointConnection</strong>
     </a>
 </h3>
@@ -56,7 +56,7 @@ Use this data source to access the connection status information about an existi
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_endpoint_connection.html.markdown.
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L29">
         Data Source <strong>getService</strong>
     </a>
 </h3>
@@ -86,7 +86,7 @@ export const privateLinkServiceId = example.id;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_service.html.markdown.
 
 <h3 class="pdoc-module-header" id="getServiceEndpointConnections" data-link-title="getServiceEndpointConnections">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L15">
         Data Source <strong>getServiceEndpointConnections</strong>
     </a>
 </h3>
@@ -104,7 +104,7 @@ Use this data source to access endpoint connection information about an existing
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetPrivateLinkEndpointConnectionArgs" data-link-title="GetPrivateLinkEndpointConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L34">
         interface <strong>GetPrivateLinkEndpointConnectionArgs</strong>
     </a>
 </h3>
@@ -114,7 +114,7 @@ Use this data source to access endpoint connection information about an existing
 A collection of arguments for invoking getPrivateLinkEndpointConnection.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -122,7 +122,7 @@ A collection of arguments for invoking getPrivateLinkEndpointConnection.
 Specifies the Name of the private link endpoint.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L42">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -130,7 +130,7 @@ Specifies the Name of the private link endpoint.
 Specifies the Name of the Resource Group within which the private link endpoint exists.
 
 <h3 class="pdoc-module-header" id="GetPrivateLinkEndpointConnectionResult" data-link-title="GetPrivateLinkEndpointConnectionResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L48">
         interface <strong>GetPrivateLinkEndpointConnectionResult</strong>
     </a>
 </h3>
@@ -140,7 +140,7 @@ Specifies the Name of the Resource Group within which the private link endpoint 
 A collection of values returned by getPrivateLinkEndpointConnection.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -148,7 +148,7 @@ A collection of values returned by getPrivateLinkEndpointConnection.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L52">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L52">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -156,7 +156,7 @@ id is the provider-assigned unique ID for this managed resource.
 The supported Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -164,17 +164,17 @@ The supported Azure location where the resource exists.
 The name of the private linke endpoint.
 
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-privateServiceConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L57">property <b>privateServiceConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L57">property <b>privateServiceConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateServiceConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPrivateLinkEndpointConnectionPrivateServiceConnection'>GetPrivateLinkEndpointConnectionPrivateServiceConnection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetPrivateLinkEndpointConnectionResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L58">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getPrivateLinkEndpointConnection.ts#L58">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L48">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -184,7 +184,7 @@ The name of the private linke endpoint.
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -192,7 +192,7 @@ A collection of arguments for invoking getService.
 The name of the private link service.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L56">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L56">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -200,7 +200,7 @@ The name of the private link service.
 The name of the resource group in which the private link service resides.
 
 <h3 class="pdoc-module-header" id="GetServiceEndpointConnectionsArgs" data-link-title="GetServiceEndpointConnectionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L34">
         interface <strong>GetServiceEndpointConnectionsArgs</strong>
     </a>
 </h3>
@@ -210,7 +210,7 @@ The name of the resource group in which the private link service resides.
 A collection of arguments for invoking getServiceEndpointConnections.
 
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L38">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L38">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -218,7 +218,7 @@ A collection of arguments for invoking getServiceEndpointConnections.
 The name of the resource group in which the private link service resides.
 
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L42">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L42">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -226,7 +226,7 @@ The name of the resource group in which the private link service resides.
 The resource ID of the private link service.
 
 <h3 class="pdoc-module-header" id="GetServiceEndpointConnectionsResult" data-link-title="GetServiceEndpointConnectionsResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L48">
         interface <strong>GetServiceEndpointConnectionsResult</strong>
     </a>
 </h3>
@@ -236,7 +236,7 @@ The resource ID of the private link service.
 A collection of values returned by getServiceEndpointConnections.
 
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -244,27 +244,27 @@ A collection of values returned by getServiceEndpointConnections.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L49">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L49">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-privateEndpointConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L50">property <b>privateEndpointConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L50">property <b>privateEndpointConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateEndpointConnections: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceEndpointConnectionsPrivateEndpointConnection'>GetServiceEndpointConnectionsPrivateEndpointConnection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L51">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L52">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L52">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceEndpointConnectionsResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L56">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getServiceEndpointConnections.ts#L56">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -272,7 +272,7 @@ id is the provider-assigned unique ID for this managed resource.
 The name of the private link service.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L62">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -282,7 +282,7 @@ The name of the private link service.
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L66">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L66">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -290,7 +290,7 @@ A collection of values returned by getService.
 The alias is a globally unique name for your private link service which Azure generates for you. Your can use this alias to request a connection to your private link service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-autoApprovalSubscriptionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L70">property <b>autoApprovalSubscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L70">property <b>autoApprovalSubscriptionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoApprovalSubscriptionIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -298,7 +298,7 @@ The alias is a globally unique name for your private link service which Azure ge
 The list of subscription(s) globally unique identifiers that will be auto approved to use the private link service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L100">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L100">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -306,7 +306,7 @@ The list of subscription(s) globally unique identifiers that will be auto approv
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-loadBalancerFrontendIpConfigurationIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L74">property <b>loadBalancerFrontendIpConfigurationIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L74">property <b>loadBalancerFrontendIpConfigurationIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancerFrontendIpConfigurationIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -314,7 +314,7 @@ id is the provider-assigned unique ID for this managed resource.
 The list of Standard Load Balancer(SLB) resource IDs. The Private Link service is tied to the frontend IP address of a SLB. All traffic destined for the private link service will reach the frontend of the SLB. You can configure SLB rules to direct this traffic to appropriate backend pools where your applications are running.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L78">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L78">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -322,7 +322,7 @@ The list of Standard Load Balancer(SLB) resource IDs. The Private Link service i
 The supported Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -330,7 +330,7 @@ The supported Azure location where the resource exists.
 The name of private link service NAT IP configuration.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-natIpConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L86">property <b>natIpConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L86">property <b>natIpConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natIpConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceNatIpConfiguration'>GetServiceNatIpConfiguration</a>;</code></pre>
@@ -338,17 +338,17 @@ The name of private link service NAT IP configuration.
 The `natIpConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L87">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L87">property <b>networkInterfaceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L88">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L88">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -356,7 +356,7 @@ The `natIpConfiguration` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-visibilitySubscriptionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/55a74dd194ca30db7d4741976e9c1f83f20b82f5/sdk/nodejs/privatelink/getService.ts#L96">property <b>visibilitySubscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4feb75a6674d5a092a740aa733dcdc97e56c7052/sdk/nodejs/privatelink/getService.ts#L96">property <b>visibilitySubscriptionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibilitySubscriptionIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
