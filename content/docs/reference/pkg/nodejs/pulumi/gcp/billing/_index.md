@@ -39,7 +39,7 @@ meta_desc: "Explore members of the billing module in the @pulumi/gcp package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccountIamBinding" data-link-title="AccountIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L36">
         Resource <strong>AccountIamBinding</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ const binding = new gcp.billing.AccountIamBinding("binding", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_binding.html.markdown.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -87,7 +87,7 @@ Create a AccountIamBinding resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -98,14 +98,14 @@ Get an existing AccountIamBinding resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Returns true if the given object is an instance of AccountIamBinding.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L66">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L66">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,12 +124,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L67">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L67">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccountIamBindingCondition'>AccountIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L71">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L71">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ The billing account id.
 (Computed) The etag of the billing account's IAM policy.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -146,7 +146,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L75">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L75">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -154,7 +154,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L79">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L79">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ A list of users that the role should apply to. For more details on format and re
 The role that should be applied.
 
 <h4 class="pdoc-member-header" id="AccountIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AccountIamMember" data-link-title="AccountIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L32">
         Resource <strong>AccountIamMember</strong>
     </a>
 </h3>
@@ -201,7 +201,7 @@ const binding = new gcp.billing.AccountIamMember("binding", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_member.html.markdown.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -215,7 +215,7 @@ Create a AccountIamMember resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -226,14 +226,14 @@ Get an existing AccountIamMember resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -244,7 +244,7 @@ Returns true if the given object is an instance of AccountIamMember.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L62">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L62">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -252,12 +252,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L63">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L63">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccountIamMemberCondition'>AccountIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L67">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L67">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ The billing account id.
 (Computed) The etag of the billing account's IAM policy.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -274,7 +274,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L71">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L71">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ deployments and may be missing (undefined) during planning phases.
 The user that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L75">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L75">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ The user that the role should apply to. For more details on format and restricti
 The role that should be applied.
 
 <h4 class="pdoc-member-header" id="AccountIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -299,7 +299,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AccountIamPolicy" data-link-title="AccountIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L42">
         Resource <strong>AccountIamPolicy</strong>
     </a>
 </h3>
@@ -339,7 +339,7 @@ const policy = new gcp.billing.AccountIamPolicy("policy", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -353,7 +353,7 @@ Create a AccountIamPolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -364,14 +364,14 @@ Get an existing AccountIamPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -382,7 +382,7 @@ Returns true if the given object is an instance of AccountIamPolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L72">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L72">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,12 +390,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L73">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L73">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L79">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L79">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ the IAM policy that will be applied to the billing account. This policy override
 policy applied to the billing account.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -426,7 +426,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountIamBindingArgs" data-link-title="AccountIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L152">
         interface <strong>AccountIamBindingArgs</strong>
     </a>
 </h3>
@@ -436,7 +436,7 @@ deployments.
 The set of arguments for constructing a AccountIamBinding resource.
 
 <h4 class="pdoc-member-header" id="AccountIamBindingArgs-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L156">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L156">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,12 +444,12 @@ The set of arguments for constructing a AccountIamBinding resource.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L157">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L157">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccountIamBindingCondition'>AccountIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L161">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L161">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -457,7 +457,7 @@ The billing account id.
 A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L165">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L165">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ A list of users that the role should apply to. For more details on format and re
 The role that should be applied.
 
 <h3 class="pdoc-module-header" id="AccountIamBindingState" data-link-title="AccountIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L129">
         interface <strong>AccountIamBindingState</strong>
     </a>
 </h3>
@@ -475,7 +475,7 @@ The role that should be applied.
 Input properties used for looking up and filtering AccountIamBinding resources.
 
 <h4 class="pdoc-member-header" id="AccountIamBindingState-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L133">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L133">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,12 +483,12 @@ Input properties used for looking up and filtering AccountIamBinding resources.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L134">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L134">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccountIamBindingCondition'>AccountIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L138">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L138">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -496,7 +496,7 @@ The billing account id.
 (Computed) The etag of the billing account's IAM policy.
 
 <h4 class="pdoc-member-header" id="AccountIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L142">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L142">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -504,7 +504,7 @@ The billing account id.
 A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamBinding.ts#L146">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamBinding.ts#L146">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ A list of users that the role should apply to. For more details on format and re
 The role that should be applied.
 
 <h3 class="pdoc-module-header" id="AccountIamMemberArgs" data-link-title="AccountIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L148">
         interface <strong>AccountIamMemberArgs</strong>
     </a>
 </h3>
@@ -522,7 +522,7 @@ The role that should be applied.
 The set of arguments for constructing a AccountIamMember resource.
 
 <h4 class="pdoc-member-header" id="AccountIamMemberArgs-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L152">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L152">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -530,12 +530,12 @@ The set of arguments for constructing a AccountIamMember resource.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L153">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L153">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccountIamMemberCondition'>AccountIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L157">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L157">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -543,7 +543,7 @@ The billing account id.
 The user that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L161">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L161">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ The user that the role should apply to. For more details on format and restricti
 The role that should be applied.
 
 <h3 class="pdoc-module-header" id="AccountIamMemberState" data-link-title="AccountIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L125">
         interface <strong>AccountIamMemberState</strong>
     </a>
 </h3>
@@ -561,7 +561,7 @@ The role that should be applied.
 Input properties used for looking up and filtering AccountIamMember resources.
 
 <h4 class="pdoc-member-header" id="AccountIamMemberState-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L129">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L129">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,12 +569,12 @@ Input properties used for looking up and filtering AccountIamMember resources.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L130">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L130">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccountIamMemberCondition'>AccountIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L134">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L134">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ The billing account id.
 (Computed) The etag of the billing account's IAM policy.
 
 <h4 class="pdoc-member-header" id="AccountIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L138">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L138">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ The billing account id.
 The user that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 
 <h4 class="pdoc-member-header" id="AccountIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamMember.ts#L142">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamMember.ts#L142">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The user that the role should apply to. For more details on format and restricti
 The role that should be applied.
 
 <h3 class="pdoc-module-header" id="AccountIamPolicyArgs" data-link-title="AccountIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L139">
         interface <strong>AccountIamPolicyArgs</strong>
     </a>
 </h3>
@@ -608,7 +608,7 @@ The role that should be applied.
 The set of arguments for constructing a AccountIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicyArgs-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L143">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L143">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The set of arguments for constructing a AccountIamPolicy resource.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L149">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L149">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ the IAM policy that will be applied to the billing account. This policy override
 policy applied to the billing account.
 
 <h3 class="pdoc-module-header" id="AccountIamPolicyState" data-link-title="AccountIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L122">
         interface <strong>AccountIamPolicyState</strong>
     </a>
 </h3>
@@ -636,7 +636,7 @@ policy applied to the billing account.
 Input properties used for looking up and filtering AccountIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicyState-billingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L126">property <b>billingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L126">property <b>billingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,12 +644,12 @@ Input properties used for looking up and filtering AccountIamPolicy resources.
 The billing account id.
 
 <h4 class="pdoc-member-header" id="AccountIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L127">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L127">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/billing/accountIamPolicy.ts#L133">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/81b33dbf9fd3bbb171d64cfcb4baf91bdfb82c5a/sdk/nodejs/billing/accountIamPolicy.ts#L133">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
