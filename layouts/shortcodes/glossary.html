@@ -1,6 +1,6 @@
 <ul class="glossary">
     {{ range sort $.Site.Data.glossary.entries "term" }}
-        <li><a href="#{{ anchorize .term }}">{{ .term }}</a></li>
+        <li><a id="cta-glossary-{{ .term }}" href="#{{ anchorize .term }}" track-click>{{ .term }}</a></li>
     {{ end }}
 </ul>
 
@@ -12,6 +12,6 @@
     {{ if hasPrefix $link "/" }}
         {{ $link = relref $.Page $link }}
     {{ end }}
-    <a href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
+    <a id="cta-glossary-{{ .term }}-details" href="{{ $link }}" track-click><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
 </p>
 {{ end }}

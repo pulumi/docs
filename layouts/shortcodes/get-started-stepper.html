@@ -32,10 +32,10 @@
 <div class="mt-6">
 {{ if ne $step $first }}
     {{ $prev := index $pages (sub $step 1) }}
-    <a class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&lt; PREVIOUS STEP</a>
+    <a id="cta-get-started-previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}" track-click>&lt; PREVIOUS STEP</a>
 {{ end }}
 {{ if ne $step $last }}
     {{ $next := index $pages (add $step 1) }}
-    <a class="btn" href="{{ $next.RelPermalink }}">NEXT STEP &gt;</a>
+    <a id="cta-get-started-next-step" class="btn" href="{{ $next.RelPermalink }}" track-click>NEXT STEP &gt;</a>
 {{ end }}
 </div>

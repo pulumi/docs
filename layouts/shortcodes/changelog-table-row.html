@@ -13,13 +13,13 @@
 {{ end }}
 
 <tr>
-    <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
+    <td><a id="cta-changelog-pulumi-sdk-version" href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}" track-click>{{ $version }}</a></td>
     <td>{{ $date }}</td>
     <td>
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a>
+        <a id="cta-changelog-pulumi-sdk-linux" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz" track-click>Linux</a>
         |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a>
+        <a id="cta-changelog-pulumi-sdk-macOS" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz" track-click>macOS</a>
         |
-        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a>
+        <a id="cta-changelog-pulumi-sdk-windows" href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip" track-click>Windows</a>
     </td>
 </tr>

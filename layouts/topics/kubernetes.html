@@ -68,7 +68,7 @@
                     <p>
                         {{ .body | safeHTML }}
                     </p>
-                    <a class="btn inline-block" href="{{ .cta.url }}">
+                    <a id="cta-kubernetes-examples-{{ .cta.label }}" class="btn inline-block" href="{{ .cta.url }}" track-click>
                         {{ .cta.label }}
                     </a>
                 </div>
