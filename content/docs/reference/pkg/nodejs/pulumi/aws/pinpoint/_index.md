@@ -63,7 +63,7 @@ meta_desc: "Explore members of the pinpoint module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AdmChannel" data-link-title="AdmChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L31">
         Resource <strong>AdmChannel</strong>
     </a>
 </h3>
@@ -94,7 +94,7 @@ const channel = new aws.pinpoint.AdmChannel("channel", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="AdmChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Create a AdmChannel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AdmChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -119,14 +119,14 @@ Get an existing AdmChannel resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AdmChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AdmChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -137,7 +137,7 @@ Returns true if the given object is an instance of AdmChannel.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AdmChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L61">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L61">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="AdmChannel-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L65">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L65">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ The application ID.
 Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannel-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L69">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L69">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L73">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L73">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AdmChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -178,7 +178,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AdmChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -187,7 +187,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApnsChannel" data-link-title="ApnsChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L30">
         Resource <strong>ApnsChannel</strong>
     </a>
 </h3>
@@ -217,7 +217,7 @@ const apns = new aws.pinpoint.ApnsChannel("apns", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -231,7 +231,7 @@ Create a ApnsChannel resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -242,14 +242,14 @@ Get an existing ApnsChannel resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApnsChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -260,7 +260,7 @@ Returns true if the given object is an instance of ApnsChannel.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L60">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L60">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L64">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L64">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L68">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L68">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAuthenticationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -312,7 +312,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L83">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L83">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ deployments and may be missing (undefined) during planning phases.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsChannel-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L87">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L87">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -328,7 +328,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L91">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L91">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -336,7 +336,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L95">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L95">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h4 class="pdoc-member-header" id="ApnsChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -353,7 +353,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApnsSandboxChannel" data-link-title="ApnsSandboxChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">
         Resource <strong>ApnsSandboxChannel</strong>
     </a>
 </h3>
@@ -383,7 +383,7 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_sandbox_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -397,7 +397,7 @@ Create a ApnsSandboxChannel resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -408,14 +408,14 @@ Get an existing ApnsSandboxChannel resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -426,7 +426,7 @@ Returns true if the given object is an instance of ApnsSandboxChannel.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L60">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L60">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L64">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L64">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L68">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L68">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAuthenticationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -461,7 +461,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -478,7 +478,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L83">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L83">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ deployments and may be missing (undefined) during planning phases.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L87">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L87">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L91">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L91">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L95">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L95">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -519,7 +519,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApnsVoipChannel" data-link-title="ApnsVoipChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">
         Resource <strong>ApnsVoipChannel</strong>
     </a>
 </h3>
@@ -549,7 +549,7 @@ const apnsVoip = new aws.pinpoint.ApnsVoipChannel("apnsVoip", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -563,7 +563,7 @@ Create a ApnsVoipChannel resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -574,14 +574,14 @@ Get an existing ApnsVoipChannel resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -592,7 +592,7 @@ Returns true if the given object is an instance of ApnsVoipChannel.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L60">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L60">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L64">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L64">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L68">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L68">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAuthenticationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -635,7 +635,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -644,7 +644,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L83">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L83">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ deployments and may be missing (undefined) during planning phases.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L87">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L87">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L91">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L91">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -668,7 +668,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L95">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L95">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -685,7 +685,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApnsVoipSandboxChannel" data-link-title="ApnsVoipSandboxChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">
         Resource <strong>ApnsVoipSandboxChannel</strong>
     </a>
 </h3>
@@ -715,7 +715,7 @@ const apnsVoipSandbox = new aws.pinpoint.ApnsVoipSandboxChannel("apnsVoipSandbox
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_apns_voip_sandbox_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -729,7 +729,7 @@ Create a ApnsVoipSandboxChannel resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -740,14 +740,14 @@ Get an existing ApnsVoipSandboxChannel resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -758,7 +758,7 @@ Returns true if the given object is an instance of ApnsVoipSandboxChannel.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L60">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L60">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -766,7 +766,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L64">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L64">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -774,7 +774,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L68">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L68">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -782,7 +782,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L75">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAuthenticationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -810,7 +810,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L83">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L83">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ deployments and may be missing (undefined) during planning phases.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L87">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L87">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L91">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L91">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -834,7 +834,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L95">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L95">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -851,7 +851,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="App" data-link-title="App">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L31">
         Resource <strong>App</strong>
     </a>
 </h3>
@@ -880,7 +880,7 @@ const example = new aws.pinpoint.App("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown.
 
 <h4 class="pdoc-member-header" id="App-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -894,7 +894,7 @@ Create a App resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="App-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -905,14 +905,14 @@ Get an existing App resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="App-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="App-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -923,7 +923,7 @@ Returns true if the given object is an instance of App.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="App-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L61">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L61">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,7 +931,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Application ID of the Pinpoint App.
 
 <h4 class="pdoc-member-header" id="App-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -939,7 +939,7 @@ The Application ID of the Pinpoint App.
 Amazon Resource Name (ARN) of the PinPoint Application
 
 <h4 class="pdoc-member-header" id="App-campaignHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L69">property <b>campaignHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L69">property <b>campaignHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>campaignHook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppCampaignHook'>AppCampaignHook</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -947,7 +947,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="App-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -956,7 +956,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="App-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L73">property <b>limits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L73">property <b>limits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>limits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppLimits'>AppLimits</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -964,7 +964,7 @@ deployments and may be missing (undefined) during planning phases.
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="App-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -972,7 +972,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 The application name. By default generated by this provider
 
 <h4 class="pdoc-member-header" id="App-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L81">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L81">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -980,7 +980,7 @@ The application name. By default generated by this provider
 The name of the Pinpoint application. Conflicts with `name`
 
 <h4 class="pdoc-member-header" id="App-quietTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L85">property <b>quietTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L85">property <b>quietTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>quietTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AppQuietTime'>AppQuietTime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ The name of the Pinpoint application. Conflicts with `name`
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 
 <h4 class="pdoc-member-header" id="App-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ The default quiet time for the app. Each campaign for this app sends no messages
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="App-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BaiduChannel" data-link-title="BaiduChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L32">
         Resource <strong>BaiduChannel</strong>
     </a>
 </h3>
@@ -1035,7 +1035,7 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -1049,7 +1049,7 @@ Create a BaiduChannel resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -1060,14 +1060,14 @@ Get an existing BaiduChannel resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BaiduChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1078,7 +1078,7 @@ Returns true if the given object is an instance of BaiduChannel.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L62">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L62">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1086,7 +1086,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Platform credential API key from Baidu.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L66">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L66">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1094,7 +1094,7 @@ Platform credential API key from Baidu.
 The application ID.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L70">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L70">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ The application ID.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L74">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L74">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ deployments and may be missing (undefined) during planning phases.
 Platform credential Secret key from Baidu.
 
 <h4 class="pdoc-member-header" id="BaiduChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EmailChannel" data-link-title="EmailChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L65">
         Resource <strong>EmailChannel</strong>
     </a>
 </h3>
@@ -1191,7 +1191,7 @@ const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="EmailChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -1205,7 +1205,7 @@ Create a EmailChannel resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EmailChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L74">method <b>get</b></a>
 </h4>
 
 
@@ -1216,14 +1216,14 @@ Get an existing EmailChannel resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EmailChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EmailChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L85">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1234,7 +1234,7 @@ Returns true if the given object is an instance of EmailChannel.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EmailChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L95">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L95">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EmailChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L99">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L99">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EmailChannel-fromAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L103">property <b>fromAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L103">property <b>fromAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fromAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The email address used to send emails from.
 
 <h4 class="pdoc-member-header" id="EmailChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EmailChannel-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L107">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L107">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1275,7 +1275,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN of an identity verified with SES.
 
 <h4 class="pdoc-member-header" id="EmailChannel-messagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L111">property <b>messagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L111">property <b>messagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>messagesPerSecond: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1283,7 +1283,7 @@ The ARN of an identity verified with SES.
 Messages per second that can be sent.
 
 <h4 class="pdoc-member-header" id="EmailChannel-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L115">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L115">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ Messages per second that can be sent.
 The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 
 <h4 class="pdoc-member-header" id="EmailChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventStream" data-link-title="EventStream">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L64">
         Resource <strong>EventStream</strong>
     </a>
 </h3>
@@ -1362,7 +1362,7 @@ const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown.
 
 <h4 class="pdoc-member-header" id="EventStream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -1376,7 +1376,7 @@ Create a EventStream resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventStream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -1387,14 +1387,14 @@ Get an existing EventStream resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventStream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L64">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L64">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventStream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1405,7 +1405,7 @@ Returns true if the given object is an instance of EventStream.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventStream-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L94">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L94">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EventStream-destinationStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L98">property <b>destinationStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L98">property <b>destinationStreamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationStreamArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ The application ID.
 The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
 
 <h4 class="pdoc-member-header" id="EventStream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventStream-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L102">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L102">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ deployments and may be missing (undefined) during planning phases.
 The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
 
 <h4 class="pdoc-member-header" id="EventStream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L64">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L64">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1447,7 +1447,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GcmChannel" data-link-title="GcmChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L30">
         Resource <strong>GcmChannel</strong>
     </a>
 </h3>
@@ -1475,7 +1475,7 @@ const gcm = new aws.pinpoint.GcmChannel("gcm", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="GcmChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -1489,7 +1489,7 @@ Create a GcmChannel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GcmChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -1500,14 +1500,14 @@ Get an existing GcmChannel resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GcmChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GcmChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1518,7 +1518,7 @@ Returns true if the given object is an instance of GcmChannel.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GcmChannel-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L60">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L60">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Platform credential API key from Google.
 
 <h4 class="pdoc-member-header" id="GcmChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L64">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L64">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1534,7 +1534,7 @@ Platform credential API key from Google.
 The application ID.
 
 <h4 class="pdoc-member-header" id="GcmChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L68">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L68">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GcmChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1551,7 +1551,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GcmChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SmsChannel" data-link-title="SmsChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L26">
         Resource <strong>SmsChannel</strong>
     </a>
 </h3>
@@ -1584,7 +1584,7 @@ const sms = new aws.pinpoint.SmsChannel("sms", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="SmsChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1598,7 +1598,7 @@ Create a SmsChannel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SmsChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -1609,14 +1609,14 @@ Get an existing SmsChannel resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SmsChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SmsChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1627,7 +1627,7 @@ Returns true if the given object is an instance of SmsChannel.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SmsChannel-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L56">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L56">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1635,7 +1635,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application ID.
 
 <h4 class="pdoc-member-header" id="SmsChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L60">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L60">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1643,7 +1643,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmsChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1652,7 +1652,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SmsChannel-promotionalMessagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L64">property <b>promotionalMessagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L64">property <b>promotionalMessagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>promotionalMessagesPerSecond: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1660,7 +1660,7 @@ deployments and may be missing (undefined) during planning phases.
 Promotional messages per second that can be sent.
 
 <h4 class="pdoc-member-header" id="SmsChannel-senderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L68">property <b>senderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L68">property <b>senderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>senderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1668,7 +1668,7 @@ Promotional messages per second that can be sent.
 Sender identifier of your messages.
 
 <h4 class="pdoc-member-header" id="SmsChannel-shortCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L72">property <b>shortCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L72">property <b>shortCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1676,7 +1676,7 @@ Sender identifier of your messages.
 The Short Code registered with the phone provider.
 
 <h4 class="pdoc-member-header" id="SmsChannel-transactionalMessagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L76">property <b>transactionalMessagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L76">property <b>transactionalMessagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transactionalMessagesPerSecond: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ The Short Code registered with the phone provider.
 Transactional messages per second that can be sent.
 
 <h4 class="pdoc-member-header" id="SmsChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1696,7 +1696,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AdmChannelArgs" data-link-title="AdmChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L143">
         interface <strong>AdmChannelArgs</strong>
     </a>
 </h3>
@@ -1706,7 +1706,7 @@ deployments.
 The set of arguments for constructing a AdmChannel resource.
 
 <h4 class="pdoc-member-header" id="AdmChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L147">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L147">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1714,7 +1714,7 @@ The set of arguments for constructing a AdmChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="AdmChannelArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L151">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L151">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1722,7 +1722,7 @@ The application ID.
 Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannelArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L155">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L155">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1730,7 +1730,7 @@ Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L159">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L159">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1738,7 +1738,7 @@ Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="AdmChannelState" data-link-title="AdmChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L121">
         interface <strong>AdmChannelState</strong>
     </a>
 </h3>
@@ -1748,7 +1748,7 @@ Specifies whether to enable the channel. Defaults to `true`.
 Input properties used for looking up and filtering AdmChannel resources.
 
 <h4 class="pdoc-member-header" id="AdmChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L125">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L125">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1756,7 +1756,7 @@ Input properties used for looking up and filtering AdmChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="AdmChannelState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L129">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L129">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1764,7 +1764,7 @@ The application ID.
 Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannelState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L133">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L133">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1772,7 +1772,7 @@ Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
 Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 
 <h4 class="pdoc-member-header" id="AdmChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/admChannel.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/admChannel.ts#L137">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="ApnsChannelArgs" data-link-title="ApnsChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L192">
         interface <strong>ApnsChannelArgs</strong>
     </a>
 </h3>
@@ -1790,7 +1790,7 @@ Specifies whether to enable the channel. Defaults to `true`.
 The set of arguments for constructing a ApnsChannel resource.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L196">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L196">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1798,7 +1798,7 @@ The set of arguments for constructing a ApnsChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L200">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L200">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1806,7 +1806,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L204">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L204">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1814,7 +1814,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1825,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L215">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L219">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L219">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L223">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L223">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1849,7 +1849,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L227">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L227">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +1857,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsChannelArgs-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L231">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L231">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +1865,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsChannelState" data-link-title="ApnsChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L147">
         interface <strong>ApnsChannelState</strong>
     </a>
 </h3>
@@ -1875,7 +1875,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 Input properties used for looking up and filtering ApnsChannel resources.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L151">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L151">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1883,7 +1883,7 @@ Input properties used for looking up and filtering ApnsChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L155">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L155">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,7 +1891,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L159">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L159">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1899,7 +1899,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1910,7 +1910,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1918,7 +1918,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L174">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L174">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1926,7 +1926,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L178">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L178">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1934,7 +1934,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L182">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L182">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1942,7 +1942,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsChannelState-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsChannel.ts#L186">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsChannel.ts#L186">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1950,7 +1950,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsSandboxChannelArgs" data-link-title="ApnsSandboxChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L192">
         interface <strong>ApnsSandboxChannelArgs</strong>
     </a>
 </h3>
@@ -1960,7 +1960,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 The set of arguments for constructing a ApnsSandboxChannel resource.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L196">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L196">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1968,7 +1968,7 @@ The set of arguments for constructing a ApnsSandboxChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L200">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L200">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L204">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L204">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1984,7 +1984,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1995,7 +1995,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L215">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2003,7 +2003,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L219">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L219">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2011,7 +2011,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L223">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L223">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2019,7 +2019,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L227">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L227">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2027,7 +2027,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelArgs-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L231">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L231">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2035,7 +2035,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsSandboxChannelState" data-link-title="ApnsSandboxChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L147">
         interface <strong>ApnsSandboxChannelState</strong>
     </a>
 </h3>
@@ -2045,7 +2045,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 Input properties used for looking up and filtering ApnsSandboxChannel resources.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L151">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L151">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2053,7 +2053,7 @@ Input properties used for looking up and filtering ApnsSandboxChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L155">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L155">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2061,7 +2061,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L159">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L159">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2069,7 +2069,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2080,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2088,7 +2088,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L174">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L174">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L178">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L178">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L182">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L182">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsSandboxChannelState-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L186">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L186">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2120,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsVoipChannelArgs" data-link-title="ApnsVoipChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L192">
         interface <strong>ApnsVoipChannelArgs</strong>
     </a>
 </h3>
@@ -2130,7 +2130,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 The set of arguments for constructing a ApnsVoipChannel resource.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L196">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L196">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2138,7 +2138,7 @@ The set of arguments for constructing a ApnsVoipChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L200">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L200">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2146,7 +2146,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L204">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L204">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2154,7 +2154,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2165,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L215">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L219">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L219">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L223">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L223">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L227">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L227">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2197,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelArgs-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L231">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L231">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2205,7 +2205,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsVoipChannelState" data-link-title="ApnsVoipChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L147">
         interface <strong>ApnsVoipChannelState</strong>
     </a>
 </h3>
@@ -2215,7 +2215,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 Input properties used for looking up and filtering ApnsVoipChannel resources.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L151">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L151">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ Input properties used for looking up and filtering ApnsVoipChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L155">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L155">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2231,7 +2231,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L159">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L159">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2239,7 +2239,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L174">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L174">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2266,7 +2266,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L178">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L178">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2274,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L182">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L182">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2282,7 +2282,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipChannelState-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L186">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L186">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2290,7 +2290,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsVoipSandboxChannelArgs" data-link-title="ApnsVoipSandboxChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L192">
         interface <strong>ApnsVoipSandboxChannelArgs</strong>
     </a>
 </h3>
@@ -2300,7 +2300,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 The set of arguments for constructing a ApnsVoipSandboxChannel resource.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L196">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L196">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2308,7 +2308,7 @@ The set of arguments for constructing a ApnsVoipSandboxChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L200">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L200">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2316,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L204">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L204">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2324,7 +2324,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L211">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2335,7 +2335,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L215">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2343,7 +2343,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L219">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L219">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2351,7 +2351,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L223">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L223">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2359,7 +2359,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L227">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L227">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2367,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelArgs-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L231">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L231">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2375,7 +2375,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="ApnsVoipSandboxChannelState" data-link-title="ApnsVoipSandboxChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L147">
         interface <strong>ApnsVoipSandboxChannelState</strong>
     </a>
 </h3>
@@ -2385,7 +2385,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 Input properties used for looking up and filtering ApnsVoipSandboxChannel resources.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L151">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L151">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2393,7 +2393,7 @@ Input properties used for looking up and filtering ApnsVoipSandboxChannel resour
 The application ID.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L155">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L155">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2401,7 +2401,7 @@ The application ID.
 The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L159">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L159">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2409,7 +2409,7 @@ The ID assigned to your iOS app. To find this value, choose Certificates, IDs & 
 The pem encoded TLS Certificate from Apple.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-defaultAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L166">property <b>defaultAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAuthenticationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2420,7 +2420,7 @@ You can override the default when you send a message programmatically using the 
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2428,7 +2428,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L174">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L174">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2436,7 +2436,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The Certificate Private Key file (ie. `.key` file).
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L178">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L178">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2444,7 +2444,7 @@ The Certificate Private Key file (ie. `.key` file).
 The ID assigned to your Apple developer account team. This value is provided on the Membership page.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-tokenKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L182">property <b>tokenKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L182">property <b>tokenKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2452,7 +2452,7 @@ The ID assigned to your Apple developer account team. This value is provided on 
 The `.p8` file that you download from your Apple developer account when you create an authentication key.
 
 <h4 class="pdoc-member-header" id="ApnsVoipSandboxChannelState-tokenKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L186">property <b>tokenKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L186">property <b>tokenKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2460,7 +2460,7 @@ The `.p8` file that you download from your Apple developer account when you crea
 The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
 
 <h3 class="pdoc-module-header" id="AppArgs" data-link-title="AppArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L174">
         interface <strong>AppArgs</strong>
     </a>
 </h3>
@@ -2470,7 +2470,7 @@ The ID assigned to your signing key. To find this value, choose Certificates, ID
 The set of arguments for constructing a App resource.
 
 <h4 class="pdoc-member-header" id="AppArgs-campaignHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L178">property <b>campaignHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L178">property <b>campaignHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>AppCampaignHook</a>&gt;;</code></pre>
@@ -2478,7 +2478,7 @@ The set of arguments for constructing a App resource.
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="AppArgs-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L182">property <b>limits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L182">property <b>limits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>AppLimits</a>&gt;;</code></pre>
@@ -2486,7 +2486,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="AppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2494,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 The application name. By default generated by this provider
 
 <h4 class="pdoc-member-header" id="AppArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L190">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L190">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2502,7 +2502,7 @@ The application name. By default generated by this provider
 The name of the Pinpoint application. Conflicts with `name`
 
 <h4 class="pdoc-member-header" id="AppArgs-quietTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L194">property <b>quietTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L194">property <b>quietTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>AppQuietTime</a>&gt;;</code></pre>
@@ -2510,7 +2510,7 @@ The name of the Pinpoint application. Conflicts with `name`
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 
 <h4 class="pdoc-member-header" id="AppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2518,7 +2518,7 @@ The default quiet time for the app. Each campaign for this app sends no messages
 Key-value mapping of resource tags
 
 <h3 class="pdoc-module-header" id="AppState" data-link-title="AppState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L136">
         interface <strong>AppState</strong>
     </a>
 </h3>
@@ -2528,7 +2528,7 @@ Key-value mapping of resource tags
 Input properties used for looking up and filtering App resources.
 
 <h4 class="pdoc-member-header" id="AppState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L140">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L140">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ Input properties used for looking up and filtering App resources.
 The Application ID of the Pinpoint App.
 
 <h4 class="pdoc-member-header" id="AppState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L144">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L144">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2544,7 +2544,7 @@ The Application ID of the Pinpoint App.
 Amazon Resource Name (ARN) of the PinPoint Application
 
 <h4 class="pdoc-member-header" id="AppState-campaignHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L148">property <b>campaignHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L148">property <b>campaignHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>campaignHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppCampaignHook'>AppCampaignHook</a>&gt;;</code></pre>
@@ -2552,7 +2552,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="AppState-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L152">property <b>limits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L152">property <b>limits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppLimits'>AppLimits</a>&gt;;</code></pre>
@@ -2560,7 +2560,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 
 <h4 class="pdoc-member-header" id="AppState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2568,7 +2568,7 @@ The default campaign limits for the app. These limits apply to each campaign for
 The application name. By default generated by this provider
 
 <h4 class="pdoc-member-header" id="AppState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L160">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L160">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2576,7 +2576,7 @@ The application name. By default generated by this provider
 The name of the Pinpoint application. Conflicts with `name`
 
 <h4 class="pdoc-member-header" id="AppState-quietTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L164">property <b>quietTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L164">property <b>quietTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quietTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AppQuietTime'>AppQuietTime</a>&gt;;</code></pre>
@@ -2584,7 +2584,7 @@ The name of the Pinpoint application. Conflicts with `name`
 The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 
 <h4 class="pdoc-member-header" id="AppState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/app.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/app.ts#L168">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2592,7 +2592,7 @@ The default quiet time for the app. Each campaign for this app sends no messages
 Key-value mapping of resource tags
 
 <h3 class="pdoc-module-header" id="BaiduChannelArgs" data-link-title="BaiduChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L144">
         interface <strong>BaiduChannelArgs</strong>
     </a>
 </h3>
@@ -2602,7 +2602,7 @@ Key-value mapping of resource tags
 The set of arguments for constructing a BaiduChannel resource.
 
 <h4 class="pdoc-member-header" id="BaiduChannelArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L148">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L148">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2610,7 +2610,7 @@ The set of arguments for constructing a BaiduChannel resource.
 Platform credential API key from Baidu.
 
 <h4 class="pdoc-member-header" id="BaiduChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L152">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L152">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2618,7 +2618,7 @@ Platform credential API key from Baidu.
 The application ID.
 
 <h4 class="pdoc-member-header" id="BaiduChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L156">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L156">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2626,7 +2626,7 @@ The application ID.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BaiduChannelArgs-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L160">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L160">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2634,7 +2634,7 @@ Specifies whether to enable the channel. Defaults to `true`.
 Platform credential Secret key from Baidu.
 
 <h3 class="pdoc-module-header" id="BaiduChannelState" data-link-title="BaiduChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L122">
         interface <strong>BaiduChannelState</strong>
     </a>
 </h3>
@@ -2644,7 +2644,7 @@ Platform credential Secret key from Baidu.
 Input properties used for looking up and filtering BaiduChannel resources.
 
 <h4 class="pdoc-member-header" id="BaiduChannelState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L126">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L126">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2652,7 +2652,7 @@ Input properties used for looking up and filtering BaiduChannel resources.
 Platform credential API key from Baidu.
 
 <h4 class="pdoc-member-header" id="BaiduChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L130">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L130">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2660,7 +2660,7 @@ Platform credential API key from Baidu.
 The application ID.
 
 <h4 class="pdoc-member-header" id="BaiduChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L134">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L134">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2668,7 +2668,7 @@ The application ID.
 Specifies whether to enable the channel. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BaiduChannelState-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/baiduChannel.ts#L138">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/baiduChannel.ts#L138">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2676,7 +2676,7 @@ Specifies whether to enable the channel. Defaults to `true`.
 Platform credential Secret key from Baidu.
 
 <h3 class="pdoc-module-header" id="EmailChannelArgs" data-link-title="EmailChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L200">
         interface <strong>EmailChannelArgs</strong>
     </a>
 </h3>
@@ -2686,7 +2686,7 @@ Platform credential Secret key from Baidu.
 The set of arguments for constructing a EmailChannel resource.
 
 <h4 class="pdoc-member-header" id="EmailChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L204">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L204">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +2694,7 @@ The set of arguments for constructing a EmailChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EmailChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L208">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L208">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EmailChannelArgs-fromAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L212">property <b>fromAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L212">property <b>fromAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2710,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The email address used to send emails from.
 
 <h4 class="pdoc-member-header" id="EmailChannelArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L216">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L216">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2718,7 +2718,7 @@ The email address used to send emails from.
 The ARN of an identity verified with SES.
 
 <h4 class="pdoc-member-header" id="EmailChannelArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L220">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L220">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ The ARN of an identity verified with SES.
 The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 
 <h3 class="pdoc-module-header" id="EmailChannelState" data-link-title="EmailChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L170">
         interface <strong>EmailChannelState</strong>
     </a>
 </h3>
@@ -2736,7 +2736,7 @@ The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestio
 Input properties used for looking up and filtering EmailChannel resources.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L174">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L174">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2744,7 +2744,7 @@ Input properties used for looking up and filtering EmailChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L178">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L178">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2752,7 +2752,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-fromAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L182">property <b>fromAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L182">property <b>fromAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2760,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The email address used to send emails from.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L186">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L186">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2768,7 +2768,7 @@ The email address used to send emails from.
 The ARN of an identity verified with SES.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-messagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L190">property <b>messagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L190">property <b>messagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messagesPerSecond?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2776,7 +2776,7 @@ The ARN of an identity verified with SES.
 Messages per second that can be sent.
 
 <h4 class="pdoc-member-header" id="EmailChannelState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/emailChannel.ts#L194">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/emailChannel.ts#L194">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2784,7 +2784,7 @@ Messages per second that can be sent.
 The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 
 <h3 class="pdoc-module-header" id="EventStreamArgs" data-link-title="EventStreamArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L166">
         interface <strong>EventStreamArgs</strong>
     </a>
 </h3>
@@ -2794,7 +2794,7 @@ The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestio
 The set of arguments for constructing a EventStream resource.
 
 <h4 class="pdoc-member-header" id="EventStreamArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L170">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L170">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2802,7 +2802,7 @@ The set of arguments for constructing a EventStream resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EventStreamArgs-destinationStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L174">property <b>destinationStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L174">property <b>destinationStreamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationStreamArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2810,7 +2810,7 @@ The application ID.
 The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
 
 <h4 class="pdoc-member-header" id="EventStreamArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L178">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L178">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2818,7 +2818,7 @@ The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery
 The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
 
 <h3 class="pdoc-module-header" id="EventStreamState" data-link-title="EventStreamState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L148">
         interface <strong>EventStreamState</strong>
     </a>
 </h3>
@@ -2828,7 +2828,7 @@ The IAM role that authorizes Amazon Pinpoint to publish events to the stream in 
 Input properties used for looking up and filtering EventStream resources.
 
 <h4 class="pdoc-member-header" id="EventStreamState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L152">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L152">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2836,7 +2836,7 @@ Input properties used for looking up and filtering EventStream resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="EventStreamState-destinationStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L156">property <b>destinationStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L156">property <b>destinationStreamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationStreamArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2844,7 +2844,7 @@ The application ID.
 The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
 
 <h4 class="pdoc-member-header" id="EventStreamState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/eventStream.ts#L160">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/eventStream.ts#L160">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +2852,7 @@ The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery
 The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
 
 <h3 class="pdoc-module-header" id="GcmChannelArgs" data-link-title="GcmChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L129">
         interface <strong>GcmChannelArgs</strong>
     </a>
 </h3>
@@ -2862,7 +2862,7 @@ The IAM role that authorizes Amazon Pinpoint to publish events to the stream in 
 The set of arguments for constructing a GcmChannel resource.
 
 <h4 class="pdoc-member-header" id="GcmChannelArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L133">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L133">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2870,7 +2870,7 @@ The set of arguments for constructing a GcmChannel resource.
 Platform credential API key from Google.
 
 <h4 class="pdoc-member-header" id="GcmChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L137">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L137">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2878,7 +2878,7 @@ Platform credential API key from Google.
 The application ID.
 
 <h4 class="pdoc-member-header" id="GcmChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L141">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L141">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2886,7 +2886,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="GcmChannelState" data-link-title="GcmChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L111">
         interface <strong>GcmChannelState</strong>
     </a>
 </h3>
@@ -2896,7 +2896,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 Input properties used for looking up and filtering GcmChannel resources.
 
 <h4 class="pdoc-member-header" id="GcmChannelState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L115">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L115">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2904,7 @@ Input properties used for looking up and filtering GcmChannel resources.
 Platform credential API key from Google.
 
 <h4 class="pdoc-member-header" id="GcmChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L119">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L119">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2912,7 +2912,7 @@ Platform credential API key from Google.
 The application ID.
 
 <h4 class="pdoc-member-header" id="GcmChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/gcmChannel.ts#L123">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/gcmChannel.ts#L123">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2920,7 +2920,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="SmsChannelArgs" data-link-title="SmsChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L152">
         interface <strong>SmsChannelArgs</strong>
     </a>
 </h3>
@@ -2930,7 +2930,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 The set of arguments for constructing a SmsChannel resource.
 
 <h4 class="pdoc-member-header" id="SmsChannelArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L156">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L156">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2938,7 +2938,7 @@ The set of arguments for constructing a SmsChannel resource.
 The application ID.
 
 <h4 class="pdoc-member-header" id="SmsChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L160">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L160">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2946,7 +2946,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmsChannelArgs-senderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L164">property <b>senderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L164">property <b>senderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>senderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2954,7 +2954,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 Sender identifier of your messages.
 
 <h4 class="pdoc-member-header" id="SmsChannelArgs-shortCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L168">property <b>shortCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L168">property <b>shortCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +2962,7 @@ Sender identifier of your messages.
 The Short Code registered with the phone provider.
 
 <h3 class="pdoc-module-header" id="SmsChannelState" data-link-title="SmsChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L122">
         interface <strong>SmsChannelState</strong>
     </a>
 </h3>
@@ -2972,7 +2972,7 @@ The Short Code registered with the phone provider.
 Input properties used for looking up and filtering SmsChannel resources.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L126">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L126">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2980,7 @@ Input properties used for looking up and filtering SmsChannel resources.
 The application ID.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L130">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L130">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2988,7 +2988,7 @@ The application ID.
 Whether the channel is enabled or disabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-promotionalMessagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L134">property <b>promotionalMessagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L134">property <b>promotionalMessagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>promotionalMessagesPerSecond?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2996,7 +2996,7 @@ Whether the channel is enabled or disabled. Defaults to `true`.
 Promotional messages per second that can be sent.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-senderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L138">property <b>senderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L138">property <b>senderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>senderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3004,7 +3004,7 @@ Promotional messages per second that can be sent.
 Sender identifier of your messages.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-shortCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L142">property <b>shortCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L142">property <b>shortCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3012,7 +3012,7 @@ Sender identifier of your messages.
 The Short Code registered with the phone provider.
 
 <h4 class="pdoc-member-header" id="SmsChannelState-transactionalMessagesPerSecond">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/pinpoint/smsChannel.ts#L146">property <b>transactionalMessagesPerSecond</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/pinpoint/smsChannel.ts#L146">property <b>transactionalMessagesPerSecond</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transactionalMessagesPerSecond?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

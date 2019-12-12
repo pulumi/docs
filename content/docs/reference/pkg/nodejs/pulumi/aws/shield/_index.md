@@ -33,7 +33,7 @@ meta_desc: "Explore members of the shield module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Protection" data-link-title="Protection">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L32">
         Resource <strong>Protection</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ const fooProtection = new aws.shield.Protection("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown.
 
 <h4 class="pdoc-member-header" id="Protection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -79,7 +79,7 @@ Create a Protection resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Protection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -90,14 +90,14 @@ Get an existing Protection resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Protection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Protection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Returns true if the given object is an instance of Protection.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Protection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Protection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="Protection-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L66">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L66">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ A friendly name for the Protection you are creating.
 The ARN (Amazon Resource Name) of the resource to be protected.
 
 <h4 class="pdoc-member-header" id="Protection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ProtectionArgs" data-link-title="ProtectionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L118">
         interface <strong>ProtectionArgs</strong>
     </a>
 </h3>
@@ -155,7 +155,7 @@ deployments.
 The set of arguments for constructing a Protection resource.
 
 <h4 class="pdoc-member-header" id="ProtectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ The set of arguments for constructing a Protection resource.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="ProtectionArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L126">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L126">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ A friendly name for the Protection you are creating.
 The ARN (Amazon Resource Name) of the resource to be protected.
 
 <h3 class="pdoc-module-header" id="ProtectionState" data-link-title="ProtectionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L104">
         interface <strong>ProtectionState</strong>
     </a>
 </h3>
@@ -181,7 +181,7 @@ The ARN (Amazon Resource Name) of the resource to be protected.
 Input properties used for looking up and filtering Protection resources.
 
 <h4 class="pdoc-member-header" id="ProtectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ Input properties used for looking up and filtering Protection resources.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="ProtectionState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/shield/protection.ts#L112">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e3692610af66ba3de45ee9afd2c446fb753b16d3/sdk/nodejs/shield/protection.ts#L112">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
