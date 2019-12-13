@@ -35,6 +35,12 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "13th Dec 2019"
+title = "Pulumi named one of Business Insider's top start-ups for 2019"
+img = "/logos/press/businessinsider.png"
+url = "https://www.businessinsider.com/18-hottest-enterprise-startups-from-seattles-booming-tech-scene-2019-12"
+
+[[coverage]]
 date = "12th Nov 2019"
 title = "Pulumi infrastructure-as-code tool adds .NET language support"
 img = "/logos/press/infoworld.png"
