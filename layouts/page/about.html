@@ -111,7 +111,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h2 class="text-center md:text-left">Recent News</h2>
                 <ul class="list-none my-8 p-0">
-                    {{ range first 5 $.Site.Data.newsroom.coverage }}
+                    {{ range first 6 $.Site.Data.newsroom.coverage }}
                         <li class="py-4 flex items-top">
                             <div class="w-20 flex-shrink">
                                  <img class="inline-block w-full rounded p-2 border-2 border-gray-300" src="{{ .img }}">
@@ -124,6 +124,22 @@
                         </li>
                     {{ end }}
                 </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto text-center">
+            <h2 class="text-center mb-8">Awards &amp; Recognitions</h2>
+            <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
+                {{ range first 6 (where $.Site.Data.awards.awards "featured" true) }}
+                    <li class="mx-4 bg-white">
+                        <a href="{{ .url }}">
+                            <img class="inline-block w-32 rounded p-2 border-2 border-gray-300" src="{{ .img }}" title="{{ .title }}">
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+            <div>
+                <a class="inline-block mt-6 text-blue-500" href="{{ relref . "/awards" }}">See all &rarr;</a>
             </div>
         </div>
     </section>
@@ -139,9 +155,9 @@
         <a class="btn" href="{{ relref . "/why-pulumi" }}">Learn More</a>
     </section>
 
-    {{ partial "contact-us.html"  . }}
+    {{ partial "contact-us.html" . }}
 
-    {{ partial "social.html"  . }}
+    {{ partial "social.html" . }}
 
-    {{ partial "learnmore-contactus.html"  . }}
+    {{ partial "learnmore-contactus.html" . }}
 {{ end }}
