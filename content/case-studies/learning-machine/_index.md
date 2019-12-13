@@ -1,12 +1,11 @@
 ---
 title: Learning Machine
-date: 2018-12-23
 type: page
 layout: case-study
 
 meta_desc: |
-    In this paper, we present a consistent cloud programming model using general
-    purpose programming languages for interacting with cloud resources.
+    Learn how Learning Machine used Pulumi and TypeScript to streamline its devops processes
+    and eliminate several hundred thousand lines of configuration code.
 
 exec_summary: |
     Learning Machine provides a secure platform, using the blockchain, to issue records in
