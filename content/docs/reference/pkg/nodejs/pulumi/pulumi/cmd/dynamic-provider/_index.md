@@ -23,7 +23,7 @@ meta_desc: "Explore members of the dynamic-provider module in the @pulumi/pulumi
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="main" data-link-title="main">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/cmd/dynamic-provider/index.ts#L311">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/cmd/dynamic-provider/index.ts#L311">
         function <strong>main</strong>
     </a>
 </h3>

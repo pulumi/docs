@@ -76,7 +76,7 @@ meta_desc: "Explore members of the runtime module in the @pulumi/pulumi package.
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="_setQueryMode" data-link-title="_setQueryMode">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L94">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L94">
         function <strong>_setQueryMode</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ meta_desc: "Explore members of the runtime module in the @pulumi/pulumi package.
 <pre class="highlight"><code><span class='kd'></span>_setQueryMode(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="allConfig" data-link-title="allConfig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/config.ts#L25">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/config.ts#L25">
         function <strong>allConfig</strong>
     </a>
 </h3>
@@ -97,7 +97,7 @@ meta_desc: "Explore members of the runtime module in the @pulumi/pulumi package.
 allConfig returns a copy of the full config map.
 
 <h3 class="pdoc-module-header" id="debuggablePromise" data-link-title="debuggablePromise">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/debuggable.ts#L40">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/debuggable.ts#L40">
         function <strong>debuggablePromise</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ allConfig returns a copy of the full config map.
 debuggablePromise optionally wraps a promise with some goo to make it easier to debug common problems.
 
 <h3 class="pdoc-module-header" id="deserializeProperties" data-link-title="deserializeProperties">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L124">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L124">
         function <strong>deserializeProperties</strong>
     </a>
 </h3>
@@ -121,7 +121,7 @@ debuggablePromise optionally wraps a promise with some goo to make it easier to 
 deserializeProperties fetches the raw outputs and deserializes them from a gRPC call result.
 
 <h3 class="pdoc-module-header" id="deserializeProperty" data-link-title="deserializeProperty">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L390">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L390">
         function <strong>deserializeProperty</strong>
     </a>
 </h3>
@@ -133,7 +133,7 @@ deserializeProperties fetches the raw outputs and deserializes them from a gRPC 
 deserializeProperty unpacks some special types, reversing the above process.
 
 <h3 class="pdoc-module-header" id="disconnect" data-link-title="disconnect">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L263">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L263">
         function <strong>disconnect</strong>
     </a>
 </h3>
@@ -146,7 +146,7 @@ disconnect permanently disconnects from the server, closing the connections.  It
 queue to drain.  If any RPCs come in afterwards, however, they will crash the process.
 
 <h3 class="pdoc-module-header" id="disconnectSync" data-link-title="disconnectSync">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L281">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L281">
         function <strong>disconnectSync</strong>
     </a>
 </h3>
@@ -159,7 +159,7 @@ disconnectSync permanently disconnects from the server, closing the connections.
 wait for the existing RPC queue to drain. Any RPCs that come in after this call will crash the process.
 
 <h3 class="pdoc-module-header" id="errorString" data-link-title="errorString">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/debuggable.ts#L102">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/debuggable.ts#L102">
         function <strong>errorString</strong>
     </a>
 </h3>
@@ -171,7 +171,7 @@ wait for the existing RPC queue to drain. Any RPCs that come in after this call 
 errorString produces a string from an error, conditionally including additional diagnostics.
 
 <h3 class="pdoc-module-header" id="excessiveDebugOutput" data-link-title="excessiveDebugOutput">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L31">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L31">
         let <strong>excessiveDebugOutput</strong>
     </a>
 </h3>
@@ -181,7 +181,7 @@ errorString produces a string from an error, conditionally including additional 
 excessiveDebugOutput enables, well, pretty excessive debug output pertaining to resources and properties.
 
 <h3 class="pdoc-module-header" id="getConfig" data-link-title="getConfig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/config.ts#L39">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/config.ts#L39">
         function <strong>getConfig</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ excessiveDebugOutput enables, well, pretty excessive debug output pertaining to 
 getConfig returns a configuration variable's value or undefined if it is unset.
 
 <h3 class="pdoc-module-header" id="getEngine" data-link-title="getEngine">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L208">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L208">
         function <strong>getEngine</strong>
     </a>
 </h3>
@@ -205,7 +205,7 @@ getConfig returns a configuration variable's value or undefined if it is unset.
 getEngine returns the current engine, if any, for RPC communications back to the resource engine.
 
 <h3 class="pdoc-module-header" id="getMonitor" data-link-title="getMonitor">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L167">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L167">
         function <strong>getMonitor</strong>
     </a>
 </h3>
@@ -217,7 +217,7 @@ getEngine returns the current engine, if any, for RPC communications back to the
 getMonitor returns the current resource monitoring service client for RPC communications.
 
 <h3 class="pdoc-module-header" id="getProject" data-link-title="getProject">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L115">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L115">
         function <strong>getProject</strong>
     </a>
 </h3>
@@ -229,7 +229,7 @@ getMonitor returns the current resource monitoring service client for RPC commun
 Get the project being run by the current update.
 
 <h3 class="pdoc-module-header" id="getRootResource" data-link-title="getRootResource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L325">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L325">
         function <strong>getRootResource</strong>
     </a>
 </h3>
@@ -242,7 +242,7 @@ getRootResource returns a root resource URN that will automatically become the d
 can be used to ensure that all resources without explicit parents are parented to a common parent resource.
 
 <h3 class="pdoc-module-header" id="getStack" data-link-title="getStack">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L135">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L135">
         function <strong>getStack</strong>
     </a>
 </h3>
@@ -254,7 +254,7 @@ can be used to ensure that all resources without explicit parents are parented t
 Get the stack being targeted by the current update.
 
 <h3 class="pdoc-module-header" id="getStackResource" data-link-title="getStackResource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/stack.ts#L31">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/stack.ts#L31">
         function <strong>getStackResource</strong>
     </a>
 </h3>
@@ -263,7 +263,7 @@ Get the stack being targeted by the current update.
 <pre class="highlight"><code><span class='kd'></span>getStackResource(): Stack | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="hasMonitor" data-link-title="hasMonitor">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L160">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L160">
         function <strong>hasMonitor</strong>
     </a>
 </h3>
@@ -275,7 +275,7 @@ Get the stack being targeted by the current update.
 hasMonitor returns true if we are currently connected to a resource monitoring service.
 
 <h3 class="pdoc-module-header" id="invoke" data-link-title="invoke">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L70">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L70">
         function <strong>invoke</strong>
     </a>
 </h3>
@@ -318,7 +318,7 @@ All of these contain async values that would prevent `invoke from being able to 
 synchronously.
 
 <h3 class="pdoc-module-header" id="invokeFallbackToAsync" data-link-title="invokeFallbackToAsync">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L156">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L156">
         function <strong>invokeFallbackToAsync</strong>
     </a>
 </h3>
@@ -327,7 +327,7 @@ synchronously.
 <pre class="highlight"><code><span class='kd'></span>invokeFallbackToAsync&lt;T&gt;(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): T</code></pre>
 
 <h3 class="pdoc-module-header" id="isDryRun" data-link-title="isDryRun">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L68">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L68">
         function <strong>isDryRun</strong>
     </a>
 </h3>
@@ -341,7 +341,7 @@ always consider executions in test mode to be "dry-runs", since we will never ac
 and therefore certain output properties will never be resolved.
 
 <h3 class="pdoc-module-header" id="isLegacyApplyEnabled" data-link-title="isLegacyApplyEnabled">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L108">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L108">
         function <strong>isLegacyApplyEnabled</strong>
     </a>
 </h3>
@@ -353,7 +353,7 @@ and therefore certain output properties will never be resolved.
 Returns true if we will resolve missing outputs to inputs during preview (PULUMI_ENABLE_LEGACY_APPLY).
 
 <h3 class="pdoc-module-header" id="isQueryMode" data-link-title="isQueryMode">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L101">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L101">
         function <strong>isQueryMode</strong>
     </a>
 </h3>
@@ -365,7 +365,7 @@ Returns true if we will resolve missing outputs to inputs during preview (PULUMI
 Returns true if query mode is enabled.
 
 <h3 class="pdoc-module-header" id="isTestModeEnabled" data-link-title="isTestModeEnabled">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L80">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L80">
         function <strong>isTestModeEnabled</strong>
     </a>
 </h3>
@@ -377,7 +377,7 @@ Returns true if query mode is enabled.
 Returns true if test mode is enabled (PULUMI_TEST_MODE).
 
 <h3 class="pdoc-module-header" id="listResourceOutputs" data-link-title="listResourceOutputs">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/resource.ts#L563">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/resource.ts#L563">
         function <strong>listResourceOutputs</strong>
     </a>
 </h3>
@@ -391,7 +391,7 @@ cannot be found. Resources are retrieved from the latest stack snapshot, which m
 ongoing updates.
 
 <h3 class="pdoc-module-header" id="monitorSupportsSecrets" data-link-title="monitorSupportsSecrets">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L394">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L394">
         function <strong>monitorSupportsSecrets</strong>
     </a>
 </h3>
@@ -405,7 +405,7 @@ to is able to support secrets across it's RPC interface. When it does, we marsha
 bit in a special way.
 
 <h3 class="pdoc-module-header" id="Options" data-link-title="Options">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L36">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L36">
         interface <strong>Options</strong>
     </a>
 </h3>
@@ -415,47 +415,47 @@ bit in a special way.
 Options is a bag of settings that controls the behavior of previews and deployments
 
 <h4 class="pdoc-member-header" id="Options-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L42">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L42">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-engineAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L40">property <b>engineAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L40">property <b>engineAddr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-legacyApply">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L45">property <b>legacyApply</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L45">property <b>legacyApply</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>legacyApply?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-monitorAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L41">property <b>monitorAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L41">property <b>monitorAddr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-parallel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L39">property <b>parallel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L39">property <b>parallel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L37">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L37">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-queryMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L44">property <b>queryMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L44">property <b>queryMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L38">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L38">property <b>stack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Options-syncDir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L50">property <b>syncDir</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L50">property <b>syncDir</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncDir?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -463,26 +463,26 @@ Options is a bag of settings that controls the behavior of previews and deployme
 Directory containing the send/receive files for making synchronous invokes to the engine.
 
 <h4 class="pdoc-member-header" id="Options-testModeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L43">property <b>testModeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L43">property <b>testModeEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testModeEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="OutputResolvers" data-link-title="OutputResolvers">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L24">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L24">
         type <strong>OutputResolvers</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> OutputResolvers = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (value: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isStable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PushableAsyncIterable" data-link-title="PushableAsyncIterable">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/asyncIterableUtil.ts#L36">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/asyncIterableUtil.ts#L36">
         class <strong>PushableAsyncIterable</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code> <span class='kr'>implements</span> AsyncIterable&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 <h4 class="pdoc-member-header" id="PushableAsyncIterable-__@asyncIterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/asyncIterableUtil.ts#L71">method <b>__@asyncIterator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/asyncIterableUtil.ts#L71">method <b>__@asyncIterator</b></a>
 </h4>
 
 
@@ -494,21 +494,21 @@ Directory containing the send/receive files for making synchronous invokes to th
 }</code></pre>
 
 <h4 class="pdoc-member-header" id="PushableAsyncIterable-complete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/asyncIterableUtil.ts#L50">method <b>complete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/asyncIterableUtil.ts#L50">method <b>complete</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>complete(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PushableAsyncIterable-push">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/asyncIterableUtil.ts#L41">method <b>push</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/asyncIterableUtil.ts#L41">method <b>push</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>push(payload: T): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="readResource" data-link-title="readResource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/resource.ts#L92">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/resource.ts#L92">
         function <strong>readResource</strong>
     </a>
 </h3>
@@ -521,7 +521,7 @@ Reads an existing custom resource's state from the resource monitor.  Note that 
 will not be part of the resulting stack's state, as they are presumed to belong to another.
 
 <h3 class="pdoc-module-header" id="registerResource" data-link-title="registerResource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/resource.ts#L162">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/resource.ts#L162">
         function <strong>registerResource</strong>
     </a>
 </h3>
@@ -535,7 +535,7 @@ URN and the ID that will resolve after the deployment has completed.  All proper
 objects that the registration operation will resolve at the right time (or remain unresolved for deployments).
 
 <h3 class="pdoc-module-header" id="registerResourceOutputs" data-link-title="registerResourceOutputs">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/resource.ts#L500">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/resource.ts#L500">
         function <strong>registerResourceOutputs</strong>
     </a>
 </h3>
@@ -547,7 +547,7 @@ objects that the registration operation will resolve at the right time (or remai
 registerResourceOutputs completes the resource registration, attaching an optional set of computed outputs.
 
 <h3 class="pdoc-module-header" id="registerStackTransformation" data-link-title="registerStackTransformation">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/stack.ts#L215">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/stack.ts#L215">
         function <strong>registerStackTransformation</strong>
     </a>
 </h3>
@@ -559,7 +559,7 @@ registerResourceOutputs completes the resource registration, attaching an option
 Add a transformation to all future resources constructed in this Pulumi stack.
 
 <h3 class="pdoc-module-header" id="resolveProperties" data-link-title="resolveProperties">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L144">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L144">
         function <strong>resolveProperties</strong>
     </a>
 </h3>
@@ -576,7 +576,7 @@ output properties to work correctly w.r.t. knowns/unknowns: this function assume
 `allProps`represents an unknown value that was returned by an engine operation.
 
 <h3 class="pdoc-module-header" id="rootPulumiStackTypeName" data-link-title="rootPulumiStackTypeName">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/stack.ts#L26">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/stack.ts#L26">
         const <strong>rootPulumiStackTypeName</strong>
     </a>
 </h3>
@@ -588,7 +588,7 @@ resources allocated by a deployment.  This must be kept up to date with
 `github.com/pulumi/pulumi/pkg/resource/stack.RootPulumiStackTypeName`.
 
 <h3 class="pdoc-module-header" id="rpcKeepAlive" data-link-title="rpcKeepAlive">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L312">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L312">
         function <strong>rpcKeepAlive</strong>
     </a>
 </h3>
@@ -601,7 +601,7 @@ rpcKeepAlive registers a pending call to ensure that we don't prematurely discon
 a function that, when invoked, signals that the RPC has completed.
 
 <h3 class="pdoc-module-header" id="runInPulumiStack" data-link-title="runInPulumiStack">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/stack.ts#L39">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/stack.ts#L39">
         function <strong>runInPulumiStack</strong>
     </a>
 </h3>
@@ -614,7 +614,7 @@ runInPulumiStack creates a new Pulumi stack resource and executes the callback i
 returned by the callback will be stored as output properties on this resulting Stack object.
 
 <h3 class="pdoc-module-header" id="serialize" data-link-title="serialize">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L222">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L222">
         function <strong>serialize</strong>
     </a>
 </h3>
@@ -626,7 +626,7 @@ returned by the callback will be stored as output properties on this resulting S
 serialize returns true if resource operations should be serialized.
 
 <h3 class="pdoc-module-header" id="serializeProperties" data-link-title="serializeProperties">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L116">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L116">
         function <strong>serializeProperties</strong>
     </a>
 </h3>
@@ -639,7 +639,7 @@ serializeProperties walks the props object passed in, awaiting all interior prom
 POJO object that can be remoted over to registerResource.
 
 <h3 class="pdoc-module-header" id="serializeProperty" data-link-title="serializeProperty">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L229">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L229">
         function <strong>serializeProperty</strong>
     </a>
 </h3>
@@ -652,7 +652,7 @@ serializeProperty serializes properties deeply.  This understands how to wait on
 appropriate, in addition to translating certain "special" values so that they are ready to go on the wire.
 
 <h3 class="pdoc-module-header" id="serializeResourceProperties" data-link-title="serializeResourceProperties">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L108">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L108">
         function <strong>serializeResourceProperties</strong>
     </a>
 </h3>
@@ -665,7 +665,7 @@ serializeResourceProperties walks the props object passed in, awaiting all inter
 and `urn`, creating a reasonable POJO object that can be remoted over to registerResource.
 
 <h3 class="pdoc-module-header" id="setConfig" data-link-title="setConfig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/config.ts#L32">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/config.ts#L32">
         function <strong>setConfig</strong>
     </a>
 </h3>
@@ -677,7 +677,7 @@ and `urn`, creating a reasonable POJO object that can be remoted over to registe
 setConfig sets a configuration variable.
 
 <h3 class="pdoc-module-header" id="setRootResource" data-link-title="setRootResource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/settings.ts#L362">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/settings.ts#L362">
         function <strong>setRootResource</strong>
     </a>
 </h3>
@@ -689,7 +689,7 @@ setConfig sets a configuration variable.
 setRootResource registers a resource that will become the default parent for all resources without explicit parents.
 
 <h3 class="pdoc-module-header" id="specialArchiveSig" data-link-title="specialArchiveSig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L219">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L219">
         const <strong>specialArchiveSig</strong>
     </a>
 </h3>
@@ -699,7 +699,7 @@ setRootResource registers a resource that will become the default parent for all
 specialArchiveSig is a randomly assigned hash used to identify archives in maps. See pkg/resource/asset.go.
 
 <h3 class="pdoc-module-header" id="specialAssetSig" data-link-title="specialAssetSig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L215">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L215">
         const <strong>specialAssetSig</strong>
     </a>
 </h3>
@@ -709,7 +709,7 @@ specialArchiveSig is a randomly assigned hash used to identify archives in maps.
 specialAssetSig is a randomly assigned hash used to identify assets in maps. See pkg/resource/asset.go.
 
 <h3 class="pdoc-module-header" id="specialSecretSig" data-link-title="specialSecretSig">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L223">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L223">
         const <strong>specialSecretSig</strong>
     </a>
 </h3>
@@ -719,7 +719,7 @@ specialAssetSig is a randomly assigned hash used to identify assets in maps. See
 specialSecretSig is a randomly assigned hash used to identify secrets in maps. See pkg/resource/properties.go.
 
 <h3 class="pdoc-module-header" id="specialSigKey" data-link-title="specialSigKey">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L211">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L211">
         const <strong>specialSigKey</strong>
     </a>
 </h3>
@@ -729,7 +729,7 @@ specialSecretSig is a randomly assigned hash used to identify secrets in maps. S
 specialSigKey is sometimes used to encode type identity inside of a map. See pkg/resource/properties.go.
 
 <h3 class="pdoc-module-header" id="streamInvoke" data-link-title="streamInvoke">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L105">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L105">
         function <strong>streamInvoke</strong>
     </a>
 </h3>
@@ -738,35 +738,35 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 <pre class="highlight"><code><span class='kd'></span>streamInvoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#StreamInvokeResponse'>StreamInvokeResponse</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="StreamInvokeResponse" data-link-title="StreamInvokeResponse">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L258">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L258">
         class <strong>StreamInvokeResponse</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code> <span class='kr'>implements</span> AsyncIterable&lt;T&gt;</code></pre>
 <h4 class="pdoc-member-header" id="StreamInvokeResponse-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L258"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L258"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> StreamInvokeResponse(source: AsyncIterable&lt;T&gt;, cancelSource: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>)</code></pre>
 
 <h4 class="pdoc-member-header" id="StreamInvokeResponse-__@asyncIterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L269">method <b>__@asyncIterator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L269">method <b>__@asyncIterator</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>__@asyncIterator(): AsyncIterator&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="StreamInvokeResponse-cancel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/invoke.ts#L265">method <b>cancel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/invoke.ts#L265">method <b>cancel</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>cancel(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="transferProperties" data-link-title="transferProperties">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L38">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L38">
         function <strong>transferProperties</strong>
     </a>
 </h3>
@@ -787,7 +787,7 @@ that the engine actualy produced will be used to resolve all the unresolved prom
 'onto'.
 
 <h3 class="pdoc-module-header" id="unknownValue" data-link-title="unknownValue">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/runtime/rpc.ts#L207">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/runtime/rpc.ts#L207">
         const <strong>unknownValue</strong>
     </a>
 </h3>

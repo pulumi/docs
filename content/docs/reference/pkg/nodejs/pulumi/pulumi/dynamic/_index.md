@@ -31,7 +31,7 @@ meta_desc: "Explore members of the dynamic module in the @pulumi/pulumi package.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Resource" data-link-title="Resource">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L171">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L171">
         Resource <strong>Resource</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ meta_desc: "Explore members of the dynamic module in the @pulumi/pulumi package.
 Resource represents a Pulumi Resource that incorporates an inline implementation of the Resource's CRUD operations.
 
 <h4 class="pdoc-member-header" id="Resource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L171"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L171"> <b>constructor</b></a>
 </h4>
 
 
@@ -57,14 +57,14 @@ Creates a new dynamic resource.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Resource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/resource.ts#L189">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/resource.ts#L189">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Resource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/resource.ts#L666">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/resource.ts#L666">method <b>isInstance</b></a>
 </h4>
 
 
@@ -75,7 +75,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Resource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/resource.ts#L660">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/resource.ts#L660">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -84,7 +84,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Resource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/resource.ts#L135">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/resource.ts#L135">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -96,7 +96,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CheckFailure" data-link-title="CheckFailure">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L37">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L37">
         interface <strong>CheckFailure</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ deployments.
 CheckFailure represents a single failure in the results of a call to `ResourceProvider.check`
 
 <h4 class="pdoc-member-header" id="CheckFailure-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L41">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L41">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -114,7 +114,7 @@ CheckFailure represents a single failure in the results of a call to `ResourcePr
 The property that failed validation.
 
 <h4 class="pdoc-member-header" id="CheckFailure-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L46">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L46">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -122,7 +122,7 @@ The property that failed validation.
 The reason that the property failed validation.
 
 <h3 class="pdoc-module-header" id="CheckResult" data-link-title="CheckResult">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L22">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L22">
         interface <strong>CheckResult</strong>
     </a>
 </h3>
@@ -132,7 +132,7 @@ The reason that the property failed validation.
 CheckResult represents the results of a call to `ResourceProvider.check`.
 
 <h4 class="pdoc-member-header" id="CheckResult-failures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L31">property <b>failures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L31">property <b>failures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failures?: <a href='#CheckFailure'>CheckFailure</a>[];</code></pre>
@@ -140,7 +140,7 @@ CheckResult represents the results of a call to `ResourceProvider.check`.
 Any validation failures that occurred.
 
 <h4 class="pdoc-member-header" id="CheckResult-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L26">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L26">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -148,7 +148,7 @@ Any validation failures that occurred.
 The inputs to use, if any.
 
 <h3 class="pdoc-module-header" id="CreateResult" data-link-title="CreateResult">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L78">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L78">
         interface <strong>CreateResult</strong>
     </a>
 </h3>
@@ -158,7 +158,7 @@ The inputs to use, if any.
 CreateResult represents the results of a call to `ResourceProvider.create`.
 
 <h4 class="pdoc-member-header" id="CreateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: resource.ID;</code></pre>
@@ -166,7 +166,7 @@ CreateResult represents the results of a call to `ResourceProvider.create`.
 The ID of the created resource.
 
 <h4 class="pdoc-member-header" id="CreateResult-outs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L87">property <b>outs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L87">property <b>outs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outs?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -174,7 +174,7 @@ The ID of the created resource.
 Any properties that were computed during creation.
 
 <h3 class="pdoc-module-header" id="DiffResult" data-link-title="DiffResult">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L52">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L52">
         interface <strong>DiffResult</strong>
     </a>
 </h3>
@@ -184,7 +184,7 @@ Any properties that were computed during creation.
 DiffResult represents the results of a call to `ResourceProvider.diff`.
 
 <h4 class="pdoc-member-header" id="DiffResult-changes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L56">property <b>changes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L56">property <b>changes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -192,7 +192,7 @@ DiffResult represents the results of a call to `ResourceProvider.diff`.
 If true, this diff detected changes and suggests an update.
 
 <h4 class="pdoc-member-header" id="DiffResult-deleteBeforeReplace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L72">property <b>deleteBeforeReplace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L72">property <b>deleteBeforeReplace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteBeforeReplace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -201,7 +201,7 @@ If true, and a replacement occurs, the resource will first be deleted before bei
 void potential side-by-side issues with the default create before delete behavior.
 
 <h4 class="pdoc-member-header" id="DiffResult-replaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L61">property <b>replaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L61">property <b>replaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replaces?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -209,7 +209,7 @@ void potential side-by-side issues with the default create before delete behavio
 If this update requires a replacement, the set of properties triggering it.
 
 <h4 class="pdoc-member-header" id="DiffResult-stables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L66">property <b>stables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L66">property <b>stables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stables?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -217,14 +217,14 @@ If this update requires a replacement, the set of properties triggering it.
 An optional list of properties that will not ever change.
 
 <h3 class="pdoc-module-header" id="ReadResult" data-link-title="ReadResult">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L90">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L90">
         interface <strong>ReadResult</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ReadResult</span></code></pre>
 <h4 class="pdoc-member-header" id="ReadResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L94">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L94">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: resource.ID;</code></pre>
@@ -232,7 +232,7 @@ An optional list of properties that will not ever change.
 The ID of the resource ready back (or blank if missing).
 
 <h4 class="pdoc-member-header" id="ReadResult-props">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L98">property <b>props</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L98">property <b>props</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>props?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -240,7 +240,7 @@ The ID of the resource ready back (or blank if missing).
 The current property state read from the live environment.
 
 <h3 class="pdoc-module-header" id="ResourceProvider" data-link-title="ResourceProvider">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L114">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L114">
         interface <strong>ResourceProvider</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ The current property state read from the live environment.
 ResourceProvider represents an object that provides CRUD operations for a particular type of resource.
 
 <h4 class="pdoc-member-header" id="ResourceProvider-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L121">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L121">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>check?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (olds: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, news: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#CheckResult'>CheckResult</a>&gt;;</code></pre>
@@ -258,7 +258,7 @@ ResourceProvider represents an object that provides CRUD operations for a partic
 Check validates that the given property bag is valid for a resource of the given type.
 
 <h4 class="pdoc-member-header" id="ResourceProvider-create">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L138">property <b>create</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L138">property <b>create</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>create: (inputs: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#CreateResult'>CreateResult</a>&gt;;</code></pre>
@@ -267,7 +267,7 @@ Create allocates a new instance of the provided resource and returns its unique 
 If this call fails, the resource must not have been created (i.e., it is "transacational").
 
 <h4 class="pdoc-member-header" id="ResourceProvider-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L161">property <b>delete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L161">property <b>delete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delete?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (id: resource.ID, props: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ If this call fails, the resource must not have been created (i.e., it is "transa
 Delete tears down an existing resource with the given ID.  If it fails, the resource is assumed to still exist.
 
 <h4 class="pdoc-member-header" id="ResourceProvider-diff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L130">property <b>diff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L130">property <b>diff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diff?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (id: resource.ID, olds: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, news: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#DiffResult'>DiffResult</a>&gt;;</code></pre>
@@ -283,7 +283,7 @@ Delete tears down an existing resource with the given ID.  If it fails, the reso
 Diff checks what impacts a hypothetical update will have on the resource's properties.
 
 <h4 class="pdoc-member-header" id="ResourceProvider-read">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L144">property <b>read</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L144">property <b>read</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>read?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (id: resource.ID, props?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ReadResult'>ReadResult</a>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Reads the current live state associated with a resource.  Enough state must be i
 identify the resource; this is typically just the resource ID, but it may also include some properties.
 
 <h4 class="pdoc-member-header" id="ResourceProvider-update">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L153">property <b>update</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L153">property <b>update</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>update?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (id: resource.ID, olds: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, news: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#UpdateResult'>UpdateResult</a>&gt;;</code></pre>
@@ -300,7 +300,7 @@ identify the resource; this is typically just the resource ID, but it may also i
 Update updates an existing resource with new values.
 
 <h3 class="pdoc-module-header" id="UpdateResult" data-link-title="UpdateResult">
-    <a href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L104">
+    <a href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L104">
         interface <strong>UpdateResult</strong>
     </a>
 </h3>
@@ -310,7 +310,7 @@ Update updates an existing resource with new values.
 UpdateResult represents the results of a call to `ResourceProvider.update`.
 
 <h4 class="pdoc-member-header" id="UpdateResult-outs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/6cb1cf8b035af3a602660db142cbb40706a93239/sdk/nodejs/dynamic/index.ts#L108">property <b>outs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/03e0005fe0ce4b6bbe04c460a9bbc62869558214/sdk/nodejs/dynamic/index.ts#L108">property <b>outs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outs?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
