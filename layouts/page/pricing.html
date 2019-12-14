@@ -1,31 +1,49 @@
 {{ define "hero" }}
     <header class="header-hero">
         <div class="container mx-auto text-center flex-col max-w-2xl">
-            <h1>Plans for teams of all sizes.</h1>
-            <p>
-                Enable your developers and operators to create, deploy, and manage
-                applications and infrastructure on AWS, Azure, Google Cloud, and
-                Kubernetes. Whether you are a growing startup, or established enterprise,
-                Pulumi has a solution for you.
-            </p>
-            <p>
-                <a class="rounded text-orange-400 font-bold underline md:font-normal md:no-underline md:border-2 md:border-orange-400 md:py-1 md:px-2 md:mr-1 hover:text-orange-300 hover:border-orange-300 transition-all"
-                    href="#community-edition">Pulumi Community Edition</a>
-                is free forever for unlimited individual use.
-            </p>
+            <h1>Pulumi for every team and individual.</h1>
+            <div class="container mx-auto lg:flex justify-center mt-8">
+                <div class="px-8 lg:w-1/2 text-center flex flex-col text-gray-300">
+                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Open source</div>
+                    <p>
+                        Pulumi is an
+                        <a href="https://github.com/pulumi/pulumi" class="text-orange-500 hover:text-orange-400 font-bold">
+                            open source project</a>.
+                        The <a href="#community-edition" class="text-orange-500 hover:text-orange-400 font-bold">
+                            Community Edition</a> is available for free,
+                        or you can
+                        <a href="{{ relref . "/docs/intro/concepts/state#self-managed-backend" }}"
+                            class="text-orange-500 hover:text-orange-400 font-bold">
+                            run Pulumi offline</a> and manage state yourself.
+                    </p>
+                </div>
+                <div class="px-8 lg:w-1/2 text-center flex flex-col">
+                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Great for teams.</div>
+                    <p>
+                        <a href="#team-edition" class="text-orange-500 hover:text-orange-400 font-bold">
+                            Team Starter and Pro</a> help teams collaborate on shared projects.
+                        <a href="#enterprise-edition" class="text-orange-500 hover:text-orange-400 font-bold">
+                            Pulumi Enterprise</a> adds security controls and self-host options.
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0">
+    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0 justify-center text-center">
+        <h2 class="text-gray-300 mb-8">Pulumi Editions</h2>
         <div class="container mx-auto lg:flex justify-center">
-            <div class="bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
+            <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="community-edition">
                 <div class="text-center flex flex-col justify-between h-full">
-                    <div class="text-lg text-purple-500">TEAM STARTER</div>
-                    <div class="text-black font-display font-bold text-4xl">$50</div>
-                    <div class="text-sm text-gray-700">per month, 3 users included</div>
-                    <p class="text-sm text-gray-700">For teams just getting started deploying cloud applications and infrastructure.</p>
+                    <div class="text-lg text-purple-500 font-bold">COMMUNITY</div>
+                    <div class="text-black font-display font-bold text-3xl">$0</div>
+                    <div class="text-sm">&nbsp;</div>
+                    <p class="text-sm text-gray-700">
+                        The basics of Pulumi infrastructure as code
+                        for unlimited individual use.
+                    </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
@@ -33,11 +51,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Includes 3 users</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Up to 20 project stacks</span>
+                            <span class="flex-1">State management</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-infinity text-orange-500"></i>
@@ -45,11 +59,56 @@
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Basic secrets management</span>
+                            <span class="flex-1">Deployment history</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">CI/CD integration</span>
+                            <span class="flex-1">Secrets management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">CI/CD integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-heart text-orange-500"></i>
+                            <span class="flex-1">Free forever</span>
+                        </li>
+                    </ul>
+                    <a class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                </div>
+            </div>
+            <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:w-1/4 lg:mr-3 mb-4 lg:mb-0" id="team-edition">
+                <div class="text-center flex flex-col justify-between h-full">
+                    <div class="text-lg text-purple-500 font-bold">TEAM STARTER</div>
+                    <div class="text-black font-display font-bold text-3xl">$50</div>
+                    <div class="text-sm text-gray-700 font-bold">per month, 3 users included</div>
+                    <p class="text-sm text-gray-700">
+                        For teams just starting to collaborate on shared projects.
+                    </p>
+                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-arrow-left text-blue-500"></i>
+                            <span class="flex-1">Everything in Community</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Includes 3 users</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">1 <a href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}">organization</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Up to 20 project stacks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-infinity text-orange-500"></i>
+                            <span class="flex-1">Unlimited deployment history</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Team activity dashboard</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-heart text-orange-500"></i>
@@ -61,32 +120,34 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:w-1/3 mb-4 lg:mb-0">
+            <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:ml-2 lg:w-1/4 mb-4 lg:mb-0">
                 <div class="text-center flex flex-col justify-between h-full">
-                    <div class="text-lg text-purple-500">TEAM PRO</div>
-                    <div class="text-black font-display font-bold text-4xl">$75</div>
-                    <div class="text-sm text-gray-700">per user/month</div>
-                    <p class="text-sm text-gray-700">For medium to large teams using Pulumi for multiple projects or clouds.</p>
+                    <div class="text-lg text-purple-500 font-bold">TEAM PRO</div>
+                    <div class="text-black font-display font-bold text-3xl">$75</div>
+                    <div class="text-sm text-gray-700 font-bold">per user/month</div>
+                    <p class="text-sm text-gray-700">
+                        For medium to large teams with many people and projects.
+                    </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-arrow-left text-blue-500"></i>
-                            <span class="flex-1">Everything in Team Starter, plus...</span>
+                            <span class="flex-1">Everything in Team Starter</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
                             <span class="flex-1">Up to 25 users (minimum of 3)</span>
                         </li>
                         <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
+                            <span class="flex-1">Teams and roles</span>
+                        </li>
+                        <li class="flex items-center">
                             <i class="w-8 text-center fas fa-infinity text-blue-500"></i>
-                            <span class="flex-1">Unlimited projects and stacks</span>
+                            <span class="flex-1">Unlimited project stacks</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
                             <span class="flex-1">APIs and webhooks</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
-                            <span class="flex-1">Advanced secrets management</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
@@ -102,24 +163,26 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
+            <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="enterprise-edition">
                 <div class="text-center flex flex-col justify-between h-full">
-                    <div class="text-lg text-purple-500">ENTERPRISE</div>
-                    <div class="text-black font-display font-bold text-4xl">Custom</div>
+                    <div class="text-lg text-purple-500 font-bold">ENTERPRISE</div>
+                    <div class="text-black font-display font-bold text-3xl">Custom</div>
                     <div class="text-sm">&nbsp;</div>
-                    <p class="text-sm text-gray-700">For large organizations running cloud software at scale, with advanced or custom needs.</p>
+                    <p class="text-sm text-gray-700">
+                        For organizations with advanced security and deployment needs.
+                    </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-arrow-left text-purple-500"></i>
-                            <span class="flex-1">Everything in Team Pro, plus...</span>
+                            <span class="flex-1">Everything in Team Pro</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-infinity text-purple-500"></i>
-                            <span class="flex-1">Unlimited users (minimum of 10)</span>
+                            <span class="flex-1">Unlimited users</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
-                            <span class="flex-1">Teams, roles, and policies</span>
+                            <span class="flex-1">Organization policies</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
@@ -127,11 +190,15 @@
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
-                            <span class="flex-1">On-premises/self-host available</span>
+                            <span class="flex-1">Self-host available</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
                             <span class="flex-1">24×7 support available</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-heart text-purple-500"></i>
+                            <span class="flex-1">Custom trials available</span>
                         </li>
                     </ul>
                     <a class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="#contact">Contact Us</a>
@@ -139,7 +206,7 @@
             </div>
         </div>
         <div class="text-center mt-12">
-            <a class="mt-8 text-orange-500 hover:text-orange-400 text-lg font-bold" href="#grid">See plan details</a>
+            <a class="mt-8 text-orange-500 hover:text-orange-400 text-lg font-bold" href="#grid">Compare premium plans</a>
             <span class="text-purple-200">&rarr;</span>
         </div>
     </section>
@@ -157,7 +224,7 @@
                     And remember,
                     <a class="rounded text-blue-500 font-bold underline md:font-normal md:no-underline md:border-2 border-blue-500 md:py-1 md:px-2 md:mx-1 hover:text-blue-400 hover:border-blue-400 transition-all"
                         href="#community-edition">Pulumi Community Edition</a>
-                    is free forever for unlimited individual use.
+                    is free forever for single user scenarios.
                 </p>
             </div>
 
@@ -443,76 +510,29 @@
         </div>
     </section>
 
-    <section id="community-edition" class="bg-purple-700 py-24 text-white px-4 lg:px-0">
-        <div class="container mx-auto">
-            <div class="mx-auto text-center max-w-md px-4 lg:px-0 mb-12">
-                <h2 class="text-white">Pulumi Community Edition</h2>
-                <p>
-                    Create and manage your own cloud projects with Pulumi Community Edition &mdash;
-                    <strong class="text-orange-300">free forever</strong>
-                    for individual use.
-                </p>
-            </div>
-            <div class="mx-auto bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
-                <div class="text-center flex flex-col justify-between h-full">
-                    <div class="text-lg text-purple-500">COMMUNITY EDITION</div>
-                    <div class="text-black font-display font-bold text-4xl">FREE</div>
-                    <p class="text-sm text-gray-700">
-                        Includes unlimited individual use of the Pulumi CLI, cloud SDKs, and the
-                        <a href="{{ relref . "/docs/intro/console" }}">Pulumi Console</a>.
-                    </p>
-                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Any cloud, any language</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Includes 1 user</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-infinity text-orange-500"></i>
-                            <span class="flex-1">Unlimited stacks &amp; deployments</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Basic secrets management</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">CI/CD integrations</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-heart text-orange-500"></i>
-                            <span class="flex-1">Free forever for individual use</span>
-                        </li>
-                    </ul>
-                    <a class="text-center btn btn-lg btn-orange group mx-auto my-4 px-6" href="{{ relref . "/docs/get-started" }}">
-                        <span>Create Your First Project</span>
-                    </a>
-                    <p class="text-gray-600 text-sm my-0 mt-2">
-                        or sign up at <a href="https://app.pulumi.com/signup">app.pulumi.com</a>.
-                    </p>
-                </div>
-            </div>
-            <div class="mx-auto text-center max-w-4xl opacity-75 text-sm mt-8">
-                Pulumi is open-source software.
-                <a class="underline" href="https://github.com/pulumi/pulumi" target="_blank">Join us on GitHub</a>!
-            </div>
-        </div>
-    </section>
-
     <section id="faq" class="bg-gray-100 py-16 px-4 lg:px-0">
         <div class="container mx-auto max-w-4xl">
             <h2>FAQ</h2>
             <h3>Can I use Pulumi for free? </h3>
             <p>
-                Yes! <a href="#community-edition">Pulumi Community Edition</a> is free to use, now and
-                forever, for individuals. All paid editions offer a 14-day free trial. If this
-                isn't sufficient, please contact your Pulumi salesperson, and we are happy to work
-                out a custom trial period for you that makes sense given your proof-of-concept
-                timeline. After your trial expires, no data will be lost, and there is a grace
-                period with soft enforcement.
+                Yes! There are three ways to use Pulumi for free.
+            </p>
+            <p>
+                First, the <a href="#community-edition">Pulumi Community Edition</a> is free to use, now and
+                forever, for single user scenarios. You get all of the convenience of automatic state management,
+                unlimited deployments, and many other great features, without needing to pay anything at all for it..
+            </p>
+            <p>
+                Second, Pulumi is an <a href="https://github.com/pulumi/pulumi">open source project</a>. You can
+                <a href="{{ relref . "/docs/intro/concepts/state#self-managed-backend" }}">run Pulumi entirely offline</a>,
+                and manage state yourself, instead of using the online service. There are no restrictions &mdash;
+                it's all there in the open source for you to use freely as you'd like.
+            </p>
+            <p>
+                Finally, all paid editions offer a 14-day free trial. If this isn't a sufficient duration for
+                your project, <a href="{{ relref . "/contact" }}">please contact us</a>, and we are happy to work
+                out a custom trial period for you that makes sense given your proof-of-concept timeline. After your
+                trial expires, no data will be lost, and there is a grace period with soft enforcement.
             </p>
             <h3>How do I get started? </h3>
             <p>
@@ -542,11 +562,10 @@
             <p>
                 The key distinction between Pulumi's free Community Edition and its paid offerings
                 -- Team Starter, Team Pro, and Enterprise -- is the presence of an organization.
-                The Community Edition is meant for individuals using Pulumi for their private
-                projects, but this tends not to work in a team setting. Most teams want multiple
-                engineers to have access to their projects. This is precisely what organizations
-                deliver to you. The advanced tiers offer even more sophisticated organization
-                management facilities, including RBAC for advanced policy controls.
+                The Community Edition is great for single users with private projects, however
+                if you are working within a team, you'll typically want to share your projects.
+                This is precisely what organizations provide. The advanced Team and Enterprise tiers offer more
+                sophisticated organization management facilities, including RBAC for advanced policy controls.
             </p>
             <h3>What are projects and stacks? </h3>
             <p>
