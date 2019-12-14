@@ -1,6 +1,0 @@
-{{- if .Get "pkg" -}}
-    {{- $pkg := index $.Site.Data.pkg.nodejs.pulumi (.Get "pkg") -}}
-    {{ $pkg.url }}{{ if .Get "path" }}/{{ .Get "path" }}{{ end }}
-{{- else -}}
-    {{- errorf "missing value for param 'pkg': %s" .Position -}}
-{{- end -}}
