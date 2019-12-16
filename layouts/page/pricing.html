@@ -1,37 +1,11 @@
 {{ define "hero" }}
     <header class="header-hero">
-        <div class="container mx-auto text-center flex-col max-w-5xl">
+        <div class="container mx-auto text-center flex-col max-w-2xl">
             <h1>Pulumi for every team and individual.</h1>
-            <div class="container mx-auto lg:flex justify-center mt-8">
-                <div class="px-8 lg:w-1/3 text-center flex flex-col text-gray-300">
-                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Open source.</div>
-                    <p>
-                        Pulumi's SDK is
-                        <a href="https://github.com/pulumi/pulumi" class="text-orange-500 hover:text-orange-400 font-bold">
-                            open source</a>. You can use it with any service edition listed below or
-                        <a href="{{ relref . "/docs/intro/concepts/state#self-managed-backend" }}"
-                            class="text-orange-500 hover:text-orange-400 font-bold">
-                            run it offline</a>.
-                    </p>
-                </div>
-                <div class="px-8 lg:w-1/3 text-center flex flex-col">
-                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Free for individuals.</div>
-                    <p>
-                        The <a href="#community-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Community Edition</a> is available for free unlimited usage,
-                            and makes storing your project state easy.
-                    </p>
-                </div>
-                <div class="px-8 lg:w-1/3 text-center flex flex-col">
-                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Great for teams.</div>
-                    <p>
-                        <a href="#team-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Team Starter and Pro</a> give you shared projects.
-                        <a href="#enterprise-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Pulumi Enterprise</a> adds security and self-host options.
-                    </p>
-                </div>
-            </div>
+            <p>
+                Whether you're using open source, our free Community Edition, or using
+                Pulumi in your team or entire organization, we have a solution for you.
+            </p>
         </div>
     </header>
 {{ end }}
