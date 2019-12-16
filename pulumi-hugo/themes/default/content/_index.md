@@ -8,7 +8,7 @@ subhead: >
 ctas:
     - |
         Pulumi is [**open-source**](https://github.com/pulumi/pulumi) software, made by developers
-        for developers — and [**free forever**](/pricing/#community-edition) for individual use.
+        for developers — and offers both [**free and paid editions**](/pricing).
     - |
         **Give it a try!**&nbsp;
         Deploy your first Pulumi app in just five minutes.
