@@ -1,5 +1,7 @@
 ---
 title: ".NET Core"
+meta_desc: An overview of how to use .NET Core when writing cloud applications for any
+           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
@@ -50,6 +52,7 @@ class Program
     }
 }
 ```
+
 {{% /lang %}}
 
 {{% lang fsharp %}}
@@ -81,6 +84,7 @@ let infra () =
 let main _ =
   Deployment.run infra
 ```
+
 {{% /lang %}}
 
 {{% lang visualbasic %}}
@@ -116,6 +120,7 @@ Module Program
 
 End Module
 ```
+
 {{% /lang %}}
 
 ## Getting Started
@@ -143,7 +148,6 @@ Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
-
 
 ## C\#, F\#, and VB Templates
 

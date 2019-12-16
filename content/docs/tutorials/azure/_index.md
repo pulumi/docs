@@ -1,5 +1,7 @@
 ---
 title: "Azure Tutorials"
+meta_desc: A collection of tutorials that highlight complete end-to-end scenarios when
+           using the Azure platform.
 linktitle: "Azure"
 menu:
   userguides:

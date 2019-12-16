@@ -1,5 +1,6 @@
 ---
 title: Pulumi Console
+meta_desc: An overview of the Pulumi Console web application.
 menu:
   intro:
     identifier: console

@@ -1,5 +1,7 @@
 ---
 title: Pulumi vs. Serverless Framework
+meta_desc: This page gives an overview of the major differences between Pulumi and
+           the Serverless Framework.
 linktitle: Serverless
 menu:
   intro:

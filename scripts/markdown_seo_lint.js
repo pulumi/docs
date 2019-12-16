@@ -275,7 +275,7 @@ const errorsCount = [].concat.apply([], errorsArray).length;
 if (errors.length > 0) {
     console.log(`
 Lint Results:
-    - ${filesToLint.length} files parsed.
+    - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 
 ERRORS:

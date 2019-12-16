@@ -1,5 +1,7 @@
 ---
-title: "Google Cloud Tutorials"
+title: Google Cloud Tutorials
+meta_desc: A collection of tutorials that highlight complete end-to-end scenarios when
+           using the Google Cloud platform.
 linktitle: "Google Cloud"
 menu:
   userguides:

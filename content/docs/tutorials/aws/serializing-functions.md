@@ -1,6 +1,6 @@
 ---
 title: Serializing JavaScript Functions
-description: Use Pulumi's Node.js SDK to serialize JavaScript functions into an artifact that can be used at runtime in the cloud.
+meta_desc: Use Pulumi's Node.js SDK to serialize JavaScript functions into an artifact that can be used at runtime in the cloud.
 keywords:
 - javascript
 - aws lambda
@@ -167,8 +167,6 @@ await fs.writeFile("example.txt", "data");
 ```
 
 This ensures that all modules can be referenced simply in application code, and then used simply in _run time_ code with expected semantics.
-
-
 
 > **Note:** This form of module capturing only applies to external modules that are referenced: modules that are directly part of Node, or are in the `node_modules` directory. The `local` module &mdash; the module for the Pulumi application itself &mdash; is not captured in this fashion. That is because this code will not actually be part of the uploaded `node_modules`, and so would not be found. The `local` module is captured as if it was a normal value. This means that all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file or module they are contained in.
 

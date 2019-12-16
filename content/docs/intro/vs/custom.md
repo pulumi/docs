@@ -1,5 +1,7 @@
 ---
 title: Pulumi vs. Custom Solutions
+meta_desc: This page gives an overiew of the major differences between Pulumi
+           and custom infrastructure as code solutions.
 linktitle: Custom Solutions
 menu:
   intro:

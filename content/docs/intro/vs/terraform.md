@@ -1,5 +1,6 @@
 ---
 title: Pulumi vs. Terraform
+meta_desc: This page gives an overview about the major differences between Terraform and Pulumi.
 linktitle: Terraform
 menu:
   intro:

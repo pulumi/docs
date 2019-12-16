@@ -1,6 +1,6 @@
 ---
-title: "Clusters: EKS - Hello World!"
-
+title: ECS for Kubernetes (EKS) - Hello World!
+meta_desc: How to launch a new Managed Kubernetes Cluster on Elastic Container Service for Kubernetes (EKS) on AWS.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks/"]
 ---
 
@@ -10,7 +10,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 
 ## Create a new EKS cluster {#new-eks-cluster}
 
-1.  In a new folder `eks-hello-world`, create an empty project with `pulumi new`.
+1. In a new folder `eks-hello-world`, create an empty project with `pulumi new`.
 
     This will create a base Pulumi program in TypeScript, and is great
     recommendation to begin your journey.
@@ -32,7 +32,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 	$ npm install --save @pulumi/eks @pulumi/kubernetes
 	```
 
-1.  Open the existing file `index.ts`, and replace the contents with the following:
+1. Open the existing file `index.ts`, and replace the contents with the following:
 
     The `index.ts` occupies the role as the *main* entrypoint in our Pulumi
     program. In it, we are going to declare:
@@ -67,7 +67,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     // Export the clusters' kubeconfig.
     export const kubeconfig = cluster.kubeconfig
     ```
-1.  To preview and deploy changes, run `pulumi up` and select "yes."
+
+1. To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
@@ -199,7 +200,7 @@ Now that we have an instance of Kubernetes running, we may want to create API re
 
 We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
-1.  Create a new Kubernetes Namespace and Deployment:
+1. Create a new Kubernetes Namespace and Deployment:
 
 	This declares a new Kubernetes Namespace, Deployment and Service to be
 	created using the Pulumi Kubernetes provider to our cluster.
@@ -271,7 +272,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     export const serviceHostname = service.status.apply(s => s.loadBalancer.ingress[0].hostname)
     ```
 
-1.  Run `pulumi up`, note the preview diff, and select "yes" to preview and deploy the changes.
+1. Run `pulumi up`, note the preview diff, and select "yes" to preview and deploy the changes.
 
     As part of the update, you'll see some new objects in the output: a
     `Namespace` in Kubernetes to deploy into, a `Deployment` resource for
@@ -389,9 +390,9 @@ export const guestbookPublicHostname =
 
 Run the following command to tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console and cannot be undone.
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console and cannot be undone.
 
 ## Summary
 

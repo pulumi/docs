@@ -1,5 +1,6 @@
 ---
-title: Google Cloud
+title: Google Cloud Platform (GCP)
+meta_desc: This page provides on an overview of the Google Cloud Platform (GCP) provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers

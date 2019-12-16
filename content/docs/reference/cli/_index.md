@@ -1,5 +1,6 @@
 ---
 title: "Pulumi CLI"
+meta_desc: An overview of the Pulumi CLI and common commands used to deploy cloud applications.
 menu:
   reference:
     identifier: cli
@@ -78,7 +79,6 @@ fi
 
 Finally, after saving the `pulumi` bash completion script, either reopen your terminal or source your profile
 in order to reload the bash completion scripts in your current terminal session (`. ~/.bash_profile`).
-
 
 ### Zsh
 

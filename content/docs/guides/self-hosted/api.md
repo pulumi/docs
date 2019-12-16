@@ -22,8 +22,8 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 * Provide a persistent volume for the service to store checkpoint objects.
 * Provider a persistent volume for the MySQL data (optional if you are providing your own DB.)
 * If you are providing your own DB instance, ensure that it is accessible within the same Docker network that the service and the UI containers will be running in.
-  * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, please set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
-  * If you do not create this network prior to running `run-ee.sh`, it will create only a bridged network on your local host. Ensure that the DB can be accessed by the API service container.
+    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, please set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
+    * If you do not create this network prior to running `run-ee.sh`, it will create only a bridged network on your local host. Ensure that the DB can be accessed by the API service container.
 * Provide an external load balancer with TLS termination.
 
 ## Minimum System Requirements
@@ -61,4 +61,3 @@ The API service is a Go-based application. This is a single binary application t
 | SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
-

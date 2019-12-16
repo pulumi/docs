@@ -1,6 +1,6 @@
 ---
 title: Stack Permissions
-
+meta_desc: An overview of Stack Permissions within the Pulumi Cloud Service.
 aliases:
 - /docs/reference/service/roles-and-access-controls/
 - /docs/console/collaboration/stack-permissions/

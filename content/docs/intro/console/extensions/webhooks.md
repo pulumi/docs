@@ -1,5 +1,6 @@
 ---
 title: Webhooks
+meta_desc: An overview of how to use Webhooks within the Pulumi Cloud Service.
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
@@ -17,7 +18,6 @@ notification, start running integration tests, or even update additional stacks.
 
 Webhooks can be used for pretty much anything you want, and are the foundation
 of most _ChatOps_ workflows.
-
 
 ## Management
 

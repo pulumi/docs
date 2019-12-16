@@ -1,6 +1,7 @@
 ---
-title: Setup
-
+title: Google Cloud Platfrom (GCP) Setup
+meta_desc: This page provides an overview on how to setup the Google Cloud
+           Platfrom Provider with Pulumi.
 aliases: ["/docs/reference/clouds/gcp/setup/"]
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: Single Sign-on (SSO)
-
+title: Single Sign-on with SAML (SSO)
+meta_desc: This page provides a walkthrough important aspects of configuring any SAML
+           (Security Assertion Markup Language) 2.0 identity provider.
 menu:
     userguides:
         parent: saml
@@ -21,9 +22,9 @@ with the [Pulumi Console]({{< relref "/docs/intro/console" >}}).
 
 ## Terminology
 
-* **IdP** stands for Identity Provider. An IdP is a service that acts as a user directory.
-* **SP** stands for Service Provider. A service provider relies on an identity provider for authentication.
-* **IdP Metadata XML** is the XML configuration document provided by your IdP. It contains public information about your user directory,
+- **IdP** stands for Identity Provider. An IdP is a service that acts as a user directory.
+- **SP** stands for Service Provider. A service provider relies on an identity provider for authentication.
+- **IdP Metadata XML** is the XML configuration document provided by your IdP. It contains public information about your user directory,
 which can be used by the service provider to make authentication requests.
 
 ## Configuration Properties
@@ -38,6 +39,7 @@ The following are the only properties you will really be configuring when you se
 | Name identifier format | Name Identifier, Name | Yes |
 
 ### Single Sign On URL
+
 <span class="badge badge-required">required</span>
 
 This is the URL where the IdP can `POST` SAML assertions. The URL format is always:
@@ -47,6 +49,7 @@ This is the URL where the IdP can `POST` SAML assertions. The URL format is alwa
 `{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Console](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
 
 ### Entity ID
+
 <span class="badge badge-required">required</span>
 
 The (SP) entity ID is a URL where a service provider publishes public information about its SAML configuration. The metadata document published by the service provider shows its public certificate that can be used to verify the signature of authentication requests initiated from the service itself.
@@ -58,12 +61,13 @@ The (SP) entity ID is a URL where a service provider publishes public informatio
 The relay state is a URL, which itself is passed as a query parameter in SSO requests initiated by the identity provider. This is an optional property. This is also known as **deep-linking**. This allows a user to directly navigate to a downstream service by launching the application from the identity provider itself.
 
 ### Name ID Format
+
 <span class="badge badge-required">required</span>
 
 The name ID format is one of the most important aspects of your SAML SSO configuration. It defines how an identity provider identifies a user on the downstream service. The value of the format defines what value would be used for the user's `Subject`.
 
 > **Note:** Pulumi only accepts stable and persistent identifiers for users. Identity providers must be able to set either a persistent randomly unique identifier (`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`) or the user's email address (`urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`) as the user's `Subject` value.
-
+<br />
 > **Important:** Once your name ID format is configured and your users have started to use SSO, **DO NOT** change the name identifier. That will prevent your users from being able to sign in.
 
 ## Troubleshooting
@@ -130,4 +134,3 @@ Here's an example of an SSO binding for `HTTP-POST`:
 ```
 
 > **Note:** The `Location` attribute is unique to each tenant in your IDP.
-

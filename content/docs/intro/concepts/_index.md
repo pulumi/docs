@@ -1,5 +1,6 @@
 ---
 title: Architecture & Concepts
+meta_desc: This page provides an overview of Architecture and Concepts when using the Pulumi Cloud Development Platform.
 menu:
   intro:
     identifier: concepts

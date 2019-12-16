@@ -1,5 +1,6 @@
 ---
 title: "Stacks"
+meta_desc: An in depth look at Pulumi Stacks and their usage.
 menu:
   intro:
     parent: concepts
@@ -10,7 +11,6 @@ aliases: ["/docs/reference/stack/"]
 
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
 instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
-
 
 ## Create a stack {#create-stack}
 
@@ -90,13 +90,14 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 When you use top-level exports in your Pulumi [program]({{< relref "programming-model.md#programs" >}}), they become [stack outputs]({{< relref "programming-model.md#stack-outputs" >}}). Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
 
-**JavaScript code**
+### **JavaScript code**
+
 ```javascript
 exports.publicDns = ...
 exports.publicIp  = ...
 ```
 
-**CLI**
+### **CLI**
 
 ```bash
 $ pulumi stack output

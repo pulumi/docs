@@ -1,6 +1,6 @@
 ---
-title: "Containers"
-
+title: Build & Deploy Docker to AWS or Azure
+meta_desc: This tutorial will teach you how to build and deploy a Dockerized application to AWS or Azure.
 aliases: ["/docs/quickstart/cloudfx/tutorial-service/"]
 ---
 
@@ -8,21 +8,21 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1.  Configure [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}) and/or [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) credentials
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. Configure [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}) and/or [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) credentials
 
 ## Serve an HTML file in an NGINX container
 
-1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
+1. Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
-1.  Run `pulumi new`:
+1. Run `pulumi new`:
 
     ```bash
     $ mkdir container-quickstart && cd container-quickstart
     $ pulumi new javascript
     ```
 
-1.  Replace the contents of `index.js` with the following:
+1. Replace the contents of `index.js` with the following:
 
     ```javascript
     const cloud = require("@pulumi/cloud");
@@ -44,15 +44,17 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
     This example uses [cloud.Service]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Service" >}}), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
-1.  Create a subfolder `app` with the following files:
+1. Create a subfolder `app` with the following files:
 
     - Add the following file as `Dockerfile`:
+
       ```docker
       FROM nginx
       COPY index.html /usr/share/nginx/html
       ```
 
     - Add the following file as `index.html`:
+
       ```html
       <html>
         <head><title>Hello World</title><meta charset="UTF-8"></head>
@@ -60,7 +62,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
       </html>
       ```
 
-1.  Ensure you have the following directory structure:
+1. Ensure you have the following directory structure:
 
     ```bash
     index.js
@@ -70,13 +72,13 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
       index.html
     ```
 
-1.  Install the `@pulumi/cloud` NPM package an one or both of the platform-specific implementations depending on which platform you will deploy to:
+1. Install the `@pulumi/cloud` NPM package an one or both of the platform-specific implementations depending on which platform you will deploy to:
 
     ```bash
     $ npm install --save @pulumi/cloud  @pulumi/cloud-aws @pulumi/cloud-azure
     ```
 
-1.  If you are running on AWS, configure the provider, the region and whether to use Fargate:
+1. If you are running on AWS, configure the provider, the region and whether to use Fargate:
 
     ```bash
     $ pulumi config set cloud:provider aws
@@ -91,7 +93,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     $ pulumi config set cloud-azure:location WestUS2
     ```
 
-1.  Preview and deploy changes via `pulumi up`. This will take a few minutes. Pulumi automatically builds and provisions a container registry (ECR or ACR), builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
+1. Preview and deploy changes via `pulumi up`. This will take a few minutes. Pulumi automatically builds and provisions a container registry (ECR or ACR), builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
 
     ```
     $ pulumi up
@@ -115,7 +117,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     Update duration: 3m53.44141303s
     ```
 
-1.  View the endpoint URL and run curl:
+1. View the endpoint URL and run curl:
 
     ```bash
     $ pulumi stack output
@@ -131,7 +133,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     </body></html>
     ```
 
-1.  To view the runtime logs from the container, use the `pulumi logs` command. To get a log stream, use `pulumi logs --follow`.
+1. To view the runtime logs from the container, use the `pulumi logs` command. To get a log stream, use `pulumi logs --follow`.
 
     ```bash
     $ pulumi logs --follow

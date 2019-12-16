@@ -1,5 +1,7 @@
 ---
-title: "Kubernetes Tutorials"
+title: Kubernetes Tutorials
+meta_desc: A collection of tutorails for learning basic and advanced techniques for Kubernetes. Choose
+           from basic provisioning to complex Day 2 tasks.
 linktitle: "Kubernetes"
 menu:
   userguides:

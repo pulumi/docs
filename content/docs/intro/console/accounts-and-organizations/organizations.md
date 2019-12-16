@@ -1,6 +1,6 @@
 ---
 title: Organizations
-
+meta_desc: An overview of Organizations within the Pulumi Cloud Service.
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
@@ -31,7 +31,6 @@ You can create a new Pulumi organization directly from the Pulumi Console.
 target="_blank">
     CREATE ORGANIZATION
 </a>
-
 
 ## Organization Types
 
@@ -70,7 +69,7 @@ relref "/docs/guides/saml" >}}).
 
 To add a GitHub-backed organization to Pulumi, an administrator of the GitHub organization
 must
-first grant the Pulumi OAuth app the `read:org` scope. This can be done on GitHub's 
+first grant the Pulumi OAuth app the `read:org` scope. This can be done on GitHub's
 [Applications
 page](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f).
 
@@ -105,7 +104,6 @@ that they can add or invite to the Pulumi organization. See [Switching
 Organizations](#switching-organizations)
 to learn more.
 
-
 ## SAML Single Sign-on (SSO)
 
 The Pulumi Enterprise edition provides more options for identity and access, including
@@ -116,11 +114,9 @@ any SAML 2.0-based identity provider.
 organization on Pulumi. Or refer to one
 of our guides:
 
-- [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-- [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
-- [Okta]({{< relref "/docs/guides/saml/okta" >}})
-
-
+* [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
+* [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
+* [Okta]({{< relref "/docs/guides/saml/okta" >}})
 
 If you need help configuring or would like us to officially support another SAML identity
 provider,
@@ -136,14 +132,12 @@ party identity provider. To switch to a different organization:
 next to the Pulumi logo.
 1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
 
-
 <img class="lg:max-w-xl" src="/images/docs/reference/service/organization-view.png" alt="Stack Outputs and Configuration">
 
   _Members_. Pulumi organization members only see the Stacks and People tabs.
 
   _Admins_. Pulumi organization administrators see the Stacks, People, Teams, Webhooks,
 and Settings tabs.
-
 
 | Console Tab | Description |
 |--------|--------|
@@ -153,7 +147,6 @@ and Settings tabs.
 | Teams | A [Team Pro](https://www.pulumi.com/pricing/) feature that provides a way to assign stack permissions to groups of organization members. |
 | Webhooks | A [Team Pro](https://www.pulumi.com/pricing/) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
 | Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
-
 
 ## Next Steps
 

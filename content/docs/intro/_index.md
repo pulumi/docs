@@ -1,5 +1,6 @@
 ---
 title: Intro to Pulumi
+meta_desc: Get an in-depth intro to Pulumi, and learn how it enables you to program the cloud.
 menu:
   intro:
     name: Overview
@@ -34,4 +35,3 @@ Get an in-depth intro to Pulumi, and learn how it enables you to program the clo
         <p>Have a look at several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem.</p>
     </div>
 </div>
-

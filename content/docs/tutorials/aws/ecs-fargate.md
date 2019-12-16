@@ -1,6 +1,7 @@
 ---
-title: "Containers on ECS Fargate"
-
+title: "Running Containers on ECS Fargate"
+meta_desc: This tutorial will teach you to publish a Docker container to Elastic Container Registry (ECR)
+           and deploy it to a load-balanced ECS Fargate Service.
 aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
 ---
 
@@ -15,9 +16,9 @@ In this tutorial, we'll build and publish a Docker container to a private Elasti
 
 ## Prerequisites
 
-1.  [Install Docker Engine - Community](https://docs.docker.com/install/)
-1.  [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1.  [Configure Pulumi to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
+1. [Install Docker Engine - Community](https://docs.docker.com/install/)
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Configure Pulumi to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
 
 ## Deploy the App
 
@@ -36,14 +37,15 @@ $ pulumi new aws-typescript --name myproject
 
 Create a subdirectory, `app`, containing our sample Dockerized application. From the `app` subdirectory, add the following files:
 
-**Dockerfile**
+#### **Dockerfile**
 
 ```docker
 FROM nginx
 COPY index.html /usr/share/nginx/html
 ```
 
-**index.html**
+#### **index.html**
+
 ```html
 <html>
   <head>
@@ -193,8 +195,8 @@ service.
 
 For more information about containerized applications on AWS, please read these User Guides:
 
-* [Pulumi Crosswalk for AWS Elastic Container Service (ECS)]({{< relref "/docs/guides/crosswalk/aws/ecs" >}})
-* [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}})
+- [Pulumi Crosswalk for AWS Elastic Container Service (ECS)]({{< relref "/docs/guides/crosswalk/aws/ecs" >}})
+- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}})
 
 For an end-to-end application also includes serverless functions, see the
 [Serverless plus Containers Thumbnailer tutorial]({{< relref "video-thumbnailer" >}}).

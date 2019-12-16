@@ -1,5 +1,6 @@
 ---
 title: DigitalOcean
+meta_desc: This page provides an overview of the DigitalOcean Provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
