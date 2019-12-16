@@ -51,6 +51,7 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>github</strong> object supports the following:</p>
 <ul class="simple">
@@ -128,6 +129,7 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>github</strong> object supports the following:</p>
 <ul class="simple">

@@ -107,6 +107,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AwaitableGetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_refresh_window_days=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">destination_dataset_id=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a DataTransferConfig resource with the given unique name, props, and options.</p>
@@ -332,8 +337,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">GetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDefaultServiceAccount.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Email address of the default service account used by bigquery encryption in this project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.bigquery.Table">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
@@ -348,6 +371,9 @@ descending priority order.</p></li>
 <li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID to create the table in.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field description.</p></li>
+<li><p><strong>encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies how the table should be encrypted.
+If left blank, the table will be encrypted with a Google-managed key; that process
+is transparent to the user.  Structure is documented below.</p></li>
 <li><p><strong>expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
 indefinitely. Expired tables will be deleted and their storage
@@ -374,6 +400,10 @@ Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <p>The <strong>external_data_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autodetect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -439,6 +469,17 @@ Changing this forces a new resource to be created.</p>
 <dt id="pulumi_gcp.bigquery.Table.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The field description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Table.encryption_configuration">
+<code class="sig-name descname">encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.encryption_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies how the table should be encrypted.
+If left blank, the table will be encrypted with a Google-managed key; that process
+is transparent to the user.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -593,7 +634,7 @@ Structure is documented below.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.bigquery.Table.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">num_bytes=None</em>, <em class="sig-param">num_long_term_bytes=None</em>, <em class="sig-param">num_rows=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">num_bytes=None</em>, <em class="sig-param">num_long_term_bytes=None</em>, <em class="sig-param">num_rows=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Table resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -609,6 +650,9 @@ descending priority order.</p></li>
 <li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID to create the table in.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field description.</p></li>
+<li><p><strong>encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies how the table should be encrypted.
+If left blank, the table will be encrypted with a Google-managed key; that process
+is transparent to the user.  Structure is documented below.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A hash of the resource.</p></li>
 <li><p><strong>expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -644,6 +688,10 @@ Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <p>The <strong>external_data_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autodetect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -722,6 +770,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.bigquery.get_default_service_account">
+<code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">get_default_service_account</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.get_default_service_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve default service account for this project</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project ID. If it is not provided, the provider project is used.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/bigquery_default_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/bigquery_default_service_account.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

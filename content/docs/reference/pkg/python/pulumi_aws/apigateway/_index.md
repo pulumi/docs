@@ -3010,7 +3010,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.UsagePlan">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_stages=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quota_settings=None</em>, <em class="sig-param">throttle_settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_stages=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quota_settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttle_settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Usage Plan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3022,6 +3022,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the usage plan.</p></li>
 <li><p><strong>product_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.</p></li>
 <li><p><strong>quota_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The quota settings of the usage plan.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>throttle_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The throttling limits of the usage plan.</p></li>
 </ul>
 </dd>
@@ -3056,6 +3057,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.apigateway.UsagePlan.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.apigateway.UsagePlan.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of a usage plan.</p>
@@ -3085,6 +3092,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.apigateway.UsagePlan.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.apigateway.UsagePlan.throttle_settings">
 <code class="sig-name descname">throttle_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.throttle_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>The throttling limits of the usage plan.</p>
@@ -3096,7 +3109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.apigateway.UsagePlan.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_stages=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quota_settings=None</em>, <em class="sig-param">throttle_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_stages=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_code=None</em>, <em class="sig-param">quota_settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttle_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UsagePlan resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3106,10 +3119,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_stages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The associated API stages of the usage plan.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of a usage plan.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the usage plan.</p></li>
 <li><p><strong>product_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.</p></li>
 <li><p><strong>quota_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The quota settings of the usage plan.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>throttle_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The throttling limits of the usage plan.</p></li>
 </ul>
 </dd>

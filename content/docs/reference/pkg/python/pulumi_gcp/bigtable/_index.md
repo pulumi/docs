@@ -24,11 +24,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>column_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the column family.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</p></li>
 <li><p><strong>max_ages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all cells older than the given age.</p></li>
 <li><p><strong>max_versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all versions of a cell except for the most recent.</p></li>
 <li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If multiple policies are set, you should choose between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> OR <code class="docutils literal notranslate"><span class="pre">INTERSECTION</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p></li>
+<li><p><strong>table</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table.</p></li>
 </ul>
 </dd>
 </dl>
@@ -43,6 +45,12 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.column_family">
+<code class="sig-name descname">column_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.column_family" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the column family.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.bigtable.GCPolicy.instance_name">
 <code class="sig-name descname">instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.instance_name" title="Permalink to this definition">¶</a></dt>
@@ -79,6 +87,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.table">
+<code class="sig-name descname">table</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.table" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the table.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.bigtable.GCPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">column_family=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">max_ages=None</em>, <em class="sig-param">max_versions=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">table=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -90,11 +104,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>column_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the column family.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</p></li>
 <li><p><strong>max_ages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all cells older than the given age.</p></li>
 <li><p><strong>max_versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all versions of a cell except for the most recent.</p></li>
 <li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If multiple policies are set, you should choose between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> OR <code class="docutils literal notranslate"><span class="pre">INTERSECTION</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p></li>
+<li><p><strong>table</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table.</p></li>
 </ul>
 </dd>
 </dl>

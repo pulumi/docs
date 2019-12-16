@@ -627,7 +627,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.service_account.Key">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">private_key_type=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">service_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Key" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_type=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">service_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages service account key-pairs, which allow the user to establish identity of a service account outside of GCP. For more information, see <a class="reference external" href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys">API</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -638,10 +638,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Valid values are listed at
 <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm">ServiceAccountPrivateKeyType</a>
 (only used on create)</p></li>
-<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional PGP key to encrypt the resulting private
-key material. Only used when creating or importing a new key pair. May either be
-a base64-encoded public key or a <code class="docutils literal notranslate"><span class="pre">keybase:keybaseusername</span></code> string for looking up
-in Vault.</p></li>
 <li><p><strong>private_key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.</p></li>
 <li><p><strong>public_key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The output format of the public key requested. X509_PEM is the default output format.</p></li>
 <li><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Service account id of the Key Pair. This can be a string in the format
@@ -669,35 +665,10 @@ Valid values are listed at
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.service_account.Key.pgp_key">
-<code class="sig-name descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Key.pgp_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional PGP key to encrypt the resulting private
-key material. Only used when creating or importing a new key pair. May either be
-a base64-encoded public key or a <code class="docutils literal notranslate"><span class="pre">keybase:keybaseusername</span></code> string for looking up
-in Vault.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.service_account.Key.private_key">
 <code class="sig-name descname">private_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Key.private_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
-service account keys through the CLI or web console. This is only populated when creating a new key, and when no
-<code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is provided.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.service_account.Key.private_key_encrypted">
-<code class="sig-name descname">private_key_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Key.private_key_encrypted" title="Permalink to this definition">¶</a></dt>
-<dd><p>The private key material, base 64 encoded and
-encrypted with the given <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code>. This is only populated when creating a new
-key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.service_account.Key.private_key_fingerprint">
-<code class="sig-name descname">private_key_fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Key.private_key_fingerprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MD5 public key fingerprint for the encrypted
-private key. This is only populated when creating a new key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</p>
+service account keys through the CLI or web console. This is only populated when creating a new key.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -741,7 +712,7 @@ A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: 
 
 <dl class="method">
 <dt id="pulumi_gcp.service_account.Key.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">private_key_encrypted=None</em>, <em class="sig-param">private_key_fingerprint=None</em>, <em class="sig-param">private_key_type=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">service_account_id=None</em>, <em class="sig-param">valid_after=None</em>, <em class="sig-param">valid_before=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Key.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">private_key_type=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">service_account_id=None</em>, <em class="sig-param">valid_after=None</em>, <em class="sig-param">valid_before=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -756,18 +727,8 @@ Valid values are listed at
 (only used on create)</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name used for this key pair</p></li>
-<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional PGP key to encrypt the resulting private
-key material. Only used when creating or importing a new key pair. May either be
-a base64-encoded public key or a <code class="docutils literal notranslate"><span class="pre">keybase:keybaseusername</span></code> string for looking up
-in Vault.</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
-service account keys through the CLI or web console. This is only populated when creating a new key, and when no
-<code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is provided.</p></li>
-<li><p><strong>private_key_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key material, base 64 encoded and
-encrypted with the given <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code>. This is only populated when creating a new
-key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</p></li>
-<li><p><strong>private_key_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 public key fingerprint for the encrypted
-private key. This is only populated when creating a new key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</p></li>
+service account keys through the CLI or web console. This is only populated when creating a new key.</p></li>
 <li><p><strong>private_key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key, base64 encoded</p></li>
 <li><p><strong>public_key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The output format of the public key requested. X509_PEM is the default output format.</p></li>

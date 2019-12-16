@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.dns"></span><dl class="class">
 <dt id="pulumi_gcp.dns.AwaitableGetManagedZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">AwaitableGetManagedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.AwaitableGetManagedZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">AwaitableGetManagedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.AwaitableGetManagedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.dns.GetManagedZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">GetManagedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.GetManagedZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">GetManagedZoneResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.GetManagedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagedZone.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.GetManagedZoneResult.description">
@@ -40,6 +40,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The list of nameservers that will be authoritative for this
 domain. Use NS records to redirect from your DNS provider to these names,
 thus making Google Cloud DNS authoritative for this zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.dns.GetManagedZoneResult.visibility">
+<code class="sig-name descname">visibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetManagedZoneResult.visibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone’s visibility: public zones are exposed to the Internet,
+while private zones are visible only to Virtual Private Cloud resources.</p>
 </dd></dl>
 
 <dl class="attribute">

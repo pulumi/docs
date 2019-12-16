@@ -41,25 +41,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_gcp.kms.CryptoKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">CryptoKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_ring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">version_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">CryptoKey</span></code> represents a logical key that can be used for cryptographic operations.</p>
-<blockquote>
-<div><p><strong>Note:</strong> CryptoKeys cannot be deleted from Google Cloud Platform.
-Destroying a CryptoKey will remove it from state
-and delete all CryptoKeyVersions, rendering the key unusable, but <em>will
-not delete the resource on the server.</em> When this provider destroys these keys,
-any data previously encrypted with these keys will be irrecoverable.
-For this reason, it is strongly recommended that you add lifecycle hooks
-to the resource to prevent accidental destruction.</p>
-</div></blockquote>
-<p>To get more information about CryptoKey, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/kms/docs/creating-keys#create_a_key">Creating a key</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a CryptoKey resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -997,7 +979,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.Registry">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">event_notification_config=None</em>, <em class="sig-param">event_notification_configs=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">log_level=None</em>, <em class="sig-param">mqtt_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state_notification_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">event_notification_configs=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">log_level=None</em>, <em class="sig-param">mqtt_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state_notification_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>Creates a device registry in Google’s Cloud IoT Core platform. For more information see</p>
 </div></blockquote>
@@ -1009,7 +991,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of public key certificates to authenticate devices. Structure is documented below.</p></li>
-<li><p><strong>event_notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use <code class="docutils literal notranslate"><span class="pre">event_notification_configs</span></code> instead.</p></li>
 <li><p><strong>event_notification_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of configurations for event notification, such as
 PubSub topics to publish device events to. Structure is documented below.</p></li>
 <li><p><strong>http_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Activate or deactivate HTTP. Structure is documented below.</p></li>
@@ -1030,10 +1011,6 @@ Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-</ul>
-<p>The <strong>event_notification_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsub_topic_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>event_notification_configs</strong> object supports the following:</p>
 <ul class="simple">
@@ -1066,15 +1043,6 @@ Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.Registry.event_notification_config">
-<code class="sig-name descname">event_notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.Registry.event_notification_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use <code class="docutils literal notranslate"><span class="pre">event_notification_configs</span></code> instead.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsub_topic_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -1137,7 +1105,7 @@ Changing this forces a new resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.kms.Registry.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">event_notification_config=None</em>, <em class="sig-param">event_notification_configs=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">log_level=None</em>, <em class="sig-param">mqtt_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state_notification_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">event_notification_configs=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">log_level=None</em>, <em class="sig-param">mqtt_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state_notification_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Registry resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1147,7 +1115,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of public key certificates to authenticate devices. Structure is documented below.</p></li>
-<li><p><strong>event_notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use <code class="docutils literal notranslate"><span class="pre">event_notification_configs</span></code> instead.</p></li>
 <li><p><strong>event_notification_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of configurations for event notification, such as
 PubSub topics to publish device events to. Structure is documented below.</p></li>
 <li><p><strong>http_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Activate or deactivate HTTP. Structure is documented below.</p></li>
@@ -1168,10 +1135,6 @@ Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-</ul>
-<p>The <strong>event_notification_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsub_topic_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>event_notification_configs</strong> object supports the following:</p>
 <ul class="simple">
@@ -1339,16 +1302,7 @@ decrypt the provided ciphertext. This is represented by the format
 <dl class="function">
 <dt id="pulumi_gcp.kms.get_kms_secret_ciphertext">
 <code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">get_kms_secret_ciphertext</code><span class="sig-paren">(</span><em class="sig-param">crypto_key=None</em>, <em class="sig-param">plaintext=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.get_kms_secret_ciphertext" title="Permalink to this definition">¶</a></dt>
-<dd><p>This data source allows you to encrypt data with Google Cloud KMS and use the
-ciphertext within your resource definitions.</p>
-<p>For more information see
-<a class="reference external" href="https://cloud.google.com/kms/docs/encrypt-decrypt">the official documentation</a>.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Using this data source will allow you to conceal secret data within your
-resource definitions, but it does not take care of protecting that data in the
-logging output, plan output, or state output.  Please take care to secure your secret
-data outside of resource definitions.</p>
-</div></blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

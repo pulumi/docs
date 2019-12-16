@@ -319,7 +319,7 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 <li><p><strong>launch_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code> instead.</p></li>
-<li><p><strong>max_instance_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of time, in seconds, that an instance can be in service</p></li>
+<li><p><strong>max_instance_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.</p></li>
 <li><p><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the auto scale group.</p></li>
 <li><p><strong>metrics_granularity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The granularity to associate with the metrics to collect. The only valid value is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>.</p></li>
 <li><p><strong>min_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this causes this provider to wait for
@@ -517,7 +517,7 @@ group names. Only valid for classic load balancers. For ALBs, use <code class="d
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.max_instance_lifetime">
 <code class="sig-name descname">max_instance_lifetime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.max_instance_lifetime" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum amount of time, in seconds, that an instance can be in service</p>
+<dd><p>The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -719,7 +719,7 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 <li><p><strong>launch_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code> instead.</p></li>
-<li><p><strong>max_instance_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of time, in seconds, that an instance can be in service</p></li>
+<li><p><strong>max_instance_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.</p></li>
 <li><p><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the auto scale group.</p></li>
 <li><p><strong>metrics_granularity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The granularity to associate with the metrics to collect. The only valid value is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>.</p></li>
 <li><p><strong>min_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this causes this provider to wait for

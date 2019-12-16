@@ -20,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gcp.container.AwaitableGetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gcp.container.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 <a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters">the API reference</a>.</p>
@@ -49,16 +49,9 @@ plaintext. <a class="reference external" href="https://www.terraform.io/docs/sta
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will only be created in these zones. <code class="docutils literal notranslate"><span class="pre">additional_zones</span></code> has been
-deprecated in favour of <code class="docutils literal notranslate"><span class="pre">node_locations</span></code>.</p></li>
 <li><p><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
 Structure is documented below.</p></li>
-<li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
+<li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p></li>
 <li><p><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
@@ -69,11 +62,9 @@ on the current needs of the cluster’s workload. See the
 for more details. Structure is documented below.</p>
 </p></li>
 <li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the Kubernetes pods
-in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
-automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
-work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
-not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
-cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p></li>
+in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
+automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
+only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p></li>
 <li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
 Structure is documented below.</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default maximum number of pods
@@ -103,20 +94,19 @@ number of nodes per zone. Must be set if <code class="docutils literal notransla
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
 set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
-This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
-Structure is documented below. This field is marked to use <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">Attribute as Block</a>
-in order to support explicit removal with <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
-</p></li>
+<li><p><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of cluster IP allocation for
+VPC-native clusters. Adding this block enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">IP aliasing</a>,
+making the cluster VPC-native instead of routes-based. Structure is documented
+below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
 zone (such as <code class="docutils literal notranslate"><span class="pre">us-central1-a</span></code>), the cluster will be a zonal cluster with a
 single cluster master. If you specify a region (such as <code class="docutils literal notranslate"><span class="pre">us-west1</span></code>), the
 cluster will be a regional cluster with multiple masters spread across zones in
-the region, and with default node locations in those zones as well.</p></li>
+the region, and with default node locations in those zones as well</p></li>
 <li><p><strong>logging_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The logging service that the cluster should
 write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>maintenance_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The maintenance policy to use for the cluster. Structure is
 documented below.</p></li>
 <li><p><strong>master_auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The authentication information for accessing the
@@ -143,7 +133,7 @@ Automatically send metrics from pods in the cluster to the Google Cloud Monitori
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
 <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code></p></li>
+Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster, unique within the project and
 location.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
@@ -193,8 +183,8 @@ setting <code class="docutils literal notranslate"><span class="pre">initial_nod
 <li><p><strong>resource_usage_export_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine subnetwork in
-which the cluster’s instances are launched.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
+subnetwork in which the cluster’s instances are launched.</p></li>
 <li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
 Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
@@ -204,9 +194,6 @@ Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 </p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the cluster master and nodes
-should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -233,11 +220,6 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubernetesDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
-</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -250,6 +232,12 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 </ul>
 <p>The <strong>cluster_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
@@ -268,12 +256,8 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createSubnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useIpAliases</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>maintenance_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -442,6 +426,12 @@ this provider. Structure is documented below.</p>
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster’s zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
@@ -453,6 +443,7 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -481,18 +472,6 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
-<dt id="pulumi_gcp.container.Cluster.additional_zones">
-<code class="sig-name descname">additional_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.additional_zones" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will only be created in these zones. <code class="docutils literal notranslate"><span class="pre">additional_zones</span></code> has been
-deprecated in favour of <code class="docutils literal notranslate"><span class="pre">node_locations</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.addons_config">
 <code class="sig-name descname">addons_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.addons_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for addons supported by GKE.
@@ -519,11 +498,6 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubernetesDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-</ul>
-</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -535,7 +509,7 @@ Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.authenticator_groups_config">
 <code class="sig-name descname">authenticator_groups_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.authenticator_groups_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Configuration for the
+<dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
@@ -553,6 +527,12 @@ on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
 for more details. Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
@@ -568,11 +548,9 @@ for more details. Structure is documented below.</p>
 <dt id="pulumi_gcp.container.Cluster.cluster_ipv4_cidr">
 <code class="sig-name descname">cluster_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address range of the Kubernetes pods
-in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
-automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
-work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
-not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
-cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p>
+in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
+automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
+only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -672,19 +650,15 @@ to the cluster.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.ip_allocation_policy">
 <code class="sig-name descname">ip_allocation_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.ip_allocation_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
-This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
-Structure is documented below. This field is marked to use <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">Attribute as Block</a>
-in order to support explicit removal with <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
+<dd><p>Configuration of cluster IP allocation for
+VPC-native clusters. Adding this block enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">IP aliasing</a>,
+making the cluster VPC-native instead of routes-based. Structure is documented
+below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createSubnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useIpAliases</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -696,7 +670,7 @@ master will be created, as well as the default node location. If you specify a
 zone (such as <code class="docutils literal notranslate"><span class="pre">us-central1-a</span></code>), the cluster will be a zonal cluster with a
 single cluster master. If you specify a region (such as <code class="docutils literal notranslate"><span class="pre">us-west1</span></code>), the
 cluster will be a regional cluster with multiple masters spread across zones in
-the region, and with default node locations in those zones as well.</p>
+the region, and with default node locations in those zones as well</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -704,7 +678,7 @@ the region, and with default node locations in those zones as well.</p>
 <code class="sig-name descname">logging_service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.logging_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The logging service that the cluster should
 write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -799,7 +773,7 @@ Automatically send metrics from pods in the cluster to the Google Cloud Monitori
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
 <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code></p>
+Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -979,6 +953,12 @@ this provider. Structure is documented below.</p>
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster’s zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -1016,6 +996,7 @@ clusters with private nodes. Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -1082,8 +1063,8 @@ notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.subnetwork">
 <code class="sig-name descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.subnetwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name or self_link of the Google Compute Engine subnetwork in
-which the cluster’s instances are launched.</p>
+<dd><p>The name or self_link of the Google Compute Engine
+subnetwork in which the cluster’s instances are launched.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1109,17 +1090,9 @@ Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.container.Cluster.zone">
-<code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone that the cluster master and nodes
-should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_gcp.container.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1128,16 +1101,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will only be created in these zones. <code class="docutils literal notranslate"><span class="pre">additional_zones</span></code> has been
-deprecated in favour of <code class="docutils literal notranslate"><span class="pre">node_locations</span></code>.</p></li>
 <li><p><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
 Structure is documented below.</p></li>
-<li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) Configuration for the
+<li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
 </p></li>
@@ -1149,11 +1115,9 @@ on the current needs of the cluster’s workload. See the
 for more details. Structure is documented below.</p>
 </p></li>
 <li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the Kubernetes pods
-in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
-automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
-work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
-not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
-cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p></li>
+in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
+automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
+only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p></li>
 <li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
 Structure is documented below.</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The default maximum number of pods
@@ -1187,20 +1151,20 @@ set this to a value of at least <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>instance_group_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instance group URLs which have been assigned
 to the cluster.</p></li>
-<li><p><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
-This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
-Structure is documented below. This field is marked to use <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">Attribute as Block</a>
-in order to support explicit removal with <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
+<li><p><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration of cluster IP allocation for
+VPC-native clusters. Adding this block enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">IP aliasing</a>,
+making the cluster VPC-native instead of routes-based. Structure is documented
+below.</p>
 </p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
 zone (such as <code class="docutils literal notranslate"><span class="pre">us-central1-a</span></code>), the cluster will be a zonal cluster with a
 single cluster master. If you specify a region (such as <code class="docutils literal notranslate"><span class="pre">us-west1</span></code>), the
 cluster will be a regional cluster with multiple masters spread across zones in
-the region, and with default node locations in those zones as well.</p></li>
+the region, and with default node locations in those zones as well</p></li>
 <li><p><strong>logging_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The logging service that the cluster should
 write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>maintenance_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The maintenance policy to use for the cluster. Structure is
 documented below.</p></li>
 <li><p><strong>master_auth</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The authentication information for accessing the
@@ -1231,7 +1195,7 @@ Automatically send metrics from pods in the cluster to the Google Cloud Monitori
 VM metrics will be collected by Google Compute Engine regardless of this setting
 Available options include
 <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com</span></code></p></li>
+Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster, unique within the project and
 location.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
@@ -1291,8 +1255,8 @@ cluster, in <a class="reference external" href="http://en.wikipedia.org/wiki/Cla
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>). Service addresses are typically put in the last
 <code class="docutils literal notranslate"><span class="pre">/16</span></code> from the container CIDR.</p>
 </p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine subnetwork in
-which the cluster’s instances are launched.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
+subnetwork in which the cluster’s instances are launched.</p></li>
 <li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
 Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
@@ -1302,9 +1266,6 @@ Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 </p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the cluster master and nodes
-should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1331,11 +1292,6 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubernetesDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
-</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -1348,6 +1304,12 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 </ul>
 <p>The <strong>cluster_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
@@ -1366,12 +1328,8 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createSubnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useIpAliases</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>maintenance_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -1540,6 +1498,12 @@ this provider. Structure is documented below.</p>
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster’s zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
@@ -1551,6 +1515,7 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -1632,7 +1597,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEngineVersions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version">
@@ -1698,7 +1663,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.NodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">upgrade_settings=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">the API reference</a>.</p>
@@ -1709,7 +1674,7 @@ and <a class="reference external" href="https://cloud.google.com/container-engin
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p></li>
-<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">location</span></code> provided for zonal clusters.</p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
 this will force recreation of the resource.</p></li>
@@ -1736,16 +1701,12 @@ cluster’s zone for zonal clusters. If unspecified, the cluster-level
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as this provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
 <code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the cluster resides. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1803,6 +1764,11 @@ has been deprecated in favor of <code class="docutils literal notranslate"><span
 </ul>
 </li>
 </ul>
+<p>The <strong>upgrade_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -1820,7 +1786,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.cluster">
 <code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p>
+<dd><p>The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">location</span></code> provided for zonal clusters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1940,13 +1906,6 @@ the provider-configured project will be used.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.container.NodePool.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version for the nodes in this pool. Note that if this field
@@ -1957,16 +1916,9 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.container.NodePool.zone">
-<code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone in which the cluster resides. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_gcp.container.NodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">upgrade_settings=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1977,7 +1929,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p></li>
-<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">location</span></code> provided for zonal clusters.</p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
 this will force recreation of the resource.</p></li>
@@ -2004,16 +1956,12 @@ cluster’s zone for zonal clusters. If unspecified, the cluster-level
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as this provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
 <code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the cluster resides. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
-has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2070,6 +2018,11 @@ has been deprecated in favor of <code class="docutils literal notranslate"><span
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>upgrade_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown</a>.</p>
@@ -2141,8 +2094,16 @@ favour of <code class="docutils literal notranslate"><span class="pre">location<
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_engine_versions">
-<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_engine_versions</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.</p>
+<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_engine_versions</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>subcategory: “Kubernetes (Container) Engine”
+layout: “google”
+page_title: “Google: container.getEngineVersions”
+sidebar_current: “docs-google-datasource-container-versions”
+description: <a href="#id32"><span class="problematic" id="id33">|</span></a>-</p>
+<blockquote>
+<div><p>Provides lists of available Google Kubernetes Engine versions for masters and nodes.</p>
+</div></blockquote>
+<p>Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.</p>
 <blockquote>
 <div><p>If you are using the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource with a
 regional cluster, ensure that you have provided a region as the <code class="docutils literal notranslate"><span class="pre">location</span></code> to
