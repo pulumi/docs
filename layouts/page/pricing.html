@@ -1,29 +1,34 @@
 {{ define "hero" }}
     <header class="header-hero">
-        <div class="container mx-auto text-center flex-col max-w-2xl">
+        <div class="container mx-auto text-center flex-col max-w-5xl">
             <h1>Pulumi for every team and individual.</h1>
             <div class="container mx-auto lg:flex justify-center mt-8">
-                <div class="px-8 lg:w-1/2 text-center flex flex-col text-gray-300">
-                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Open source</div>
+                <div class="px-8 lg:w-1/3 text-center flex flex-col text-gray-300">
+                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Open source.</div>
                     <p>
-                        Pulumi is an
+                        Pulumi's SDK is
                         <a href="https://github.com/pulumi/pulumi" class="text-orange-500 hover:text-orange-400 font-bold">
-                            open source project</a>.
-                        The <a href="#community-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Community Edition</a> is available for free,
-                        or you can
+                            open source</a>. You can use it with any service edition listed below or
                         <a href="{{ relref . "/docs/intro/concepts/state#self-managed-backend" }}"
                             class="text-orange-500 hover:text-orange-400 font-bold">
-                            run Pulumi offline</a> and manage state yourself.
+                            run it offline</a>.
                     </p>
                 </div>
-                <div class="px-8 lg:w-1/2 text-center flex flex-col">
+                <div class="px-8 lg:w-1/3 text-center flex flex-col">
+                    <div class="text-lg uppercase rounded text-blue-300 font-bold">Free for individuals.</div>
+                    <p>
+                        The <a href="#community-edition" class="text-orange-500 hover:text-orange-400 font-bold">
+                            Community Edition</a> is available for free unlimited usage,
+                            and makes storing your project state easy.
+                    </p>
+                </div>
+                <div class="px-8 lg:w-1/3 text-center flex flex-col">
                     <div class="text-lg uppercase rounded text-blue-300 font-bold">Great for teams.</div>
                     <p>
                         <a href="#team-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Team Starter and Pro</a> help teams collaborate on shared projects.
+                            Team Starter and Pro</a> give you shared projects.
                         <a href="#enterprise-edition" class="text-orange-500 hover:text-orange-400 font-bold">
-                            Pulumi Enterprise</a> adds security controls and self-host options.
+                            Pulumi Enterprise</a> adds security and self-host options.
                     </p>
                 </div>
             </div>
@@ -32,7 +37,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0 justify-center text-center">
+    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0 justify-center text-center" id="editions">
         <div class="container mx-auto lg:flex justify-center">
             <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="community-edition">
                 <div class="text-center flex flex-col justify-between h-full">
