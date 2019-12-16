@@ -84,6 +84,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="licensemanager/">licensemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lightsail/">lightsail</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macie/">macie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediaconvert/">mediaconvert</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediapackage/">mediapackage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediastore/">mediastore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mq/">mq</a></li>

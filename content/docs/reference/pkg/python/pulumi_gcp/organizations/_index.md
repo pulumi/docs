@@ -45,17 +45,12 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">app_engines=None</em>, <em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">policy_etag=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
-<dt id="pulumi_gcp.organizations.AwaitableGetProjectServicesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectServicesResult</code><span class="sig-paren">(</span><em class="sig-param">disable_on_destroy=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectServicesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -349,7 +344,7 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOrganization.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.create_time">
@@ -376,6 +371,12 @@ referencing from a resource that supports IAM.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetOrganizationResult.org_id">
+<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.org_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Organization ID.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -385,23 +386,11 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">app_engines=None</em>, <em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">policy_etag=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetProjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pulumi_gcp.organizations.GetProjectServicesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectServicesResult</code><span class="sig-paren">(</span><em class="sig-param">disable_on_destroy=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectServicesResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>A collection of values returned by getProjectServices.</p>
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.GetProjectServicesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectServicesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -922,6 +911,116 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.organizations.IamAuditConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IamAuditConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a IamAuditConfig resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
+<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to manage the audit logging config.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>audit_log_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.audit_log_configs">
+<code class="sig-name descname">audit_log_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.org_id">
+<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.org_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The numeric ID of the organization in which you want to manage the audit logging config.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.service">
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IamAuditConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
+<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to manage the audit logging config.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>audit_log_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_audit_config.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.organizations.IamAuditConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.organizations.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">boolean_policy=None</em>, <em class="sig-param">constraint=None</em>, <em class="sig-param">list_policy=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">restore_policy=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of Organization policies for a Google Organization. For more information see
@@ -1400,9 +1499,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_open_id_user_info</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_open_id_user_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get OpenID userinfo about the credentials used with the Google provider,
 specifically the email.</p>
-<p>When the <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/auth/userinfo.email</span></code> scope is enabled in
-your provider block, this datasource enables you to export the email of the
-account you’ve authenticated the provider with; this can be used alongside
+<p>This datasource enables you to export the email of the account you’ve
+authenticated the provider with; this can be used alongside
 <code class="docutils literal notranslate"><span class="pre">data.google_client_config</span></code>’s <code class="docutils literal notranslate"><span class="pre">access_token</span></code> to perform OpenID Connect
 authentication with GKE and configure an RBAC role for the email used.</p>
 <blockquote>
@@ -1453,7 +1551,7 @@ defining a binding to be included in the policy document. Multiple
 </dl>
 <p>The <strong>audit_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">auditLogConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A nested block that defines the operations you’d like to log.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">audit_log_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A nested block that defines the operations you’d like to log.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the identities that are exempt from these types of logging operations. Follows the same format of the <code class="docutils literal notranslate"><span class="pre">members</span></code> array for <code class="docutils literal notranslate"><span class="pre">binding</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines the logging level. <code class="docutils literal notranslate"><span class="pre">DATA_READ</span></code>, <code class="docutils literal notranslate"><span class="pre">DATA_WRITE</span></code> and <code class="docutils literal notranslate"><span class="pre">ADMIN_READ</span></code> capture different types of events. See <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig">the audit configuration documentation</a> for more details.</p></li>
@@ -1520,22 +1618,6 @@ For more information see
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_gcp.organizations.get_project_services">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_project_services</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_project_services" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get details on the enabled project services.</p>
-<p>For a list of services available, visit the
-<a class="reference external" href="https://console.cloud.google.com/apis/library">API library page</a> or run <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">services</span> <span class="pre">list</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project ID.</p>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_services.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_services.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

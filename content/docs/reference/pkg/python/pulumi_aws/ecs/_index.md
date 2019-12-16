@@ -34,25 +34,180 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ecs.CapacityProvider">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">CapacityProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scaling_group_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a CapacityProvider resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.CapacityProvider.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) that identifies the capacity provider.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.CapacityProvider.auto_scaling_group_provider">
+<code class="sig-name descname">auto_scaling_group_provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.auto_scaling_group_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested argument defining the provider for the ECS auto scaling group. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.CapacityProvider.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the capacity provider.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.CapacityProvider.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ecs.CapacityProvider.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_scaling_group_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CapacityProvider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) that identifies the capacity provider.</p></li>
+<li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ecs.CapacityProvider.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ecs.CapacityProvider.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ecs.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity_providers=None</em>, <em class="sig-param">default_capacity_provider_strategies=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS cluster.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">setting</span></code> configuration block supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the setting to manage. Valid values: <code class="docutils literal notranslate"><span class="pre">containerInsights</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> -  (Required) The value to assign to the setting. Value values are <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
 </ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">default_capacity_provider_strategy</span></code> configuration block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
+<li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_capacity_provider_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
@@ -65,6 +220,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ecs.Cluster.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) that identifies the cluster</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.Cluster.capacity_providers">
+<code class="sig-name descname">capacity_providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.capacity_providers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.Cluster.default_capacity_provider_strategies">
+<code class="sig-name descname">default_capacity_provider_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.default_capacity_provider_strategies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -91,7 +263,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_aws.ecs.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">capacity_providers=None</em>, <em class="sig-param">default_capacity_provider_strategies=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -101,12 +273,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) that identifies the cluster</p></li>
+<li><p><strong>capacity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of short names or full Amazon Resource Names (ARNs) of one or more capacity providers to associate with the cluster. Valid values also include <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE_SPOT</span></code>.</p></li>
+<li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_capacity_provider_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
@@ -349,12 +529,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.Service">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">deployment_controller=None</em>, <em class="sig-param">deployment_maximum_percent=None</em>, <em class="sig-param">deployment_minimum_healthy_percent=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">enable_ecs_managed_tags=None</em>, <em class="sig-param">health_check_grace_period_seconds=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_configuration=None</em>, <em class="sig-param">ordered_placement_strategies=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">propagate_tags=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_registries=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">wait_for_steady_state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity_provider_strategies=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">deployment_controller=None</em>, <em class="sig-param">deployment_maximum_percent=None</em>, <em class="sig-param">deployment_minimum_healthy_percent=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">enable_ecs_managed_tags=None</em>, <em class="sig-param">health_check_grace_period_seconds=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_configuration=None</em>, <em class="sig-param">ordered_placement_strategies=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">propagate_tags=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_registries=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">wait_for_steady_state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p><strong>Note:</strong> To prevent a race condition during service deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">iam.RolePolicy</span></code>; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DRAINING</span></code> state.</p>
 </div></blockquote>
 <p>Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).</p>
 <p>See <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">ECS Services section in AWS developer guide</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">capacity_provider_strategy</span></code> configuration block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+</ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">deployment_controller</span></code> configuration block supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Type of deployment controller. Valid values: <code class="docutils literal notranslate"><span class="pre">CODE_DEPLOY</span></code>, <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">ECS</span></code>.</p></li>
@@ -408,6 +594,7 @@ Guide</a>.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p></li>
 <li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an ECS cluster</p></li>
 <li><p><strong>deployment_controller</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing deployment controller configuration. Defined below.</p></li>
 <li><p><strong>deployment_maximum_percent</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The upper limit (as a percentage of the service’s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.</p></li>
@@ -433,6 +620,12 @@ Guide</a>.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -470,6 +663,17 @@ Guide</a>.</p></li>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.Service.capacity_provider_strategies">
+<code class="sig-name descname">capacity_provider_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.capacity_provider_strategies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.cluster">
 <code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.cluster" title="Permalink to this definition">¶</a></dt>
@@ -627,7 +831,7 @@ Guide</a>.</p></li>
 
 <dl class="method">
 <dt id="pulumi_aws.ecs.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">deployment_controller=None</em>, <em class="sig-param">deployment_maximum_percent=None</em>, <em class="sig-param">deployment_minimum_healthy_percent=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">enable_ecs_managed_tags=None</em>, <em class="sig-param">health_check_grace_period_seconds=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_configuration=None</em>, <em class="sig-param">ordered_placement_strategies=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">propagate_tags=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_registries=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">wait_for_steady_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity_provider_strategies=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">deployment_controller=None</em>, <em class="sig-param">deployment_maximum_percent=None</em>, <em class="sig-param">deployment_minimum_healthy_percent=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">enable_ecs_managed_tags=None</em>, <em class="sig-param">health_check_grace_period_seconds=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_configuration=None</em>, <em class="sig-param">ordered_placement_strategies=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">propagate_tags=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_registries=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">wait_for_steady_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -636,6 +840,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p></li>
 <li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an ECS cluster</p></li>
 <li><p><strong>deployment_controller</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing deployment controller configuration. Defined below.</p></li>
 <li><p><strong>deployment_maximum_percent</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The upper limit (as a percentage of the service’s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.</p></li>
@@ -662,6 +867,12 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>

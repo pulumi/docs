@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.monitoring"></span><dl class="class">
 <dt id="pulumi_gcp.monitoring.AlertPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AlertPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">combiner=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">documentation=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">notification_channels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AlertPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">combiner=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">documentation=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">notification_channels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a AlertPolicy resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -91,7 +91,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.monitoring.AlertPolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">combiner=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">creation_record=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">documentation=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_channels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">combiner=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">creation_record=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">documentation=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_channels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AlertPolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -380,7 +380,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">UptimeCheckConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">internal_checkers=None</em>, <em class="sig-param">is_internal=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">UptimeCheckConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a UptimeCheckConfig resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -411,14 +411,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">validateSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<p>The <strong>internal_checkers</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcpZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerProjectId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <p>The <strong>monitored_resource</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
@@ -445,7 +437,7 @@ If it is not provided, the provider project is used.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">internal_checkers=None</em>, <em class="sig-param">is_internal=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">uptime_check_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">uptime_check_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UptimeCheckConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -477,14 +469,6 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">validateSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
-<p>The <strong>internal_checkers</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcpZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerProjectId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>monitored_resource</strong> object supports the following:</p>
 <ul class="simple">
