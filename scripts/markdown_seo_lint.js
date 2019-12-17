@@ -255,8 +255,8 @@ const opts = {
         MD046: false,
         // Allow indents on unordered lists to be 4 spaces instead of 2.
         MD007: { indent: 4 },
-        // Allow duplicate heading content inside child headings.
-        MD024: { siblings_only: true },
+        // Allow duplicate headings.
+        MD024: false,
         // Allow headings to be indendented.
         MD023: false,
     },
