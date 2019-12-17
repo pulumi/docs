@@ -1,6 +1,6 @@
 ---
 title: CircleCI
-
+meta_desc: This page details how to use CircleCI CI/CD to deploy Pulumi stacks.
 menu:
     userguides:
         parent: cont_delivery
@@ -28,7 +28,7 @@ command-line tool, so that you can just focus on the specific steps to deploy yo
 your CircleCI configuration.
 
 > For the most up-to-date information about Pulumi orbs, refer to the Pulumi page within the CircleCI
-> orb registry at https://circleci.com/orbs/registry/orb/pulumi/pulumi.
+> orb registry at [https://circleci.com/orbs/registry/orb/pulumi/pulumi](https://circleci.com/orbs/registry/orb/pulumi/pulumi).
 
 The following CircleCI `config.yaml` shows the Pulumi orbs in-action. It references the
 `pulumi/pulumi@1.0.0` orb package, and then downloads starts Pulumi using the  `pulumi/login` orb,

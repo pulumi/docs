@@ -1,6 +1,6 @@
 ---
-title: Jenkins
-
+title: Jenkins Pipeline
+meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample app to Azure using Pulumi.
 menu:
     userguides:
         parent: cont_delivery
@@ -87,7 +87,7 @@ In order to use the Node JS plugin, you must first ensure you add at least one i
 ```groovy
 pipeline {
     agent any
-    
+
     stages {
         stage ("Checkout code") {
             steps {
@@ -100,14 +100,14 @@ pipeline {
                     branch: "master"
             }
         }
-        
+
         stage ("Install dependencies") {
             steps {
                 sh "curl -fsSL https://get.pulumi.com | sh"
                 sh "$HOME/.pulumi/bin/pulumi version"
             }
         }
-        
+
         stage ("Pulumi up") {
             steps {
                 // The value "node 8.9.4" is the configuration name in our Global Tool Configuration setup for node.

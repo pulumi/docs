@@ -1,6 +1,7 @@
 ---
 title: Other
-
+meta_desc: This page walks-through how you can modify the Pulumi CLI to support your own
+           CI system or perhaps even update an existing one.
 menu:
     userguides:
         parent: cont_delivery
@@ -80,10 +81,10 @@ That's it! Send us a new [PR](https://github.com/pulumi/pulumi/pulls) in the [`p
 
 If the CI system you are using is not currently detected by Pulumi, you can set the `PULUMI_CI_SYSTEM` environment variable. Then the following environment variables can be used to surface CI system metadata for an update.
 
-* `PULUMI_CI_SYSTEM`
-* `PULUMI_CI_BUILD_ID`
-* `PULUMI_CI_BUILD_TYPE`
-* `PULUMI_CI_BUILD_URL`
-* `PULUMI_CI_PULL_REQUEST_SHA`
+- `PULUMI_CI_SYSTEM`
+- `PULUMI_CI_BUILD_ID`
+- `PULUMI_CI_BUILD_TYPE`
+- `PULUMI_CI_BUILD_URL`
+- `PULUMI_CI_PULL_REQUEST_SHA`
 
 You can also find these variables in the [`generic.go`](https://github.com/pulumi/pulumi/blob/master/pkg/util/ciutil/generic.go) file in the [`pkg/util/ciutil`](https://github.com/pulumi/pulumi/tree/master/pkg/util/ciutil) folder.

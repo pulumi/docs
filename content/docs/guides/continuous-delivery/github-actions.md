@@ -1,6 +1,7 @@
 ---
 title: Pulumi GitHub Actions
-
+meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to your cloud of
+           choice, using nothing but code in your favorite language and GitHub.
 menu:
     userguides:
         parent: cont_delivery
@@ -19,7 +20,7 @@ between different environments by merging or directly committing changes.
 
 Let's see how to get started -- it's easy!
 
-# Pre-Requisites
+## Pre-Requisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
 haven't already). This guide also assumes you've reviewed the [GitHub Actions
@@ -34,7 +35,7 @@ for it. There are three ways to do this:
 3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to
    select a template
 
-# Creating a Workflow
+## Creating a Workflow
 
 Although the full power of the Pulumi CLI is available to use with GitHub Actions, we
 recommend starting with our standard workflow, which consists of two workflow files, each
@@ -45,12 +46,12 @@ triggered by common GitHub events:
 2. **Pulumi Up** runs `pulumi up` on the target branch, in response to a commit on that
    branch.
 
-## Committing the Workflow Files
+### Committing the Workflow Files
 
 Let's get started by adding these two new workflow files to the GitHub repository
 containing your Pulumi project.
 
-### The pull_request Workflow File
+#### The pull_request Workflow File
 
 Add a new file to your Pulumi project repository at `.github/workflows/pull_request.yml`
 containing the following workflow definition, which instructs GitHub Actions to run
@@ -92,7 +93,7 @@ Lastly, we've also included a preliminary `Build` step, in order to to demonstra
 running a setup script in advance of Pulumi. Feel free to remove this step if it doesn't
 suit your particular situation.
 
-### The push Workflow File
+#### The push Workflow File
 
 Next, add a second workflow file at `.github/workflows/push.yml` containing the following
 definition, which tells GitHub to run `pulumi up` in response to a commit on the `master`
@@ -129,7 +130,7 @@ environment. Minimally, you'll need to supply a Pulumi access token to allow the
 communicate with the Pulumi Service on your behalf, and you'll probably want to provide
 credentials for communicating with your cloud provider as well.
 
-## Configuring Your Secrets
+### Configuring Your Secrets
 
 With your workflow files committed and pushed to GitHub, head on over
 to your repo's **Settings** tab, where you'll find the new **Secrets** area:
@@ -148,7 +149,7 @@ based on your provider of choice. For example:
 * `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}})
 * `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
 
-# Try It Out!
+## Try It Out!
 
 To try things out, simply create a Pull Request or commit, and you will see these new
 actions showing up in the usual GitHub Checks dialog, with a green checkmark if everything
@@ -165,7 +166,7 @@ For even better Pull Request integration, make sure to also [install our GitHub 
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
-# Pull Request Flow
+## Pull Request Flow
 
 If you are using Pulumi's GitHub Actions to preview infrastructure changes from Pull
 Requests, you may want to have Pulumi comment on those PRs so that you don't need to look
@@ -174,7 +175,7 @@ at the specific update logs to see if there were any changes.
 There are two ways to do this: using the Pulumi GitHub App (recommended), or configuring
 the GitHub Actions container directly.
 
-## Pulumi GitHub App
+### Pulumi GitHub App
 
 The [Pulumi GitHub App]({{< relref "github-app.md" >}}) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
@@ -194,7 +195,7 @@ Example comment when using the Pulumi GitHub App:
 
 ![Comment from the Pulumi GitHub App](/images/docs/github-actions/pr-comment-gh-app.png)
 
-## Comments By GitHub Actions
+### Comments By GitHub Actions
 
 If you don't want to use the Pulumi GitHub App, you can configure Pulumi's GitHub Actions
 to copy the output of the `pulumi` invocation on the Pull Request. This option doesn't
@@ -229,11 +230,11 @@ Example comment when using GitHub Actions directly:
 
 ![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
 
-# Configuration
+## Configuration
 
 You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
 
-## Using a Different Root Directory
+### Using a Different Root Directory
 
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root
 directory. If you are using a different root directory for your project, simply set the
@@ -256,7 +257,7 @@ jobs:
 
 This tells Pulumi that the project can be found underneath the repo's `infra` directory.
 
-## Branch Mappings
+### Branch Mappings
 
 Pulumi has a concept of *stacks*, which are isolated environments for your application
 (e.g., production, staging, or even distinct services). By default, the GitHub Action will
@@ -281,7 +282,7 @@ Note that you'll need to create these stacks [in the usual
 way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Console or CLI.
 After setting this up, everything will be on autopilot.
 
-# Demos and Examples
+## Demos and Examples
 
 To see some examples of this in action, see the following links:
 

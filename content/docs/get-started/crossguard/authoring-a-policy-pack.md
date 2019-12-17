@@ -38,6 +38,7 @@ On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -49,6 +50,7 @@ On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -70,6 +72,7 @@ pulumi policy new aws-typescript
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -122,18 +125,22 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
@@ -158,6 +165,7 @@ pulumi preview --policy-pack <path-to-policy-pack-directory>
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
+<!-- markdownlint-disable ul -->
     {{< highlight sh >}}
 Previewing update (dev):
 
@@ -168,6 +176,7 @@ Previewing update (dev):
 Resources:
     + 2 to create
 {{< /highlight >}}
+<!-- markdownlint-enable ul -->
 
 1. We can then edit the stack code to specify the ACL to be public-read.
 
@@ -179,6 +188,7 @@ Resources:
 
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
+<!-- markdownlint-disable ul -->
     {{< highlight sh >}}
 Previewing update (dev):
 
@@ -194,6 +204,7 @@ Diagnostics:
     mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
     You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
 {{< /highlight >}}
+<!-- markdownlint-enable ul -->
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 
