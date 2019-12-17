@@ -2,7 +2,7 @@
 title: "Multicloud Kubernetes: Running Apps Across EKS, AKS, and GKE"
 authors: ["mike-metral"]
 tags: ["Kubernetes","EKS", "AKS", "GKE"]
-meta_desc: "Use Pulumi to run Kubernetes apps using a multicloud strategy. In this post, we'll walk through how your apps can leverage multiple Kubernetes providers for deployments that can span AWS, Azure, and GCP."
+meta_desc: "Run Kubernetes apps using a multicloud strategy. We'll walk through how to leverage multiple Kubernetes providers for deployments across AWS, Azure, and GCP."
 date: "2019-08-14"
 
 meta_image: "multicloud.png"

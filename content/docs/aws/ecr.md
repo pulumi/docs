@@ -1,5 +1,5 @@
 ---
-title: "How to create an AWS Elastic Container Registry (ECR) service with Pulumi"
+title: "Create an AWS Elastic Container Registry (ECR) service"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-ecr.png"
 

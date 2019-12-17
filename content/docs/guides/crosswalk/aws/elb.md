@@ -1,5 +1,7 @@
 ---
 title: "AWS Elastic Load Balancing (ELB)"
+meta_desc: Pulumi Crosswalk for AWS ELB provides easy provisioning Application and Network Load Balancers, and easily
+           integrates with functionality of AWS other services.
 linktitle: Elastic Load Balancing (ELB)
 menu:
   userguides:
@@ -341,17 +343,17 @@ These options include:
   load balancer. By default, that entails forwarding traffic to a target group. However, additional options are
   available via the `ListenerDefaultActionArgs` type. You may provide multiple rules, each with a priority.
 
-    - `authenticateCognito`: Enable Cognito authentication for access through your load balancer. For more
+    * `authenticateCognito`: Enable Cognito authentication for access through your load balancer. For more
       information, see [Authenticate Users Using and Application Load Balancer](
       https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html).
 
-    - `authenticateOidc`: Authenticate access through your load balancer using an OpenID Connect (OIDC) compliant
+    * `authenticateOidc`: Authenticate access through your load balancer using an OpenID Connect (OIDC) compliant
       identity provider.
 
-    - `fixedResponse`: Return a custom HTTP response, rather than forwarding traffic. For details, see
+    * `fixedResponse`: Return a custom HTTP response, rather than forwarding traffic. For details, see
       [Fixed-Response Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#fixed-response-actions)
 
-    - `redirect`: Redirect from one URL to another. For details, see
+    * `redirect`: Redirect from one URL to another. For details, see
       [Redirect Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#redirect-actions)
 
 As an example of a custom action, the following load balancer ensures all HTTP traffic is redirected to HTTPS:
@@ -411,22 +413,22 @@ To create a target group manually, simply call `createTargetGroup` on the load b
 * `healthCheck`: Overrides the default health check behavior. The parameters available vary by target protocol
   and differ considerably between NLB and ALB. This includes:
 
-    - `interval`: The approximate amount of time, in seconds, between health checks of an individual
+    * `interval`: The approximate amount of time, in seconds, between health checks of an individual
        target. The range is between 5-300 seconds, and defaults to 30 seconds.
 
-    - `healthyThreshold`: The number of consecutive health checks successes required before considering an
+    * `healthyThreshold`: The number of consecutive health checks successes required before considering an
       unhealthy target healthy. The default is 3.
 
-    - `unhealthyThreshold`: The number of consecutive health check failures required before considering the target
+    * `unhealthyThreshold`: The number of consecutive health check failures required before considering the target
        unhealthy. For NLBs, this value must be the same as `healthyThreshold`. The default is 3.
 
-    - `path`: For ALB only, the required destination for health check requests. This allows for application level
+    * `path`: For ALB only, the required destination for health check requests. This allows for application level
       health checking, versus NLBs which only support health checking the availability of the target.
 
-    - `timeout`: For ALB only, the timeout in seconds for health check requests. The range is 2-60 seconds, and the
+    * `timeout`: For ALB only, the timeout in seconds for health check requests. The range is 2-60 seconds, and the
       default value is 5 seconds.
 
-    - `matcher`: For ALB only, the HTTP codes to use when checking for a successful response from a target. You can
+    * `matcher`: For ALB only, the HTTP codes to use when checking for a successful response from a target. You can
       specify multiple values (for example, "200,202") or a range of values (for example, "200-299").
 
 * `tags`: Can be used to tag your target group with metadata about its purpose, for reporting or compliance.

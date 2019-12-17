@@ -18,18 +18,22 @@ Once you’ve validated the behavior of your policies, an organization administr
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
 ```
+
 {{% /md %}}
     </div>
 
@@ -49,6 +53,7 @@ pulumi policy publish [org-name]
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi policy publish [org-name]
 ```
+
 {{% /md %}}
     </div>
 
@@ -71,18 +76,22 @@ pulumi policy publish [org-name]
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
 ```
+
 {{% /md %}}
     </div>
 
@@ -102,6 +111,7 @@ pulumi policy apply <org-name>/<policy-pack-name> <version>
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi policy apply <org-name>/<policy-pack-name> <version>
 ```
+
 {{% /md %}}
     </div>
 
@@ -112,18 +122,22 @@ pulumi policy apply <org-name>/<policy-pack-name> <version>
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
 ```
+
 {{% /md %}}
     </div>
 
@@ -143,6 +157,7 @@ pulumi policy apply pulumi/policy-pack-typescript 1
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi policy apply pulumi/policy-pack-typescript 1
 ```
+
 {{% /md %}}
     </div>
 

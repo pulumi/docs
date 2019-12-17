@@ -3,7 +3,7 @@ title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
 tags: ["Infrastructure","Features"]
 date: "2019-06-07"
-meta_desc: "Using Pulumi to read the outputs of other deployment tools provides a great deal of flexibility for adopting Pulumi into existing environments. Resources which were provisioned by CloudFormation, ARM or Terraform can remain in place, while still allowing those values to be dynamically consumed by a Pulumi program."
+meta_desc: "Pulumi allows resources which were provisioned by CloudFormation, ARM, or Terraform to remain, while allowing those resources to be consumed by Pulumi."
 
 ---
 

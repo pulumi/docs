@@ -1,7 +1,7 @@
 ---
 title: "Managing Secrets with Pulumi"
 date: "2019-05-17"
-meta_desc: "Pulumi now supports automatic tracking of secret values, and new option to use custom client-side encryption, giving you full control over secrets encryption and decryption."
+meta_desc: "Pulumi supports automatic tracking of secret values, and client-side encryption, giving you full control over secrets encryption and decryption."
 authors: ["matt-ellis"]
 tags: ["Features","Security"]
 ---

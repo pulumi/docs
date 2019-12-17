@@ -1,5 +1,6 @@
 ---
 title: "Other AWS Services"
+meta_desc: Pulumi Crosswalk for AWS supports all AWS services. This page provides a complete list of supported services.
 menu:
   userguides:
     parent: crosswalk-aws

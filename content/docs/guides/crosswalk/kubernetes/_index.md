@@ -1,5 +1,7 @@
 ---
 title: "Pulumi Crosswalk for Kubernetes"
+meta_desc: Pulumi Crosswalk for Kubernetes is production-ready Kubernetes for teams. Work together to deliver
+           Kubernetes to AWS, Azure, Google Cloud, or private.
 linktitle: Crosswalk for Kubernetes
 menu:
   userguides:
@@ -85,6 +87,7 @@ Join the Pulumi team and thousands of practioners in our
 
 See the [FAQ][crosswalk-faq] for more details.
 
+<!-- markdownlint-disable url -->
 [crosswalk-faq]: {{< relref "/docs/guides/crosswalk/kubernetes/faq.md" >}}
 [cw-index]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
 [cw-playbooks]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
@@ -103,3 +106,4 @@ See the [FAQ][crosswalk-faq] for more details.
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-twitter]: https://twitter.com/pulumicorp
 [pulumi-yt]: https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw
+<!-- markdownlint-enable url -->

@@ -1,5 +1,5 @@
 ---
-title: "Architect AWS Application Infrastructure with Pulumi Stack References"
+title: "Architect AWS Application Infrastructure"
 title_tag: "Architect AWS Application Infrastructure with Stack References"
 date: "2019-10-17"
 meta_desc: "How to architect your AWS infrastructure to optimize team collaboration with Pulumi Stack References"

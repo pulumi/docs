@@ -1,7 +1,7 @@
 ---
 title: "AWS CloudWatch made easy with Pulumi Infrastructure-as-Code"
 date: "2019-06-14"
-meta_desc: "Pulumi Crosswalk for AWS modules can deliver first class insights and visualizations directly inside your Pulumi application. This blog shows how to use Pulumi to get regular insights on the performance of your application."
+meta_desc: "This blog shows how to get regular insights on the performance of your application using Pulumi Crosswalk for AWS."
 meta_image: "dashboard.png"
 authors: ["cyrus-najmabadi"]
 tags: ["AWS","Logging"]

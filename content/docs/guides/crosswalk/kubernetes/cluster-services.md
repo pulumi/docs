@@ -1,5 +1,6 @@
 ---
-title: Deploy Cluster Services
+title: Deploy Kubernetes Cluster Services
+meta_desc: This page will provide an overview on how to deploy Kubernetes Cluster Services.
 no_on_this_page: true
 menu:
   userguides:
@@ -20,7 +21,11 @@ policy enforcement and service meshes.
 {{% md %}}
 
 The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -29,7 +34,10 @@ The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -42,14 +50,19 @@ GKE logging and monitoring is managed by GCP through StackDriver.
 
 The repo for the GCP cluster services is on [GitHub][gh-repo-stack], but it is empty since no extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
+<!-- markdownlint-disable url -->
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/04-cluster-services
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
 
 The full code for the general cluster services is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services
+<!-- markdownlint-enable url -->
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -58,9 +71,9 @@ The full code for the general cluster services is on [GitHub][gh-repo-stack].
 
 We'll explore how to setup:
 
-  * [AWS Logging](#aws-logging)
-  * [AWS Monitoring](#aws-monitoring)
-  * [Datadog](#datadog)
+* [AWS Logging](#aws-logging)
+* [AWS Monitoring](#aws-monitoring)
+* [Datadog](#datadog)
 
 See the [official AWS docs][k8s-logs-docs] for more details.
 
@@ -72,6 +85,7 @@ Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] 
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 
 ## AWS Logging
@@ -82,7 +96,7 @@ In the [Recommended Settings][crosswalk-control-plane-recommended] of
 Creating the Control Plane, we enabled cluster logging for the various
 controllers of the control plane.
 
-To view these logs, go to the [CloudWatch console][aws-cw-console], 
+To view these logs, go to the [CloudWatch console][aws-cw-console],
 navigate to the logs in your region, and look for the following group.
 
 ```
@@ -137,11 +151,13 @@ attachLogPolicies("stdRpa", stdNodegroupIamRoleName);
 attachLogPolicies("perfRpa", perfNodegroupIamRoleName);
 ```
 
+<!-- markdownlint-disable url -->
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [crosswalk-control-plane-recommended]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane#recommended-settings" >}}
 [crosswalk-k8s-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-iam-roles-for-eks-node-groups" >}}
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
+<!-- markdownlint-enable url -->
 
 {{< k8s-language nokx >}}
 
@@ -200,12 +216,15 @@ Clean Up.
 $ kubectl delete ns amazon-cloudwatch
 ```
 
+<!-- markdownlint-disable url -->
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [k8s-logs-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 [crosswalk-k8s-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-iam-roles-for-eks-node-groups" >}}
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -273,12 +292,15 @@ navigating to the logs in your region, and looking for the following group.
 $ pulumi stack output fluentdCloudWatchLogGroupName
 ```
 
+<!-- markdownlint-disable url -->
 [crosswalk-k8s-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-iam-roles-for-eks-node-groups" >}}
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 [crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [fluentd-helm]: https://github.com/helm/charts/tree/master/incubator/fluentd-cloudwatch
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -286,8 +308,11 @@ $ pulumi stack output fluentdCloudWatchLogGroupName
 data being sent can cause `ThrottlingException error="Rate exceeded"`. This can cause a delay in logs showing up in CloudWatch. Request a limit increase, or alter
 the data being sent, if necessary.  See the [CloudWatch limits][aws-cw-limits] for more details.
 
+<!-- markdownlint-disable url -->
 [k8s-logs-docs]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html
 [aws-cw-limits]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -299,8 +324,8 @@ the data being sent, if necessary.  See the [CloudWatch limits][aws-cw-limits] f
 
 We'll explore how to setup:
 
-  * [Azure Logging and Monitoring](#azure-logging-and-monitoring)
-  * [Datadog](#datadog)
+* [Azure Logging and Monitoring](#azure-logging-and-monitoring)
+* [Datadog](#datadog)
 
 See the official [Azure Monitor][azure-monitor-overview] and [AKS][aks-logs] docs for more details.
 
@@ -381,6 +406,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 
 See the official [AKS docs][aks-kubelet-logs] for more details.
 
+<!-- markdownlint-disable url -->
 [azure-monitor-analyze]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-analyze
 [azure-la]: https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
 [aks-kubelet-logs]: https://docs.microsoft.com/en-us/azure/aks/kubelet-logs
@@ -388,6 +414,8 @@ See the official [AKS docs][aks-kubelet-logs] for more details.
 [aks-logs]: https://docs.microsoft.com/en-us/azure/aks/view-master-logs
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 [crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -399,8 +427,8 @@ See the official [AKS docs][aks-kubelet-logs] for more details.
 
 We'll explore how to setup:
 
-  * [GCP Logging and Monitoring](#azure-logging-and-monitoring)
-  * [Datadog](#datadog)
+* [GCP Logging and Monitoring](#azure-logging-and-monitoring)
+* [Datadog](#datadog)
 
 See the official [GKE][gke-logs] and [StackDriver Observing][gke-sd-observe] docs for more details.
 
@@ -443,10 +471,13 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 });
 ```
 
+<!-- markdownlint-disable url -->
 [gke-sd]: https://app.google.stackdriver.com/
 [gke-logs]: https://cloud.google.com/monitoring/kubernetes-engine/
 [gke-sd-observe]: https://cloud.google.com/monitoring/kubernetes-engine/observing
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
+<!-- markdownlint-enable url -->
+
 </div>
 
 <div class="cloud-prologue-aws"></div>
@@ -457,9 +488,11 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 Using the YAML manifests in the [AWS samples][aws-metrics-samples], we can provision the CloudWatch Agent
 to run as a [DaemonSet][k8s-ds] and send metrics to [CloudWatch][aws-cw].
 
+<!-- markdownlint-disable url -->
 [aws-cw]: https://aws.amazon.com/cloudwatch
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [aws-metrics-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
+<!-- markdownlint-enable url -->
 
 #### Install CloudWatch Agent
 
@@ -518,7 +551,10 @@ $ kubectl delete ns amazon-cloudwatch
 ```
 
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
+
+<!-- markdownlint-disable url -->
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -528,7 +564,10 @@ $ kubectl delete ns amazon-cloudwatch
 Deploy [Datadog][k8s-datadog] as a DaemonSet to aggregate Kubernetes, node, and container metrics and events, in addition to provider managed logging and monitoring.
 
 The full code for this app stack is on [GitHub][gh-dd-stack].
+
+<!-- markdownlint-disable url -->
 [gh-dd-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services/datadog-daemonset
+<!-- markdownlint-enable url -->
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";

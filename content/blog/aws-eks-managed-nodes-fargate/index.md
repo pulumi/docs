@@ -2,12 +2,10 @@
 title: "How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "AWS", "Kubernetes", "EKS"]
-meta_desc: "."
+meta_desc: "Pulumi supports simplify the scaling your Elastic Kubernetes Service (EKS) clusters with Managed Node Groups and Fargate."
 date: "2019-12-05"
 
 meta_image: "pulumi-eks-fargate.png"
-meta_desc: "At AWS re:Invent this week, Amazon highlighted two new features that simplify scaling your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate. We're happy to announce that we've integrated support for both, making our existing EKS support even easier to use than before. The result is a great spectrum of options for managing your cluster's compute &mdash; offering productivity, flexibility, and control, based on your needs."
-
 ---
 
 At AWS re:Invent this week, Amazon highlighted two new features that simplify scaling your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate. We're happy to announce that we've integrated support for both, making our existing EKS support even easier to use than before. The result is a great spectrum of options for managing your cluster's compute &mdash; offering productivity, flexibility, and control, based on your needs.

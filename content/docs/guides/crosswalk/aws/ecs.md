@@ -1,5 +1,7 @@
 ---
 title: "AWS Elastic Container Service (ECS)"
+meta_desc: Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications into ECS and managing all of the
+           associated resources.
 linktitle: Elastic Container Service (ECS)
 menu:
   userguides:
@@ -67,7 +69,7 @@ $ curl http://$(pulumi stack output url)
 
 `$(pulumi stack output url)` evaluates to the load balancer's URL.
 
-**Output**
+### **Output**
 
 ```
 <!DOCTYPE html>
@@ -213,12 +215,12 @@ https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 A task definition is required to run Docker containers in Amazon ECS. We saw above that each Service takes a
 `taskDefinitionArgs` object. Some of the parameters you can specify this task definition include:
 
-   * `image`: The Docker image to use with each container in your task.
-   * `cpu` and `memory`: How much CPU and memory to use with each task or each container within a task.
-   * `networkMode`: The Docker networking mode to use for the containers (`none`, `bridge`, `awsvpc`, or `host`).
-   * `logGroup`: The logging configuration to use for your tasks (by default, a new group with 1 day retention).
-   * `volumes`: Any data volumes that should be used with the containers in the task.
-   * `executionRole`: The IAM role that your tasks should assume while running.
+* `image`: The Docker image to use with each container in your task.
+* `cpu` and `memory`: How much CPU and memory to use with each task or each container within a task.
+* `networkMode`: The Docker networking mode to use for the containers (`none`, `bridge`, `awsvpc`, or `host`).
+* `logGroup`: The logging configuration to use for your tasks (by default, a new group with 1 day retention).
+* `volumes`: Any data volumes that should be used with the containers in the task.
+* `executionRole`: The IAM role that your tasks should assume while running.
 
 Of course, the most important part of a task definition is the `containers` map, which specifies one or many
 containers to run as part of your task.

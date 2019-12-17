@@ -1,5 +1,5 @@
 ---
-title: "How to create an AWS Simple Notification Service (SNS) with Pulumi"
+title: "Create an AWS Simple Notification Service (SNS)"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-sns.png"
 

@@ -1,5 +1,6 @@
 ---
-title: Identity
+title: Kubernetes Identity
+meta_desc: An overview of cloud identity providers when using Kubernetes.
 no_on_this_page: true
 linktitle: Identity
 ---
@@ -19,13 +20,14 @@ AWS workloads (e.g., AWS Lambdas) can also be granted permissions temporarily, w
 
 In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
 
-  - [Users][iam-users]
-  - [Groups][iam-groups]
-  - [Roles][iam-roles]
-  - [Policies][iam-policies]
+- [Users][iam-users]
+- [Groups][iam-groups]
+- [Roles][iam-roles]
+- [Policies][iam-policies]
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+<!-- markdownlint-disable url -->
 [iam]: https://aws.amazon.com/iam/
 [users]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
 [groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
@@ -37,6 +39,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [iam-roles]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-roles" >}}
 [iam-policies]: {{< relref "/docs/guides/crosswalk/aws/iam#using-the-policydocument-interface" >}}
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -53,6 +56,7 @@ Azure services can also be granted permissions temporarily, without the need for
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+<!-- markdownlint-disable url -->
 [azure-iam]: https://azure.microsoft.com/en-us/services/active-directory/
 [azure-users]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
 [azure-groups]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
@@ -60,6 +64,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [azure-permissions]: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions?context=azure/active-directory/users-groups-roles/context/ugr-context
 [azure-sp]: https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/01-identity
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -76,12 +81,14 @@ GCP services can also be granted permissions temporarily, without the need for u
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+<!-- markdownlint-disable url -->
 [gcp-iam]: https://cloud.google.com/iam/docs/overview
 [gcp-policies]: https://cloud.google.com/iam/docs/reference/rest/v1/Policy
 [gcp-roles]: https://cloud.google.com/iam/docs/understanding-roles
 [gcp-members]: https://cloud.google.com/iam/docs/overview
 [gcp-sa]: https://cloud.google.com/iam/docs/service-accounts
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/01-identity
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 
@@ -93,9 +100,9 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll review how to:
 
-  * [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
-  * [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
-  * [Create IAM Roles for EKS Node Groups](#create-iam-roles-for-eks-node-groups)
+- [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
+- [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
+- [Create IAM Roles for EKS Node Groups](#create-iam-roles-for-eks-node-groups)
 
 {{% /md %}}
 </div>
@@ -108,9 +115,9 @@ We'll review how to:
 
 We'll review how to:
 
-  * [Create an IAM Server Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
-  * [Create an IAM Client Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
-  * [Create an IAM Group for Developers](#create-an-iam-group-for-developers)
+- [Create an IAM Server Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
+- [Create an IAM Client Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
+- [Create an IAM Group for Developers](#create-an-iam-group-for-developers)
 
 {{% /md %}}
 </div>
@@ -123,9 +130,9 @@ We'll review how to:
 
 We'll review how to:
 
-  * [Create an IAM Role and ServiceAccount for Admins](#create-an-iam-role-and-serviceaccount-for-admins)
-  * [Create an IAM Role for Managing CloudSQL Databases](#create-an-iam-role-for-managing-cloudsql-databases)
-  * [Create an IAM Role and ServiceAccount for Developers](#create-an-iam-role-and-serviceaccount-for-developers)
+- [Create an IAM Role and ServiceAccount for Admins](#create-an-iam-role-and-serviceaccount-for-admins)
+- [Create an IAM Role for Managing CloudSQL Databases](#create-an-iam-role-for-managing-cloudsql-databases)
+- [Create an IAM Role and ServiceAccount for Developers](#create-an-iam-role-and-serviceaccount-for-developers)
 
 {{% /md %}}
 </div>
@@ -199,7 +206,7 @@ $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_
 
 Ensure the ServicePrincipal has the following permissions for the legacy, and current Graph APIs:
 
-**Azure Active Directory Graph (Legacy)**
+#### **Azure Active Directory Graph (Legacy)**
 
 | Permission Name  | Type |
 |---|---|
@@ -208,7 +215,7 @@ Ensure the ServicePrincipal has the following permissions for the legacy, and cu
 |Group.ReadWrite.All | Delegated  |
 |User.Read.All  | Delegated  |
 
-**Microsoft Graph**
+#### **Microsoft Graph**
 
 | Permission Name  | Type |
 |---|---|
