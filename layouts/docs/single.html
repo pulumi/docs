@@ -5,7 +5,9 @@
             <div class="md:w-7/12">
                 {{ partial "docs/breadcrumb.html" . }}
 
-                {{ if and (ne .Title "") (not .Params.notitle) }}
+                {{ if and (.Params.h1) (not .Params.notitle) }}
+                    <h1>{{ .Params.h1 }}</h1>
+                {{ else if and (ne .Title "") (not .Params.notitle) }}
                     <h1>{{ .Title }}</h1>
                 {{ end }}
 
