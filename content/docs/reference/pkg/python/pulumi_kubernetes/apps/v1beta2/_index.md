@@ -10,8 +10,8 @@ notitle: true
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta2.ControllerRevision">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1beta2.</code><code class="sig-name descname">ControllerRevision</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.ControllerRevision" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - apps/v1beta2/ControllerRevision is not supported by Kubernetes 1.16+ clusters. Use
-apps/v1/ControllerRevision instead.</p>
+<dd><p>DEPRECATED - apps/v1beta2/ControllerRevision is deprecated by apps/v1/ControllerRevision and not
+supported by Kubernetes v1.16+ clusters.</p>
 <p>ControllerRevision implements an immutable snapshot of state data. Clients are responsible for
 serializing and deserializing the objects that contain their internal state. Once a
 ControllerRevision has been successfully created, it can not be updated. The API Server will
@@ -232,8 +232,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta2.DaemonSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1beta2.</code><code class="sig-name descname">DaemonSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.DaemonSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - apps/v1beta2/DaemonSet is not supported by Kubernetes 1.16+ clusters. Use
-apps/v1/DaemonSet instead.</p>
+<dd><p>DEPRECATED - apps/v1beta2/DaemonSet is deprecated by apps/v1/DaemonSet and not supported by
+Kubernetes v1.16+ clusters.</p>
 <p>DaemonSet represents the configuration of a daemon set.</p>
 <p>Create a DaemonSet resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
@@ -450,8 +450,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta2.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1beta2.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.Deployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - apps/v1beta2/Deployment is not supported by Kubernetes 1.16+ clusters. Use
-apps/v1/Deployment instead.</p>
+<dd><p>DEPRECATED - apps/v1beta2/Deployment is deprecated by apps/v1/Deployment and not supported by
+Kubernetes v1.16+ clusters.</p>
 <p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
 <p>This resource waits until its status is ready before registering success
 for create/update, and populating output properties from the current state of the resource.
@@ -681,8 +681,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta2.ReplicaSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1beta2.</code><code class="sig-name descname">ReplicaSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.ReplicaSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - apps/v1beta2/ReplicaSet is not supported by Kubernetes 1.16+ clusters. Use
-apps/v1/ReplicaSet instead.</p>
+<dd><p>DEPRECATED - apps/v1beta2/ReplicaSet is deprecated by apps/v1/ReplicaSet and not supported by
+Kubernetes v1.16+ clusters.</p>
 <p>ReplicaSet ensures that a specified number of pod replicas are running at any given time.</p>
 <p>Create a ReplicaSet resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
@@ -903,8 +903,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta2.StatefulSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1beta2.</code><code class="sig-name descname">StatefulSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.StatefulSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - apps/v1beta2/StatefulSet is not supported by Kubernetes 1.16+ clusters. Use
-apps/v1/StatefulSet instead.</p>
+<dd><p>DEPRECATED - apps/v1beta2/StatefulSet is deprecated by apps/v1/StatefulSet and not supported by
+Kubernetes v1.16+ clusters.</p>
 <p>StatefulSet represents a set of pods with consistent identities. Identities are defined as:</p>
 <ul class="simple">
 <li><p>Network: A single stable DNS and hostname.</p></li>
