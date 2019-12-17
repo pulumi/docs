@@ -1,5 +1,6 @@
 ---
 title: Available Versions
+meta_desc: This page provides an list of available versions of the Pulumi CLI.
 no_on_this_page: true
 
 aliases: ["/docs/reference/changelog/"]

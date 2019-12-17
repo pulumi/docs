@@ -1,5 +1,6 @@
 ---
 title: Configure Azure
+meta_desc: This page provides an overview of how to configure an Azure project.
 weight: 4
 menu:
   getstarted:

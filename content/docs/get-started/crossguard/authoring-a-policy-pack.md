@@ -1,5 +1,7 @@
 ---
 title: Authoring a Policy Pack
+meta_desc: This page provides an overview on how to author a Policy Pack to enforce best practices
+           and security compliance when creating coud resources.
 linktitle: Authoring a Policy Pack
 weight: 1
 menu:
@@ -7,6 +9,8 @@ menu:
     parent: pac
 aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 ---
+<!-- markdownlint-disable emphasis ul -->
+
 {{% crossguard-preview %}}
 
 1. Install prerequisites.
@@ -160,12 +164,12 @@ pulumi preview --policy-pack <path-to-policy-pack-directory>
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
-<!-- markdownlint-disable ul -->
     {{< highlight sh >}}
 Previewing update (dev):
 
@@ -176,7 +180,6 @@ Previewing update (dev):
 Resources:
     + 2 to create
 {{< /highlight >}}
-<!-- markdownlint-enable ul -->
 
 1. We can then edit the stack code to specify the ACL to be public-read.
 
@@ -188,7 +191,6 @@ Resources:
 
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
-<!-- markdownlint-disable ul -->
     {{< highlight sh >}}
 Previewing update (dev):
 
@@ -202,10 +204,11 @@ Diagnostics:
 
   aws:s3:Bucket (my-bucket):
     mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
-    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
+    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: [https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html)
 {{< /highlight >}}
-<!-- markdownlint-enable ul -->
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 
 {{< get-started-stepper >}}
+
+<!-- markdownlint-enable emphasis ul -->

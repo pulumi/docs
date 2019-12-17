@@ -1,5 +1,6 @@
 ---
 title: Configure AWS
+meta_desc: This page provides an overview of how to configure an AWS project.
 weight: 4
 menu:
   getstarted:

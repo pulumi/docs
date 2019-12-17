@@ -1,6 +1,7 @@
 ---
 title: Continuous Delivery
-
+meta_desc: This page provides an overview of how to integrate Pulumi with your current CI/CD
+           processes to review, validate, and test cloud resources.
 menu:
     userguides:
         identifier: cont_delivery

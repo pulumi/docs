@@ -1,5 +1,7 @@
 ---
-title: Modify the Program
+title: Modify the Program | Azure
+linktitle: Modify the Program
+meta_desc: This page provides an overview on how to update an Azure project from a Pulumi program.
 weight: 8
 menu:
   getstarted:

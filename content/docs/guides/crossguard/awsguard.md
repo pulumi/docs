@@ -9,6 +9,7 @@ menu:
   userguides:
     parent: crossguard
 ---
+<!-- markdownlint-disable ul code -->
 {{% crossguard-preview %}}
 
 ## Overview
@@ -41,7 +42,6 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     ```sh
     mkdir awsguard && cd awsguard
     ```
-<!-- markdownlint-disable ul -->
 1. Run the `pulumi policy new` command. Since Policy as Code is in preview, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable.
 
     {{< oschoose >}}
@@ -50,12 +50,10 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     <div class="mt-4">
 {{% md %}}
 On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
-<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 ```
-
 {{% /md %}}
     </div>
 
@@ -67,7 +65,6 @@ On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 ```
-
 {{% /md %}}
     </div>
 
@@ -160,13 +157,11 @@ Policy Packs can be tested on a user's local workstation to facilitate rapid dev
 
     In the Pulumi project's directory run:
 
-<!-- markdownlint-disable ul -->
     {{< oschoose >}}
 
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
-<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
@@ -209,7 +204,6 @@ pulumi preview --policy-pack <path-to-policy-pack-directory>
 
     If the stack is not in compliance, the policy violation will be displayed. Since the enforcement level for all policies are set to advisory, a warning is shown for any resources that are not in compliance with the AWSGuard policies. In this case, logging must be defined for S3 buckets.
 
-<!-- markdownlint-disable ul -->
 {{< highlight sh >}}
 Previewing update (dev):
 
@@ -225,7 +219,6 @@ aws:s3:Bucket (my-bucket):
 Resources:
     + 2 to create
 {{< /highlight >}}
-<!-- markdownlint-enable ul -->
 
 1. If you had wanted the preview to fail for any policy violations, the Policy Pack can be modified to configure all policies to be mandatory.
 
@@ -235,7 +228,6 @@ Resources:
 
 1. Running the `pulumi preview` command again will now fail the preview operation.
 
-<!-- markdownlint-disable ul -->
 {{< highlight sh >}}
 Previewing update (dev):
 
@@ -251,7 +243,6 @@ aws:s3:Bucket (my-bucket):
     mandatory: [s3-bucket-logging-enabled] Checks whether logging is enabled for your S3 buckets.
     Bucket logging must be defined.
 {{< /highlight >}}
-<!-- markdownlint-enable ul -->
 
 1. If you do not want to enforce this particular policy, you can modify the Policy Pack to disable it.
 
@@ -267,3 +258,5 @@ aws:s3:Bucket (my-bucket):
 Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}).
 
 Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}) to get started.
+
+<!-- markdownlint-enable ul code -->

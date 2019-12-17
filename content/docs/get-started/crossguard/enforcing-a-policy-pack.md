@@ -1,5 +1,6 @@
 ---
 title: Enforcing a Policy Pack Across an Organization
+meta_desc: This page provides an overview of how to enforce a Policy Pack across an organization.
 linktitle: Enforcing a Policy Pack
 weight: 2
 menu:
@@ -11,6 +12,7 @@ aliases: ["/docs/get-started/policy-as-code/enforcing-a-policy-pack/"]
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
 
+<!-- markdownlint-disable ul -->
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
     {{< oschoose >}}
@@ -18,6 +20,7 @@ Once you’ve validated the behavior of your policies, an organization administr
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
@@ -40,14 +43,19 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
     <div class="os-prologue-windows"></div>
     <div class="mt-4">
 {{% md %}}
+
+<!-- markdownlint-disable emphasis -->
 **Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
 pulumi policy publish [org-name]
 ```
 
+<!-- markdownlint-disable emphasis -->
 **Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'
@@ -69,6 +77,7 @@ pulumi policy publish [org-name]
     Published as version 1
     ```
 
+<!-- markdownlint-disable ul -->
 1. You can apply this Policy Pack to your organization’s default Policy Group by running:
 
     {{< oschoose >}}
@@ -76,6 +85,7 @@ pulumi policy publish [org-name]
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
@@ -98,14 +108,19 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <ve
     <div class="os-prologue-windows"></div>
     <div class="mt-4">
 {{% md %}}
+
+<!-- markdownlint-disable emphasis -->
 **Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
 pulumi policy apply <org-name>/<policy-pack-name> <version>
 ```
 
+<!-- markdownlint-disable emphasis -->
 **Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'
@@ -144,14 +159,19 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
     <div class="os-prologue-windows"></div>
     <div class="mt-4">
 {{% md %}}
+
+<!-- markdownlint-disable emphasis -->
 **Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 set PULUMI_EXPERIMENTAL=true
 pulumi policy apply pulumi/policy-pack-typescript 1
 ```
 
+<!-- markdownlint-disable emphasis -->
 **Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 $env:PULUMI_EXPERIMENTAL = 'true'

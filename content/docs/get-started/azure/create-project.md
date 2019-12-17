@@ -1,5 +1,7 @@
 ---
-title: Create a New Project
+title: Create a New Project | Azure
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new Azure + Pulumi project.
 weight: 5
 menu:
   getstarted:

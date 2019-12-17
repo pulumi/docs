@@ -1,5 +1,7 @@
 ---
-title: Deploy the Changes
+title: Deploy the Changes | Azure
+linktitle: Deploy the Changes
+meta_desc: This page provides an overview of how deploy changes to an Azure project.
 weight: 9
 menu:
   getstarted:
@@ -21,9 +23,9 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 Previewing update (dev):
 
      Type                      Name                     Plan       Info
-     pulumi:pulumi:Stack       update-az-templates-dev             
+     pulumi:pulumi:Stack       update-az-templates-dev
  ~   └─ azure:storage:Account  storage                  update     [diff: ~enableHttpsTrafficOnly]
- 
+
 Resources:
     ~ 1 to update
     2 unchanged
@@ -43,7 +45,7 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                      Name                     Status      Info
-     pulumi:pulumi:Stack       update-az-templates-dev              
+     pulumi:pulumi:Stack       update-az-templates-dev
  ~   └─ azure:storage:Account  storage                  updated     [diff: ~enableHttpsTrafficOnly]
 
 Outputs:

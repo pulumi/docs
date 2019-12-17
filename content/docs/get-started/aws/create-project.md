@@ -1,5 +1,7 @@
 ---
-title: Create a New Project
+title: Create a New Project | AWS
+linktitle: Create a New Project
+meta_desc: This page provides an overview of how to create a new AWS + Pulumi project.
 weight: 5
 menu:
   getstarted:
@@ -40,6 +42,7 @@ $ pulumi new aws-python
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-csharp
 ```
+
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.

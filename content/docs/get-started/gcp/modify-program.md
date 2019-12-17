@@ -1,5 +1,7 @@
 ---
-title: Modify the Program
+title: Modify the Program | GCP
+linktitle: Modify the Program
+meta_desc: This page provides an overview on how to update Google Cloud (GCP) project from a Pulumi program.
 weight: 8
 menu:
   getstarted:

@@ -1,5 +1,7 @@
 ---
-title: Deploy the Changes
+title: Deploy the Changes | AWS
+linktitle: Deploy the Changes
+meta_desc: This page provides an overview of how deploy changes to an AWS project.
 weight: 9
 menu:
   getstarted:

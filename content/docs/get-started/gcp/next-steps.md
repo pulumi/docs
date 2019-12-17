@@ -1,5 +1,8 @@
 ---
-title: Next Steps
+title: Next Steps | GCP
+linktitle: Next Steps
+meta_desc: This page provides a list of tutorials that take a deeper dive into
+            GCP cloud resources.
 weight: 11
 menu:
   getstarted:

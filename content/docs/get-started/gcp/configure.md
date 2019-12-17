@@ -1,5 +1,7 @@
 ---
-title: Configure Google Cloud
+title: Configure | GCP
+linktitle: Configure
+meta_desc: This page provides an overview of how to configure a Google Cloud (GCP) project.
 weight: 4
 menu:
   getstarted:

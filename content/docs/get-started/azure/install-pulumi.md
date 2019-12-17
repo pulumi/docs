@@ -1,5 +1,7 @@
 ---
-title: Install Pulumi
+title: Install Pulumi | Azure
+linktitle: Install Pulumi
+meta_desc: This page provides an overview on how to install Pulumi when starting an Azure project.
 weight: 2
 menu:
   getstarted:

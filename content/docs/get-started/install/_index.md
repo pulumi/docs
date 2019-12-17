@@ -1,5 +1,6 @@
 ---
 title: "Download and Install"
+meta_desc: This page contains detailed instructions for installing Pulumi.
 no_on_this_page: true
 menu:
   getstarted:
@@ -55,16 +56,17 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
-
 The installer script can be rerun to subsequently install new updates.
 
 ### Manual Installation
 
 If you do not wish to use the previous options, you can install Pulumi manually.
 
+<!-- markdownlint-disable url -->
 1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+<!-- markdownlint-enable url -->
 
-2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
+1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
@@ -84,14 +86,15 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
-
 ### Manual Installation
 
 Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
+<!-- markdownlint-disable url -->
 1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+<!-- markdownlint-enable url -->
 
-2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
+1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
@@ -132,11 +135,14 @@ choco upgrade pulumi
 
 Alternatively, you can install Pulumi manually.
 
+<!-- markdownlint-disable url -->
 1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+<!-- markdownlint-enable url -->
 
-2. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
+1. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
 
-3. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+
 {{% /md %}}
 </div>
 
