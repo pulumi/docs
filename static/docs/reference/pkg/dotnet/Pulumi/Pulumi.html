@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi">
+  
+  <h1 id="Pulumi" data-uid="Pulumi" class="text-break">Namespace Pulumi
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Alias.html">Alias</a></h4>
+      <section><p>Alias is a description of prior named used for a resource. It can be processed in the
+context of a resource creation to determine what the full aliased URN would be.</p>
+<p>
+Use <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Urn">Urn</a> in the case where a prior URN is known and can just be specified in
+full.  Otherwise, provide some subset of the other properties in this type to generate an
+appropriate urn from the pre-existing values of the <a class="xref" href="Pulumi.Resource.html">Resource</a> with certain
+parts overridden.
+<p>
+The presence of a property indicates if its value should be used. If absent (i.e.
+<span class="xref">null</span>), then the value is not used.
+<p>
+Note: because of the above, there needs to be special handling to indicate that the previous
+<a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> of a <a class="xref" href="Pulumi.Resource.html">Resource</a> was <span class="xref">null</span>.  Specifically,
+pass in:
+<p>
+<code>Aliases = { new Alias { NoParent = true } }</code>
+</section>
+      <h4><a class="xref" href="Pulumi.Archive.html">Archive</a></h4>
+      <section><p>An Archive represents a collection of named assets.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Asset.html">Asset</a></h4>
+      <section><p>Asset represents a single blob of text or data that is managed as a first class entity.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></h4>
+      <section><p>An AssetArchive is an archive created from an in-memory collection of named assets or other
+archives.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.AssetOrArchive.html">AssetOrArchive</a></h4>
+      <section><p>Base class of <a class="xref" href="Pulumi.Asset.html">Asset</a>s and <a class="xref" href="Pulumi.Archive.html">Archive</a>s.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ComponentResource.html">ComponentResource</a></h4>
+      <section><p>A <a class="xref" href="Pulumi.Resource.html">Resource</a> that aggregates one or more other child resources into a higher
+level abstraction.The component resource itself is a resource, but does not require custom
+CRUD operations for provisioning.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></h4>
+      <section><p>A bag of optional settings that control a <a class="xref" href="Pulumi.ComponentResource.html">ComponentResource</a>'s behavior.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Config.html">Config</a></h4>
+      <section><p><a class="xref" href="Pulumi.Config.html">Config</a> is a bag of related configuration state.  Each bag contains any number
+of configuration variables, indexed by simple keys, and each has a name that uniquely
+identifies it; two bags with different names do not share values for variables that
+otherwise share the same key.  For example, a bag whose name is <code>pulumi:foo</code>, with keys
+<code>a</code>, <code>b</code>, and <code>c</code>, is entirely separate from a bag whose name is
+<code>pulumi:bar</code> with the same simple key names.  Each key has a fully qualified names,
+such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectively.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.CustomResource.html">CustomResource</a></h4>
+      <section><p>CustomResource is a resource whose create, read, update, and delete(CRUD) operations are
+managed by performing external operations on some physical entity. The engine understands
+how to diff and perform partial updates of them, and these CRUD operations are implemented
+in a dynamically loaded plugin for the defining package.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></h4>
+      <section><p><a class="xref" href="Pulumi.CustomResourceOptions.html">CustomResourceOptions</a> is a bag of optional settings that control a <a class="xref" href="Pulumi.CustomResource.html">CustomResource</a>'s behavior.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.CustomTimeouts.html">CustomTimeouts</a></h4>
+      <section><p>Optional timeouts to supply in <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_CustomTimeouts">CustomTimeouts</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Deployment.html">Deployment</a></h4>
+      <section><p><a class="xref" href="Pulumi.Deployment.html">Deployment</a> is the entry-point to a Pulumi application. .NET applications
+should perform all startup logic they need in their <code>Main</code> method and then end with:</p>
+<p>
+<code>static Task&lt;int> Main(string[] args)
+{
+    // program initialization code ...
+<pre><code>return Deployment.Run(async () =&gt;
+{
+    // Code that creates resources.
+});
+</code></pre>
+<p>}</code></p>
+<p>
+Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
+<a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
+inherently asynchronous, the result of this function is a <see cref="!:Task&lt;T>"></see> which should
+then be returned or awaited.  This will ensure that any problems that are encountered during
+the running of the program are properly reported.  Failure to do this may lead to the
+program ending early before all resources are properly registered.
+</section>
+      <h4><a class="xref" href="Pulumi.DictionaryResourceArgs.html">DictionaryResourceArgs</a></h4>
+      <section><p>A special type of <a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a> with resource inputs represented
+as a loosely-typed dictionary of objects. Normally,
+<a class="xref" href="Pulumi.DictionaryResourceArgs.html">DictionaryResourceArgs</a> should not be used by resource providers
+since it's too low-level and provides low safety. Its target scenario are
+resources with a very dynamic shape of inputs.
+The input dictionary may only contain objects that are serializable by
+Pulumi, i.e only the following types are allowed:</p>
+<ul><li>Primitive types: <see cref="!:System.String"></see>, <see cref="!:System.Double"></see>,
+<see cref="!:System.Int32"></see>, <see cref="!:System.Boolean"></see></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
+<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><see cref="!:System.Text.Json.JsonElement"></see>
+</li><li>Generic collections of the above:
+<see cref="!:ImmutableArray&lt;T>"></see>, <see cref="!:ImmutableDictionary&lt;TKey,TValue>"></see>
+with <see cref="!:System.String"></see> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
+</section>
+      <h4><a class="xref" href="Pulumi.FileArchive.html">FileArchive</a></h4>
+      <section><p>A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a
+raw directory or a single archive file in one of the supported formats(.tar, .tar.gz,
+or.zip).</p>
+</section>
+      <h4><a class="xref" href="Pulumi.FileAsset.html">FileAsset</a></h4>
+      <section><p>FileAsset is a kind of asset produced from a given path to a file on the local filesystem.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a></h4>
+      <section><p><a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> is a property input for a <a class="xref" href="Pulumi.Resource.html">Resource</a>.  It may be a promptly
+available T, or the output from a existing <a class="xref" href="Pulumi.Resource.html">Resource</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.InputArgs.html">InputArgs</a></h4>
+      <section><p>Base type for all input argument classes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.InputAttribute.html">InputAttribute</a></h4>
+      <section><p>Attribute used by a Pulumi Cloud Provider Package to mark <a class="xref" href="Pulumi.Resource.html">Resource</a> input
+fields and properties.</p>
+<p>
+Note: for simple inputs (i.e. <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> this should just be placed on the
+property itself.  i.e. <code>[Input] Input&lt;string> Acl</code>.
+<p>For collection inputs (i.e. <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> this should be placed on the
+backing field for the property.  i.e.</p>
+<pre><code>    [Input] private InputList&lt;string> _acls;
+    public InputList&lt;string> Acls
+    {
+        get => _acls ?? (_acls = new InputList&lt;string>());
+        set => _acls = value;
+    }</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.InputExtensions.html">InputExtensions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.InputJson.html">InputJson</a></h4>
+      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <see cref="!:JsonElement"></see>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a></h4>
+      <section><p>A list of values that can be passed in as the arguments to a <a class="xref" href="Pulumi.Resource.html">Resource</a>.
+The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e. the individual values
+can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
+<p>
+<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> differs from a normal <see cref="!:IList&lt;T>"></see> in that it is itself
+an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> will accept not just a list but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+of a list.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+list from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.  Or for cases where creating the list invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
+<p>
+This benefit of <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is also a limitation.  Because it represents a
+list of values that may eventually be created, there is no way to simply iterate over, or
+access the elements of the list synchronously.
+<p>
+<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is designed to be easily used in object and collection
+initializers.  For example, a resource that accepts a list of inputs can be written in
+either of these forms:
+<p>
+<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
+        ListProperty = { Value1, Value2, Value3 },
+    });</code></pre>
+<p>
+or
+<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
+        ListProperty = new [] { Value1, Value2, Value3 },
+    });</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></h4>
+      <section><p>A mapping of <see cref="!:System.String"></see>s to values that can be passed in as the arguments to a
+<a class="xref" href="Pulumi.Resource.html">Resource</a>. The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e.
+the individual values can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
+<p>
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <see cref="!:IDictionary&lt;K,V>"></see> in that it is
+itself an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> will accept not just a dictionary but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+of a dictionary as well.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+map from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.
+Or for cases where creating the map invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because
+its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
+<p>
+This benefit of <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is also a limitation.  Because it represents a
+list of values that may eventually be created, there is no way to simply iterate over, or
+access the elements of the map synchronously.
+<p>
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is designed to be easily used in object and collection
+initializers.  For example, a resource that accepts a map of values can be written easily in
+this form:
+<p>
+<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
+        MapProperty = {
+            { Key1, Value1 },
+            { Key2, Value2 },
+            { Key3, Value3 },
+        },
+    });</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></h4>
+      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that can be one of two different types. For
+example, it might potentially be an <see cref="!:System.Int32"></see> some of the time or a <see cref="!:System.String"></see> in other cases.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.InvokeArgs.html">InvokeArgs</a></h4>
+      <section><p>Base type for all invoke argument classes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.InvokeOptions.html">InvokeOptions</a></h4>
+      <section><p>Options to help control the behavior of <a class="xref" href="Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_">InvokeAsync&lt;T&gt;(String, InvokeArgs, InvokeOptions)</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Log.html">Log</a></h4>
+      <section><p>Logging functions that can be called from a .NET application that will be logged to the
+<code>Pulumi</code> log stream.  These events will be printed in the terminal while the Pulumi app
+runs, and will be available from the Web console afterwards.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Output.html">Output</a></h4>
+      <section><p>Useful static utility methods for both creating and working wit <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a></h4>
+      <section><p><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are a key part of how Pulumi tracks dependencies between <a class="xref" href="Pulumi.Resource.html">Resource</a>s. Because the values of outputs are not available until resources are
+created, these are represented using the special <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s type, which
+internally represents two things:</p>
+<ol><li></li><li></li></ol>
+In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <see cref="!:Task&lt;TResult>"></see>.
+Additionally, they carry along dependency information.
+<p>
+The output properties of all resource objects in Pulumi have type <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.
+</section>
+      <h4><a class="xref" href="Pulumi.OutputAttribute.html">OutputAttribute</a></h4>
+      <section><p>Attribute used by a mark <a class="xref" href="Pulumi.Resource.html">Resource</a> output properties. Use this attribute
+in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.ComponentResource.html">ComponentResource</a> and
+<a class="xref" href="Pulumi.Stack.html">Stack</a> resources.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.OutputConstructorAttribute.html">OutputConstructorAttribute</a></h4>
+      <section><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
+property type so that it can be instantiated by the Pulumi runtime.</p>
+<p>The constructor should contain parameters that map to the resultant <see cref="!:Struct.Fields"></see> returned by the engine.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.OutputExtensions.html">OutputExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.OutputTypeAttribute.html">OutputTypeAttribute</a></h4>
+      <section><p>Attribute used by a Pulumi Cloud Provider Package to mark complex types used for a Resource
+output property.  A complex type must have a single constructor in it marked with the
+<a class="xref" href="Pulumi.OutputConstructorAttribute.html">OutputConstructorAttribute</a> attribute.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ProviderResource.html">ProviderResource</a></h4>
+      <section><p><a class="xref" href="Pulumi.ProviderResource.html">ProviderResource</a> is a <a class="xref" href="Pulumi.Resource.html">Resource</a> that implements CRUD operations
+for other custom resources. These resources are managed similarly to other resources,
+including the usual diffing and update semantics.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.RemoteArchive.html">RemoteArchive</a></h4>
+      <section><p>A RemoteArchive is a file-based archive fetched from a remote location.  The URI's scheme
+dictates the protocol for fetching the archive's contents: <code>file://</code> is a local file
+(just like a FileArchive), <code>http://</code> and <code>https://</code> specify HTTP and HTTPS,
+respectively, and specific providers may recognize custom schemes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.RemoteAsset.html">RemoteAsset</a></h4>
+      <section><p>RemoteAsset is a kind of asset produced from a given URI string.  The URI's scheme dictates
+the protocol for fetching contents: <code>file://</code> specifies a local file, <code>http://</code>
+and <code>https://</code> specify HTTP and HTTPS, respectively.  Note that specific providers may
+recognize alternative schemes; this is merely the base-most set that all providers support.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Resource.html">Resource</a></h4>
+      <section><p>Resource represents a class whose CRUD operations are implemented by a provider plugin.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a></h4>
+      <section><p>Base type for all resource argument classes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ResourceException.html">ResourceException</a></h4>
+      <section><p>ResourceException can be used for terminating a program abruptly, specifically associating the
+problem with a Resource.Depending on the nature of the problem, clients can choose whether
+or not a call stack should be returned as well. This should be very rare, and would only
+indicate no usefulness of presenting that stack to the user.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.ResourceOptions.html">ResourceOptions</a></h4>
+      <section><p>ResourceOptions is a bag of optional settings that control a resource's behavior.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Stack.html">Stack</a></h4>
+      <section><p>Stack is the root resource for a Pulumi stack. Derive from this class to create your
+stack definitions.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.StackReference.html">StackReference</a></h4>
+      <section><p>Manages a reference to a Pulumi stack and provides access to the referenced stack's outputs.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.StackReferenceArgs.html">StackReferenceArgs</a></h4>
+      <section><p>The set of arguments for constructing a StackReference resource.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.StringAsset.html">StringAsset</a></h4>
+      <section><p>StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Urn.html">Urn</a></h4>
+      <section><p>An automatically generated logical URN, used to stably identify resources. These are created
+automatically by Pulumi to identify resources.  They cannot be manually constructed.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="Pulumi.ResourceTransformationArgs.html">ResourceTransformationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.ResourceTransformationResult.html">ResourceTransformationResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></h4>
+      <section><p>Represents a <a href="https://en.wikipedia.org/wiki/Tagged_union">Tagged Union</a>.</p>
+<p>
+This is used to hold a value that could take on several different, but fixed, types. Only
+one of the types can be in use at any one time. It can be thought of as a type that has
+several &quot;cases,&quot; each of which should be handled correctly when that type is manipulated.
+<p>
+For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property that could either store a <see cref="!:System.Int32"></see>
+or a <see cref="!:System.String"></see> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Pulumi.IDeployment.html">IDeployment</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="Pulumi.ResourceTransformation.html">ResourceTransformation</a></h4>
+      <section><p>ResourceTransformation is the callback signature for <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_ResourceTransformations">ResourceTransformations</a>. A transformation is passed the same set of
+inputs provided to the <a class="xref" href="Pulumi.Resource.html">Resource</a> constructor, and can optionally return back
+alternate values for the <code>properties</code> and/or <code>options</code> prior to the resource
+actually being created. The effect will be as though those <code>properties</code> and/or
+<code>options</code> were passed in place of the original call to the <a class="xref" href="Pulumi.Resource.html">Resource</a>
+constructor.  If the transformation returns <span class="xref">null</span>, this indicates that the
+resource will not be transformed.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
