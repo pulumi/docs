@@ -21,7 +21,8 @@ Therefore, the number of concurrent requests define the number of required worke
 ## Cold Starts
 
 How does AWS know how many workers it needs to run for a given function? Well, it doesn't know in advance. AWS allocates new workers on-demand as the Lambda gets invoked.
-Whenever Lambda receives a request but it has no idle workers, the control plane assigns a new generic worker to it. The worker then has to download the custom code or binaries of your Lambda and load them into memory before it can do service the request. This process takes time, which significantly increases response latency.
+
+Whenever Lambda receives a request but it has no idle workers, the control plane assigns a new generic worker to it. The worker then has to download the custom code or binaries of your Lambda and load them into memory before it can service the request. This process takes time, which significantly increases response latency.
 
 The issue of sporadically slow responses caused by the need to increase the pool of workers is known as **Cold Start**. Cold starts are consistently the top concern about the applicability of serverless tech to latency-sensitive workloads. There are numerous articles about the problem, including many articles I have written in the [Cold Starts](https://mikhail.io/serverless/coldstarts/) section on my website
 
@@ -70,6 +71,7 @@ A fixed provisioned concurrency works good for a stable workloads.
 {{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" >}}
 
 However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios of provisioning concurrency.
+
 Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the autoscaling target:
 
 ```ts
@@ -143,6 +145,7 @@ Currently, there are issues with autoscaling based on the metrics, which makes p
 While hand-crafted Lambda warmers are virtually free, provisioned concurrency can be costly. The new pricing is an integral part of the change: Instead of purely per-call model, AWS charges per hour for provisioned capacity.
 
 You would pay $0.015 per hour per GB of provisioned worker memory, even if a worker handled zero requests.
+
 The per-invocation price gets a discount: $0.035 per GB-hour instead of the regular $0.06 per GB-hour. This change means that fully-utilized workers would be cheaper if provisioned compared to on-demand workers.
 
 Be careful to clean up your resources after any experiments: Leaving running workers with  provisioned concurrency can be expensive! Using `pulumi destroy` removes resources after you finish experimenting.
