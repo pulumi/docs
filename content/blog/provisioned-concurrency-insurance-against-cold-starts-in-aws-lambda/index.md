@@ -24,7 +24,7 @@ How does AWS know how many workers it needs to run for a given function? Well, i
 
 Whenever Lambda receives a request but it has no idle workers, the control plane assigns a new generic worker to it. The worker then has to download the custom code or binaries of your Lambda and load them into memory before it can service the request. This process takes time, which significantly increases response latency.
 
-The issue of sporadically slow responses caused by the need to increase the pool of workers is known as **Cold Start**. Cold starts are consistently the top concern about the applicability of serverless tech to latency-sensitive workloads. There are numerous articles about the problem, including many articles I have written in the [Cold Starts](https://mikhail.io/serverless/coldstarts/) section on my website
+The issue of sporadically slow responses caused by the need to increase the pool of workers is known as **Cold Start**. Cold starts are consistently the top concern about the applicability of serverless technologies to latency-sensitive workloads. There are numerous articles about the problem, including many articles I have written in the [Cold Starts](https://mikhail.io/serverless/coldstarts/) section on my website
 
 ## Warming
 
