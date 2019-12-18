@@ -35,7 +35,7 @@ A trick known as **Lambda Warmers** uses kept-alive workers to reduce the freque
 There are a few drawbacks with this approach:
 
 * If a valid request comes at the same time as warming requests, it might hit a cold start.
-* Extra logic is needed in the Lambda code to detect warming requests and short-circuit instead of doing useful work.
+* Extra logic is needed in the Lambda code to detect warming requests and short-circuit them instead of doing useful work.
 * CloudWatch rules require additional setup and management.
 * The result is still best-effort: Lambda still recycles workers from time to time.
 
