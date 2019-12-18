@@ -66,7 +66,7 @@ The snippet sets the provisioned concurrency for `mylambda` to a fixed value of 
 
 ## Dynamic Provisioned Concurrency
 
-A fixed provisioned concurrency works good for a stable workloads.
+A fixed level of provisioned concurrency works well for stable workloads.
 
 {{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" >}}
 
