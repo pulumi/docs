@@ -3,10 +3,10 @@
 HUGO_ENVIRONMENT ?= development
 
 .PHONY: default
-default: banner generate build
+default: banner lint_markdown generate build
 
 .PHONY: all
-all: banner generate build
+all: banner lint_markdown generate build
 
 .PHONY: banner
 banner:
@@ -38,6 +38,7 @@ generate:
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
+	yarn lint-markdown
 	hugo
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
