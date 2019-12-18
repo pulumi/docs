@@ -1,5 +1,6 @@
 ---
 title: Destroy the Stack | AWS
+h1: Destroy the Stack
 linktitle: Destroy the Stack
 meta_desc: This page provides an overview of how to destroy a Pulumi stack of an AWS project.
 weight: 10

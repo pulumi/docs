@@ -1,5 +1,6 @@
 ---
 title: Next Steps | GCP
+h1: Next Steps
 linktitle: Next Steps
 meta_desc: This page provides a list of tutorials that take a deeper dive into
             GCP cloud resources.

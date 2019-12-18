@@ -1,5 +1,7 @@
 ---
 title: Install Pulumi | GCP
+h1: Install Pulumi
+linktitle: Install Pulumi
 meta_desc: This page provides an overview on how to install Pulumi when starting a Google Cloud (GCP) project.
 weight: 2
 menu:

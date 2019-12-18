@@ -1,5 +1,6 @@
 ---
 title: Next Steps | Kubernetes
+h1: Next Steps
 linktitle: Next Steps
 meta_desc: This page provides a list of tutorials that take a deeper dive into Kubernetes
            across all major cloud providers.

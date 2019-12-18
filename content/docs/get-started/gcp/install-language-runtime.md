@@ -1,5 +1,6 @@
 ---
 title: Install Language Runtime | GCP
+h1: Install Language Runtime
 linktitle: Install Language Runtime
 meta_desc: This page provides an overview of how to install the different languages supported
            by Pulumi when starting a Google Cloud (GCP) project.

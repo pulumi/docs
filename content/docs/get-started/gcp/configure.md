@@ -1,5 +1,6 @@
 ---
 title: Configure | GCP
+h1: Configure
 linktitle: Configure
 meta_desc: This page provides an overview of how to configure a Google Cloud (GCP) project.
 weight: 4

@@ -1,5 +1,7 @@
 ---
-title: Review the New Azure Project
+title: Review the New Project | Azure
+h1: Review the New Project
+linktitle: Review the New Project
 meta_desc: This page provides an overview on how to a review a new Azure project.
 weight: 6
 menu:
