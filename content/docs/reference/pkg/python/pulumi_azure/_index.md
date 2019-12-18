@@ -18,6 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="ad/">ad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysisservices/">analysisservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appconfiguration/">appconfiguration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appinsights/">appinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>

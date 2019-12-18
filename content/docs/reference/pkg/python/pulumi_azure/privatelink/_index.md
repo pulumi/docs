@@ -133,10 +133,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="function">
 <dt id="pulumi_azure.privatelink.get_private_link_endpoint_connection">
 <code class="sig-prename descclassname">pulumi_azure.privatelink.</code><code class="sig-name descname">get_private_link_endpoint_connection</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatelink.get_private_link_endpoint_connection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access the connection status information about an existing Private Link Endpoint.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Private Link is currently in Public Preview.</p>
-</div></blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
