@@ -7,7 +7,7 @@ authors: ["mikhail-shilkov"]
 tags: ["AWS", "Serverless"]
 ---
 
-AWS has recently [announced](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) the launch of **Provisioned Concurrency**, a new feature of AWS Lambda that intends to solve the problem of cold starts. In this article, we take another look at the problem of latency-critical serverless applications, and how the new feature impacts the status-quo.
+AWS recently [announced](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) the launch of **Provisioned Concurrency**, a new feature of AWS Lambda that intends to solve the problem of cold starts. In this article, we take another look at the problem of latency-critical serverless applications, and how the new feature impacts the status-quo.
 <!--more-->
 
 ## Concurrency Model of AWS Lambda
