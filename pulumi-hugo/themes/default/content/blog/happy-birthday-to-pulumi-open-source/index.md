@@ -1,7 +1,7 @@
 ---
 title: "Happy Birthday to Pulumi open source!"
 date: "2019-06-18"
-meta_desc: "It's been a year since we open sourced Pulumi, a new approach to multi-cloud infrastructure as code using your favorite languages. Read more about what we've achieved."
+meta_desc: "It's been a year since we open sourced Pulumi, multi-cloud infrastructure as code using your favorite languages. Read more about what we've achieved."
 meta_image: "pulumi-birthday.png"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
@@ -16,40 +16,40 @@ languages. And what a year it has been!
 Here are some highlights we've added in partnership with the community
 since launching:
 
--   Over 100 [examples](https://github.com/pulumi/examples),
+- Over 100 [examples](https://github.com/pulumi/examples),
     [tutorials]({{< ref "/docs/tutorials" >}}), and a brand new
     [Getting Started guide]({{< ref "/docs/get-started" >}}).
--   [A native Kubernetes provider with 100% Kubernetes API/version coverage.]({{< relref "pulumi-a-better-way-to-kubernetes" >}})
--   A steady stream of improvements across
+- [A native Kubernetes provider with 100% Kubernetes API/version coverage.]({{< relref "pulumi-a-better-way-to-kubernetes" >}})
+- A steady stream of improvements across
     [AWS]({{< ref "/docs/get-started/aws" >}}),
     [Azure]({{< ref "/docs/get-started/azure" >}}), and
     [Google Cloud]({{< ref "/docs/get-started/gcp" >}}) providers.
--   [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "/crosswalk/aws" >}})
--   Over 20 additional providers, including
+- [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "/crosswalk/aws" >}})
+- Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
     [Digital Ocean](https://github.com/pulumi/pulumi-digitalocean), and
     [MySQL]({{< relref "managing-your-mysql-databases-with-pulumi" >}}).
--   Brought our [Python 3 SDK]({{< ref "/docs/reference/pkg/python" >}})
+- Brought our [Python 3 SDK]({{< ref "/docs/reference/pkg/python" >}})
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs]({{< ref "/docs/reference/pkg/nodejs" >}}).
--   [Team and Enterprise SaaS editions for teams managing infrastructure in production.](https://www.pulumi.com/pricing)
--   [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< ref "/docs/intro/console/accounts-and-organizations/organizations" >}})
--   [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< ref "/docs/guides/continuous-delivery" >}})
--   [Pluggable secrets management and transitive state encryption.]({{< relref "managing-secrets-with-pulumi" >}})
--   [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< ref "/docs/intro/concepts/state" >}})
--   [Tools for managing complex, multi-stack environments, including Terraform integration.]({{< relref "using-terraform-remote-state-with-pulumi" >}})
--   Numerous engine reliability and performance improvements, including parallelism.
--   [75 blogs, increasingly focused on end to end solutions we see working with customers.]({{< ref "/blog" >}})
+- [Team and Enterprise SaaS editions for teams managing infrastructure in production.](https://www.pulumi.com/pricing)
+- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< ref "/docs/intro/console/accounts-and-organizations/organizations" >}})
+- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< ref "/docs/guides/continuous-delivery" >}})
+- [Pluggable secrets management and transitive state encryption.]({{< relref "managing-secrets-with-pulumi" >}})
+- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< ref "/docs/intro/concepts/state" >}})
+- [Tools for managing complex, multi-stack environments, including Terraform integration.]({{< relref "using-terraform-remote-state-with-pulumi" >}})
+- Numerous engine reliability and performance improvements, including parallelism.
+- [75 blogs, increasingly focused on end to end solutions we see working with customers.]({{< ref "/blog" >}})
 
 In addition to the steady stream of product improvements, the community
 has grown fast:
 
--   **1,000s of cloud engineers** trying out Pulumi across over **1,000
+- **1,000s of cloud engineers** trying out Pulumi across over **1,000
     companies**.
--   **1,000 end users** collaborating in our Community Slack --
+- **1,000 end users** collaborating in our Community Slack --
     including emerging MVPs!
--   Open source contributions from **over 100 community members**.
--   Nearly **5,000 commits**, across **over 100 open source Git
+- Open source contributions from **over 100 community members**.
+- Nearly **5,000 commits**, across **over 100 open source Git
     repositories**.
 
 What we've enjoyed most is hearing about the innovation you, the end
@@ -62,22 +62,22 @@ the cloud native Kubernetes stack.
 
 A few notable success stories include:
 
--   **Mercedes-Benz R&D North America** used Python infrastructure as
+- **Mercedes-Benz R&D North America** used Python infrastructure as
     code to break down team silos between developers and infrastructure
     engineers.
--   **Tableau** was able to get up and running with Kubernetes in AWS,
+- **Tableau** was able to get up and running with Kubernetes in AWS,
     using Amazon EKS, and make progress on their journey to bringing
     continuous delivery to their organization.
--   **Learning Machine** went from 25KLOC YAML to 500 lines of
+- **Learning Machine** went from 25KLOC YAML to 500 lines of
     JavaScript, got containers running in AWS and Kubernetes, and halved
     their cloud bill along the way.
     [Read more.]({{< relref "delivering-cloud-native-infrastructure-as-code#delivering-cloud-native-infrastructure-for-learning-machine" >}})
--   **Mapbox** built a scalable IoT tracking solution with serverless
+- **Mapbox** built a scalable IoT tracking solution with serverless
     Lambdas. [Read more.]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
--   Multiple early stage startups, including **Jargon**, a TechStars
+- Multiple early stage startups, including **Jargon**, a TechStars
     company, have used Pulumi to get up and running quickly in the cloud
     -- doing in days what used to take weeks.
--   **Dozens** of more great stories that we can't wait to share in the
+- **Dozens** of more great stories that we can't wait to share in the
     weeks to come!
 
 We want to sincerely thank our community and our customers and partners

@@ -1,6 +1,7 @@
 ---
 title: Terms & Conditions
 url: /terms-and-conditions
+meta_desc: Terms and Conditions when using the Pulumi service.
 menu:
     legal:
         weight: 3

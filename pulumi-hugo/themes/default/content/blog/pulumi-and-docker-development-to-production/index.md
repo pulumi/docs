@@ -3,7 +3,7 @@ title: "Pulumi and Docker: Development to Production"
 authors: ["sean-gillespie"]
 tags: ["Containers","Kubernetes","Docker"]
 date: "2019-05-15"
-meta_desc: "Use Pulumi's infrastructure as software capability to define your Docker resources without running YAML or Docker Compose. Run a Redis instance on different environments using a Pulumi program: backed by AWS ElastiCache, as a Docker container on your machine, and as a Deployment on a Kubernetes cluster."
+meta_desc: "Use Pulumi's infrastructure as software capability to define your Docker resources without running YAML or Docker Compose."
 
 ---
 
@@ -149,9 +149,9 @@ created still represents Redis, but completely abstracts away where and
 how the Redis instance is running. In this case, it can run in any one
 of three different configurations:
 
-1.  Redis backed by AWS ElastiCache ("amazon")
-2.  Redis running as a Docker container on your machine ("docker")
-3.  Redis running as a Deployment on a Kubernetes cluster ("kubernetes")
+1. Redis backed by AWS ElastiCache ("amazon")
+2. Redis running as a Docker container on your machine ("docker")
+3. Redis running as a Deployment on a Kubernetes cluster ("kubernetes")
 
 Now, you can use this Redis component completely in the abstract, like
 this:

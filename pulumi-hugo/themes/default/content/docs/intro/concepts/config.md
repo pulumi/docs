@@ -1,5 +1,6 @@
 ---
 title: "Configuration and Secrets"
+meta_desc: This page provides an overview of how Pulumi manages cloud application Configuration and Secrets.
 menu:
   intro:
     parent: concepts

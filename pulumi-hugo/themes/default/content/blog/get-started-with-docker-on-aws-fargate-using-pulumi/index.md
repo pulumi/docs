@@ -1,7 +1,7 @@
 ---
 title: "Get Started with Docker on AWS Fargate using Pulumi"
 date: "2019-04-30"
-meta_desc: "Using Pulumi's infrastructure as code solution to build a custom Docker image, publish it to a private AWS container registry, and spin up an AWS Fargate load balanced service running that container."
+meta_desc: "Using Pulumi to build a custom Docker image, publish it to a AWS container registry, and spin up an AWS Fargate load balanced service running that container."
 meta_image: "docker-fargate-history.png"
 authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
@@ -49,18 +49,18 @@ the post walking through it line by line:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
- 
+
 // Step 1: Create an ECS Fargate cluster.
 const cluster = new awsx.ecs.Cluster("cluster");
- 
+
 // Step 2: Define the Networking for our service.
 const alb = new awsx.lb.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroup: cluster.securityGroup });
 const web = alb.createListener("web", { port: 80, external: true });
- 
+
 // Step 3: Build and publish a Docker image to a private ECR registry.
 const img = awsx.ecs.Image.fromPath("app-img", "./app");
- 
+
 // Step 4: Create a Fargate service task that can scale out.
 const appService = new awsx.ecs.FargateService("app-svc", {
     cluster,
@@ -74,7 +74,7 @@ const appService = new awsx.ecs.FargateService("app-svc", {
     },
     desiredCount: 5,
 });
- 
+
 // Step 5: Export the Internet address for the service.
 export const url = web.endpoint.hostname;
 ```

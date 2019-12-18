@@ -1,9 +1,9 @@
 ---
-title: "FAQ"
+title: FAQ
+meta_desc: A collection of Freduently Asked Questions (FAQ) about the Pulumi CLI and Cloud Services.
 menu:
   troubleshooting:
     weight: 2
-
 aliases: ["/docs/reference/faq/"]
 ---
 
@@ -17,13 +17,13 @@ You can disable this "auto-naming" on a per-resource basis if this isn't right f
 
 ## How can I add support for my favorite cloud?
 
-To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see see https://github.com/pulumi/pulumi-kubernetes for an example of this.  
+To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) for an example of this.
 
-If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see https://github.com/pulumi/pulumi-terraform/blob/master/README.md for a description of the overall structure and process of adding a new provider using the bridge and https://github.com/pulumi/pulumi-aws/blob/master/resources.go for a specific example.
+If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see [https://github.com/pulumi/pulumi-terraform/blob/master/README.md](https://github.com/pulumi/pulumi-terraform/blob/master/README.md) for a description of the overall structure and process of adding a new provider using the bridge and [https://github.com/pulumi/pulumi-aws/blob/master/resources.go](https://github.com/pulumi/pulumi-aws/blob/master/resources.go) for a specific example.
 
 ## How can I add support for my favorite language?
 
-Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at https://github.com/pulumi/pulumi/tree/master/sdk/proto along with the language providers themselves.  You can look at how we added support for Go at https://github.com/pulumi/pulumi/pull/1456, which should help with scoping.
+Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.
 
 ## How does Pulumi manage secrets?
 
@@ -50,9 +50,9 @@ Pulumi uses pulumi.com to store information about the current state of your appl
 
 ## What happens if pulumi.com is down?
 
-Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not affect any runtime behavior of your application.  
+Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not affect any runtime behavior of your application.
 
-If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers; however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
+If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers; however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI.
 
 ## Can I use Pulumi without depending on pulumi.com?
 
@@ -68,7 +68,7 @@ Just run `pulumi login` and you’ll be back to using pulumi.com. If you have an
 
 ## I've been using the local endpoint, can I migrate to Pulumi.com?
 
-Yes, you can! The Pulumi CLI allows you to export and import checkpoints so you can do the following.  Suppose the stack “my-app-production” has been managed with a local checkpoint file, and you want to migrate it to pulumi.com. If you are currently logged in to the local endpoint, run the following commands: 
+Yes, you can! The Pulumi CLI allows you to export and import checkpoints so you can do the following.  Suppose the stack “my-app-production” has been managed with a local checkpoint file, and you want to migrate it to pulumi.com. If you are currently logged in to the local endpoint, run the following commands:
 
 ```sh
 $ pulumi stack select my-app-production # switch to the stack we want to export

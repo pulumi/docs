@@ -1,5 +1,6 @@
 ---
 title: "AWS API Gateway"
+meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway.
 linktitle: API Gateway
 menu:
   userguides:

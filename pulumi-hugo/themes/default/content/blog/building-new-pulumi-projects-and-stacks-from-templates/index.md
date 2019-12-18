@@ -25,8 +25,8 @@ app. <!--more--> There is template support for:
 
 ## Creating a project from the Pulumi dashboard
 
-Head over to <https://app.pulumi.com> and - supposing you're logged in
-- you'll be presented with the usual homepage. But now we've added a
+Head over to <https://app.pulumi.com> and - supposing you're logged in -
+you'll be presented with the usual homepage. But now we've added a
 shiny new 'Add New Project' button. Here's how that works:
 
 ![new-project-ui-1](./new-project-ui-1.gif)
@@ -84,5 +84,3 @@ We hope you like these helpers. If you're keen to get stuck in:
   [dive into the docs]({{< ref "/docs/reference" >}}).
 - [Submit new templates as PRs](https://github.com/pulumi/templates) -
   contribution == [t-shirts at least](https://info.pulumi.com/community/give-me-a-tshirt).
-
- 

@@ -1,6 +1,7 @@
 ---
 title: "Multi-Cloud Containers and Serverless"
-
+meta_desc: Learn how to build a video thumbnailer using serverless, containers, and cloud
+           infrastructure.
 aliases: ["/docs/quickstart/cloudfx/tutorial-thumbnailer/"]
 ---
 
@@ -18,16 +19,16 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
 ## Create and deploy the project
 
-1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
+1. Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
-1.  Run `pulumi new`:
+1. Run `pulumi new`:
 
     ```bash
     $ mkdir video-thumbnail && cd video-thumbnail
     $ pulumi new aws-javascript
     ```
 
-1.  Replace the contents of `index.js` with the following:
+1. Replace the contents of `index.js` with the following:
 
     ```javascript
     const cloud = require("@pulumi/cloud-aws");
@@ -81,7 +82,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
       - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.
 
-1.  In the same directory, create a `Dockerfile` with the following contents. For the container setup, it uses an existing container for FFmpeg ad installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
+1. In the same directory, create a `Dockerfile` with the following contents. For the container setup, it uses an existing container for FFmpeg ad installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
 
     ```docker
     FROM jrottenberg/ffmpeg
@@ -103,19 +104,19 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
       aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
     ```
 
-1.  Install the `@pulumi/cloud-aws` NPM package:
+1. Install the `@pulumi/cloud-aws` NPM package:
 
     ```bash
     $ npm install --save @pulumi/cloud-aws @pulumi/cloud
     ```
 
-1.  Configure Pulumi to use AWS Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
+1. Configure Pulumi to use AWS Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
 
     ```bash
     $ pulumi config set cloud-aws:useFargate true
     ```
 
-1.  Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build.
+1. Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build.
 
     ```bash
     $ pulumi up
@@ -146,9 +147,9 @@ To test the application, we'll upload a video to S3, view the running applicatio
 
 ### 1. Upload a video to S3
 
--  Download [a short sample video](https://github.com/pulumi/examples/blob/master/cloud-js-thumbnailer/sample/cat.mp4?raw=true) to your project folder.
+- Download [a short sample video](https://github.com/pulumi/examples/blob/master/cloud-js-thumbnailer/sample/cat.mp4?raw=true) to your project folder.
 
--  Copy the video to S3, encoding the time index in the filename (00:01 becomes `00-01`):
+- Copy the video to S3, encoding the time index in the filename (00:01 becomes `00-01`):
 
     ```
     $ aws s3 cp cat.mp4 s3://$(pulumi stack output bucketName)/cat_00-01.mp4

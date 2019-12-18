@@ -1,6 +1,7 @@
 ---
 title: Acceptable Use Policy
 url: /acceptable-use
+meta_desc: The Acceptable Use Policy for the Pulumi Service and its users.
 menu:
     legal:
         weight: 2

@@ -1,5 +1,6 @@
 ---
 title: "AWS Elastic Container Registry (ECR)"
+meta_desc: Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code.
 linktitle: Elastic Container Registry (ECR)
 menu:
   userguides:

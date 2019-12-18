@@ -1,5 +1,6 @@
 ---
-title: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
+title: Create AKS Clusters with Monitoring and Logging
+h1: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
 date: "2019-05-08"
 meta_desc: "Use the Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals."
 meta_image: "hero.png"
@@ -14,11 +15,11 @@ with Pulumi for core AKS components. This article will show you how to
 write this as a simple example using Pulumi SDKs.
 <!--more-->
 
- ## Prerequisites
+## Prerequisites
 
 1. [Install `pulumi` CLI]({{< ref "/docs/get-started/install" >}})
-  and set up your [*Azure credentials*]({{< ref "/docs/get-started/azure" >}})
-2.  Initialize a new [Pulumi project]({{< ref "/docs/intro/concepts/project" >}}) from available
+    and set up your [*Azure credentials*]({{< ref "/docs/get-started/azure" >}})
+2. Initialize a new [Pulumi project]({{< ref "/docs/intro/concepts/project" >}}) from available
     templates. We use **`****`azure-typescript`****`** template here to
     install all dependencies and save the configuration.
 
@@ -155,7 +156,6 @@ export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("ak
     }],
 })
 ```
-
 
 If you run `pulumi up` with the entire `index.ts` file as defined
 [here](https://gist.github.com/d-nishi/b757e1e8b3ebe187d81ce32a4d15525e)

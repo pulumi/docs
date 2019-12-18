@@ -1,6 +1,7 @@
 ---
 title: "Serverless App Using API Gateways and Lambda"
-
+meta_desc: This tutorial will teach you how to create a Serverless App using
+           AWS Api Gateway and AWS Lambda.
 aliases: ["/docs/reference/tutorials/aws/tutorial-rest-api/"]
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: "AWS Auto Scaling"
+meta_desc: Pulumi Crosswalk for AWS allows you to easily to define Auto Scaling Groups (ASGs) to configure scaling of EC2
+           instances.
 linktitle: Auto Scaling
 menu:
   userguides:
@@ -60,8 +62,9 @@ const autoScalingGroup = new awsx.autoscaling.AutoScalingGroup("testing", {
 });
 ```
 
-For detailed information about configuring your ASG, see [Configuring Your Auto Scaling Group](
-#configuring-your-auto-scaling-group), in addition to [the `AutoScalingGroup` API documentation](
+For detailed information about configuring your ASG, see
+[Configuring Your Auto Scaling Group](#configuring-your-auto-scaling-group),
+in addition to [the `AutoScalingGroup` API documentation](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling/_index.md#AutoScalingGroup" >}}).
 
 #### Creating An Auto Scaling Group for ECS

@@ -1,6 +1,7 @@
 ---
 title: AWS Code Services
-
+meta_desc: This page provides an overview of how to use Pulumi with Amazon Code
+           Services CI/CD tools.
 menu:
     userguides:
         parent: cont_delivery

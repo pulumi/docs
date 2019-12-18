@@ -1,5 +1,6 @@
 ---
-title: Deploy Apps
+title: Deploy Kubernetes Apps
+meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -17,7 +18,10 @@ resources, and typical apps and workloads.
 {{% md %}}
 
 The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -27,7 +31,10 @@ The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -37,29 +44,35 @@ The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
 
 The full code for the apps is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps
+<!-- markdownlint-enable url -->
 
 ## Overview
 
 Check out how to:
 
-  * [Build and Deploy a Container](#build-and-deploy-a-container)
-  * [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
-  * [Deploy a Helm Chart](#deploy-a-helm-chart)
-  * [Deploy Wordpress](#deploy-wordpress)
-  * [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
-  * [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
-  * [Deploy a Job](#deploy-a-job)
-  * [Deploy a DaemonSet](#deploy-a-daemonset)
-  * [Deploy a CronJob](#deploy-a-cronjob)
-  * [Deploy a StatefulSet](#deploy-a-statefulset)
-  * [Learn More](#learn-more)
+* [Build and Deploy a Container](#build-and-deploy-a-container)
+* [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
+* [Deploy a Helm Chart](#deploy-a-helm-chart)
+* [Deploy Wordpress](#deploy-wordpress)
+* [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
+* [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
+* [Deploy a Job](#deploy-a-job)
+* [Deploy a DaemonSet](#deploy-a-daemonset)
+* [Deploy a CronJob](#deploy-a-cronjob)
+* [Deploy a StatefulSet](#deploy-a-statefulset)
+* [Learn More](#learn-more)
 
 ## Build and Deploy a Container
 
@@ -71,12 +84,16 @@ Kubernetes.
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
+
+<!-- markdownlint-disable url -->
 [gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps/build-deploy-container
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
@@ -114,11 +131,13 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
@@ -151,6 +170,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
     spec: pb.asDeploymentSpec(),
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 {{% /md %}}
@@ -161,12 +181,16 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
+
+<!-- markdownlint-disable url -->
 [gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps/build-deploy-container
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as azure from "@pulumi/azure";
 import * as docker from "@pulumi/docker";
@@ -223,12 +247,14 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as azure from "@pulumi/azure";
 import * as k8s from "@pulumi/kubernetes";
@@ -280,6 +306,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
     spec: pb.asDeploymentSpec(),
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 {{% /md %}}
@@ -290,12 +317,16 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
+
+<!-- markdownlint-disable url -->
 [gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps/build-deploy-container
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
@@ -340,12 +371,14 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
@@ -385,6 +418,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
     spec: pb.asDeploymentSpec(),
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 
@@ -394,7 +428,10 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 ## Deploy a Pod with a Sidecar
 
 The full code for this app stack is on [GitHub][gh-wp-stack].
+
+<!-- markdownlint-disable url -->
 [gh-wp-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/pod-sidecar
+<!-- markdownlint-enable url -->
 
 Create a NGINX Pod with a Debian sidecar that prints to a file in a shared
 volume of the Pod.
@@ -471,17 +508,22 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 );
 ```
 
+<!-- markdownlint-disable url -->
 [nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
 [crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
+<!-- markdownlint-enable url -->
 
 ## Deploy Wordpress
 
 Create a Deployment of Wordpress.
 
 The full code for this app stack is on [GitHub][gh-deploy-wp-stack].
+
+<!-- markdownlint-disable url -->
 [gh-deploy-wp-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/wordpress
+<!-- markdownlint-enable url -->
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -539,17 +581,21 @@ const wordpress = new k8s.apps.v1.Deployment("wordpress", {
 
 ## Create a Deployment with a Secret
 
-Create a [Deployment][k8s-deploy] NGINX that uses a [Secret][k8s-secret]. 
+Create a [Deployment][k8s-deploy] NGINX that uses a [Secret][k8s-secret].
 
 The full code for this app stack is on [GitHub][gh-deploy-secret-stack].
+
+<!-- markdownlint-disable url -->
 [gh-deploy-secret-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/deployment-secret
 [k8s-deploy]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -605,11 +651,13 @@ const nginx = new k8s.apps.v1.Deployment(appName, {
     },
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as kx from "@pulumi/kubernetesx";
 
@@ -638,6 +686,7 @@ const nginxDeployment = new kx.Deployment(appName, {
     spec: nginxPB.asDeploymentSpec({replicas: 1})
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 
@@ -654,13 +703,17 @@ when it's ConfigMap changes.
 Deploy a [Job][k8s-job] of a Perl program.
 
 The full code for this app stack is on [GitHub][gh-job-stack].
+
+<!-- markdownlint-disable url -->
 [gh-job-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/job
 [k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -682,11 +735,13 @@ const exampleJob = new k8s.batch.v1.Job("example-job", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as kx from "@pulumi/kubernetesx";
 
@@ -705,6 +760,7 @@ const exampleJobKx = new kx.Job("example-job-kx", {
     spec: pb.asJobSpec(),
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 
@@ -713,13 +769,17 @@ const exampleJobKx = new kx.Job("example-job-kx", {
 Deploy a [DaemonSet][k8s-ds] of NGINX across all nodes in the cluster.
 
 The full code for this app stack is on [GitHub][gh-ds-stack].
+
+<!-- markdownlint-disable url -->
 [gh-ds-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/daemonset
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -746,6 +806,7 @@ const nginx = new k8s.apps.v1.DaemonSet(appName, {
     },
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>
@@ -760,13 +821,17 @@ Coming Soon.
 Deploy a [CronJob][k8s-cj] of a command that runs every minute.
 
 The full code for this app stack is on [GitHub][gh-cronjob-stack].
+
+<!-- markdownlint-disable url -->
 [gh-cronjob-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/cronjob
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -793,6 +858,7 @@ const exampleCronJob = new k8s.batch.v1beta1.CronJob("example-cronjob", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>
@@ -807,14 +873,18 @@ Coming Soon.
 Deploy a [StatefulSet][k8s-ss] of [MariaDB][mariadb].
 
 The full code for this app stack is on [GitHub][gh-ss-stack].
+
+<!-- markdownlint-disable url -->
 [gh-ss-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/statefulset
 [k8s-ss]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 [mariadb]: https://mariadb.org/
+<!-- markdownlint-enable url -->
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -963,6 +1033,7 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
     }
 }, { provider: provider });
 ```
+
 {{% /md %}}
 </div>
 <div class="k8s-language-prologue-typescript-kx"></div>

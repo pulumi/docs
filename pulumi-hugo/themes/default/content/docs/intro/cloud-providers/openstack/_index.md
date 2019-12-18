@@ -1,5 +1,6 @@
 ---
 title: OpenStack
+meta_desc: This page provides an overview of the OpenStack Provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers

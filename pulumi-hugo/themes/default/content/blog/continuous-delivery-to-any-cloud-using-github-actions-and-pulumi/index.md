@@ -1,8 +1,9 @@
 ---
-title: "Continuous Delivery to Any Cloud using GitHub Actions and Pulumi"
+title: Continuous Delivery to Any Cloud using GitHub Actions
+h1: "Continuous Delivery to Any Cloud using GitHub Actions and Pulumi"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "New-Features", "CI/CD"]
-meta_desc: "Pulumi is now a GitHub partner. Pulumi GitHub Actions delivers the easiest, most capable, and friction-free way to achieve continuous delivery of cloud applications and infrastructure."
+meta_desc: "Pulumi GitHub Actions delivers the easiest, most capable, and friction-free way to achieve continuous delivery of cloud applications and infrastructure."
 date: "2018-10-17"
 
 meta_image: "gh-actions-prs.png"
@@ -39,14 +40,14 @@ error-prone steps.
 
 This capability enables some exciting scenarios:
 
--   Deploy cloud changes anytime a commit is made, including
-    -   Provisioning entirely new cloud environments
-    -   Updating existing infrastructure, like scaling things up or
+- Deploy cloud changes anytime a commit is made, including
+    - Provisioning entirely new cloud environments
+    - Updating existing infrastructure, like scaling things up or
         modifying config
-    -   Rebuilding and redeploying app containers to your cluster
--   Preview deployments before they're actually made, integrated with
+    - Rebuilding and redeploying app containers to your cluster
+- Preview deployments before they're actually made, integrated with
     Pull Requests
--   Use Git branches to achieve GitOps-style promotion from test/staging
+- Use Git branches to achieve GitOps-style promotion from test/staging
     to production
 
 To see things in action, check out the video shown at the GitHub
@@ -149,17 +150,17 @@ triggered. "GitOps" ahoy!
 
 There is so much more fun to have, and we're just getting started. Look
 for more in the weeks to come. In the meantime, here are some follow up
-links in case you want to learn more about GitHub Actions and Pulumi: 
+links in case you want to learn more about GitHub Actions and Pulumi:
 
 - To learn more, [install Pulumi]({{< ref "/docs/get-started/install" >}}) and then
   check out our [Getting Started guide]({{< ref "/docs/get-started" >}}).
 - In addition to [the keynote
   video](https://www.youtube.com/watch?v=59SxB2uY9E0), we have two
   other videos that you might enjoy watching to learn more:
-  - In [this video](https://www.youtube.com/watch?v=MKbDVDBuKUA), we
+    - In [this video](https://www.youtube.com/watch?v=MKbDVDBuKUA), we
     see the GitOps workflow for promoting from staging to
     production.
-  - In [this longer-form video](https://www.youtube.com/watch?v=1Et2TkuxqJg), we explore
+    - In [this longer-form video](https://www.youtube.com/watch?v=1Et2TkuxqJg), we explore
     more nuances of how the entire experience works.
 - The Ruby on Rails App, deployed to Kubernetes, from the keynote, is
   [available for easy forking here](https://github.com/pulumi/actions-example-gke-rails).

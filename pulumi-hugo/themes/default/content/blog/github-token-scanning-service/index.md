@@ -1,5 +1,6 @@
 ---
-title: "GitHub And Pulumi Join Forces To Ensure Your Pulumi Tokens Are Safe"
+title: GitHub & Pulumi Join Forces To Ensure Pulumi Tokens Are Safe
+h1: "GitHub And Pulumi Join Forces To Ensure Your Pulumi Tokens Are Safe"
 authors: ["praneet-loke"]
 tags: ["Security", "GitHub", "Token Scanning", "Exposed Token", "Leaked Token", "Pulumi Token Scanning"]
 date: "2019-08-19"

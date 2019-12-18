@@ -1,7 +1,7 @@
 ---
 title: "Improving Kubernetes Management with Pulumi's Await Logic"
 date: "2019-03-05"
-meta_desc: "Pulumi’s ready to use Kubernetes packages give you the full expressive power of a general purpose programming language. In this post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they're created and deployed."
+meta_desc: "In this post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they're created and deployed."
 meta_image: "status-rich.gif"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
@@ -58,7 +58,6 @@ dependencies in your application, and takes the guesswork out of
 deploying applications to Kubernetes. Pulumi can easily manage multiple
 stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
-
 
 2) Reliably integrate with
 [**CI/CD systems**]({{< ref "/docs/guides/continuous-delivery" >}}) for infrastructure and

@@ -3,7 +3,7 @@ title: "Using Pulumi with AWS SQS and Lambdas"
 authors: ["cyrus-najmabadi"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2018-07-10"
-meta_desc: "Learn how to use Amazon's SQS with Pulumi in order to post a Slack notification upon receipt of a message via SQS. This example Pulumi application demonstrates the ability to define your infrastructure directly in code (the AWS Queue, Lambda, and Event Subscriptions), instead of defining them separately."
+meta_desc: "Learn how to use Amazon's SQS with Pulumi in order to post a Slack notification upon receipt of a message via SQS."
 
 ---
 
@@ -88,7 +88,7 @@ const sqsQueue = new aws.sqs.Queue("queue", {
     visibilityTimeoutSeconds: 300,
 });
 
-// Set up a subscription that will fire whenever the queue receives a message. Here we ask 
+// Set up a subscription that will fire whenever the queue receives a message. Here we ask
 // for 'batchSize = 1' so we will only process a single message at a time.
 serverless.queue.subscribe("subscription", sqsQueue, async (event) => {
     // Add whatever code you want here to run in the AWS lambda. 'event' will contain the

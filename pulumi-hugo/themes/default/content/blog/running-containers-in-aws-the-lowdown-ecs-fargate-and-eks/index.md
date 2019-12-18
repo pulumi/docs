@@ -1,9 +1,9 @@
 ---
-title: "Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS"
+title: "Running Containers in AWS, the Lowdown: ECS, Fargate, & EKS"
 authors: ["joe-duffy"]
 tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
-meta_desc: "Use Pulumi's infrastucture-as-code approach to simplify working with ECS Fargate, ECS with EC2 instances, and EKS. In this post, we show you how to spin up two load-balanced instances of an NGINX web server using ECS Fargate."
+meta_desc: "Use Pulumi's infrastucture-as-code approach to simplify working with ECS Fargate, ECS with EC2 instances, and EKS."
 meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
@@ -219,9 +219,9 @@ production-ready way, [get started for free with Pulumi for AWS today]({{< ref "
 After getting started, here are some additional resources to go deeper
 on specific topics:
 
--   [Getting Started with ECS]({{< ref "/docs/guides/crosswalk/aws/ecs" >}})
--   [Getting Started with EKS]({{< ref "/docs/guides/crosswalk/aws/eks" >}})
--   [Getting Started with ECR]({{< ref "/docs/guides/crosswalk/aws/ecr" >}})
-    -   [Using ECR from ECS Fargate or EC2]({{< ref "/docs/guides/crosswalk/aws/ecs#building-and-publishing-docker-images-automatically" >}})
-    -   [Using ECR from EKS]({{< ref "/docs/guides/crosswalk/aws/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
-    -   [Building and Publishing Docker Images to a Private Amazon ECR Repository]({{< relref "building-and-publishing-docker-images-to-a-private-amazon-ecr-repository" >}})
+- [Getting Started with ECS]({{< ref "/docs/guides/crosswalk/aws/ecs" >}})
+- [Getting Started with EKS]({{< ref "/docs/guides/crosswalk/aws/eks" >}})
+- [Getting Started with ECR]({{< ref "/docs/guides/crosswalk/aws/ecr" >}})
+    - [Using ECR from ECS Fargate or EC2]({{< ref "/docs/guides/crosswalk/aws/ecs#building-and-publishing-docker-images-automatically" >}})
+    - [Using ECR from EKS]({{< ref "/docs/guides/crosswalk/aws/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
+    - [Building and Publishing Docker Images to a Private Amazon ECR Repository]({{< relref "building-and-publishing-docker-images-to-a-private-amazon-ecr-repository" >}})

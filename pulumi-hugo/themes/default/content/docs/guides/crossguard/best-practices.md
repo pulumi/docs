@@ -1,5 +1,6 @@
 ---
 title: Best Practices for Writing Policy Packs
+meta_desc: This page contains best practices for writing policy packs in Pulumi.
 linktitle: Best Practices
 weight: 3
 

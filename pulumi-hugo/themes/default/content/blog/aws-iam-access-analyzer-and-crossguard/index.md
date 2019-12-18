@@ -2,7 +2,7 @@
 title: "Running AWS IAM Access Analyzer at Deployment Time"
 authors: ["joe-duffy"]
 tags: ["AWS", "Security", "crossguard", "policy-as-code"]
-meta_desc: ""
+meta_desc: "In this post, we will look at running AWS IAM Access Analyzer at deployment time."
 date: "2019-12-03"
 
 meta_image: "iam-aa-crossguard.png"

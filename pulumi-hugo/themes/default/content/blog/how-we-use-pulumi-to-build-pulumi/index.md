@@ -1,7 +1,7 @@
 ---
 title: "How we use Pulumi to build Pulumi"
 date: "2018-06-26"
-meta_desc: "Here at Pulumi we are huge fans of using Pulumi to manage our own cloud infrastructure and services. In this post, we discuss how we use Pulumi ourselves to build, deploy and manage the Pulumi platform."
+meta_desc: "In this post, we discuss how we use Pulumi ourselves to build, deploy and manage the Pulumi platform."
 meta_image: "image-4.png"
 authors: ["luke-hoban"]
 tags: ["Serverless","AWS","Containers","Infrastructure"]
@@ -16,8 +16,7 @@ infrastructure using the same software engineering practices we apply to
 our application code. This also allows us to create reusable
 abstractions which accelerate our ability to deliver new features and
 services, and our ability to standardize and refactor infrastructure
-patterns across our services with relative ease. 
-
+patterns across our services with relative ease.
 
 Like other users, we use Pulumi at a variety of levels of abstraction.
 We use Pulumi for raw infrastructure provisioning, defining the core

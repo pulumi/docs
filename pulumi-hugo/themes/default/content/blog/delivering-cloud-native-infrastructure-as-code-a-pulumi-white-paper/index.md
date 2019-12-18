@@ -1,5 +1,6 @@
 ---
-title: "Delivering Cloud Native Infrastructure as Code, a Pulumi white paper"
+title: Delivering Cloud Native Infrastructure as Code
+h1: "Delivering Cloud Native Infrastructure as Code, a Pulumi white paper"
 date: "2018-12-05"
 meta_desc: "In our latest white paper, Delivering Cloud Native Infrastructure as Code, we make the case for a consistent programming model for the cloud."
 meta_image: "graph.png"

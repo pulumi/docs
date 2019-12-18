@@ -1,9 +1,10 @@
 ---
-title: "Pulumi Watch Mode: Fast Inner Loop Development for Cloud Infrastructure"
+title: "Pulumi Watch: Fast Inner Loop Development for Infrastructure"
+h1: "Pulumi Watch Mode: Fast Inner Loop Development for Cloud Infrastructure"
 authors: ["luke-hoban"]
 tags: ["serverless","kubernetes","logging","new-features","applications"]
 date: "2019-12-02"
-meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code and infrastructure, instead of on the mechanics of their deployments, across modern cloud platforms including serverless, Kubernetes and more."
+meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code."
 meta_image: "watch.png"
 ---
 
@@ -43,7 +44,7 @@ Indeed, such simple tasks are often surprisingly complex and cumbersome with tod
 
 {{< youtube "FuYwsXLqnTk?rel=0" >}}
 
-# Conclusion
+## Conclusion
 
 When using `pulumi watch`, working with cloud infrastructure *feels* so different - it feels malleable, it feels accessible, and it feels like it’s right at your fingertips.  By building on the same robust incremental deployment infrastructure as the rest of Pulumi, you get the same access to any cloud, and to a variety of languages and all the other benefits of Pulumi’s modern infrastructure as code tooling.  Pulumi watch triggers a deploy on any save - including both of files in the Pulumi program itself, as well as other assets that the Pulumi program may reference like application source code or static assets.  Pulumi watch also displays [runtime logs]({{< relref "/blog/unified-logs-with-pulumi-logs" >}}) for supported platforms (Lambda, ECS, and Cloudwatch currently, more coming soon), and can be paired with another new feature, [Pulumi Query]({{< relref "/blog/query-kubernetes" >}}), to get customized status about the runtime environment during rapid iteration.
 

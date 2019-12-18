@@ -1,17 +1,17 @@
 ---
-title: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
+title: "Kubernetes RBAC in AWS EKS with open source Pulumi packages"
+h1: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
 authors: ["nishi-davidson"]
 tags: ["AWS","Kubernetes","TypeScript","EKS"]
 date: "2019-04-24"
-meta_desc: "Setting up Kubernetes RBAC with Pulumi is simple, comprehensive, and should be part of your everyday programming experience. This post contrasts the traditional approach with Pulumi's modern method for simplifying Kubernetes RBAC in Amazon EKS."
-
+meta_desc: "This post contrasts the traditional approach with Pulumi's modern method for simplifying Kubernetes RBAC in Amazon EKS."
 ---
 
 One of the most common areas Kubernetes operators struggle with in
 production involves creating and managing role-based access control
 (RBAC). This is so daunting that RBAC is often not implemented, or
 implemented halfway, or the configuration becomes impossible to
-maintain. 
+maintain.
 
 Fortunately, Pulumi makes RBAC on Kuberenetes so easy that you'll never create an insecure cluster again. In this post, we will contrast the traditional way of working
 with RBAC on EKS with using Pulumi.
@@ -129,11 +129,11 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
- 
+
 /*
  * 1) Single step deployment of three IAM Roles
  */
- 
+
 function createIAMRole(name: string): aws.iam.Role {
     // Create an IAM Role...
     return new aws.iam.Role(`${name}`, {
@@ -157,13 +157,13 @@ function createIAMRole(name: string): aws.iam.Role {
         });
     };
 }
- 
+
 // Administrator AWS IAM clusterAdminRole with full access to all AWS resources
 const clusterAdminRole = createIAMRole("clusterAdminRole");
- 
+
 // Administer Automation role for use in pipelines, e.g. gitlab CI, Teamcity, etc.
 const AutomationRole = createIAMRole("AutomationRole");
- 
+
 // Administer Prod role for use in Prod environment
 const EnvProdRole = createIAMRole("EnvProdRole");
 ```
@@ -203,7 +203,7 @@ default `index.ts` file.
     * 2) Single step deployment of EKS cluster with the most important variables and a Simple Function to create namespaces
     * automation and prod
     */
- 
+
 const vpc = new awsx.Network("vpc", { usePrivateSubnets: false });
 const cluster = new eks.Cluster("eks-cluster", {
   vpcId             : vpc.vpcId,
@@ -238,14 +238,14 @@ const cluster = new eks.Cluster("eks-cluster", {
     },
   ],
 });
- 
+
 export const clusterName = cluster.eksCluster.name;
- 
+
 function createNewNamespace(name: string): k8s.core.v1.Namespace {
   // Create new namespace
   return new k8s.core.v1.Namespace(name, { metadata: { name: name } }, { provider: cluster.provider });
 }
- 
+
 // Declare namespaces automation and prod.
 const automation = createNewNamespace("automation");
 const prod = createNewNamespace("prod");
@@ -266,7 +266,7 @@ You define three k8s users with different privileges in your cluster and
 test them sequentially:
 User type1 called `pulumi:admin-usr` for users have cluster admin rights
 
-     $ cat user1.yaml                           
+     $ cat user1.yaml
      kind: ClusterRole
      apiVersion: rbac.authorization.k8s.io/v1
      metadata:
@@ -369,7 +369,7 @@ Update your `index.ts` file with more code as follows:
 /*
  * 3) Single Step deployment of k8s RBAC configuration for user1, user2 and user3 per our example
  */
- 
+
 // Grant cluster admin access to all admins with k8s ClusterRole and ClusterRoleBinding
 new k8s.rbac.v1.ClusterRole("clusterAdminRole", {
   metadata: {
@@ -381,22 +381,22 @@ new k8s.rbac.v1.ClusterRole("clusterAdminRole", {
     verbs: ["*"],
   }]
 }, {provider: cluster.provider});
- 
+
 new k8s.rbac.v1.ClusterRoleBinding("cluster-admin-binding", {
   metadata: {
     name: "cluster-admin-binding",
   },
-  subjects: [{ 
+  subjects: [{
      kind: "User",
      name: "pulumi:admin-usr",
-  }], 
+  }],
   roleRef: {
     kind: "ClusterRole",
     name: "clusterAdminRole",
     apiGroup: "rbac.authorization.k8s.io",
   },
 }, {provider: cluster.provider});
- 
+
 // User2 called automation-usr for users that have permissions to all k8s resources in the namespace automation
 new k8s.rbac.v1.Role("AutomationRole", {
   metadata: {
@@ -415,18 +415,18 @@ new k8s.rbac.v1.RoleBinding("automation-binding", {
     name: "automation-binding",
     namespace: "automation",
   },
-  subjects: [{ 
+  subjects: [{
      kind: "User",
      name: "pulumi:automation-usr",
      apiGroup: "rbac.authorization.k8s.io",
-  }], 
+  }],
   roleRef: {
     kind: "Role",
     name: "AutomationRole",
     apiGroup: "rbac.authorization.k8s.io",
   },
 }, {provider: cluster.provider});
- 
+
 // User3 called prod-usr for users that have read access to all k8s resources in the namespace env-prod
 new k8s.rbac.v1.Role("EnvProdRole", {
   metadata: {
@@ -445,18 +445,18 @@ new k8s.rbac.v1.RoleBinding("env-prod-binding", {
     name: "env-prod-binding",
     namespace: "prod",
   },
-  subjects: [{ 
+  subjects: [{
      kind: "User",
      name: "pulumi:prod-usr",
      apiGroup: "rbac.authorization.k8s.io",
-    }], 
+    }],
   roleRef: {
     kind: "Role",
     name: "EnvProdRole",
     apiGroup: "rbac.authorization.k8s.io",
   },
 }, {provider: cluster.provider});
- 
+
 export const kubeconfig = cluster.kubeconfig
 ```
 
@@ -498,7 +498,7 @@ process that requires multiple validations along the way. Imagine the
 complexity involved when working with multiple tools for an environment
 that requires multiple groups with many users, namespaces, and clusters.
 
-**Testing the Pulumi approach worked**
+#### **Testing the Pulumi approach worked**
 
 Make sure you run `pulumi up` with this `index.ts`
 [file](https://gist.github.com/d-nishi/ab462ea779e0615f29e8cfbb668272d7).
@@ -544,8 +544,7 @@ the namespace "automation" and not in namespace "prod".
 
 In this post, we discussed how setting up Kubernetes RBAC with Pulumi is
 simple, comprehensive,
-non-sequential and part of your everyday programming experience. You can find the [complete pulumi code for our example](https://gist.github.com/d-nishi/a4e54dfc973ea047ec46c8deb5193f4e) and try it out yourself. 
-
+non-sequential and part of your everyday programming experience. You can find the [complete pulumi code for our example](https://gist.github.com/d-nishi/a4e54dfc973ea047ec46c8deb5193f4e) and try it out yourself.
 
 Pulumi is open source and free to use. For more examples, visit our GitHub examples page
-[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/get-started/kubernetes" >}}). 
+[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/get-started/kubernetes" >}}).

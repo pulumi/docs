@@ -1,7 +1,7 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 date: "2018-10-10"
-meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler on AWS Lambda, Azure Functions, and GCP Cloud Functions."
+meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
@@ -16,7 +16,7 @@ treat serverless code as part of your application instead of separate
 "infrastructure" that needs to be configured, managed, and versioned
 manually. In this post, we'll examine this capability in JavaScript,
 which is already very function- and callback-oriented, making serverless
-feel like a natural extension of the language we already know and love. 
+feel like a natural extension of the language we already know and love.
 
 While Functions as a Service (FaaS) systems have become more popular,
 getting up and running can still feel overly complex compared to normal
@@ -226,7 +226,7 @@ Pulumi also understands diffs and dependencies, so updating is a cinch.
 Any changes to the code in the JavaScript function (including anything
 it depends on) is properly tracked and understood by Pulumi, allowing an
 easy development model where FaaS code can be easily modified and
-republished without jumping through extra hoops. 
+republished without jumping through extra hoops.
 
 ## The Result? Simple serverless Functions
 

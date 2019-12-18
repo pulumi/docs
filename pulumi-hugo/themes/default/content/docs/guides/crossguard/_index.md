@@ -1,5 +1,7 @@
 ---
 title: Policy as Code ("CrossGuard")
+meta_desc: Pulumi's Policy as Code offering, CrossGuard, allows you to set guardrails for resources so
+           best practices and security compliance are always followed.
 menu:
     userguides:
         identifier: crossguard

@@ -1,5 +1,6 @@
 ---
 title: Pulumi Product Editions
+meta_desc: An overview of the different subscription plans offered in the Pulumi Cloud Service.
 ---
 
 Pulumi has multiple subscription plans available to organizations, each offering an

@@ -1,5 +1,6 @@
 ---
 title: Pulumi Security
+meta_desc: A summary of security topics and how they relate to the Pulumi platform.
 ---
 
 Pulumi takes security and privacy matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.

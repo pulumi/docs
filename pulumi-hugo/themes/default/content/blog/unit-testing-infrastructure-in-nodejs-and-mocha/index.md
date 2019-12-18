@@ -3,7 +3,7 @@ title: "Unit Testing Your Infrastructure with Node.js and Mocha"
 authors: ["joe-duffy"]
 tags: ["Testing","Infrastructure"]
 date: "2019-07-13"
-meta_desc: "Pulumi makes it easy to test your infrastructure using familiar test driven development (TDD) techniques and frameworks. This post shows you how to use Node.js with TypeScript, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
+meta_desc: "This post shows how to use Node.js, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
 meta_image: "meta.png"
 ---
 
@@ -491,12 +491,12 @@ This does mean we aren't hidden from the details of whether a preview is running
 By using this function in our tests, we have the following cases to consider:
 
 * The value is known, which could be due to the following cases
-    - It was explicitly supplied in our program
-    - It was a default populated by the underlying resource provider during a preview
-    - We are doing an update and the full outputs are available
+    * It was explicitly supplied in our program
+    * It was a default populated by the underlying resource provider during a preview
+    * We are doing an update and the full outputs are available
 * The value is `undefined`, which could be due to the following cases
-    - We are in a preview and the value hasn't been computed yet
-    - We have done an update and the property was not made available as an output value
+    * We are in a preview and the value hasn't been computed yet
+    * We have done an update and the property was not made available as an output value
 
 In all cases, the `pulumi.runtime.isDryRun` function will return `true` during a preview.
 

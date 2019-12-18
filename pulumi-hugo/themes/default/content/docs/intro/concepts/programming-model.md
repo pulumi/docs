@@ -1,5 +1,6 @@
 ---
 title: "Programming Model"
+meta_desc: An in depth overview of the the Pulumi Programming Model and common terms associated with the platform.
 menu:
   intro:
     parent: concepts
@@ -13,7 +14,6 @@ aliases: ["/docs/reference/programming-model/"]
 In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program.
 
 Dependencies between resources are expressed in Pulumi by using the [output properties](#outputs) of one resource in the construction of another resource.  For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
-
 
 {{< langchoose csharp >}}
 
@@ -131,7 +131,8 @@ The `args` provided to a resource determine what inputs will be used to initiali
 
 All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi.
 
-###### `additionalSecretOutputs`
+#### `additionalSecretOutputs`
+
 Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).  Currently only top-level resource properties can be passed to `additionalSecretOutputs`, so if there is sensitive data nested inside output properties, the entire top-level output property must be marked as secret.
 
 {{< langchoose csharp >}}
@@ -162,7 +163,8 @@ db = Database("db", opts=ResourceOptions(additional_secret_outputs=["password"])
 var db = new Database("new-name-for-db", new DatabaseArgs(), new CustomResourceOptions { AdditionalSecretOutputs = { "password" } });
 ```
 
-###### `aliases`
+##### `aliases`
+
 Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.
 
 For example, a resource can be aliased to a full previous [resource URN](#urns):
@@ -201,7 +203,8 @@ db = Database("db", opts=ResourceOptions(aliases=[Alias(name="old-name-for-db")]
 var db = new Database("new-name-for-db", new DatabaseArgs(), new ResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
 ```
 
-###### `customTimeouts`
+##### `customTimeouts`
+
 Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
 
 {{< langchoose csharp >}}
@@ -231,7 +234,8 @@ db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{CustomTimeouts:
 var db = new Database("db", new DatabaseArgs(), new ResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
 ```
 
-###### `deleteBeforeReplace`
+##### `deleteBeforeReplace`
+
 Set this option to `true` to specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
 
 {{< langchoose csharp >}}
@@ -261,7 +265,8 @@ db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{DeleteBeforeRep
 var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { DeleteBeforeReplace = true });
 ```
 
-###### `dependsOn`
+##### `dependsOn`
+
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
 {{< langchoose csharp >}}
@@ -291,7 +296,8 @@ var res1 = new MyResource("res1", new MyResourceArgs());
 var res2 = new MyResource("res2", new MyResourceArgs(), new ResourceOptions { DependsOn = { res1 } });
 ```
 
-###### `ignoreChanges`
+##### `ignoreChanges`
+
 Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. You would use this option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
 {{< langchoose csharp >}}
@@ -322,7 +328,8 @@ res = MyResource("res", prop="new-value", opts=ResourceOptions(ignore_changes=["
 var res = new MyResource("res", new MyResourceArgs { prop = "new-value" }, new ResourceOptions { IgnoreChanges = { "prop" } });
 ```
 
-###### `import`
+##### `import`
+
 The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
 
 {{< langchoose csharp >}}
@@ -352,7 +359,8 @@ db, _ := Database(ctx, "db", &DatabaseArgs{ /*...*/ }, pulumi.ResourceOpt{Import
 var db = new Database("db", new DatabaseArgs { /*...*/ }, new CustomResourceOptions { ImportId = "my-database-id" });
 ```
 
-###### `parent`
+##### `parent`
+
 A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
 
 {{< langchoose csharp >}}
@@ -382,7 +390,8 @@ var parent = new MyResource("parent", new MyResourceArgs());
 var child = new MyResource("child", new MyResourceArgs(), new ResourceOptions { Parent = parent });
 ```
 
-###### `protect`
+##### `protect`
+
 Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
 {{< langchoose csharp >}}
@@ -407,7 +416,8 @@ db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{Protect: true})
 var db = new Database("db", new DatabaseArgs(), new ResourceOptions { Protect = true });
 ```
 
-###### `provider`
+##### `provider`
+
 A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
 {{< langchoose csharp >}}
@@ -437,7 +447,8 @@ var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-
 var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
 ```
 
-###### `transformations`
+##### `transformations`
+
 A list of transformations to apply to the resource and all of its children. This can be used to override or modify the inputs to child resources of a component, for example to add other resource options (like `ignoreChanges` or `protect`) or to modify an input property (like adding to `tags` or changing a property which is not configurable via the component directly).  Transformations can also be applied to all resources in a stack using `pulumi.runtime.registerStackTransformation`.  Transformations are passed the resource type, name, input properties resource options and the resource instance itself.  They can optionally return a new set of resource input properties and resource options which will be used to construct the resource.
 
 {{< langchoose >}}
@@ -553,9 +564,9 @@ A resource's logical and physical names may not match. In fact, most physical re
 
 This random suffix is added for two reasons:
 
-* It ensures that two stacks for the same project can be deployed without risk of collisions. This helps you to multi-instance your project more easily, whether that's for many development or testing instances, or even scaling to new regions. Without auto-naming, you would need to manually distinguish these resources with different physical names.
+- It ensures that two stacks for the same project can be deployed without risk of collisions. This helps you to multi-instance your project more easily, whether that's for many development or testing instances, or even scaling to new regions. Without auto-naming, you would need to manually distinguish these resources with different physical names.
 
-* It allows Pulumi to do zero-downtime resource updates. Certain updates require replacing resources, rather than updating them in place. This is because Pulumi can create replacements first, then update existing references to them, and finally delete the old resources. If it weren't for auto-naming, Pulumi would need to do things in a very different order: namely, it would need to delete resources first, and create new instances afterwards, which is far more impactful and leads to downtime.
+- It allows Pulumi to do zero-downtime resource updates. Certain updates require replacing resources, rather than updating them in place. This is because Pulumi can create replacements first, then update existing references to them, and finally delete the old resources. If it weren't for auto-naming, Pulumi would need to do things in a very different order: namely, it would need to delete resources first, and create new instances afterwards, which is far more impactful and leads to downtime.
 
 Auto-naming can be overridden by manually specifying a physical name on your resource for use cases that require precise names. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor:
 
@@ -665,7 +676,7 @@ The output properties of all resource objects in Pulumi have type [`Output`][pul
 
 Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.
 
-##### Apply {#apply}
+### Apply {#apply}
 
 To transform an output into a new value, use the [`apply` method]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#OutputInstance-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine:
 
@@ -699,7 +710,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 > _Note_: Several common types of transformations can be done more conveniently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See [Working with Outputs and strings](#outputs-and-strings) for examples of how to use the two together.  In cases where these convenience forms are not sufficient, `.apply` is the most general way to transform one `Output` into another.
 
-##### Accessing properties of an Output {#lifting}
+#### Accessing properties of an Output {#lifting}
 
 It is common to only need access to some property of the value of an `Output` in order to pass in that property to another `Resource`.  For example, when using ACM certificates, one might write:
 
@@ -1465,7 +1476,6 @@ var bucket = new Aws.S3.Bucket($"{name}-bucket", new Aws.S3.BucketArgs(), new Re
 
 Components can define their own properties using [registerOutputs]. The Pulumi engine uses this information to display the logical outputs of the component.  The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so it is recommended that this method be called in all components even if no outputs need to be registered.
 
-
 {{< langchoose csharp >}}
 
 ```javascript
@@ -1576,7 +1586,6 @@ var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
     Ami = "myAMI",
 });
 ```
-
 
 ```bash
 $ pulumi config set aws:region us-west-2
@@ -1987,28 +1996,34 @@ class MyResource extends pulumi.dynamic.Resource {
 // Dynamic Providers are currently not supported in .NET.
 ```
 
-##### `check(olds, news)`
+#### `check(olds, news)`
+
 Check is invoked before any other methods, and is passed the resolved input properties that were originally provided to the resource constructor by the user.  It is passed both the old input properties that were stored in the _state file_ after the previous update to the resource, as well as the new inputs from the current deployment.  It has two jobs: (1) Verify that the inputs (particularly the news) are valid and return useful error messages if they are not, and (2) Return a set of checked inputs.  The inputs returned from the call to `check` will be the inputs that the Pulumi engine uses for all further processing of the resource, including the values that will be passed back in to `diff`, `create`, `update`, or other operations.  In many cases, the `news` can be returned directly as the checked inputs.  But in cases where the provider need to populate defaults, or do some normalization on values, it may want to do that in the `check` method so that this data is complete and normalized prior to being passed in to other methods.
 
-##### `create(inputs)`
+#### `create(inputs)`
+
 Create is invoked when the URN of the resource created by the user is not found in the existing state of the deployment.  The engine passes the provider the checked inputs returned from the call to `check`.  The `create` method is expected to do the work in the backing cloud provider to create the requested resource.  It then returns two pieces of data: (1) an `id` that can uniquely identify the resource in the backing provider for later lookups, and (2) a set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the _checkpoint_ file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
-##### `diff(id, olds, news)`
+#### `diff(id, olds, news)`
+
 Diff is invoked when the URN of the resource created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource---as returned by `create`, as well as the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is also passed the new checked inputs from the current deployment.  It returns four optional values:
 
-* `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
-* `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to schedule a replacement instead of an update, which might involve downtime, so this should only be used when a `diff` requested by the user cannot be implemented as an in-place update on the backing cloud provider.
-* `stables`: An array of property names that are known to not change between updates.  Pulumi will use this information to allow some `apply` calls on [Outputs]() to be processed during `previews` because it knows that the values of these will stay the same during an update.
-* `deleteBeforeReplace`: `true` if the proposed replacements require deleteing the existing resource before creating the new one.  By default Pulumi will try to create the new resource before deleting the old one to avoid downtime.
+- `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
+- `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to schedule a replacement instead of an update, which might involve downtime, so this should only be used when a `diff` requested by the user cannot be implemented as an in-place update on the backing cloud provider.
+- `stables`: An array of property names that are known to not change between updates.  Pulumi will use this information to allow some `apply` calls on Outputs to be processed during `previews` because it knows that the values of these will stay the same during an update.
+- `deleteBeforeReplace`: `true` if the proposed replacements require deleteing the existing resource before creating the new one.  By default Pulumi will try to create the new resource before deleting the old one to avoid downtime.
 If an error occurs, an exception can be thrown from the `diff` method to return this error to the user.
 
-##### `update(id, olds, news)`
+#### `update(id, olds, news)`
+
 Update is invoked if the call to `diff` indicates replacement is not needed.  It is passed the `id` of the resource as returned by `create`, and the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`. It is also passed the new checked inputs from the current deployment.  The `update` method is expected to do the work in the backing cloud provider to update an existing resource to the new desired state.  It then returns a new set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `update` method to return this error to the user.
 
-##### `delete(id, props)`
+#### `delete(id, props)`
+
 Delete is invoked if the URN exists in the previous state but not in the new desired state, or if a replacement is needed.  It is passed the `id` of the resource as returned by `create`, and the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is expected to delete the corresponding resource from the backing cloud provider.  Nothing needs to be returned.  If an error occurs, an exception can be thrown from the `delete` method to return this error to the user.
 
-##### `read(id, props)`
+#### `read(id, props)`
+
 Read is invoked when the Pulumi engine needs to get data about a resource that is not managed by Pulumi. It is passed the the `id` of the resource as tracked in the backing cloud provider, and an optional bag of additional properties that can be used to disambiguate the request if needed. The `read` method is expected to look up the requested resource, and return the canonical `id` and output properties of this resource if found.  If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
 
 ### Dynamic Resource Outputs

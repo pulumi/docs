@@ -1,6 +1,7 @@
 ---
 title: Trademark Usage
 url: /trademark
+meta_desc: Information on the appropriate usage of Pulumi Trademarks.
 menu:
     legal:
         weight: 1
@@ -18,18 +19,18 @@ menu:
 <br />
 <h3 class="h4">Dont's</h3>
 <ul>
-	<li>Use the Pulumi logo for your application's icon</li>
-	<li>Create a modified version of the Pulumi logo</li>
-	<li>Integrate the Pulumi logo into your logo</li>
-	<li>Use any Pulumi artwork without permission</li>
-	<li>Sell any Pulumi artwork without permission</li>
-	<li>Change the colors, dimensions or add your own text/images</li>
+    <li>Use the Pulumi logo for your application's icon</li>
+    <li>Create a modified version of the Pulumi logo</li>
+    <li>Integrate the Pulumi logo into your logo</li>
+    <li>Use any Pulumi artwork without permission</li>
+    <li>Sell any Pulumi artwork without permission</li>
+    <li>Change the colors, dimensions or add your own text/images</li>
 </ul>
 <br />
 <h3 class="h4">Please contact us</h3>
 <ul>
-	<li>If you want to use artwork not included in this repository</li>
-	<li>If you want to use these images in a video/mainstream media</li>
+    <li>If you want to use artwork not included in this repository</li>
+    <li>If you want to use these images in a video/mainstream media</li>
 </ul>
 <br />
 <h3 class="h4">Naming projects and products</h3>

@@ -1,9 +1,10 @@
 ---
-title: "Using Helm and Pulumi to define cloud native infrastructure as code"
+title: Using Helm and Pulumi to define cloud native infrastructure
+h1: "Using Helm and Pulumi to define cloud native infrastructure as code"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes","Azure"]
 date: "2018-10-31"
-meta_desc: "Pulumi uses a single, consistent programming model to help reduce the complexity in choosing and using the available services from cloud vendors. In this post, we run a Pulumi program that manages both Azure and Kubernetes resources and dependencies, and deploys a Node.js Helm chart that references a previously created Kubernetes Secret."
+meta_desc: "In this post, we run a Pulumi program that manages both Azure and Kubernetes resources and dependencies, and deploys a Node.js Helm chart."
 meta_image: "helm-pulumi-deploy.gif"
 ---
 
@@ -117,4 +118,4 @@ complex architectures.
 
 - Find out more about our [Azure]({{< ref "/azure" >}}) and
   [Kubernetes]({{< relref "/topics/kubernetes" >}}) support
-- Join the Slack community at <https://slack.pulumi.com> 
+- Join the Slack community at <https://slack.pulumi.com>

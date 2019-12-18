@@ -1,8 +1,9 @@
 ---
-title: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
+title: "Day 2 Kubernetes: Migrate EKS Node Groups with Zero Downtime"
+h1: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
 authors: ["mike-metral"]
 tags: ["Kubernetes","EKS"]
-meta_desc: "Use Pulumi for Day 2 Kubernetes administration. We’ll spin up a new EKS cluster with two node groups and a given workload. Then we’ll add one more node group with an updated configuration, and migrate the workload over to it with zero downtime using code and kubectl. "
+meta_desc: "Use Pulumi's for Day 2 Kubernetes. Spin up a new EKS cluster, add one more node groups, and migrate the workloads with zero downtime using code and kubectl."
 date: "2019-07-23"
 
 meta_image: "eks-migrate-nodegroups.png"
@@ -26,12 +27,12 @@ over to it with zero downtime using code and `kubectl`.
 
 [View the full tutorial and code.][eks-nodegroup-tutorial]
 
-![](eks-migrate-nodegroups.png)
+![EKS Migrate Node Groups](eks-migrate-nodegroups.png)
 
 ## Create an EKS cluster and Deploy the Workload
 
 For our initial update, we will configure and launch an EKS cluster using
-`v1.13` of Kubernetes, with the cluster's infrastructure dependencies 
+`v1.13` of Kubernetes, with the cluster's infrastructure dependencies
 (such as VPC and IAM) defined using [Crosswalk for AWS][crosswalk-aws].
 Crosswalk allows us to leverage the Pulumi libraries of common infrastructure
 for AWS to simplify cloud resource instantiation and management while gaining
@@ -50,7 +51,7 @@ to specifically target the `2xlarge` node group.
 Once the workload is deployed, we can validate it is up and running by accessing
 the `echoserver` behind the NGINX endpoint using `curl`:
 
-![](k8s-cluster-workload.gif)
+![Kubernetes Cluster Workload](k8s-cluster-workload.gif)
 
 > **Note**: You can open the <a href="./k8s-cluster-workload.gif" target="_blank">GIF</a> for a maximized view.
 
@@ -69,7 +70,7 @@ group in the next steps, we'll also actively load test the endpoint of the
 
 Create the new, `4xlarge` node group by defining it and running an update.
 
-![](new-4xlarge.png)
+![4xlarge Node Group](new-4xlarge.png)
 
 ### Step 2: Migrate NGINX to the `4xlarge` node group.
 
@@ -85,7 +86,7 @@ NGINX is able to successfully migrate across node groups because it is
 configured with HA settings, [spread-type scheduling predicates][tutorial-ha-refs],
 and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle].
 
-![](migrate-nginx-4xlarge.png)
+![Migrate Ngnix 4xlarge](migrate-nginx-4xlarge.png)
 
 ### Step 3: Decommission the `2xlarge` node group.
 
@@ -94,10 +95,10 @@ begin decommissioning the original `2xlarge` node group which is no longer in us
 
 Decommissioning the node group involves:
 
-  * Draining the Kubernetes nodes.
-  * Deleting the Kubernetes nodes from the APIServer.
-  * Scaling down the Auto Scaling Group to `0`.
-  * Deleting the node group.
+* Draining the Kubernetes nodes.
+* Deleting the Kubernetes nodes from the APIServer.
+* Scaling down the Auto Scaling Group to `0`.
+* Deleting the node group.
 
 Set up `kubectl` by using the `kubeconfig` from the stack output.
 
@@ -125,12 +126,12 @@ done
 Scale down the node group Auto Scaling Group completely by setting
 the `desiredCapacity: 0` and running an update:
 
-![](scale-down-ng-2xlarge.png)
+![Scale Down ng 2xlarge](scale-down-ng-2xlarge.png)
 
 Once the Auto Scaling Group has scaled down, we can delete the node group from
 AWS and the Pulumi program:
 
-![](remove-ng-2xlarge.png)
+![Remove ng 2xlarge](remove-ng-2xlarge.png)
 
 ## Summary
 
@@ -141,7 +142,7 @@ migrated NGINX over to it.
 We achieved this node group migration with zero downtime to our apps during
 load testing and decommissioning of the original node group.
 
-![](eks-migration.gif)
+![EKS Migration](eks-migration.gif)
 
 > **Note**: You can open the <a href="./eks-migration.gif" target="_blank">GIF</a> for a maximized view.
 

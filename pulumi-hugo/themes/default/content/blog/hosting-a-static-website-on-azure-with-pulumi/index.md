@@ -35,14 +35,14 @@ to support HTTPS, so we need to create a custom TLS certificate too.
 
 The final solution consists of several Azure services:
 
--   Static files will be stored in a **Blob Container** inside a
+- Static files will be stored in a **Blob Container** inside a
     **Storage Account**
--   The Storage Account will have **Static Website feature** enabled to
+- The Storage Account will have **Static Website feature** enabled to
     have some basic URL rewrite rules
--   We'll put an **Azure CDN Endpoint** in front of the container to
+- We'll put an **Azure CDN Endpoint** in front of the container to
     support the custom domain over TLS
--   Azure CDN will self-manage the TLS certificate
--   Our custom DNS provider will have the rule to point to the CDN
+- Azure CDN will self-manage the TLS certificate
+- Our custom DNS provider will have the rule to point to the CDN
     endpoint (that's a manual step)
 
 The diagram below outlines the interaction of these components:

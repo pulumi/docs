@@ -1,5 +1,7 @@
 ---
 title: Update the Worker Nodes
+meta_desc: This page provides a guide on how to update Kubernetes Worker Nodes
+           with Pulumi.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -48,8 +50,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll examine how to:
 
-  * [Update an Existing Node Group](#update-an-existing-node-group)
-  * [Migrate to a New Node Group](#migrate-to-a-new-node-group)
+    * [Update an Existing Node Group](#update-an-existing-node-group)
+    * [Migrate to a New Node Group](#migrate-to-a-new-node-group)
 
 ### Update an Existing Node Group
 
@@ -136,6 +138,7 @@ See the official GKE [docs][gke-upgrade-docs], and [cluster autoscaler docs][gke
 
 For an example of migrating node groups, see the general steps outlined in [Migrating Node Groups with Zero Downtime][migrate-ng-tutorial].
 
+<!-- markdownlint-disable url -->
 [migrate-ng-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
 [k8s-stateless]: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment
 [k8s-stateful]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset
@@ -143,3 +146,4 @@ For an example of migrating node groups, see the general steps outlined in [Migr
 [k8s-probes]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes
 [k8s-term-lifecyce]: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks
 [k8s-node-selectors]: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+<!-- markdownlint-enable url -->

@@ -1,5 +1,7 @@
 ---
 title: "Python"
+meta_desc: An overview of how to use Python when writing cloud applications for any
+           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
@@ -28,7 +30,7 @@ $ pulumi new python
 This will leave behind a `Pulumi.yaml` file, containing some minimal metadata about your project (including a name and description which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see #pypi-packages below), and a `__main__.py` file, containing your program.
 
 > **Note:** Although the template uses a very simple package structure, by placing `__main__.py` in the root directory, Pulumi fully supports [properly modularized Python programs](http://docs.python-guide.org/en/latest/writing/structure/) and `setup.py` files.  This is important if you ever decide to turn your Pulumi program into a library.
-
+<br />
 > **Note:** Pulumi currently expects the `python` executable to refer to a Python of version 3.6 or above. This is
 > usually not the case when running outside of a virtual environment. To work around around this and explicitly ask
 > Pulumi to run your program using `python3` you can set the `PULUMI_PYTHON_CMD` environment variable to `python3`. This

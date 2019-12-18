@@ -13,14 +13,14 @@ Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.co
 
 Using .NET to build our Kubernetes infrastructure offers several benefits:
 
-* **Strong Typing**:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.  
-* **Rich IDE Support**:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactoring, IntelliSense, and more.   
+* **Strong Typing**:  Unlike YAML, C# and F# offer a rich type system with quick feedback on potential errors.
+* **Rich IDE Support**:  Use the rich features of IDEs like Visual Studio, Visual Studio Code, and Rider to develop your Kubernetes infrastructure---completion lists, refactoring, IntelliSense, and more.
 * **Familiar Languages and APIs**:  Apply all the features of C#, F#, and VB.NET to your Kubernetes infrastructure---loops, variables, and the entire ecosystem of .NET Core libraries from `System` to everything in NuGet.
-* **Components and Classes**:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.  
+* **Components and Classes**:  Instead of copy/pasting pages of YAML between projects, .NET code can abstract common functionality into classes and libraries for code re-use and clean infrastructure design.
 
 Together, these benefits provide a more familiar experience for working with Kubernetes than using YAML or Helm (a mix of YAML and Go templates) for .NET developers.
 
-# Tour of Kubernetes with .NET
+## Tour of Kubernetes with .NET
 
 We can see a simple example in practice - deploying an Nginx pod into a Kubernetes cluster.
 
@@ -47,20 +47,20 @@ We can deploy this with `pulumi up`.
 $ pulumi up
 Previewing update (luke-dev):
 
-     Type                    Name                              Plan       
- +   pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev  create     
- +   └─ kubernetes:core:Pod  pod                               create     
- 
+     Type                    Name                              Plan
+ +   pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev  create
+ +   └─ kubernetes:core:Pod  pod                               create
+
 Resources:
     + 2 to create
 
 Do you want to perform this update? yes
 Updating (luke-dev):
 
-     Type                    Name                              Status      
- +   pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev  created     
- +   └─ kubernetes:core:Pod  pod                               created     
- 
+     Type                    Name                              Status
+ +   pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev  created
+ +   └─ kubernetes:core:Pod  pod                               created
+
 Resources:
     + 2 created
 
@@ -99,9 +99,9 @@ $ pulumi up
 Previewing update (luke-dev):
 
      Type                    Name                              Plan       Info
-     pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev             
+     pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev
  ~   └─ kubernetes:core:Pod  pod                               update     [diff: ~metadata]
- 
+
 Resources:
     ~ 1 to update
     1 unchanged
@@ -123,9 +123,9 @@ Do you want to perform this update? yes
 Updating (luke-dev):
 
      Type                    Name                              Status      Info
-     pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev              
+     pulumi:pulumi:Stack     basic_dotnet_kubernetes-luke-dev
  ~   └─ kubernetes:core:Pod  pod                               updated     [diff: ~metadata]
- 
+
 Resources:
     ~ 1 updated
     1 unchanged
@@ -169,7 +169,7 @@ You can check out the implementation of this `ServiceDeployment` component in th
 
 ![Guestbook Application](./guestbook.png)
 
-## Building Docker Images for Kubernetes with .NET
+### Building Docker Images for Kubernetes with .NET
 
 In the examples so far, we have specified the Docker image to deploy as part of our Kubernetes `Deployment`s by referring to an image already in the DockerHub or Google Container Registry.  But what if we wanted to push our own custom Docker image built from our own application's source code, and use that in our Kubernetes `Pod` or `Deployment`?  This is easy to do as well with the [`Pulumi.Docker`](https://www.nuget.org/packages/Pulumi.Docker/) package.  For example, we can deploy a customized Docker image derived from Nginx with the following:
 
@@ -207,7 +207,7 @@ When we deploy this with Pulumi, the Docker file will be build locally, pushed t
 
 If we wanted to push to another Docker container registry (like ACR, GCR, ECR or others), we can easily do that too using additional parameters on the `Pulumi.Docker.ImageArgs` class.
 
-## Cloud + Kubernetes with .NET
+### Cloud + Kubernetes with .NET
 
 Because Pulumi lets you work with both Kubernetes and cloud ([AWS](https://www.nuget.org/packages/Pulumi.Aws/), [Azure](https://www.nuget.org/packages/Pulumi.Azure/), [GCP](https://www.nuget.org/packages/Pulumi.Gcp/), and more), you can also create and manage the infrastructure that builds both a managed Kubernetes cluster as well as deploying applications and services into the cluster. Using a single familiar programming model, we have access to all these various cloud technologies at our fingertips.
 
@@ -262,7 +262,7 @@ var app = new Pulumi.Kubernetes.Apps.V1.Deployment("do-app-dep", new DeploymentA
             },
         },
     },
-}, 
+},
 new CustomResourceOptions { Provider = k8sProvider });
 
 var appService = new Pulumi.Kubernetes.Core.V1.Service("do-app-svc", new ServiceArgs {
@@ -294,12 +294,12 @@ if (!string.IsNullOrWhiteSpace(domainName)) {
 }
 ```
 
-Note that this example deploys resources first into DigitalOcean (a Kubernetes `Cluster`), then into Kubernetes itself (`Deployment` and `Service` via a `Pulumi.Kubernetes.Provider` configured to connect to the Kubernetes cluster in Digital Ocean), then optionally also more resources in DigitalOcean dependent on the Kubernetes `Service` (`Domain` and `DnsRecord`).  This example is a complex infrastructure deployment, all in a few dozen lines of declarative and strongly typed C# code. 
+Note that this example deploys resources first into DigitalOcean (a Kubernetes `Cluster`), then into Kubernetes itself (`Deployment` and `Service` via a `Pulumi.Kubernetes.Provider` configured to connect to the Kubernetes cluster in Digital Ocean), then optionally also more resources in DigitalOcean dependent on the Kubernetes `Service` (`Domain` and `DnsRecord`).  This example is a complex infrastructure deployment, all in a few dozen lines of declarative and strongly typed C# code.
 
 Check out the full [DigitalOcean Kubernetes Cluster in C#](https://github.com/pulumi/examples/blob/master/digitalocean-cs-k8s/Program.cs) example for more details.
 
 ![Pulumi Console - Digital Ocean and Kubernetes Resources](./do-kubernetes-resources.png)
 
-# Conclusion
+## Conclusion
 
-Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started]({{< relref "/docs/get-started/kubernetes" >}}) with Kubernetes and .NET today, and let us know what you think! 
+Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started]({{< relref "/docs/get-started/kubernetes" >}}) with Kubernetes and .NET today, and let us know what you think!

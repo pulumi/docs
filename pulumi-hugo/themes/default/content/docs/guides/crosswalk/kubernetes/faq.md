@@ -1,5 +1,6 @@
 ---
-title: FAQ
+title: Kubernetes FAQ
+meta_desc: A collection of common questions about Kubernetes usage with Pulumi.
 linktitle: FAQ
 ---
 
@@ -47,6 +48,7 @@ linktitle: FAQ
 
     * **Digital Ocean**: Check out [Managing DigitalOcean and Kubernetes with Pulumi][k8s-do] for more details.
 
+<!-- markdownlint-disable url -->
 [k8s-do]: https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
@@ -55,3 +57,4 @@ linktitle: FAQ
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
 [pulumi-kq]: https://github.com/pulumi/pulumi-query
+<!-- markdownlint-enable url -->
