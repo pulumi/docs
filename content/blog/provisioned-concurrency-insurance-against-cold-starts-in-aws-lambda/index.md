@@ -1,24 +1,20 @@
 ---
-title: "Lambda Provisioned Concurrency"
-date: 2019-12-17T16:54:44-06:00
+title: "Provisioned Concurrency: Insurance Against Cold Starts in AWS Lambda"
+date: 2019-12-18
 meta_desc: "Using Pulumi to configure AWS Lambda provisioned concurrency"
 meta_image: meta.png
-authors:
-    - mikhail-shilkov
-tags:
-    - "AWS Lambda"
-    - "cold start"
-    - "provisioned concurrency"
+authors: ["mikhail-shilkov"]
+tags: ["AWS", "Serverless"]
 ---
 
-AWS has recently announced the launch of **Provisioned Concurrency**, a new feature of AWS Lambda that intends to solve the problem of cold starts. In this article, we take another look at the problem of latency-critical serverless applications, and how the new feature impacts the status-quo.
+AWS has recently [announced](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) the launch of **Provisioned Concurrency**, a new feature of AWS Lambda that intends to solve the problem of cold starts. In this article, we take another look at the problem of latency-critical serverless applications, and how the new feature impacts the status-quo.
 <!--more-->
 
 ## Concurrency Model of AWS Lambda
 
 Despite being serverless, AWS Lambda uses lightweight containers to process incoming requests. Every container, or worker, can process only a single request at any given time.
 
-{{< figure src="./executions.png" title="Lambda execution" caption="" >}}
+{{< figure src="./executions.png" caption="Overlapping executions land on separate workers" >}}
 
 Therefore, the number of concurrent requests define the number of required workers that a specific AWS Lambda needs to serve at any given moment.
 
@@ -30,6 +26,7 @@ Whenever Lambda receives a request but it has no idle workers, the control plane
 The issue of sporadically slow responses caused by the need to increase the pool of workers is known as **Cold Start**. Cold starts are consistently the top concern about the applicability of serverless tech to latency-sensitive workloads. There are numerous articles about the problem, including many articles I have written in the [Cold Starts](https://mikhail.io/serverless/coldstarts/) section on my website
 
 ## Warming
+
 Cold starts don't occur for the majority of requests because AWS Lambda reuses workers between subsequent invocations. However, if a particular worker is idle for too long (usually, several minutes), AWS may decide to recycle and return it to the generic pool.
 
 A trick known as **Lambda Warmers** uses kept-alive workers to reduce the frequency of cold starts. The idea is to have a CloudWatch timer that fires every few minutes and sends `N` parallel requests to the target Lambda. If all those requests land at the same time, AWS has to provision at least `N` workers to process them. The actual operation doesn't have to do any useful work, but it resets the recycling timer back to zero.
@@ -64,11 +61,11 @@ The snippet sets the provisioned concurrency for `mylambda` to a fixed value of 
 
 ## Dynamic Provisioned Concurrency
 
-A fixed provisioned concurrency works good for a steady workloads.
+A fixed provisioned concurrency works good for a stable workloads.
 
-{{< figure src="./steady.png" title="Steady workload" caption="Fixed provisioned concurrency for steady workloads" >}}
+{{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" >}}
 
-However, most workloads are not continuous. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios of provisioning concurrency.
+However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios of provisioning concurrency.
 Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the autoscaling target:
 
 ```ts
@@ -85,9 +82,10 @@ const target = new aws.appautoscaling.Target("target", {
 The second component is the autoscaling policy, which defines the conditions when scaling starts. There are two important way
 
 ### Scheduled profile
+
 Quite often, increases in request rates are partially predictable. For example, usage increases during business hours and decreases at night.
 
-{{< figure src="./scheduled.png" title="Scheduled workload" caption="Provisioned concurrency matches predictable workload changes" >}}
+{{< figure src="./scheduled.png" caption="Provisioned concurrency matches predictable workload changes" >}}
 
 The following snippet sets two scheduled rules that switch between two levels of provisioned concurrency every day.
 
@@ -115,7 +113,7 @@ The example defines a helper function and calls it twice to set two schedules wi
 
 If your workload pattern is less predictable, you can configure autoscaling for provisioned concurrency based on the measured utilization.
 
-{{< figure src="./variable.png" title="Variable workload" caption="Provisioned concurrency matches the variation in workload" >}}
+{{< figure src="./variable.png" caption="Provisioned concurrency matches the variation in workload" >}}
 
 Here is a basic example of a dynamic scaling policy.
 
@@ -153,4 +151,4 @@ For high-load functions where utilization is continuously above a known level of
 
 If your Lambda hosts a latency-sensitive API, especially with runtimes like Java and .NET, you should strive to find the right balance between the percentage of requests that result in a cold start and the money spent on concurrency. Autoscaling should help once AWS has fixed the initial glitches that slipped into their current services, are fixed.
 
-If you want to try this for yourself, we've updated the Serverless C# App example to show off the scenario of configurable AWS Lambda provisioned concurrency.
+If you want to try this for yourself, we've updated the [Serverless App example](https://github.com/pulumi/examples/blob/master/aws-ts-serverless-raw/) to show off the scenario of configurable AWS Lambda provisioned concurrency.
