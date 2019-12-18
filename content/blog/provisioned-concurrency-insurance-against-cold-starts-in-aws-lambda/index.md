@@ -70,7 +70,7 @@ A fixed level of provisioned concurrency works well for stable workloads.
 
 {{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" >}}
 
-However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios of provisioning concurrency.
+However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios of provisioning concurrency dynamically.
 
 Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the autoscaling target:
 
