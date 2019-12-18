@@ -299,7 +299,7 @@ ERRORS:
 
 console.log(`
 Lint Results:
-    - ${filesToLint.length} files parsed.
+    - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 `);
 process.exit(0);

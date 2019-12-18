@@ -1,7 +1,7 @@
 ---
 title: "From Terraform to Infrastructure as Software"
 date: "2018-11-02"
-meta_desc: "Convert existing Terrraform configuration to Pulumi TypeScript. General purpose programming languages can help you create simpler, more flexible infrastructure as code, with greater productivity and less repetition."
+meta_desc: "Convert existing Terrraform configuration to Pulumi TypeScript to help you create simpler, more flexible infrastructure as code, with less repetition."
 meta_image: "tf-to-pulumi.png"
 authors: ["pat-gavlin"]
 tags: ["JavaScript","Infrastructure","TypeScript"]

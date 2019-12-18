@@ -3,7 +3,7 @@ title: "Pulumi: A Better Way to Kubernetes"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
 date: "2019-05-21"
-meta_desc: "Pulumi makes Kubernetes more accessible using familiar languages and your favorite tools. Create managed Kubernetes clusters, manage Kubernetes resources, including CRDs and related CustomResources, import Helm charts and manifests, and mix and match these resources within your Pulumi program."
+meta_desc: "In this post, we will explore how Pulumi makes Kubernetes more accessible using familiar languages and your favorite tools."
 
 meta_image: "meta_image.png"
 ---

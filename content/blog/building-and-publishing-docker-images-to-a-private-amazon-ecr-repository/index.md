@@ -1,5 +1,6 @@
 ---
-title: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
+title: Building and Publishing Docker Images to an ECR Repository
+h1: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
 authors: ["cyrus-najmabadi"]
 tags: ["Kubernetes"]
 date: "2019-06-18"

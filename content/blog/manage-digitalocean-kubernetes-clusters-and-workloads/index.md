@@ -1,8 +1,9 @@
 ---
-title: "Manage DigitalOcean Kubernetes Clusters and Workloads using Infrastructure as Code"
+title: Manage DigitalOcean Kubernetes Clusters and Workloads
+h1: "Manage DigitalOcean Kubernetes Clusters and Workloads using Infrastructure as Code"
 authors: ["joe-duffy"]
 tags: ["digitalocean", "kubernetes"]
-meta_desc: "We've partnered with DigitalOcean to publish a new tutorial showing how to provision a Kubernetes cluster, deploy an application to it, and assign a stable domain, all in a handful of lines of infrastructure as code."
+meta_desc: "We've partnered with DigitalOcean to publish a new tutorial showing how to provision a Kubernetes cluster, deploy an app to it, and assign a stable domain."
 date: "2019-09-30"
 
 meta_image: "digitalocean-kubernetes.png"

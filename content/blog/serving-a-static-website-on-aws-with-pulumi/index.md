@@ -3,7 +3,7 @@ title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
 tags: ["AWS","Infrastructure","TypeScript"]
 date: "2018-07-17"
-meta_desc: "With around 200 lines of code, learn how Pulumi integrates four different AWS products (Amazon S3, CloudFront, Route53, and Certificate Manager) to host a static website served over HTTPS and from a worldwide CDN."
+meta_desc: "With around 200 lines of code, learn how Pulumi integrates four different AWS products  to host a static website served over HTTPS and from a worldwide CDN."
 
 ---
 

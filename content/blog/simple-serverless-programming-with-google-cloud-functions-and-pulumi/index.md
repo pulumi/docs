@@ -1,9 +1,10 @@
 ---
-title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
+title: Simple Serverless programming with Google Cloud Functions
+h1: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","GCP"]
 date: "2019-04-10"
-meta_desc: "Pulumi lets you create, deploy, and manage Google Cloud applications and infrastructure in familiar languages like JavaScript, TypeScript, and Python, and without needing to learn new DSLs or YAML templating solutions. Use Pulumi and Google Cloud Functions to create a complete SlackBot application running on GCP. The Pulumi CLI makes it easy to tweak your serverless application with a single update."
+meta_desc: "Pulumi lets you create, deploy, and manage Google Cloud applications and infrastructure in familiar languages without needing DSLs or YAML templating solutions."
 
 ---
 

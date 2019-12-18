@@ -3,7 +3,7 @@ title: "Getting Started on Google Cloud Platform with Pulumi"
 authors: ["luke-hoban"]
 tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
-meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing, and reuse. Pulumi gives you full access to the full Google Cloud Platform, including Kubernetes and GKE, super simple serverless with Google Cloud Functions, continuous delivery with Google Cloud Build, and managing deployments with the Pulumi Console."
+meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing, and reuse. Pulumi gives you full access to the full Google Cloud Platform."
 meta_image: "pulumi_console.png"
 ---
 

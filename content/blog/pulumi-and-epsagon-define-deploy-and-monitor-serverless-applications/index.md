@@ -1,9 +1,9 @@
 ---
-title: "Pulumi + Epsagon: Define, Deploy and Monitor Serverless Applications"
+title: "Epsagon: Define, Deploy and Monitor Serverless Applications"
 authors: ["luke-hoban"]
 tags: ["Serverless"]
 date: "2018-11-29"
-meta_desc: "Introduce serverless functions into your cloud infrastructure using a Pulumi program with Lambdas. Use the Pulumi Epsagon package to get the benefits of Epsagon monitoring for all of the serverless functions defined in your Pulumi application."
+meta_desc: "Use the Pulumi Epsagon package to get the benefits of Epsagon monitoring for all of the serverless functions defined in your Pulumi application."
 meta_image: "espagon-console-2.png"
 ---
 

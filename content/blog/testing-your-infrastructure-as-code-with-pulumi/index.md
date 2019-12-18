@@ -3,7 +3,7 @@ title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
 tags: ["JavaScript","TypeScript","CI/CD","Cloud-Native","Python"]
 date: "2019-04-17"
-meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence. Since Pulumi is multi-cloud and its programs are written in general-purpose programming languages, you get access to testing frameworks for your language's runtime and can test the full underlying platform for your cloud."
+meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence."
 meta_image: "InfraTesting.png"
 ---
 

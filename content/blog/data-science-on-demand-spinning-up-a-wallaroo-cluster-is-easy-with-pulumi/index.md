@@ -1,5 +1,6 @@
 ---
-title: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
+title: "Data science on demand: spinning up a Wallaroo cluster"
+h1: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
 date: "2018-11-02"
 meta_desc: "Find out how Wallaroo powered their cluster provisioning with Pulumi, for data science on demand."
 meta_image: "tty-fast.gif"

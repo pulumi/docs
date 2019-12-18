@@ -1,7 +1,8 @@
 ---
-title: "kubespy trace: a real-time view into the heart of a Kubernetes Service"
+title: "kubespy trace: a real-time view into of a Kubernetes Service"
+h1: "kubespy trace: a real-time view into the heart of a Kubernetes Service"
 date: "2018-09-26"
-meta_desc: "This post is part 3 in a series on the Kubernetes API. To answer the question of why my pod getting any traffic, we've developed a small diagnostic tool called Kubespy."
+meta_desc: "This post is part 3 in a series on the Kubernetes API. We will take a look at a diagnostic tool we've developed called Kubespy."
 meta_image: "trace-success-create-svc.gif"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]

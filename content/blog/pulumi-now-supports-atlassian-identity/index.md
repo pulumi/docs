@@ -3,7 +3,7 @@ title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
 tags: ["Features","CI/CD"]
 date: "2019-01-30"
-meta_desc: "Sign up for a new Pulumi account using your Atlassian identity. If you have a Pulumi account, connect it with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks owned by your organizations. You can also use the Pulumi CLI in your team's CI/CD workflow."
+meta_desc: "Connect your Pulumi account with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks."
 meta_image: "atlassian-1.png"
 ---
 

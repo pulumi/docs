@@ -1,9 +1,10 @@
 ---
-title: "Pulumi Watch Mode: Fast Inner Loop Development for Cloud Infrastructure"
+title: "Pulumi Watch: Fast Inner Loop Development for Infrastructure"
+h1: "Pulumi Watch Mode: Fast Inner Loop Development for Cloud Infrastructure"
 authors: ["luke-hoban"]
 tags: ["serverless","kubernetes","logging","new-features","applications"]
 date: "2019-12-02"
-meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code and infrastructure, instead of on the mechanics of their deployments, across modern cloud platforms including serverless, Kubernetes and more."
+meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code."
 meta_image: "watch.png"
 ---
 

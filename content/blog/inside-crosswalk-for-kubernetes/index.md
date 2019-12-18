@@ -2,7 +2,7 @@
 title: "Inside Crosswalk for Kubernetes"
 date: 2019-11-21
 draft: false
-meta_desc: "Introduction and tour of Crosswalk for Kubernetes"
+meta_desc: "Crosswalk for Kubernetes is a collection of common patterns of usage for provisioning Kubernetes infrastructure and running containerized applications."
 meta_image: "meta.png"
 authors:
  - sophia-parafina

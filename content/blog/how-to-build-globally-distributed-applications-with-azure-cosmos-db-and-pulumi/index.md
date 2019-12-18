@@ -1,5 +1,6 @@
 ---
-title: "How To Build Globally Distributed Applications with Azure Cosmos DB and Pulumi"
+title: How To Build Globally Distributed Apps with Azure Cosmos DB
+h1: "How To Build Globally Distributed Applications with Azure Cosmos DB and Pulumi"
 authors: ["mikhail-shilkov"]
 tags: ["Azure"]
 meta_image: "meta.png"

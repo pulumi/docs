@@ -1,7 +1,7 @@
 ---
 title: "Happy Birthday to Pulumi open source!"
 date: "2019-06-18"
-meta_desc: "It's been a year since we open sourced Pulumi, a new approach to multi-cloud infrastructure as code using your favorite languages. Read more about what we've achieved."
+meta_desc: "It's been a year since we open sourced Pulumi, multi-cloud infrastructure as code using your favorite languages. Read more about what we've achieved."
 meta_image: "pulumi-birthday.png"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]

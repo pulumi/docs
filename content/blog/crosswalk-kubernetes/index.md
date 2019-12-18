@@ -1,8 +1,9 @@
 ---
-title: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
+title: A Year of Helping Build Production-Ready Kubernetes
+h1: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
+meta_desc: "Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
 date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---

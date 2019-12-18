@@ -2,7 +2,7 @@
 title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
 tags: ["Infrastructure", "CI/CD"]
-meta_desc: "Pulumi's code-centric approach to infrastructure can make you more productive programming the cloud. Package up, share, and reuse our code just like any other Node.js library."
+meta_desc: "Pulumi's code-centric approach to infrastructure can make you more productive programming the cloud. Package up, share, and reuse our code."
 date: "2018-08-09"
 
 meta_image: "pulumi-resource-visualization.png"
