@@ -1,5 +1,7 @@
 ---
 title: "AWS Lambda and Serverless Events"
+meta_desc: Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using
+           AWS Lambda.
 linktitle: Lambda
 menu:
   userguides:

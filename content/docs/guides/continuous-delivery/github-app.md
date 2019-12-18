@@ -1,6 +1,7 @@
 ---
 title: Pulumi GitHub App
-
+meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
+           will show you any potential infrastructure changes on Pull Requests and commit Checks.
 menu:
     userguides:
         parent: cont_delivery
@@ -73,8 +74,8 @@ so we can add it.
 By setting a few environment variables, you can ensure that any stack updates from your CI/CD environment will be
 associated with your GitHub Pull Request.
 
-- `PULUMI_CI_SYSTEM`. The name of whatever CI/CD system you are using. e.g. "Deploytron-9000".
-- `PULUMI_CI_PULL_REQUEST_SHA` (optional). If your CI/CD system is deploying from a different git commit than the
+* `PULUMI_CI_SYSTEM`. The name of whatever CI/CD system you are using. e.g. "Deploytron-9000".
+* `PULUMI_CI_PULL_REQUEST_SHA` (optional). If your CI/CD system is deploying from a different git commit than the
   GitHub PR, such as the resulting merge commit, then set the `PULUMI_CI_PULL_REQUEST_SHA` to the origional
   commit SHA, matching what is found on the Pull Request.
 

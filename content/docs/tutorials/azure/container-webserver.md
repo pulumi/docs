@@ -1,6 +1,7 @@
 ---
-title: "Web Server Container Instance"
-
+title: Deploy to Azure Container Instance (ACI)
+meta_desc: This tutorial will teach you how to deploy a simple NGINX container to
+           Azure Container Instance (ACI).
 aliases: ["/docs/reference/tutorials/azure/tutorial-container-webserver/"]
 ---
 
@@ -8,19 +9,19 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1.  [Configure Azure credentials]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}})
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Configure Azure credentials]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}})
 
 ## Create a container in Azure Container Instance {#ACI}
 
-1.  In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
+1. In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
 
     ```bash
     $ mkdir webserver && cd webserver
     $ pulumi new azure-javascript
     ```
 
-1.  Open `index.js` and replace the contents with the following:
+1. Open `index.js` and replace the contents with the following:
 
     ```javascript
     const pulumi = require("@pulumi/pulumi");
@@ -51,7 +52,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
     This example uses the [@pulumi/azure]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure" >}}) package to create and manage two Azure resources including: an [azure.core.ResourceGroup]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#ResourceGroup" >}}) which will contain the ACI instance and [azure.containerservice.Group]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/containerservice#Group" >}}) which will run an `nginx` Docker container.
 
-1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
+1. To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
 
         $ pulumi up
         Previewing update (azurewebserver-dev):
@@ -64,7 +65,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
         Resources:
             + 3 to create
 
-1.  Now, proceed with the deployment.
+1. Now, proceed with the deployment.
 
         Do you want to perform this update? yes
         Updating (azurewebserver-dev):
@@ -86,7 +87,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output]({{< relref "/docs/intro/concepts/stack.md#output" >}}) corresponding to the private IP address of the nginx container we've created.
+1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output]({{< relref "/docs/intro/concepts/stack.md#output" >}}) corresponding to the private IP address of the nginx container we've created.
 
         $ pulumi stack
         ...
@@ -101,7 +102,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
             OUTPUT                                           VALUE
             publicIP                                         13.66.202.166
 
-1.  Test out the container by `curl`ing the endpoint:
+1. Test out the container by `curl`ing the endpoint:
 
         $ curl $(pulumi stack output publicIP)
         <!DOCTYPE html>
@@ -129,7 +130,6 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
         <p><em>Thank you for using nginx.</em></p>
         </body>
         </html>
-
 
 ## Clean up
 

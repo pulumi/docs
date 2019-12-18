@@ -1,6 +1,7 @@
 ---
 title: SAML Single Sign-on (SSO)
-
+meta_desc: This page provides an overview of how to configure any SAML 2.0 identity provider
+           with the Pulumi Console.
 menu:
     userguides:
         weight: 5

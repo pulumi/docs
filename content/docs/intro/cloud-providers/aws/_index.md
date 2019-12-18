@@ -1,5 +1,6 @@
 ---
 title: AWS
+meta_desc: This page provides an overview of the AWS Provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers

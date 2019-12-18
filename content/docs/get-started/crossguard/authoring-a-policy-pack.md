@@ -1,5 +1,7 @@
 ---
 title: Authoring a Policy Pack
+meta_desc: This page provides an overview on how to author a Policy Pack to enforce best practices
+           and security compliance when creating coud resources.
 linktitle: Authoring a Policy Pack
 weight: 1
 menu:
@@ -7,6 +9,8 @@ menu:
     parent: pac
 aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 ---
+<!-- markdownlint-disable emphasis ul -->
+
 {{% crossguard-preview %}}
 
 1. Install prerequisites.
@@ -38,6 +42,7 @@ On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -49,6 +54,7 @@ On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -70,6 +76,7 @@ pulumi policy new aws-typescript
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi policy new aws-typescript
 ```
+
 {{% /md %}}
     </div>
 
@@ -122,18 +129,22 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     <div class="os-prologue-macos"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
     <div class="os-prologue-linux"></div>
     <div class="mt-4">
 {{% md %}}
+
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
@@ -153,6 +164,7 @@ pulumi preview --policy-pack <path-to-policy-pack-directory>
 $env:PULUMI_EXPERIMENTAL = 'true'
 pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
+
 {{% /md %}}
     </div>
 
@@ -192,9 +204,11 @@ Diagnostics:
 
   aws:s3:Bucket (my-bucket):
     mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
-    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
+    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: [https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html)
 {{< /highlight >}}
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 
 {{< get-started-stepper >}}
+
+<!-- markdownlint-enable emphasis ul -->

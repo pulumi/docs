@@ -1,7 +1,8 @@
 ---
-title: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
+title: Easily Create and Manage AWS EKS Kubernetes Clusters
+h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 date: "2019-01-24"
-meta_desc: "Use Pulumi to easily deploy new clusters, managed AWS resources, and then deploy Kubernetes apps to it. See how to provision an entire EKS cluster with a CLI single gesture."
+meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a CLI single gesture."
 meta_image: "easy-eks.png"
 authors: ["luke-hoban"]
 tags: ["AWS","Kubernetes"]
@@ -80,10 +81,10 @@ TypeScript:
 import * as aws from "@pulumi/aws";
 import * as awsinfra from "@pulumi/aws-infra";
 import * as eks from "@pulumi/eks";
- 
+
 // Create a VPC for our cluster.
 const network = new awsinfra.Network("eksNetwork");
- 
+
 // Create the EKS cluster
 const cluster = new eks.Cluster("eksCluster", {
     vpcId: network.vpcId,
@@ -95,7 +96,7 @@ const cluster = new eks.Cluster("eksCluster", {
     storageClasses: "gp2",
     deployDashboard: true,
 });
- 
+
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
 ```

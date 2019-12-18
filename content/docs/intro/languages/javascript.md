@@ -1,5 +1,7 @@
 ---
 title: "Node.js"
+meta_desc: An overview of how to use Javascript when writing cloud applications for any
+           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

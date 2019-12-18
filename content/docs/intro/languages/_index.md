@@ -1,5 +1,7 @@
 ---
 title: Languages
+meta_desc: An overview of how to use Python, Node.js, .NET Core, and Go when writing cloud
+           applications for any Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
 menu:
   intro:
     identifier: languages

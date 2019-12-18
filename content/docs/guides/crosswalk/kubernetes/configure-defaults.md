@@ -1,5 +1,7 @@
 ---
-title: Configure Cluster Defaults
+title: Configure Kubernetes Cluster Defaults
+meta_desc: This page will walk you through how to configure Kubernetes Cluster Defaults
+           on AWS, Azure, and GCP.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -17,7 +19,10 @@ segment the cluster as needed.
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -27,7 +32,10 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -37,7 +45,10 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
+
+<!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -46,9 +57,9 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll examine how to create:
 
-  * [Namespaces](#namespaces)
-  * [Quotas](#quotas)
-  * [PodSecurityPolicies](#podsecuritypolicies)
+* [Namespaces](#namespaces)
+* [Quotas](#quotas)
+* [PodSecurityPolicies](#podsecuritypolicies)
 
 ## Prerequisites
 
@@ -62,6 +73,7 @@ Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] 
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 {{% /md %}}
 </div>
@@ -74,6 +86,7 @@ Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] s
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 [azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
 {{% /md %}}
 </div>
@@ -95,9 +108,9 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 
 Create namespaces for typical stacks:
 
- * Cluster Services: Deploy cluster-scoped services, such as logging and monitoring.
- * App Services: Deploy application-scoped services, such as ingress or DNS management.
- * Apps: Deploy applications and workloads.
+* Cluster Services: Deploy cluster-scoped services, such as logging and monitoring.
+* App Services: Deploy application-scoped services, such as ingress or DNS management.
+* Apps: Deploy applications and workloads.
 
 {{< k8s-language nokx >}}
 
@@ -134,6 +147,7 @@ $ kubectl apply -f namespaces.yaml
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -147,6 +161,7 @@ export const appSvcsNamespaceName = appSvcsNamespace.metadata.name;
 const appsNamespace = new k8s.core.v1.Namespace("apps", undefined, { provider: cluster.provider });
 export const appsNamespaceName = appsNamespace.metadata.name;
 ```
+
 {{% /md %}}
 </div>
 
@@ -155,13 +170,16 @@ export const appsNamespaceName = appsNamespace.metadata.name;
 Create [quotas][k8s-quotas] to restrict the number of resources that can be consumed across
 all Pods in a namespace.
 
+<!-- markdownlint-disable url -->
 [k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
+<!-- markdownlint-enable url -->
 
 {{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
+
 ```yaml
 cat > quota.yaml << EOF
 apiVersion: v1
@@ -182,12 +200,14 @@ EOF
 ```bash
 $ kubectl apply -f quota.yaml
 ```
+
 {{% /md %}}
 </div>
 
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -208,6 +228,7 @@ const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
     provider: cluster.provider
 });
 ```
+
 {{% /md %}}
 </div>
 
@@ -244,8 +265,11 @@ to ensure running workloads continue executing properly (order matters).
 See the official [EKS Pod Security Policy][eks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
 
+<!-- markdownlint-disable url -->
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 [eks-psp]: https://docs.aws.amazon.com/eks/latest/userguide/pod-security-policy.html
+<!-- markdownlint-enable url -->
+
 {{% /md %}}
 </div>
 
@@ -262,9 +286,12 @@ We'll need to create a PSP with proper Kubernetes RBAC for these users.
 
 See the official [AKS Pod Security Policy][aks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
+
+<!-- markdownlint-disable url -->
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 [aks-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
 [aks-psp-priv]: https://docs.microsoft.com/en-us/azure/aks/use-pod-security-policies
+<!-- markdownlint-enable url -->
 
 {{% /md %}}
 </div>
@@ -294,7 +321,7 @@ See the official [GKE Pod Security Policy][gke-psp] docs and the
 {{% /md %}}
 </div>
 
-#### Create a Restrictive PSP
+### Create a Restrictive PSP
 
 Create a PSP that allows a restrictive, but usable set of permissions to deploy
 workloads.
@@ -398,6 +425,7 @@ EOF
 ```bash
 $ kubectl apply -f restrictive-psp.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -596,6 +624,7 @@ EOF
 ```bash
 $ kubectl apply -f restrictive-psp.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -794,6 +823,7 @@ EOF
 ```bash
 $ kubectl apply -f restrictive-psp.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -898,7 +928,7 @@ const allowRestrictedAppsCRB = pulumi.all([
 {{% /md %}}
 </div>
 
-#### Create a Privileged PSP Role Binding
+### Create a Privileged PSP Role Binding
 
 If you wish to grant the ability to use a privileged PSP, we need to
 create a ClusterRoleBinding to the PSP. For example, here's how to bind the PSP to
@@ -913,6 +943,7 @@ a given Namespace's (`ingress-nginx`) ServiceAccounts.
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
 apiVersion: rbac.authorization.k8s.io/v1
@@ -933,11 +964,13 @@ EOF
 ```bash
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
+
 {{% /md %}}
 </div>
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
+
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
 apiVersion: rbac.authorization.k8s.io/v1
@@ -958,11 +991,13 @@ EOF
 ```bash
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
+
 {{% /md %}}
 </div>
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
+
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
 apiVersion: rbac.authorization.k8s.io/v1
@@ -983,6 +1018,7 @@ EOF
 ```bash
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
+
 {{% /md %}}
 </div>
 
@@ -995,6 +1031,7 @@ $ kubectl apply -f privileged-rolebinding.yaml
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -1014,12 +1051,14 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     ]
 });
 ```
+
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -1039,12 +1078,14 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     ]
 });
 ```
+
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
+
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -1066,6 +1107,7 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     ]
 });
 ```
+
 {{% /md %}}
 </div>
 

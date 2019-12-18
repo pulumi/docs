@@ -1,10 +1,10 @@
 ---
-title: "Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs"
+title: "Persisting Kubernetes workloads with Amazon EFS CSI volumes"
 title_tag: "Persisting Kubernetes workloads with Amazon EFS CSI volumes"
 date: "2019-07-15"
 authors: ["nishi-davidson"]
 tags: ["AWS", "EKS", "Kubernetes"]
-meta_desc: "In this blog, we will work through an example that shows how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes using Pulumi libraries (EKS, AWS, and AWSX)."
+meta_desc: "In this blog, we will show how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes (EKS, AWS, and AWSX)."
 meta_image: "featured-img-efs-csi-driver.png"
 ---
 

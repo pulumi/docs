@@ -1,7 +1,8 @@
 ---
-title: "kubespy trace: a real-time view into the heart of a Kubernetes Service"
+title: "kubespy trace: a real-time view into of a Kubernetes Service"
+h1: "kubespy trace: a real-time view into the heart of a Kubernetes Service"
 date: "2018-09-26"
-meta_desc: "This post is part 3 in a series on the Kubernetes API. To answer the question of why my pod getting any traffic, we've developed a small diagnostic tool called Kubespy."
+meta_desc: "This post is part 3 in a series on the Kubernetes API. We will take a look at a diagnostic tool we've developed called Kubespy."
 meta_image: "trace-success-create-svc.gif"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
@@ -20,17 +21,17 @@ Why isn't my `Pod` getting any traffic?
 An experienced ops team running on GKE might assemble the following
 checklist to help answer this question:
 
-1.  Does a `Service` exist? Does that service have a `.spec.selector`
+1. Does a `Service` exist? Does that service have a `.spec.selector`
     that matches some number of `Pod`s?
-2.  Are the `Pod`s alive and has their readiness probe passed?
-3.  Did the `Service` create an `Endpoints` object that specifies one or
+2. Are the `Pod`s alive and has their readiness probe passed?
+3. Did the `Service` create an `Endpoints` object that specifies one or
     more `Pod`s to direct traffic to?
-4.  Is the `Service` reachable via DNS? When you `kubectl ``exec` into a
+4. Is the `Service` reachable via DNS? When you `kubectl ``exec` into a
     `Pod` and you use `curl` to poke the `Service` hostname, do you get
     a response? (If not, does *any* `Service` have a DNS entry?)
-5.  Is the `Service` reachable via IP? When you SSH into a `Node` and
+5. Is the `Service` reachable via IP? When you SSH into a `Node` and
     you use `curl` to poke the `Service` IP, do you get a response?
-6.  Is `kube-proxy` up? Is it writing iptables rules? Is it proxying to
+6. Is `kube-proxy` up? Is it writing iptables rules? Is it proxying to
     the `Service`?
 
 This question might have the highest complexity-to-sentence-length ratio
@@ -99,7 +100,7 @@ which `kubespy trace` tells us:
 **Second: `Pod`s that match the `Service`'s `.spec.selector` are
 created; their readiness probes immediately pass.** The `Endpoints`
 object is updated to reflect this. As we will see below, if the `Pods`
-failed the readiness probes, `kubespy trace` would note this. 
+failed the readiness probes, `kubespy trace` would note this.
 
 ![trace-success-pods-ready](./trace-success-pods-ready.gif)
 

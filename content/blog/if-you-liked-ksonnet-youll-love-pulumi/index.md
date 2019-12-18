@@ -1,7 +1,7 @@
 ---
 title: "If you liked ksonnet, you'll love Pulumi!"
 date: "2019-02-13"
-meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more. With Pulumi, we can structure our code work at a higher level of abstraction as we author our Kubernetes configurations."
+meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more."
 meta_image: "kube-update.gif"
 authors: ["mike-metral"]
 tags: ["Kubernetes","Cloud-Native"]
@@ -95,7 +95,7 @@ Kubernetes API, so you can do everything that Kubernetes supports - but
 using programming languages that provide completion lists, error
 checking, inline documentation, and basic features like variables and
 control flow.  Here's an example of part of a
-[direct port of the Guestbook example to Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/simple): 
+[direct port of the Guestbook example to Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/simple):
 
 ![Raw access to Kubernetes API](./raw-access.png)
 

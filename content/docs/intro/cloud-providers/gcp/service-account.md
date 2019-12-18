@@ -1,6 +1,7 @@
 ---
 title: Setup Service Account
-
+meta_desc: This page provides an overview of how set up a Google Cloud Platform Service Account
+           with Pulumi.
 aliases: ["/docs/reference/clouds/gcp/service-account/"]
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: AWS CDK and Troposphere
+meta_desc: This page gives and overview of the major differences between Pulumi and
+            AWS CDK & Troposphere.
 linktitle: AWS CDK and Troposphere
 menu:
   intro:

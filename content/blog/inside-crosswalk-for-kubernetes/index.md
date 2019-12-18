@@ -2,7 +2,7 @@
 title: "Inside Crosswalk for Kubernetes"
 date: 2019-11-21
 draft: false
-meta_desc: "Introduction and tour of Crosswalk for Kubernetes"
+meta_desc: "Crosswalk for Kubernetes is a collection of common patterns of usage for provisioning Kubernetes infrastructure and running containerized applications."
 meta_image: "meta.png"
 authors:
  - sophia-parafina
@@ -14,7 +14,6 @@ tags:
 ---
 
 Running Kubernetes in production can be challenging. This past year, Pulumi has collected common patterns of usage informed by best practices for provisioning Kubernetes infrastructure and running containerized applications. We call this Pulumi Crosswalk for Kubernetes: a collection of playbooks and libraries to help you to successfully configure, deploy, and manage Kubernetes in a way that works for teams in production.
-
 
 ## Kubernetes is Vast and Complex
 

@@ -1,5 +1,7 @@
 ---
-title: Get Started with Kubernetes
+title: Kubernetes Getting Started
+h1: Get Started with Kubernetes
+meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
 linktitle: Kubernetes
 weight: 1
 menu:
@@ -22,7 +24,6 @@ help you accomplish all these within minutes.
 
 This guide will have you quickly provisioning infrastructure on Kubernetes with
 Pulumi in your favorite language.
-
 
 Let's start with installing Pulumi.
 

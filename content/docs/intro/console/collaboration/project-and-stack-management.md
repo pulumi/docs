@@ -1,5 +1,6 @@
 ---
 title: Project and Stack Management
+meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
 ---
 
 > While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).
@@ -10,7 +11,6 @@ The Pulumi Console automatically manages deployment state and gives you a compre
 * View your organization stacks
 * View stack outputs and configurations
 * Review your stack activity, resources, and settings
-
 
 ## Creating a New Project
 
@@ -36,7 +36,6 @@ Once signed in, select your organization from the drop-down list on the upper le
 
 The **Stacks** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}) but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Click on the stack name to drill into a specific stack.
 
-
 ### Viewing a specific stack
 
 If you have been added to a Pulumi organization with existing projects and stacks, the Console displays a list of _Stacks_ and a _Recent Activity_ stream when you sign in. The lists are collapsible and are sorted according to the most recent updates. Click on a specific stack update or activity for a more detailed view.
@@ -57,9 +56,9 @@ Clicking on "Details" from the Stack update tab, or clicking on a specific activ
 
 * **Changes**. This lets you toggle between different log views:
 <img class="lg:max-w-xl m-6" src="/images/docs/reference/service/resource-changes.png" alt="Stack Resource Graph">
-   * _Summary Log_ which lists a summary of changes, counts of affected resources, and update duration
-   *  _Diff Log_ which displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
-   * _Diagnostic Log_ which displays warning messages or a description of the operations performed during the update (if any).
+    * _Summary Log_ which lists a summary of changes, counts of affected resources, and update duration
+    * _Diff Log_ which displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
+    * _Diagnostic Log_ which displays warning messages or a description of the operations performed during the update (if any).
 
 * **Timeline**. This gives you a detailed timeline of changes to individual cloud resources. It also includes useful resource links and counts of affected resources.
 
@@ -69,7 +68,7 @@ Clicking on "Details" from the Stack update tab, or clicking on a specific activ
 
 #### Resources View
 
-You can click on a resource link from **Activity > Timeline** to drill into a specific resource's properties and dependencies, if any. The Resources tab lets you toggle between a list and a graph view. 
+You can click on a resource link from **Activity > Timeline** to drill into a specific resource's properties and dependencies, if any. The Resources tab lets you toggle between a list and a graph view.
 
 ##### List View
 

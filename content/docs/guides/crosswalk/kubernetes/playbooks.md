@@ -1,5 +1,7 @@
 ---
 title: "Crosswalk Playbooks for Kubernetes"
+meta_desc: The Pulumi Crosswalk Playbooks for Kubernetes is a collection of
+           industry standard best-practices for managing Kubernetes in production.
 linktitle: Playbooks for Kubernetes
 menu:
   userguides:
@@ -29,15 +31,15 @@ If you are just getting started with Pulumi and Kubernetes, the [Get Started][k8
 
 The steps to follow include:
 
-  * [Create the Control Plane][crosswalk-control-plane]
-  * [Create the Worker Nodes][crosswalk-worker-nodes]
-  * [Try Out the Cluster][crosswalk-try-out-the-cluster]
-  * [Configure Cluster Defaults][crosswalk-configure-defaults]
-  * [Configure Access Control][crosswalk-configure-access]
-  * [Deploy Cluster Services][crosswalk-cluster-svcs]
-  * [Deploy App Services][crosswalk-app-svcs]
-  * [Deploy Apps][crosswalk-apps]
-  * [Update the Worker Nodes][crosswalk-update-worker-nodes]
+* [Create the Control Plane][crosswalk-control-plane]
+* [Create the Worker Nodes][crosswalk-worker-nodes]
+* [Try Out the Cluster][crosswalk-try-out-the-cluster]
+* [Configure Cluster Defaults][crosswalk-configure-defaults]
+* [Configure Access Control][crosswalk-configure-access]
+* [Deploy Cluster Services][crosswalk-cluster-svcs]
+* [Deploy App Services][crosswalk-app-svcs]
+* [Deploy Apps][crosswalk-apps]
+* [Update the Worker Nodes][crosswalk-update-worker-nodes]
 
 ## Production Architecture for Teams
 
@@ -129,6 +131,7 @@ DNS managers, TLS certificate managers, and app pipelines.
 
 Deploy applications and workloads into the cluster.
 
+<!-- markdownlint-disable url -->
 [aws-iam]: https://aws.amazon.com/iam/
 [gcp-iam]: https://cloud.google.com/iam/
 [azure-ad]: https://azure.microsoft.com/en-us/services/active-directory/
@@ -152,3 +155,4 @@ Deploy applications and workloads into the cluster.
 [crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 [cw-guides]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks.md" >}}
+<!-- markdownlint-enable url -->

@@ -1,6 +1,6 @@
 ---
 title: Codefresh
-
+meta_desc: This page will walk you through setting up Codefresh CI/CD with a Pulumi program.
 menu:
     userguides:
         parent: cont_delivery
@@ -16,7 +16,6 @@ aliases:
 Codefresh pipelines are composed by different [steps](https://codefresh.io/docs/docs/codefresh-yaml/steps/) where each step runs inside a Docker container.
 Since Pulumi is also released as [Docker container](https://hub.docker.com/r/pulumi/pulumi), it is very easy to use Pulumi in Codefresh pipelines.
 
-
 ## Project setup
 
 First of all follow the instructions for creating a Pulumi stack. There are three ways to do this:
@@ -26,7 +25,6 @@ First of all follow the instructions for creating a Pulumi stack. There are thre
 3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to select a template.
 
 Then [signup for a Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) and [create a pipeline](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/pipelines/). There is no special setup needed on the Codefresh side (i.e. you can use Pulumi on both free and paid Codefresh accounts).
-
 
 ### Environment Variables
 
@@ -44,7 +42,6 @@ You can either add the token on the pipeline itself as a variable, or store it g
 Next, you will also need to set environment variables specific to your cloud resource provider.
 For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY`.
-
 
 ## Codefresh CI/CD pipeline with Pulumi
 
@@ -74,6 +71,7 @@ For other non-Kubernetes deployments, you need to add additional environment var
 Here is a full example:
 
  `codefresh.yml`
+
 ```yaml
 version: '1.0'
 stages:
@@ -112,8 +110,6 @@ steps:
       - pulumi stack
       - pulumi up --non-interactive
 ```
-
-
 
 This pipeline uses a Kubernetes/Typescript Pulumi stack. Once you run it you should see a new entry in your Pulumi history as well as the deployment in the Codefresh Kubernetes Dashboard.
 

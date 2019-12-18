@@ -1,5 +1,6 @@
 ---
-title: "Deploy a Function App with KEDA (Kubernetes-based Event-Driven Autoscaling)"
+title: "Deploy a Function App on Kubernetes with KEDA"
+h1: "Deploy a Function App with KEDA (Kubernetes-based Event-Driven Autoscaling)"
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Kubernetes", "Serverless"]
 meta_image: "meta.png"

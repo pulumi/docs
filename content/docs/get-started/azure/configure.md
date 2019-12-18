@@ -1,5 +1,8 @@
 ---
-title: Configure Azure
+title: Configure | Azure
+h1: Configure
+linktitle: Configure
+meta_desc: This page provides an overview of how to configure an Azure project.
 weight: 4
 menu:
   getstarted:

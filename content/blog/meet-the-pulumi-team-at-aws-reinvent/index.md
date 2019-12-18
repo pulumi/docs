@@ -19,7 +19,7 @@ Catch up with us on serverless functions, [containers]({{< ref "/containers" >}
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose
 programming languages. We can even help you
-[migrate your CloudFormation to Pulumi]({{< ref "/cloudformation" >}}). 
+[migrate your CloudFormation to Pulumi]({{< ref "/cloudformation" >}}).
 
 If you want to grab a specific time to talk through your needs,
 [then use this link](https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup),

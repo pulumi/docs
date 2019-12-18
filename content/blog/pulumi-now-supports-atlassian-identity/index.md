@@ -3,7 +3,7 @@ title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
 tags: ["Features","CI/CD"]
 date: "2019-01-30"
-meta_desc: "Sign up for a new Pulumi account using your Atlassian identity. If you have a Pulumi account, connect it with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks owned by your organizations. You can also use the Pulumi CLI in your team's CI/CD workflow."
+meta_desc: "Connect your Pulumi account with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks."
 meta_image: "atlassian-1.png"
 ---
 
@@ -49,7 +49,7 @@ A [Bitbucket Team](https://confluence.atlassian.com/bitbucket/teams-321853005.ht
 helps you organize users into user groups and therefore, assign each of
 them a permission to your repositories. By adding a Bitbucket
 Team-backed organization, you can invite the same members to collaborate
-on Pulumi. 
+on Pulumi.
 
 This allows you to set permissions on
 [Stacks]({{< ref "/docs/intro/concepts/stack" >}}) owned by your

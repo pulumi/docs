@@ -1,6 +1,7 @@
 ---
 title: G Suite (Google)
-
+meta_desc: This page provides a walkthrough important aspects of configuring
+           G Suite service as a SAML SSO identity provider (IDP).
 menu:
     userguides:
         parent: saml
@@ -55,7 +56,6 @@ URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your 
     | Entity ID | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
     | Start URL | `https://api.pulumi.com/login/<acmecorp>/sso` |
     | Name ID Format | `EMAIL` or `PERSISTENT` |
-
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 

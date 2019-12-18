@@ -38,7 +38,7 @@ const instance = new jenkins.Instance("jenkins", {
 
 We could take the component code and prepare a fully reusable NPM
 package, but as this is just an example, we've simply maintained the
-code as an included class. 
+code as an included class.
 
 ## Running the App
 
@@ -160,10 +160,10 @@ instance:
 
 This example showed just a little of the potential of reusing components
 and code, instead of copy and pasting config, to improve productivity
-and comprehension for building cloud stacks. 
+and comprehension for building cloud stacks.
 
 Find out more:
 
--   Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
--   Read the docs on [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
--   See the tutorial on [building components]({{< ref "/docs/tutorials/aws/s3-folder-component" >}})
+- Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
+- Read the docs on [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+- See the tutorial on [building components]({{< ref "/docs/tutorials/aws/s3-folder-component" >}})

@@ -32,9 +32,9 @@ The website is powered by [Hugo](https://gohugo.io).
 
 #### macOS
 
-The following commands use the package manager, [Homebrew](https://brew.sh/). 
+The following commands use the package manager, [Homebrew](https://brew.sh/).
 
-##### Install Hugo 
+##### Install Hugo
 
 If you already have Hugo installed, uninstall it:
 
@@ -95,6 +95,8 @@ go get -u gopkg.in/russross/blackfriday.v2
 ### Makefile
 
 `make ensure` will run `yarn install` which resolves project dependencies.
+
+`make lint_markdown` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
 
 `make build` will generate the website (published to public).
 

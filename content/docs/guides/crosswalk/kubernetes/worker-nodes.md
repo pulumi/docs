@@ -1,5 +1,7 @@
 ---
 title: Create the Worker Nodes
+meta_desc: This page provides a guide on how to create Kubernetes Worker Nodes
+           with Pulumi.
 no_on_this_page: true
 menu:
   userguides:
@@ -67,13 +69,13 @@ medium-sized use, and a performant pool of nodes with higher capacity and capabi
 
 We'll configure and deploy:
 
-  * [Node Identity](#node-identity): For authentication and authorization of the worker nodes.
-  * [Node Group Networking](#node-group-networking): To provide a virtual network for the
-    nodes and the Pods it runs.
-  * [Node Sizing](#node-sizing): To size our node scaling groups
-  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
-  * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
-  and best-practices, such as version pinning, and resource tags.
+* [Node Identity](#node-identity): For authentication and authorization of the worker nodes.
+* [Node Group Networking](#node-group-networking): To provide a virtual network for the
+nodes and the Pods it runs.
+* [Node Sizing](#node-sizing): To size our node scaling groups
+* [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
+* [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
+and best-practices, such as version pinning, and resource tags.
 
 ## Node Identity
 
@@ -119,10 +121,10 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 
 We'll configure and deploy:
 
-  * [Node Pool Sizing](#node-pool-sizing): To properly size our nodes.
-  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
-  * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
-  and best-practices.
+* [Node Pool Sizing](#node-pool-sizing): To properly size our nodes.
+* [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
+* [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
+and best-practices.
 
 {{% /md %}}
 </div>
@@ -133,10 +135,10 @@ We'll configure and deploy:
 
 We'll configure and deploy:
 
-  * [Node Sizing](#node-sizing): To properly size our nodes.
-  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
-  * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
-  and best-practices.
+* [Node Sizing](#node-sizing): To properly size our nodes.
+* [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
+* [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
+and best-practices.
 
 {{% /md %}}
 </div>
@@ -390,6 +392,7 @@ $ kubectl label nodes <NODE_NAME> disktype=ssd
 ```
 
 Set taints on nodes.
+
 ```typescript
 $ kubectl taint nodes <NODE_NAME> special=true:NoSchedule
 ```
@@ -450,12 +453,12 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for each node group. This pins the nodes
-  to a particular release in a declarative manner, instead of implicitly
-  using the latest available version or using a smart default where both
-  can be updated at any moment.
-  * Tag resources under management to provide the ability to assign
-  metadata to resources to make it easier to manage, search, and filter them.
+* Use a specific version of Kubernetes for each node group. This pins the nodes
+to a particular release in a declarative manner, instead of implicitly
+using the latest available version or using a smart default where both
+can be updated at any moment.
+* Tag resources under management to provide the ability to assign
+metadata to resources to make it easier to manage, search, and filter them.
 
 ```typescript
 // Create a Standard node group of t2.medium workers.
@@ -495,10 +498,10 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for each node group. This pins the nodes
-  to a particular release in a declarative manner, instead of implicitly
-  using the latest available version, or using a smart default where both
-  can be updated at any moment.
+* Use a specific version of Kubernetes for each node group. This pins the nodes
+to a particular release in a declarative manner, instead of implicitly
+using the latest available version, or using a smart default where both
+can be updated at any moment.
 
 {{% /md %}}
 </div>
@@ -507,13 +510,13 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for each node group. This pins the nodes
+* Use a specific version of Kubernetes for each node group. This pins the nodes
     to a particular release in a declarative manner, instead of implicitly
     using the latest available version, or using a smart default where both
     can be updated at any moment.
-  * Set [OAuth Scopes][gcp-oauth-scopes] for Google APIs to limit the capabilities of the node
+* Set [OAuth Scopes][gcp-oauth-scopes] for Google APIs to limit the capabilities of the node
     pool, and enable managed GCP logging and monitoring of the cluster.
-  * Tag resources under management to provide the ability to assign
+* Tag resources under management to provide the ability to assign
     metadata to resources to make it easier to manage, search, and filter them.
 
 ```typescript

@@ -1,6 +1,7 @@
 ---
-title: Setup
-
+title: vSphere Setup
+meta_desc: This page provides an overview on how to setup use Pulumi and the vSphere SDK to
+           manage and provision resources.
 aliases: ["/docs/reference/clouds/vsphere/setup/"]
 ---
 

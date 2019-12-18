@@ -1,5 +1,6 @@
 ---
 title: Packet.net
+meta_desc: This page provides an overview of the Packet.net provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers

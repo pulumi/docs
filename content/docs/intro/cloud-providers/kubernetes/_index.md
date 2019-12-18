@@ -1,5 +1,6 @@
 ---
-title: Kubernetes
+title: Kubernetes Overview
+meta_desc: This page provides an overview of how Pulumi works with Kubernetes.
 menu:
   intro:
     parent: cloud-providers
@@ -28,13 +29,13 @@ The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cl
 management, and deployment of app workloads to clusters. Users of
 Kubernetes and Pulumi can:
 
--  Instantiate IaaS resources and managed services from any cloud.
--  Provision managed Kubernetes clusters from the major cloud providers.
--  Provision self-managed (open source) Kubernetes clusters on top of raw IaaS resources or on-prem virtualization providers.
--  Create and orchestrate Kubernetes API resources for app workloads, in the programming language of their choice.
--  Manage real code instead of YAML, JSON, DSL's, or tar archives of templates.
--  Apply standard software development practices to Kubernetes applications, including the use of functions, classes, loops, conditionals, etc.
--  Increase productivity using the power of dev tools such as IDE auto-completion, type &
+- Instantiate IaaS resources and managed services from any cloud.
+- Provision managed Kubernetes clusters from the major cloud providers.
+- Provision self-managed (open source) Kubernetes clusters on top of raw IaaS resources or on-prem virtualization providers.
+- Create and orchestrate Kubernetes API resources for app workloads, in the programming language of their choice.
+- Manage real code instead of YAML, JSON, DSL's, or tar archives of templates.
+- Apply standard software development practices to Kubernetes applications, including the use of functions, classes, loops, conditionals, etc.
+- Increase productivity using the power of dev tools such as IDE auto-completion, type &
    error checking, linting, refactoring, and testing frameworks to validate Kubernetes clusters, app workloads, or both.
 
 ## Getting Started
@@ -43,21 +44,21 @@ The quickest way to get started with Kubernetes is to follow the [Get Started]({
 
 ## Library Packages
 
-#### For Cluster Management
+### For Cluster Management
 
 The following SDKs are available to work with IaaS resources, and managed or self-managed Kubernetes clusters:
 
--   AWS: [`pulumi/aws`](https://github.com/pulumi/aws), [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx), [`pulumi/eks`](https://github.com/pulumi/eks)
--   GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
--   Azure: [`pulumi/azure`](https://github.com/pulumi/pulumi-azure)
+- AWS: [`pulumi/aws`](https://github.com/pulumi/aws), [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx), [`pulumi/eks`](https://github.com/pulumi/eks)
+- GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
+- Azure: [`pulumi/azure`](https://github.com/pulumi/pulumi-azure)
 
-#### For Workload Management
+### For Workload Management
 
 The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is available to work with, and deploy app workloads to running Kubernetes clusters:
 
--   JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
--   Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
--   Go: Planned
+- JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
+- Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
+- Go: Planned
 
 [k8s]: https://kubernetes.io
 

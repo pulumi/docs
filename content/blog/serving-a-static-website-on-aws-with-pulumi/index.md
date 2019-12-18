@@ -3,7 +3,7 @@ title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
 tags: ["AWS","Infrastructure","TypeScript"]
 date: "2018-07-17"
-meta_desc: "With around 200 lines of code, learn how Pulumi integrates four different AWS products (Amazon S3, CloudFront, Route53, and Certificate Manager) to host a static website served over HTTPS and from a worldwide CDN."
+meta_desc: "With around 200 lines of code, learn how Pulumi integrates four different AWS products  to host a static website served over HTTPS and from a worldwide CDN."
 
 ---
 
@@ -14,7 +14,7 @@ for this example is [available on GitHub](https://github.com/pulumi/examples/bl
 Setting up the infrastructure to serve a static website doesn't sound
 like it would be all that difficult, but when you consider HTTPS
 certificates, content distribution networks, and attaching it to a
-custom domain, integrating all the components can be quite daunting. 
+custom domain, integrating all the components can be quite daunting.
 
 Fortunately this is a task where Pulumi really shines. Pulumi's
 code-centric approach not only makes configuring cloud resources easier
@@ -31,7 +31,7 @@ and [get.pulumi.com](http://get.pulumi.com).
 
 The architecture we will use for the website is to follow AWS "[Web Application Hosting](https://aws.amazon.com/architecture/)"
 reference architecture ([pdf](https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf)).
-This integrates several AWS products: 
+This integrates several AWS products:
 
 - [Amazon S3](https://aws.amazon.com/s3/), used to store the
   website's contents
@@ -45,7 +45,7 @@ This integrates several AWS products: 
 
 If you are already familiar with static hosting on AWS, feel free to go
 directly to our [examples repository](https://github.com/pulumi/examples) on GitHub, in the
-aws-ts-static-website folder. 
+aws-ts-static-website folder.
 
 If you are new to AWS, we'll break down how to configure each component
 using Pulumi.

@@ -1,5 +1,6 @@
 ---
-title: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
+title: Building and Publishing Docker Images to an ECR Repository
+h1: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
 authors: ["cyrus-najmabadi"]
 tags: ["Kubernetes"]
 date: "2019-06-18"
@@ -212,10 +213,10 @@ sync.
 Pulumi is open source and free to use. For more information on Getting
 Started, check out:
 
-1.  [AWS QuickStart]({{< ref "/docs/get-started/aws" >}})
-2.  [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
-3.  [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-4.  [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/guides/crosswalk/aws" >}})
+1. [AWS QuickStart]({{< ref "/docs/get-started/aws" >}})
+2. [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
+3. [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
+4. [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/guides/crosswalk/aws" >}})
 
 We think there's no easier way to do containers in a tight inner
 development loop, and we hope you agree!

@@ -1,7 +1,8 @@
 ---
-title: "How do Kubernetes Deployments work? An adversarial perspective"
+title: How do Kubernetes Deployments work?
+h1: "How do Kubernetes Deployments work? An adversarial perspective"
 date: "2018-10-03"
-meta_desc: "Part 3 on the Kubernetes API series. In this blog, we take a closer look at what happens during a rollout, what happens if we kill a pod, and what happens if we add or remove labels from a pod."
+meta_desc: "In this blog, we take a closer look at what happens during a rollout, what happens if we kill a pod, and what happens if we add or remove labels from a pod."
 meta_image: "deployment-rollout.gif"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
@@ -64,8 +65,8 @@ on the subject.
 
 The gif in the introduction shows what happens when:
 
--   We deploy the example application.
--   Then, later, change the image tag to `nginx:1.12-alpine` and deploy
+- We deploy the example application.
+- Then, later, change the image tag to `nginx:1.12-alpine` and deploy
     again.
 
 When `kubespy trace deploy nginx` is run, it will watch for changes to
@@ -127,7 +128,7 @@ Try using `kubectl edit` to delete the labels on one of your `Pods`.
 
 Unlike the "killing a `Pod`" example above, the old `Pod` seems to
 *disappear*, replaced by a new `Pod` that, when booted up, causes the
-`Deployment `to be marked as available again.
+`Deployment` to be marked as available again.
 
 What's happening here? It turns out that if you remove the app labels
 for a `Pod`, the `ReplicaSet` controller notices, removes itself from

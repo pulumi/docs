@@ -1,6 +1,6 @@
 ---
-title: Setup
-
+title: Packet.net Setup
+meta_desc: This page provides an overview of how to setup the Packet.net SDK to manage and provision resources.
 aliases: ["/docs/reference/clouds/packet/setup/"]
 ---
 

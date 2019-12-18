@@ -2,7 +2,7 @@
 title: "Multicloud Kubernetes: Running Apps Across EKS, AKS, and GKE"
 authors: ["mike-metral"]
 tags: ["Kubernetes","EKS", "AKS", "GKE"]
-meta_desc: "Use Pulumi to run Kubernetes apps using a multicloud strategy. In this post, we'll walk through how your apps can leverage multiple Kubernetes providers for deployments that can span AWS, Azure, and GCP."
+meta_desc: "Run Kubernetes apps using a multicloud strategy. We'll walk through how to leverage multiple Kubernetes providers for deployments across AWS, Azure, and GCP."
 date: "2019-08-14"
 
 meta_image: "multicloud.png"
@@ -11,9 +11,9 @@ meta_image: "multicloud.png"
 Kubernetes clusters from the managed offerings of AWS EKS,
 Azure AKS, and GCP GKE all vary in configuration, management, and resource
 properties. This variance creates unnecessary complexity in cluster provisioning and app
-deployments, as well as for CI/CD and testing. 
+deployments, as well as for CI/CD and testing.
 
-Additionally, if you wanted to deploy the *same* app across multiple clusters 
+Additionally, if you wanted to deploy the *same* app across multiple clusters
 for specific use cases or test scenarios across providers, subtleties
 such as LoadBalancer outputs and cluster connection settings can be a nuisance
 to manage.
@@ -50,7 +50,7 @@ systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK onl
 file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
 
 We will use the cloud SDKs to provision the managed Kubernetes clusters. Given
-that we're working with real code, we are afforded developer benefits such as: 
+that we're working with real code, we are afforded developer benefits such as:
 code linting, type checking, IDE hints and completion,
 abstractions and inheritance.
 
@@ -58,7 +58,7 @@ Leveraging these development features creates the opportunity to encapsulate
 the finer-grained details and settings, and expose the capability to create
 clusters as simple as the following code:
 
-![](clusters.png)
+![Cluster](clusters.png)
 
 ## Workload Deployment
 
@@ -70,7 +70,7 @@ The `pulumi/kubernetes` SDK uses the official Kubernetes [client-go][client-go]
 library to interact with Kubernetes. Therefore, Pulumi can work pretty
 much anywhere `kubectl` works, even if Pulumi was not used to create the cluster.
 
-![](forloop.png)
+![For Loop](forloop.png)
 
 ## Summary
 
@@ -78,7 +78,7 @@ As shown in the code samples, it becomes relatively easy to provision and
 manage Kubernetes clusters, as well as deploy workloads to the cluster
 regardless if they are managed by a cloud provider, or self-managed.
 
-The various SDKS allow you to leverage industry standard best-practices and 
+The various SDKS allow you to leverage industry standard best-practices and
 defaults, in addition to allowing you to further configure and customize how your clusters
 and apps are managed.
 
@@ -111,8 +111,8 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 
 {{< youtube "EyW2m5Xa_BQ?rel=0&start=67" >}}
 
-[multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
+[multicloud-example]: [https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud](https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud)
 [levi-blackstone]: {{< relref "/authors/levi-blackstone" >}}
-[pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
-[client-go]: https://github.com/kubernetes/client-go
+[pulumi-kubernetes]: [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
+[client-go]: [https://github.com/kubernetes/client-go](https://github.com/kubernetes/client-go)
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}

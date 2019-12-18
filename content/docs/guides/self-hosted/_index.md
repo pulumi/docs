@@ -4,7 +4,7 @@ menu:
     userguides:
         identifier: self_hosted
         weight: 6
-meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure. This document walks you through the components and their configuration.
+meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 
 <div class="note note-info" role="alert">
@@ -47,9 +47,9 @@ Here are some examples of deployment topologies:
 
 | Component | Repository |
 | --------- | ---------- |
-| [API]({{< relref "api" >}}) | https://hub.docker.com/r/pulumi/service/ |
-| [Console]({{< relref "console" >}}) |	https://hub.docker.com/r/pulumi/console/ |
-| Migrations | https://hub.docker.com/r/pulumi/migrations/ |
+| [API]({{< relref "api" >}}) | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/) |
+| [Console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
+| Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
 
 > **Note**: The above container image repositories are private.
 

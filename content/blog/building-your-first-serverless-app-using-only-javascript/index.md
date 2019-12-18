@@ -86,11 +86,11 @@ between that you might need for building cloud applications.
 
 There are many great reasons to use JavaScript for serverless
 programming (and cloud programming generally). Pulumi also supports
-TypeScript, Python, and Go with more languages on the way. 
+TypeScript, Python, and Go with more languages on the way.
 
 Pulumi uses NPM, Express, and supports modern JavaScript features like
 async await, module etc. and so you can bring your JavaScript skills
-directly to cloud programming. 
+directly to cloud programming.
 
 ### Code is the best Config
 
@@ -108,8 +108,8 @@ or GCP - but exposed as simple JavaScript APIs on NPM.
 
 This means that you can write code that contains logic alongside code
 that defines the services and infrastructure needed to run it and Pulumi
-can then deployed the app in seconds and run as a managed, scalable and
-- in the case of serverless apps such as this one - extremely low cost
+can then deployed the app in seconds and run as a managed, scalable and -
+in the case of serverless apps such as this one - extremely low cost
 service on your chosen cloud.
 
 ### Code is more productive, expressive, and... fun
@@ -122,7 +122,7 @@ gains from better tooling support. In particular:
 - **Error checking.** Less worry about correctly indented YAML, more
   real error checking.
 - **Versioning and Packaging.** Much improved versioning and packaging
-  scenarios through Github and NPM workflows. 
+  scenarios through Github and NPM workflows.
 - **Reusable components.** Build on top of base classes, and share for
   easy reuse, standard configurations and so on.
 
@@ -138,8 +138,3 @@ To learn more take a look at more tutorials and example code:
 - [Pulumi Quickstart]({{< ref "/docs/get-started" >}})
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
-
- 
-
- 
-

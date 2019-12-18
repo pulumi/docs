@@ -1,6 +1,7 @@
 ---
 title: Azure Active Directory
-
+meta_desc: This page provides a walkthrough important aspects of configuring
+           Azure Active Directory (Azure AD) as a SAML SSO identity provider (IDP).
 menu:
     userguides:
         parent: saml
@@ -48,6 +49,7 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
     ![SAML configuration](/images/docs/reference/service/saml-aad/saml-configuration.png)
 
 ### Enter Pulumi configuration into your Azure AD application
+
 {{< saml-warning >}}
 
 | SAML Setting | Value |
@@ -55,7 +57,6 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 | Identifier (Entity ID) | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
 | Reply URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
 | Relay State | `https://api.pulumi.com/login/<acmecorp>/sso` |
-
 
 ![Edited SAML configuration](/images/docs/reference/service/saml-aad/edited-saml-configuration.png)
 
@@ -76,7 +77,7 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 1. Finally, click **Save** at the bottom of the **Manage User Claims** panel.
 
 > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between Email or Persistent.
-
+<br />
 > **Note:** Be sure to assign users and groups to use your new _Pulumi Console_ SAML application.
 > That is how you can control membership access to your Pulumi organization. See the
 > [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)

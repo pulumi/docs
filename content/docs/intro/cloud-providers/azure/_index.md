@@ -1,5 +1,6 @@
 ---
 title: Azure
+meta_desc: This page provides an overview of the Azure Provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
@@ -34,7 +35,6 @@ In addition to the tutorial, several interesting examples are available complete
 * [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an AKS cluster and deploy a Helm Chart into it
 * [Azure CosmosDB, AKS and Node.js](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean): Stands up an AKS cluster and a MongoDB-flavored instance of CosmosDB used by a Node.js application.
 
-
 ## Example
 
 ```javascript
@@ -50,6 +50,7 @@ You can find additional examples of using Azure in [the Pulumi examples repo](ht
 ## Libraries
 
 The following packages are available in package managers:
+
 * JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)

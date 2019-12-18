@@ -1,5 +1,6 @@
 ---
-title: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
+title: Kubernetes Ingress with AWS ALB Ingress Controller
+h1: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
 date: "2019-07-09"
 meta_desc: "In this post, we work through a simple example of running ALB based Kubernetes Ingresses with Pulumi EKS, AWS, and AWSX packages."
 meta_image: "featured-img-albingresscontroller.png"

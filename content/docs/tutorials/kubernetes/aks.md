@@ -1,6 +1,6 @@
 ---
-title: "Clusters: AKS - Hello World!"
-
+title: Azure Kubernetes Service (AKS) - Hello World!
+meta_desc: How to launch a new Managed Kubernetes Cluster on Azure Kubernetes Service (AKS).
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-aks/"]
 ---
 
@@ -10,7 +10,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
 ## Create a new AKS cluster {#new-aks-cluster}
 
-1.  In a new folder `aks-hello-world`, create an empty project with `pulumi new`.
+1. In a new folder `aks-hello-world`, create an empty project with `pulumi new`.
 
     This will create a base Pulumi program in Python, and is great
     recommendation to begin your journey.
@@ -191,7 +191,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     This example uses the [@pulumi_azure]({{< relref "/docs/reference/pkg/python/pulumi_azure" >}}) package to create and manage several Azure resources including: a [KubernetesCluster]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.KubernetesCluster" >}}), [Registry]({{< relref "/docs/reference/pkg/python/pulumi_azure/containerservice#pulumi_azure.containerservice.Registry" >}}) which will store Docker images and [VirtualNetwork]({{< relref "/docs/reference/pkg/python/pulumi_azure/network#pulumi_azure.network.VirtualNetwork" >}}) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions]({{< relref "/docs/intro/concepts/programming-model.md#resources" >}}) passed to the resource as additional arguments.
 
-1.  To preview and deploy changes, run `pulumi up` and select "yes."
+1. To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
@@ -223,7 +223,6 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
         Resources:
             + 11 to create
 
-
 ## Access the Kubernetes Cluster using Pulumi Providers
 
 Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
@@ -237,7 +236,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     pip install -r requirements.txt
     ```
 
-1.  Create a new Kubernetes Namespace and Deployment:
+1. Create a new Kubernetes Namespace and Deployment:
 
 	This declares a new Kubernetes Namespace, Deployment and Service to be
 	created using the Pulumi Kubernetes provider to our cluster.
@@ -352,9 +351,9 @@ demonstrates that all the `kubectl` commands you're used to will work.
 
 Before moving on, let's tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes some time; Pulumi waits for all the resources to be removed before it considers the destroy operation to be complete.
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes some time; Pulumi waits for all the resources to be removed before it considers the destroy operation to be complete.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
 
 ## Summary
 

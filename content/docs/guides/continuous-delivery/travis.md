@@ -1,6 +1,7 @@
 ---
 title: Travis CI
-
+meta_desc: This page details how to use Travis CI to manage deploying
+           staging and production stacks based on commits to specific Git branches.
 menu:
     userguides:
         parent: cont_delivery

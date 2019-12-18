@@ -1,13 +1,13 @@
 ---
 title: "Extensions"
-
+meta_desc: An overview of the different extensions available with the Pulumi Cloud Service.
 menu:
     intro:
         parent: console
         identifier: extensions
         weight: 3
 
-aliases: 
+aliases:
   - /docs/console/extensions/
   - /docs/intro/console/accounts/extensions
 ---

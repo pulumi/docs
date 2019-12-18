@@ -1,5 +1,5 @@
 ---
-title: Cloud Native Infrastructure as Code for Microsoft Azure with Pulumi
+title: Cloud Infrastructure as Code for Microsoft Azure
 layout: azure
 url: /azure
 

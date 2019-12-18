@@ -7,7 +7,7 @@ authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 ---
 
-**Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
+## **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
 
 With 8 billion+ connected IoT devices and 2 billion GPS-equipped
 smartphones already online, logistics businesses are tracking assets at
@@ -61,7 +61,7 @@ Mapbox solution team [here](mailto:chris.toomey@mapbox.com) and
 Pulumi team [here](mailto:sales@pulumi.com). We will be happy to help you sample test this
 solution on AWS!
 
-**STEP 1: Create a Pulumi project using an AWS JavaScript template**
+### **STEP 1: Create a Pulumi project using an AWS JavaScript template**
 
     $ brew install pulumi
     $ mkdir asset-tracking && cd asset-tracking
@@ -70,7 +70,7 @@ solution on AWS!
     $ ls
     Pulumi.dev.yaml    Pulumi.yaml       index.js   node_modules    package-lock.json     package.json
 
-**STEP 2: Create the ingestion REST API with AWS Services**
+### **STEP 2: Create the ingestion REST API with AWS Services**
 
 To visualize data the system has to accept large volumes of data from
 multiple sources into the rest of the system. Mapbox uses Pulumi's AWS &
@@ -148,8 +148,7 @@ To get this piece of code, please connect with Mapbox solution team
 [here](mailto:chris.toomey@mapbox.com) and Pulumi team
 [here](mailto:sales@pulumi.com).
 
-**STEP 3: Create a consumption API for the map client to consume from a
-data source**
+### **STEP 3: Create a consumption API for the map client to consume from a data source**
 
 Once, data is flowing through the system we build another API to query
 DynamoDB, transform that data, and provide it to our mapping client in
@@ -237,7 +236,7 @@ client. Even more beautiful is how Pulumi handles all the heavy lifting
 of packaging, deploying, and giving you the endpoint to query
 immediately.
 
-**STEP 4: Hook up a map!**
+### **STEP 4: Hook up a map!**
 
 Now we have data coming and going from our Solution, we just have to
 hook it up to a Mapbox map. This is actually quite simple now that

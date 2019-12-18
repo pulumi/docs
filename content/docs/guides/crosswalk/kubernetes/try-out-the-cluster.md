@@ -1,5 +1,6 @@
 ---
 title: Try Out the Cluster
+meta_desc: This page provides a guide on how to try out a newly created Kubernetes cluster.
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -48,10 +49,10 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll explore how to:
 
-  * [Access the Cluster](#access-the-cluster)
-  * [Query the Cluster](#query-the-cluster)
-  * [Deploy a Workload](#deploy-a-workload)
-  * [Learn More](#learn-more)
+* [Access the Cluster](#access-the-cluster)
+* [Query the Cluster](#query-the-cluster)
+* [Deploy a Workload](#deploy-a-workload)
+* [Learn More](#learn-more)
 
 ## Access the Cluster
 
@@ -64,9 +65,10 @@ generated will be specific to this primary cluster creator use-case, and it must
 copied, and reconfigured to use with other IAM roles the caller assumes, as
 demonstrated in [Configure Access Control][crosswalk-configure-access].
 
-#### As an Admin
+<!-- markdownlint-disable no-duplicate-heading -->
+### As an Admin
 
-##### Authentication
+#### Authentication
 
 Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
 
@@ -74,7 +76,7 @@ Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] 
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
 ```
 
-##### Kubeconfig Setup
+#### Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
@@ -125,9 +127,9 @@ Edit `kubeconfig-admin.json` to use a role for authentication in the
 ]
 ```
 
-#### As a Developer
+### As a Developer
 
-##### Authentication
+#### Authentication
 
 Authenticate as the `devs` role from the [Identity][aws-devs-identity-stack] stack.
 
@@ -135,7 +137,7 @@ Authenticate as the `devs` role from the [Identity][aws-devs-identity-stack] sta
 $ aws sts assume-role --role-arn `pulumi stack output devsIamRoleArn` --role-session-name k8s-devs
 ```
 
-##### Kubeconfig Setup
+#### Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
@@ -186,11 +188,13 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 ]
 ```
 
+<!-- markdownlint-disable url -->
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 [aws-devs-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-developers" >}}
 [aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 <div class="cloud-prologue-azure"></div>
@@ -230,9 +234,12 @@ To access your new Kubernetes cluster using `kubectl`, we need to setup the
 $ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
+
+<!-- markdownlint-disable url -->
 [azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
 [aks-cluster-roles]: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access#available-cluster-roles-permissions
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+<!-- markdownlint-enable url -->
 {{% /md %}}
 </div>
 <div class="cloud-prologue-gcp"></div>
@@ -278,6 +285,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 {{% /md %}}
 </div>
+<!-- markdownlint-enable no-duplicate-heading -->
 
 ## Query the Cluster
 
@@ -365,6 +373,7 @@ Delete the pod and service.
 ```bash
 $ kubectl delete pod/nginx svc/nginx
 ```
+
 {{% /md %}}
 </div>
 

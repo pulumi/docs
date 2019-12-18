@@ -1,8 +1,9 @@
 ---
-title: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
+title: A Year of Helping Build Production-Ready Kubernetes
+h1: A Year of Helping Customers Build Production-Ready Kubernetes Infrastructure
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
+meta_desc: "Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
 date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
@@ -53,7 +54,7 @@ These playbooks cover a lot of ground, including topics like:
 
 * **Control planes.** Each Kubernetes cluster has a control plane comprised of controllers, state management, and other centralized services. Each provider offers a distinct and unique way of creating, deploying, and managing the control plane.
 * **Worker nodes.** Each cluster also requires worker nodes to actually run compute. Depending on your compute, storage, and security needs, the provisioning and management of these nodes &mdash; often using multiple node pools &mdash; differs greatly. Getting this right is essential to attaining a good tradeoff between cost and performance.
-* **Identity.** All of the above also needs to integrate with your team’s security policies, including Identity and Access Management (IAM) and Role Based Access Controls (RBAC). If you’re in AWS, you undoubtedly want to connect to AWS IAM; if you’re in Azure, you want to leverage existing ActiveDirectory settings; if you’re in GCP, you’ll want to use GCP IAM; and if you’re using a custom configuration, it can be even more complicated. This is an essential part of deploying Kubernetes within an organization. 
+* **Identity.** All of the above also needs to integrate with your team’s security policies, including Identity and Access Management (IAM) and Role Based Access Controls (RBAC). If you’re in AWS, you undoubtedly want to connect to AWS IAM; if you’re in Azure, you want to leverage existing ActiveDirectory settings; if you’re in GCP, you’ll want to use GCP IAM; and if you’re using a custom configuration, it can be even more complicated. This is an essential part of deploying Kubernetes within an organization.
 * **Cluster services.** Each cluster needs cluster-wide services deployed into the cluster, including performance and monitoring services (AWS CloudWatch, Azure Log Analytics and Monitoring, Datadog, Prometheus, etc.), service meshes, container registries, CRDs, and operators.
 * **Application delivery.** Applications need to be Dockerized, packaged up and deployed to private container registries, and rolled out to the cluster, often continuously.
 * **Application services.** In addition to the applications themselves, often cloud native applications require additional services to come along for the ride. This includes ingress controllers, DNS and certificate management services, and more.

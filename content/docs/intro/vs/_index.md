@@ -1,5 +1,7 @@
 ---
 title: Pulumi vs. Other Solutions
+meta_desc: This page gives an overivew of the major differences between Pulumi and
+           infrastructure as code solutions.
 linktitle: Pulumi vs. Other
 menu:
   intro:

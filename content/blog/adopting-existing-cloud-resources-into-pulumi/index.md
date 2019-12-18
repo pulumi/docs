@@ -1,7 +1,7 @@
 ---
 title: "Adopting Existing Cloud Resources into Pulumi"
 date: "2019-08-15"
-meta_desc: "Migrating from Terraform or another IaC solution?  Learn how to adopt existing cloud infrastructure from Terraform, CloudFormation, ARM, YAML or other solutions into Pulumi using `import`."
+meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt existing cloud infrastructure from Terraform, CloudFormation, ARM, YAML, and more into Pulumi."
 meta_image: "meta.png"
 authors: ["luke-hoban"]
 tags: ["Infrastructure"]
@@ -21,6 +21,7 @@ When working with existing resources, there are typically two scenarios:
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
 ## Referencing Existing Resources
+
 For referencing existing resources, Pulumi offers several tools.
 
 * The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on its `id`.
@@ -235,7 +236,6 @@ Since the resources are now being managed by Pulumi, we can use the Pulumi Conso
 ![The Pulumi Console stack resources page](./console.png)
 
 And then navigate to the Virtual Machine in the Azure Portal and see the newly added `managedBy: Pulumi` tag.
-
 
 ![The Azure Portal virtual machine page](./portal.png)
 

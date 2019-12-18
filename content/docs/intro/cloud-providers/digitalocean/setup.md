@@ -1,6 +1,6 @@
 ---
-title: Setup
-
+title: DigitalOcean Setup
+meta_desc: This page provides an overview on how to configure credentials for the Pulumi DigitalOcean Provider.
 aliases: ["/docs/reference/clouds/digitalocean/setup/"]
 ---
 
@@ -27,5 +27,5 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     ```bash
     $ pulumi config set digitalocean:token XXXXXXXXXXXXXX --secret
     ```
-   
+
 Remember to pass `--secret` when setting `token` so that it is properly encrypted.

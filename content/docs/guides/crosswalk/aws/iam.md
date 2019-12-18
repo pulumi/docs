@@ -1,5 +1,7 @@
 ---
 title: "AWS Identity and Access Management (IAM)"
+meta_desc: Pulumi Crosswalk for AWS adds strongly typed IAM resource classes, for creating, updating, and
+           otherwise managing AWS users, groups, and roles securely.
 linktitle: Identity and Access Management (IAM)
 menu:
   userguides:
@@ -201,7 +203,6 @@ For more information, please refer to the API documentation for [groups](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/iam/_index.md#GroupMembership" >}}), and [group policies](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/iam/_index.md#GroupPolicy" >}}). If you need to attach a managed policy ARN to your group, use the
 [`GroupPolicyAttachment` class]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/iam/_index.md#GroupPolicyAttachment" >}}).
-
 
 Finally, for detailed information about IAM Groups, please refer to the
 [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html).

@@ -1,5 +1,8 @@
 ---
-title: Configure Kubernetes
+title: Configure | Kubernetes
+h1: Configure
+linktitle: Configure
+meta_desc: This page provides an overview of how to configure a Kubernetes project.
 weight: 4
 menu:
   getstarted:

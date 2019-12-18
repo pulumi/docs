@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+meta_desc: An in depth look at Pulumi Projects and their usage.
 menu:
   intro:
     parent: concepts
@@ -40,7 +41,7 @@ A project file contains the following attributes:
 * `config`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
 
 * `backend`: (optional) configuration for project state [backend]({{< relref "state.md#config-stack" >}}). Supports this options:
-    - `url`: explicitly specify backend url like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
+    * `url`: explicitly specify backend url like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
 
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
 

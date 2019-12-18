@@ -1,7 +1,7 @@
 ---
-title: "Announcing Pulumi 0.15: Kubernetes, CI/CD, OpenStack, and more"
+title: "Announcing Pulumi 0.15"
 date: "2018-08-15"
-meta_desc: "Pulumi can now deploy and manage Kubernetes resources using the same familiar programming model supported for AWS, Azure, and Google Cloud Platform. In this post, we'll take a quick tour of these new features."
+meta_desc: "Pulumi can now deploy and manage Kubernetes resources using the same familiar programming model supported for AWS, Azure, and Google Cloud Platform."
 authors: ["luke-hoban"]
 tags: ["Pulumi", "New-Features", "CI/CD"]
 ---
@@ -10,7 +10,7 @@ tags: ["Pulumi", "New-Features", "CI/CD"]
 Just over a month ago we publicly launched
 Pulumi, a new cloud native development
 platform.  The response has been overwhelming and we've been hard at
-work responding to your feedback ever since. 
+work responding to your feedback ever since.
 
 Today, we are excited to release [Pulumi 0.15](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0150-2018-08-13) and make
 it [available to download]({{< ref "/docs/get-started/install" >}}).  This release
@@ -89,7 +89,7 @@ Check out the [Kubernetes
 overview]({{< ref "/docs/get-started/kubernetes" >}}) docs, the [API
 documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
-GitHub project for additional details. 
+GitHub project for additional details.
 
 ## Parallelism
 
@@ -248,7 +248,7 @@ This is how Pulumi deploys and manages our own infrastructure that runs
 <pulumi.com>, and is how our most engaged users adopt
 Pulumi in their own teams.
 
-Our mission is to make Pulumi the easiest way to get code to the cloud. 
+Our mission is to make Pulumi the easiest way to get code to the cloud.
 To that end, we are launching a new [Pulumi GitHub
 App](https://github.com/apps/pulumi) which bridges the gap between
 GitHub (source code, pull requests) and Pulumi (cloud resources, stack

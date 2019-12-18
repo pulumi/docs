@@ -1,9 +1,9 @@
 ---
-title: "Provisioning and managing cloud infrastructure with Pulumi"
+title: "Provisioning and Managing Cloud Infrastructure with Pulumi"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Infrastructure"]
 date: "2018-07-20"
-meta_desc: "Use Pulumi AWS, Azure, and Google Cloud Platform libraries to provision and manage your cloud infrastructure. Configure alerting, monitoring, and SNS notifications directly in code using Pulumi."
+meta_desc: "Use Pulumi AWS, Azure, and GCP libraries to provision and manage infrastructure. Configure alerting & monitoring directly in code using Pulumi."
 
 ---
 
@@ -24,7 +24,7 @@ directly manage the properties of any cloud resource.
 For example, in just a few lines of code, you can provision a security
 group and an EC2 instance:
 
-    let group = new aws.ec2.SecurityGroup("web-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("web-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],

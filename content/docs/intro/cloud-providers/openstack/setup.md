@@ -1,11 +1,13 @@
 ---
-title: Setup
-
+title: OpenStack Setup
+meta_desc: This page provides an overview on how to set up the Pulumi OpenStack Provider with proper credentials.
 aliases: ["/docs/reference/clouds/openstack/setup/"]
 ---
 
+<!-- markdownlint-disable url -->
 [Pulumi OpenStack Provider]: {{< relref "./" >}}
 [Download your OpenStack credentials]: https://docs.openstack.org/newton/user-guide/common/cli-set-environment-variables-using-openstack-rc.html
+<!-- markdownlint-enable url -->
 
 The [Pulumi OpenStack Provider] needs to be configured with OpenStack credentials
 before it can be used to create resources.

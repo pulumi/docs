@@ -4,8 +4,8 @@ layout: serverless
 url: /serverless
 
 meta_desc:
-    Pulumi makes serverless applications easy by letting you focus on business logic and managing
-    infrastructure in the same familiar language you're already writing your code in.
+    Pulumi makes serverless applications easy by letting manage infrastructure in
+    the same familiar language you're already writing code in.
 
 hero:
     title: Serverless In Just a Few Lines of Code

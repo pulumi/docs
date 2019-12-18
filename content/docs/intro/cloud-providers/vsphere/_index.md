@@ -1,5 +1,6 @@
 ---
 title: vSphere
+meta_desc: This page provides an overview of the vSphere provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
