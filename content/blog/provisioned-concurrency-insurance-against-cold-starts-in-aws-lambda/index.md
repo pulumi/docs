@@ -16,7 +16,7 @@ Despite being serverless, AWS Lambda uses lightweight containers to process inco
 
 {{< figure src="./executions.png" caption="Overlapping executions land on separate workers" >}}
 
-Therefore, the number of concurrent requests define the number of required workers that a specific AWS Lambda needs to serve at any given moment.
+Because of this, the number of concurrent requests defines the number of required workers that a specific AWS Lambda function needs to serve a response at any given moment.
 
 ## Cold Starts
 
