@@ -152,7 +152,7 @@ Be careful to clean up your resources after any experiments: Leaving running wor
 
 ## Conclusion
 
-Provisioned concurrency brings long-awaited solution to cold starts in AWS Lambda. However, it comes at a cost in terms of a direct impact on billing and management overhead to provision concurrency at optimal levels.
+Provisioned concurrency brings the long-awaited solution to cold starts in AWS Lambda. However, it comes at a cost in terms of a direct impact on billing and management overhead to provision concurrency at optimal levels.
 
 For high-load functions where utilization is continuously above a known level of requests, it makes sense to set the provisioned concurrency to that level in order to save money and have the guarantee of warm workers.
 
