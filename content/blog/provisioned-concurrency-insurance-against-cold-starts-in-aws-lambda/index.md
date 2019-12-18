@@ -40,6 +40,10 @@ There are a few drawbacks with this approach:
 
 You can find more details about how Pulumi can help with some of these issues in [AWS Lambda Warmer as Pulumi Component](https://mikhail.io/2018/08/aws-lambda-warmer-as-pulumi-component/).
 
+## Provisioned Concurrency
+
+At re:Invent 2019, AWS introduced Lambda **Provisioned Concurrency**---a feature to work around cold starts. The base concurrency model doesn't change. However, you can request a given number of workers to be always-warm and dedicated to a specific Lambda.
+
 Here is an example of configuring the provisioned concurrency with Pulumi in TypeScript:
 
 ```ts
@@ -79,7 +83,7 @@ const target = new aws.appautoscaling.Target("target", {
 });
 ```
 
-The second component is the autoscaling policy, which defines the conditions when scaling starts. There are two important way
+The second component is the autoscaling policy, which defines the conditions when scaling starts. There are two important ways to adapt your concurrency provisioning to traffic patterns.
 
 ### Scheduled profile
 
