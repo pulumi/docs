@@ -154,7 +154,7 @@ Be careful to clean up your resources after any experiments: Leaving running wor
 
 Provisioned concurrency brings the long-awaited solution to cold starts in AWS Lambda. However, it comes at a cost in terms of a direct impact on billing and management overhead to provision concurrency at optimal levels.
 
-For high-load functions where utilization is continuously above a known level of requests, it makes sense to set the provisioned concurrency to that level in order to save money and have the guarantee of warm workers.
+For high-load functions where utilization is continuously above a known level of requests, it makes sense to set the provisioned concurrency to that level to save money and have the guarantee of warm workers.
 
 If your Lambda hosts a latency-sensitive API, especially with runtimes like Java and .NET, you should strive to find the right balance between the percentage of requests that result in a cold start and the money spent on concurrency. Autoscaling should help once AWS has fixed the initial glitches that slipped into their current services, are fixed.
 
