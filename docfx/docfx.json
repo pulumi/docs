@@ -1,0 +1,35 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet/Pulumi/",
+          "files": ["*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "src": "metadata/Pulumi",
+        "files": ["**/*.yml"],
+        "dest": "Pulumi"
+      }
+    ],
+    "overwrite": [],
+    "dest": "../static/docs/reference/pkg/dotnet",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "./pulumi-template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

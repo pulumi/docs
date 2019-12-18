@@ -20,7 +20,7 @@ to private registries.
 
 ### Choose Your Language
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ### General Purpose Packages
 
@@ -43,6 +43,10 @@ directly. Additional general purpose packages can be used across all cloud platf
 {{% lang go %}}
 * [**Pulumi SDK** (`pulumi`)](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi)
 * [**Random** (`random`)](https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/go/random)
+{{% /lang %}}
+
+{{% lang csharp %}}
+* [**Pulumi SDK** (`pulumi`)]({{< relref "dotnet/pulumi" >}})
 {{% /lang %}}
 
 ### Cloud Providers
@@ -165,6 +169,10 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**vSphere** (`vsphere`)](https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere)
 {{% /lang %}}
 
+{{% lang csharp %}}
+Coming soon!
+{{% /lang %}}
+
 ### Cloud-Agnostic Packages
 
 {{% lang nodejs %}}
@@ -179,5 +187,9 @@ Coming soon!
 {{% /lang %}}
 
 {{% lang go %}}
+Coming soon!
+{{% /lang %}}
+
+{{% lang csharp %}}
 Coming soon!
 {{% /lang %}}
