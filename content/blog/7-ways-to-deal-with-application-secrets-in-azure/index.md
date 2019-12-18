@@ -7,8 +7,6 @@ meta_desc: In this post, we will look at 7 ways to deal with application secrect
 meta_image: "feature.jpg"
 ---
 
-# Duplicate Heading
-
 Every non-trivial application relies on configuration values that may depend on the current execution environment. Some of these values contain sensitive information that shouldn't be shared publicly. In general, the fewer parties that have access to those secret values, the safer the application will be&mdash;in fact, in an ideal world, no one would be granted direct access to those secrets.
 <!--more-->
 
