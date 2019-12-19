@@ -10,7 +10,7 @@ tags:
     - resources
 ---
 
-Pulumi has several resource providers (over 45!) that allow you to interact with your favorite cloud provider or resource using a programming language. But what if there isn’t a provider available for what you want to accomplish? That’s where dynamic providers can help you. They can be an extremely important part of your infrastructure app.
+Pulumi has many resource providers that allow you to interact with your favorite cloud or resource. There are times when a provider may not deliver on the exact task that you want to accomplish. Dynamic Providers can be a powerful tool to help accomplish your infrastructure tasks.
 
 <!--more-->
 
