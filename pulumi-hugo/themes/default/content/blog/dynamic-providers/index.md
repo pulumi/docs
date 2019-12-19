@@ -77,7 +77,7 @@ export const cdnCustomDomainResource = new CDNCustomDomainResource("cdnCustomDom
 
 #### Dynamic Providers As Provisioners
 
-Provisioning a VM after it is created is a common problem. Developers have the option to run user-supplied scripts while creating the VM itself. For example, the AWS EC2 resource has a `userData` parameter, that allows you to specify an inline script, which EC2 will run at instance startup. 
+Provisioning a VM after it is created is a common problem. Developers have the option to run user-supplied scripts while creating the VM itself. For example, the AWS EC2 resource has a `userData` parameter, that allows you to specify an inline script, which EC2 will run at instance startup.
 
 Scripts provided through the `userData` parameter run every time the instance is restarted. But what if you only want to run the script once? You could use SCP to transfer the file and then execute the script on the VM. This [example](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners) does exactly that. Although the example uses TypeScript and is specific to AWS EC2, you can easily adapt this to other cloud providers.
 
