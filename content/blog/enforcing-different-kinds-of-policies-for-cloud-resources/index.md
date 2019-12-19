@@ -10,30 +10,30 @@ tags:
     - policy-as-code
 ---
 
-We recently announced [a new policy as code solution, CrossGuard]({{< relref "/blog/announcing-crossguard-preview" >}}) that validates policies at deployment time. Policies are expressed as code and are used to prevent the creation of out-of-compliance resources. This allows an organization to prevent entire classes of security and reliability defects to ensure infrastructure is following best practices. Since policies are written using full-blown programming languages, it's possible to do interesting things such as [combining IAM Access Analyzer and Pulumi CrossGuard]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}}). In this post, we'll take a closer look at the different types of policies that can be written.
+We recently announced [a new policy as code solution, CrossGuard]({{< relref "/blog/announcing-crossguard-preview" >}}) that validates policies at deployment time. Policies are expressed as code and are used to prevent the creation of out-of-compliance resources. This allows an organization to prevent entire classes of security and reliability defects to ensure infrastructure is following best practices. Because policies are written using full-blown programming languages, it's possible to do interesting things such as [combining IAM Access Analyzer and Pulumi CrossGuard]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}}). In this post, we'll take a closer look at the different types of policies that can be written.
 
 <!--more-->
 
 ## Authoring Policies
 
-A policy contains specific logic you want to enforce. For example, you may want to prevent the creation of public, world-readable storage objects (e.g. on AWS S3, Azure BlobStore, etc.) or prevent the creation of a virtual machine without the proper firewalls in-place. Policies are run during `pulumi preview` and `pulumi update`, ensuring that cloud resource definitions are in compliance.
+A policy contains specific logic you want to enforce. For example, you may want to prevent the creation of public, world-readable storage objects on AWS S3, Azure BlobStore or other providers, or prevent the creation of a virtual machine without the proper firewalls in-place. Policies are run during `pulumi preview` and `pulumi update`, ensuring that cloud resource definitions comply.
 
-Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource will be considered in violation of the policy.
+Policies, written as validation functions, are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource is considered in violation of the policy.
 
 There are two types of policies:
 
 1. [`ResourceValidationPolicy`](#resource-validation) - Validates a particular resource in a stack.
 2. [`StackValidationPolicy`](#stack-validation) - Validates the stack as a whole.
 
-Let's take a closer look at these and why you'd use one over the other.
+Let's take a closer look at these and why you would use one over the other.
 
 ## Resource Validation Policies {#resource-validation}
 
-Policies of `ResourceValidationPolicy` are called for each resource in a stack. These policies are run _before_ a resource is registered and thus block an out-of-compliance resource from ever being created or modified.
+Pulumi CrossGuard calls `ResourceValidationPolicy` type policies for each resource in a stack. These policies are run _before_ a resource is registered and thus block an out-of-compliance resource from ever being created or modified.
 
-A resource validation function is passed `args` with more information about the resource (such as the resource's type, _input_ properties, name, and URN) and a `reportViolation` callback that can be called to report a policy violation. In most cases, you will just use the helper function `validateTypedResource` to filter the resource type you want to validate and provide stronger typing of the resource's input properties.
+A resource validation function is passed `args` with more information about the resource (such as the resource's type, _input_ properties, name, and URN) and a `reportViolation` for reporting a policy violation. In most cases, you can use the helper function `validateTypedResource` to filter the resource type you want to validate and provide stronger typing of the resource's input properties.
 
-An example resource validation policy is shown below:
+The following is an example of a resource validation policy:
 
 ```typescript
 const ec2DetailedMonitoring: ResourceValidationPolicy = {
@@ -48,7 +48,7 @@ const ec2DetailedMonitoring: ResourceValidationPolicy = {
 };
 ```
 
-If you have multiple resources that require a similar policy, you can group them together under one policy. This is possible by setting `validateResource` to an array of callback functions. The example below shows a case where we want to run similar checks against multiple types of resources.
+If you have multiple resources that require a similar policy, you can group them under one policy by setting `validateResource` to an array of callback functions. The example below shows a case where we want to run similar checks against multiple types of resources.
 
 ```typescript
 const elbLoggingEnabled: ResourceValidationPolicy = {
@@ -79,11 +79,13 @@ The upside to resource validation policies is that they prevent resources from b
 
 ## Stack Validation Policies {#stack-validation}
 
-Policies of `StackValidationPolicy` are run against the stack as a whole. These policies are run _after_ all stack resources are registered and thus do not block an out-of-compliance resource from being created or modified, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend running a preview command before an update. However, there are cases where a policy requires a resource to exist in order to perform its validation, such as inspecting the resource's output properties that are only available to already provisioned resources (e.g. checking if a resource's `id` is referenced by another resource). In such cases, the policy can skip reporting violations during previews and only report violations during updates when the information it needs is available. Thus, the preview will succeed and the resources will be created or modified during the update, but the overall update operation will fail if any resources are in violation.
+Policies of `StackValidationPolicy` are run against the stack as a whole. These policies are run _after_ all stack resources are registered and thus do not block an out-of-compliance resource from being created or modified, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend running a preview command before an update.
+
+However, there are cases where a policy requires a resource to exist in order to perform its validation, such as inspecting the resource's output properties that are only available to already provisioned resources (e.g. checking if a resource's `id` is referenced by another resource). In such cases, the policy can skip reporting violations during previews and only report violations during updates when the information it needs is available. Thus, the preview will succeed and the resources will be created or modified during the update, but the overall update operation will fail if any resources are in violation.
 
 Stack validation policies also allow you to write policies that require inspecting multiple resources at once. For example, that a virtual machine and its persistent hard drive are in the same stack, and have congruent settings.
 
-A stack validation function is passed `args` with information about all of the resources in the stack (such as each resource's type, _output_ properties, name, and URN) and a `reportViolation` callback that can be called to report a policy violation.
+A stack validation function is passed `args` with information about all of the resources in the stack (such as each resource's type, _output_ properties, name, and URN) and a `reportViolation` callback for reporting a policy violation.
 
 An example stack validation policy is shown below:
 
@@ -112,7 +114,7 @@ const s3BucketLoggingEnabled: StackValidationPolicy = {
 
         // Then, check the buckets for violations.
         for (const bucket of buckets) {
-            // Skip any buckets that haven't yet been provisioned (i.e. during previews).
+            // Skip any buckets not provisioned (i.e., during previews).
             if (!bucket.id) {
                 continue;
             }
@@ -128,7 +130,7 @@ const s3BucketLoggingEnabled: StackValidationPolicy = {
     }),
 };
 
-// Utility method for defining a new StackValidation that will return the resources matching the provided type.
+// Utility method for defining a new StackValidation that returns the resources matching the provided type.
 function validateTypedResources<TResource extends Resource>(
     resourceClass: { new(...rest: any[]): TResource },
     validate: (
@@ -149,9 +151,9 @@ function validateTypedResources<TResource extends Resource>(
 }
 ```
 
-The above example checks whether logging is enabled on S3 buckets. If a bucket does not have a `loggings` property defined, it will be in violation of the policy unless the bucket is being used as a logging `targetBucket` of another bucket. The policy check is skipped if the bucket's `id` isn't available, meaning this policy will only run during updates when the resource `id`s are available.
+The example above checks whether logging is enabled on S3 buckets. If a bucket does not have a `loggings` property defined, it violates the policy unless the bucket is a logging `targetBucket` of another bucket. The policy check skips the check if the bucket's `id` isn't available, meaning this policy only runs during updates when the resource `id`s are available.
 
-At the time of writing, there is no built-in helper for stack validation policies similar to `validateTypedResource` for resource validation policies, so we've included our own helper that can be used until a [built-in helper](https://github.com/pulumi/pulumi-policy/issues/158) is available.
+At the time of writing, there is no built-in helper for stack validation policies similar to `validateTypedResource` for resource validation policies, so we've included our own helper until a [built-in helper](https://github.com/pulumi/pulumi-policy/issues/158) is available.
 
 ## Resource Validation vs. Stack Validation
 
@@ -163,9 +165,9 @@ At the time of writing, there is no built-in helper for stack validation policie
 
 With two different ways to write policies, you have more flexibility about how you want to describe and enforce your rules:
 
-- Use resource validation policies when you want to check individual types of resources and block them from being created or modified, checking resource _input_ properties.
+- Use resource validation policies when you want to check individual types of resources and block them from being created or modified.
 
-- Use stack validation policies when you want to check the stack as a whole (all resources in the stack at once) after they've been created or modified, checking resource _output_ properties.
+- Use stack validation policies when you want to check the stack as a whole (all resources in the stack at once) after they've been created or modified.
 
 ## Trying It Out
 
