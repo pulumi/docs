@@ -21,11 +21,8 @@ WebSockets, HTTP/2, AWS WAF (web application firewall) integration,
 integrated access logs, and health checks.
 
 The [AWS ALB Ingress controller](https://github.com/kubernetes-sigs/aws-alb-ingress-controller)
-is a Kubernetes
-[SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws)
-subproject - it was the second sub-project added to
-[SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws)
-after the [aws-authenticator subproject](https://github.com/kubernetes-sigs/aws-iam-authenticator).
+is a Kubernetes SIG-AWS subproject - it was the second sub-project added to
+SIG-AWS after the [aws-authenticator subproject](https://github.com/kubernetes-sigs/aws-iam-authenticator).
 The ALB Ingress controller triggers the creation of an ALB and the
 necessary supporting AWS resources whenever a Kubernetes user declares
 an Ingress resource on the cluster.
