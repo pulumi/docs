@@ -16,7 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_newrelic.synthetics"></span><dl class="class">
 <dt id="pulumi_newrelic.synthetics.AlertCondition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AlertCondition resource with the given unique name, props, and options.</p>
+<dd><p>Use this resource to create and manage synthetics alert conditions in New Relic.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -162,9 +162,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The locations in which this monitor should be run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. ENABLED, MUTED, DISABLED)</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p></li>
 <li><p><strong>treat_redirect_as_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Fail the monitor check if redirected.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type. Valid values are <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code>.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
 <li><p><strong>validation_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string to validate against in the response.</p></li>
 <li><p><strong>verify_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verify SSL.</p></li>
@@ -207,7 +207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monitor status (i.e. ENABLED, MUTED, DISABLED)</p>
+<dd><p>The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -219,7 +219,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p>
+<dd><p>The monitor type. Valid values are <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -256,9 +256,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The locations in which this monitor should be run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. ENABLED, MUTED, DISABLED)</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p></li>
 <li><p><strong>treat_redirect_as_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Fail the monitor check if redirected.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type. Valid values are <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code>.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
 <li><p><strong>validation_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string to validate against in the response.</p></li>
 <li><p><strong>verify_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verify SSL.</p></li>
@@ -399,7 +399,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_newrelic.synthetics.get_monitor">
 <code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">get_monitor</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_monitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get information about a specific synthetics monitor in New Relic. This can then be used to set up a synthetics alert condition.</p>
+<dd><p>Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the synthetics monitor in New Relic.</p>
