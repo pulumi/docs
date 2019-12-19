@@ -20,7 +20,7 @@ A provider manages the CRUD (Create, Read, Update, Delete) life-cycle of a resou
 
 > **Note**: Dynamic providers are currently only supported in JavaScript, TypeScript, and Python.
 
-Pulumi provides appropriate lifecycle callbacks through the `pulumi.dynamic.ResourceProvider` abstract class. While Pulumi does not know what sort of resources a dynamic provider will create, the lifecycle hooks must return data in specific formats, which Pulumi uses as hints to call the appropriate lifecycle hooks.
+Pulumi provides appropriate life-cycle callbacks through the `pulumi.dynamic.ResourceProvider` abstract class. While Pulumi does not know what sort of resources a Dynamic Provider will create, the life-cycle hooks must return data in specific formats, which Pulumi uses as data to call the appropriate callbacks. 
 
 For example, if the user changes an input property to your dynamic resource, the `diff` hook will be called with both the old (if applicable) and new inputs. You can then compare to see which input properties have changed and give hints to Pulumi as to whether `delete` should be called or whether to call the `update` hook.
 
