@@ -148,7 +148,11 @@ You would pay $0.015 per hour per GB of provisioned worker memory, even if a wor
 
 The per-invocation price gets a discount: $0.035 per GB-hour instead of the regular $0.06 per GB-hour. This change means that fully-utilized workers would be cheaper if provisioned compared to on-demand workers.
 
-Be careful to clean up your resources after any experiments: Leaving running workers with  provisioned concurrency can be expensive! Using `pulumi destroy` removes resources after you finish experimenting.
+{{< figure src="./pricing.png" caption="Comparison of the cost of a 1GB worker for two billing models" >}}
+
+The equilibrium point is at 60% utilization. Note that because the billed duration is rounded up to the nearest 100 ms for each execution, the utilization is not limited to 100%. A series of sequential executions can be processed by a single worker. If each execution is 10 ms, the charge is still 100 ms, and the total utilization can be as high as 1000% in terms of the chart above!
+
+Finally, be careful to clean up your resources after any experiments: Leaving running workers with provisioned concurrency can be expensive! Using `pulumi destroy` removes resources after you finish experimenting.
 
 ## Conclusion
 
