@@ -56,7 +56,7 @@ const staticWebsite = new StorageStaticWebsite("website-static", {
 
 Along with adding a custom domain to the CDN endpoint, this dynamic provider also enables HTTPS provided by Azure's one-click [HTTPS enablement](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl?tabs=option-1-default-enable-https-with-a-cdn-managed-certificate).
 
-As before, some of the details, such as the creation of the CDN profile and its endpoint are omitted here for brevity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
+As before, some of the details, such as the creation of the CDN profile and its endpoint are omitted here for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
 
 ```ts
 export const cdnCustomDomainResource = new CDNCustomDomainResource("cdnCustomDomain", {
