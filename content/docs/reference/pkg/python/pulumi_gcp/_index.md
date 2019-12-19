@@ -33,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafusion/">datafusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataproc/">dataproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploymentmanager/">deploymentmanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="endpoints/">endpoints</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
