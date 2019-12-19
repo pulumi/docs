@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Providers"
 date: 2019-12-20
-meta_desc: "Pulumi dynamic providers manage resources that do not have prebuilt providers such as AWS, Azure, and GCP"
+meta_desc: "Pulumi Dynamic Providers manage resources that are not covered in pre-built providers"
 meta_image: meta.png
 authors:
     - praneet-loke
