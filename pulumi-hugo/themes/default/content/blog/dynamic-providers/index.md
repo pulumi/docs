@@ -38,7 +38,7 @@ Dynamic providers can be used for almost any task. Here are some use cases:
 
 Run a command-line tool when a dependent resource is created.
 Copy files to a VM once the VM is created.
-Call REST APIs in each lifecycle hook (CRUD) to adopt an external resource under the cloud resource model.
+Call REST APIs in each life-cycle hook (CRUD) to adopt an external resource under the cloud resource model.
 
 ### Examples
 
