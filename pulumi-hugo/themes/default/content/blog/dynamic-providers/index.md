@@ -14,7 +14,7 @@ Pulumi has many resource providers that allow you to interact with your favorite
 
 <!--more-->
 
-A provider manages the CRUD lifecycle of a resource against some underlying service. The underlying service can be one of the public clouds or an on-premise service. For example, AWS, Azure, GCP, and Kubernetes are all resource providers, which can create/update/destroy resources in the respective clouds.
+A provider manages the CRUD (Create, Read, Update, Delete) life-cycle of a resource against some underlying service. The underlying service can be one of the public clouds or an on-premise service. For example, AWS, Azure, GCP, and Kubernetes are have resource providers, which can manage resources by request.
 
 ## _Dynamic_ Resource Provider
 
