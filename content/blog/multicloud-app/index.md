@@ -111,8 +111,10 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 
 {{< youtube "EyW2m5Xa_BQ?rel=0&start=67" >}}
 
-[multicloud-example]: [https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud](https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud)
+<!-- markdownlint-disable url -->
+[multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
 [levi-blackstone]: {{< relref "/authors/levi-blackstone" >}}
-[pulumi-kubernetes]: [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
-[client-go]: [https://github.com/kubernetes/client-go](https://github.com/kubernetes/client-go)
+[pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
+[client-go]: https://github.com/kubernetes/client-go
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
+<!-- markdownlint-enable url -->
