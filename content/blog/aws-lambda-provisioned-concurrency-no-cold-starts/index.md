@@ -2,7 +2,7 @@
 title: "Provisioned Concurrency: Avoiding Cold Starts in AWS Lambda"
 date: 2019-12-18
 meta_desc: "Using Pulumi to configure AWS Lambda provisioned concurrency"
-meta_image: meta.png
+meta_image: variable.png
 authors: ["mikhail-shilkov"]
 tags: ["AWS", "Serverless"]
 ---
