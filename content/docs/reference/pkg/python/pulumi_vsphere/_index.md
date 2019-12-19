@@ -7220,10 +7220,10 @@ according to any defaults or DRS policies in place.</p></li>
 <li><p><strong>hv_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>, <code class="docutils literal notranslate"><span class="pre">hvOn</span></code>, or <code class="docutils literal notranslate"><span class="pre">hvOff</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>.</p></li>
-<li><p><strong>ignored_guest_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses to ignore while waiting
-for an available IP address using either of the waiters. Any IP addresses in
-this list will be ignored if they show up so that the waiter will continue to
-wait for a real IP address. Default: [].</p></li>
+<li><p><strong>ignored_guest_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses and CIDR networks to
+ignore while waiting for an available IP address using either of the waiters.
+Any IP addresses in this list will be ignored if they show up so that the
+waiter will continue to wait for a real IP address. Default: [].</p></li>
 <li><p><strong>latency_sensitivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
 latency, such as VOIP, media player applications, or applications that
@@ -7818,10 +7818,10 @@ this virtual machine. Can be one of <code class="docutils literal notranslate"><
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.ignored_guest_ips">
 <code class="sig-name descname">ignored_guest_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ignored_guest_ips" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of IP addresses to ignore while waiting
-for an available IP address using either of the waiters. Any IP addresses in
-this list will be ignored if they show up so that the waiter will continue to
-wait for a real IP address. Default: [].</p>
+<dd><p>List of IP addresses and CIDR networks to
+ignore while waiting for an available IP address using either of the waiters.
+Any IP addresses in this list will be ignored if they show up so that the
+waiter will continue to wait for a real IP address. Default: [].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8225,10 +8225,10 @@ according to any defaults or DRS policies in place.</p></li>
 <li><p><strong>hv_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>, <code class="docutils literal notranslate"><span class="pre">hvOn</span></code>, or <code class="docutils literal notranslate"><span class="pre">hvOff</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>.</p></li>
-<li><p><strong>ignored_guest_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses to ignore while waiting
-for an available IP address using either of the waiters. Any IP addresses in
-this list will be ignored if they show up so that the waiter will continue to
-wait for a real IP address. Default: [].</p></li>
+<li><p><strong>ignored_guest_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses and CIDR networks to
+ignore while waiting for an available IP address using either of the waiters.
+Any IP addresses in this list will be ignored if they show up so that the
+waiter will continue to wait for a real IP address. Default: [].</p></li>
 <li><p><strong>imported</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
@@ -8872,6 +8872,182 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_vsphere.VmfsDatastore.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.Vnic">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a VMware vSphere vnic resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>distributed_port_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key of the distributed portgroup the nic will connect to.</p></li>
+<li><p><strong>distributed_switch_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p></li>
+<li><p><strong>ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p></li>
+<li><p><strong>ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p></li>
+<li><p><strong>mac</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MAC address of the interface.</p></li>
+<li><p><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – MTU of the interface.</p></li>
+<li><p><strong>netstack</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TCP/IP stack setting for this interface. Possible values are ‘defaultTcpipStack’, ‘vmotion’, ‘vSphereProvisioning’. Changing this will force the creation of a new interface since it’s not possible to change the stack once it gets created. (Default: <code class="docutils literal notranslate"><span class="pre">defaultTcpipStack</span></code>)</p></li>
+<li><p><strong>portgroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Portgroup to attach the nic to. Do not set if you set distributed_switch_port.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ipv4</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Address of the interface, if DHCP is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Netmask of the interface, if DHCP is not set.</p></li>
+</ul>
+<p>The <strong>ipv6</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of IPv6 addresses</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoconfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use IPv6 Autoconfiguration (RFC2462).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.distributed_port_group">
+<code class="sig-name descname">distributed_port_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_port_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key of the distributed portgroup the nic will connect to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.distributed_switch_port">
+<code class="sig-name descname">distributed_switch_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_switch_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.ipv4">
+<code class="sig-name descname">ipv4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv4" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Address of the interface, if DHCP is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Netmask of the interface, if DHCP is not set.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.ipv6">
+<code class="sig-name descname">ipv6</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv6" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of IPv6 addresses</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoconfig</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use IPv6 Autoconfiguration (RFC2462).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.mac">
+<code class="sig-name descname">mac</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mac" title="Permalink to this definition">¶</a></dt>
+<dd><p>MAC address of the interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.mtu">
+<code class="sig-name descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mtu" title="Permalink to this definition">¶</a></dt>
+<dd><p>MTU of the interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.netstack">
+<code class="sig-name descname">netstack</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.netstack" title="Permalink to this definition">¶</a></dt>
+<dd><p>TCP/IP stack setting for this interface. Possible values are ‘defaultTcpipStack’, ‘vmotion’, ‘vSphereProvisioning’. Changing this will force the creation of a new interface since it’s not possible to change the stack once it gets created. (Default: <code class="docutils literal notranslate"><span class="pre">defaultTcpipStack</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.portgroup">
+<code class="sig-name descname">portgroup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.portgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Portgroup to attach the nic to. Do not set if you set distributed_switch_port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Vnic.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vnic resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>distributed_port_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key of the distributed portgroup the nic will connect to.</p></li>
+<li><p><strong>distributed_switch_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p></li>
+<li><p><strong>ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p></li>
+<li><p><strong>ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p></li>
+<li><p><strong>mac</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MAC address of the interface.</p></li>
+<li><p><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – MTU of the interface.</p></li>
+<li><p><strong>netstack</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TCP/IP stack setting for this interface. Possible values are ‘defaultTcpipStack’, ‘vmotion’, ‘vSphereProvisioning’. Changing this will force the creation of a new interface since it’s not possible to change the stack once it gets created. (Default: <code class="docutils literal notranslate"><span class="pre">defaultTcpipStack</span></code>)</p></li>
+<li><p><strong>portgroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Portgroup to attach the nic to. Do not set if you set distributed_switch_port.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ipv4</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Address of the interface, if DHCP is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Netmask of the interface, if DHCP is not set.</p></li>
+</ul>
+<p>The <strong>ipv6</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of IPv6 addresses</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoconfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use IPv6 Autoconfiguration (RFC2462).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Vnic.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Vnic.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

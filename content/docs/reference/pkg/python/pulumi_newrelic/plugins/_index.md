@@ -16,7 +16,8 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_newrelic.plugins"></span><dl class="class">
 <dt id="pulumi_newrelic.plugins.AlertCondition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">entities=None</em>, <em class="sig-param">metric=None</em>, <em class="sig-param">metric_description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_guid=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">terms=None</em>, <em class="sig-param">value_function=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">term</span></code> mapping supports the following arguments:</p>
+<dd><p>Use this resource to create and manage plugins alert conditions in New Relic.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">term</span></code> mapping supports the following arguments:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> - (Required) In minutes, must be in the range of <code class="docutils literal notranslate"><span class="pre">5</span></code> to <code class="docutils literal notranslate"><span class="pre">120</span></code>, inclusive.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> - (Optional) <code class="docutils literal notranslate"><span class="pre">above</span></code>, <code class="docutils literal notranslate"><span class="pre">below</span></code>, or <code class="docutils literal notranslate"><span class="pre">equal</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">equal</span></code>.</p></li>
@@ -214,8 +215,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_newrelic.plugins.get_plugin">
 <code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin</code><span class="sig-paren">(</span><em class="sig-param">guid=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get information about a specific installed plugin in New Relic.</p>
-<p>Each plugin published to New Relic’s Plugin Central is assigned a <a class="reference external" href="https://docs.newrelic.com/docs/plugins/plugin-developer-resources/planning-your-plugin/parts-plugin#guid">GUID</a>. Once you have installed a plugin into your account it is assigned an ID. This account-specific ID is required when creating Plugins Alert Conditions.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>guid</strong> (<em>str</em>) – The GUID of the plugin in New Relic.</p>
@@ -229,8 +229,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_newrelic.plugins.get_plugin_component">
 <code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin_component</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin_component" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get information about a single plugin component in New Relic.</p>
-<p>Each plugin component reporting into to New Relic is assigned a unique ID. Once you have a plugin component reporting data into your account, its component ID can be used to create Plugins Alert Conditions.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
