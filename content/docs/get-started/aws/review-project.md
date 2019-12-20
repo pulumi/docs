@@ -90,7 +90,7 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ python3 -m venv aws-env
+$ python -m venv aws-env
 ```
 
 Activate the environment in Linux and MacOS:

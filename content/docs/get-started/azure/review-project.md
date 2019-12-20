@@ -119,7 +119,7 @@ Create a virtual environment:
 
 ```bash
 $ mkdir project
-$ python3 -m venv azure-env
+$ python -m venv azure-env
 ```
 
 Activate the environment in Linux and MacOS:

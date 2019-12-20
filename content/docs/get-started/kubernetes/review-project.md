@@ -153,7 +153,7 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ python3 -m venv k-env
+$ python -m venv k-env
 ```
 
 Activate the environment in Linux and MacOS:
