@@ -142,7 +142,7 @@ For this reason, leaving the `draft` property `true` until you're actually ready
 
 ## Publishing Check List
 
-- [ ] Use the template instead of copying another post: ```hugo new --kind blog-post blog/my-new-post```
+- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: ```hugo new --kind blog-post blog/my-new-post```
 - [ ] Drafts will not be published, so either set `draft: false` or or delete it.
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph. This ensures a correct break on the blog landing page. 
