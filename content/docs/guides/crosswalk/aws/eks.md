@@ -262,7 +262,7 @@ const allVpcSubnets = vpc.privateSubnetIds.concat(vpc.publicSubnetIds);
 
 // Create an EKS cluster inside of the VPC.
 const cluster2 = new eks.Cluster("my-cluster", {
-    vpcId: vpc.vpcId,
+    vpcId: vpc.id,
     subnetIds: allVpcSubnets,
     nodeAssociatePublicIpAddress: false,
 });
