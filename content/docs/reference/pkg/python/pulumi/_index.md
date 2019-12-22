@@ -904,7 +904,7 @@ on the Output class in order to observe the value of an output. See
 <a class="reference external" href="/docs/intro/concepts/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
 <dl class="class">
 <dt id="pulumi.Output">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param">resources: Set[Resource], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param">resources: Union[Awaitable[Set[Resource]], Set[Resource]], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output helps encode the relationship between Resources in a Pulumi application. Specifically an
 Output holds onto a piece of Data and the Resource it was generated from. An Output value can
 then be provided when constructing new Resources, allowing that new Resource to know both the
