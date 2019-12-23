@@ -2,7 +2,7 @@
 title: "Managing Containers on AWS with Pulumi"
 date: 2019-12-24
 meta_desc: "Deploying containers on AWS ECS and EKS"
-meta_image: meta.png
+meta_image: meta.jpeg
 authors:
     - sophia-parafina
 tags:
@@ -13,19 +13,19 @@ tags:
     - containers
 ---
 
-The AWS Cloud ecosystem is large and vibrant, so large and vibrant that at times, it can be challenging to know where best to start! In the case of containers, [Abby Fuller](https://twitter.com/abbyfuller) tweeted a descriptive summary on how container services are organized in AWS Cloud.
+The AWS Cloud ecosystem is large and vibrant, so vast and vibrant that at times, it can be challenging to know where best to start! In the case of containers, [Abby Fuller](https://twitter.com/abbyfuller) tweeted a descriptive summary about using container services in AWS Cloud.
 
 <!--more-->
 
 {{< tweet 1202016116580605952 >}}
 
-It looks straightforward, but it's easy to get lost in the details when configuring multiple services to get your application running on AWS. Although AWS has extensive documentation and point and click interface to these services, replicating then can be challenging and it isn't conducive to understanding the architecture. However, using infrastructure as code let's you see the details and results in a reproducible deployment that you can expand from. Let’s implement the diagram using Pulumi to deploy your container infrastructure with code in AWS.
+It looks straightforward, but it's easy to get lost in the details when configuring multiple services to get your application running on AWS. Although AWS has extensive documentation and a point and click interface to these services, replicating then can be challenging, and it isn't conducive to understanding the architecture. However, using infrastructure as code lets you see the details and results in a reproducible deployment that you can expand on. Let’s implement the diagram using Pulumi to deploy your container infrastructure with code in AWS.
 
 ## Store your images
 
-The AWS Elastic Container Registry (ECR) is a container registry that supports private container registries. ECR makes it easy to store, build, manage and deploy container images and eliminates the need to operate your own registry or use public registries, all in a highly available and scalable architecture.
+The AWS Elastic Container Registry (ECR) is a container registry that supports private container registries. ECR makes it easy to store, build, manage, and deploy container images and eliminates the need to operate your registry or use public registries, all in a highly available and scalable architecture.
 
-In this example, we use Pulumi’s [Crosswalk for AWS](https://www.pulumi.com/docs/guides/crosswalk/aws/). Crosswalk for AWS is a collection of common tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository, this will create the AWS Container Repository resource. The last line of the code exports the URL, so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up` the repository is ready to go and you can use the Docker CLI to push, pull and manage images.
+In this example, we use Pulumi’s [Crosswalk for AWS](https://www.pulumi.com/docs/guides/crosswalk/aws/). Crosswalk for AWS is a collection of frequent tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository; this creates the AWS Container Repository resource. The last line of the code exports the URL so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up`, the repository is ready to go, and you can use the Docker CLI to push, pull, and manage images.
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -41,11 +41,11 @@ export const url = repo.repository.repositoryUrl;
 
 {{< tweet 1204900986898137088 >}}
 
-There are two services for running containers in the AWS Cloud, Elastic Cloud Service (ECS) or Elastic Kubernetes Service (EKS). ECS is a proprietary service for running containers in the AWS Cloud. EKS is a managed Kubernetes service for deploying containers in a Kubernetes control plane. It has three master nodes distributed across three availability zones to provide high availability.
+There are two services for running containers in the AWS Cloud: Elastic Cloud Service (ECS), or Elastic Kubernetes Service (EKS). ECS is a proprietary service for running containers in the AWS Cloud. In contrast, EKS is a managed Kubernetes service for containers using a Kubernetes control plane. It has three master nodes distributed across three availability zones to provide high availability.
 
-ECS is designed to work with other AWS services and provides easier configuration and integration with them while providing high availability. In contrast, EKS is a managed Kubernetes service, and because Kubernetes is open-source your infrastructure portable to other cloud providers. In addition, Kubernetes can provide fine-grain control over deployed services. The choice of which schedule to use depends on your requirements.
+ECS is designed to work with other AWS services and provides more straightforward configuration and integration with them while providing high availability. In contrast, EKS is a managed Kubernetes service, and because Kubernetes is open-source, your infrastructure is portable to other cloud providers. Also, Kubernetes can provide fine-grain control over deployed services. The choice of which scheduler to use depends on your requirements.
 
-You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, the Crosswalk for AWS library (@pulumi/awsx) will provide all the primitives you will need. In the case of ECS, use Crosswalk for AWS, and for EKS use the Pulumi for AWS.
+You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, Crosswalk for AWS (@pulumi/awsx) provides all the primitives needed to build infrastructure on AWS. 
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -58,7 +58,7 @@ const cluster = new awsx.ecs.Cluster("custom", {
 });
 ```
 
-If you wish to use EKS, you will need to use the Pulumi EKS library (@pulumi/eks).
+If you wish to use EKS, use the Pulumi EKS library (@pulumi/eks) for Kubernetes primitives on AWS.
 
 ```ts
 import * as eks from "@pulumi/eks";
@@ -74,7 +74,7 @@ Fargate is an AWS service that runs containers. It is suited to running small wo
 
 ### Fargate
 
-In this example, we create a load balancer open on port 80, spins up two instances of our container, and the endpoint URL is exported.
+In this example, we create a load balancer open on port 80, spin up two instances of our container, and publish the endpoint URL.
 
 ```ts
 // load balancer on port 80
@@ -99,7 +99,7 @@ export const appURL = lb.endpoint.hostname;
 
 ### EC2 with Kubernetes
 
-With Kubernetes, we create a deployment for the application and a service to make the application accessible via port 80.  We export the application endpoint and cluster config that can be used with the `kubectl` CLI.
+With Kubernetes, we create a deployment for the application and a service to make the application accessible via port 80. We publish both application endpoint to make it accessible and cluster config for use with `kubectl` CLI.
 
 ```ts
 // Deploy a small canary service (NGINX), to test that the cluster is working.
@@ -149,7 +149,7 @@ $ pulumi new aws-typescript
 
 In this example, we build the application in code using the ECR repository class `buildAndPushImage`. This class uses Docker to build the image locally and push it to our repository. Make sure that you have [Docker installed and running](https://docs.docker.com/v17.09/engine/installation/#supported-platforms).
 
-The container application for this example is a HTML page in NGINX. You will need to create a `./app` directory in your Pulumi project and add the Dockerfile below.
+The container application for this example is an HTML page in NGINX. Make a `./app` directory in your Pulumi project and add the Dockerfile below.
 
 Dockerfile:
 
@@ -192,7 +192,7 @@ quickstart/
 
 ### ECS
 
-Now we're ready to start building our infrastructure. Replace the generated `index.ts` file with the example below. The example shows ho to deploy containers on ECS using Fargate.
+Now we're ready to start building our infrastructure. Replace the generated `index.ts` file with the example below. The example shows how to deploy containers on ECS using Fargate.
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -235,7 +235,7 @@ export const repoURL = repo.repository.repositoryUrl;
 
 ```
 
-To deploy the application run `pulumi up`. You'll see a preview of the resources to be deployed and when deployed, your program will list the URLs for the application and the repository.
+To deploy the application, run `pulumi up`. You'll see a preview of the resources to be deployed.  Accept the deployment by selecting `yes`, and when finished, your program lists the URLs for the application and the repository.
 
 ```bash
 Outputs:
@@ -261,14 +261,14 @@ $ curl nginx-0296a2a-996897041.us-east-1.elb.amazonaws.com
 
 ### EKS
 
-The EKS example uses the `@pulumi/eks` and `@pulumi/kubernetes` node modules. You will need to add these modules to the generated project files.
+The EKS example uses the `@pulumi/eks` and `@pulumi/kubernetes` node modules. Add the [eks](https://www.npmjs.com/package/@pulumi/eks) and [kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes) modules to the project.
 
 ```bash
 $ node install “@plulumi/eks”
 $ node install “@plulumi/kubernetes”
 ```
 
-Like the ECS example, the EKS example builds the application image locally and pushes it into our custom repository. The application deployment is configured with two replicas. The service uses the EKS cluster, `my-cluster`, we declared to create a load balancer with port 80 open. 
+Like the ECS example, the EKS example builds the application image locally and pushes it into our custom repository. The application deployment has two replicas in the configuration. The service uses the EKS cluster, `my-cluster`, we declared to create a load balancer with port 80 open.
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -324,8 +324,8 @@ export const appURL = service.status.loadBalancer.ingress[0].hostname;
 
 ```
 
-As with the ECS example, run `pulumi up` to deploy the application and use either curl or a browser to check the deployment.
+As with the ECS example, run `pulumi up` to deploy the application. To check the deployment, use either curl or a browser to see the page.
 
 ## Want to know more?
 
-Although these examples are simple, they demonstrate the basic building blocks for building, storing and managing containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide]({{< relref "docs/get-started/aws/_index.md" >}}) for core services and the [Crosswalk for AWS guide]({{< relref "docs/guides/crosswalk/aws/_index.md" >}}) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, checkout our [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate]({{< relref "blog/aws-eks-managed-nodes-fargate/index.md" >}}).
+Although these examples are simple, they demonstrate the basic building blocks for building, storing, and managing containers. They also show how to create ECS or EKS clusters for deploying apps. To get started with AWS and Pulumi check out the [AWS Guide]({{< relref "docs/get-started/aws/_index.md" >}}) for core services and the [Crosswalk for AWS guide]({{< relref "docs/guides/crosswalk/aws/_index.md" >}}) for convenience APIs that simplify deploying infrastructure as code. For a deeper dive into managing containers on AWS, check out our [How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Fargate]({{< relref "blog/aws-eks-managed-nodes-fargate/index.md" >}}).
