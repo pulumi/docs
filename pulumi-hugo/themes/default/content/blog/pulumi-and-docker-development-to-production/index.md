@@ -25,7 +25,7 @@ development and production!
 
 In addition to the number of cloud and infrastructure providers that
 Pulumi supports, Pulumi also supports
-[defining Docker resources]({{< ref "/docs/reference/pkg/nodejs/pulumi/docker" >}})
+[defining Docker resources]({{< relref "/docs/reference/pkg/nodejs/pulumi/docker" >}})
 in code. Let's look at this code snippet of Pulumi TypeScript code:
 
     // This program encodes a complete application: a container running Redis Commander,
@@ -178,13 +178,13 @@ tools we already use for software engineering:
 
 1. Abstraction, encapsulation, and code reuse for infrastructure and
    applications
-2. [Testing]({{< ref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}),
+2. [Testing]({{< relref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}),
    both unit and integration
 3. IDEs and tools for detecting errors extremely early in a developer's
    inner loop, instead of at deployment time
 
 Pulumi is open source, free to use, and works today with
-[a variety of clouds]({{< ref "/docs/intro/cloud-providers" >}}) and bring a little more
+[a variety of clouds]({{< relref "/docs/intro/cloud-providers" >}}) and bring a little more
 software and less code into your infrastructure! If you'd like to see
 more about this particular code demo,
 [check out my DockerCon EU 2018 talk](https://www.youtube.com/watch?v=EbsE4p3uCu0)

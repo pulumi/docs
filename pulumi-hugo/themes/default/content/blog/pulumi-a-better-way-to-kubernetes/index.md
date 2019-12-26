@@ -115,8 +115,8 @@ integrate with CI/CD systems. How do you know when your application is
 ready? Common workflows involve [scripting kubectl calls](https://kubernetes.io/docs/reference/kubectl/conventions/#using-kubectl-in-reusable-scripts)
 and parsing JSON output in Bash. This approach is brittle, and the
 process is a little different for every Kubernetes resource type.
-Pulumi's [state reconciliation model]({{< ref "/docs/intro/concepts/how-pulumi-works" >}}) is a
-[natural fit for CI/CD systems]({{< ref "/docs/guides/continuous-delivery" >}}): review changes with a
+Pulumi's [state reconciliation model]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) is a
+[natural fit for CI/CD systems]({{< relref "/docs/guides/continuous-delivery" >}}): review changes with a
 preview, and then proceed with confidence once an update succeeds. This
 is great for GitOps and [ChatOps]({{< relref "getting-to-chatops-with-pulumi-webhooks" >}})
 workflows. You don't have to be an expert on the inner workings of
@@ -136,7 +136,7 @@ scenarios.
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
+[click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 As always, you can check out our code on
@@ -148,4 +148,4 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, [please don't hesitate to drop us a line]({{< ref "/contact" >}}).
+to Pulumi, [please don't hesitate to drop us a line]({{< relref "/contact" >}}).

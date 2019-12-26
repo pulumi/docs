@@ -177,7 +177,7 @@ to have access to these logs at the click of a button - and this is
 something we're also excited to enable in the near future.
 
 You can take `pulumi` for a spin today by checking out the
-[Getting Started Guide]({{< ref "/docs/get-started" >}}) guide or some of the
+[Getting Started Guide]({{< relref "/docs/get-started" >}}) guide or some of the
 [Pulumi Examples](https://github.com/pulumi/examples) on GitHub. Then join us in the
 [Pulumi Community Slack](https://slack.pulumi.com) to chat about where
 you want to see us go (and where you'd like to help out!) with

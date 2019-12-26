@@ -83,7 +83,7 @@ become just a few lines of very simple, understandable code.
 ## Reusing Infrastructure as Code
 
 To use this new package, head on over to a Pulumi program, or
-[create a new one]({{< ref "/docs/get-started" >}})
+[create a new one]({{< relref "/docs/get-started" >}})
 (for instance, with `pulumi new aws-typescript`).
 Then just add a reference like any other dependency:
 
@@ -210,7 +210,7 @@ richer visualization in the [pulumi.com](http://pulumi.com) console:
 ![pulumi app graph](./pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
-[documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
+[documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
 
 ## Package Everything!
 

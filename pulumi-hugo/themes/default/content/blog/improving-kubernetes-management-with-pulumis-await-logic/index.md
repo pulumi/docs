@@ -29,7 +29,7 @@ We've
 how Pulumi [**tracks the status**]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
 of Kubernetes resources to provide fine-grained status messages for both
 your [**infrastructure and applications**]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}}).
-Pulumi [**uses a resource graph**]({{< ref "/docs/intro/concepts/how-pulumi-works" >}})
+Pulumi [**uses a resource graph**]({{< relref "/docs/intro/concepts/how-pulumi-works" >}})
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 
@@ -48,7 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< ref "/docs/intro/concepts/stack" >}}). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< relref "/docs/intro/concepts/stack" >}}). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like
@@ -60,7 +60,7 @@ stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
 2) Reliably integrate with
-[**CI/CD systems**]({{< ref "/docs/guides/continuous-delivery" >}}) for infrastructure and
+[**CI/CD systems**]({{< relref "/docs/guides/continuous-delivery" >}}) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
@@ -109,7 +109,7 @@ interesting edge cases!
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
+[click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
@@ -117,12 +117,12 @@ resources to check out:
 
 - [Overview of Pulumi Kubernetes Scenarios]({{< relref "/topics/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/eks" >}}),
-  [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}), or
+  [Amazon EKS]({{< relref "/docs/tutorials/kubernetes/eks" >}}),
+  [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/exposed-deployment" >}})
-- Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< ref "/docs/intro/concepts/programming-model" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
+- Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
+  [overview of the programming model]({{< relref "/docs/intro/concepts/programming-model" >}})
 - Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 
 As always, you can check out our code
@@ -134,4 +134,4 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, please don't hesitate [to drop us a line]({{< ref "/contact" >}}).
+to Pulumi, please don't hesitate [to drop us a line]({{< relref "/contact" >}}).

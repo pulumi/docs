@@ -149,7 +149,7 @@ load testing and decommissioning of the original node group.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes
@@ -164,7 +164,7 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
-migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< ref "/contact" >}}).
+migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact" >}}).
 
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx

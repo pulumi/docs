@@ -32,7 +32,7 @@ scale,
 with advanced or custom needs.
 
 For more information about the specific differences and capabilities offered for the
-Pulumi Team and Enterprise editions, refer to the [pricing page]({{< ref "/pricing" >}}).
+Pulumi Team and Enterprise editions, refer to the [pricing page]({{< relref "/pricing" >}}).
 
 To create a new Pulumi organization with a new edition, see [Creating a New
 Organization]({{< relref "organizations#creating-a-new-organization" >}}).

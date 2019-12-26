@@ -96,7 +96,7 @@ defined -- or even use functions that already exist, and simply glue them togeth
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD]({{< ref "/docs/guides/continuous-delivery" >}}).
+[CI/CD]({{< relref "/docs/guides/continuous-delivery" >}}).
 
 ### Register an Event Handler Using a Magic Lambda Function
 
