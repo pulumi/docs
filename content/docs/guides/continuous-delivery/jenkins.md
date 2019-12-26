@@ -39,7 +39,7 @@ The source code for the stack is in a repository in GitHub and uses TypeScript a
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
+Learn more [here]({{< relref "/docs/reference/cli/pulumi_new.md" >}}).
 
 ## PULUMI_ACCESS_TOKEN
 

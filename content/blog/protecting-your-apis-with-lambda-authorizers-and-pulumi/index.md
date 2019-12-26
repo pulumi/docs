@@ -287,7 +287,7 @@ enable developers to get their code production ready faster.
 
 Get going with these resources:
 
-- [Getting Started]({{< ref "/docs/get-started" >}})
+- [Getting Started]({{< relref "/docs/get-started" >}})
 - [Serverless REST API on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway)
 
 To learn more about using Pulumi and Lambda authorizers

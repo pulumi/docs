@@ -291,7 +291,7 @@ actually making any changes. And because Pulumi is always tracking old
 states, rollback afterwards is easy also.
 
 This CLI workflow is great for the dev inner loop, however
-[the Pulumi GitHub App]({{< ref "/docs/guides/continuous-delivery/github-app" >}}) also integrates
+[the Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) also integrates
 these previews and diffs with your CI/CD system, by enlightening your
 GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,
@@ -304,7 +304,7 @@ real code, instead of YAML, and you've gotten a taste of the `pulumi up`
 deployment workflow, especially compared to `kubectl`.
 
 **Try it out now** by heading over to our
-[Getting Started page]({{< ref "/docs/get-started" >}}).
+[Getting Started page]({{< relref "/docs/get-started" >}}).
 
 We are just getting started. In the coming weeks we will be sharing more
 around other deployment scenarios, including A/B traffic splitting,

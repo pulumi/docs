@@ -129,7 +129,7 @@ vSphere and OpenStack. Our delivery platform works great with your
 favorite CI systems. Expect to see continued growth in all of these
 areas, in addition to new clouds, languages, and integrations.
 
-Today we launched [the Team Edition]({{< ref "/pricing" >}}) for our
+Today we launched [the Team Edition]({{< relref "/pricing" >}}) for our
 SaaS delivery platform. This includes many features that you, the
 community, told us you need to better operationalize Pulumi within your
 teams. We already have many happy customers using these features
@@ -137,17 +137,17 @@ successfully for organizations big and small. Expect to see a steady
 stream of improvements, in addition to Enterprise Edition capabilities
 for the largest of organizations needing on-premises, advanced security,
 and custom identity. Please always [let us
-know]({{< ref "/contact" >}}) how we can better meet your
+know]({{< relref "/contact" >}}) how we can better meet your
 needs.
 
 This new round of funding will allow us to strengthen our commitment to
 open source and community, increase our R&D velocity, and also scale our
 business to enable organizations of all sizes to successfully achieve
 cloud engineering within their teams. We are [hiring in all areas of the
-company]({{< ref "/careers" >}}) as we enter this next exciting
+company]({{< relref "/careers" >}}) as we enter this next exciting
 chapter of the company.
 
-[Download Pulumi]({{< ref "/docs/get-started/install" >}}) -- we
+[Download Pulumi]({{< relref "/docs/get-started/install" >}}) -- we
 can't wait to see all the great things you build next with Pulumi!
 
 Joe & Eric

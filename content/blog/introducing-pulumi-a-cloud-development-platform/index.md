@@ -31,7 +31,7 @@ best practices within teams and the community.
 
 We started on Pulumi a little over a year ago, have built an incredible
 team, and I'm thrilled to announce its availability.  Download or learn
-more [here]({{< ref "/docs" >}}), or read more background on Pulumi's
+more [here]({{< relref "/docs" >}}), or read more background on Pulumi's
 motivation and world-view **[over on my personal blog](http://joeduffyblog.com/2018/06/18/hello-pulumi)**.
 
 The team can't wait to see all the incredible things you will build

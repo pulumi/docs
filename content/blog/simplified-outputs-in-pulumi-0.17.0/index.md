@@ -10,7 +10,7 @@ meta_image: "comp-list.png"
 Pulumi allows cloud developers to use programming languages like
 JavaScript, TypeScript and Python to define and deploy cloud
 infrastructure and applications. To do this, Pulumi exposes a notion of
-[Outputs]({{< ref "/docs/intro/concepts/programming-model#outputs" >}})
+[Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}})
 that track how the outputs of one cloud resource are used and
 transformed as part of creating another cloud resource.
 
