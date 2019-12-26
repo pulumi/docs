@@ -192,7 +192,7 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Please read more about
-[how these mapping are maintained here]({{< ref "/docs/guides/continuous-delivery" >}}).
+[how these mapping are maintained here]({{< relref "/docs/guides/continuous-delivery" >}}).
 
 ## Tagging Stacks
 

@@ -20,11 +20,11 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 ![Pulumi making EKS Easy](./easy-eks.png)
 
 To get started, download the free and open source
-[Pulumi SDK]({{< ref "/docs/get-started/install" >}}). The SDK includes
+[Pulumi SDK]({{< relref "/docs/get-started/install" >}}). The SDK includes
 the CLI we'll be using below, and requires AWS credentials to access
 your AWS account and provision resources. If you already have the AWS
 CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< ref "/docs/intro/cloud-providers/aws/setup.md" >}})
+[check out the docs here]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
 to set things up.
 
 From here, there are two ways to proceed:
@@ -181,7 +181,7 @@ this stack. The stack exports are also published in this same dashboard,
 so that key outputs from a deployment are easily available and can be
 shared with other users in your organization, like your kubeconfig.
 
-[Additional management features]({{< ref "/product" >}}), including
+[Additional management features]({{< relref "/product" >}}), including
 RBAC, CI/CD integrations, and rich resource graph visualization, are
 also available via the [Pulumi app](https://app.pulumi.com),
 including Team and Enterprise Editions for production teams of all
@@ -192,10 +192,10 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and then deploy Kubernetes apps to it. Support is
-also available for Azure AKS, [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}),
+also available for Azure AKS, [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
 and custom clusters (including Minikube), using the same workflow and approach.
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes]({{< ref "/docs/get-started/kubernetes" >}})
-- [Get started with Pulumi and AWS]({{< ref "/docs/get-started/aws" >}})
+- [Get started with Pulumi and Kubernetes]({{< relref "/docs/get-started/kubernetes" >}})
+- [Get started with Pulumi and AWS]({{< relref "/docs/get-started/aws" >}})
