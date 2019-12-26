@@ -19,7 +19,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/l
 
 ## Setup
 
-The Linode provider supports several options for providing access to Linode credentials.  See [Linode setup page]({{< relref "/docs/intro/cloud-providers/linode/setup.md" >}}) for details.
+The Linode provider supports several options for providing access to Linode credentials.  See [Linode setup page]({{< relref "/docs/intro/cloud-providers/linode/setup" >}}) for details.
 
 ## Example
 

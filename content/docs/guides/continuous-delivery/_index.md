@@ -19,7 +19,7 @@ analysis tools, and running unit and integration tests as appropriate. It all "j
 infrastructure the same way it would for your application code.
 
 Pulumi can easily integrate into any CI/CD system. If yours isn't listed below, see our guide for using Pulumi
-within a [generic CI/CD system]({{< relref "other.md" >}}).
+within a [generic CI/CD system]({{< relref "other" >}}).
 
 <div class="supported-cicd-platforms">
     <a href="{{< relref aws-code-services >}}">
@@ -65,7 +65,7 @@ within a [generic CI/CD system]({{< relref "other.md" >}}).
 </div>
 
 > Pulumi can also bridge results from your CI/CD system with GitHub, surfacing the results of stack updates
-> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app.md" >}}) for more information.
+> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app" >}}) for more information.
 
 ### Configuration and Secrets
 
@@ -80,15 +80,15 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects.md" >}}), which
+and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
 permit one stack to depend upon another. This facilitates continuous delivery at scale.
 
 ### Using Branches for Environments
 
 Pulumi is agnostic to what sort of branching strategy you take. Most customers use Git-based flows; the most common is
-to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack.md" >}}). This allows you to control deployments to environments
+to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack" >}}). This allows you to control deployments to environments
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App]({{< relref "github-app.md" >}}). This gives you interactive infrastructure change previews
+[Pulumi GitHub App]({{< relref "github-app" >}}). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

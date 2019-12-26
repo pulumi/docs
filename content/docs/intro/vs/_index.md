@@ -19,11 +19,11 @@ of these are complementary and can be used together, whereas some are "either or
 
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
-* [Hashicorp Terraform]({{< relref "terraform.md" >}})
-* [Cloud Templates (AWS CloudFormation, Azure RM, etc.)]({{< relref "cloud_templates.md" >}})
-* [AWS CDK and Troposphere]({{< relref "cloud_template_transpilers.md" >}})
-* [Cloud SDKs (AWS Boto, etc.)]({{< relref "cloud_sdks.md" >}})
-* [Serverless Framework]({{< relref "serverless.md" >}})
-* [Kubernetes YAML and DSLs]({{< relref "k8s_yaml_dsls.md" >}})
-* [Chef, Puppet, Ansible, Salt, etc.]({{< relref "chef_puppet_etc.md" >}})
-* [Custom Solutions]({{< relref "custom.md" >}})
+* [Hashicorp Terraform]({{< relref "terraform" >}})
+* [Cloud Templates (AWS CloudFormation, Azure RM, etc.)]({{< relref "cloud_templates" >}})
+* [AWS CDK and Troposphere]({{< relref "cloud_template_transpilers" >}})
+* [Cloud SDKs (AWS Boto, etc.)]({{< relref "cloud_sdks" >}})
+* [Serverless Framework]({{< relref "serverless" >}})
+* [Kubernetes YAML and DSLs]({{< relref "k8s_yaml_dsls" >}})
+* [Chef, Puppet, Ansible, Salt, etc.]({{< relref "chef_puppet_etc" >}})
+* [Custom Solutions]({{< relref "custom" >}})

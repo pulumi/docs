@@ -19,7 +19,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/p
 
 ## Setup
 
-The Packet.net provider supports several options for providing access to Packet.net credentials.  See [Packet setup page]({{< relref "/docs/intro/cloud-providers/packet/setup.md" >}}) for details.
+The Packet.net provider supports several options for providing access to Packet.net credentials.  See [Packet setup page]({{< relref "/docs/intro/cloud-providers/packet/setup" >}}) for details.
 
 ## Example
 

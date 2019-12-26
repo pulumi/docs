@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/ecs/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -32,7 +32,7 @@ providing full control over the underlying EC2 machine resources that power your
 > containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
 > the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
 > with portability between clouds and self-hosted configurations. See
-> [Pulumi Crosswalk for AWS EKS]({{< relref "eks.md" >}}) for more information about using EKS.
+> [Pulumi Crosswalk for AWS EKS]({{< relref "eks" >}}) for more information about using EKS.
 
 ## Creating a Load Balanced ECS Service
 
@@ -82,7 +82,7 @@ $ curl http://$(pulumi stack output url)
 
 We have chosen to create an [Elastic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing) so that we
 can access our services over the Internet at a stable address, spread evenly across two instances. Any of the ELB
-options described in the [Pulumi Crosswalk for ELB documentation]({{< relref "elb.md" >}}) can be used with our ECS service.
+options described in the [Pulumi Crosswalk for ELB documentation]({{< relref "elb" >}}) can be used with our ECS service.
 
 Behind the scenes, our program also creates an ECS cluster in the default VPC to run the compute. This is something
 [we can configure](#creating-an-ecs-cluster-in-a-vpc) if we want to use a different VPC.
@@ -129,7 +129,7 @@ In this example, we simply specified the tags for our cluster. We will see other
 ## Creating an ECS Cluster in a VPC
 
 To create an ECS cluster inside of a VPC, we will first create or use an existing VPC using any of the techniques
-described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc.md" >}}). Then we simply pass that
+described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}). Then we simply pass that
 as the `vpc` argument for our cluster's constructor:
 
 ```typescript
@@ -343,7 +343,7 @@ const task = new awsx.ecs.FargateTaskDefinition("task", {
 ```
 
 Finally, you can create a container image from a callback function. This allows you to author the same code that
-runs in the container within your Pulumi application directly, much like [magic functions for Lambda]({{< relref "lambda.md" >}}):
+runs in the container within your Pulumi application directly, much like [magic functions for Lambda]({{< relref "lambda" >}}):
 
 ```typescript
 const listener =
@@ -373,7 +373,7 @@ const service = new awsx.ecs.EC2Service("custom", {
 
 This example runs an anonymous web server inside of an image built and published automatically to ECR.
 
-For more information about using ECR, refer to [Pulumi Crosswalk for AWS ECR]({{< relref "ecr.md" >}}).
+For more information about using ECR, refer to [Pulumi Crosswalk for AWS ECR]({{< relref "ecr" >}}).
 
 ## Running Fire and Forget Tasks
 

@@ -13,7 +13,7 @@ In many cases, different stacks for a single project will need differing values.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI]({{< relref "/docs/reference/cli" >}}) and the [programming model]({{< relref "/docs/intro/concepts/programming-model" >}}).
 
-The key-value pairs for any given stack are stored in [your project's stack settings file]({{< relref "project.md#stack-settings-file" >}}), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
+The key-value pairs for any given stack are stored in [your project's stack settings file]({{< relref "project#stack-settings-file" >}}), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
 
 ## Configuration {#config-stack}
 
@@ -26,9 +26,9 @@ You can use both the CLI and the programming model for your Pulumi configuration
 
 ### Configuration Keys
 
-Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name]({{< relref "project.md#project-name" >}}) from `Pulumi.yaml` as the namespace.
+Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name]({{< relref "project#project-name" >}}) from `Pulumi.yaml` as the namespace.
 
-As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components]({{< relref "./programming-model.md#components" >}}) to define their own key spaces without risk of conflicting with other components, packages, or projects.
+As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components]({{< relref "./programming-model#components" >}}) to define their own key spaces without risk of conflicting with other components, packages, or projects.
 
 ### Setting and Getting Configuration Values
 
@@ -205,7 +205,7 @@ In this example, we have read back the `name` and `dbPassword` configuration var
 > Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("broome-proj")`.
 
 For more advanced details of interacting with configuration and secrets, refer to the
-[Programming Model documentation]({{< relref "programming-model.md" >}}).
+[Programming Model documentation]({{< relref "programming-model" >}}).
 
 ### A Warning: Using Secrets in Code
 
@@ -297,7 +297,7 @@ $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
 
 ## Configuring Secrets Encryption
 
-The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State]({{< relref "state.md" >}}).
+The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State]({{< relref "state" >}}).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 

@@ -10,7 +10,7 @@ menu:
     weight: 1
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -154,5 +154,5 @@ Deploy applications and workloads into the cluster.
 [crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
 [crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[cw-guides]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks.md" >}}
+[cw-guides]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
 <!-- markdownlint-enable url -->

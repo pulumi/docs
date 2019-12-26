@@ -65,7 +65,7 @@ For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, whic
 ### About The `pulumi` Program
 
 The code inside `infra/index.ts` creates a resource group, a storage account and a blob container in the storage account. It then `exports` three
-values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< relref "programming-model.md#stack-outputs" >}}).
+values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< relref "programming-model#stack-outputs" >}}).
 
 ## Build Variables
 

@@ -24,12 +24,12 @@ The Pulumi CLI is free to download and install:
 
 The most common commands in the CLI that you'll be using are as follows:
 
-* [`pulumi new`]({{< relref "pulumi_new.md" >}}): creates a new project using a template
-* [`pulumi stack`]({{< relref "pulumi_stack.md" >}}): manage your stacks (at least one is required to perform an update)
-* [`pulumi config`]({{< relref "pulumi_config.md" >}}): configure variables such as keys, regions, and so on
-* [`pulumi up`]({{< relref "pulumi_up.md" >}}): preview and deploy changes to your program and/or infrastructure
-* [`pulumi preview`]({{< relref "pulumi_preview.md" >}}): preview your changes explicitly before deploying
-* [`pulumi destroy`]({{< relref "pulumi_destroy.md" >}}): destroy your program and its infrastructure when you're done
+* [`pulumi new`]({{< relref "pulumi_new" >}}): creates a new project using a template
+* [`pulumi stack`]({{< relref "pulumi_stack" >}}): manage your stacks (at least one is required to perform an update)
+* [`pulumi config`]({{< relref "pulumi_config" >}}): configure variables such as keys, regions, and so on
+* [`pulumi up`]({{< relref "pulumi_up" >}}): preview and deploy changes to your program and/or infrastructure
+* [`pulumi preview`]({{< relref "pulumi_preview" >}}): preview your changes explicitly before deploying
+* [`pulumi destroy`]({{< relref "pulumi_destroy" >}}): destroy your program and its infrastructure when you're done
 
 ## Environment Variables
 

@@ -40,7 +40,7 @@ A project file contains the following attributes:
 
 * `config`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
 
-* `backend`: (optional) configuration for project state [backend]({{< relref "state.md#config-stack" >}}). Supports this options:
+* `backend`: (optional) configuration for project state [backend]({{< relref "state#config-stack" >}}). Supports this options:
     * `url`: explicitly specify backend url like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
 
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
@@ -82,4 +82,4 @@ For stacks that are actively developed by multiple members of a team, the recomm
 
 For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked into source control.
 
-For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration and Secrets]({{< relref "config.md" >}}).
+For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration and Secrets]({{< relref "config" >}}).

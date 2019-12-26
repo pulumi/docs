@@ -58,7 +58,7 @@ Resources:
 Duration: 12s
 ```
 
-You can see we now have an `ip` [stack output]({{< relref "/docs/intro/concepts/stack.md#outputs" >}}) that we can `curl` to get the output from the service.
+You can see we now have an `ip` [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) that we can `curl` to get the output from the service.
 
 > **Note:** minikube does not support type LoadBalancer; if you are deploying to minikube, make sure to run kubectl port-forward svc/frontend 8080:80 to forward the cluster port to the local machine and access the service via localhost:8080.
 

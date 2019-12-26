@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/ecr/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -23,7 +23,7 @@ about scaling the underlying infrastructure, while hosting your images in a high
 ## Overview
 
 Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code,
-integrates with Pulumi Crosswalk for AWS [ECS]({{< relref "ecs.md" >}}) and [EKS]({{< relref "eks.md" >}}) to ease
+integrates with Pulumi Crosswalk for AWS [ECS]({{< relref "ecs" >}}) and [EKS]({{< relref "eks" >}}) to ease
 deployment of new application containers to your ECS, "Fargate", and/or Kubernetes clusters, and even supports
 building and deploying Docker images from your developer desktop or CI/CD workflows.
 
@@ -251,7 +251,7 @@ const nginx = new awsx.ecs.FargateService("app", {
 export const url = lb.endpoint.hostname;
 ```
 
-For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs.md" >}}). For
+For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}). For
 information about consuming ECR images from ECS services specifically, please see
 [Using Amazon ECR Images with Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
 
@@ -348,7 +348,7 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
-For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation]({{< relref "eks.md" >}}).
+For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation]({{< relref "eks" >}}).
 
 ### IAM Permissions Required to use ECR
 
@@ -373,7 +373,7 @@ policy permissions to access your Amazon ECR registry. The following example def
 }
 ```
 
-See the [Pulumi Crosswalk for AWS IAM documentation]({{< relref "iam.md" >}}) for instructions on how to manage
+See the [Pulumi Crosswalk for AWS IAM documentation]({{< relref "iam" >}}) for instructions on how to manage
 such policies.
 
 ## Managing Container Image Lifecycles using Policies
