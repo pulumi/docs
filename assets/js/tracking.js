@@ -10,7 +10,7 @@ $(document).ready(function() {
     if (window && window.analytics && typeof window.analytics.track === "function") {
 
         // Find all the links with a "track-click" attribute.
-        const links = $("a[track-click]");
+        const links = $("a[data-tracking-id]");
 
         // Get the current date/time so we can track time from page load to user click.
         const now = new Date().getTime();
@@ -19,7 +19,7 @@ $(document).ready(function() {
             // Create the tracking object.
             const trackingData = {
                 // The id of the element.
-                element_id: $(element).attr("id"),
+                element_id: $(element).attr("data-tracking-id"),
                 // The destination url of the link.
                 destinationPath: $(element).attr("href"),
                 // The current path.
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 // The Google Analytic Event Values. These values are pushed into GA
                 // specifically. More info: https://support.google.com/analytics/answer/1033068#Anatomy
                 category: "User Interaction",
-                label: $(element).attr("id"),
+                label: $(element).attr("data-tracking-id"),
             }
 
             // Register a listener to the link to send data to Segment
