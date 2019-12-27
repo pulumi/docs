@@ -2,7 +2,8 @@
   "name": "docs",
   "version": "0.0.1",
   "scripts": {
-    "lint-markdown": "node ./scripts/markdown_seo_lint.js"
+    "lint-markdown": "node ./scripts/markdown_seo_lint.js",
+    "lint-links": "node ./scripts/link_linter.js"
   },
   "dependencies": {
     "broken-link-checker": "^0.7.8",
