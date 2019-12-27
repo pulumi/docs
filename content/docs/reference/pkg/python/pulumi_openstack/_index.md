@@ -27,6 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="loadbalancer/">loadbalancer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="networking/">networking</a></li>
 <li class="toctree-l1"><a class="reference internal" href="objectstorage/">objectstorage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orchestration/">orchestration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sharedfilesystem/">sharedfilesystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vpnaas/">vpnaas</a></li>
 </ul>

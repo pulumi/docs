@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.identity"></span><dl class="class">
 <dt id="pulumi_openstack.identity.ApplicationCredential">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">ApplicationCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">unrestricted=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">ApplicationCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_rules=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">unrestricted=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Application Credential resource within OpenStack Keystone.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the application credential name and secret
@@ -31,6 +31,9 @@ The Application Credential visibility is similar to
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of one or more access rules, which
+this application credential allows to follow. The structure is described
+below. Changing this creates a new application credential.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the application credential.
 Changing this creates a new application credential.</p></li>
 <li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the application credential
@@ -56,9 +59,30 @@ credentials or trusts. Changing this creates a new application credential.</p></
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_application_credential_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_application_credential_v3.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ApplicationCredential.access_rules">
+<code class="sig-name descname">access_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential.access_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of one or more access rules, which
+this application credential allows to follow. The structure is described
+below. Changing this creates a new application credential.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.ApplicationCredential.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential.description" title="Permalink to this definition">¶</a></dt>
@@ -126,7 +150,7 @@ credentials or trusts. Changing this creates a new application credential.</p>
 
 <dl class="method">
 <dt id="pulumi_openstack.identity.ApplicationCredential.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">unrestricted=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_rules=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">unrestricted=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApplicationCredential resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -135,6 +159,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of one or more access rules, which
+this application credential allows to follow. The structure is described
+below. Changing this creates a new application credential.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the application credential.
 Changing this creates a new application credential.</p></li>
 <li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the application credential
@@ -163,6 +190,13 @@ credentials or trusts. Changing this creates a new application credential.</p></
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_application_credential_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_application_credential_v3.html.markdown</a>.</p>
 </div></blockquote>

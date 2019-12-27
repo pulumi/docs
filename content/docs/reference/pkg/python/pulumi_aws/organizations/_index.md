@@ -150,6 +150,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.organizations.AwaitableGetOrganizationalUnitsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationalUnitsResult</code><span class="sig-paren">(</span><em class="sig-param">childrens=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.AwaitableGetOrganizationalUnitsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.organizations.GetOrganizationResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">accounts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">aws_service_access_principals=None</em>, <em class="sig-param">enabled_policy_types=None</em>, <em class="sig-param">feature_set=None</em>, <em class="sig-param">master_account_arn=None</em>, <em class="sig-param">master_account_email=None</em>, <em class="sig-param">master_account_id=None</em>, <em class="sig-param">non_master_accounts=None</em>, <em class="sig-param">roots=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOrganization.</p>
@@ -216,6 +221,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.organizations.GetOrganizationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.organizations.GetOrganizationalUnitsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">GetOrganizationalUnitsResult</code><span class="sig-paren">(</span><em class="sig-param">childrens=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationalUnitsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganizationalUnits.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationalUnitsResult.childrens">
+<code class="sig-name descname">childrens</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationalUnitsResult.childrens" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of child organizational units, which have the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationalUnitsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationalUnitsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -740,6 +763,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Get information about the organization that the user’s account belongs to</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.organizations.get_organizational_units">
+<code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">get_organizational_units</code><span class="sig-paren">(</span><em class="sig-param">parent_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.get_organizational_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent_id</strong> (<em>str</em>) – The parent ID of the organizational unit.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organizational_units.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organizational_units.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
