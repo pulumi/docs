@@ -29,6 +29,8 @@ lint_links:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
+	yarn lint-markdown --no-error
+	yarn lint-links --no-error
 	hugo server --buildDrafts --buildFuture
 
 .PHONY: generate

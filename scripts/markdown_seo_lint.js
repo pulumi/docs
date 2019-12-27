@@ -295,7 +295,9 @@ Errors:
 
 ${errorOutput}
     `);
-    process.exit(1);
+
+    const noError = process.argv.indexOf("--no-error") > -1;
+    process.exit(noError ? 0 : 1);
 }
 
 console.log(`
