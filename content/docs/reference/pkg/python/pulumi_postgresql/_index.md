@@ -923,7 +923,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_postgresql.Schema">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">if_not_exists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Schema" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">drop_cascade=None</em>, <em class="sig-param">if_not_exists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Schema</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
 objects</a> within
 a PostgreSQL database.</p>
@@ -932,6 +932,7 @@ a PostgreSQL database.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>drop_cascade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, will also drop all the objects that are contained in the schema. (Default: false)</p></li>
 <li><p><strong>if_not_exists</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, use the existing schema if it exists. (Default: true)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.</p></li>
@@ -952,6 +953,12 @@ policy block supports fields documented below.</p></li>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_postgresql.Schema.drop_cascade">
+<code class="sig-name descname">drop_cascade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.drop_cascade" title="Permalink to this definition">¶</a></dt>
+<dd><p>When true, will also drop all the objects that are contained in the schema. (Default: false)</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_postgresql.Schema.if_not_exists">
 <code class="sig-name descname">if_not_exists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.if_not_exists" title="Permalink to this definition">¶</a></dt>
@@ -987,7 +994,7 @@ policy block supports fields documented below.</p>
 
 <dl class="method">
 <dt id="pulumi_postgresql.Schema.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">if_not_exists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Schema.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">drop_cascade=None</em>, <em class="sig-param">if_not_exists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Schema.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Schema resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -996,6 +1003,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>drop_cascade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, will also drop all the objects that are contained in the schema. (Default: false)</p></li>
 <li><p><strong>if_not_exists</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, use the existing schema if it exists. (Default: true)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.</p></li>
