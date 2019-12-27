@@ -29,6 +29,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.blockstorage.AwaitableGetVolumeV2Result">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">AwaitableGetVolumeV2Result</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_volume_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.AwaitableGetVolumeV2Result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.blockstorage.AwaitableGetVolumeV3Result">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">AwaitableGetVolumeV3Result</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_volume_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.AwaitableGetVolumeV3Result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">GetAvailabilityZonesV3Result</code><span class="sig-paren">(</span><em class="sig-param">names=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailabilityZonesV3.</p>
@@ -162,6 +172,132 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV3Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV3Result.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">GetVolumeV2Result</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_volume_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVolumeV2.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.bootable">
+<code class="sig-name descname">bootable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.bootable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the volume is bootable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.size">
+<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the volume in GBs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.source_volume_id">
+<code class="sig-name descname">source_volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.source_volume_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the volume from which the current volume was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.volume_type">
+<code class="sig-name descname">volume_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.volume_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the volume.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">GetVolumeV3Result</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_volume_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVolumeV3.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.bootable">
+<code class="sig-name descname">bootable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.bootable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the volume is bootable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.multiattach">
+<code class="sig-name descname">multiattach</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.multiattach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the volume can be attached to more then one server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.size">
+<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the volume in GBs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.source_volume_id">
+<code class="sig-name descname">source_volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.source_volume_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the volume from which the current volume was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.volume_type">
+<code class="sig-name descname">volume_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.volume_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the volume.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1721,6 +1857,46 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.blockstorage.get_volume_v2">
+<code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v2</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information about an existing volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metadata</strong> (<em>dict</em>) – Metadata key/value pairs associated with the volume.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the volume.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Block Storage
+client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the volume.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.blockstorage.get_volume_v3">
+<code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v3</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information about an existing volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metadata</strong> (<em>dict</em>) – Metadata key/value pairs associated with the volume.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the volume.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Block Storage
+client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the volume.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v3.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

@@ -684,6 +684,156 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">FunctionEventInvokeConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_config=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">maximum_event_age_in_seconds=None</em>, <em class="sig-param">maximum_retry_attempts=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">Lambda Developer Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with destination configuration. See below for details.</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</p></li>
+<li><p><strong>maximum_event_age_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.</p></li>
+<li><p><strong>maximum_retry_attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.</p></li>
+<li><p><strong>qualifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda Function published version, <code class="docutils literal notranslate"><span class="pre">$LATEST</span></code>, or Lambda Alias name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>destination_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_failure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with destination configuration for failed asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onSuccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with destination configuration for successful asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.destination_config">
+<code class="sig-name descname">destination_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.destination_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block with destination configuration. See below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_failure</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block with destination configuration for failed asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onSuccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block with destination configuration for successful asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.function_name">
+<code class="sig-name descname">function_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.function_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.maximum_event_age_in_seconds">
+<code class="sig-name descname">maximum_event_age_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.maximum_event_age_in_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.maximum_retry_attempts">
+<code class="sig-name descname">maximum_retry_attempts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.maximum_retry_attempts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.qualifier">
+<code class="sig-name descname">qualifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.qualifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lambda Function published version, <code class="docutils literal notranslate"><span class="pre">$LATEST</span></code>, or Lambda Alias name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_config=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">maximum_event_age_in_seconds=None</em>, <em class="sig-param">maximum_retry_attempts=None</em>, <em class="sig-param">qualifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FunctionEventInvokeConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with destination configuration. See below for details.</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</p></li>
+<li><p><strong>maximum_event_age_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.</p></li>
+<li><p><strong>maximum_retry_attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.</p></li>
+<li><p><strong>qualifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda Function published version, <code class="docutils literal notranslate"><span class="pre">$LATEST</span></code>, or Lambda Alias name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>destination_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_failure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with destination configuration for failed asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onSuccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with destination configuration for successful asynchronous invocations. See below for details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the destination resource. See the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">Lambda Developer Guide</a> for acceptable resource types and associated IAM permissions.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.FunctionEventInvokeConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.FunctionEventInvokeConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.lambda_.GetFunctionResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">GetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">dead_letter_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">layers=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">qualified_arn=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">reserved_concurrent_executions=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">source_code_hash=None</em>, <em class="sig-param">source_code_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">tracing_config=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
@@ -928,9 +1078,9 @@ large files efficiently.</p>
 <li><p><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</p></li>
 <li><p><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</p></li>
 <li><p><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</p></li>
-<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id47"><span class="problematic" id="id48">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
-<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id49"><span class="problematic" id="id50">``</span></a>.</p></li>
-<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id51"><span class="problematic" id="id52">``</span></a>.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id53"><span class="problematic" id="id54">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
+<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id55"><span class="problematic" id="id56">``</span></a>.</p></li>
+<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id57"><span class="problematic" id="id58">``</span></a>.</p></li>
 <li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</p></li>
 </ul>
 </dd>
@@ -1042,9 +1192,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>layer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Lambda Layer without version.</p></li>
 <li><p><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</p></li>
 <li><p><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</p></li>
-<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id55"><span class="problematic" id="id56">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
-<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id57"><span class="problematic" id="id58">``</span></a>.</p></li>
-<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id59"><span class="problematic" id="id60">``</span></a>.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id61"><span class="problematic" id="id62">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
+<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id63"><span class="problematic" id="id64">``</span></a>.</p></li>
+<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id65"><span class="problematic" id="id66">``</span></a>.</p></li>
 <li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</p></li>
 <li><p><strong>source_code_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in bytes of the function .zip file.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This Lamba Layer version.</p></li>
