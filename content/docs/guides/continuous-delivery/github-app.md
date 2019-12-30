@@ -55,29 +55,12 @@ other Pulumi-managed resources.
 
 ## CI Integration
 
+The Pulumi GitHub application will work with any CI/CD system. See our
+[Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}}) guide for information on how to
+integration Pulumi with whatever system you.
+
 Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
 system will have its results reported back to GitHub.
-
-Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes
-automatically. For instructions for specific CI services, see one of our existing guides:
-
-* [AWS Code Services]({{< relref "/docs/guides/continuous-delivery/aws-code-services.md" >}})
-* [Azure DevOps]({{< relref "/docs/guides/continuous-delivery/azure-devops.md" >}})
-* [CircleCI]({{< relref "/docs/guides/continuous-delivery/circleci.md" >}})
-* [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions.md" >}})
-* [GitLab CI]({{< relref "/docs/guides/continuous-delivery/gitlab-ci.md" >}})
-* [Travis]({{< relref "/docs/guides/continuous-delivery/travis.md" >}})
-
-If you are using a system we don't support yet, please [file an issue](https://github.com/pulumi/pulumi/issues/new)
-so we can add it.
-
-By setting a few environment variables, you can ensure that any stack updates from your CI/CD environment will be
-associated with your GitHub Pull Request.
-
-* `PULUMI_CI_SYSTEM`. The name of whatever CI/CD system you are using. e.g. "Deploytron-9000".
-* `PULUMI_CI_PULL_REQUEST_SHA` (optional). If your CI/CD system is deploying from a different git commit than the
-  GitHub PR, such as the resulting merge commit, then set the `PULUMI_CI_PULL_REQUEST_SHA` to the origional
-  commit SHA, matching what is found on the Pull Request.
 
 ## GitHub UI
 
