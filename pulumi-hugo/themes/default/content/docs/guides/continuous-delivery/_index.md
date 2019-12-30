@@ -16,7 +16,7 @@ Pulumi's approach to infrastructure as code is great for continuous delivery, be
 cloud resources. This means updates to your cloud infrastructure can be reviewed, validated, and tested using the same
 process that you have today. For example, doing code reviews via Pull Requests, running code through linters or static
 analysis tools, and running unit and integration tests as appropriate. It all "just works" for your cloud
-infrasturcture the same way it would for your application code.
+infrastructure the same way it would for your application code.
 
 Pulumi can easily integrate into any CI/CD system. If yours isn't listed below, see our guide for using Pulumi
 within a [generic CI/CD system]({{< relref "other.md" >}}).
