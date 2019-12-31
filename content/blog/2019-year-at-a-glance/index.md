@@ -3,6 +3,7 @@ title: "2019 Year at a Glance"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
 meta_desc: "As 2019 winds down, let's review Pulumi's most exciting recent milestones. This includes 1.0, our 2.0 roadmap, and dozens of other major features."
+meta_image: "pulumi-new-year.png"
 date: "2019-12-31"
 ---
 
