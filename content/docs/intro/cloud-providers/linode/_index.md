@@ -89,5 +89,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/linode`](https://www.npmjs.com/package/@pulumi/linode)
 * Python: [`pulumi-linode`](https://pypi.org/project/pulumi-linode/)
 * Go: [`github.com/pulumi/pulumi-linode/sdk/go/linode`](https://github.com/pulumi/pulumi-linode)
+* .NET: [`Pulumi.Linode`](https://www.nuget.org/packages/Pulumi.Linode)
 
 The Linode provider is open source and available in the [pulumi/pulumi-linode](https://github.com/pulumi/pulumi-linode) repo.
