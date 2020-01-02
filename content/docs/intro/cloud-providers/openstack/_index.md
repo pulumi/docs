@@ -85,5 +85,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/openstack`](https://www.npmjs.com/package/@pulumi/openstack)
 * Python: [`pulumi-openstack`](https://pypi.org/project/pulumi-openstack/)
 * Go: [`github.com/pulumi/pulumi-openstack/sdk/go/openstack`](https://github.com/pulumi/pulumi-openstack)
+* .NET: [`Pulumi.Openstack`](https://www.nuget.org/packages/Pulumi.Openstack)
 
 The OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo.
