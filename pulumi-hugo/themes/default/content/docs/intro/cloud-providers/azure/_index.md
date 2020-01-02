@@ -54,6 +54,7 @@ The following packages are available in package managers:
 * JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
+* .NET: [`Pulumi.Azure`](https://www.nuget.org/packages/Pulumi.Azure)
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo.
 

@@ -77,5 +77,6 @@ The following packages are available in packager managers:
 * JavaScript/TypeScript: [`@pulumi/vsphere`](https://www.npmjs.com/package/@pulumi/vsphere)
 * Python: [`pulumi-vsphere`](https://pypi.org/project/pulumi-vsphere/)
 * Go: [`github.com/pulumi/pulumi-vsphere/sdk/go/vsphere`](https://github.com/pulumi/pulumi-vsphere)
+* .NET: [`Pulumi.Vsphere`](https://www.nuget.org/packages/Pulumi.Vsphere)
 
 The vSphere provider is open source and available in the [pulumi/pulumi-vsphere](https://github.com/pulumi/pulumi-vsphere) repo.
