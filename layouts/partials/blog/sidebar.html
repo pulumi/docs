@@ -11,9 +11,15 @@
         <a href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
     </div>
 
-    <h1 class="no-anchor hidden md:flex mt-4 text">
-        <a class="text-2xl" href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
-    </h1>
+    {{ if eq .Page.Title "Blog" }}
+        <h1 class="no-anchor hidden md:flex mt-4 text">
+            <a class="text-2xl" href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
+        </h1>
+    {{ else }}
+        <h2 class="no-anchor hidden md:flex mt-4 text">
+            <a class="text-2xl" href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
+        </h2>
+    {{ end }}
 
     <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
     <div class="blog-sidebar-content hidden md:block">
