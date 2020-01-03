@@ -16,7 +16,7 @@
 
                 {{ range $paginator.Pages }}
                     <article class="my-8 pb-8 border-b border-gray-200">
-                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <h2><a data-tracking-id="taxonomy-tag-{{ .Title }}" href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <div class="flex items-center">
                             <time>
                                 {{ .Date.Format "Monday, Jan 2, 2006" }}

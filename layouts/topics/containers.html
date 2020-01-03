@@ -70,7 +70,7 @@
                     <p>
                         {{ .body | safeHTML }}
                     </p>
-                    <a class="btn inline-block my-2" href="{{ .cta.url }}">
+                    <a data-tracking-id="containers-cta-{{ .cta.label }}" class="btn inline-block my-2" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                 </div>

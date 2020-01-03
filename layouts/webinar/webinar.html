@@ -38,7 +38,7 @@
                     <div class="text-gray-600">
                         {{ .description | markdownify }}
                     </div>
-                    <a class="inline-block btn btn-lg mt-4" href="{{ .cta.url }}">
+                    <a data-tracking-id="webinar-cta-{{ .cta.label }}" class="inline-block btn btn-lg mt-4" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                     <h3 class="text-orange">Join us to learn:</h3>
@@ -91,7 +91,7 @@
                         DevOps experience for the benefit of their customers, with
                         significant reductions in code and boilerplate.
                     </p>
-                    <a class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Pulumi-CaseStudy.pdf">
+                    <a data-tracking-id="webinar-cta-learning-machine-case-study" class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Pulumi-CaseStudy.pdf">
                         View the case study &raquo;
                     </a>
                 </div>
@@ -107,7 +107,7 @@
                         Learn how Pulumi's cloud native development platform provides a
                         single model for building and deploying infrastructure as code.
                     </p>
-                    <a class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Ebook.pdf">
+                    <a data-tracking-id="webinar-cta-aws-ebook" class="link" href="https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Ebook.pdf">
                         Download the ebook &raquo;
                     </a>
                 </div>
