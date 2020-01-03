@@ -11,12 +11,12 @@
                 {{ .Params.subhead | markdownify }}
             </p>
             <div class="mt-6">
-                <a data-tracking-id="home-hero-cta" href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
+                <a data-tracking-id="home-hero-get-started" href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
                     Get Started
                 </a>
             </div>
             <div class="mt-8 text-sm text-purple-100">
-                Pulumi is <a data-tracking-id="home-hero-pricing" class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
+                Pulumi is <a data-tracking-id="home-hero-pricing-community" class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
                 and <a data-tracking-id="home-hero-github" class="text-white hover:underline" href="https://github.com/pulumi/pulumi" target="_blank">open source</a>.
             </div>
         </div>
@@ -39,7 +39,7 @@
                     {{ (index .Params.ctas 0) | markdownify }}
                 </div>
                 <div class="inline-flex items-center">
-                    <a data-tracking-id="carousel-get-started" class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                    <a data-tracking-id="home-carousel-get-started" class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
                         <span>Get Started</span>
                         <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
                     </a>
