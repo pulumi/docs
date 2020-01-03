@@ -287,7 +287,7 @@ const errorOutput = errors.map(function(err) {
 // the program with an error.
 if (errors.length > 0) {
     console.log(`
-Lint Results:
+Markdown Lint Results:
     - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 
@@ -301,7 +301,7 @@ ${errorOutput}
 }
 
 console.log(`
-Lint Results:
+Markdown Lint Results:
     - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 `);

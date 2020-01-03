@@ -170,8 +170,8 @@ const errorOutput = filesWithErrors.map(function(file) {
 }).join("");
 
 if (filesWithErrors.length > 0) {
-    console.log(`` +
-        `\nRESULT:\n` +
+    console.log(`\n` +
+        `Link Lint Result:\n` +
             `- ${filesToLint.length} files parsed.\n` +
             `- ${filesWithErrors.length} files have errors.\n\n` +
         `ERRORS:\n` +
@@ -184,7 +184,7 @@ if (filesWithErrors.length > 0) {
 }
 
 console.log(`
-\nRESULT:
+\nLink Lint Result:
     - ${filesToLint.length} files parsed.
     - 0 errors found.\n
 `);
