@@ -10,7 +10,7 @@ The [Pulumi Docker provider]({{< relref "./" >}}) uses the Docker SDK to manage 
 
 ### Configuring The Provider
 
-Once obtained, there are two ways to communicate your configurationj tokens to Pulumi:
+Once obtained, there are two ways to communicate your configuration tokens to Pulumi:
 
 1. Set the environment variable `DOCKER_HOST`:
 
