@@ -10,7 +10,7 @@
                 {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
                 {{ range $paginator.Pages }}
                     <article class="mb-8 pb-8 border-b border-gray-200">
-                        <h2 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <h2 class="no-anchor"><a data-tracking-id="blog-list-post-{{ .Title }}" href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <div class="flex items-center">
                             <span>
                                 {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}

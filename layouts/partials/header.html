@@ -1,11 +1,11 @@
 <nav class="bg-black text-white text-sm py-2 px-4 transition-all max-h-screen md:max-h-full">
     <div class="container mx-auto">
         <ul class="flex justify-end items-center h-6">
-            <li class="mr-8"><a href="https://slack.pulumi.com/" target="_blank">Slack</a></li>
-            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
-            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="mr-8"><a data-tracking-id="partials-header-slack" href="https://slack.pulumi.com/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a data-tracking-id="partials-header-github" href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a data-tracking-id="partials-header-console" href="https://app.pulumi.com/" target="_blank">Console</a></li>
             <li class="github-widget">
-                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+                <a data-tracking-id="partials-header-github-pulumi" class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
             </li>
         </ul>
     </div>
@@ -16,7 +16,7 @@
         <div class="container mx-auto">
             <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
                 <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
-                    <a class="block" href="/">
+                    <a data-tracking-id="partials-header-pulumi-logo" class="block" href="/">
                         <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                     {{ range $.Site.Menus.header }}
                         <li class="whitespace-no-wrap">
                             {{ $active := hasPrefix $.RelPermalink .URL }}
-                            <a href="{{ .URL }}" data-submenu="{{ .Identifier }}" class="block px-4 py-2 my-2 md:px-2 md:my-0 lg:mx-4 rounded {{ if $active }}bg-purple-400 hover:bg-purple-400{{ else }}hover:bg-purple-500{{ end }}">
+                            <a data-tracking-id="partials-header-main-{{ .Name }}" href="{{ .URL }}" data-submenu="{{ .Identifier }}" class="block px-4 py-2 my-2 md:px-2 md:my-0 lg:mx-4 rounded {{ if $active }}bg-purple-400 hover:bg-purple-400{{ else }}hover:bg-purple-500{{ end }}">
                                 {{ .Name }}
                             </a>
                         </li>
@@ -39,6 +39,7 @@
 
                     <li class="md:ml-auto md:mr-2 lg:mr-4">
                         <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent"
+                            data-tracking-id="partials-header-sign-in"
                             href="https://app.pulumi.com/"
                             title="Sign into the Pulumi Console">
                             Sign In
@@ -46,6 +47,7 @@
                     </li>
                     <li>
                         <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn"
+                            data-tracking-id="partials-header-get-started"
                             href="{{ relref . "/docs/get-started" }}"
                             title="Get started with Pulumi by creating your first project">
                             Get Started
@@ -66,21 +68,21 @@
                         </p>
                         <ul class="p-0 leading-loose">
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#sdk" }}">Pulumi SDK</a>
+                                <a data-tracking-id="partials-header-sub-sdk" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#sdk" }}">Pulumi SDK</a>
                                 <span>&rarr; Modern infrastructure as code using real languages.</span>
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#teams" }}">Pulumi for Teams</a>
+                                <a data-tracking-id="partials-header-sub-teams" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#teams" }}">Pulumi for Teams</a>
                                 <span>&rarr; Continuously deliver cloud apps and infrastructure on any cloud.</span>
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#support" }}">Training and Support</a>
+                                <a data-tracking-id="partials-header-sub-support" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#support" }}">Training and Support</a>
                                 <span>&rarr; Get training or support for your modern cloud journey.</span>
                             </li>
                         </ul>
                         <p>
                             <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
-                            <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/pricing" }}">View Pricing</a> &rarr;
+                            <a data-tracking-id="partials-header-sub-pricing" class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/pricing" }}">View Pricing</a> &rarr;
                         </p>
                     </div>
                     <div class="w-1/2 pl-12 text-purple-100 text-sm">
@@ -88,10 +90,11 @@
                         <ul class="p-0 leading-loose">
                             <li>
                                 <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all"
+                                    data-tracking-id="partials-header-sub-get-started"
                                     href="{{ relref . "/docs/get-started/install" }}">Get Started Guides</a> &rarr;
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs" }}">Documentation and Examples</a> &rarr;
+                                <a data-tracking-id="partials-header-sub-docs" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs" }}">Documentation and Examples</a> &rarr;
                             </li>
                         </ul>
                         <h3 class="no-anchor text-white">Migrate to Pulumi</h3>
@@ -115,15 +118,15 @@
                         </p>
                         <ul class="p-0 leading-loose">
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-developers" }}">For Developers</a>
+                                <a data-tracking-id="partials-header-sub-for-devs" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-developers" }}">For Developers</a>
                                 <span>&rarr; Your favorite languages, tools, and libraries.</span>
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-operators" }}">For DevOps and IT</a>
+                                <a data-tracking-id="partials-header-sub-for-ops" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-operators" }}">For DevOps and IT</a>
                                 <span>&rarr; Empower your team to deliver to many clouds.</span>
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-it-leaders" }}">For IT Leaders</a>
+                                <a data-tracking-id="partials-header-sub-for-leaders" class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-it-leaders" }}">For IT Leaders</a>
                                 <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
                             </li>
                         </ul>
@@ -132,6 +135,7 @@
                         <h3 class="no-anchor text-white">Any Code</h3>
                         <ul class="p-0 leading-loose">
                             <li>
+<<<<<<< HEAD
                                 <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/serverless" }}">Serverless</a>
                                 <span>&rarr;</span>
                             </li>
@@ -141,10 +145,21 @@
                             </li>
                             <li>
                                 <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/kubernetes" }}">Kubernetes</a>
+=======
+                                <a data-tracking-id="partials-header-sub-serverless" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/serverless.md" }}">Serverless</a>
                                 <span>&rarr;</span>
                             </li>
                             <li>
-                                <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs/tutorials/aws/ec2-webserver" }}">Infrastructure</a>
+                                <a data-tracking-id="partials-header-sub-containers" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/containers.md" }}">Containers</a>
+                                <span>&rarr;</span>
+                            </li>
+                            <li>
+                                <a data-tracking-id="partials-header-sub-kubernetes" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/kubernetes.md" }}">Kubernetes</a>
+>>>>>>> Add tracking id to links
+                                <span>&rarr;</span>
+                            </li>
+                            <li>
+                                <a data-tracking-id="partials-header-sub-infrastructure" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs/tutorials/aws/ec2-webserver" }}">Infrastructure</a>
                                 <span>&rarr;</span>
                             </li>
                         </ul>
@@ -153,6 +168,7 @@
                         <h3 class="no-anchor text-white">Any Cloud</h3>
                         <ul class="p-0 leading-loose">
                             <li>
+<<<<<<< HEAD
                                 <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/aws" }}">AWS</a>
                                 <span>&rarr;</span>
                             </li>
@@ -162,6 +178,17 @@
                             </li>
                             <li>
                                 <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/gcp" }}">GCP</a>
+=======
+                                <a data-tracking-id="partials-header-sub-aws" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/aws.md" }}">AWS</a>
+                                <span>&rarr;</span>
+                            </li>
+                            <li>
+                                <a data-tracking-id="partials-header-sub-azure" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/azure.md" }}">Azure</a>
+                                <span>&rarr;</span>
+                            </li>
+                            <li>
+                                <a data-tracking-id="partials-header-sub-gcp" class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/gcp.md" }}">GCP</a>
+>>>>>>> Add tracking id to links
                                 <span>&rarr;</span>
                             </li>
                         </ul>

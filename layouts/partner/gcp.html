@@ -14,8 +14,8 @@
                     </div>
                 </div>
                 <div class="header-hero-actions">
-                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started/gcp" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
+                    <a data-tracking-id="partner-gcp-get-started" class="btn btn-lg" href="{{ relref . "/docs/get-started/gcp" }}">Get Started</a>
+                    <a data-tracking-id="partner-gcp-learn-more" class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
                 </div>
             </div>
             <div class="header-hero-item">
@@ -47,12 +47,12 @@ export let kubeConfig = k8sConfig;` }}
     <nav class="nav-section-sticky">
         <div class="container mx-auto uppercase">
             <ul>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#case-study">Case Study</a></li>
-                <li><a href="#get-started">Get Started</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-benefits" href="#benefits">Benefits</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-code" href="#code">Code</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-how-it-works" href="#how-it-works">How it Works</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-case-study" href="#case-study">Case Study</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-get-started" href="#get-started">Get Started</a></li>
+                <li><a data-tracking-id="partner-gcp-anchor-contact-us" href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -77,7 +77,7 @@ export let kubeConfig = k8sConfig;` }}
                         app to the cluster.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-gcp-example-1-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -120,7 +120,7 @@ export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
                         deploys an nginx canary onto the cluster with 1 replica.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-gcp-example-2-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -163,7 +163,7 @@ export let kubeConfig = k8sConfig;` }}
                         the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-gcp-example-3-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -218,7 +218,7 @@ exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessC
                         With Pulumi, you can combine infrastructure definitions and application code in one program. This example shows how to create a simple Google Cloud Function that returns a message when invoked.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-gcp-example-4-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">

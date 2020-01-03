@@ -13,13 +13,13 @@
                 </div>
                 <p>
                     <strong>Now Available</strong>:
-                    <a href="{{ relref . "/crosswalk/aws" }}">
+                    <a data-tracking-id="partner-aws-crosswalk" href="{{ relref . "/crosswalk/aws" }}">
                         Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected Infrastructure as Code
                     </a>
                 </p>
                 <div class="header-hero-actions">
-                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
+                    <a data-tracking-id="partner-aws-get-started" class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
+                    <a data-tracking-id="partner-aws-get-started" class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
                 </div>
             </div>
             <div class="header-hero-item">
@@ -55,12 +55,12 @@ let server = new aws.ec2.Instance("web-server-www", {
     <nav class="nav-section-sticky">
         <div class="container mx-auto uppercase">
             <ul>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#case-study">Case Study</a></li>
-                <li><a href="#get-started">Get Started</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-benefits" href="#benefits">Benefits</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-code" href="#code">Code</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-how-it-works" href="#how-it-works">How it Works</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-case-study" href="#case-study">Case Study</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-get-started" href="#get-started">Get Started</a></li>
+                <li><a data-tracking-id="partner-aws-anchor-contact" href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -76,16 +76,16 @@ let server = new aws.ec2.Instance("web-server-www", {
                     <h2>Creating a Serverless REST API</h2>
                     <p>
                         With Pulumi, you can combine infrastructure definitions and application code in one program. The
-                        <a href="{{ relref . "/crosswalk/aws" }}">Crosswalk for AWS library</a> is a set of Pulumi
-                        components that provide a higher-level abstraction over AWS. So, instead of provisioning an API
-                        Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define
-                        application code at the same time as the infrastructure it depends on.
+                        <a data-tracking-id="partner-aws-example-1-crosswalk" href="{{ relref . "/crosswalk/aws" }}">
+                        Crosswalk for AWS library</a> is a set of Pulumi components that provide a higher-level abstraction
+                        over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles,
+                        you can use this library and define application code at the same time as the infrastructure it depends on.
                     </p>
                     <p>
                         This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-aws-example-1-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -147,7 +147,7 @@ exports.endpoint = endpoint.url;` }}
                         This code builds and deploys a custom Dockerfile to a private ECR repository, and spin up a load balanced ECS service listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-aws-example-2-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -190,7 +190,7 @@ export const url = web.endpoint.hostname;` }}
                         This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-aws-example-3-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
@@ -231,7 +231,7 @@ export let frontendIp = frontend.ipAddress;` }}
                         This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                        <a data-tracking-id="partner-aws-example-4-get-started" class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">

@@ -14,6 +14,8 @@
     {{ end }}
     <!-- If the page is a redirect page, don't include it in the breadcrumb. -->
     {{ if not (isset .p1.Params "redirect_to") }}
-        <li {{ if eq .p1 .p2 }}class="active"{{ end }}><a href="{{ .p1.Permalink }}">{{ .p1.LinkTitle }}</a></li>
+        <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
+            <a data-tracking-id="partials-docs-breadcrumb-{{ .p1.LinkTitle }}" href="{{ .p1.Permalink }}">{{ .p1.LinkTitle }}</a>
+        </li>
     {{ end }}
 {{ end }}

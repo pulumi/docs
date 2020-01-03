@@ -32,10 +32,10 @@
 <div class="mt-6">
 {{ if ne $step $first }}
     {{ $prev := index $pages (sub $step 1) }}
-    <a class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&lt; PREVIOUS STEP</a>
+    <a data-tracking-id="shortcodes-get-started-stepper-previous" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&lt; PREVIOUS STEP</a>
 {{ end }}
 {{ if ne $step $last }}
     {{ $next := index $pages (add $step 1) }}
-    <a class="btn" href="{{ $next.RelPermalink }}">NEXT STEP &gt;</a>
+    <a data-tracking-id="shortcodes-get-started-stepper-next" class="btn" href="{{ $next.RelPermalink }}">NEXT STEP &gt;</a>
 {{ end }}
 </div>
