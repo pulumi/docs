@@ -57,7 +57,7 @@ other Pulumi-managed resources.
 
 The Pulumi GitHub application will work with any CI/CD system. See our
 [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}}) guide for information on how to
-integration Pulumi with whatever system you.
+integration Pulumi with whatever system you currently use.
 
 Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
 system will have its results reported back to GitHub.
