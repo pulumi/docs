@@ -45,7 +45,7 @@ There are two services for running containers in the AWS Cloud: Elastic Cloud Se
 
 ECS is designed to work with other AWS services and provides more straightforward configuration and integration with them while providing high availability. In contrast, EKS is a managed Kubernetes service, and because Kubernetes is open-source, your infrastructure is portable to other cloud providers. Also, Kubernetes can provide fine-grain control over deployed services. The choice of which scheduler to use depends on your requirements.
 
-You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, Crosswalk for AWS (@pulumi/awsx) provides all the primitives needed to build infrastructure on AWS. 
+You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, Crosswalk for AWS (@pulumi/awsx) provides all the primitives needed to build infrastructure on AWS.
 
 ```ts
 import * as awsx from "@pulumi/awsx";
