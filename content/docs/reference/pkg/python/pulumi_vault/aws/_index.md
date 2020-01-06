@@ -1595,7 +1595,7 @@ generated with this data may fail to apply.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Access Key ID this backend should use to
-issue new credentials.</p></li>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p></li>
 <li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default TTL for credentials
 issued by this backend.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly description for this backend.</p></li>
@@ -1605,7 +1605,7 @@ for credentials issued by this backend.</p></li>
 not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS region for API calls. Defaults to <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>.</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Secret Key this backend should use to
-issue new credentials.</p></li>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1616,7 +1616,7 @@ issue new credentials.</p></li>
 <dt id="pulumi_vault.aws.SecretBackend.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackend.access_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Access Key ID this backend should use to
-issue new credentials.</p>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1656,7 +1656,7 @@ not begin or end with a <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_vault.aws.SecretBackend.secret_key">
 <code class="sig-name descname">secret_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackend.secret_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Secret Key this backend should use to
-issue new credentials.</p>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1671,7 +1671,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Access Key ID this backend should use to
-issue new credentials.</p></li>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p></li>
 <li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default TTL for credentials
 issued by this backend.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly description for this backend.</p></li>
@@ -1681,7 +1681,7 @@ for credentials issued by this backend.</p></li>
 not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS region for API calls. Defaults to <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>.</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Secret Key this backend should use to
-issue new credentials.</p></li>
+issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p></li>
 </ul>
 </dd>
 </dl>
