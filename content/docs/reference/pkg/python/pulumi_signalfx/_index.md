@@ -18,6 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="aws/">aws</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure/">azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gcp/">gcp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jira/">jira</a></li>
 <li class="toctree-l1"><a class="reference internal" href="opsgenie/">opsgenie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pagerduty/">pagerduty</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slack/">slack</a></li>
