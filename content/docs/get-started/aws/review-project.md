@@ -93,7 +93,7 @@ Create a virtual environment:
 $ python -m venv aws-env
 ```
 
-Activate the environment in Linux and MacOS:
+Activate the environment in Linux and macOS:
 
 ```bash
 $ source aws-env/bin/activate
@@ -101,7 +101,7 @@ $ source aws-env/bin/activate
 
 Activate the environment in Windows:
 
-```bash
+```bat
  aws-env\Scripts\activate
 ```
 
