@@ -2,7 +2,7 @@
 title: "Managing Containers on AWS with Pulumi"
 date: 2019-12-24
 meta_desc: "Deploying containers on AWS ECS and EKS with Pulumi's infrastructure as code approach."
-meta_image: meta.jpeg
+meta_image: meta.png
 authors:
     - sophia-parafina
 tags:
