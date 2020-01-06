@@ -35,7 +35,7 @@
             {{ range $tag, $_ := .Site.Taxonomies.tags }}
                 {{ if $tag }}
                     <li>
-                        <a data-tracking-id="partials-blog-sidebar-tag-{{ $tag }}" class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
+                        <a data-tracking-id="partials-blog-sidebar-tag-{{ $tag | urlize }}" class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
                             {{ $tag | urlize }}
                         </a>
                     </li>
@@ -51,7 +51,7 @@
                         {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
                     {{ else }}
                         <li class="my-4 leading-snug">
-                            <a data-tracking-id="partials-blog-sidebar-recent-{{ $post.Title }}" class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                            <a data-tracking-id="partials-blog-sidebar-recent-{{ $post.Title | urlize }}" class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
                         </li>
                     {{ end }}
                 {{ end }}

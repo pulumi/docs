@@ -1,8 +1,8 @@
 <p class="mb-4 flex">
-    <a data-tracking-id="shortcodes-github-buttons-{{ .Get 0 }}-js" class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 0 }}" target="_blank">
+    <a data-tracking-id="shortcodes-github-buttons-{{ .Get 0 | urlize }}-js" class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 0 }}" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View JS Code</span>
     </a>
-    <a data-tracking-id="shortcodes-github-buttons-{{ .Get 1 }}-python" class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 1 }}" target="_blank">
+    <a data-tracking-id="shortcodes-github-buttons-{{ .Get 1 | urlize }}-python" class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 1 }}" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Python Code</span>
     </a>
 </p>

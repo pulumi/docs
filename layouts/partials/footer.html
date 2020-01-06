@@ -50,7 +50,7 @@
 
                 <ul class="md:w-8/12">
                     {{ range .Site.Menus.legal }}
-                        <li class="inline mr-2 lg:mr-4"><a data-tracking-id="partials-footer-legal-{{ .Title }}" href="{{ .URL }}">{{ .Title }}</a></li>
+                        <li class="inline mr-2 lg:mr-4"><a data-tracking-id="partials-footer-legal-{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a></li>
                     {{ end }}
                 </ul>
             </div>

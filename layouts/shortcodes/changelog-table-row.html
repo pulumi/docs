@@ -13,16 +13,16 @@
 {{ end }}
 
 <tr>
-    <td><a data-tracking-id="shortcodes-changlelog-row-{{ $version }}" href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
+    <td><a data-tracking-id="shortcodes-changlelog-row-{{ $version | urlize }}" href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
     <td>{{ $date }}</td>
     <td>
-        <a data-tracking-id="shortcodes-changlelog-row-{{ $version }}-linux"
+        <a data-tracking-id="shortcodes-changlelog-row-{{ $version | urlize }}-linux"
         href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a>
         |
-        <a data-tracking-id="shortcodes-changlelog-row-{{ $version }}-macOs"
+        <a data-tracking-id="shortcodes-changlelog-row-{{ $version | urlize }}-macOs"
         href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a>
         |
-        <a data-tracking-id="shortcodes-changlelog-row-{{ $version }}-windows"
+        <a data-tracking-id="shortcodes-changlelog-row-{{ $version | urlize }}-windows"
         href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a>
     </td>
 </tr>

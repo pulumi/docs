@@ -31,7 +31,7 @@
                     {{ range $.Site.Menus.header }}
                         <li class="whitespace-no-wrap">
                             {{ $active := hasPrefix $.RelPermalink .URL }}
-                            <a data-tracking-id="partials-header-main-{{ .Name }}" href="{{ .URL }}" data-submenu="{{ .Identifier }}" class="block px-4 py-2 my-2 md:px-2 md:my-0 lg:mx-4 rounded {{ if $active }}bg-purple-400 hover:bg-purple-400{{ else }}hover:bg-purple-500{{ end }}">
+                            <a data-tracking-id="partials-header-main-{{ .Name | urlize }}" href="{{ .URL }}" data-submenu="{{ .Identifier }}" class="block px-4 py-2 my-2 md:px-2 md:my-0 lg:mx-4 rounded {{ if $active }}bg-purple-400 hover:bg-purple-400{{ else }}hover:bg-purple-500{{ end }}">
                                 {{ .Name }}
                             </a>
                         </li>

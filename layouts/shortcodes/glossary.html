@@ -1,6 +1,6 @@
 <ul class="glossary">
     {{ range sort $.Site.Data.glossary.entries "term" }}
-        <li><a data-tracking-id="shortcodes-glossary-{{ .term }}-anchor" href="#{{ anchorize .term }}">{{ .term }}</a></li>
+        <li><a data-tracking-id="shortcodes-glossary-{{ .term | urlize }}-anchor" href="#{{ anchorize .term }}">{{ .term }}</a></li>
     {{ end }}
 </ul>
 
@@ -12,6 +12,6 @@
     {{ if hasPrefix $link "/" }}
         {{ $link = relref $.Page $link }}
     {{ end }}
-    <a data-tracking-id="shortcodes-glossary-{{ .term }}" href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
+    <a data-tracking-id="shortcodes-glossary-{{ .term | urlize }}" href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
 </p>
 {{ end }}

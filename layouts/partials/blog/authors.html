@@ -5,10 +5,10 @@
 
         <span class="flex items-center mr-2">
             {{ if $authorData }}
-                <a data-tracking-id="partials-blog-authors-{{ $authorData.name }}-img" class="rounded-full p-1 bg-gray-300 mr-2" href="{{ $authorPage.Permalink }}">
+                <a data-tracking-id="partials-blog-authors-{{ $authorData.name | urlize }}-img" class="rounded-full p-1 bg-gray-300 mr-2" href="{{ $authorPage.Permalink }}">
                     <img class="w-8 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
                 </a>
-                <a data-tracking-id="partials-blog-authors-{{ $authorData.name }}-name" class="" href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
+                <a data-tracking-id="partials-blog-authors-{{ $authorData.name | urlize }}-name" class="" href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
             {{ end }}
         </span>
     {{ end }}

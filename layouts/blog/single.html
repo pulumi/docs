@@ -28,7 +28,7 @@
                         <ul class="m-0 p-0">
                             {{ range $tag := .Params.tags }}
                             <li class="mt-0 inline-flex">
-                                <a data-tracking-id="blog-single-tag-{{ $tag }}" class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
+                                <a data-tracking-id="blog-single-tag-{{ $tag | urlize }}" class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
                                     {{ $tag | urlize }}
                                 </a>
                             </li>

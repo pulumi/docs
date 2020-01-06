@@ -27,7 +27,7 @@
         <div class="container mx-auto">
             <ul>
                 {{ range .Params.sections }}
-                    <li><a data-tracking-id="page-whitepaper-{{ .label }}" href="#{{ .anchor }}">{{ .label }}</a></li>
+                    <li><a data-tracking-id="page-whitepaper-{{ .label | urlize }}" href="#{{ .anchor }}">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </div>

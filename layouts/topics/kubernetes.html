@@ -68,7 +68,7 @@
                     <p>
                         {{ .body | safeHTML }}
                     </p>
-                    <a data-tracking-id="kubernetes-cta-{{ .cta.label }}" class="btn inline-block" href="{{ .cta.url }}">
+                    <a data-tracking-id="kubernetes-cta-{{ .cta.label | urlize }}" class="btn inline-block" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                 </div>
