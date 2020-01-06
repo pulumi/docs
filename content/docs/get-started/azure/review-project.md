@@ -118,7 +118,6 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ mkdir project
 $ python -m venv azure-env
 ```
 
