@@ -101,13 +101,13 @@ $ source gcp-env/bin/activate
 Activate the environment in Windows:
 
 ```bat
-> gcp-env\Scripts\activate.bat
+> gcp-env\Scripts\activate
 ```
 
 Install dependencies:
 
 ```bash
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 {{% /lang %}}

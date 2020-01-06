@@ -102,13 +102,13 @@ $ source aws-env/bin/activate
 Activate the environment in Windows:
 
 ```bash
-> aws-env\Scripts\activate.bat
+ aws-env\Scripts\activate
 ```
 
 Install dependencies:
 
 ```bash
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 {{% /lang %}}
