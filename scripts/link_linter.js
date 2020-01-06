@@ -3,12 +3,17 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Recursively search for html files and add them to the result list.
+ * Recursively search for HTML files and add them to the result list.
  *
  * @param {string[]} files A list of files to search through.
- * @param {string[]} result A list of complete file paths to html files.
+ * @param {string[]} result A list of complete file paths to HTML files.
  */
 function fetchFilePaths(files, result = []) {
+    // Return if the file list is empty.
+    if (!files || files.length === 0) {
+        return;
+    }
+
     // Grab the first file in the list and build its full path.
     const file = files[0];
     const filePath = path.resolve(__dirname, file);
@@ -49,7 +54,7 @@ function fetchFilePaths(files, result = []) {
         return fetchFilePaths(remainingFiles, result);
     }
 
-    // Return the resulting list of html files.
+    // Return the resulting list of HTML files.
     return result;
 }
 
@@ -68,7 +73,7 @@ function buildFileList(directoryPath) {
 }
 
 /**
- * Find the line number of the first occurance of a string in a large string (i.e. html).
+ * Find the line number of the first occurance of a string in a large string (i.e. HTML).
  * Returns 0 if the string is not found.
  *
  * @param {string} blockText The block of text you want to find a strings line number for.
