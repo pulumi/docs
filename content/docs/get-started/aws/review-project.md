@@ -101,7 +101,7 @@ $ source aws-env/bin/activate
 
 Activate the environment in Windows:
 
-```bash
+```bat
 > aws-env\Scripts\activate.bat
 ```
 
