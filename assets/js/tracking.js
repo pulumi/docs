@@ -2,37 +2,47 @@
  * Function for registering tracking to a link. To add tracking to a link you
  * need to have an "id" attritube on the <a> element and the "track-click" attribute.
  *
- *   - ex. <a id="get-started-no-yaml" class="btn" href="/docs/get-started" track-click>GET STARTED</a>
+ *   - ex. <a data-tracking-id="get-started-no-yaml" class="btn" href="/docs/get-started">GET STARTED</a>
  */
 $(document).ready(function() {
     // Check if the analytics object and track function are available. If they are
     // not we do not even want to attempt to track anything.
     if (window && window.analytics && typeof window.analytics.track === "function") {
 
-        // Find all the links with a "track-click" attribute.
+        // Find all the links with a "data-tracking-id" attribute.
         const links = $("a[data-tracking-id]");
 
         // Get the current date/time so we can track time from page load to user click.
         const now = new Date().getTime();
 
         function registerTracker(element) {
+            const elem = $(element);
+
+            // If jQuery doesn't find the element return.
+            if (!elem) {
+                return;
+            }
+
+            // Get the tracking id.
+            const trackingId = elem.attr("data-tracking-id");
+
             // Create the tracking object.
             const trackingData = {
                 // The id of the element.
-                element_id: $(element).attr("data-tracking-id"),
+                element_id: trackingId,
                 // The destination url of the link.
-                destinationPath: $(element).attr("href"),
+                destinationPath: elem.attr("href"),
                 // The current path.
                 url: window.location.pathname,
                 // The Google Analytic Event Values. These values are pushed into GA
                 // specifically. More info: https://support.google.com/analytics/answer/1033068#Anatomy
                 category: "User Interaction",
-                label: $(element).attr("data-tracking-id"),
+                label: trackingId,
             }
 
             // Register a listener to the link to send data to Segment
             // when it has been clicked.
-            $(element).on("click", function(e) {
+            elem.on("click", function(e) {
                 // The value is the time in seconds from page load to user action.
                 trackingData.value = ((new Date().getTime()) - now) / 1000;
                 window.analytics.track("link-click", trackingData);
