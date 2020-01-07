@@ -1,6 +1,6 @@
 {{ define "hero" }}
     <div class="bg-gray-200">
-        <header class="header-hero-dark py-0 pt-16 px-4 md:px-0">
+        <header class="header-hero-dark py-0 pt-16 px-4">
             {{ with .Params.hero }}
                 <div class="container mx-auto text-white md:flex justify-around items-center">
                     <div class="md:w-1/2">
@@ -18,7 +18,7 @@
         <img class="w-full h-20" src="/images/waves.svg">
     </div>
 
-    <div class="bg-gray-200 py-2 px-4 md:px-0">
+    <div class="bg-gray-200 py-2 px-4">
         <ul class="container mx-auto flex list-none">
             {{ range .Params.logos }}
                 <li class="mr-8">
@@ -30,7 +30,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="px-4 md:px-0">
+    <section class="px-4">
         <div class="container mx-auto max-w-6xl py-16 md:flex">
             <div class="md:w-1/2 md:mx-8">
                 {{ with .Params.main }}
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <section class="px-4 md:px-0">
+    <section class="px-4">
         <div class="container mx-auto max-w-5xl mb-16">
             <div class="flex mb-16">
                 <div class="mr-8 flex-shrink-0">
