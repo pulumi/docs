@@ -24,7 +24,7 @@ To get started, download the free and open source
 the CLI we'll be using below, and requires AWS credentials to access
 your AWS account and provision resources. If you already have the AWS
 CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
+[check out the docs here]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
 to set things up.
 
 From here, there are two ways to proceed:

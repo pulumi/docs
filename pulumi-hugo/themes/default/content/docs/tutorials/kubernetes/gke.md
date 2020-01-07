@@ -25,7 +25,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     > Note: This auth mechanism is meant for inner loop developer
     > workflows. If you want to run this example in an unattended service
     > account setting, such as in CI/CD, please [follow instructions to
-    > configure your service account]({{< relref "service-account.md" >}}). The
+    > configure your service account]({{< relref "service-account" >}}). The
     > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
 
 ## Create a new GKE cluster {#new-gke-cluster}
@@ -39,7 +39,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
 
 1. Add the required dependencies:
 
@@ -269,7 +269,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     also output incremental status updates, as the Kubernetes changes progress.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}) for more info.
+    > See the [Pulumi Programming Model]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}) for more info.
     >
     > ```
     > ...

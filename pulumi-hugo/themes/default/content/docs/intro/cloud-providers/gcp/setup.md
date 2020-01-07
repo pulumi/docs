@@ -18,7 +18,7 @@ $ gcloud config set project <YOUR_GCP_PROJECT_HERE>
 $ gcloud auth application-default login
 ```
 
-If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account.md" >}}) instead.
+If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account" >}}) instead.
 
 ## Optional Settings
 

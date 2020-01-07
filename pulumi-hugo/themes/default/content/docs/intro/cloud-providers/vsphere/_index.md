@@ -17,7 +17,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/v
 
 ## Setup
 
-The vSphere provider supports several options for providing access to vSphere credentials.  See [vSphere setup page]({{< relref "/docs/intro/cloud-providers/vsphere/setup.md" >}}) for details.
+The vSphere provider supports several options for providing access to vSphere credentials.  See [vSphere setup page]({{< relref "/docs/intro/cloud-providers/vsphere/setup" >}}) for details.
 
 ## Example
 

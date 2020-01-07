@@ -18,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/o
 
 ## Setup
 
-The OpenStack provider supports several options for providing access to OpenStack credentials.  See the [OpenStack setup page]({{< relref "setup.md" >}}) for details.
+The OpenStack provider supports several options for providing access to OpenStack credentials.  See the [OpenStack setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 

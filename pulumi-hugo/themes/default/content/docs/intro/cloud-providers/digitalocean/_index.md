@@ -19,7 +19,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/d
 
 ## Setup
 
-The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< relref "setup.md" >}}) for details.
+The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 

@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/guides/k8s-the-prod-way/app", "/docs/guides/k8s-the-prod-way/architecture"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -88,7 +88,7 @@ Join the Pulumi team and thousands of practioners in our
 See the [FAQ][crosswalk-faq] for more details.
 
 <!-- markdownlint-disable url -->
-[crosswalk-faq]: {{< relref "/docs/guides/crosswalk/kubernetes/faq.md" >}}
+[crosswalk-faq]: {{< relref "/docs/guides/crosswalk/kubernetes/faq" >}}
 [cw-index]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
 [cw-playbooks]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
 [k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}

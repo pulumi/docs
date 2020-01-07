@@ -76,7 +76,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     This code declares the following resources:
 
-    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/docs/intro/concepts/stack.md#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/docs/intro/concepts/stack#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
     - **Containers**. Uses [cloud.Task]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Task" >}}), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
     - **Serverless functions**
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
