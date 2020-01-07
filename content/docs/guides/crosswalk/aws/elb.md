@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/elb/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -23,8 +23,8 @@ Availability Zones.
 ## Overview
 
 Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
-integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway.md" >}}),
-[Elastic Container Service (ECS)]({{< relref "ecs.md" >}}), [Lambda]({{< relref "lambda.md" >}}), and [VPC]({{< relref "vpc.md" >}}), to provide
+integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway" >}}),
+[Elastic Container Service (ECS)]({{< relref "ecs" >}}), [Lambda]({{< relref "lambda" >}}), and [VPC]({{< relref "vpc" >}}), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
 Elastic Load Balancing offers multiple types of load balancers that all feature the high availability, automatic
@@ -216,7 +216,7 @@ const nginx = new awsx.ecs.FargateService("nginx-task", {
 export const endpoint = listener.endpoint.hostname;
 ```
 
-> [Pulumi Crosswalk for AWS ECS]({{< relref "ecs.md" >}}) -- those classes in the `awsx.ecs` package -- will automatically create the
+> [Pulumi Crosswalk for AWS ECS]({{< relref "ecs" >}}) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
 > ingress and egress rules, much like the [EC2 Instance](#load-balancing-ec2-instances) example earlier.
 
@@ -291,7 +291,7 @@ const listener = alb.createListener("web-listener", { port: 80 });
 export const endpoint = listener.endpoint;
 ```
 
-For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc.md" >}}).
+For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 

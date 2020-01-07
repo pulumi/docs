@@ -9,7 +9,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 ## Prerequisites
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. Configure [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}) and/or [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) credentials
+1. Configure [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}) and/or [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}) credentials
 
 ## Serve an HTML file in an NGINX container
 

@@ -16,7 +16,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/c
 
 ## Setup
 
-The Consul provider supports several options for interacting with HashiCorp Consul.  See the [Consul setup page]({{< relref "setup.md" >}}) for details.
+The Consul provider supports several options for interacting with HashiCorp Consul.  See the [Consul setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 

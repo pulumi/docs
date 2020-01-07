@@ -18,7 +18,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/g
 
 ## Setup
 
-The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page]({{< relref "setup.md" >}}) for details.
+The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page]({{< relref "setup" >}}) for details.
 
 ## Getting Started
 

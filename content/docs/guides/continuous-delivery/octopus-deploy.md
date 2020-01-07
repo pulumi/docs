@@ -14,7 +14,7 @@ menu:
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
 - An account on the [Pulumi Console](https://app.pulumi.com).
 - The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
-- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
+- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
 and choosing one of the many templates that are available.
 - Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
@@ -25,7 +25,7 @@ For the sake of this walkthrough, we will try to deploy the simple AWS example l
 ## Stack and Branch Mappings
 
 The steps below act on a hypothetical stack: `my-org/my-project/aws-ts-hello-fargate`.
-You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init.md" >}}) from the folder containing the `Pulumi.yaml` file.
+You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) from the folder containing the `Pulumi.yaml` file.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.

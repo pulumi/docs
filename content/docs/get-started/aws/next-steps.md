@@ -19,7 +19,7 @@ We've seen how to quickly get started using AWS with Pulumi.
 From here, you can dive deeper with additional AWS tutorials:
 
 * [Containers on ECS "Fargate"]({{< relref "/docs/tutorials/aws/ecs-fargate" >}}): Deploy containers to Amazon
-* [EC2 Linux WebServer VM]({{< relref "/docs/tutorials/aws/ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine
+* [EC2 Linux WebServer VM]({{< relref "/docs/tutorials/aws/ec2-webserver" >}}): Create an EC2 Linux Web Server virtual machine
 * [Serverless REST API Gateways using Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}}): Create simple RESTful web server using AWS Lambdas
 * [Serve a Static Website from S3]({{< relref "/docs/tutorials/aws/s3-website" >}}): Serve a static website out of content in an S3 bucket
 * [Serverless + Containers + Infrastructure]({{< relref "/docs/tutorials/aws/video-thumbnailer" >}}): Deploy a complete  application using a combination of buckets, serverless functions and containers.

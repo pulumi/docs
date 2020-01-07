@@ -79,7 +79,7 @@ Pulumi programs are authored in general-purpose programming languages such as [J
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or prebuilt Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
-A Pulumi program is contained within a [project]({{< relref "project.md" >}}). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program.
+A Pulumi program is contained within a [project]({{< relref "project" >}}). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program.
 
 ## Pulumi SDK {#pulumipulumi}
 
@@ -1013,7 +1013,7 @@ var url2 = Output.Format($"http://{hostname}:{port}/");
 
 ## Secrets {#secrets}
 
-Pulumi records all resource inputs and outputs in a [state file]({{< relref "state.md" >}}). This may contain sensitive data, such as database passwords or service tokens. The CLI's `config set` command offers a `--secret` flag to encrypt configuration settings, which is where most sensitive data comes from. However, you may create such data at runtime. In both cases, you can prevent these secrets from appearing as plaintext in your state file by using programmatic functions described below. These use automatic per-stack encryption keys provided by the Pulumi Service by default, but you can use a provider of your own choosing.
+Pulumi records all resource inputs and outputs in a [state file]({{< relref "state" >}}). This may contain sensitive data, such as database passwords or service tokens. The CLI's `config set` command offers a `--secret` flag to encrypt configuration settings, which is where most sensitive data comes from. However, you may create such data at runtime. In both cases, you can prevent these secrets from appearing as plaintext in your state file by using programmatic functions described below. These use automatic per-stack encryption keys provided by the Pulumi Service by default, but you can use a provider of your own choosing.
 
 > This topic concerns itself with the programming model for secrets. For a more complete overview, including
 > how and when to use the CLI commands mentioned above, configuring your own secrets provider, and more, refer to
@@ -1157,7 +1157,7 @@ as secrets and encrypt them in the state file and anywhere they flow to. To do s
 
 ## Stack outputs {#stack-outputs}
 
-A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
+A [stack output]({{< relref "stack#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
 {{< langchoose csharp >}}
 
@@ -2306,7 +2306,7 @@ export("label_url", label.url)
 
 Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
 
-Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/docs/reference/cli/pulumi_plugin.md" >}}) which contains the implementation for how to `create`, `read`, `update`, and `delete` resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
+Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/docs/reference/cli/pulumi_plugin" >}}) which contains the implementation for how to `create`, `read`, `update`, and `delete` resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
 
 ## Runtime code {#runtime}
 

@@ -16,7 +16,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/d
 
 ## Setup
 
-The Docker provider supports several options for interacting with Docker.  See the [Docker setup page]({{< relref "setup.md" >}}) for details.
+The Docker provider supports several options for interacting with Docker.  See the [Docker setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 

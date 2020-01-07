@@ -27,7 +27,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new javascript
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 ## TypeScript
 
@@ -126,5 +126,5 @@ runtime:
 
 <!-- LINKS -->
 [`pulumi.Config`]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config" >}}
-[Using configuration values in JavaScript]: {{< relref "config.md#javascript" >}}
+[Using configuration values in JavaScript]: {{< relref "config#javascript" >}}
 <!-- END LINKS -->

@@ -16,7 +16,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/v
 
 ## Setup
 
-The Vault provider supports several options for interacting with HashiCorp Vault.  See the [Vault setup page]({{< relref "setup.md" >}}) for details.
+The Vault provider supports several options for interacting with HashiCorp Vault.  See the [Vault setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 

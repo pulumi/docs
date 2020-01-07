@@ -17,7 +17,7 @@ We generally use Hugo's [`relref` shortcode](https://gohugo.io/content-managemen
 
 ```markdown
 [Install]({{< relref "/docs/get-started/install" >}})
-[Outputs]({{< relref "/docs/intro/concepts/programming-model.md#stack-outputs" >}})
+[Outputs]({{< relref "/docs/intro/concepts/programming-model#stack-outputs" >}})
 ```
 
 Which, on a page inside the `./content/reference` directory, will generate:

@@ -23,7 +23,7 @@ To create a "Deploy with Pulumi" button:
 The Pulumi button works with project templates hosted in public GitHub repositories or gists. A template is a Pulumi project that has the required `Pulumi.yaml` file describing the project. The project template can be in the root of the GitHub repository, or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
 
 The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate that it is a
-[secret]({{< relref "/docs/intro/concepts/config.md#secrets" >}}).
+[secret]({{< relref "/docs/intro/concepts/config#secrets" >}}).
 
 ```yaml
 name: my-aws-project

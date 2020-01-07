@@ -9,7 +9,7 @@ menu:
     weight: 3
 ---
 
-Because of [the challenges of writing raw YAML/JSON by hand]({{< relref "cloud_templates.md" >}}), two notable
+Because of [the challenges of writing raw YAML/JSON by hand]({{< relref "cloud_templates" >}}), two notable
 projects exist to compile higher-level languages into AWS CloudFormation YAML/JSON templates:
 
 * **Troposphere**: a community-led open source project created in 2013
@@ -18,7 +18,7 @@ projects exist to compile higher-level languages into AWS CloudFormation YAML/JS
 Similar to Pulumi, these projects let you author infrastructure as code using general-purpose languages like TypeScript,
 JavaScript, and Python. Unlike Pulumi, however, whose open source engine understands these languages, a _transpiler_
 a.k.a., [_source-to-source compiler_](https://en.wikipedia.org/wiki/Source-to-source_compiler), translates this program
-into [AWS CloudFormation YAML/JSON]({{< relref "cloud_templates.md" >}}). The resulting markup file is then submitted
+into [AWS CloudFormation YAML/JSON]({{< relref "cloud_templates" >}}). The resulting markup file is then submitted
 to the closed source AWS CloudFormation servers to provision infrastructure on AWS in the usual ways.
 
 ## Pulumi Supports Many Clouds

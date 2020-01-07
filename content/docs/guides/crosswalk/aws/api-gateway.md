@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/api-gateway/"]
 ---
 
-<a href="{{< relref "_index.md" >}}">
+<a href="{{< relref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -204,7 +204,7 @@ export const url = api.url;
 ```
 
 For more complete information about creating Lambda Functions, please
-[see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda.md" >}}). Any of the techniques described may be used
+[see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used
 in combination with the `awsx.apigateway.API` class.
 
 ### Defining a Static Route Served by S3
@@ -584,7 +584,7 @@ parameters (i.e. headers, path parameter or query parameters).
 To define an Authorizer, you provide a Lambda that fulfills
 `aws.lambda.EventHandler<AuthorizerEvent, AuthorizerResponse>` or you provide information on a pre-existing Lambda
 Authorizer. The example below shows defining the Authorizer Lambda directly inline. See
-[Pulumi Crosswalk for AWS Lambda]({{< relref "lambda.md" >}}) for other ways you can define your Lambda for the Authorizer.
+[Pulumi Crosswalk for AWS Lambda]({{< relref "lambda" >}}) for other ways you can define your Lambda for the Authorizer.
 
 #### Creating a Lambda-based Request Authorizer
 
@@ -807,7 +807,7 @@ const api = new awsx.apigateway.API("myapi", {
 ```
 
 For more information about creating and managing IAM Roles, please refer to the
-[Pulumi Crosswalk for AWS IAM]({{< relref "iam.md" >}}) documentation.
+[Pulumi Crosswalk for AWS IAM]({{< relref "iam" >}}) documentation.
 
 #### Generating Authorizer Responses Easily
 

@@ -87,7 +87,7 @@ Configure the AWS region to deploy to, such as `us-west-2`.
 $ pulumi config set aws:region us-west-2
 ```
 
-Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project.md" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config.md#config-stack" >}}) for more information about this file.
+Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config#config-stack" >}}) for more information about this file.
 
 ### Step 6: Preview and deploy your resources
 

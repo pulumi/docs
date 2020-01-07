@@ -65,7 +65,7 @@ The differences between the two are:
    Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
    applying all resource configuration at one time.
 
-* Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}).
+* Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}).
 
 ## How does Pulumi compare to Helm?
 
@@ -160,7 +160,7 @@ else (_e.g._, in a local file, or in object storage). See documentation for [`pu
 <!-- markdownlint-disable url -->
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 [client-go]: https://github.com/kubernetes/client-go
-[login]: {{< relref "/docs/reference/cli/pulumi_login.md" >}}
+[login]: {{< relref "/docs/reference/cli/pulumi_login" >}}
 [eks]: https://github.com/pulumi/examples/tree/master/aws-ts-eks
 [api-reference]: https://kubernetes.io/docs/reference/
 [openapi]: https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec
