@@ -15,7 +15,7 @@
 {{ define "main" }}
     {{ partial "section-nav" (dict "sections" .Params.sections) }}
 
-    <section id="what-is-kubernetes" class="py-16 bg-gray-200 px-4 md:px-0">
+    <section id="what-is-kubernetes" class="py-16 bg-gray-200 px-4">
         <div class="container md:mx-auto">
             <div class="max-w-4xl">
                 <h2>What is Kubernetes?</h2>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </section>
-    <section id="kubernetes-everywhere" class="py-16 px-4 md:px-0">
+    <section id="kubernetes-everywhere" class="py-16 px-4">
         <div class="container md:mx-auto ">
             <div class="max-w-4xl">
                 <h2>Kubernetes Everywhere</h2>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </section>
-    <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
+    <section id="code" class="py-16 bg-gray-200 px-4">
         {{ range .Params.examples }}
             <div id="{{ .id }}" class="container md:mx-auto md:flex">
                 <div class="md:w-1/2">
