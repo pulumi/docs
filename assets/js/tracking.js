@@ -10,12 +10,12 @@ $(document).ready(function() {
     if (window && window.analytics && typeof window.analytics.track === "function") {
 
         // Find all the links with a "data-tracking-id" attribute.
-        const links = $("a[data-tracking-id]");
+        const links = $("a");
 
         // Get the current date/time so we can track time from page load to user click.
         const now = new Date().getTime();
 
-        function registerTracker(element) {
+        function registerTracker(element, i) {
             const elem = $(element);
 
             // If jQuery doesn't find the element return.
@@ -24,7 +24,15 @@ $(document).ready(function() {
             }
 
             // Get the tracking id.
-            const trackingId = elem.attr("data-tracking-id");
+            const dataTrack = elem.attr("data-track");
+
+            const currentPath = window.location.pathname === "/" ? "home" : window.location.pathname;
+            const path = currentPath
+                .split("/")
+                .filter(function(segment) { return segment !== ""; })
+                .map(function(segment) { return encodeURIComponent(segment); });
+
+            const trackingId = dataTrack ? path.concat(encodeURIComponent(dataTrack), i).join("-") : path.concat(i).join("-");
 
             // Create the tracking object.
             const trackingData = {
@@ -51,7 +59,7 @@ $(document).ready(function() {
 
         // Loop over the array of elements to register the click listeners.
         for (var i = 0; i < links.length; i++) {
-            registerTracker(links[i]);
+            registerTracker(links[i], i);
         }
 
         // Remove the event listeners when we navigate to a new page.
