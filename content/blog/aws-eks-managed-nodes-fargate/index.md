@@ -32,7 +32,7 @@ Let's now see how each of these work. To fully appreciate the new features, we w
 
 Running a Kubernetes cluster isn't easy, but EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS services like IAM, EBS, Route53, and CloudWatch, so that your EKS clusters fit with your existing AWS security, storage, and monitoring practices.
 
-It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#Cluster). [We also created an EKS package](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
+It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#Cluster" >}}). [We also created an EKS package]({{< relref "/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}}) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
 
 Provisioning a new EKS cluster today is already as simple as a dozen lines of code:
 
@@ -163,9 +163,9 @@ aws-ip-10-0-233-6.us-east-2.compute.internal     Ready    <none>   4m    v1.14.8
 
 ## Manually Managing EC2 Node Groups
 
-A fully functioning production cluster usually requires many other considerations. For those, we've put together [a set of playbooks as part of Pulumi Crosswalk for Kubernetes](/docs/guides/crosswalk/kubernetes) that walk through how to go to production with EKS specifically, in addition to other managed Kubernetes offerings.
+A fully functioning production cluster usually requires many other considerations. For those, we've put together [a set of playbooks as part of Pulumi Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}) that walk through how to go to production with EKS specifically, in addition to other managed Kubernetes offerings.
 
-Notice, for instance, that we didn't need to even provision any worker nodes. This is thanks to the `eks.Cluster` abstraction creating a default node pool for us, which has an auto-scaling policy that attempts to maintain the `desiredCapacity` while remaining within the bounds of `minSize` and `maxSize`. Often you need more explicit control over the worker nodes, however, for reasons such precise capacity, specializing compute or storage for different workload needs, and so on. This ultimately devolves into managing EC2 instances by hand, which [the `eks.NodeGroup` class supports](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/worker-nodes/).
+Notice, for instance, that we didn't need to even provision any worker nodes. This is thanks to the `eks.Cluster` abstraction creating a default node pool for us, which has an auto-scaling policy that attempts to maintain the `desiredCapacity` while remaining within the bounds of `minSize` and `maxSize`. Often you need more explicit control over the worker nodes, however, for reasons such precise capacity, specializing compute or storage for different workload needs, and so on. This ultimately devolves into managing EC2 instances by hand, which [the `eks.NodeGroup` class supports]({{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}).
 
 For example, this code creates a new EKS cluster, disabling the default node group &mdash; using `skipDefaultNodeGroup: true`, since we will create our own &mdash; and creates a single node group with more specific configuration settings: IAM role, desired instance type, scaling parameters, labels, and so on:
 
@@ -226,7 +226,7 @@ The new EKS feature [Managed Node Groups](https://aws.amazon.com/blogs/container
 
 Managed Node Groups will automatically scale the EC2 instances powering your cluster using an Auto Scaling Group managed by EKS. This ASG also runs the latest Amazon EKS-optimized Amazon Linux 2 AMI. This is great on one hand &mdash; because updates will be applied automatically for you &mdash; but if you want control over this you will want to manage your own node groups. Finally, security groups, IAM roles, and connecting them together is handled for you.
 
-To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup) is available. However, we've enlightened the EKS package with the `eks.Cluster.createManagedNodeGroup` function to make it easier and to integrate with cluster provisioning.
+To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#NodeGroup" >}}) is available. However, we've enlightened the EKS package with the `eks.Cluster.createManagedNodeGroup` function to make it easier and to integrate with cluster provisioning.
 
 The following example creates an EKS cluster with a single Managed Node Group. It looks similar to our explicitly managed node group earlier, but a bit simpler because we can lean on EKS to configure and scale it:
 

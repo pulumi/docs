@@ -23,7 +23,7 @@ We use Pulumi for raw infrastructure provisioning, defining the core
 networking layer for our AWS-based backend infrastructure. And we use
 Pulumi to define how our application services are deployed into ECS
 using just a few lines of code. Pulumi hosts and manages static content
-for [www.pulumi.com](https://www.pulumi.com/) and [get.pulumi.com](https://get.pulumi.com).
+for [www.pulumi.com](/) and [get.pulumi.com](https://get.pulumi.com).
 We use Pulumi to
 define the CloudWatch dashboards connected to our infrastructure. And
 for monitoring, Pulumi defines metrics and notifications/alarms in
