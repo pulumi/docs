@@ -18,9 +18,13 @@ notitle: true
 :param pulumi.Input[str] context: If present, the name of the kubeconfig context to use.
 :param pulumi.Input[bool] enable_dry_run: BETA FEATURE - If present and set to True, enable server-side diff</p>
 <blockquote>
-<div><p>calculations. This feature is in developer preview, and is disabled by
-default.</p>
+<div><p>calculations. This feature is in developer preview, and is disabled by default.
+This config can be specified in the following ways, using this precedence:</p>
 </div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. This `enableDryRun` parameter.
+2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -28,8 +32,7 @@ default.</p>
 If this is set, this config will be used instead of $KUBECONFIG.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If present, the default namespace to use.
 This flag is ignored for cluster-scoped resources.
-A namespace can be specified in multiple places, and the precedence is
-as follows:</p></li>
+A namespace can be specified in multiple places, and the precedence is as follows:</p></li>
 </ul>
 </dd>
 </dl>
@@ -41,9 +44,14 @@ as follows:</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>suppress_deprecation_warnings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If present and set to True, suppress apiVersion
-deprecation warnings from the CLI.</p>
+deprecation warnings from the CLI.
+This config can be specified in the following ways, using this precedence:</p>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. This `suppressDeprecationWarnings` parameter.
+2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
