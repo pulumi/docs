@@ -16,7 +16,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/s
 
 ## Setup
 
-The Spotinst provider supports several options for interacting with Spotinst.  See the [Spotinst setup page]({{< relref "setup.md" >}}) for details.
+The Spotinst provider supports several options for interacting with Spotinst.  See the [Spotinst setup page]({{< relref "setup" >}}) for details.
 
 ## Example
 
