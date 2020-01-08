@@ -31,6 +31,8 @@ aliases: ["/docs/reference/clouds/"]
 
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
+* [Okta]({{< relref "./okta" >}})
+* [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
 
 If your provider isn't listed, check out the [Pulumi GitHub](https://github.com/pulumi) and
