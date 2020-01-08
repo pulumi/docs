@@ -330,7 +330,9 @@ var res = new MyResource("res", new MyResourceArgs { prop = "new-value" }, new R
 
 ##### `import`
 
-The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
+The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail.
+
+Either make sure the import id exactly matches the id after importing, or remove the property after importing. Failing to do so will cause the resource to be continuously imported for "import-replacement", which leads to unnecessary deletes & recreates and is problematic for protected resources. When keeping the imports, you can for example use (with GCP Firewalls) `projects/<myproject>/global/firewalls/<name>` as id, instead of just `<name>`.
 
 {{< langchoose csharp >}}
 

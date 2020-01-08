@@ -61,6 +61,8 @@ Because the `import` is provided in code, it can be configured in several differ
 
 Import can be used for a wide variety of adoption scenarios, from importing a single resource to migrating an entire stack from an existing tool like Terraform.  You can even automate an entire migration process across dozens of instances of infrastructure deployment.  For small numbers of resources, you can just paste in individual resource IDs.  For larger conversions, you can create a mapping of cloud resource ids (in JSON, CSV, or any other format) and load that into your Pulumi program with something like `import: idMapping[name]`.  If you are importing or migrating dozens of stacks, you can even select between which of these mappings to use via a Pulumi config setting.
 
+When you intent on keeping the `import: <id>` property after initial import, it is important to use the same id as the resource has externally. For example, if you have a `gcp.Firewall` and you use "allow-ssh" as the import id, this will lead to continuous `import-replacements` if you keep the import id after the initial import into the checkpoint file. Use the full id as used by the provider: `projects/<myproject>/global/firewalls/allow-ssh`.
+
 ### Walkthrough of Adopting Existing Infrastructure to Pulumi
 
 To see one of these scenarios in action end-to-end, let's walk through the process of deploying some "existing" infrastructure outside of Pulumi, and then adopting it under management of a Pulumi program.  You can also check out the video below which walks through the same scenario.
