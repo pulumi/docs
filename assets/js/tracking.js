@@ -25,14 +25,18 @@ $(document).ready(function() {
 
             // Get the tracking id.
             const dataTrack = elem.attr("data-track");
+            const href = elem.attr("href").replace(/https?:\/\//g, "");
+            const trackingDescription = dataTrack ? dataTrack :
+                  href.replace(/^#/, "anchor-")
+                      .replace(/^\//, "")
+                      .split("/").join("-");
 
             const currentPath = window.location.pathname === "/" ? "home" : window.location.pathname;
-            const path = currentPath
-                .split("/")
+            const path = currentPath.split("/")
                 .filter(function(segment) { return segment !== ""; })
-                .map(function(segment) { return encodeURIComponent(segment); });
+                .map(function(segment) { return segment; });
 
-            const trackingId = dataTrack ? path.concat(encodeURIComponent(dataTrack), i).join("-") : path.concat(i).join("-");
+            const trackingId = path.concat(trackingDescription, i).join("-");
 
             // Create the tracking object.
             const trackingData = {
