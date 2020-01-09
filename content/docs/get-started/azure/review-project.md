@@ -118,7 +118,7 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ python -m venv azure-env
+$ python3 -m venv azure-env
 ```
 
 Activate the environment in Linux and MacOS:
@@ -130,7 +130,7 @@ $ source azure-env/bin/activate
 Activate the environment in Windows:
 
 ```bat
- azure-env\Scripts\activate
+> azure-env\Scripts\activate
 ```
 
 Install dependencies:
