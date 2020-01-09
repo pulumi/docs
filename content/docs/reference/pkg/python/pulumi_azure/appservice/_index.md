@@ -1001,16 +1001,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.</p></li>
 <li><p><strong>csr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Last CSR that was created for this order.</p></li>
 <li><p><strong>distinguished_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Distinguished Name for the App Service Certificate Order.</p></li>
-<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.  Defaults to 2048.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>product_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between 1 and 3).</p></li>
+<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>).  Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1026,7 +1026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.CertificateOrder.auto_renew">
 <code class="sig-name descname">auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.auto_renew" title="Permalink to this definition">¶</a></dt>
-<dd><p>true if the certificate should be automatically renewed when it expires; otherwise, false.</p>
+<dd><p>true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1080,13 +1080,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.CertificateOrder.key_size">
 <code class="sig-name descname">key_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.key_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Certificate key size.</p>
+<dd><p>Certificate key size.  Defaults to 2048.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.CertificateOrder.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1134,7 +1134,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.CertificateOrder.validity_in_years">
 <code class="sig-name descname">validity_in_years</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.validity_in_years" title="Permalink to this definition">¶</a></dt>
-<dd><p>Duration in years (must be between 1 and 3).</p>
+<dd><p>Duration in years (must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>).  Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1149,7 +1149,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_service_certificate_not_renewable_reasons</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Reasons why App Service Certificate is not renewable at the current moment.</p></li>
-<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.</p></li>
 <li><p><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – State of the Key Vault secret. A <code class="docutils literal notranslate"><span class="pre">certificates</span></code> block as defined below.</p></li>
 <li><p><strong>csr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Last CSR that was created for this order.</p></li>
 <li><p><strong>distinguished_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Distinguished Name for the App Service Certificate Order.</p></li>
@@ -1157,8 +1157,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate expiration time.</p></li>
 <li><p><strong>intermediate_thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate thumbprint intermediate certificate.</p></li>
 <li><p><strong>is_private_key_external</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the private key is external or not.</p></li>
-<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.  Defaults to 2048.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>product_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
@@ -1166,7 +1166,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>signed_certificate_thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate thumbprint for signed certificate.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current order status.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between 1 and 3).</p></li>
+<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>).  Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1434,6 +1434,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
@@ -1607,6 +1608,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
@@ -1746,6 +1748,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
@@ -2955,6 +2958,72 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.appservice.SourceCodeToken.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.VirtualNetworkSwiftConnection">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">VirtualNetworkSwiftConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_service_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.VirtualNetworkSwiftConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a VirtualNetworkSwiftConnection resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="pulumi_azure.appservice.VirtualNetworkSwiftConnection.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_service_id=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.VirtualNetworkSwiftConnection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VirtualNetworkSwiftConnection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.VirtualNetworkSwiftConnection.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.VirtualNetworkSwiftConnection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.VirtualNetworkSwiftConnection.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.VirtualNetworkSwiftConnection.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

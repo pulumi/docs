@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.sql"></span><dl class="class">
+<dt id="pulumi_gcp.sql.AwaitableGetCaCertsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">AwaitableGetCaCertsResult</code><span class="sig-paren">(</span><em class="sig-param">active_version=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.AwaitableGetCaCertsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.sql.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">charset=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Database resource with the given unique name, props, and options.</p>
@@ -112,12 +117,13 @@ a restricted host and strong password.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL, PostgreSQL or MS SQL Server (beta) version to
-use. Can be <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>, <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> or <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code> (beta) for second-generation
-instances, or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code> for first-generation instances.
-MS SQL Server supported versions: <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_ENTERPRISE_2016</span></code>.
-See <a class="reference external" href="https://cloud.google.com/sql/docs/1st-2nd-gen-differences">Second Generation Capabilities</a>
-for more information.</p></li>
+<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL, PostgreSQL or
+SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
+<a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
+includes an up-to-date reference of supported versions. First-generation
+instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p></li>
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</p></li>
@@ -231,12 +237,13 @@ connection strings. For example, when connecting with <a class="reference extern
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.database_version">
 <code class="sig-name descname">database_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.database_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MySQL, PostgreSQL or MS SQL Server (beta) version to
-use. Can be <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>, <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> or <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code> (beta) for second-generation
-instances, or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code> for first-generation instances.
-MS SQL Server supported versions: <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_ENTERPRISE_2016</span></code>.
-See <a class="reference external" href="https://cloud.google.com/sql/docs/1st-2nd-gen-differences">Second Generation Capabilities</a>
-for more information.</p>
+<dd><p>The MySQL, PostgreSQL or
+SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
+<a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
+includes an up-to-date reference of supported versions. First-generation
+instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -410,12 +417,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>connection_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The connection name of the instance to be used in
 connection strings. For example, when connecting with <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/connect-admin-proxy">Cloud SQL Proxy</a>.</p>
 </p></li>
-<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The MySQL, PostgreSQL or MS SQL Server (beta) version to
-use. Can be <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>, <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> or <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code> (beta) for second-generation
-instances, or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code> for first-generation instances.
-MS SQL Server supported versions: <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_ENTERPRISE_2016</span></code>.
-See <a class="reference external" href="https://cloud.google.com/sql/docs/1st-2nd-gen-differences">Second Generation Capabilities</a>
-for more information.</p>
+<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The MySQL, PostgreSQL or
+SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
+<a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
+includes an up-to-date reference of supported versions. First-generation
+instances support <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>.</p>
 </p></li>
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
@@ -579,6 +587,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.sql.GetCaCertsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">GetCaCertsResult</code><span class="sig-paren">(</span><em class="sig-param">active_version=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.GetCaCertsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCaCerts.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.sql.GetCaCertsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.GetCaCertsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -876,6 +896,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.sql.get_ca_certs">
+<code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">get_ca_certs</code><span class="sig-paren">(</span><em class="sig-param">instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.get_ca_certs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 </div>
