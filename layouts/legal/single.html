@@ -5,7 +5,7 @@
                 <aside>
                     <ul class="md:w-8/12 p-0 list-none">
                         {{ range .Site.Menus.legal }}
-                            <li><a data-tracking-id="legal-single-{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a></li>
+                            <li><a data-track="{{ .Title | urlize }}" href="{{ .URL }}">{{ .Title }}</a></li>
                         {{ end }}
                     </ul>
                 </aside>

@@ -11,13 +11,13 @@
                 {{ .Params.subhead | markdownify }}
             </p>
             <div class="mt-6">
-                <a data-tracking-id="home-hero-get-started" href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
+                <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
                     Get Started
                 </a>
             </div>
             <div class="mt-8 text-sm text-purple-100">
-                Pulumi is <a data-tracking-id="home-hero-pricing-community" class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
-                and <a data-tracking-id="home-hero-github" class="text-white hover:underline" href="https://github.com/pulumi/pulumi" target="_blank">open source</a>.
+                Pulumi is <a class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
+                and <a class="text-white hover:underline" href="https://github.com/pulumi/pulumi" target="_blank">open source</a>.
             </div>
         </div>
     </header>
@@ -39,7 +39,7 @@
                     {{ (index .Params.ctas 0) | markdownify }}
                 </div>
                 <div class="inline-flex items-center">
-                    <a data-tracking-id="home-carousel-get-started" class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                    <a class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
                         <span>Get Started</span>
                         <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
                     </a>
@@ -108,33 +108,33 @@
     <section class="mb-16 px-4">
         <div class="container mx-auto">
             <div class="lg:flex items-center justify-center my-4">
-                <a data-tracking-id="home-logos-tableau" href="https://www.tableau.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
-                <a data-tracking-id="home-logos-mbrdna" href="https://mbrdna.com/" target="_blank">
+                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
-                <a data-tracking-id="home-logos-mindbody" href="https://www.mindbodyonline.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
-                <a data-tracking-id="home-logos-nih" href="https://www.nih.gov/" target="_blank">
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
             </div>
             <div class="lg:flex items-center justify-center my-4">
-                <a data-tracking-id="home-logos-linio" href="https://www.linio.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
                 </a>
-                <a data-tracking-id="home-logos-cockroach" href="https://www.cockroachlabs.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
                 </a>
-                <a data-tracking-id="home-logos-sourcegraph" href="https://www.sourcegraph.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
                 </a>
-                <a data-tracking-id="home-logos-snopes" href="https://www.snopes.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
-                <a data-tracking-id="home-logos-lemonade" href="https://www.lemonade.com/" target="_blank">
+                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
                 </a>
             </div>
@@ -151,7 +151,7 @@
                     {{ (index .Params.articles 0).label }}
                 </div>
                 <h3 class="mt-2">
-                    <a data-tracking-id="home-article-{{ (index .Params.articles 0).title | urlize }}" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 0).url }}">
+                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 0).url }}">
                         {{ (index .Params.articles 0).title }}
                     </a>
                 </h3>
@@ -159,7 +159,7 @@
                     {{ (index .Params.articles 0).summary | markdownify }}
                 </p>
                 <p class="text-blue-500">
-                    <a data-tracking-id="home-article-{{ (index .Params.articles 0).title | urlize }}-read-on" href="{{ relref . (index .Params.articles 0).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 0).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
                 </p>
             </article>
             <article class="md:w-1/3 md:mx-8 my-12 md:my-0 py-12 md:py-0 border-t border-b border-gray-200 md:border-none">
@@ -167,7 +167,7 @@
                     {{ (index .Params.articles 1).label }}
                 </div>
                 <h3 class="mt-2">
-                    <a data-tracking-id="home-article-{{ (index .Params.articles 1).title | urlize }}" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 1).url }}">
+                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 1).url }}">
                         {{ (index .Params.articles 1).title }}
                     </a>
                 </h3>
@@ -175,7 +175,7 @@
                     {{ (index .Params.articles 1).summary | markdownify }}
                 </p>
                 <p class="text-blue-500">
-                    <a data-tracking-id="homearticle-{{ (index .Params.articles 1).title | urlize }}-read-on" href="{{ relref . (index .Params.articles 1).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 1).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
                 </p>
             </article>
             <article class="md:w-1/3">
@@ -183,7 +183,7 @@
                     {{ (index .Params.articles 2).label }}
                 </div>
                 <h3 class="mt-2">
-                    <a data-tracking-id="home-article-{{ (index .Params.articles 2).title | urlize }}" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 2).url }}">
+                    <a data-track="article" class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 2).url }}">
                         {{ (index .Params.articles 2).title }}
                     </a>
                 </h3>
@@ -191,7 +191,7 @@
                     {{ (index .Params.articles 2).summary | markdownify }}
                 </p>
                 <p class="text-blue-500">
-                    <a data-tracking-id="home-article-{{ (index .Params.articles 2).title | urlize }}-read-on" href="{{ relref . (index .Params.articles 2).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                    <a data-track="article-read-on" href="{{ relref . (index .Params.articles 2).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
                 </p>
             </article>
         </div>
@@ -221,7 +221,7 @@
                 </p>
             </div>
             <div class="inline-flex items-center md:ml-10">
-                <a data-tracking-id="home-get-started-bottom" class="btn group w-40 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                <a class="btn group w-40 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
                     <span>Get Started</span>
                     <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
                 </a>

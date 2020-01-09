@@ -9,7 +9,7 @@
                     {{ .Params.description }}
                 </p>
                 <div class="header-hero-actions">
-                    <a data-tracking-id="page-whitepaper-download-top" class="btn btn-lg btn-translucent" href="{{ .Params.download_url }}">
+                    <a class="btn btn-lg btn-translucent" href="{{ .Params.download_url }}">
                         <i class="far fa-file-pdf mr-1"></i>
                         Download the Whitepaper
                     </a>
@@ -27,7 +27,7 @@
         <div class="container mx-auto">
             <ul>
                 {{ range .Params.sections }}
-                    <li><a data-tracking-id="page-whitepaper-{{ .label | urlize }}" href="#{{ .anchor }}">{{ .label }}</a></li>
+                    <li><a data-track="{{ .label | urlize }}" href="#{{ .anchor }}">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </div>
@@ -47,7 +47,7 @@
             {{ .Content }}
 
             <div class="text-center mt-8">
-                <a data-tracking-id="page-whitepaper-download-bottom" class="btn btn-lg btn-purple" href="{{ .Params.download_url }}" target="_blank">
+                <a class="btn btn-lg btn-purple" href="{{ .Params.download_url }}" target="_blank">
                     <i class="far fa-file-pdf mr-1"></i>
                     Download the Whitepaper
                 </a>

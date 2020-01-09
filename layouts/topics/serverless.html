@@ -52,37 +52,37 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-api" href="#code-api" class="link">API</a></td>
+                        <td><a href="#code-api" class="link">API</a></td>
                         <td>Lambda</td>
                         <td>Functions</td>
                         <td>Cloud Functions</td>
                     </tr>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-bucket" href="#code-bucket" class="link">Storage</a></td>
+                        <td><a href="#code-bucket" class="link">Storage</a></td>
                         <td>S3</td>
                         <td>Blob Storage</td>
                         <td>Cloud Storage</td>
                     </tr>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-table" href="#code-table" class="link">Data Storage</a></td>
+                        <td><a href="#code-table" class="link">Data Storage</a></td>
                         <td>DynamoDB</td>
                         <td>Cosmos DB</td>
                         <td>Cloud Datatable</td>
                     </tr>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-timer" href="#code-timer" class="link">Timer</a></td>
+                        <td><a href="#code-timer" class="link">Timer</a></td>
                         <td>CloudWatch</td>
                         <td>Monitor</td>
                         <td>Stackdriver Monitoring</td>
                     </tr>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-queue" href="#code-queue" class="link">Queue</a></td>
+                        <td><a href="#code-queue" class="link">Queue</a></td>
                         <td>SQS</td>
                         <td>Queue Storage</td>
                         <td>Cloud Pub/Sub</td>
                     </tr>
                     <tr>
-                        <td><a data-tracking-id="serverless-anchor-code-topic" href="#code-topic" class="link">Topic</a></td>
+                        <td><a href="#code-topic" class="link">Topic</a></td>
                         <td>SNS</td>
                         <td>Queue Storage</td>
                         <td>Cloud Pub/Sub</td>
@@ -103,7 +103,7 @@
                     <p>
                         {{ .body | markdownify | safeHTML }}
                     </p>
-                    <a data-tracking-id="serverless-cta-{{ .cta.label | urlize }}" class="btn inline-block my-2" href="{{ .cta.url }}">
+                    <a data-track="cta-{{ .cta.label | urlize }}" class="btn inline-block my-2" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                 </div>

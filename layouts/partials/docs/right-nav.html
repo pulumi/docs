@@ -6,14 +6,14 @@
         {{ $isPythonPackage := hasPrefix .Path "docs/reference/pkg/python/pulumi" }}
         {{ if not (or $isCLICommand $isNodePackage $isPythonPackage $.Page.Params.no_edit_this_page) }}
             <li>
-                <a data-tracking-id="partials-docs-right-nav-edit-page" class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                <a data-track="edit-page" class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
                     <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
                 </a>
             </li>
         {{ end }}
 
         <li>
-            <a data-tracking-id="partials-docs-right-nav-request-change" class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
+            <a data-track="request-change" class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
                 <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
             </a>
         </li>
