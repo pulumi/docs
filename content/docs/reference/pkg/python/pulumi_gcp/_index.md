@@ -42,6 +42,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identityplatform/">identityplatform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>

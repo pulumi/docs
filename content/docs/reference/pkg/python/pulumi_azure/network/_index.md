@@ -107,6 +107,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>custom_error_configurations</strong> object supports the following:</p>
 <ul class="simple">
@@ -386,6 +387,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -821,6 +823,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>custom_error_configurations</strong> object supports the following:</p>
 <ul class="simple">
@@ -1262,7 +1265,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetVirtualNetworkGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetVirtualNetworkGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configurations=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetVirtualNetworkGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetVirtualNetworkGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configurations=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetVirtualNetworkGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -3329,7 +3332,7 @@ in which the connection is created.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetVirtualNetworkGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configurations=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetVirtualNetworkGatewayResult</code><span class="sig-paren">(</span><em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configurations=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualNetworkGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult.active_active">
@@ -3351,6 +3354,12 @@ gateway is created will be routed (<em>forced tunneling</em>). Refer to the
 <code class="sig-name descname">enable_bgp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult.enable_bgp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult.generation">
+<code class="sig-name descname">generation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult.generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Generation of the Virtual Network Gateway.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5231,6 +5240,168 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.network.NetworkWatcher.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcher.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">NetworkWatcherFlowLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">network_watcher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">traffic_analytics=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Network Watcher Flow Log.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_watcher_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Storage Account where flow logs are stored.</p></li>
+<li><p><strong>traffic_analytics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">traffic_analytics</span></code> block as documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>retention_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain flow log records.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+</ul>
+<p>The <strong>traffic_analytics</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource guid of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The location of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource ID of the attached workspace.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher_flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher_flow_log.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean flag to enable/disable traffic analytics.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.network_security_group_id">
+<code class="sig-name descname">network_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.network_security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.network_watcher_name">
+<code class="sig-name descname">network_watcher_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.network_watcher_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Network Watcher. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.retention_policy">
+<code class="sig-name descname">retention_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.retention_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days to retain flow log records.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.storage_account_id">
+<code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.storage_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Storage Account where flow logs are stored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.traffic_analytics">
+<code class="sig-name descname">traffic_analytics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.traffic_analytics" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">traffic_analytics</span></code> block as documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource guid of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The location of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource ID of the attached workspace.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">network_watcher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">traffic_analytics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NetworkWatcherFlowLog resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_watcher_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Storage Account where flow logs are stored.</p></li>
+<li><p><strong>traffic_analytics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">traffic_analytics</span></code> block as documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>retention_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain flow log records.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+</ul>
+<p>The <strong>traffic_analytics</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource guid of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The location of the attached workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource ID of the attached workspace.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher_flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher_flow_log.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.NetworkWatcherFlowLog.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7667,7 +7838,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetworkGateway">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">VirtualNetworkGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configuration=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">VirtualNetworkGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configuration=None</em>, <em class="sig-param">vpn_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network Gateway to establish secure, cross-premises connectivity.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)</p>
@@ -7689,6 +7860,7 @@ If not specified, forced tunneling is disabled.</p>
 </p></li>
 <li><p><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Generation of the Virtual Network gateway. Possible values include <code class="docutils literal notranslate"><span class="pre">Generation1</span></code>, <code class="docutils literal notranslate"><span class="pre">Generation2</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.
 An active-standby gateway requires exactly one <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block whereas
 an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p></li>
@@ -7701,8 +7873,9 @@ create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configuration of the size and capacity of the virtual network
 gateway. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code>, <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, and <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>
-and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> arguments.
+<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw4</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw5</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>,
+<code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw4AZ</span></code> and <code class="docutils literal notranslate"><span class="pre">VpnGw5AZ</span></code> and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> and
+<code class="docutils literal notranslate"><span class="pre">generation</span></code> arguments.
 A <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code> gateway only supports the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> sku. Further, the <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>
 sku is only supported by an <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> gateway.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -7781,6 +7954,12 @@ for this Virtual Network Gateway. Defaults to <code class="docutils literal notr
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.network.VirtualNetworkGateway.generation">
+<code class="sig-name descname">generation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Generation of the Virtual Network gateway. Possible values include <code class="docutils literal notranslate"><span class="pre">Generation1</span></code>, <code class="docutils literal notranslate"><span class="pre">Generation2</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.ip_configurations">
 <code class="sig-name descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.
@@ -7822,8 +8001,9 @@ a new resource to be created.</p>
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of the size and capacity of the virtual network
 gateway. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code>, <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, and <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>
-and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> arguments.
+<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw4</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw5</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>,
+<code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw4AZ</span></code> and <code class="docutils literal notranslate"><span class="pre">VpnGw5AZ</span></code> and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> and
+<code class="docutils literal notranslate"><span class="pre">generation</span></code> arguments.
 A <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code> gateway only supports the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> sku. Further, the <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>
 sku is only supported by an <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> gateway.</p>
 </dd></dl>
@@ -7878,7 +8058,7 @@ options are <code class="docutils literal notranslate"><span class="pre">RouteBa
 
 <dl class="method">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configuration=None</em>, <em class="sig-param">vpn_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_active=None</em>, <em class="sig-param">bgp_settings=None</em>, <em class="sig-param">default_local_network_gateway_id=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpn_client_configuration=None</em>, <em class="sig-param">vpn_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualNetworkGateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7899,6 +8079,7 @@ If not specified, forced tunneling is disabled.</p>
 </p></li>
 <li><p><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Generation of the Virtual Network gateway. Possible values include <code class="docutils literal notranslate"><span class="pre">Generation1</span></code>, <code class="docutils literal notranslate"><span class="pre">Generation2</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.
 An active-standby gateway requires exactly one <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block whereas
 an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p></li>
@@ -7911,8 +8092,9 @@ create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configuration of the size and capacity of the virtual network
 gateway. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code>, <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>,
-<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, and <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>
-and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> arguments.
+<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw4</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw5</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>,
+<code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>,<code class="docutils literal notranslate"><span class="pre">VpnGw4AZ</span></code> and <code class="docutils literal notranslate"><span class="pre">VpnGw5AZ</span></code> and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> and
+<code class="docutils literal notranslate"><span class="pre">generation</span></code> arguments.
 A <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code> gateway only supports the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> sku. Further, the <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>
 sku is only supported by an <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> gateway.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -8006,7 +8188,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">VirtualNetworkGatewayConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorization_key=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">express_route_circuit_id=None</em>, <em class="sig-param">express_route_gateway_bypass=None</em>, <em class="sig-param">ipsec_policy=None</em>, <em class="sig-param">local_network_gateway_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">peer_virtual_network_gateway_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_weight=None</em>, <em class="sig-param">shared_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">use_policy_based_traffic_selectors=None</em>, <em class="sig-param">virtual_network_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">VirtualNetworkGatewayConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorization_key=None</em>, <em class="sig-param">connection_protocol=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">express_route_circuit_id=None</em>, <em class="sig-param">express_route_gateway_bypass=None</em>, <em class="sig-param">ipsec_policy=None</em>, <em class="sig-param">local_network_gateway_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">peer_virtual_network_gateway_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_weight=None</em>, <em class="sig-param">shared_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">use_policy_based_traffic_selectors=None</em>, <em class="sig-param">virtual_network_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a connection in an existing Virtual Network Gateway.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -8016,6 +8198,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>authorization_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.</p></li>
+<li><p><strong>connection_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IKE protocol version to use. Possible
+values are <code class="docutils literal notranslate"><span class="pre">IKEv1</span></code> and <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>.
+Changing this value will force a resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>express_route_circuit_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Express Route Circuit
@@ -8076,6 +8270,17 @@ resource to be created.</p></li>
 <dd><p>The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.connection_protocol">
+<code class="sig-name descname">connection_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.connection_protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IKE protocol version to use. Possible
+values are <code class="docutils literal notranslate"><span class="pre">IKEv1</span></code> and <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>.
+Changing this value will force a resource to be created.</p>
+<blockquote>
+<div><p><strong>Note</strong>: Only valid for <code class="docutils literal notranslate"><span class="pre">IPSec</span></code> connections on virtual network gateways with SKU <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2AZ</span></code> or <code class="docutils literal notranslate"><span class="pre">VpnGw3AZ</span></code>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
@@ -8202,7 +8407,7 @@ resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorization_key=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">express_route_circuit_id=None</em>, <em class="sig-param">express_route_gateway_bypass=None</em>, <em class="sig-param">ipsec_policy=None</em>, <em class="sig-param">local_network_gateway_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">peer_virtual_network_gateway_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_weight=None</em>, <em class="sig-param">shared_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">use_policy_based_traffic_selectors=None</em>, <em class="sig-param">virtual_network_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorization_key=None</em>, <em class="sig-param">connection_protocol=None</em>, <em class="sig-param">enable_bgp=None</em>, <em class="sig-param">express_route_circuit_id=None</em>, <em class="sig-param">express_route_gateway_bypass=None</em>, <em class="sig-param">ipsec_policy=None</em>, <em class="sig-param">local_network_gateway_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">peer_virtual_network_gateway_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_weight=None</em>, <em class="sig-param">shared_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">use_policy_based_traffic_selectors=None</em>, <em class="sig-param">virtual_network_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualNetworkGatewayConnection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -8214,6 +8419,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>authorization_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.</p></li>
+<li><p><strong>connection_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IKE protocol version to use. Possible
+values are <code class="docutils literal notranslate"><span class="pre">IKEv1</span></code> and <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IKEv2</span></code>.
+Changing this value will force a resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>express_route_circuit_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Express Route Circuit
@@ -9135,7 +9352,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The Name of the Resource Group where the NAT Gateway exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the NAT Gateway.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the NAT Gateway exists.</p></li>
 </ul>
 </dd>

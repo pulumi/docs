@@ -284,6 +284,162 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.kusto.DatabasePrincipal">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.kusto.</code><code class="sig-name descname">DatabasePrincipal</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Kusto (also known as Azure Data Explorer) Database Principal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Client ID that owns the specified <code class="docutils literal notranslate"><span class="pre">object_id</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Object ID of a User, Group, or App. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the permissions the Principal will have. Valid values include <code class="docutils literal notranslate"><span class="pre">Admin</span></code>, <code class="docutils literal notranslate"><span class="pre">Ingestor</span></code>, <code class="docutils literal notranslate"><span class="pre">Monitor</span></code>, <code class="docutils literal notranslate"><span class="pre">UnrestrictedViewers</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>, <code class="docutils literal notranslate"><span class="pre">Viewer</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of object the principal is. Valid values include <code class="docutils literal notranslate"><span class="pre">App</span></code>, <code class="docutils literal notranslate"><span class="pre">Group</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kusto_database_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kusto_database_principal.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.app_id">
+<code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.app_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The app id, if not empty, of the principal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Client ID that owns the specified <code class="docutils literal notranslate"><span class="pre">object_id</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.cluster_name">
+<code class="sig-name descname">cluster_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.cluster_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.database_name">
+<code class="sig-name descname">database_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.database_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email, if not empty, of the principal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name of the principal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Kusto Database Principal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.object_id">
+<code class="sig-name descname">object_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.object_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Object ID of a User, Group, or App. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the permissions the Principal will have. Valid values include <code class="docutils literal notranslate"><span class="pre">Admin</span></code>, <code class="docutils literal notranslate"><span class="pre">Ingestor</span></code>, <code class="docutils literal notranslate"><span class="pre">Monitor</span></code>, <code class="docutils literal notranslate"><span class="pre">UnrestrictedViewers</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>, <code class="docutils literal notranslate"><span class="pre">Viewer</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of object the principal is. Valid values include <code class="docutils literal notranslate"><span class="pre">App</span></code>, <code class="docutils literal notranslate"><span class="pre">Group</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">fully_qualified_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatabasePrincipal resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The app id, if not empty, of the principal.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Client ID that owns the specified <code class="docutils literal notranslate"><span class="pre">object_id</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email, if not empty, of the principal.</p></li>
+<li><p><strong>fully_qualified_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of the principal.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Kusto Database Principal.</p></li>
+<li><p><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Object ID of a User, Group, or App. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the permissions the Principal will have. Valid values include <code class="docutils literal notranslate"><span class="pre">Admin</span></code>, <code class="docutils literal notranslate"><span class="pre">Ingestor</span></code>, <code class="docutils literal notranslate"><span class="pre">Monitor</span></code>, <code class="docutils literal notranslate"><span class="pre">UnrestrictedViewers</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>, <code class="docutils literal notranslate"><span class="pre">Viewer</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of object the principal is. Valid values include <code class="docutils literal notranslate"><span class="pre">App</span></code>, <code class="docutils literal notranslate"><span class="pre">Group</span></code>, <code class="docutils literal notranslate"><span class="pre">User</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kusto_database_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kusto_database_principal.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.kusto.DatabasePrincipal.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.kusto.DatabasePrincipal.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.kusto.EventhubDataConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.kusto.</code><code class="sig-name descname">EventhubDataConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">consumer_group=None</em>, <em class="sig-param">data_format=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">eventhub_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">mapping_rule_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">table_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.kusto.EventhubDataConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection</p>

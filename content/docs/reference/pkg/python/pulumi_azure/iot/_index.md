@@ -382,6 +382,170 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">DpsSharedAccessPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enrollment_read=None</em>, <em class="sig-param">enrollment_write=None</em>, <em class="sig-param">iothub_dps_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registration_read=None</em>, <em class="sig-param">registration_write=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an IotHub Device Provisioning Service Shared Access Policy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enrollment_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentRead</span></code> permission to this Shared Access Account. It allows read access to enrollment data.</p></li>
+<li><p><strong>enrollment_write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentWrite</span></code> permission to this Shared Access Account. It allows write access to enrollment data.</p></li>
+<li><p><strong>iothub_dps_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>registration_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusRead</span></code> permission to this Shared Access Account. It allows read access to device registrations.</p></li>
+<li><p><strong>registration_write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusWrite</span></code> permission to this Shared Access Account. It allows write access to device registrations.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>service_config</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">ServiceConfig</span></code> permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_dps_shared_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_dps_shared_access_policy.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.enrollment_read">
+<code class="sig-name descname">enrollment_read</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.enrollment_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentRead</span></code> permission to this Shared Access Account. It allows read access to enrollment data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.enrollment_write">
+<code class="sig-name descname">enrollment_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.enrollment_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentWrite</span></code> permission to this Shared Access Account. It allows write access to enrollment data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.iothub_dps_name">
+<code class="sig-name descname">iothub_dps_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.iothub_dps_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string of the Shared Access Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.primary_key">
+<code class="sig-name descname">primary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.primary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary key used to create the authentication token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.registration_read">
+<code class="sig-name descname">registration_read</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.registration_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusRead</span></code> permission to this Shared Access Account. It allows read access to device registrations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.registration_write">
+<code class="sig-name descname">registration_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.registration_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusWrite</span></code> permission to this Shared Access Account. It allows write access to device registrations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string of the Shared Access Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.secondary_key">
+<code class="sig-name descname">secondary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.secondary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary key used to create the authentication token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.service_config">
+<code class="sig-name descname">service_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.service_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">ServiceConfig</span></code> permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enrollment_read=None</em>, <em class="sig-param">enrollment_write=None</em>, <em class="sig-param">iothub_dps_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">registration_read=None</em>, <em class="sig-param">registration_write=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">service_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DpsSharedAccessPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enrollment_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentRead</span></code> permission to this Shared Access Account. It allows read access to enrollment data.</p></li>
+<li><p><strong>enrollment_write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">EnrollmentWrite</span></code> permission to this Shared Access Account. It allows write access to enrollment data.</p></li>
+<li><p><strong>iothub_dps_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>primary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary connection string of the Shared Access Policy.</p></li>
+<li><p><strong>primary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary key used to create the authentication token.</p></li>
+<li><p><strong>registration_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusRead</span></code> permission to this Shared Access Account. It allows read access to device registrations.</p></li>
+<li><p><strong>registration_write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">RegistrationStatusWrite</span></code> permission to this Shared Access Account. It allows write access to device registrations.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secondary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary connection string of the Shared Access Policy.</p></li>
+<li><p><strong>secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary key used to create the authentication token.</p></li>
+<li><p><strong>service_config</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Adds <code class="docutils literal notranslate"><span class="pre">ServiceConfig</span></code> permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_dps_shared_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_dps_shared_access_policy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.iot.DpsSharedAccessPolicy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.iot.EndpointEventhub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">EndpointEventhub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">iothub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.EndpointEventhub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an IotHub EventHub Endpoint</p>
@@ -925,7 +1089,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an IotHub</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
-<p><strong>NOTE:</strong> Routes can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.Route</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+<p><strong>NOTE:</strong> Routes can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.Route</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 <p><strong>NOTE:</strong> Fallback route can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.FallbackRoute</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 </div></blockquote>
 <dl class="field-list simple">

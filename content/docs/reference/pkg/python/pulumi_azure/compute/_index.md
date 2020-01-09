@@ -218,7 +218,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
@@ -236,7 +236,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -288,7 +288,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
@@ -1018,7 +1018,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Image">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">hyper_v_generation=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1026,6 +1026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> elements as defined below.</p></li>
+<li><p><strong>hyper_v_generation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HyperVGenerationType of the VirtualMachine created from the image as <code class="docutils literal notranslate"><span class="pre">V1</span></code>, <code class="docutils literal notranslate"><span class="pre">V2</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">V1</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the image. Changing this forces a
@@ -1070,6 +1071,12 @@ the image. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the managed disk resource that you want to use to create the image.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the size of the image to be created. The target size can’t be smaller than the source size.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.Image.hyper_v_generation">
+<code class="sig-name descname">hyper_v_generation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Image.hyper_v_generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The HyperVGenerationType of the VirtualMachine created from the image as <code class="docutils literal notranslate"><span class="pre">V1</span></code>, <code class="docutils literal notranslate"><span class="pre">V2</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">V1</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1127,7 +1134,7 @@ the image. Changing this forces a new resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.compute.Image.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">hyper_v_generation=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Image resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1137,6 +1144,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> elements as defined below.</p></li>
+<li><p><strong>hyper_v_generation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HyperVGenerationType of the VirtualMachine created from the image as <code class="docutils literal notranslate"><span class="pre">V1</span></code>, <code class="docutils literal notranslate"><span class="pre">V2</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">V1</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the image. Changing this forces a
@@ -1554,7 +1562,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -1747,7 +1755,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier of the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -2036,7 +2044,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -2502,6 +2510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>
@@ -2561,6 +2570,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -2591,6 +2601,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>

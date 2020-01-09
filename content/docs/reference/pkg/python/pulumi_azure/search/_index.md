@@ -60,6 +60,16 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.search.Service.query_keys">
+<code class="sig-name descname">query_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.query_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">query_keys</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the query key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Search Service. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.search.Service.replica_count">
 <code class="sig-name descname">replica_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.replica_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p>
@@ -91,7 +101,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.search.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition_count=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">replica_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.search.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition_count=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">query_keys=None</em>, <em class="sig-param">replica_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.search.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -104,6 +114,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Search Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>primary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Search Service Administration primary key.</p></li>
+<li><p><strong>query_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">query_keys</span></code> block as defined below.</p></li>
 <li><p><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Search Service Administration secondary key.</p></li>
@@ -112,6 +123,11 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>query_keys</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the query key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Search Service. Changing this forces a new resource to be created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/search_service.html.markdown</a>.</p>
 </div></blockquote>

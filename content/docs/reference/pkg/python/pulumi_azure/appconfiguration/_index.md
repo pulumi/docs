@@ -36,7 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.appconfiguration.ConfigurationStore.endpoint">
 <code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appconfiguration.ConfigurationStore.endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The URL that can be used to log into the container registry.</p>
+<dd><p>The URL of the App Configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -124,7 +124,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL that can be used to log into the container registry.</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the App Configuration.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Configuration. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>primary_read_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">access_key</span></code> block as defined below containing the primary read access key.</p></li>
