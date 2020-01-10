@@ -11,6 +11,6 @@
         <h2 class="mt-2 mb-0">{{ .term }} </h2>
             <p>{{ .description }}</p>
                 <ul class="mb-4">
-                    <li>Read More: <a data-track="read-more-{{ .term | urlize }}-read-more" href="{{ .link }}" class="">{{ .term }}</a></li>
+                    <li>Read More: <a data-track="{{ .term | urlize }}-read-more" href="{{ .link }}" class="">{{ .term }}</a></li>
     </div>
 {{ end }}
