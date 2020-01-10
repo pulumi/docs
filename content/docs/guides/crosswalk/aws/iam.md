@@ -128,7 +128,7 @@ const user = new aws.iam.User("webmaster", {
     path: "/system/",
     tags: { "Name": "webmaster" },
 });
-const userAccessKey = new aws.iam.AccessKey("webmasterKey", { user });
+const userAccessKey = new aws.iam.AccessKey("webmasterKey", { user: user.name });
 const userPolicy = new aws.iam.UserPolicy("webmasterPolicy", {
     user,
     policy: {
