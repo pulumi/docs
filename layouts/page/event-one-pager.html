@@ -1,0 +1,25 @@
+{{ define "hero" }}
+    <header class="header-hero header-hero-glow">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>{{ .Params.hero.title }}</h1>
+                {{ .Params.hero.body | markdownify }}
+            </div>
+            <div class="header-hero-item">
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+
+    <div class="container mx-auto">
+        <!-- Carousel -->
+        {{ partial "carousel" . }}
+    </div>
+
+    {{ partial "get-started.html" . }}
+
+    {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
+{{ end }}
