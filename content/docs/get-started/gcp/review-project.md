@@ -89,19 +89,19 @@ For Python, before we deploy the stack, the following commands need to be run to
 Create a virtual environment:
 
 ```bash
-$ python3 -m venv gcp-env
+$ python3 -m venv venv
 ```
 
 Activate the environment in Linux and MacOS:
 
 ```bash
-$ source gcp-env/bin/activate
+$ source venv/bin/activate
 ```
 
 Activate the environment in Windows:
 
 ```bat
-> gcp-env\Scripts\activate
+> venv\Scripts\activate
 ```
 
 Install dependencies:

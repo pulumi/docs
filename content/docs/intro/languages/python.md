@@ -16,7 +16,13 @@ Pulumi supports programs written in Python 3.
 > have installed Python 3.6 prior to running Pulumi programs, or you will likely see syntax errors - Pulumi makes use of
 > new Python syntax that is not backwards-compatible with Python 2. Older Pulumi versions did support Python 2.7.
 
-<a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON</button></a>
+Python 3, pip3 and virtualenv are required by Pulumi.
+
+<a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON 3</button></a>
+
+<a href="https://pip.pypa.io/en/stable/installing/" target="_blank"><button class="button primary small">INSTALL PIP3</button></a>
+
+<a href="https://virtualenv.pypa.io/en/latest/installation/" target="_blank"><button class="button primary small">INSTALL VIRTUALENV</button></a>
 
 ## Getting Started
 
