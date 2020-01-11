@@ -6,14 +6,9 @@ menu:
     userguides:
         parent: cont_delivery
         weight: 1
-
-aliases:
-- /docs/reference/cd-jetbrains-teamcity/
-- /docs/console/continuous-delivery/jetbrains-teamcity/
 ---
 
-This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) to deploy a sample infrastructure
-to AWS using Pulumi.
+This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) to deploy a sample infrastructure, using Pulumi. In the example below, we will deploy to AWS, but any cloud can be used.
 
 ## Prerequisites
 
@@ -151,7 +146,7 @@ create these parameters. The parameters we will create are as follows:
 `env.AWS_SECRET_ACCESS_KEY`: <redacted><br />
 `env.PULUMI_ACCESS_TOKEN`: <redacted><br />
 `env.PATH`: `%env.PATH%:%env.HOME%/.pulumi/bin:%env.HOME%/bin`
-  
+
 ### Running the build
 
 Now that all the steps are created and the configuration has been added to TeamCity, we can run the build by clicking on the
