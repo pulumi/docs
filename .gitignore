@@ -9,6 +9,9 @@
 node_modules
 *.map
 
+# For us Vim folk.
+*.swp
+
 # These are for IntelliJ based tooling
 .idea/
 *.iml
