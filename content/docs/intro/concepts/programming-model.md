@@ -1234,7 +1234,7 @@ Because outputs are asynchronous, their actual raw values are not immediately av
 
 #### Apply {#apply}
 
-To access the raw value of an output, and transform that value into a new value, use {{< pulumi-apply >}}. This method accepts a callback that will be eventually invoked with the raw value, once it is available. Note that during some program executions, {{< pulumi-apply >}} won't be run, such as during a preview when resource output values may remain unknown.
+To access the raw value of an output, and transform that value into a new value, use {{< pulumi-apply >}}. This method accepts a callback that will be eventually invoked with the raw value, once it is available.
 
 For example, the following creates an HTTPS URL from the DNS name of a virtual machine:
 
@@ -1266,9 +1266,9 @@ var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
 
 The result of the call to {{< pulumi-apply >}} is a new {{< pulumi-output >}}. So in this example, the `url` variable itself is also an {{< pulumi-output >}}. It will resolve to the new new value returned from the callback, and carries the dependencies of the original {{< pulumi-output >}}. If the callback itself returns an {{< pulumi-output >}}, the dependencies of that output are also kept in the resulting {{< pulumi-output >}}.
 
-If you have multiple outputs and need to join them, the [all](#all) function acts like an apply over many resources.
+> **Note:** during some program executions, {{< pulumi-apply >}} won't be run, such as during a preview when resource output values may remain unknown, so you should avoid side-effects within the callbacks. For this reason, you should not allocate new resources inside of your callbacks either, as it could lead to `pulumi preview` being wrong.
 
-> **Warning:** You should not allocate new resources inside of your {{< pulumi-apply >}} and {{< pulumi-all >}} callbacks. These callbacks are conditionally executed based on the state of outputs and doing so can lead to the results of `pulumi preview` being wrong.
+If you have multiple outputs and need to join them, the [all](#all) function acts like an apply over many resources.
 
 ##### All {#all}
 
