@@ -238,7 +238,7 @@ These are the most important major elements of the Pulumi SDK library:
 * [Stack References](#stack-references): reference one stack's outputs from another
 * [Runtime Functions](#funcs): access important metadata and capabilities at runtime
 
-Dependencies between resources are encoded with the [Output](#outputs) type.
+Dependencies between resources are encoded with the [{{< pulumi-output-nohref >}}](#outputs) type.
 
 ### Resources {#resources}
 
@@ -1215,9 +1215,9 @@ If a component is itself a child of another component, its set of providers is i
 
 Resource properties are treated specially in Pulumi, both for purposes of input and output.
 
-All resource arguments accept so-called _inputs_. Inputs are values of type [`Input`][pulumi.Input], a type that permits either a raw value of a given type (like string, integer, boolean, list, map, and so on), an asynchronously computed value (i.e., a `Promise` or `Task`), or an output read from another resource's properties.
+All resource arguments accept so-called _inputs_. Inputs are values of type {{< pulumi-input >}}, a type that permits either a raw value of a given type (like string, integer, boolean, list, map, and so on), an asynchronously computed value (i.e., a `Promise` or `Task`), or an output read from another resource's properties.
 
-All resource properties on the instance object itself are so-called _outputs_. Outputs are values of type [`Output`](pulumi.Output), which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises); this is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens asynchronously. Outputs are also how Pulumi tracks dependencies between resources.
+All resource properties on the instance object itself are so-called _outputs_. Outputs are values of type {{< pulumi-output >}}, which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises); this is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens asynchronously. Outputs are also how Pulumi tracks dependencies between resources.
 
 Outputs, therefore, represent two things:
 
@@ -1234,7 +1234,7 @@ Because outputs are asynchronous, their actual raw values are not immediately av
 
 #### Apply {#apply}
 
-To access the raw value of an output, and transform that value into a new value, use the [`apply` method]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#OutputInstance-apply" >}}). This method accepts a callback that will be eventually invoked with the raw value, once it is available. Note that during some program executions, the `apply` method won't be run, such as during a preview when resource output values may remain unknown.
+To access the raw value of an output, and transform that value into a new value, use {{< pulumi-apply >}}. This method accepts a callback that will be eventually invoked with the raw value, once it is available. Note that during some program executions, {{< pulumi-apply >}} won't be run, such as during a preview when resource output values may remain unknown.
 
 For example, the following creates an HTTPS URL from the DNS name of a virtual machine:
 
@@ -1264,15 +1264,15 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
 ```
 
-The result of the call to `apply` is a new `Output`. So in this example, the `url` variable itself is also an `Output`. It will resolve to the new new value returned from the callback, and carries the dependencies of the original `Output`. If the callback itself returns an `Output`, the dependencies of that output are also kept in the resulting `Output`.
+The result of the call to {{< pulumi-apply >}} is a new {{< pulumi-output >}}. So in this example, the `url` variable itself is also an {{< pulumi-output >}}. It will resolve to the new new value returned from the callback, and carries the dependencies of the original {{< pulumi-output >}}. If the callback itself returns an {{< pulumi-output >}}, the dependencies of that output are also kept in the resulting {{< pulumi-output >}}.
 
 If you have multiple outputs and need to join them, the [all](#all) function acts like an apply over many resources.
 
-> **Warning:** You should not allocate new resources inside of your `apply` and `all` callbacks. These callbacks are conditionally executed based on the state of outputs and doing so can lead to the results of `pulumi preview` being wrong.
+> **Warning:** You should not allocate new resources inside of your {{< pulumi-apply >}} and {{< pulumi-all >}} callbacks. These callbacks are conditionally executed based on the state of outputs and doing so can lead to the results of `pulumi preview` being wrong.
 
 ##### All {#all}
 
-The `all` function acts like an `apply` over multiple `Output`s. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used to compute an entirely new output value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with `apply`, the result of `all` is itself an `Output`.
+The {{< pulumi-all >}} function acts like an {{< pulumi-apply >}} over multiple {{< pulumi-output >}}s. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used to compute an entirely new output value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
 
 For example, let's take a server and database name, and use them to create a database connection string:
 
@@ -1312,13 +1312,13 @@ var connectionString = Output.Tuple(sqlServer.name, database.name)
     .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
 ```
 
-Notice that `all` works by itself returning an output that represents the combination of all of the input outputs, so that within the callback, the raw values are available inside of [a tuple](https://en.wikipedia.org/wiki/Tuple).
+Notice that {{< pulumi-all >}} works by itself returning an output that represents the combination of all of the input outputs, so that within the callback, the raw values are available inside of [a tuple](https://en.wikipedia.org/wiki/Tuple).
 
 ##### Accessing Properties of an Output {#lifting}
 
-If you just need to access a property off of an `Output` value, in order to pass in that property to another `Resource`, you can often just directly access it.
+If you just need to access a property off of an {{< pulumi-output >}} value, in order to pass in that property to another `Resource`, you can often just directly access it.
 
-For example, if you need to read a domain record from an ACM certificates, that requires drilling into a resource's property value. Because that value is an output, we would normally need to use `apply`:
+For example, if you need to read a domain record from an ACM certificates, that requires drilling into a resource's property value. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
 
 {{< langchoose csharp >}}
 
@@ -1376,7 +1376,7 @@ record = aws.route53.Record('validation',
 // Helpers for accessing properties are not yet available in .NET.
 ```
 
-To ease simple property and array element access, an `Output` _lifts_ the properties of the underlying value, behaving very much like an instance of it. This allows you to access properties and elements directly off of the `Output` itself without needing `apply`. If we return to the above example, we can now simplify it:
+To ease simple property and array element access, an {{< pulumi-output >}} _lifts_ the properties of the underlying value, behaving very much like an instance of it. This allows you to access properties and elements directly off of the {{< pulumi-output >}} itself without needing {{< pulumi-apply >}}. If we return to the above example, we can now simplify it:
 
 {{< langchoose csharp >}}
 
@@ -1457,7 +1457,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 
 ##### Working with Outputs and Strings {#outputs-and-strings}
 
-Outputs containing strings cannot be used directly in operations like string concatenation. _String interpolation_ lets you more easily build a string out of various output values, without needing `apply` or `all`. This can be used to export a stack output, provide a dynamically computed string as a new resource argument, or even just for diagnostics purposes.
+Outputs containing strings cannot be used directly in operations like string concatenation. _String interpolation_ lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or {{< pulumi-all >}}. This can be used to export a stack output, provide a dynamically computed string as a new resource argument, or even just for diagnostics purposes.
 
 For example, say you want to create a URL from hostname and port output values:
 
@@ -1561,9 +1561,9 @@ var url = Output.Format($"http://{hostname}:{port}/");
 
 ##### Convert Input to Output {#frominput}
 
-It is possible to turn an `Input` into an `Output` value. Resource arguments already accept outputs as input values, however in some cases you need to know that a value is definitely an `Output` at runtime. This can be helpful because, since `Input` values have many possible representations---a raw value, a promise, or an output---you would normally need to handle all possible cases; by first transforming that value into an `Output`, you can treat it uniformly instead.
+It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} value. Resource arguments already accept outputs as input values, however in some cases you need to know that a value is definitely an {{< pulumi-output >}} at runtime. This can be helpful because, since {{< pulumi-input >}} values have many possible representations---a raw value, a promise, or an output---you would normally need to handle all possible cases; by first transforming that value into an {{< pulumi-output >}}, you can treat it uniformly instead.
 
-For example, this code transforms an `Input` into an `Output` so that it can use the `apply` function:
+For example, this code transforms an {{< pulumi-input >}} into an {{< pulumi-output >}} so that it can use the {{< pulumi-apply >}} function:
 
 {{< langchoose csharp >}}
 
@@ -1610,18 +1610,18 @@ The Pulumi Service transmits and stores entire state files securely, however, Pu
 
 There is a CLI aspect to secrets, in that the CLI's [`config set` command]({{< relref "config#configuration" >}}) supports a [`--secret` flag]({{< relref "config#secrets" >}}) to encrypt your stack's configuration settings.
 
-There is also a runtime aspect to secrets, in that any `Output` value may be marked secret. If an output is a secret, then any computed values from it---such as those derived through an `apply` call---will themselves be marked secret. All such values are stored encrypted inside of your state, and never in plaintext.
+There is also a runtime aspect to secrets, in that any {{< pulumi-output >}} value may be marked secret. If an output is a secret, then any computed values from it---such as those derived through an {{< pulumi-apply >}} call---will themselves be marked secret. All such values are stored encrypted inside of your state, and never in plaintext.
 
-An `Output` can be marked secret a number of ways:
+An {{< pulumi-output >}} can be marked secret a number of ways:
 
 * Reading a secret from configuration
 * Creating a new secret value, like when generating a new random password
 * Marking a resource as having secret properties using [`additionalSecretOutputs`](#additionalsecretoutputs)
-* Computing a secret value by using `apply` or `all` with another secret value
+* Computing a secret value by using {{< pulumi-apply >}} or {{< pulumi-all >}} with another secret value
 
-As soon as an `Output` is marked secret, you can trust that the Pulumi engine will encrypt it no matter where it goes.
+As soon as an {{< pulumi-output >}} is marked secret, you can trust that the Pulumi engine will encrypt it no matter where it goes.
 
-> *Note*: Inside of an `apply` or `all`, your secret will be decrypted for use within the callback in plaintext. It is up to your program to treat this value sensitively and only pass the value to code that you trust.
+> *Note*: Inside of an {{< pulumi-apply >}} or {{< pulumi-all >}}, your secret will be decrypted for use within the callback in plaintext. It is up to your program to treat this value sensitively and only pass the value to code that you trust.
 
 #### Programmatically Creating Secrets
 
@@ -1701,9 +1701,9 @@ As written, the `Parameter` resource's `value` property will be encrypted in the
 
 #### How Secrets Relate to Outputs
 
-Secrets have the same type `Output` as do other unencrypted resource outputs. The difference is that they are marked internally as needing encryption before persisting in the state file. When you combine an existing output that is marked as a secret using `apply` or `all`, the resulting output is also marked as a secret.
+Secrets have the same type {{< pulumi-output >}} as do other unencrypted resource outputs. The difference is that they are marked internally as needing encryption before persisting in the state file. When you combine an existing output that is marked as a secret using {{< pulumi-apply >}} or {{< pulumi-all >}}, the resulting output is also marked as a secret.
 
-An `apply`'s callback is given the plaintext value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot guarantee that the `apply` callback itself will not expose the secret value. For instance, by explicitly printing the value to the console or saving it to a file. Be careful that you do not pass this plaintext value to code that might intentionally or accidentally expose it.
+An {{< pulumi-apply >}}'s callback is given the plaintext value of the underlying secret. Although Pulumi ensures that the value returned from an {{< pulumi-apply >}} on a secret is also marked as secret, Pulumi cannot guarantee that the {{< pulumi-apply >}} callback itself will not expose the secret value. For instance, by explicitly printing the value to the console or saving it to a file. Be careful that you do not pass this plaintext value to code that might intentionally or accidentally expose it.
 
 > Unlike regular outputs, secrets cannot be captured by Pulumi closure serialization system for use in serverless code. Attempting to do so will lead to an exception. We do plan to support this once we can ensure that the values will be persisted securely. See [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718).
 
@@ -2467,7 +2467,7 @@ class MyResource extends pulumi.dynamic.Resource {
 
 * `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
 * `replaces`: An array of property names that have changed that should force a replacement. Returning a non-zero length array here will tell the Pulumi engine to schedule a replacement instead of an update, which might involve downtime, so this should only be used when a `diff` requested by the user cannot be implemented as an in-place update on the backing cloud provider.
-* `stables`: An array of property names that are known to not change between updates. Pulumi will use this information to allow some `apply` calls on Outputs to be processed during `previews` because it knows that the values of these will stay the same during an update.
+* `stables`: An array of property names that are known to not change between updates. Pulumi will use this information to allow some {{< pulumi-apply >}} calls on {{< pulumi-output >}} to be processed during `previews` because it knows that the values of these will stay the same during an update.
 * `deleteBeforeReplace`: `true` if the proposed replacements require deleteing the existing resource before creating the new one. By default Pulumi will try to create the new resource before deleting the old one to avoid downtime.
 If an error occurs, an exception can be thrown from the `diff` method to return this error to the user.
 
@@ -2825,8 +2825,6 @@ See [Serializing Functions]({{< relref "/docs/tutorials/aws/serializing-function
 [pulumi.Resource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Resource" >}}
 [pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
 [pulumi.CustomResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#CustomResource" >}}
-[pulumi.Output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
-[pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
 [@pulumi/pulumi]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}
 [@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
 [@pulumi/kubernetes]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}}
@@ -2837,7 +2835,6 @@ See [Serializing Functions]({{< relref "/docs/tutorials/aws/serializing-function
 [pulumi.log]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/log" >}}
 [pulumi.runtime.serializeFunction]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}
 [pulumi.output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#output" >}}
-[pulumi.all]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#all" >}}
 
 [config.get]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-get" >}}
 [config.require]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-require" >}}
