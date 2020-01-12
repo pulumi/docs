@@ -66,7 +66,7 @@ $ cat my_key.pub | pulumi config set publicKey
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.
 
-> By default, the CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#secrets-encryption).
+> By default, the CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 
 For example, this command sets a configuration variable named `dbPassword` to the plaintext value `S3cr37`:
 
