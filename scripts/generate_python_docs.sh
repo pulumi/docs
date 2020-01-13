@@ -6,6 +6,7 @@ set -x
 PACKAGES=(
   "pulumi"
   "pulumi_aiven"
+  "pulumi_alicloud"
   "pulumi_aws"
   "pulumi_azure"
   "pulumi_azuread"
