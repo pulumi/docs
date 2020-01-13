@@ -1814,7 +1814,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.kinesis.get_stream">
-<code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Kinesis Stream for use in other
 resources.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>

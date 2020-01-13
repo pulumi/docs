@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.directoryservice"></span><dl class="class">
+<dt id="pulumi_aws.directoryservice.AwaitableGetDirectoryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">AwaitableGetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.AwaitableGetDirectoryResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">ConditionalForwader</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ips=None</em>, <em class="sig-param">remote_domain_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
@@ -337,6 +342,90 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">GetDirectoryResult</code><span class="sig-paren">(</span><em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDirectory.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.access_url">
+<code class="sig-name descname">access_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.access_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access URL for the directory/connector, such as <a class="reference external" href="http://alias.awsapps.com">http://alias.awsapps.com</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.alias">
+<code class="sig-name descname">alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>The alias for the directory/connector, such as <code class="docutils literal notranslate"><span class="pre">d-991708b282.awsapps.com</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A textual description for the directory/connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.dns_ip_addresses">
+<code class="sig-name descname">dns_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.dns_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of IP addresses of the DNS servers for the directory/connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.edition">
+<code class="sig-name descname">edition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.edition" title="Permalink to this definition">¶</a></dt>
+<dd><p>(for <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code>) The Microsoft AD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.enable_sso">
+<code class="sig-name descname">enable_sso</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.enable_sso" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory/connector single-sign on status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified name for the directory/connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.security_group_id">
+<code class="sig-name descname">security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the security group created by the directory/connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.short_name">
+<code class="sig-name descname">short_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.short_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The short name of the directory/connector, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.size">
+<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>(for <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code> and <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code>) The size of the directory/connector (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the directory/connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directoryservice.GetDirectoryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.GetDirectoryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.directoryservice.LogService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">LogService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.</p>
@@ -422,6 +511,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.directoryservice.get_directory">
+<code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">get_directory</code><span class="sig-paren">(</span><em class="sig-param">directory_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.get_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It’s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory_id</strong> (<em>str</em>) – The ID of the directory.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

@@ -197,7 +197,7 @@ instance (see list below)</p></li>
 <li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</p></li>
 <li><p><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
 Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – launch script to configure server with additional user data</p></li>
 </ul>
@@ -255,7 +255,7 @@ Lightsail console (cannot use <code class="docutils literal notranslate"><span c
 <dl class="attribute">
 <dt id="pulumi_aws.lightsail.Instance.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Lightsail Instance</p>
+<dd><p>The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -303,7 +303,7 @@ instance (see list below)</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
 Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – launch script to configure server with additional user data</p></li>
 </ul>
