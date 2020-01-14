@@ -28,6 +28,8 @@ A resource provider is made up of two different pieces:
 
 A resource provider is an extension of the API exposed by the respective cloud providers. As such, it is also the limiting factor sometimes. Thankfully, there is a solution to this. Since the Pulumi engine works with life-cycle callbacks handing control to the provider at appropriate times, it is easy to write such a provider that implements custom logic in those callbacks.
 
+Learn more about how Pulumi works [here](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/).
+
 ## Dynamic Resource Provider
 
 > **Note**: Dynamic providers are currently only supported in JavaScript, TypeScript, and Python.
