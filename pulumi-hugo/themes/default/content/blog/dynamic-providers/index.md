@@ -63,6 +63,16 @@ The Azure resource provider does not support enabling the [static website](https
 [Here's](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/staticWebsite.ts) the source for this example. The following is an excerpt from the [example](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/index.ts) where the dynamic provider is actually used. Note that the Azure Storage Account is created before using this dynamic provider.
 
 ```ts
+...
+...
+// Create a Storage Account for our static website
+const storageAccount = new azure.storage.Account("websitesa", {
+    resourceGroupName: resourceGroup.name,
+    accountReplicationType: "LRS",
+    accountTier: "Standard",
+    accountKind: "StorageV2",
+});
+
 const staticWebsite = new StorageStaticWebsite("website-static", {
 	accountName: storageAccount.name,
 });
@@ -77,6 +87,45 @@ Along with adding a custom domain to the CDN endpoint, this dynamic provider als
 As before, some of the details, such as the creation of the CDN profile and its endpoint are omitted here for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
 
 ```ts
+...
+...
+const cdnEndpoint = new azure.cdn.Endpoint("cdnEndpoint", {
+    /**
+     * Specify a well-known name for the endpoint name,
+     * so you can add a CNAME record for your custom domain
+     * pointing to this CDN endpoint to it.
+     *
+     * For example, the URL for this CDN endpoint when it is created
+     * would be `my-cdn-endpoint.azureedge.net`.
+     */
+    name: "my-cdn-endpoint",
+    resourceGroupName: resourceGroup.name,
+    profileName: cdnProfile.name,
+    isHttpsAllowed: true,
+    isHttpAllowed: false,
+    isCompressionEnabled: true,
+    originHostHeader: storageAccount.primaryBlobHost,
+    contentTypesToCompresses: [
+        "text/plain",
+        "text/html",
+        "text/css",
+        "text/javascript",
+        "application/x-javascript",
+        "application/javascript",
+        "application/json",
+        "application/xml",
+        "image/png",
+        "image/jpeg",
+    ],
+    origins: [
+        {
+            name: "cdn-origin",
+            hostName: storageAccount.primaryBlobHost,
+            httpsPort: 443,
+        },
+    ],
+});
+
 export const cdnCustomDomainResource = new CDNCustomDomainResource("cdnCustomDomain", {
         	resourceGroupName: resourceGroupName,
         	// Ensure that there is a CNAME record for mycompany.com
@@ -102,8 +151,8 @@ Scripts provided through the `userData` parameter can be configured to run every
 This snippet of the code shows how, the dynamic resources for copying a file and executing it, are used:
 
 ```ts
-…
-…
+...
+...
 const conn = {
 	host: server.publicIp,
 	username: "ec2-user",
