@@ -8,7 +8,7 @@ noindex: true
 meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 
 hero:
-    title: Meet the Pulumi team for a beer on Wednesday 1/22
+    title: Meet the Pulumi team for tech talks and beer on Wednesday 1/22
     body: >
         Join us at Create33 for talks that focus on the development process on K8s.
         From 5:00pm to 6:00pm we will be hosting a happy hour with the Meetup starting at 6:30pm.
@@ -17,23 +17,19 @@ hero:
         Center at 999 3rd Ave Seattle, WA. The entry doors may be locked when you arrive but we’ll have somebody
         nearby to let you in. Once inside, please take the elevator to the 33rd floor.
     code: |
-          import * as k8s from "@pulumi/kubernetes";
+          import * as kx from "@pulumi/kubernetesx";
 
-          const appLabels = { app: "nginx" };
+          // Define a Pod.
+          const pb = new kx.PodBuilder({ containers: [{ image: "nginx" }] });
 
-          const deployment = new k8s.apps.v1.Deployment("nginx", {
-              spec: {
-                  replicas: 1,
-                  selector: { matchLabels: appLabels },
-                  template: {
-                      metadata: { labels: appLabels },
-                      spec: {
-                          containers: [{
-                              name: "nginx", image: "nginx"
-                          }]
-                      }
-                  }
-              }
+          // Create a Kubernetes Deployment using the previous Pod definition.
+          const deployment = new kx.Deployment("nginx", {
+            spec: pb.asDeploymentSpec()
+          });
+
+          // Expose the Deployment using a load balanced Kubernetes Service.
+          const service = deployment.createService({
+              type: kx.types.ServiceType.LoadBalancer,
           });
     cta:
         url: https://www.meetup.com/Seattle-Kubernetes-Meetup/events/267073230/
@@ -58,7 +54,7 @@ carousel:
       description: to any cloud.
       details:
         - title: Many clouds, one workflow.
-          description: Use the same language, tools, and workflow, no matter the cloud.
+          description: Use the same language, tools, and workflow, on any cloud.
         - title: Collaborate.
           description: Harmonize your engineering practices between developers and operators.
         - title: Easy continuous delivery.
