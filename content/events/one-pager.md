@@ -8,30 +8,15 @@ noindex: true
 meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 
 hero:
-    title: Modern Infrastrucutre as Code
+    title: Meet the Pulumi team for a beer on Wednesday 1/22
     body: >
-        Create, deploy, and manage infrastructure, on any cloud, in any language.
-        Enable developers and operators to work better together.
-
-    code: |
-        // Deploy Nginx to AWS Fargate
-        import * as awsx from "@pulumi/awsx";
-
-        let web = new awsx.elb.ApplicationLoadBalancer(
-            "net-lb", { external: true }).
-            createListener("web", { port: 80, external: true });
-
-        let appService = new awsx.ecs.FargateService("nginx-svc", {
-            taskDefinitionArgs: {
-                container: {
-                    image: "nginx",
-                    portMappings: [ web ],
-                },
-            },
-            desiredCount: 5,
-        });
-
-        export let url = web.endpoint.hostname;
+        Join us at Create33 for talks that focus on the development process on K8s.
+        From 5:00pm to 6:00pm we will be hosting a happy hour with the Meetup starting at 6:30pm.
+    image:
+        src: /images/events/seattle-kubernetes-meetup.jpeg
+    cta:
+        url: https://www.meetup.com/Seattle-Kubernetes-Meetup/events/267073230/
+        label: Register Here
 
 carousel:
     - heading: Create
