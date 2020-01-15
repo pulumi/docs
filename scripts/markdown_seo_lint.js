@@ -287,7 +287,7 @@ const errorOutput = errors.map(function(err) {
 // the program with an error.
 if (errors.length > 0) {
     console.log(`
-Lint Results:
+Markdown Lint Results:
     - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 
@@ -295,11 +295,13 @@ Errors:
 
 ${errorOutput}
     `);
-    process.exit(1);
+
+    const noError = process.argv.indexOf("--no-error") > -1;
+    process.exit(noError ? 0 : 1);
 }
 
 console.log(`
-Lint Results:
+Markdown Lint Results:
     - ${filesToLint.files.length} files parsed.
     - ${errorsCount} errors found.
 `);

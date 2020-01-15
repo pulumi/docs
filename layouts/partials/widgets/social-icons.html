@@ -11,7 +11,7 @@
         {{ range $idx, $platform := $platforms }}
             {{ if (index $socialIdentities $platform) }}
                 <li class="mx-2">
-                    <a href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
+                    <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
                         <i class="fab fa-{{ $platform }}"></i>
                     </a>
                 </li>

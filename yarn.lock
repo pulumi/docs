@@ -1311,6 +1311,11 @@ has@^1.0.0, has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+he@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
+  integrity sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
+
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
@@ -1817,11 +1822,6 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
-  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
-
 markdown-it@10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-10.0.0.tgz#abfc64f141b1722d663402044e43927f1f50a8dc"
@@ -1839,6 +1839,11 @@ markdownlint@^0.17.2:
   integrity sha512-vsxopn0qEdm0P2XI3S9sVA+jvjKjR8lHZ+0FKlusth+1UK9tI29mRFkKeZPERmbWsMehJcogfMieBUkMgNEFkQ==
   dependencies:
     markdown-it "10.0.0"
+
+marked@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
+  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
 maybe-callback@^2.1.0:
   version "2.1.0"
@@ -2005,6 +2010,13 @@ node-emoji@^1.8.1:
   integrity sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==
   dependencies:
     lodash.toarray "^4.4.0"
+
+node-html-parser@^1.1.16:
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-1.1.16.tgz#59f072bcabf1cf6e23f7878a76e0c3b81b9194fa"
+  integrity sha512-cfqTZIYDdp5cGh3NvCD5dcEDP7hfyni7WgyFacmDynLlIZaF3GVlRk8yMARhWp/PobWt1KaCV8VKdP5LKWiVbg==
+  dependencies:
+    he "1.1.1"
 
 node-pre-gyp@^0.12.0:
   version "0.12.0"

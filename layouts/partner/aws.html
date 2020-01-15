@@ -76,10 +76,10 @@ let server = new aws.ec2.Instance("web-server-www", {
                     <h2>Creating a Serverless REST API</h2>
                     <p>
                         With Pulumi, you can combine infrastructure definitions and application code in one program. The
-                        <a href="{{ relref . "/crosswalk/aws" }}">Crosswalk for AWS library</a> is a set of Pulumi
-                        components that provide a higher-level abstraction over AWS. So, instead of provisioning an API
-                        Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define
-                        application code at the same time as the infrastructure it depends on.
+                        <a href="{{ relref . "/crosswalk/aws" }}">
+                        Crosswalk for AWS library</a> is a set of Pulumi components that provide a higher-level abstraction
+                        over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles,
+                        you can use this library and define application code at the same time as the infrastructure it depends on.
                     </p>
                     <p>
                         This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.

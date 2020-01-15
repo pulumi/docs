@@ -27,7 +27,7 @@
         <div class="container mx-auto">
             <ul>
                 {{ range .Params.sections }}
-                    <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
+                    <li><a data-track="{{ .label | urlize }}" href="#{{ .anchor }}">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </div>
