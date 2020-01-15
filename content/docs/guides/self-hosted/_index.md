@@ -71,10 +71,6 @@ For example, `PULUMI_DATA_PATH=/my/persistent/dir LOCAL_DATABASE_NAME=my-db LOCA
 
 Regardless of the quickstart option you choose below, `run-ee.sh` will be the way to start the necessary containers. There will be at most 3 containers (including the DB) for the system to be considered complete.
 
-Just see this quickstart video recorded by our CTO, Luke Hoban. You, too, can get started with Pulumi very quickly.
-
-<!--INSERT YOUTUBE LINK-->
-
 ### Quickstart Option #1 - Using the all-in-one approach
 
 If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all of the necessary components using working defaults, including a DB container that is migrated using our DB scripts.
