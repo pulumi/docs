@@ -25,7 +25,7 @@ $(document).ready(function() {
 
             // Get the tracking id.
             const dataTrack = elem.attr("data-track");
-            const href = elem.attr("href").replace(/https?:\/\//g, "");
+            const href = (elem.attr("href") || "").replace(/https?:\/\//g, "");
             const trackingDescription = dataTrack ? dataTrack :
                   href.replace(/^#/, "anchor-")
                       .replace(/^\//, "")
