@@ -12,8 +12,29 @@ hero:
     body: >
         Join us at Create33 for talks that focus on the development process on K8s.
         From 5:00pm to 6:00pm we will be hosting a happy hour with the Meetup starting at 6:30pm.
-    image:
-        src: /images/events/seattle-kubernetes-meetup.jpeg
+
+        The happy hour and Meetup are at Create33, which is located on the 33rd floor of the Wells Fargo
+        Center at 999 3rd Ave Seattle, WA. The entry doors may be locked when you arrive but we’ll have somebody
+        nearby to let you in. Once inside, please take the elevator to the 33rd floor.
+    code: |
+          import * as k8s from "@pulumi/kubernetes";
+
+          const appLabels = { app: "nginx" };
+
+          const deployment = new k8s.apps.v1.Deployment("nginx", {
+              spec: {
+                  replicas: 1,
+                  selector: { matchLabels: appLabels },
+                  template: {
+                      metadata: { labels: appLabels },
+                      spec: {
+                          containers: [{
+                              name: "nginx", image: "nginx"
+                          }]
+                      }
+                  }
+              }
+          });
     cta:
         url: https://www.meetup.com/Seattle-Kubernetes-Meetup/events/267073230/
         label: Register Here

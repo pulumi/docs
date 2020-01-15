@@ -3,15 +3,15 @@
         <div class="header-hero-items container mx-auto">
             <div class="header-hero-item">
                 <h1>{{ .Params.hero.title }}</h1>
-                <p>{{ .Params.hero.body | markdownify }}</p>
+                <div class="text-base md:text-lg">{{ .Params.hero.body | markdownify }}</div>
                 <div class="header-hero-actions w-full">
                     <a class="btn btn-lg" href="{{ .Params.hero.cta.url }}">
                         {{ .Params.hero.cta.label }}
                     </a>
                 </div>
             </div>
-            <div class="header-hero-item">
-                <img src="{{ .Params.hero.image.src }}" />
+            <div class="hidden md:inline-block header-hero-item">
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
             </div>
         </div>
     </header>
