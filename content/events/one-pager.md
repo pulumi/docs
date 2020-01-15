@@ -14,7 +14,8 @@ hero:
         From 5:00pm to 6:00pm we will be hosting a happy hour with the Meetup starting at 6:30pm.
 
         The happy hour and Meetup are at Create33, which is located on the 33rd floor of the Wells Fargo
-        Center at 999 3rd Ave Seattle, WA. The entry doors may be locked when you arrive but we’ll have somebody
+        Center at <a class="underline text-blue-500" href="https://www.google.com/maps/place/Create33/@47.6050632,-122.3339756,15z/data=!4m2!3m1!1s0x0:0xdfce9739a948e539?sa=X&ved=2ahUKEwj5n43yxobnAhWUFzQIHaqaAbYQ_BIwDHoECA0QCA" target="_blank">999 3rd Ave Seattle, WA</a>.
+        The entry doors may be locked when you arrive but we’ll have somebody
         nearby to let you in. Once inside, please take the elevator to the 33rd floor.
     code: |
           import * as kx from "@pulumi/kubernetesx";
