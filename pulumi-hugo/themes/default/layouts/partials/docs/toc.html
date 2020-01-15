@@ -1,7 +1,7 @@
 <aside class="toc">
     {{ if hasPrefix .RelPermalink "/docs/aws/" }}
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/aws" }}">AWS</a>
+            <a data-track="toc-aws" href="{{ relref . "/docs/aws" }}">AWS</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}

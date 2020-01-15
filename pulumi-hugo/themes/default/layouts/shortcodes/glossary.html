@@ -12,6 +12,6 @@
     {{ if hasPrefix $link "/" }}
         {{ $link = relref $.Page $link }}
     {{ end }}
-    <a href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
+    <a data-track="{{ .term | urlize }}" href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
 </p>
 {{ end }}

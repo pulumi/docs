@@ -103,7 +103,7 @@
                         <li class="py-4">
                             <div class="text-sm text-gray-500">{{ .date }}</div>
                             <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            <a class="block my-4" href="{{ .url }}">Read more &rarr;</a>
+                            <a data-track="press-release" class="block my-4" href="{{ .url }}">Read more &rarr;</a>
                         </li>
                     {{ end }}
                 </ul>
@@ -119,7 +119,7 @@
                             <div class="pl-4 flex-1">
                                 <div class="text-sm text-gray-500">{{ .date }}</div>
                                 <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                                <a class="block my-2" href="{{ .url }}">Read more &rarr;</a>
+                                <a data-track="news-{{ .url | urlize }}" class="block my-2" href="{{ .url }}">Read more &rarr;</a>
                             </div>
                         </li>
                     {{ end }}
@@ -132,7 +132,7 @@
             <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
                 {{ range first 6 (where $.Site.Data.awards.awards "featured" true) }}
                     <li class="mx-4 bg-white">
-                        <a href="{{ .url }}">
+                        <a data-track="award-{{ .url | urlize }}" href="{{ .url }}">
                             <img class="inline-block w-32 rounded p-2 border-2 border-gray-300" src="{{ .img }}" title="{{ .title }}">
                         </a>
                     </li>

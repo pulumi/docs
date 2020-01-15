@@ -103,7 +103,7 @@
                     <p>
                         {{ .body | markdownify | safeHTML }}
                     </p>
-                    <a class="btn inline-block my-2" href="{{ .cta.url }}">
+                    <a data-track="cta-{{ .cta.label | urlize }}" class="btn inline-block my-2" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                 </div>

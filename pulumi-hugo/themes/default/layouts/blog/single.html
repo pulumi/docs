@@ -9,9 +9,9 @@
                 <article class="mb-8 pb-8 border-b border-gray-200">
 
                     {{ if and (.Params.h1) (not .Params.notitle) }}
-                        <h1 class="no-anchor"><a href="{{ .Permalink }}">{{ .Params.h1 }}</a></h1>
+                        <h1 class="no-anchor"><a data-track="blog-title" href="{{ .Permalink }}">{{ .Params.h1 }}</a></h1>
                     {{ else if and (ne .Title "") (not .Params.notitle) }}
-                        <h1 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                        <h1 class="no-anchor"><a data-track="blog-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
                     {{ end }}
 
                     <div class="flex items-center">
