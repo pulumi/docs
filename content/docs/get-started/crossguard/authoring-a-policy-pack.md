@@ -66,15 +66,15 @@ On Windows, you must first set the environment variable before running the comma
 **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy new aws-typescript
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy new aws-typescript
 ```
 
 **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy new aws-typescript
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy new aws-typescript
 ```
 
 {{% /md %}}
@@ -154,15 +154,15 @@ $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-dir
 **Windows cmd.exe**
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> set PULUMI_EXPERIMENTAL=true
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
 **Windows PowerShell**
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi preview --policy-pack <path-to-policy-pack-directory>
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
 {{% /md %}}

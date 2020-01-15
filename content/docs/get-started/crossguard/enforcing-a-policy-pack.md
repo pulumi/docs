@@ -49,8 +49,8 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
 <!-- markdownlint-enable emphasis -->
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy publish [org-name]
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy publish [org-name]
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -58,8 +58,8 @@ pulumi policy publish [org-name]
 <!-- markdownlint-enable emphasis -->
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy publish [org-name]
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy publish [org-name]
 ```
 
 {{% /md %}}
@@ -114,8 +114,8 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <v
 <!-- markdownlint-enable emphasis -->
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy enable <org-name>/<policy-pack-name> <version>
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -123,8 +123,8 @@ pulumi policy enable <org-name>/<policy-pack-name> <version>
 <!-- markdownlint-enable emphasis -->
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy enable <org-name>/<policy-pack-name> <version>
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
 {{% /md %}}
@@ -165,8 +165,8 @@ $ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript la
 <!-- markdownlint-enable emphasis -->
 
 ```bat
-set PULUMI_EXPERIMENTAL=true
-pulumi policy enable pulumi/policy-pack-typescript latest
+> set PULUMI_EXPERIMENTAL=true
+> pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 <!-- markdownlint-disable emphasis -->
@@ -174,8 +174,8 @@ pulumi policy enable pulumi/policy-pack-typescript latest
 <!-- markdownlint-enable emphasis -->
 
 ```powershell
-$env:PULUMI_EXPERIMENTAL = 'true'
-pulumi policy enable pulumi/policy-pack-typescript latest
+> $env:PULUMI_EXPERIMENTAL = 'true'
+> pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
 {{% /md %}}
