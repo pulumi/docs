@@ -12,7 +12,7 @@ tags:
  - policy as code
 ---
 
-After releasing Pulumi 1.0, we previewed new features that make deploying infrastructure and modern applications faster, easier, and more secure. As Pulumi 2.0 approaches General Availability, we’re taking all those features and focusing on three themes: workflow portability, policy as code, and developer experience. 
+After releasing Pulumi 1.0, we previewed new features that make deploying infrastructure and modern applications faster, easier, and more secure. As Pulumi 2.0 approaches General Availability, we’re taking all those features and focusing on three themes: workflow portability, policy as code, and developer experience.
 
 Why these three? Workflow portability is core to Pulumi, as we like to say, “Create, deploy and manage infrastructure, on any cloud, in any language.” Deploying and managing your infrastructure go hand-in-hand. That’s why we released Policy as Code or PaC. You can manage resources, security, compliance, and costs with PaC. Finally, Pulumi provides tools to improve the developer experience for both developers and operators. These tools can shorten the development cycle allowing for experimentation and provide observability during tests. Pulumi brings modern software development practices to infrastructure deployments.
 
