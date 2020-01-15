@@ -10,7 +10,7 @@ tags:
     - resources
 ---
 
-Pulumi has many resource providers that allow you to interact with your favorite cloud or resource. There are times when a provider may not deliver on the exact task that you want to accomplish. Dynamic Providers can be a powerful tool to help accomplish your infrastructure tasks.
+Pulumi has many resource providers that allow you to interact with your favorite cloud or resource. There are times when a provider may not deliver on the specific task that you want to accomplish. Dynamic Providers can be a powerful tool to help accomplish your infrastructure tasks.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ A resource provider is made up of two different pieces:
 
 ![How Pulumi works](./engine-block-diagram.png)
 
-A resource provider is an extension of the API exposed by the respective cloud providers. As such, it is also the limiting factor sometimes. Thankfully, there is a solution to this. Since the Pulumi engine works with life-cycle callbacks handing control to the provider at appropriate times, it is easy to write such a provider that implements custom logic in those callbacks.
+A resource provider is an extension of the API exposed by the respective cloud providers. As such, it can be the limiting factor. Thankfully, there is a solution to this. Since the Pulumi engine works with life-cycle callbacks handing control to the provider at appropriate times, it is easy to write a provider that implements custom logic in those callbacks.
 
 Learn more about how Pulumi works [here](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/).
 
@@ -34,11 +34,11 @@ Learn more about how Pulumi works [here](https://www.pulumi.com/docs/intro/conce
 
 > **Note**: Dynamic providers are currently only supported in JavaScript, TypeScript, and Python.
 
-Pulumi provides appropriate life-cycle callbacks through the `pulumi.dynamic.ResourceProvider` abstract class. While Pulumi does not know what sort of resources a Dynamic Provider will create, the life-cycle hooks must return data in specific formats, which Pulumi uses as data to call the appropriate callbacks.
+Pulumi provides appropriate life-cycle callbacks through the `pulumi.dynamic.ResourceProvider` abstract class. While Pulumi does not know what sort of resources a Dynamic Provider will create, the life-cycle hooks must return data in specific formats, which Pulumi uses to call the appropriate callbacks.
 
-For example, if the user changes an input property to your dynamic resource, the `diff` hook will be called with both the old (if applicable) and new inputs. You can then compare to see which input properties have changed and give hints to Pulumi as to whether `delete` should be called or whether to call the `update` hook.
+For example, if the user changes an input property to your dynamic resource, the `diff` hook will be called with both the old (if applicable) and new inputs. You can compare then to see which input properties have changed and give hints to Pulumi as to whether `delete` should be called or whether to call the `update` hook.
 
-> The `check` lifecycle hook will be called before any other hook to let you validate the inputs and populate defaults, if necessary.
+> The `check` life-cycle hook will be called before any other hook to let you validate the inputs and populate defaults, if necessary.
 
 When a dynamic resource instance updates, the `delete` hook will be called to allow you to perform any necessary cleanups before the dynamic resource is removed from your stack’s state.
 
@@ -86,7 +86,7 @@ Similar to the previous example, this is another example of a shortcoming of the
 
 Along with adding a custom domain to the CDN endpoint, this dynamic provider also enables HTTPS provided by Azure's one-click [HTTPS enablement](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl?tabs=option-1-default-enable-https-with-a-cdn-managed-certificate).
 
-As before, some of the details, such as the creation of the CDN profile and its endpoint are omitted here for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
+As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
 
 ```ts
 ...
