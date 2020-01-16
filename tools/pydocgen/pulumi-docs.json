@@ -188,6 +188,12 @@
       "terraform_provider_name": "rabbitmq"
     },
     {
+      "name": "Pulumi Rancher2",
+      "package_name": "pulumi_rancher2",
+      "pulumi_provider_name": "rancher2",
+      "terraform_provider_name": "rancher2"
+    },
+    {
       "name": "Pulumi TLS",
       "package_name": "pulumi_tls",
       "pulumi_provider_name": "tls",
