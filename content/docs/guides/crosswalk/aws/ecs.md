@@ -191,7 +191,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 });
 ```
 
-Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`](/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster-get), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
+Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ecs#Cluster-get" >}}), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
 
 ## ECS Tasks, Containers, and Services
 
@@ -310,7 +310,7 @@ Containers with Pulumi Crosswalk for AWS ECS are far more flexible than just acc
 and can even refer to a `Dockerfile` on disk so you do not need to build and publish
 it separately ahead of time. This makes it very easy to use private registrations for your ECS workloads.
 
-For example, [`fromPath`](/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Image-fromPath") will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
+For example, [`fromPath`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#Image-fromPath" >}}) will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
 the private ECR repostory path to the container:
 
 ```typescript
@@ -324,7 +324,7 @@ const task = new awsx.ecs.FargateTaskDefinition("task", {
 });
 ```
 
-For more control over how the Docker image is built and published, you can use [`fromDockerBuild`](/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Image-fromDockerBuild). This allows you
+For more control over how the Docker image is built and published, you can use [`fromDockerBuild`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#Image-fromDockerBuild" >}}). This allows you
 to control the build context, whether to cache multi-stage builds, and so on:
 
 ```typescript
