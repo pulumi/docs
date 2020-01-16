@@ -27,12 +27,12 @@ Supported languages run out of process and communicate over gRPC with the Pulumi
 
 ## Does Pulumi support automatic rollback in the event of an error or failure?
 
-No, Pulumi does not automatically rollback changes made during an update if an error or failure occurs. In the event that an error or failure occurs, Pulumi will complete any pending operations 
+No, Pulumi does not automatically rollback changes made during an update if an error or failure occurs. In the event that an error or failure occurs, Pulumi will complete any pending operations
 currently in progress and then exit and report the error or failure.
 
 To accomplish a _manual_ rollback after a failed deployment, revert the code and configuration changes of the failed deployment and run `pulumi up` to update your infrastructure to its previous "good" state. This is also known as a _roll forward_.
 
-There is an issue related to the idea of automatic rollbacks on GitHub at https://github.com/pulumi/pulumi/issues/96 if you would like to add to the discussion.
+There is an issue related to the idea of automatic rollbacks on GitHub at <https://github.com/pulumi/pulumi/issues/96> if you would like to add to the discussion.
 
 ## How does Pulumi manage secrets?
 
