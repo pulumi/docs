@@ -19,12 +19,12 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
     <tbody>
         {{< changelog-table-row version="1.8.1" date="2019-12-20" >}}
         {{< changelog-table-row version="1.8.0" date="2019-12-19" >}}
-        {{< changelog-table-row version="1.7.1" date="2019-12-14" >}}
+        {{< changelog-table-row version="1.7.1" date="2019-12-13" >}}
         {{< changelog-table-row version="1.7.0" date="2019-12-11" >}}
         {{< changelog-table-row version="1.6.1" date="2019-11-26" >}}
         {{< changelog-table-row version="1.6.0" date="2019-11-20" >}}
         {{< changelog-table-row version="1.5.2" date="2019-11-13" >}}
-        {{< changelog-table-row version="1.5.1" date="2019-11-07" >}}
+        {{< changelog-table-row version="1.5.1" date="2019-11-06" >}}
         {{< changelog-table-row version="1.4.1" date="2019-11-01" >}}
         {{< changelog-table-row version="1.4.0" date="2019-10-24" >}}
         {{< changelog-table-row version="1.3.4" date="2019-10-18" >}}
