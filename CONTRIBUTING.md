@@ -50,6 +50,7 @@ Which, on a page inside the `./content/reference` directory, will generate:
 - **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the you could add the following front matter `foo: "bar"`, and then reference the variable in markdown with the syntax `{{< param foo >}}`.
 
   - **no_on_this_page** Specify this variable to prevent displaying an "On This Page" TOC on the right nav for the page.
+  - **block_external_search_index** Specify this variable to prevent crawlers from indexing the page.
 
 ## Style guide
 
