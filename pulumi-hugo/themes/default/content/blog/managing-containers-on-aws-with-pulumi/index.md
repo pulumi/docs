@@ -25,7 +25,7 @@ It looks straightforward, but it's easy to get lost in the details when configur
 
 The AWS Elastic Container Registry (ECR) is a container registry that supports private container registries. ECR makes it easy to store, build, manage, and deploy container images and eliminates the need to operate your registry or use public registries, all in a highly available and scalable architecture.
 
-In this example, we use Pulumi’s [Crosswalk for AWS](https://www.pulumi.com/docs/guides/crosswalk/aws/). Crosswalk for AWS is a collection of frequent tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository; this creates the AWS Container Repository resource. The last line of the code exports the URL so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up`, the repository is ready to go, and you can use the Docker CLI to push, pull, and manage images.
+In this example, we use Pulumi’s [Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}). Crosswalk for AWS is a collection of frequent tasks and best practices that simplify deploying infrastructure on AWS. We first declare a repository; this creates the AWS Container Repository resource. The last line of the code exports the URL so that we can access the repository after we have updated our Pulumi stack. After we’ve run `pulumi up`, the repository is ready to go, and you can use the Docker CLI to push, pull, and manage images.
 
 ```typescript
 import * as awsx from "@pulumi/awsx";

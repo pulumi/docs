@@ -211,7 +211,7 @@ Pulumi Crosswalk for AWS supports three main options for running
 containers in AWS -- ECS Fargate, ECS with EC2 instances, and EKS --
 each of which integrates deeply with other AWS services like IAM, ELB,
 and CloudWatch. It's possible to use any of these services without
-Pulumi, but there are [many benefits to Pulumi's infrastructure as code](https://www.pulumi.com/why-pulumi/).
+Pulumi, but there are [many benefits to Pulumi's infrastructure as code]({{< relref "/why-pulumi" >}}).
 
 In short, to get your containers up on AWS, in an easy yet
 production-ready way, [get started for free with Pulumi for AWS today]({{< relref "/docs/get-started/aws" >}})!

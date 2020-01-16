@@ -15,7 +15,7 @@ meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi wi
 
 This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
 
-There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), the following components are also needed:
+There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks]({{< relref "/docs/intro/concepts/stack" >}}), the following components are also needed:
 
 * MySQL 5.6 DB server with at least 20GB storage space for data
 * Minimum 50GB SSD for object storage
@@ -26,7 +26,7 @@ There are two services that need to be hosted for the purposes of remote state m
 
 The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
 
-If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us](https://www.pulumi.com/about/#contact) to learn more.
+If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "about#contact" >}}) to learn more.
 
 ## Deployment Topology
 

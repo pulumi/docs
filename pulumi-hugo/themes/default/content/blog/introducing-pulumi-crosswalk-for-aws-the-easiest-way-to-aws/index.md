@@ -299,8 +299,7 @@ deploy natively in the cloud will unlock creativity and empower
 developers to take advantage of more of the rich capabilities of AWS. We
 can't wait to see what you build with Crosswalk!
 
-Crosswalk for AWS is free and open source, and you can get started today
-at <https://www.pulumi.com/crosswalk/aws>.
+Crosswalk for AWS is free and open source, and you can [get started today]({{< relref "/crosswalk/aws" >}}).
 
 For more on Crosswalk for AWS see:
 

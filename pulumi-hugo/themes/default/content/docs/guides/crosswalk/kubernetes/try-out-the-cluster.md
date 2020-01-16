@@ -11,7 +11,7 @@ menu:
 {{< cloudchoose >}}
 
 After the cluster is created with a Pulumi update, there will be
-[outputs][pulumi-outputs] with fields like the cluster's `kubeconfig` file
+[outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) with fields like the cluster's `kubeconfig` file
 contents, and its cluster name for reference.
 
 <div class="cloud-prologue-aws"></div>
@@ -474,7 +474,4 @@ To tear down NGINX, delete its definition in the Pulumi program and run a Pulumi
 
 ## Learn More
 
-See the official [Kubernetes Basics][k8s-basics] tutorial for more details.
-
-[pulumi-outputs]: https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs
-[k8s-basics]: https://kubernetes.io/docs/tutorials/kubernetes-basics/
+See the official [Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/) tutorial for more details.

@@ -115,7 +115,7 @@ $ pulumi stack output frontendIp
 ```
 
 If you paste this IP into your browser, you should see that it's redirected you to the [Pulumi
-homepage](http://www.pulumi.com). Alternatively, you can run this:
+homepage](/). Alternatively, you can run this:
 
 ```sh
 $ curl -sL $(pulumi stack output frontendIp):80 | grep -C 1 "<title>"

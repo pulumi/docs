@@ -205,7 +205,7 @@ this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
 Components are a powerful construct in Pulumi, and let you build larger
 first class resources out of smaller ones. There are other benefits,
 including seeing resource attribution in the CLI tree view, and the
-richer visualization in the [pulumi.com](http://pulumi.com) console:
+richer visualization in the [Pulumi Console](https://app.pulumi.com):
 
 ![pulumi app graph](./pulumi-resource-visualization.png)
 

@@ -76,4 +76,4 @@ Ska9hJu+9cKvItwYz2D5sacdA+3KJTI8MY8kgXDgQjVt3Rs1AoQ3ftd1UsWIfwQ5
 
 ## Public Notifications
 
-Public security notifications are posted in the **#announcements** channel of the [Pulumi Community on Slack](http://slack.pulumi.com/).
+Public security notifications are posted in the **#announcements** channel of the [Pulumi Community on Slack](https://slack.pulumi.com/).
