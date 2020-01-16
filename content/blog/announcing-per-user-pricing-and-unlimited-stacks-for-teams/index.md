@@ -73,7 +73,7 @@ structure:
 To get started, simply sign up for free using your identity provider of
 choice (ideally the same one your organization will be backed by). From
 there, create an organization that your team members will use. To use
-the free Community Edition, just download the CLI from <pulumi.com> and
+the free Community Edition, just [download the CLI]({{< relref "/docs/get-started" >}}) and
 sign into the free tier of the service when it prompts you.
 
 ### What is an organization?

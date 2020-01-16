@@ -42,7 +42,7 @@ consistent engineering workflow across multi-cloud environments -- often spannin
 
 **Launching our commercial SaaS product.** In October, [we launched our commercial SaaS
 product]({{< relref "/blog/building-a-future-of-cloud-engineering" >}}), with reasonable
-[pricing](https://www.pulumi.com/pricing/) so that teams of all sizes are able to get their code to the cloud
+[pricing]({{< relref "/pricing" >}}) so that teams of all sizes are able to get their code to the cloud
 productively, securely, and collaboratively. If Pulumi is like Git -- a local CLI and SDK -- then the Pulumi SaaS is
 like GitHub -- a hosted service to ensure you can use Pulumi in a team setting. In addition to the Team Edition, which
 is meant for the “Fortune 500,000,” we also launched the Enterprise Edition, for the Fortune 500. We already have

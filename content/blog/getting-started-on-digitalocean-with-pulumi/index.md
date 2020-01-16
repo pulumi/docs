@@ -131,4 +131,4 @@ curl "$(pulumi stack output endpoint)"
 ```
 
 We are constantly working on ways to make Pulumi more productive to use with DigitalOcean. Pulumi is free and open
-source. You can get started with Pulumi today at [https://www.pulumi.com](https://www.pulumi.com).
+source. You can get started with Pulumi today at [https://www.pulumi.com](/).

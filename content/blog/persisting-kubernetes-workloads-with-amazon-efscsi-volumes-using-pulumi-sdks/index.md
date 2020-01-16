@@ -493,4 +493,4 @@ Mon Jul 8 06:12:15 UTC 2019
 
 ```
 
-This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples) or refer to my other [Kubernetes articles](https://www.pulumi.com/blog/author/nishi-davidson/).
+This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples) or refer to my other [Kubernetes articles](/blog/author/nishi-davidson/).

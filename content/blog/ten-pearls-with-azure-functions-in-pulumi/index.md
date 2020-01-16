@@ -357,4 +357,4 @@ It's possible to have multiple input and output bindings, and any combination of
 
 In this post, we've seen some of the exciting things you can do with Azure Functions in Pulumi. Developers use serverless functions as a glue between managed cloud services. Pulumi offers a compelling way to define the links between these pieces of cloud infrastructure in a simple and expressive way.
 
-For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the  [Azure Quickstart](https://www.pulumi.com/docs/quickstart/azure/), check more examples at [Pulumi Azure GitHub](https://github.com/pulumi/pulumi-azure/tree/master/examples), and join the [Pulumi Community Slack](https://slack.pulumi.com/).
+For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the  [Azure Quickstart]({{< relref "/docs/get-started/azure" >}}), check more examples at [Pulumi Azure GitHub](https://github.com/pulumi/pulumi-azure/tree/master/examples), and join the [Pulumi Community Slack](https://slack.pulumi.com/).

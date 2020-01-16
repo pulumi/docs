@@ -34,7 +34,7 @@ You may choose a naming convention that best suits your organization.
 
 ### Infrastructure
 
-Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](https://www.pulumi.com/docs/intro/concepts/stack/) and you could create an Octopus environment for each of those.
+Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}) and you could create an Octopus environment for each of those.
 
 In a typical scenario where Pulumi is creating your cloud infrastructure, you will only need to a worker that can run the Pulumi CLI commands against your code package.
 

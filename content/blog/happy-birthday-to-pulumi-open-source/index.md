@@ -32,7 +32,7 @@ since launching:
 - Brought our [Python 3 SDK]({{< relref "/docs/reference/pkg/python" >}})
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs]({{< relref "/docs/reference/pkg/nodejs" >}}).
-- [Team and Enterprise SaaS editions for teams managing infrastructure in production.](https://www.pulumi.com/pricing)
+- [Team and Enterprise SaaS editions for teams managing infrastructure in production.]({{< relref "/pricing" >}})
 - [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< relref "/docs/intro/console/accounts-and-organizations/organizations" >}})
 - [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< relref "/docs/guides/continuous-delivery" >}})
 - [Pluggable secrets management and transitive state encryption.]({{< relref "managing-secrets-with-pulumi" >}})

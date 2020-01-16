@@ -37,7 +37,7 @@ days:
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
 remote state backends supported by Terraform. This is exposed via the
-[`terraform.state.RemoteStateReference`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/terraform/state/#RemoteStateReference) type in the
+[`terraform.state.RemoteStateReference`]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
 <!--more-->

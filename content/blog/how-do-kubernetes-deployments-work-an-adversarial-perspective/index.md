@@ -55,7 +55,7 @@ yourself the README contains detailed instructions.
 
 You can use `kubectl` or `pulumi` --- `kubespy` CLI itself is powered by
 the same code that underlies the core (OSS) [Pulumi
-engine](https://www.pulumi.com/kubernetes/). If you like this, and would
+engine]({{< relref "/topics/kubernetes" >}}). If you like this, and would
 like to see information like it in CI/CD, we hope you'll give it a
 shot! To get a flavor of what this looks like in practice, you might
 also check out [my tweetstorm](https://twitter.com/hausdorff_space/status/1039940379301179392)
