@@ -383,7 +383,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
 
 This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
 returning their result through a `Promise<...>`.  The result of the call is then wrapped into an `Output` so it can easily be
-passed as a resource input and to make it [simple to access properties]({{ relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
+passed as a resource input and to make it [simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 If you do not want to change all calls to be `async` (perhaps because only one is encountering a problem), you can alternatively
 update only specific problematic calls to be asynchronous like so:
