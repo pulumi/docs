@@ -51,6 +51,7 @@ Which, on a page inside the `./content/reference` directory, will generate:
 
   - **no_on_this_page** Specify this variable to prevent displaying an "On This Page" TOC on the right nav for the page.
   - **block_external_search_index** Specify this variable to prevent crawlers from indexing the page.
+  - **exclude_from_pulumi_search_index** Specify this variable to prevent the page from appear in internal search results.
 
 ## Style guide
 
