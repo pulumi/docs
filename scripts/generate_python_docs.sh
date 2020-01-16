@@ -30,6 +30,7 @@ PACKAGES=(
   "pulumi_packet"
   "pulumi_postgresql"
   "pulumi_rabbitmq"
+  "pulumi_rancher2"
   "pulumi_random"
   "pulumi_signalfx"
   "pulumi_spotinst"
