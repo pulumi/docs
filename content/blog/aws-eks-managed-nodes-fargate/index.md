@@ -281,7 +281,7 @@ This can be provisioned with a single `pulumi up`, just like before, but instead
 
 Note that it's possible to mix node groups. So, if you need precise control over some groups, but not others, feel free to call `createNodeGroup` and `createManagedNodeGroup` interspersed with one another. The EKS package knows what to do.
 
-For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs](/docs/reference/pkg/nodejs/pulumi/eks/#createNodeGroup). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
+For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#createNodeGroup" >}}). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
 
 ## Let Fargate Manage It All
 
@@ -293,7 +293,7 @@ Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori
 
 ![EC2 vs Fargate EKS Scaling](./clare-fargate.jpeg)
 
-Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile](/docs/reference/pkg/nodejs/pulumi/aws/eks/#FargateProfile). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
+Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#FargateProfile" >}}). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
 
 The EKS package, however, has  been enlightened to make allocating a Fargate-powered EKS cluster as simple as saying `fargate: true`. All we need to do is change our original cluster definition to the following:
 
@@ -339,6 +339,6 @@ In this article, we've seen the full range of EKS cluster management options:
 
 We're excited to offer support for this full range of options the same week of AWS re:Invent, including not just the building block support, but the simpler interface provided by [our open source EKS package](https://github.com/pulumi/pulumi-eks).
 
-To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/docs/get-started/). There are both [AWS](/docs/get-started/aws) and [Kubernetes](/docs/get-started/kubernetes) versions available.
+To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide]({{< relref "/docs/get-started" >}}). There are both [AWS]({{< relref "/docs/get-started/aws" >}}) and [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) versions available.
 
 Happy Fargating!
