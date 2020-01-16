@@ -26,7 +26,7 @@ There are two services that need to be hosted for the purposes of remote state m
 
 The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
 
-If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "about#contact" >}}) to learn more.
+If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "/about#contact" >}}) to learn more.
 
 ## Deployment Topology
 
