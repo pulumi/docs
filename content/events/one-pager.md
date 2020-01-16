@@ -17,21 +17,6 @@ hero:
         Center at <a class="underline text-blue-500" href="https://www.google.com/maps/place/Create33/@47.6050632,-122.3339756,15z/data=!4m2!3m1!1s0x0:0xdfce9739a948e539?sa=X&ved=2ahUKEwj5n43yxobnAhWUFzQIHaqaAbYQ_BIwDHoECA0QCA" target="_blank">999 3rd Ave Seattle, WA</a>.
         The entry doors may be locked when you arrive but we’ll have somebody
         nearby to let you in. Once inside, please take the elevator to the 33rd floor.
-    code: |
-          import * as kx from "@pulumi/kubernetesx";
-
-          // Define a Pod.
-          const pb = new kx.PodBuilder({ containers: [{ image: "nginx" }] });
-
-          // Create a Kubernetes Deployment using the previous Pod definition.
-          const deployment = new kx.Deployment("nginx", {
-            spec: pb.asDeploymentSpec()
-          });
-
-          // Expose the Deployment using a load balanced Kubernetes Service.
-          const service = deployment.createService({
-              type: kx.types.ServiceType.LoadBalancer,
-          });
     cta:
         url: https://www.meetup.com/Seattle-Kubernetes-Meetup/events/267073230/
         label: Register Here
