@@ -1,7 +1,7 @@
 ---
 title: Modern Infrastructure as Code
 type: page
-layout: event-one-pager
+layout: show-one-pager
 url: /show
 block_external_search_index: true
 
