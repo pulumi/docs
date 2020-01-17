@@ -1,11 +1,10 @@
 ---
 title: Modern Infrastructure as Code
+meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 type: page
 layout: show-one-pager
 url: /show
 block_external_search_index: true
-
-meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 
 hero:
     title: Meet the Pulumi team for tech talks and beer on Wednesday 1/22
