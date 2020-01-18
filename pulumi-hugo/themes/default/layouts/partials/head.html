@@ -8,6 +8,10 @@
         <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
     {{ end }}
 
+    {{ if .Params.block_external_search_index }}
+        <meta name="robots" content="noindex,follow">
+    {{ end }}
+
     <!--
         Metadata tags for OpenGraph and Twitter.
     -->
