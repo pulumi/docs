@@ -112,7 +112,7 @@ To get such an instance, you can either [create one manually](#creating-a-metric
 [alarms](#creating-cloudwatch-alarms) and [dashboards](#declaring-cloudwatch-dashboards-in-code).
 
 AWS services send metrics to CloudWatch, and you can send your own custom metrics to CloudWatch. For these Cloudwatch
-custom metrics, you  can add the data points in any order, and at any rate you choose. You can retrieve statistics about
+custom metrics, you can add the data points in any order, and at any rate you choose. You can retrieve statistics about
 those data points as an ordered set of time-series data.
 
 Metrics exist only in the region in which they are created. Metrics cannot be deleted, but they automatically expire
