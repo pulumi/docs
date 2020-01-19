@@ -90,7 +90,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudamqp.AwaitableGetVpcInfoResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetVpcInfoResult</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetVpcInfoResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetVpcInfoResult</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetVpcInfoResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -131,7 +131,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudamqp.GetVpcInfoResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">GetVpcInfoResult</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.GetVpcInfoResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">GetVpcInfoResult</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.GetVpcInfoResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcInfo.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudamqp.GetVpcInfoResult.id">
@@ -657,7 +657,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_cloudamqp.get_vpc_info">
-<code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_vpc_info</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_vpc_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_vpc_info</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_vpc_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
