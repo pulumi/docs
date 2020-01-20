@@ -636,6 +636,190 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">GremlinGraph</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">conflict_resolution_policies=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">index_policies=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition_key_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">throughput=None</em>, <em class="sig-param">unique_keys=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Gremlin Graph within a Cosmos DB Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>conflict_resolution_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The conflict resolution policy for the graph. One or more <code class="docutils literal notranslate"><span class="pre">conflict_resolution_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>index_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration of the indexing policy. One or more <code class="docutils literal notranslate"><span class="pre">index_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>partition_key_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Define a partition key. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>unique_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">unique_key</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>conflict_resolution_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>index_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>unique_keys</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.account_name">
+<code class="sig-name descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.conflict_resolution_policies">
+<code class="sig-name descname">conflict_resolution_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.conflict_resolution_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The conflict resolution policy for the graph. One or more <code class="docutils literal notranslate"><span class="pre">conflict_resolution_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.database_name">
+<code class="sig-name descname">database_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.database_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.index_policies">
+<code class="sig-name descname">index_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.index_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration of the indexing policy. One or more <code class="docutils literal notranslate"><span class="pre">index_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.partition_key_path">
+<code class="sig-name descname">partition_key_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.partition_key_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define a partition key. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.unique_keys">
+<code class="sig-name descname">unique_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.unique_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">unique_key</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">conflict_resolution_policies=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">index_policies=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition_key_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">throughput=None</em>, <em class="sig-param">unique_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GremlinGraph resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>conflict_resolution_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The conflict resolution policy for the graph. One or more <code class="docutils literal notranslate"><span class="pre">conflict_resolution_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>index_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration of the indexing policy. One or more <code class="docutils literal notranslate"><span class="pre">index_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>partition_key_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Define a partition key. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>unique_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">unique_key</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>conflict_resolution_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>index_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>unique_keys</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.cosmosdb.GremlinGraph.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.cosmosdb.MongoCollection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">MongoCollection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">default_ttl_seconds=None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">throughput=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Mongo Collection within a Cosmos DB Account.</p>

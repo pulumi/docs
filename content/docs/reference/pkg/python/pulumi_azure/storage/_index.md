@@ -803,6 +803,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetStorageContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.storage.Blob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Blob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob within a Storage Container.</p>
@@ -1565,6 +1570,42 @@ for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.GetStorageContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getStorageContainer.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.container_access_type">
+<code class="sig-name descname">container_access_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.container_access_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Access Level configured for this Container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.has_immutability_policy">
+<code class="sig-name descname">has_immutability_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.has_immutability_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is there an Immutability Policy configured on this Storage Container?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.has_legal_hold">
+<code class="sig-name descname">has_legal_hold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.has_legal_hold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is there a Legal Hold configured on this Storage Container?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of MetaData for this Container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2547,6 +2588,23 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.storage.get_storage_container">
+<code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_storage_container</code><span class="sig-paren">(</span><em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_storage_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Storage Container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Container.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>str</em>) – The name of the Storage Account where the Container was created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_container.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
