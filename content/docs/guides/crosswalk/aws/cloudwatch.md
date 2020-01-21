@@ -1,6 +1,6 @@
 ---
-title: "AWS CloudWatch Logs, Metrics, Alarms, and Dashboards"
-meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications.
+title: "AWS CloudWatch Metrics, Logs, Alarms, and Dashboards"
+meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS CloudWatch metrics, resources and applications.
 linktitle: CloudWatch
 menu:
   userguides:
@@ -22,7 +22,7 @@ unified view of AWS resources, applications and services.
 
 ## Overview
 
-Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications,
+Pulumi Crosswalk for AWS CloudWatch will help you operationally understand and manage your AWS resources and applications,
 including the following scenarios:
 
 * [Configure logging](#configuring-cloudwatch-logging), for debugging and diagnosing problems after they have happened
@@ -100,20 +100,20 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.ht
 
 ## Subscribing to CloudWatch Metrics
 
-Metric resources are the fundamental monitoring unit in CloudWatch. A metric represents a time-ordered set of data
-points that are published to CloudWatch. Think of a metric as a variable to monitor, and the data points as
-representing the values of that variable over time. For example, the CPU usage of a particular EC2 instance is one
-metric provided by Amazon EC2. The data points themselves can come from any application or business activity from
-which you collect data.
+What is a CloudWatch metric? Metric resources are the fundamental monitoring unit in CloudWatch. A metric represents
+a time-ordered set of data points that are published to CloudWatch. Think of a metric as a variable to monitor, and
+the data points as representing the values of that variable over time. For example, the CPU usage of a particular EC2
+instance is one metric provided by Amazon EC2. The data points themselves can come from any application or business activity
+from which you collect data.
 
 A CloudWatch metric in Pulumi Crosswalk for AWS is represented by an instance of the `awsx.cloudwatch.Metric` class.
 To get such an instance, you can either [create one manually](#creating-a-metric-object), or, more commonly,
 [use a pre-defined metric](#using-a-pre-defined-metric). From there, you can create
 [alarms](#creating-cloudwatch-alarms) and [dashboards](#declaring-cloudwatch-dashboards-in-code).
 
-AWS services send metrics to CloudWatch, and you can send your own custom metrics to CloudWatch. You can add the
-data points in any order, and at any rate you choose. You can retrieve statistics about those data points as an
-ordered set of time-series data.
+AWS services send metrics to CloudWatch, and you can send your own custom metrics to CloudWatch. For these CloudWatch
+custom metrics, you can add the data points in any order, and at any rate you choose. You can retrieve statistics about
+those data points as an ordered set of time-series data.
 
 Metrics exist only in the region in which they are created. Metrics cannot be deleted, but they automatically expire
 after 15 months if no new data is published to them. Data points older than 15 months expire on a rolling basis; as
@@ -147,7 +147,7 @@ const funcMetric = new awsx.cloudwatch.Metric({
 ```
 
 More commonly, applications will want to work with existing metrics produced by AWS services, using
-[pre-defined metrics](#using-a-pre-defined-metric). In the event that you'd like to create a custom metric, or use a
+[pre-defined metrics](#using-a-pre-defined-metric). In the event that you'd like to create a CloudWatch custom metric, or use a
 service not already pre-defined, however, refer to the [API documentation for properties used when creating a new
 `Metric` object]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#MetricArgs" >}}).
 
@@ -404,3 +404,5 @@ More complex widget customization is possible. See the individual types and argu
 For more information about Amazon CloudWatch, please see the following:
 
 * [Amazon CloudWatch homepage](https://aws.amazon.com/cloudwatch/)
+
+Or [get started]({{< relref "/docs/get-started/aws" >}}) with Pulumi.
