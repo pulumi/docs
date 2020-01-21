@@ -1,14 +1,16 @@
 ---
 title: "Python"
-meta_desc: An overview of how to use Python when writing cloud applications for any
-           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
+meta_desc: An overview of how to use Python for infrastructure as code
+           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
-    weight: 2
+    weight: 4
 
 aliases: ["/docs/reference/python/"]
 ---
+
+<img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">
 
 Pulumi supports programs written in Python 3.
 
@@ -16,7 +18,7 @@ Pulumi supports programs written in Python 3.
 > have installed Python 3.6 prior to running Pulumi programs, or you will likely see syntax errors - Pulumi makes use of
 > new Python syntax that is not backwards-compatible with Python 2. Older Pulumi versions did support Python 2.7.
 
-<a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON</button></a>
+<a class="btn" href="https://www.python.org/downloads/" target="_blank" title="Install Python">INSTALL PYTHON</a>
 
 ## Getting Started
 

@@ -1,11 +1,11 @@
 ---
-title: ".NET Core"
-meta_desc: An overview of how to use .NET Core when writing cloud applications for any
-           Cloud Provider (AWS, Azure, GCE, Kubernetes, etc.).
+title: ".NET Core (C#, VB, F#)"
+meta_desc: An overview of how to use .NET languages like C# and F# for infrastructure as code
+           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages
-    weight: 3
+    weight: 1
 
 aliases: ["/dotnet/"]
 ---
@@ -15,6 +15,36 @@ aliases: ["/dotnet/"]
 Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
 > **Note:** Pulumi for .NET is in preview and is under active development. We would [love your feedback](https://github.com/pulumi/pulumi/issues/new)!
+
+<a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET Core">INSTALL .NET CORE</a>
+
+## Getting Started
+
+The fastest way to get up and running is to choose from one of the following Getting Started guides:
+
+<div class="flex md:flex-row flex-col my-6">
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
+        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
+    </a>
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
+        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
+    </a>
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
+        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    </a>
+</div>
+
+> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
+> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
+
+## Prerequisites
+
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
+
+1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
+
+## Example
 
 {{% lang csharp %}}
 For example, this C# program provisions an Azure resource group and storage account:
@@ -122,32 +152,6 @@ End Module
 ```
 
 {{% /lang %}}
-
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="flex md:flex-row flex-col my-6">
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
-        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
-        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
-        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
-    </a>
-</div>
-
-> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
-> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
-
-## Prerequisites
-
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
-
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
 
 ## C\#, F\#, and VB Templates
 
