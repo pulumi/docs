@@ -33,6 +33,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
 * [Okta]({{< relref "./okta" >}})
+* [Rancher2]({{< relref "./rancher2" >}})
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
 
