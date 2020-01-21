@@ -204,9 +204,9 @@ default `index.ts` file.
     * automation and prod
     */
 
-const vpc = new awsx.Network("vpc", { usePrivateSubnets: false });
+const vpc = new awsx.ec2.Vpc("vpc", {});
 const cluster = new eks.Cluster("eks-cluster", {
-  vpcId             : vpc.vpcId,
+  vpcId             : vpc.id,
   subnetIds         : vpc.publicSubnetIds,
   instanceType      : "t2.medium",
   nodeRootVolumeSize: 200,
