@@ -152,9 +152,9 @@ class Program
 }
 ```
 
-In this example, the two resource objects, plus their names and properties, tells Pulumi everything it needs to create, update, or delete your infrastructure. For example, Pulumi now knows you'd like an EC2 security group named `web-sg`, with a single ingress rule, and a `t2.micro`-sized EC2 instance running AMI `ami-8689aa05` using that security group. Pulumi understands the dependencies between resources---thanks to [output properties](#outputs)---which lets us maximize parallelism and respect ordering. When you run the `pulumi up` command, Pulumi will compute this desired state, compare it to the current infrastructure you already have (if any), show you the delta, and let you confirm and carry out the changes.
+In this example, the two resource objects, plus their names and properties, tells Pulumi everything it needs to create, update, or delete your infrastructure. For example, Pulumi now knows you'd like an EC2 security group named `web-sg`, with a single ingress rule, and a `t2.micro`-sized EC2 instance running AMI `ami-8689aa05` using that security group. Pulumi understands the dependencies between resources---thanks to [output properties](#outputs)---which maximizes parallelism and ensures correct ordering. When you run the `pulumi up` command, Pulumi will compute this desired state, compare it to the current infrastructure you already have (if any), show you the delta, and let you confirm and carry out the changes.
 
-You can export resulting infrastructure values that you wish to access outside your application. For example, change the end of the example above as follows to export the server's resulting IP address and DNS name:
+You can export resulting infrastructure values that you wish to access outside your application. For example, adding this code to example above exports the server's resulting IP address and DNS name:
 
 {{< langchoose csharp >}}
 
@@ -198,11 +198,11 @@ pulumi.export('public_dns', server.public_dns)
 }
 ```
 
-These are printed after you do a `pulumi up` and they are easy to access from the CLI's `pulumi stack output` command. To learn more, see [stack outputs](#stack-outputs) below.
+The exported values are printed after you do a `pulumi up` and they are easy to access from the CLI's `pulumi stack output` command. To learn more, see [stack outputs](#stack-outputs) below.
 
 ## Pulumi SDK {#pulumipulumi}
 
-The Pulumi SDK defines Pulumi's most fundamental types and functions:
+The Pulumi SDK library defines Pulumi's most fundamental types and functions:
 
 {{< langchoose csharp >}}
 
@@ -226,7 +226,7 @@ import "github.com/pulumi/pulumi/sdk/go/pulumi"
 using Pulumi;
 ```
 
-These are the most important major elements of the Pulumi SDK library:
+These are the most essential concepts defined by the Pulumi SDK:
 
 * [Resources](#resources): how infrastructure is represented in Pulumi
 * [Components](#components): create abstractions and aggregate other resources
@@ -238,14 +238,12 @@ These are the most important major elements of the Pulumi SDK library:
 * [Stack References](#stack-references): reference one stack's outputs from another
 * [Runtime Functions](#funcs): access important metadata and capabilities at runtime
 
-Dependencies between resources are encoded with the [{{< pulumi-output-nohref >}}](#outputs) type.
-
 ### Resources {#resources}
 
-All resources are subclasses of the {{< pulumi-resource >}} class. There are two families of resources that branch from this base class:
+All infrastructure resources are described by subclasses of the {{< pulumi-resource >}} class. There are two families of resources that branch from this base class:
 
-* {{< pulumi-customresource >}}: resources managed externally by a resource provider. Most resources are of this type.
-* {{< pulumi-componentresource >}}: an aggregation of many resources as children to form a larger component abstraction.
+* {{< pulumi-customresource >}}: external resources managed by a resource provider (most common)
+* {{< pulumi-componentresource >}}: an aggregation of many resources to form a larger abstraction
 
 #### Custom Resources
 
@@ -273,13 +271,15 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 var res = new Resource(name, args, options);
 ```
 
-All resources have a [`name`](#names), which must be unique across your entire Pulumi program. This logical name influences your cloud provider's physical name, although [Pulumi auto-names resources](#autonaming), so they may differ.
+All resources have a [`name`](#names), which must be unique across your entire Pulumi program. This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming), so they may differ.
 
-The `args` object contains a set of named property input values that are used to initialize the resource. These can be normal raw values---such as strings, integers, lists, and maps---or [outputs from other resources](#outputs).
+The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values---such as strings, integers, lists, and maps---or [outputs from other resources](#outputs).
+
+The `options` argument is optional, but [lets you control certain aspects of the resource](#resourceoptions), like custom provider configuration, explicit dependencies, or importing existing infrastructure.
 
 ##### Resource Names {#names}
 
-Every resource managed by Pulumi has a **logical name** that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
+Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
 {{< langchoose csharp >}}
 
@@ -307,10 +307,10 @@ This logical name is used by Pulumi to track the identity of a resource across m
 
 The name specified during resource creation is used in two key ways:
 
-1. As a default prefix for the resource's **physical name** in the target cloud provider.
-2. To construct the [Universal Resource Name (URN)](#urns) used by Pulumi to track the resource across updates.
+1. As a default prefix for the resource's physical name, assigned by the cloud provider.
+2. To construct the [Universal Resource Name (URN)](#urns) used to track the resource across updates.
 
-Note that the variable name a resource object is assigned to isn't used in any way for either logical or physical naming.
+> Note that the variable name a resource object is assigned to isn't used in any way for either logical or physical naming. The variable simply lets you reference that resource elsewhere in your program.
 
 ##### Physical Names and Auto-Naming {#autonaming}
 
@@ -318,9 +318,9 @@ A resource's logical and physical names may not match. In fact, most physical re
 
 This random suffix is added for two reasons:
 
-* It ensures that two stacks for the same project can be deployed without risk of collisions. This helps you to multi-instance your project more easily, whether that's for many development or testing instances, or even scaling to new regions. Without auto-naming, you would need to manually distinguish these resources with different physical names.
+* It ensures that two stacks for the same project can be deployed without risk of collision. This helps you to multi-instance your project more easily, whether that's for many development or testing stacks, or even scaling to new regions. Without auto-naming, you would need to manually distinguish these resources with different physical names.
 
-* It allows Pulumi to do zero-downtime resource updates. Certain updates require replacing resources, rather than updating them in place. This is because Pulumi can create replacements first, then update existing references to them, and finally delete the old resources. If it weren't for auto-naming, Pulumi would need to do things in a very different order: namely, it would need to delete resources first, and create new instances afterwards, which is far more impactful and leads to downtime.
+* It allows Pulumi to do zero-downtime resource updates. Certain updates require replacing resources, rather than updating them in place, due to the way cloud providers work. By default, Pulumi creates replacements first, then updates existing references to them, and finally deletes the old resources. If it weren't for auto-naming, Pulumi would need to do things in a very different order: namely, it would need to delete resources first, and create new instances afterwards, which is far more impactful and leads to downtime.
 
 Auto-naming can be overridden by manually specifying a physical name on your resource for use cases that require precise names. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor:
 
@@ -357,44 +357,46 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
 });
 ```
 
-> If `name` doesn't work, please consult the documentation for the specific resource you are creating. Some resources use a different property to override the auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of `name`. Other resources, like `aws.kms.Key`, don't even have physical names and instead use other auto-generated IDs to uniquely identify them.
+> If `name` doesn't work, consult the documentation for the specific resource you are creating. Some resources use a different property to override the auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of `name`. Other resources, like `aws.kms.Key`, don't even have physical names and instead use other auto-generated IDs to uniquely identify them.
 
-Notice above that the physical and logical names do not need to match. You may even elect to construct the name using the name of your project and/or stack instead. This is often necessary if you are going to create multiple stacks for your project:
+Overriding auto-naming opens your project up to naming collisions. As a result, for resources that may need to be replaced, you should specify [`deleteBeforeReplace: true` in the resources's options](#deletebeforereplace). This ensures old resources are deleted before new ones are recreated.
+
+The physical and logical names don't need to match. You may even elect to construct the name using your project and stack names. This protects you from naming collisions similar to auto-naming while still having nice names, although `deleteBeforeReplace` is still necessary:
 
 {{< langchoose csharp >}}
 
 ```javascript
 let role = new aws.iam.Role("my-role", {
     name: "my-role-" + pulumi.getProject() + "-" + pulumi.getStack(),
-});
+}, { deleteBeforeReplace: true });
 ```
 
 ```typescript
 let role = new aws.iam.Role("my-role", {
     name: `my-role-${pulumi.getProject()}-${pulumi.getStack()}`,
-});
+}, { deleteBeforeReplace: true });
 ```
 
 ```python
 role = iam.Role('my-role', {
     name='my-role-%s-%s'.format(pulumi.get_project(), pulumi.get_stack())
-})
+}, opts=ResourceOptions(delete_before_replace=True))
 ```
 
 ```go
 role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
     Name: "my-role-"+pulumi.GetProject()+"-"+pulumi.GetStack(),
-}, pulumi.ResourceOpt{})
+}, pulumi.ResourceOpt{DeleteBeforeReplace: true})
 ```
 
 ```csharp
 var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
-{
-    Name = "my-role-" + Deployment.Instance.ProjectName + "-" + Deployment.Instance.StackName,
-});
+    {
+        Name = "my-role-" + Deployment.Instance.ProjectName + "-" + Deployment.Instance.StackName,
+    },
+    new CustomResourceOptions { DeleteBeforeReplace = true }
+);
 ```
-
-Overriding auto-naming typically opens up your project to naming collisions. As a result, for resources that may need to be replaced, you will also need to specify `deleteBeforeReplace: true` in the resources's options. This ensures old resources are deleted before new ones are recreated.
 
 ##### Resource URNs {#urns}
 
@@ -973,7 +975,7 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation
 ```
 
 ```go
-// Transformations is not yet supported in Go.
+// Transformations are not yet supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
@@ -1009,11 +1011,93 @@ Transformations can also be applied in bulk to many resources in a stack by usin
 
 It's possible to look up an existing resource by its ID using the static `get` function that is available on all resource types. This differs from `import` functionality in that, although the resulting resource object's state will match the live state from an existing environment, its management will not come under the control of Pulumi. A resource read in this manner will never be updated or deleted by Pulumi during the course of an update.
 
-This can be used to consume properties from a resource provisioned elsewhere. For example, this program reads an existing EC2 Security Group and uses it as input when creating an EC2 instance type:
+This can be used to consume properties from a resource provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses it as input when creating an EC2 Instance:
 
+{{< langchoose csharp >}}
+
+```javascript
+let aws = require("@pulumi/aws");
+
+let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+
+let server = new aws.ec2.Instance("web-server", {
+    ami: "ami-6869aa05",
+    instanceType: "t2.micro",
+    securityGroups: [ group.name ], // reference the security group resource above
+});
 ```
-TODO
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+
+let server = new aws.ec2.Instance("web-server", {
+    ami: "ami-6869aa05",
+    instanceType: "t2.micro",
+    securityGroups: [ group.name ], // reference the security group resource above
+});
 ```
+
+```python
+import pulumi_aws as aws
+
+group = aws.ec2.SecurityGroup.get('sg-0dfd33cdac25b1ec9')
+
+server = aws.ec2.Instance('web-server',
+    ami='ami-6869aa05',
+    instance_type='t2.micro',
+    security_groups=[group.name]) # reference the security group resource above
+```
+
+```go
+import (
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        group, err := ec2.GetSecurityGroup(ctx, "sg-0dfd33cdac25b1ec9", nil)
+        if err != nil {
+            return err
+        }
+        server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+            Ami:            "ami-6869aa05",
+            InstanceType:   "t2.micro",
+            SecurityGroups: []interface{}{group.Name()},
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    })
+}
+```
+
+```csharp
+using Pulumi;
+using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
+
+class Program
+{
+    static Task<int> Main()
+    {
+        return Deployment.RunAsync(async () => {
+            var group = SecurityGroup.Get("sg-0dfd33cdac25b1ec9");
+
+            var server = new Instance("web-server", new InstanceArgs {
+                Ami = "ami-6869aa05",
+                InstanceType = "t2.micro",
+                SecurityGroups = { group.Name }
+            });
+        });
+    }
+}
+```
+
+Importantly, Pulumi will never attempt to modify the Security Group in this example. It simply reads back its state from your currently configured cloud account, and then uses it as inputs to the EC2 Instance.
 
 #### Component Resources {#components}
 
