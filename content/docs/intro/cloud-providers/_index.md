@@ -49,7 +49,8 @@ aliases: ["/docs/reference/clouds/"]
 ## Network Providers
 
 * [Cloudflare]({{< relref "./cloudflare" >}})
-* [F5 Big IP]({{< relref "./f5bigip" >}})
+* [DNSimple]({{< relref "./dnsimple" >}})
+* [F5 BIG-IP]({{< relref "./f5bigip" >}})
 
 ## VCS Providers
 
