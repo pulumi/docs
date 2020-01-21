@@ -36,6 +36,10 @@ aliases: ["/docs/reference/clouds/"]
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
 
+## Monitoring Providers
+
+* [New Relic]({{< relref "./newrelic" >}})
+
 ## Network Providers
 
 * [Cloudflare]({{< relref "./cloudflare" >}})
