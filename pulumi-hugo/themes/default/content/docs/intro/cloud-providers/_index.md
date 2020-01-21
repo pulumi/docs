@@ -41,6 +41,7 @@ aliases: ["/docs/reference/clouds/"]
 
 * [Datadog]({{< relref "./datadog" >}})
 * [New Relic]({{< relref "./newrelic" >}})
+* [SignalFx]({{< relref "./signalfx" >}})
 
 ## Network Providers
 
