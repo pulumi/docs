@@ -55,9 +55,9 @@ import * as k8s from "@pulumi/kubernetes";
 //* STEP 1: Create an EKS cluster, an EFS endpoint and mount the EFS endpoint in each public subnet of the EKS cluster
 
 // Create an EKS Cluster
-const vpc = new awsx.Network("vpc", { usePrivateSubnets: false });
+const vpc = new awsx.ec2.Vpc("vpc", {});
 export const cluster = new eks.Cluster("eks-cluster", {
-  vpcId: vpc.vpcId,
+  vpcId: vpc.id,
   subnetIds: vpc.publicSubnetIds,
   instanceType: "t2.medium",
   version: "1.12",

@@ -83,9 +83,7 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 
-const vpc = new awsx.Network("vpc-alb-ingress-eks", {
-  usePrivateSubnets: false
-});
+const vpc = new awsx.ec2.Vpc("vpc-alb-ingress-eks", {});
 const cluster = new eks.Cluster("eks-cluster", {
   vpcId: vpc.id,
   subnetIds: vpc.publicSubnetIds,
