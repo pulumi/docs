@@ -159,6 +159,7 @@ $ source venv/bin/activate
 ```bash
 $ pip3 install -r requirements.txt
 ```
+
 {{% /lang %}}
 
 {{% lang go %}}
@@ -167,6 +168,7 @@ For Go, before we can deploy the stack, you will need to initialize your project
 ```bash
 $ go mod init
 ```
+
 {{% /lang %}}
 
 Next, we'll deploy the stack.
