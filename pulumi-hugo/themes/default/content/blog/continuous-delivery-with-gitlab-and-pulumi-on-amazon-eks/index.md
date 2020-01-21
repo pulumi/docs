@@ -208,10 +208,10 @@ const automationRoleArn = iamstack.getOutput("automationRoleArn")
 
 /* * Single step deployment of EKS cluster with the most important variables and simple function to create two namespaces */
 
-const vpc = new awsx.Network("vpc");
+const vpc = new awsx.ec2.Vpc("vpc", {});
 const cluster = new eks.Cluster("eks-cluster", {
-    vpcId             : vpc.vpcId,
-    subnetIds         : vpc.subnetIds,
+    vpcId             : vpc.id,
+    subnetIds         : vpc.publicSubnetIds,
     instanceType      : "t2.medium",
     nodeRootVolumeSize: 200,
     desiredCapacity   : 1,

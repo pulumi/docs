@@ -117,12 +117,12 @@ examples:
           import * as eks from "@pulumi/eks";
 
           // Create a VPC for our cluster.
-          const vpc = new awsx.Network("vpc");
+          const vpc = new awsx.ec2.Vpc("vpc", {});
 
           // Create the EKS cluster itself.
           const cluster = new eks.Cluster("cluster", {
-              vpcId: vpc.vpcId,
-              subnetIds: vpc.subnetIds,
+              vpcId: vpc.id,
+              subnetIds: vpc.publicSubnetIds,
               instanceType: "t2.medium",
               desiredCapacity: 4,
               minSize: 3,
