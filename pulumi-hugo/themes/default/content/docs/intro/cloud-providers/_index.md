@@ -21,6 +21,7 @@ aliases: ["/docs/reference/clouds/"]
 
 ## Cloud Providers
 
+* [CloudAMQP]({{< relref "./cloudamqp" >}})
 * [Fastly]({{< relref "./fastly" >}})
 * [DigitalOcean]({{< relref "./digitalocean" >}})
 * [Linode]({{< relref "./linode" >}})
