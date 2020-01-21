@@ -111,7 +111,7 @@ To get such an instance, you can either [create one manually](#creating-a-metric
 [use a pre-defined metric](#using-a-pre-defined-metric). From there, you can create
 [alarms](#creating-cloudwatch-alarms) and [dashboards](#declaring-cloudwatch-dashboards-in-code).
 
-AWS services send metrics to CloudWatch, and you can send your own custom metrics to CloudWatch. For these Cloudwatch
+AWS services send metrics to CloudWatch, and you can send your own custom metrics to CloudWatch. For these CloudWatch
 custom metrics, you can add the data points in any order, and at any rate you choose. You can retrieve statistics about
 those data points as an ordered set of time-series data.
 
