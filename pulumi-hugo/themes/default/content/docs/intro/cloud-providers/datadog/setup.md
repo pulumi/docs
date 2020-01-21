@@ -29,5 +29,5 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set datadog:appKey YYYYYYYYYYYYYY --secret
     ```
 
-Remember to pass `--secret` when setting `datadog:apiKey` and `datadog:appKey` so that it is properly encrypted. A full set of configuration parameters
+Remember to pass `--secret` when setting `datadog:apiKey` and `datadog:appKey` so that they are properly encrypted. A full set of configuration parameters
 can be found listed on the [Project README](https://github.com/pulumi/pulumi-datadog/blob/master/README.md).

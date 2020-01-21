@@ -31,5 +31,5 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set rancher2:secretKey ZZZZZZZZZZZZZZ --secret
     ```
 
-Remember to pass `--secret` when setting `rancher2:accessKey` and `rancher2:secretKey` so that it is properly encrypted. A full set of configuration parameters
+Remember to pass `--secret` when setting `rancher2:accessKey` and `rancher2:secretKey` so that they are properly encrypted. A full set of configuration parameters
 can be found listed on the [Project README](https://github.com/pulumi/pulumi-rancher2/blob/master/README.md).

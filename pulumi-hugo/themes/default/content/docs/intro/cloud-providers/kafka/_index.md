@@ -8,7 +8,7 @@ menu:
     weight: 5
 ---
 
-<img src="/logos/tech/rabbitmq.png" align="right" class="h-16 px-8 pb-4">
+<img src="/logos/tech/kafka.png" align="right" class="h-16 px-8 pb-4">
 
 The Kafka provider for Pulumi can be used to provision any of the resources available for Kafka.
 The Kafka provider must be configured with credentials to deploy and update resources in Kafka.

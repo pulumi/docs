@@ -1,14 +1,14 @@
 ---
-title: F5 Big IP Setup
-meta_desc: This page provides an overview on how to configure credentials for the Pulumi F5 Big IP Provider.
+title: F5 BIG-IP Setup
+meta_desc: This page provides an overview on how to configure credentials for the Pulumi F5 BIG-IP Provider.
 ---
 
-The [Pulumi F5 Big IP provider]({{< relref "./" >}}) uses the F5 Big IP SDK to manage and provision resources.
+The [Pulumi F5 BIG-IP provider]({{< relref "./" >}}) uses the F5 BIG-IP SDK to manage and provision resources.
 
-> Pulumi relies on the F5 Big IP SDK to authenticate requests from your computer to the resources. Your credentials are never sent
+> Pulumi relies on the F5 BIG-IP SDK to authenticate requests from your computer to the resources. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi F5 Big IP Provider]({{< relref "./" >}}) needs to be configured with F5 Big IP credentials
+The [Pulumi F5 BIG-IP Provider]({{< relref "./" >}}) needs to be configured with F5 BIG-IP credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

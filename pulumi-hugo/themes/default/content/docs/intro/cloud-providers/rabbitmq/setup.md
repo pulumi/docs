@@ -31,5 +31,5 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set rabbitmq:password ZZZZZZZZZZZZZZ --secret
     ```
 
-Remember to pass `--secret` when setting `rabbitmq:username` and `rabbitmq:password` so that it is properly encrypted. A full set of configuration parameters
+Remember to pass `--secret` when setting `rabbitmq:username` and `rabbitmq:password` so that they are properly encrypted. A full set of configuration parameters
 can be found listed on the [Project README](https://github.com/pulumi/pulumi-rabbitmq/blob/master/README.md).
