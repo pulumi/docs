@@ -170,6 +170,15 @@ class Program
 
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
+{{% lang go %}}
+Recompile your project so the changes are picked up:
+
+```bash
+$ go build $(basename $(pwd))
+```
+
+{{% /lang %}}
+
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}

@@ -14,16 +14,6 @@ aliases: ["/docs/quickstart/azure/deploy-changes/"]
 
 Now let's deploy our changes.
 
-{{% lang go %}}
-Recompile your project so the changes are picked up:
-
-```bash
-$ go build $(basename $(pwd))
-```
-
-Now, deploy them:
-{{% /lang %}}
-
 ```bash
 $ pulumi up
 ```

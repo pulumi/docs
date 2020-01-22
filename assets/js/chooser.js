@@ -25,25 +25,27 @@ function selectChoice(kind, choice, extra) {
     });
 
     // Show and hide divs for the relevant choices.
-    $("div,span").each(function (i, e) {
-        var classes = getElemClasses(e);
-        for (var i = 0; i < classes.length; i++) {
-            if (classes[i].startsWith(kind + "-prologue-")) {
-                var next = $(e).next();
-                if (next) {
-                    if (classes[i] === kind + "-prologue-" + choice) {
-                        $(next).show();
-                    } else {
-                        $(next).hide();
+    if (choiceTabs > 0) {
+        $("div,span").each(function (i, e) {
+            var classes = getElemClasses(e);
+            for (var i = 0; i < classes.length; i++) {
+                if (classes[i].startsWith(kind + "-prologue-")) {
+                    var next = $(e).next();
+                    if (next) {
+                        if (classes[i] === kind + "-prologue-" + choice) {
+                            $(next).show();
+                        } else {
+                            $(next).hide();
+                        }
                     }
+                    break;
                 }
-                break;
             }
-        }
-    });
+        });
 
-    if (extra) {
-        extra();
+        if (extra) {
+            extra();
+        }
     }
 }
 
@@ -146,14 +148,19 @@ function hideShowChoices(kind, selector, defaultChoice) {
 
     var tabsOnPageKeys = Object.keys(tabsOnPage);
 
+    // If we didn't find any tabs, there's nothing else to do.
+    if (tabsOnPageKeys.length === 0) {
+        return;
+    }
+
     // Now select the right choice based on whether there's a cookie, defaulting as appropriate.
     // Make sure to select the cookie's choice, even if there are no tabs, as there may still be
     // divs and spans, like {{% lang X %}} directives, on the page.
     var choiceCookie = decodeURIComponent(
         document.cookie.replace(new RegExp("(?:(?:^|.*;\\s*)pulumi_" + kind + "\\=\\s*([^;]*).*$)|^.*$"), "$1"));
-    if (choiceCookie) {
+    if (choiceCookie && tabsOnPage.hasOwnProperty(choiceCookie)) {
         selector(choiceCookie);
-    } else if (defaultChoice) {
+    } else if (defaultChoice && tabsOnPage.hasOwnProperty(defaultChoice)) {
         selector(defaultChoice);
     } else if (tabsOnPageKeys.length > 0) {
         selector(tabsOnPageKeys[0]);
