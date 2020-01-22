@@ -85,6 +85,8 @@ func main() {
 type tutorial struct {
 	Name              string
 	Title             string
+	H1                string
+	LinkTitle         string
 	MetaDesc          string
 	Cloud             string
 	Language          string
@@ -139,7 +141,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		top := md.Parse(body)
 
 		// The first H1 is assumed to be the title.
-		var title string
+		var h1 string
 		top.Walk(func(node *blackfriday.Node, entering bool) blackfriday.WalkStatus {
 			if node.Type == blackfriday.Link {
 				destination := string(node.LinkData.Destination)
@@ -152,7 +154,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			if node.Type == blackfriday.Heading && node.HeadingData.Level == 1 {
 				node.Walk(func(inner *blackfriday.Node, entering bool) blackfriday.WalkStatus {
 					if inner.Type == blackfriday.Text {
-						title += string(inner.Literal)
+						h1 += string(inner.Literal)
 					}
 					return blackfriday.GoToNext
 				})
@@ -160,15 +162,31 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			}
 			return blackfriday.GoToNext
 		})
-		if title == "" {
+		if h1 == "" {
 			warn("tutorial is missing an H1 title: %s", name)
 			continue
+		}
+
+		// Add the language to the page title to avoid duplicate titles.
+		var title string
+		langMap := map[string]string{
+			"js": "Javascript",
+			"ts": "TypeScript",
+			"go": "Go",
+			"py": "Python",
+			"cs": "C#",
+		}
+		if val, ok := langMap[parts[1]]; ok {
+			title = fmt.Sprintf("%s | %s", h1, val)
 		}
 
 		// Great! We have a new tutorial. Append it and let's move on to the next one.
 		tutorials = append(tutorials, tutorial{
 			Name:              name,
 			Title:             title,
+			H1:                h1,
+			// LinkTitle is the display text for the breadcrumb control.
+			LinkTitle:         h1,
 			MetaDesc:          "",
 			Cloud:             parts[0],
 			Language:          parts[1],
