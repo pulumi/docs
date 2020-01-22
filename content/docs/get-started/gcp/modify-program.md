@@ -175,6 +175,15 @@ class Program
 }
 ```
 
+{{% lang go %}}
+Recompile your project so the changes are picked up:
+
+```bash
+$ go build $(basename $(pwd))
+```
+
+{{% /lang %}}
+
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}
