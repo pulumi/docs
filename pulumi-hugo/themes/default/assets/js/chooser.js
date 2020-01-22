@@ -58,6 +58,9 @@ function selectLanguage(lang) {
             for (var i = 0; i < classes.length; i++) {
                 if (classes[i].startsWith("language-") && classes[i] !== "language-bash" && classes[i] !== "language-sh") {
                     var parents = $(e).parents("div.highlight");
+                    if (!parents.length) {
+                        parents = $(e).parents("span.highlight");
+                    }
 
                     // Our Node reference docs contain examples written in TypeScript, and
                     // don't currently have JavaScript examples above.

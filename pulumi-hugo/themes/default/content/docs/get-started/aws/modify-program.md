@@ -16,7 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's enable encryp
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo csharp >}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -87,6 +87,45 @@ bucket = s3.Bucket('my-bucket',
 
 # Export the name of the bucket
 pulumi.export('bucket_name',  bucket.id)
+```
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create a KMS Key for S3 server-side encryption
+        key, err := kms.NewKey(ctx, "my-key", nil)
+        if err != nil {
+            return err
+        }
+
+        // Create an AWS resource (S3 Bucket)
+        bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+            ServerSideEncryptionConfiguration: map[string]interface{}{
+                "rule": map[string]interface{}{
+                    "applyServerSideEncryptionByDefault": map[string]interface{}{
+                        "sseAlgorithm":   "aws:kms",
+                        "kmsMasterKeyId": key.ID(),
+                    },
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        // Export the name of the bucket
+        ctx.Export("bucketName", bucket.ID())
+        return nil
+    })
+}
 ```
 
 ```csharp
