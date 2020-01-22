@@ -9,9 +9,9 @@ menu:
 aliases: ["/docs/reference/concepts/"]
 ---
 
-Pulumi is a modern infrastructure as code platform. It includes a CLI, runtime, libraries, and a hosted service that, working together, deliver a robust way of provisioning, updating, and managing cloud infrastructure. Instead of YAML or a domain-specific language (DSL), Pulumi leverages existing familiar programming languages, including TypeScript, JavaScript, Python, Go, and .NET, and their native tools, libraries, and package managers.
+Pulumi is a modern infrastructure as code platform. It includes a CLI, runtime, libraries, and a hosted service that, working together, deliver a robust way of provisioning, updating, and managing cloud infrastructure. Instead of YAML or a domain-specific language (DSL), Pulumi leverages existing, familiar programming languages, including TypeScript, JavaScript, Python, Go, and .NET, and their native tools, libraries, and package managers.
 
-This section will teach you the core concepts behind Pulumi, including how to author your Pulumi programs, the CLI you will use to deploy those programs, how projects and their related concept "stacks" help you to organize your environments, and how Pulumi works under the hood.
+This section will teach you the core concepts behind Pulumi, including how to author your Pulumi programs, the CLI you will use to deploy those programs, how projects (and their related concept, "stacks") help you to organize your environments, and how Pulumi works under the hood.
 
 > If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide]({{< relref "/docs/get-started" >}}) for your cloud of choice. It will walk you through an [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [GCP]({{< relref "/docs/get-started/gcp" >}}), or [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) deployment from start to finish.
 
@@ -30,7 +30,7 @@ The following topics describe the core concepts behind Pulumi in more detail:
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "stack" >}}"><i class="fas fa-cloud pr-2"></i>Stacks</a></h3>
-        <p>Pulumi's fundamental unit of partitioning, configuring, and scaling environments..</p>
+        <p>Pulumi's fundamental unit of partitioning, configuring, and scaling environments.</p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "config" >}}"><i class="fas fa-keyboard pr-2"></i>Configuration and Secrets</a></h3>
