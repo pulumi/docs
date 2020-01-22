@@ -1,5 +1,5 @@
 ---
-title: "Running Containers in AWS, the Lowdown: ECS, Fargate, & EKS"
+title: "ECS vs Fargate vs EKS: The Lowdown on Containers in AWS"
 authors: ["joe-duffy"]
 tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
@@ -17,7 +17,7 @@ this article we provide some basic guidance on the tradeoffs you'll
 encounter when choosing.
 <!--more-->
 
-## The Options
+## The Options: ECS vs Fargate vs EKS
 
 At Pulumi, we work with customers to deploy AWS applications all the
 time, from early development to scaling production environments
