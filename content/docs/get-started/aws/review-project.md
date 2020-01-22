@@ -60,22 +60,22 @@ pulumi.export('bucket_name',  bucket.id)
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an AWS resource (S3 Bucket)
-		bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create an AWS resource (S3 Bucket)
+        bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+        if err != nil {
+            return err
+        }
 
-		// Export the name of the bucket
-		ctx.Export("bucketName", bucket.ID())
-		return nil
-	})
+        // Export the name of the bucket
+        ctx.Export("bucketName", bucket.ID())
+        return nil
+    })
 }
 ```
 
