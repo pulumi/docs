@@ -47,6 +47,18 @@ function selectChoice(kind, choice, extra) {
     }
 }
 
+// isShellLanguage returns true if lang is a shell language. These are treated differently
+// when showing and hiding the user's preferred language (they should always remain visible).
+function isShellLanguage(lang) {
+    return [
+        "language-bash",
+        "language-sh",
+        "language-batch",
+        "language-bat",
+        "language-powershell",
+    ].indexOf(lang) !== -1;
+}
+
 // selectLanguage chooses a language.
 function selectLanguage(lang) {
     selectChoice("language", lang, function() {
@@ -54,7 +66,7 @@ function selectLanguage(lang) {
         $("code").each(function (i, e) {
             var classes = getElemClasses(e);
             for (var i = 0; i < classes.length; i++) {
-                if (classes[i].startsWith("language-") && classes[i] !== "language-bash" && classes[i] !== "language-sh") {
+                if (classes[i].startsWith("language-") && !isShellLanguage(classes[i])) {
                     var parents = $(e).parents("div.highlight");
                     if (!parents.length) {
                         parents = $(e).parents("span.highlight");
