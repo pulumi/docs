@@ -31,7 +31,7 @@ Pulumi programs are structured as projects and stacks. The distinction between t
 
 Infrastructure and application artifacts can be managed together or separately. For instance, Pulumi can build and publish Docker container images containing application code when you do a `pulumi up`, alongside the private registry and container service infrastructure that consumes it. Equally as well, however, your infrastructure can reference independently deployed artifacts.
 
-A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about projects [here]({{< relref "project" >}}) and stacks [here](< relref "stack" >}}).
+A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about projects [here]({{< relref "project" >}}) and stacks [here]({{< relref "stack" >}}).
 
 ### Declaring Infrastructure
 
