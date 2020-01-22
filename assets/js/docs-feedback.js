@@ -63,7 +63,7 @@ $(document).ready(function(){
                 $("#feedbackThankYou").removeClass("hidden");
             });
 
-            $(window).on("unload", function() {
+            $(window).on("beforeunload", function() {
                 // When page unloads send the answer if it has not already been sent.
                 var shouldSendFeedback = $("#feedbackLongForm").hasClass("hidden");
                 if (!shouldSendFeedback) {
