@@ -15,11 +15,19 @@
     </div>
     <div id="feedbackLongForm" class="hidden">
         <p>Additional Comments?</p>
-        <textarea id="feedbackAdditionalComments" rows="5" class="mb-3 w-3/4 p-2 bg-white rounded border border-gray-500 outline-none"></textarea>
-        <input id="feedbackEmail" type="text" class="block mb-4 w-3/4 p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
-        <a id="docsSubmitFeedback" class="btn w-1/4 text-center block">Submit</a>
+        <textarea id="feedbackAdditionalComments" rows="5" class="mb-3 w-full md:w-3/4 p-2 bg-white rounded border border-gray-500 outline-none"></textarea>
+        <input id="feedbackEmail" type="text" class="block mb-4 w-full md:w-3/4 p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
+        <a id="docsSubmitFeedback" class="btn md:w-1/4 text-center block">Submit</a>
     </div>
     <div id="feedbackThankYou" class="hidden">
-        <h4>Thank you for your feedback.</h4>
+        {{ $problemTitle := printf "Issue with %s" .Permalink}}
+        {{ $improvementTitle := printf "Improvement for %s" .Permalink}}
+        <p>
+            Thank you for your feedback. If you have a specific, answerable question about how
+            to use Pulumi, ask it in our <a href="https://slack.pulumi.com/">Community Slack</a>.
+            Open an issue in the GitHub repo if you want to
+            <a href="https://github.com/pulumi/docs/issues/new?title={{ $problemTitle }}">report a problem</a> or
+            <a href="https://github.com/pulumi/docs/issues/new?title={{ $improvementTitle }}">suggest an improvement</a>.
+        </p>
     </div>
 </div>
