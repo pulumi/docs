@@ -14,18 +14,6 @@ aliases: ["/docs/quickstart/gcp/deploy-stack/"]
 
 Let's go ahead and deploy the stack:
 
-{{% lang go %}}
-Because Go is a compiled language, you first need to compile it:
-
-```bash
-$ go build $(basename $(pwd))
-```
-
-This instructs Go to create a binary whose name is the same as your directory. It needs to match your project name.
-
-Next, we will ask Pulumi to run it and deploy the stack:
-{{% /lang %}}
-
 ```bash
 $ pulumi up
 ```
